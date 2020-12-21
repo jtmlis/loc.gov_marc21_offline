@@ -18,3 +18,5 @@ You can also open any other .html file you see that is in this directory.
 Consult the Directory tree file. from the tree command 
 https://github.com/jtmlis/loc.gov_marc21_offline/blob/main/tree.txt
 
+
+[![asciicast](https://asciinema.org/a/380279.svg)](https://asciinema.org/a/380279)
