@@ -1,0 +1,231 @@
+<!doctype html public "-//W3C/DTD HTML 3.2 FINAL//EN>
+<html>
+<head>
+<title>Technical Notice:  Changes in MARC Distribution Services (Library of Congress) </title>
+<base href="">
+<meta name="description" content="This announcment contains information about the restructuring of the LCCN and the newly defined MARC characters in the MARC character set">
+<meta name="keywords" content="LCCN, Restructure of, MARC characters, MARC character set, MDS, MARC Distribution Service, MARC 21, Technical Notice">
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<em>MARC: News and Announcements (November 2, 2000)</em> 
+<hr>
+<h1 align=center>TECHNICAL NOTICE (November 2, 2000)</h1>
+<h2 align=center>LCCN Restructuring <br>
+  Newly Defined MARC Characters &amp; <br>
+  Changes in MDS Frequency</h2>
+<h3 align=center>Network Development and MARC Standards Office <br>
+  Library of Congress</h3>
+<hr>
+<p> 
+  <center>
+    [<a href="tn001102.html#lccn">LCCN Restructuring</a>] - [<a href="tn001102.html#characters">MARC Characters</a>] 
+    - [<a href="tn001102.html#frequency">MDS Frequency</a>] - [<a href="tn001102.html#implement">Implementation 
+    Plans</a>]
+  </center>
+<h3><a name="lccn">1. LCCN Restructuring</a></h3>
+The Library of Congress has announced previously (see <a href="lccn.html">www.loc.gov/marc/lccn.html</a>) 
+a planned restructuring of the Library of Congress Control Number (LCCN) for newly 
+assigned LCCNs. As of January 1, 2001, all newly assigned LCCNs (fields 001 and 
+010 in records distributed by CDS) will contain a two-character alphabetic prefix, 
+a four-digit year portion, and a six-digit serial portion. The number of characters 
+in the LCCN will remain the same (12), but the trailing blank or supplement number 
+will be discontinued. Previously assigned LCCNs will not be changed to the new 
+structure, and update records will continue to be distributed under the old style 
+LCCN. <br>
+<ul>
+  Examples:<br>
+  <table width="45%">
+    <tr>
+      <td><u>Old style</u></td>
+      <td><u>New style</u></td>
+    </tr>
+    <tr>
+      <td>gm#82012345#</td>
+      <td>gm2001012345</td>
+    </tr>
+    <tr>
+      <td>###00456789#</td>
+      <td>##2002456789</td>
+    </tr>
+    <tr>
+      <td>n##99005678#</td>
+      <td>n#2001005678</td>
+    </tr>
+  </table>
+</ul>
+<p> CDS has created a file of test records containing both the new and old style 
+  LCCNs for use by customers. The two test files, one containing bibliographic 
+  records and the other containing name authority records, are available via anonymous 
+  FTP at: 
+<ul>
+  Host: ftp.loc.gov<br>
+  Login: anonymous<br>
+  Password: &lt;your email address&gt;<br>
+  Directory: pub<br>
+  Subdirectory: cds/lccn<br>
+  Filename: biblccntest (bibliographic test file); authlccntest (authority test 
+  file) 
+</ul>
+<p> Or download directly from the Web at: <a href="ftp://ftp.loc.gov/pub/cds/lccn">ftp://ftp.loc.gov/pub/cds/lccn</a> 
+<ul>
+  biblccntest (bibliographic test file)<br>
+  authlccntest (authority test file)
+</ul>
+<p> 
+<hr>
+<h3><a name="characters">2. Newly Defined MARC Characters</a></h3>
+CDS has previously announced plans to distribute records containing the full MARC 
+character set. This includes the 13 characters which were authorized as of 1994 
+but have been filtered or substituted in distribution by CDS. See list below: 
+<p> 
+<ul>
+  <table width="45%">
+    <tr>
+      <td><u>Character Name</u></td>
+      <td><u>Hex Value</u></td>
+    </tr>
+    <tr>
+      <td>spacing circumflex</td>
+      <td> 5E</td>
+    </tr>
+    <tr>
+      <td>spacing underscore </td>
+      <td>5F</td>
+    </tr>
+    <tr>
+      <td>spacing grave</td>
+      <td> 60</td>
+    </tr>
+    <tr>
+      <td>opening curly bracket</td>
+      <td>7B</td>
+    </tr>
+    <tr>
+      <td>closing curly bracket</td>
+      <td>7D</td>
+    </tr>
+    <tr>
+      <td>spacing tilde</td>
+      <td>7E</td>
+    </tr>
+    <tr>
+      <td>degree sign</td>
+      <td>C0</td>
+    </tr>
+    <tr>
+      <td>lower case script L </td>
+      <td>C1</td>
+    </tr>
+    <tr>
+      <td>phono copyright mark</td>
+      <td>C2</td>
+    </tr>
+    <tr>
+      <td>copyright mark</td>
+      <td>C3</td>
+    </tr>
+    <tr>
+      <td>sharp </td>
+      <td>C4</td>
+    </tr>
+    <tr>
+      <td>inverted question mark</td>
+      <td>C5</td>
+    </tr>
+    <tr>
+      <td>inverted exclamation mark</td>
+      <td>C6</td>
+    </tr>
+  </table>
+</ul>
+<p> On January 1, 2001, CDS will remove the character substitution step and will 
+  distribute records with these characters. Subscribers can expect to receive 
+  records containing characters and hex values listed above, but some of the values 
+  may not be actively supplied by LC cataloging staff. For a detailed listing 
+  of the LC usage of these characters see the LC Cataloging Policy and Support 
+  Office homepage (<a href="http://www.loc.gov/catdir/cpso/">http://www.loc.gov/catdir/cpso/</a> 
+  ). 
+<p> CDS has created test files containing records with these new characters. The 
+  two test files, one containing bibliographic records and the other containing 
+  name authority records, are available via anonymous FTP at: 
+<p> 
+<ul>
+  Host: ftp.loc.gov<br>
+  Login: anonymous<br>
+  Password: &lt;your email address&gt;<br>
+  Directory: pub<br>
+  Subdirectory: cds/lccn<br>
+  Filename: bibchars (bibliographic test file); authchars (authority test file) 
+</ul>
+<p>Or download directly from the Web at: <a href="ftp://ftp.loc.gov/pub/cds/lccn">ftp://ftp.loc.gov/pub/cds/lccn</a> 
+<p> 
+<ul>
+  bibchars (bibliographic test file)<br>
+  authchars (authority test file) <br>
+</ul>
+<p> 
+<hr>
+<h3> <a name="frequency">3. Changes in MDS Frequency</a></h3>
+Beginning in January 2001, CDS will increase the frequency of some of its MARC 
+Distribution Services. All the quarterly MDS services will be distributed monthly 
+and the monthly MDS-Serials service will be distributed weekly. See the chart 
+below: 
+<ul>
+  <table width="58%">
+    <tr> 
+      <td width="48%"><u>MDS</u></td>
+      <td width="26%"><u>Old Frequency</u></td>
+      <td width="26%"><u>New Frequency</u></td>
+    </tr>
+    <tr> 
+      <td width="48%">Books Arabic</td>
+      <td width="26%">quarterly</td>
+      <td width="26%">monthly</td>
+    </tr>
+    <tr> 
+      <td width="48%">Books Hebrew</td>
+      <td width="26%">quarterly</td>
+      <td width="26%">monthly</td>
+    </tr>
+    <tr> 
+      <td width="48%">Computer Files</td>
+      <td width="26%">quarterly</td>
+      <td width="26%">monthly</td>
+    </tr>
+    <tr> 
+      <td width="48%">NUCMC and LC Manuscripts</td>
+      <td align="top" width="26%"> quarterly</td>
+      <td align="top" width="26%">monthly</td>
+    </tr>
+    <tr> 
+      <td width="48%">Serials [CONSER]</td>
+      <td width="26%"> monthly</td>
+      <td width="26%">weekly</td>
+    </tr>
+  </table>
+</ul>
+<p> 
+<hr>
+<h3><a name="implement">LC Implementation Plans</a></h3>
+Subscribers can anticipate receiving MARC records reflecting these changes in 
+all distribution services not earlier than January, 2001 
+<p> 
+<hr>
+<p> <b>Go to</b>: <a href="marc.html">MARC Home Page</a> 
+  | <a href="../index.html">Library of Congress Home Page</a> 
+<p> 
+  <!---LC Footer--->
+<hr>
+<IMG SRC="../homepage/lc2.gif" height=46 width=91 ALT="Library of Congress"> 
+<strong>Library of Congress</strong><br>
+<address> 
+<!--help desk email start -->
+<a href="http://www.loc.gov/help/help-desk.html">Library of Congress Help Desk</a> 
+<!--help desk email end -->
+( 
+<!-- #BeginDate format:Am3 -->09/12/2002<!-- #EndDate -->
+)</address>
+<script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+</html>

@@ -1,0 +1,425 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                        "http://www.w3.org/TR/html40/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/marc_generic.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Tape Transfer (Current): Exchange Media: MARC 21 Specifications for Record Structure, Character Sets, and Exchange Media (Library of Congress)</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<meta name="description" content="The specifications for the formatting and labeling of
+magnetic tape currently used in the distribution of MARC 21 authority, bibliographic,
+classification, community information, and holdings records are described.  These specifications
+have been used since the end of 1977 and are based on the standards noted in the document. 
+They supersede the pre-1977 tape specifications.">
+<meta name="keywords" content="MARC 21, Exchange Media, Specifications, Tape,
+Magnetic">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+<style type="text/css">
+p {text-align:justify;}
+li {text-align:justify;}
+table {margin-bottom:2em;}
+.tablecontents {list-style:circle;}
+.tablesubcontents {list-style:circle; margin-left:2em;}
+</style>
+<!-- InstanceEndEditable -->
+<link href="http://www.loc.gov/marc/marc-generic.css" rel="stylesheet" type="text/css">
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+
+<body bgcolor="#ffffff">
+
+<a name="skip_menu"></a>
+<!-- InstanceBeginEditable name="content" -->
+
+<h3><em>MARC 21 Specifications for Record Structure, Character Sets, and Exchange Media</em></h3>
+<h2>EXCHANGE MEDIA: Part 3</h2>
+<h2>Tape Transfer (Current)</h2>
+<div class="title">January 2000</div>
+<h4>CONTENTS</h4>
+
+<ul>
+<li><a href="specexchtape1.html#intro">Introduction</a></li>
+<li><a href="specexchtape1.html#standard">Standards</a></li>
+<li><a href="specexchtape1.html#format"> Format</a></li>   
+<li><a href="specexchtape1.html#fileorg">File Organization</a></li>
+<li><a href="specexchtape1.html#label">Labels</a></li>
+<li><a href="specexchtape1.html#seg">Record Segmentation</a></li> 
+</ul> 
+<h4><a name="intro">INTRODUCTION</a></h4>  
+<p>The specifications for the formatting and labeling of magnetic tape currently  
+used in the distribution of MARC 21 authority, bibliographic, classification, community  
+information, and holdings records are described below.  These specifications have been used
+since the end of 1977 and are based on the standards noted below.  They supersede the pre-1977
+tape specifications.</p>  
+ 
+  
+<h4><a name="standard">STANDARDS</a></h4>  
+<ul><li><em>Magnetic Tape Labels and File Structure for Information  
+Interchange</em> (ANSI X3.27-1978)</li>
+  
+<li><em>Recorded Magnetic Tape for Information Interchange
+(1600 CPI)</em> (ANSI X3.39)</li>  
+<li><em>Recorded Magnetic Tape for Information Interchange (6250 CPI, Group-Coded
+Recording)</em> (ANSI X.3.54)</li></ul>  
+
+<h4><a name="format">TAPE FORMAT</a></h4>  
+<p>MARC 21 magnetic tape reels and tape cartridges are nine channel tapes (odd  
+parity) written  
+at  
+1600, 6250, or 38,000 characters per inch.  MARC 21 tapes contain internal labels  
+written in  
+ASCII.   
+Each label is an 80-byte record, the byte positions of which are numbered, starting  
+with the  
+leftmost  
+byte position, 0 to 79.  Each label occupies a separate 2048-character file segment  
+(1968  
+characters  
+of which are padding blanks), without any Segment Control Word.  (Refer to the  
+section on  
+record  
+segmentation for more information on the use of the Segment Control Word in segments  
+containing  
+MARC 21 records.)  Each file of records is terminated by a tape mark.</p>  
+ 
+<h4><a name="fileorg">TAPE FILE ORGANIZATION</a></h4>  
+<p>Files may be organized on tape in volumes in one of four ways: 1) single volume,  
+single file;  
+2)  
+single volume, multiple files; 3) multiple volumes, single file; and 4) multiple  
+volumes, multiple  
+files.   
+Examples of the sequence of labels, tape marks and files for each configuration is  
+given  
+below.</p>  
+  
+<pre><strong>Single volume, Single file </strong><strong>        Single volume, Multiple files
+</strong> 
+  Volume Header Label (VOL1)         Volume Header Label (VOL1) 
+  File Header Label (HDR1)           File Header Label (HDR1) 
+  File Header Label (HDR2)           File Header Label (HDR2) 
+    Tape Mark                          Tape Mark 
+  File of data records               File A of data records 
+    Tape Mark                          Tape Mark 
+  End of File Label (EOF1)           End of File Label (EOF1) 
+  End of File Label (EOF2)           End of File Label (EOF2) 
+    Tape Mark                          Tape Mark 
+    Tape Mark                        File Header Label (HDR1) 
+                                     File Header Label (HDR2) 
+                                       Tape Mark 
+                                     File B of data records 
+                                       Tape Mark 
+                                     End of File Label (EOF1) 
+                                     End of File Label (EOF2) 
+                                       Tape Mark 
+                                       Tape Mark</pre> 
+ 
+ 
+<pre><strong>Multiple volumes, Single file </strong> 
+ 
+           Volume A                         Volume B 
+ 
+  Volume Header Label (VOL1)         Volume Header Label (VOL1) 
+  File Header Label (HDR1)           File Header Label (HDR1) 
+  File Header Label (HDR2)           File Header Label (HDR2) 
+    Tape Mark                          Tape Mark 
+  File of data record-Part 1         File of data records-Part 2 
+    Tape Mark                          Tape Mark         
+  End of Volume Label (EOV1)         End of File Label (EOF1) 
+  End of Volume Label (EOV2)         End of File Label (EOF2) 
+     Tape Mark                         Tape Mark    
+     Tape Mark                         Tape Mark 
+</pre> 
+ 
+ 
+<pre><strong>Multiple volumes, Multiple files </strong> 
+ 
+     Volume A                   Volume B                   Volume C 
+ 
+Volume Header Label(VOL1)  Volume Header Label(VOL1)  Volume Header Label(VOL1) 
+File Header Label(HDR1)    File Header Label(HDR1)    File Header Label(HDR1) 
+File Header Label(HDR2)    File Header Label(HDR2)    File Header Label(HDR2) 
+  Tape Mark                  Tape Mark                  Tape Mark 
+File A of data records     File B of data rec.-Pt.2   File B of data rec.-Pt.3 
+  Tape Mark                  Tape Mark                  Tape Mark 
+End of File Label(EOF1)    End of Volume Label(EOV1)  End of File Label(EOF1) 
+End of File Label(EOF2)    End of Volume Label(EOV2)  End of File Label(EOF2) 
+  Tape Mark                  Tape Mark                  Tape Mark 
+File Header Label(HDR1)      Tape Mark                File Header Label(HDR1) 
+File Header Label(HDR2)                               File Header Label(HDR2) 
+  Tape Mark                                             Tape Mark 
+File B of data rec.-Pt.1                              File C of data records 
+  Tape Mark                                             Tape Mark 
+End of Volume Label(EOV1)                             End of File Label(EOF1) 
+End of Volume Label(EOV2)                             End of File Label(EOF2) 
+  Tape Mark                                             Tape Mark 
+  Tape Mark                                             Tape Mark 
+</pre> 
+
+<h4><a name="label">TAPE LABELS</a></h4>  
+<p>MARC 21 tapes contain internal labels that identify and characterize the volume  
+and file  
+section.   
+They occur at the beginning of a volume and at the beginning and end of each file  
+section.  Each  
+label  
+is recorded in a separate block.  Tapes should be identified on an external  
+eye-readable label by  
+volume and number.</p>  
+<p>The internal labels appearing on MARC 21 tapes are described below.  The labels  
+may  
+contain  
+ASCII numeric characters 0-9, ASCII uppercase alphabetic characters A-Z, and  
+characters from  
+the  
+following group of ASCII graphic symbols:</p>  
+<pre>    SP ! " % & ' ( ) * + , - . / : ; &lt; = &gt; ? _ </pre>
+<p>In the following tables, "numeric" refers to ASCII numerics 0-9, and  
+"alphanumeric" refers to  
+all  
+the allowable characters as specified above.  Where numeric characters are indicated  
+in <em>Content</em>, if  
+the numeric value is shorter than the length allotted for the element, then the  
+value is right  
+justified  
+and unused positions filled with zeros.  Where alphanumeric characters are indicated  
+in Content, if  
+the alphanumeric value is shorter than the length allotted for the element, then the  
+value is left  
+justified and unused positions filled with blanks.  The ASCII blank character is  
+code  
+20(hex).</p>  
+<p><strong>Volume Header Label (VOL1):</strong>  </p>
+<pre>    <em><u>Element Name         Bytes   Length  Content (Description)</u></em> 
+    Label Identifier     0-2     3       VOL 
+    Label Number         3       1       1 
+    Volume Identifier    4-9     6       (numeric characters) 
+    Accessibility        10      1       (blank) 
+    Unused               11-36   26      (blanks) 
+    Owner Identifier     37-50   14      (alphanumeric characters) 
+    Unused               51-78   28      (blanks) 
+    Label Standard Ver.  79      1       1 
+</pre> 
+ 
+<p><em>Example:</em> Library of Congress Volume Header Label
+(VOL1)  </p>
+<pre>  VOL 1 &lt;nnnnnn&gt; # &lt;26 #&gt; LIBROFCONGRESS &lt;28 #&gt; 1</pre> 
+<p>Notes: # = blank (ASCII 20(hex)).  Library of Congress MARC Distribution
+Service tapes use unique serial numbers as Volume  
+Identifiers.  Tapes are also identified in an external label by volume and number as issues in the
+MARC Distribution Service.</p>
+ 
+ 
+<p><strong>File Header Label (HDR1):</strong>  </p>
+<pre>    <em><u>Element Name         Bytes   Length  Content (Description)</u></em> 
+    Label Identifier     0-2     3       HDR 
+    Label Number         3       1       1 
+    File Identifier      4-20    17      (alphanumeric characters) 
+    File Set Identifier  21-26   6       (numeric characters) 
+    File Section Number  27-30   4       (numeric characters) 
+    File Sequence Number 31-34   4       (numeric characters) 
+    Unused               35-40   6       (blanks) 
+    Creation Date        41-46   6       (blank and 5 numeric characters)* 
+    Expiration Date      47-52   6       (blanks) 
+    Accessibility        53      1       (blank) 
+    Block Count          54-59   6       000000 
+    System Code          60-72   13      (alphanumeric characters) 
+    Unused               73-79   7       (blanks) 
+</pre> 
+ 
+ <p>*The date is formatted yyddd, where yy = last 2 digits of the year and ddd = Julian day. </p>
+ 
+<p><em>Example:</em> Library of Congress File Header Label
+(HDR1) </p> 
+<pre>  HDR 1 MARC.BOOKS####### &lt;nnnnnn&gt; 0001 0001 &lt;6 #&gt; #yyddd 
+         &lt;6 #&gt; # 000000 OS370######## &lt;7 #&gt; 
+</pre>
+<p>Notes: # = blank (ASCII 20(hex)). </p>
+<p>The File Identifier is different for
+  each Library of Congress MARC 
+  Distribution 
+  Service.  The File Set Identifier will be the same as the Volume Identifier in VOL1.   
+  The System  
+  Code may vary.  The following are representative of those used: </p>
+<ul>  
+<li>Books (All) = MARC.BOOKS</li> 
+<li>Books (English) = MARC.BOOKS.ENG</li>  
+<li>Books CJK (Chinese, Japanese, Korean) = MARC.BOOKS.CJK</li>   
+<li>Visual Materials = MARC.VISMAT</li>   
+<li>Serials = MARC.SERIALS</li>   
+<li>Music = MARC.MUSIC</li>  
+<li>Name Authorities = MARC.NAMES</li>  
+<li>Subject Authorities =  MARC.SUBJECTS</li>   
+<li>Books (All)  [UNIMARC] = UNIMARC.BOOKS</li>  
+</ul> 
+ 
+<p><em>Example:</em></p>
+National Library of Canada File Header Label (HDR1)  
+<pre>  HDR 1 marc.canmon.###### &lt;nnnnnn&gt; 0001 0001 &lt;6 #&gt; #yyddd 
+         &lt;6 #&gt; # 000000 UNIX######### &lt;7 #&gt; 
+</pre> 
+<p>Notes: # = blank (ASCII 20(hex)). The File Identifier is different for each file
+distributed through the National Library of Canada's MARC Records Distribution Service as
+follows: </p>
+<ul> 
+<li>Canadiana Monographs  = marc.canmon.</li>  
+<li>Canadiana Music and Sound Recordings = marc.canmsr.</li>  
+<li>CONSER = marc.conser.</li> 
+<li>Canadiana Authorities  = marc.authrs.</li>  
+</ul>
+ 
+<p><strong>File Header Label (HDR2):</strong>  </p>
+<pre>    <em><u>Element Name         Bytes   Length  Content (Description)</u></em> 
+    Label Identifier     0-2     3       HDR 
+    Label Number         3       1       2 
+    Record Format        4       1       U 
+    Block Length         5-9     5       02048 
+    Record Length        10-14   5       00000 
+    Unused               15-49   35      (blanks) 
+    Buffer Offset        50-51   2       00 
+    Unused               52-79   28      (blanks)</pre> 
+ 
+<p><em>Example:</em> Library of Congress File Header Label
+(HDR2)  </p>
+<pre>  HDR 2 U 02048 00000 &lt;35 #&gt; 00 &lt;28 #&gt;</pre> 
+<p>Note: # = blank (ASCII 20(hex)). </p>
+ 
+ 
+<p><strong>End-of-Volume Label (EOV1):</strong>  </p>
+<pre>    <em><u>Element Name         Bytes   Length  Content (Description)</u></em> 
+    Label Identifier     0-2     3       EOV 
+    Label Number         3       1       1 
+    Same as HDR1         4-53    50      (same as HDR1) 
+    Physical Block Count 54-59   6       (numeric characters) 
+    Same as HDR1         60-79   20      (same as HDR1)</pre> 
+ 
+<p><em>Example:</em> Library of Congress End of Volume Label
+(EOV1) </p>
+<pre>  EOV 1 &lt;same as HDR1&gt; &lt;nnnnnn&gt; &lt;same as HDR1&gt;</pre> 
+<p><strong>End-of-Volume Label (EOV2):</strong>  </p>
+<pre>   <em><u>Element Name         Bytes   Length  Content (Description)</u></em> 
+    Label Identifier     0-2     3       EOV 
+    Label Number         3       1       2 
+    Same as HDR2         4-79    76      (same as HDR2)</pre> 
+<p><em>Example:</em> Library of Congress End of Volume Label
+(EOV2) </p>
+<pre>  EOV 2 &lt;same as HDR2&gt;</pre> 
+ 
+<p><strong>End-of-File Label (EOF1):</strong> </p>
+<pre>   <em><U>Element Name         Bytes   Length  Content (Description)</U></em> 
+    Label Identifier     0-2     3       EOF 
+    Label Number         3       1       1 
+    Same as HDR1         4-53    50      (same as HDR1) 
+    Block Count          54-59   6       (numeric characters) 
+    Same as HDR1         60-79   20      (same as HDR1)</pre> 
+ 
+<p><em>Example: </em>Library of Congress End of File Label (EOF1)</p>
+
+
+<pre>  EOF 1 &lt;same as HDR1&gt; &lt;nnnnnn&gt; &lt;same as HDR1&gt; 
+</pre> 
+ 
+<p><strong>End-of-File Label (EOF2):</strong>  </p>
+<pre>   <em><U>Element Name         Bytes   Length  Content (Description)</U> </em> 
+    Label Identifier     0-2     3       EOF 
+    Label Number         3       1       2 
+    Same as HDR2         4-79    76      (same as HDR2)</pre> 
+ 
+<p><em>Example: </em>Library of Congress End of File Label (EOF2)</p>
+
+
+<pre>  EOF 2 &lt;same as HDR2&gt; 
+</pre> 
+ 
+<h4><a name="seg">TAPE RECORD SEGMENTATION</a></h4>  
+<p>MARC 21 records, are written to tape using a segmented record technique based on  
+ANSI  
+X3.27.  This technique utilizes physical blocks fixed in length at 2048 characters,  
+with records or  
+record segments filling the entire block.  Each record, or record segment, is  
+preceded by a  
+five-character Segment Control Word (SCW).  The first character position of the SCW  
+is called  
+the  
+Segment Indicator (see below) and contains a value that indicates the content of the  
+segment.   
+The  
+last four character positions of the SCW contain the Segment Length.  The Segment  
+Length  
+consists  
+of four ASCII numerics, expressed as a decimal number, giving the length, in bytes,  
+of the record  
+segment plus the length of the SCW.  The number is right justified with zero  
+fill.</p>  
+<p>Segment Indicator (character position 1, ASCII numeric)  
+<ul>  
+<li>0 - Record begins and ends in this segment</li>  
+<li>1 - Record begins but does not end in this segment</li>  
+<li>2 - Record neither begins nor ends in this segment</li>
+<li>3 - Record ends but does not begin in this segment</li>
+</ul>  
+
+<p>Segment Length (character positions 2-5, ASCII numerics). Segment Length includes the 5 characters of the SCW.</p> 
+  
+<p>Record segments may thus span blocks or volumes.  However, there may be only one  
+segment  
+of the same record in a block.  The segments of a record are written in consecutive  
+order; the  
+segments of other records are not interspersed.</p>  
+<p>A segment may contain no fewer than six characters; such a segment consists of  
+the SCW and  
+one data character.  If at the end of a logical record, less than six positions  
+remain in a block, the  
+block is padded with ASCII blanks and the next logical record begins in the next  
+block.  If the last  
+physical block in a file is not completely filled, it is padded to its full length  
+with ASCII blanks  
+following the last data character.  For example, if the only segment in the last  
+block in a file is the  
+minimum length of 6 characters, then that block is padded with 2042 ASCII  
+blanks.</p>  
+<p>While there is no limit to the number of segments comprising one record, MARC 21  
+records  
+have  
+a maximum length of 99999 characters.  This is the largest number that can be  
+entered in the  
+MARC 21 Logical Record Length field (Leader, character positions 00-04).  Thus, the  
+largest  
+possible MARC 21 record could be contained in 49 blocks.</p>  
+<p>Example: Record 1 has logical length of 4231 characters; Record 2 has logical  
+length of 1890  
+characters; Record 3 has logical length of 1845 characters.  Record 3 is the last  
+record.</p>  
+<pre>Block 1: 
+  SCW--&gt;  DATA--------------&gt; 
+  1 2048  2043 char. of Rec.1 
+ 
+Block 2: 
+  SCW--&gt;  DATA--------------&gt; 
+  2 2048  2043 char. of Rec.1 
+ 
+Block 3: 
+  SCW--&gt;  DATA-------------&gt;  SCW--&gt; DATA--------------&gt; PADDING 
+  3 0150  145 char. of Rec.1  0 1895 1890 char. of Rec.2  3 blanks 
+ 
+Block 4: 
+  SCW--&gt;  DATA--------------&gt;  PADDING 
+  0 1850  1845 char. of Rec.3   198 blank char. 
+</pre>
+<!-- InstanceEndEditable -->
+<hr size="1" noshade>
+<p><a href="../../marc.html">MARC 21 HOME</a> &gt;&gt; <!-- InstanceBeginEditable name="bottombreadcrumb" --><a href="spechome.html">Specifications</a> &gt;&gt; <a href="specexchintro.html">Exchange Media</a> &gt; &gt; <strong>Part 3</strong> <!-- InstanceEndEditable --></p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr valign="bottom">
+    <td><a href="../../index.html">The Library of Congress</a> &gt;&gt; <a href="../../library/index.html">Especially
+    for Librarians and Archivists</a> &gt;&gt; <a href="../../standards/index.html">Standards</a><br>
+    (<!-- MM:BeginLock type="mmdate" format="Am3" orig=" -->
+    <!-- #BeginDate format:Am3 -->12/06/2007<!-- #EndDate -->
+    ) </td>
+    <td align="right"><a href="http://www.loc.gov/cdn-cgi/l/email-protection#a0cec4cdd3cfe0cccfc38ec7cfd6">Contact Us</a></td>
+  </tr>
+</table>
+<script data-cfasync="false" src="http://www.loc.gov/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+<!-- InstanceEnd --></html>

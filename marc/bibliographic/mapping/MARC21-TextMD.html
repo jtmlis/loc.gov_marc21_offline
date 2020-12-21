@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                        "http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/marc_generic.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Analysis of Data Overlap Between the MARC21 Bibliographic Format and the TextMD Data Element Set : MARC Standards (Network Development and MARC Standards Office, Library of Congress)</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="description" content="Analysis of Data Overlap Between the MARC21 Bibliographic Format and the TextMD Data Element Set : MARC Standards (Network Development and MARC Standards Office, Library of Congress)">
+<meta name="keywords" content="marc, marc21, marc standards">
+<meta name="author" content="Library of Congress Network Development and MARC Standards Office">
+<!-- InstanceEndEditable -->
+<link href="http://www.loc.gov/marc/marc-generic.css" rel="stylesheet" type="text/css">
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+
+<body bgcolor="#ffffff">
+<div class="head-nav"><a id="skip" href="MARC21-TextMD.html#skip_menu"><img src="http://www.loc.gov/marc/images/clear.gif" border="0" alt="Skip Navigation Links"></a><a href="../../../index.html">The Library of Congress</a> &gt;&gt; <a href="../../../library/index.html">Especially
+  for Librarians and Archivists</a> &gt;&gt; <a href="../../../standards/index.html">Standards</a></div>
+<a href="../../../marc.html"><img src="http://www.loc.gov/marc/images/marc-bar.gif" alt="MARC Standards" width="620" height="36" border="0"></a>
+<div class="head-nav"><a href="../../../marc.html">MARC 21 HOME</a> &gt;&gt; <!-- InstanceBeginEditable name="topbreadcrumb" --><a href="../ecbdhome.html">Bibliographic Format</a> &gt;&gt; <a href="index.html">Overlaps Between MARC21</a> &gt;&gt; MARC21 to TextMD Mapping<!-- InstanceEndEditable --></div>
+<hr size="1" noshade><a name="skip_menu"></a>
+<!-- InstanceBeginEditable name="content" -->
+<h1>Analysis of Data Overlap Between the MARC21 Bibliographic Format </h1>
+<h1>and the TextMD Data Element Set</h1>
+<p><strong>INTRODUCTION</strong></p>
+<p>The present paper examines the <a href="../ecbdhome.html">MARC21 Bibliographic format</a> and the <a href="http://loc.gov/standards/textMD/">TextMD element set</a>  for correspondences in the data
+  which they accommodate.&nbsp; TextMD&rsquo;s area of concern is that of textual
+  digital entities.&nbsp; TextMD is introduced
+  as having been developed as an extension schema for METS, which explains
+  TextMD&rsquo;s having no element that serves as an identifier of the object being
+  described, an omission that makes the statement that the TextMD schema &ldquo;could
+  also exist as a standalone document&rdquo; challenging to comprehend. </p>
+<p>The precise number of TextMD
+  elements is relatively small, the exact number depending on whether attributes
+  are counted and on which version of the schema is being examined.&nbsp; This analysis considered version 3.01, but is
+  equally applicable to version 2.2 because the newly added elements have no
+  discernable equivalents, or at least no specific homes, in MARC21. &nbsp;</p>
+<p>TextMD values are generally expressed
+  as strings, although there is one (<i>byte_size</i>)
+  that requires an integer, and the elements added for version 3.01 are described
+  as &ldquo;tokens&rdquo; in the schema, where the enumerated values appear as strings.&nbsp; Roughly three fourths of string values, so
+  denominated, accept free text; the remainder are restricted to the values in
+  enumerated lists.</p>
+<p>Findings of this investigation are
+  expressed in a pair of tables that have the same contents arranged
+  differently.&nbsp; Table <i><a href="http://www.loc.gov/marc/bibliographic/mapping/MARC21vsTextMDtable.html">MARC21 vs. TextMD</a></i> is ordered by MARC tag and subfield code; table <i><a href="http://www.loc.gov/marc/bibliographic/mapping/TextMDvsMARC21table.html">TextMD vs. MARC21</a></i> follows the order of
+  MIX data elements as presented in its XML schema.&nbsp; Data elements are not identified by numbers
+  in the TextMD documentation, but have been assigned them here to facilitate
+  sorting the tables.</p>
+<p><strong>NOTES ON THE ANALYSIS</strong></p>
+<p>Names of TextMD elements and
+  attributes are italicized in these notes.</p>
+<p>With the exception of fields and
+  elements referring to the language of the text object, correspondences between
+  MARC21 and TextMD are fuzzy.&nbsp; The tables
+  have been built assuming that it is preferable to identify possible
+  correspondences that may be tenuous, or even erroneous, than to omit a
+  connection of importance inadvertently. &nbsp;Users
+  of these tables who are more knowledgeable of their or other&rsquo;s TextMD implementations
+  may be able to eliminate some table entries as universally inappropriate or too
+  rare to be worthy of consideration. </p>
+<p>The MARC21 fields (041, 546) and TextMD
+  elements (<i>language, alt_language</i>) concerning
+  the language(s) of the text object are all repeatable, making it fairly easy to
+  translate the information from one scheme to the other, having only to convert
+  between MARC codes and ISO 639-2 in most cases, and to supply the necessary authority
+  information in either scheme. When 041 and 546 are absent, the non-repeatable
+  MARC21 element 008/35-37 can be used similarly for simple cases. </p>
+<p>&nbsp;Certain positions in the MARC 007 field of a
+  computer file record may of limited use in formulating a TextMD <i>QUALITY</i> attribute, especially if that
+  attribute is not expected to be any more precise than the single word &ldquo;good&rdquo; as
+  shown in the example provided in TextMD documentation.&nbsp; </p>
+<p>MARC has a field (514) called Data
+  Quality Note whose name suggests relevance to the TextMD <i>QUALITY</i> attribute, but the definitions of
+  514 subfields all point toward limiting the use of the field to cartographic
+  resources, hence unhelpful for text objects. </p>
+<p>The tables show MARC21 field 538
+  (System Details Note) as relating to TextMD containers (<i>encoding, character_info</i>) and distinct elements (<i>printRequirements, viewingRequirements</i>)
+  on the basis of examples given in MARC documentation, but it seems thoroughly
+  possible that information concerning other elements (e.g. <i>markup_basis, markup_language</i>) might also be encountered in 538.&nbsp; Documentation of 538 does not distinguish
+  between the computer requirements of the system that created the digital object
+  (corresponding to TextMD <i>encoding_platform</i>)
+  and those concerned with viewing or printing the object. </p>
+<p>MARC21 Field 856 (Electronic
+  Location and Access,) true to its title, is apt to offer little information
+  that will fit in the TextMD <i>encoding</i> or <i>character_info</i> containers, possible
+  exceptions being $c (Compression information.) as part of <i>encoding_software</i>, and $r (Settings) for determining <i>byte_size</i>, although the $r expression of
+  the latter has begun to look quaint.&nbsp; &nbsp;&nbsp;&nbsp;</p>
+<p>On the other hand, 856 may contain,
+  in various subfields, data appropriate to TextMD <i>printRequirements</i> and/or <i>viewingRequirements</i> inasmuch as those elements are specified to be free text strings.</p>
+<p>The tables cite field 500 as the
+  possible MARC21 home for data that would appear in the catch-all TextMD
+  elements <i>processingNote</i> and <i>textNote</i>, but, depending on the content
+  of individual instances of those elements, somewhat more specific 5xx notes may
+  occasionally be more appropriate. </p>
+<p>Data in new TextMD version 3.01
+  elements (e.g.<i> representationSequence,
+    lineLayout, lineOrientation, characterFlow</i>) might also be reflected in
+  somewhat different form in MARC21 note fields such as 500 and 546, particularly
+  when the text of the object is written in non-Latin scripts. </p>
+<p>The process of deciding what kinds
+  of data are expected in any MARC21 subfield of interest, particularly in free
+  text note fields, has been guided by the examples provided in the full online
+  MARC21 Bibliographic Format document.&nbsp; No
+  attempt was made to search for additional examples in library databases. </p>
+<p>The investigator is aware of his
+  tendency to think of metadata comparisons of this sort in terms of conversions
+  from one scheme to another.&nbsp; That is a
+  matter more limited than the general question of data overlap.&nbsp; Nevertheless, that mindset may have crept
+  occasionally into the language used to talk about the relationships of certain
+  data elements between MARC21 and TextMD.&nbsp; This should not seriously affect interpretation of the findings.</p>
+<p>In carrying out this task, the investigator noted that re-examining some features may serve the scheme well in the long run.&nbsp; Here are some things to consider.</p>
+<ul>
+  <li>Unify element naming
+    conventions.&nbsp; The use of camelCase in
+    some element names, words separated by underscores in others, and all-caps for
+    one attribute name is prone to cause error.</li>
+  <li>Eliminate use of the same name for
+    elements that are functionally different.&nbsp; The name<i> linebreak</i> seems to be
+    applied to the same datum in two ways, once as an attribute of an element in the
+    encoding container, once as an element in different container.&nbsp; The name <i>encoding</i> is employed for a container and also for an attribute of an element in a
+    different container. &nbsp;(The latter usage
+    is further complicated by its relation to the <i>charset </i>element. That is not a fault of TextMD; rather it devolves
+    from the IANA character set name list&rsquo;s inclusion of names for both character repertoires
+    and encodings.)&nbsp;</li>
+</ul>
+<p><i>Prepared for the Library of Congress </i><br>
+<i>by Charles W. Husbands<br>
+</i><i>21 January 2010</i></p>
+<!-- InstanceEndEditable -->
+<hr size="1" noshade>
+<p><a href="../../../marc.html">MARC 21 HOME</a> &gt;&gt; <!-- InstanceBeginEditable name="bottombreadcrumb" --><a href="../ecbdhome.html">Bibliographic Format</a> &gt;&gt; <a href="index.html">Overlaps Between MARC21</a> &gt;&gt; MARC21 to TextMD Mapping<!-- InstanceEndEditable --></p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr valign="bottom">
+    <td><a href="../../../index.html">The Library of Congress</a> &gt;&gt; <a href="../../../library/index.html">Especially
+    for Librarians and Archivists</a> &gt;&gt; <a href="../../../standards/index.html">Standards</a><br>
+    (<!-- MM:BeginLock type="mmdate" format="Am3" orig=" -->
+    <!-- #BeginDate format:Am3 -->12/20/2010<!-- #EndDate -->
+    ) </td>
+    <td align="right"><a href="http://www.loc.gov/cdn-cgi/l/email-protection#94faf0f9e7fbd4f8fbf7baf3fbe2">Contact Us</a></td>
+  </tr>
+</table>
+<script data-cfasync="false" src="http://www.loc.gov/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+<!-- InstanceEnd --></html>

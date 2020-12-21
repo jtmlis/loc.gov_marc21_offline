@@ -1,0 +1,111 @@
+@charset "utf-8";
+/***************specific styles*************/
+
+/********************
+left nav - Concerts Top Level Page
+********************/
+#left_nav .leftnavimg {
+background: transparent url(../images/leftnav.jpg) 0 0 no-repeat;
+}
+
+/* custom width */
+#col2_left.custom {width:375px;}
+#col2_right.custom {width:290px;}
+#col4_equal.custom {width:25%;}
+
+div.item {
+    clear: left;
+    margin: 20px 0;
+    min-height: 67px;
+}
+div.item img, img.thumbnail {
+    border: 1px solid #CCCCCC;
+    padding: 2px;
+}
+div.dot-bot {
+	border-bottom: 1px dotted #ccc;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+}
+div.redbox {
+	padding: 12px; 
+	margin: 0px;
+	margin-bottom: 15px;
+	background: #a71818; 
+	font: 11pt Arial, Helvetica, sans-serif;
+	color: #FFF;
+	clear: right;
+}
+blockquote.quote {
+	margin: 5px 10px 15px 0px;
+}
+.program {	
+	padding: 9px;
+	border: 1px solid #ddd;
+    background-color:#eee;
+    color:#666;
+	margin-bottom: 15px;
+	font: 10pt Arial, Helvetica, sans-serif;
+}
+.program h4 {
+	font: bold 11pt "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #666;
+	margin-bottom: 0px;
+}
+/********************
+left nav
+********************/
+#left_nav ul.social {
+	padding: 0px;
+	margin: 0px;
+	border-bottom: 0;
+	border-top: 0;
+	list-style-type: none;
+	background-color: #fff;
+}
+#left_nav ul.social li {
+background: transparent;
+padding: 2px 0 2px 0;
+margin: 7px 0 7px 0;
+font-weight: 100;
+}
+#left_nav ul.social li.mail {
+background: transparent url(../images/email.png) top left no-repeat;
+padding: 2px 0 2px 20px;
+}
+#left_nav ul.social li.facebook {
+background: transparent url(../../include/images/facebook.gif) top left no-repeat;
+padding: 2px 0 2px 20px;
+}
+#left_nav ul.social li.twitter {
+background: transparent url(../../include/images/twitter.gif) top left no-repeat;
+padding: 2px 0 2px 20px;
+}
+#left_nav ul.social li.youtube {
+background: transparent url(../../include/images/youtube.gif) top left no-repeat;
+padding: 2px 0 2px 20px;
+}
+#left_nav ul.social li.itunes {
+background: transparent url(../../law/images/itunes.gif) top left no-repeat;
+padding: 2px 0 2px 20px;
+}
+#left_nav ul.social li.blog {
+background: transparent url(../images/blog.gif) top left no-repeat;
+padding: 2px 0 2px 20px;
+}
+#left_nav ul.social li.flickr {
+background: transparent url(https://cdn.loc.gov/images/img-foot/flickr.gif) top left no-repeat;
+padding: 2px 0 2px 20px;
+}
+#left_nav .blog {
+	background: url(../images/blog.gif) no-repeat left bottom;
+}
+#left_nav .blog p {color:#666666;}
+#left_nav .blog h2, #left_nav .blog p {margin-left:60px;}
+#left_nav h2 {
+	font-size: 100%;
+	color: #000;
+}
+h1 em {
+	font-size:15px;
+}

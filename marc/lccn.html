@@ -1,0 +1,127 @@
+<!doctype html public "-//W30//DTD WWW HTML 2.0//EN>
+<html>
+<head>
+<title>Library of Congress Control Number</title>
+<base href="">
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+<body>
+<h2 align=center>LIBRARY OF CONGRESS CONTROL NUMBER (LCCN)--<br>
+RESTRUCTURING TO ACCOMMODATE CENTURY CHANGE</h2>
+<h3 align=center>October 1999</h3>
+<h3 align=center>Network Development MARC Standards Office <br>
+Library of Congress </h3>
+<hr>
+<h3><strong>CURRENT STRUCTURE OF THE LCCN</strong></h3>
+<p>
+The Library of Congress began to print catalog cards in 1898 and began to distribute them in 1901.  The Library of Congress Card Number was the number used to identify and control catalog cards. With the development of the MARC format and the first distribution of machine-readable records for book materials in the late 1960s, the name of the LCCN was changed to Library of Congress Control Number.  LCCNs are used for authority, bibliographic and classification records and are currently structured as follows:
+<p>
+<pre>             Element                   Length             Positions
+
+             Alphabetic Prefix         3                  00-02
+             Year                      2                  03-04
+             Serial Number             6                  05-10
+             Supplement Number         1                  11
+</pre><p>
+The uniqueness of the LCCN is determined by the first 11 positions (positions 00-10).  The
+Supplement Number has never been used by the Library of Congress and this position is always
+blank.  The Supplement Number may be followed by two kinds of variable length data known as
+Suffix/Alphabetic Identifier and Revision Date.  Each Suffix/Alphabetic Identifier is preceded by a
+slash as is Revision Date.  If there is no Suffix/Alphabetic Identifier, the Revision Date is preceded
+by two slashes.  Examples:
+<p>
+<pre>###95156543#          May be displayed as: 95-156543
+###94014580#/AC/r95   May be displayed as: 94-14580/AC/r95
+###79310919#//r86     May be displayed as: 79-310919//r86
+gm#71005810#          May be displayed as: gm71-5810
+</pre>
+<p>
+For more details on the current and future structure of the Library of Congress Control Number, see the <a href="lccn_structure.html">Structure of the Library of Congress Control Number</a>.
+<p>
+<strong>INTERIM SOLUTION</strong>
+<p>
+With the year portion of the LCCN stated as two digits, there is no means of distinguishing numbers
+assigned in different centuries, e.g., 98-1, and therefore the numbers duplicate one another.  As an
+interim solution to this problem, the Library has taken steps to minimize the possibility that LCCNs
+assigned in 1898, 1899, 1900, etc. are re-assigned in the years 1998, 1999, 2000, etc.  This is not a
+significant group of numbers for the years 1998, 1999, and 2000 because fewer than 8000 numbers
+were assigned in each of the years 1898, 1899, and 1900.  However, beginning in 1901, the group of
+numbers increases substantially.<br>
+
+With respect to "blocks" of Serial Numbers, the Library's current practice is to allocate the first
+100,000 numbers in each year to the Cataloging in Publication Division (CIP).  This will change
+slightly in 1998 and 1999 in that the first CIP numbers assigned in these years will be greater than the
+last Serial Number assigned in 1898 or 1899 (this approach will be followed as long as the interim
+solution is in place at the Library).
+<p>
+<strong>LONG-TERM SOLUTION (RESTRUCTURE LCCN)</strong>
+<p>
+Although the interim solution could probably be managed for several years into the twenty-first
+century, the Library recognizes that this is not an adequate long-term solution.  Therefore, the
+Library has decided to restructure newly assigned LCCNs such that the prefix portion will be reduced
+to two positions, and the year portion will be expanded to four digits (e.g., ##2000000001).  There
+will no longer be a position defined for "Supplement Number," and use of the variable data elements
+Suffix/Alphabetic Identifier and Revision Date will be discontinued.  The new structure will be:
+<p>
+<pre>             Element                   Length             Positions
+
+             Alphabetic Prefix         2                  00-01
+             Year                      4                  02-05
+             Serial Number             6                  06-11
+
+Examples:    ##2005256543        May be displayed as: 2005-256543
+             ##2010014580        May be displayed as: 2010-14580
+             gm2005005810        May be displayed as: gm2005-5810
+</pre>
+<p>
+If the Library is able to implement the new LCCN structure by the year 2000, only the relatively few
+numbers assigned in 1898 and 1899 would not be readily distinguishable from those assigned in 1998
+and 1999.  If the implementation occurs later, numbers assigned in 1900, 1901, etc. would not be
+readily distinguishable from those assigned in 2000, 2001, etc. 
+<p>
+Some of the considerations in choosing this alternative are:
+<ul>
+<li>A four-digit year is unambiguous, easy to read, and easy to interpret.<br>
+<p>
+<li>  Previously assigned LCCNs will not be changed to the new structure.  This should
+minimize the impact of the LCCN change for systems that use LCCNs to link records or to point to
+records.</ul>
+<p>
+For more details on the current and future structure of the Library of Congress Control Number, see the <a href="lccn_structure.html">Structure of the Library of Congress Control Number</a>.
+<p>
+<strong>TIMING OF THE RESTRUCTURING</strong>
+<p>
+The Library is well aware of the impact this change will have on other systems and is, therefore,
+attempting to provide adequate lead-time.  
+<p>
+The actual date for implementing this change has now been set at January 1, 2001.  
+<p>
+<strong>COMMENTS/QUESTIONS/SUGGESTIONS</strong>
+<p>
+Please send any comments, questions, or suggestions to:
+<p>
+<pre>             Cataloging Policy and Support Office
+             Library of Congress
+             Washington, D.C.
+             20540-4305
+      
+             Electronic mail address: <a href="http://www.loc.gov/cdn-cgi/l/email-protection#016271726e416d6e622f666e77"><span class="__cf_email__" data-cfemail="0f6c7f7c604f63606c21686079">[email&#160;protected]</span></a>
+</pre>
+
+<p>
+<hr>
+Go to the <a href="marc.html">MARC Home Page</a>
+<p>
+Go to the <a href="../index.html">Library of Congress Home Page</a>
+<p>
+<HR>
+<IMG SRC="../homepage/lc2.gif" ALT=""> <strong>Library 
+of Congress</strong><br>
+<address><!--help desk email start -->
+<a href="http://www.loc.gov/help/help-desk.html">Library of Congress Help Desk</a>
+<!--help desk email end -->
+ 
+(10/08/99)</address>
+<script data-cfasync="false" src="http://www.loc.gov/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+</HTML>

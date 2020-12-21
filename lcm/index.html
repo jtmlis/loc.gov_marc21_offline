@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8" />
+<title>Library of Congress Magazine | Library of Congress</title>
+<meta name="description" content="Library of Congress Magazine (LCM) is published bimonthly to tell the Library’s stories, to showcase its many talented staff, and to share and promote the use of the resources of the world’s largest library." />
+<meta name="dc.identifier" content="//www.loc.gov/lcm" />
+<meta rel="canonical" href="//www.loc.gov/lcm" />
+<meta name="dc.type" content="web page" />
+<meta name="dc.language" content="eng" />
+<link media="screen" rel="stylesheet" href="../css/styles.css" />
+<link media="screen" rel="stylesheet" href="css/magazine.css" />
+<link media="print" rel="stylesheet" href="../css/loc_print_v2.css" />
+<!--[if lte IE 7]><link media="screen" rel="stylesheet" href="/css/loc_lte_ie6.css" /><![endif]-->
+<script type="text/javascript" src="https://cdn.loc.gov/sites/library-of-congress-new.js"></script>
+<script type="text/javascript" src="https://cdn.loc.gov/bootstrap/bootstrap.js"></script>
+<script type="text/javascript" src="https://cdn.loc.gov/js/lib/jquery-1.8.2.min.js"></script>
+<script>jQuery(function($) {
+    $('.header-menu-link a.menu-link').live('click', function () {
+        $('.header-submenu, .header-menu, .header-menu-link').toggleClass('on-off');
+    });
+    var delay = 800,
+        global_nav_header_timeout;
+    $('.header-menu li').live('hover', function(event) {
+        $('.header-dropdown img').each(function(index, image){
+            var data_source = $(image).attr('data-src');
+            if(data_source){
+                $(image).attr({src: data_source, 'data-src': null});
+            }
+        });
+
+        if( $(event.target).parents('.hover').length ){
+            return;
+        }
+
+        $('.header-menu li.hover').removeClass('hover');
+        $(event.target).closest('li').addClass('hover');
+        global_nav_header_timeout = setTimeout(function(){
+            $('.header-dropdown').hide();
+            $('.header-dropdown', $(event.target).closest('li')).show();
+        }, delay);
+    }, function(event){
+        clearTimeout( global_nav_header_timeout );
+        $(event.target).closest('li').removeClass('hover');
+        $('.header-dropdown', $(event.target).closest('li')).hide();
+    });
+
+    $('.header-menu').live('hover',  function(event) {/*
+        do nothing on hover over, only on hover out
+    */}, function(event){
+        $('.header-menu li.hover').removeClass('hover');
+        $(event.target).parents('.header-dropdown').hide();
+    });
+
+    //Metrics tracking how users are using the new header
+    $('.header-menu a, .intersite-navigation a, .locfoot a').live('click', function(event){
+        s.linkTrackVars = s.linkTrackVar + ",prop57";
+        var label = $(this).attr('name');
+        if ( !label ){
+            label = $(this).text().trim();
+        }
+        s.prop57 = label;
+        s.tl(this,'o',label);
+    });
+
+    function headerMenuActive() {
+        $('.header-menu-container').removeClass('header-menu-container-active').attr('aria-hidden', 'true');
+        $('.header-menu').removeClass('header-menu-active');
+        $('.header-menu-button').attr('aria-expanded', 'false');
+        $('.header-menu-button i').switchClass('icon-times', 'icon-bars', 50);
+        $('.header-overlay').hide();
+    };
+    function headerMenuInactive() {
+        $('.header-menu-container').addClass('header-menu-container-active').attr('aria-hidden', 'false');
+        $('.header-menu').addClass('header-menu-active');
+        $('.header-menu-button').attr('aria-expanded', 'true');
+        $('.header-menu-button i').switchClass('icon-bars', 'icon-times', 50);
+        $('.header-overlay').show();
+    };
+    $('.header-menu-button').live('click', function() {
+        if ($('.header-menu-container').hasClass('header-menu-container-active')) {
+            headerMenuActive();
+            //UX Interaction Tracking
+            UX.interaction($(this), 'Hamburger Menu', 'Close', '');
+        } else {
+            headerMenuInactive();
+            //UX Interaction Tracking
+            UX.interaction($(this), 'Hamburger Menu', 'Open', '');
+        }
+    });
+    $("html").live("click touchstart keydown",function(event) {
+        headerMenuActive();
+    });
+    $(".header-menu").live("click touchstart keydown",function(event) {
+        event.stopPropagation();
+        // allow escape key to close for accessibility
+        if (event.which == 27) {
+            headerMenuActive();
+        }
+    });
+    // menu position and height
+    $(window).live("load resize scroll",function(e){
+        var headerHeight = $('.header-menu').outerHeight();
+        $('.header-menu-container').css({"top": headerHeight});
+    });
+
+    // UX Interaction Tracking - Logo, Menu, Search, Breadcrumbs
+    $('.header-menu-container ul li').live('click', function() {
+        var label = $(this).text().trim();
+        UX.interaction($(this), 'Hamburger Menu', 'Click', label);
+    });
+
+    $('.header-logo a').live('click', function() {
+        UX.interaction($(this), 'LC Logo', 'Click', '');
+    });
+
+    $('.header-search-format-select').change(function() {
+        var label;
+        $('.header-search-format-select option:selected').each(function() {
+            label = $(this).text().trim();
+        });
+        UX.interaction($(this), 'Search', 'Select Format', label);
+    });
+
+    $('.header-breadcrumbs a').live('click', function(event){
+        var label = $(this).attr('name');
+        if ( !label ){
+            label = $(this).text().trim();
+        }
+        UX.interaction($(this), 'Breadcrumbs', 'click', label);
+    });
+
+    // search toggle
+    function searchActive() {
+        $('.header-search > form').addClass('header-search-form-active');
+        $('.header-search .header-search-input').focus();
+        $('.header-search-toggle i').switchClass('icon-search', 'icon-times', 50);
+        $('.header-search-toggle').addClass('header-search-toggle-close');
+        $('.header-search').addClass('header-search-close');
+    };
+    function searchInactive() {
+        $('.header-search > form').removeClass('header-search-form-active');
+        $('.header-search-toggle i').switchClass('icon-times', 'icon-search', 50);
+        $('.header-search-toggle').removeClass('header-search-toggle-close');
+        $('.header-search').removeClass('header-search-close');
+    };
+
+    $('.header-search-toggle').live('click', function() {
+        if ($('.header-search > form').hasClass('header-search-form-active')) {
+            searchInactive();
+            //UX Interaction Tracking
+            UX.interaction($(this), 'Search', 'Hide', '');
+        } else {
+            searchActive();
+            //UX Interaction Tracking
+            UX.interaction($(this), 'Search', 'Show', '');
+        }
+    });
+
+    $(window).on("load resize",function(e){
+        $('.autocomplete-w1').parent().css('width', '100%');
+    });
+});
+</script>
+<script src="https://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+<body>
+<div id='body'>
+<a class="skip-nav"
+   href="index.html#skip-to-content">Skip to main content</a>
+<div id="container">
+ <header class="header" role="banner">
+<div class="header-container">
+<div class="header-row">
+    <div class="header-logo">
+        <a href="../index.html"><span>Library of Congress</span></a>
+    </div>
+    
+    <div class="header-search">
+        <label for="search"
+            class="test screen-readers-only">Search</label>
+        
+<form role="search" method="get" action="https://www.loc.gov/search/">
+    <div class="header-search-formats">
+        <select name="in"
+                id="searchFormat"
+                aria-label="search"
+                class="header-search-format-select">
+            <option value="">All Formats</option>
+
+            
+            <option value="original-format:sound recording"
+                
+                    >Audio Recordings</option>
+            
+            <option value="original-format:book"
+                
+                    >Books/Printed Material</option>
+            
+            <option value="original-format:film, video"
+                
+                    >Films, Videos</option>
+            
+            <option value="original-format:legislation"
+                
+                    >Legislation</option>
+            
+            <option value="original-format:manuscript/mixed material"
+                
+                    >Manuscripts/Mixed Material</option>
+            
+            <option value="original-format:map"
+                
+                    >Maps</option>
+            
+            <option value="original-format:notated music"
+                
+                    >Notated Music</option>
+            
+            <option value="original-format:newspaper"
+                
+                    >Newspapers</option>
+            
+            <option value="original-format:periodical"
+                
+                    >Periodicals</option>
+            
+            <option value="original-format:personal narrative"
+                
+                    >Personal Narratives</option>
+            
+            <option value="original-format:photo, print, drawing"
+                
+                    >Photos, Prints, Drawings</option>
+            
+            <option value="original-format:software, e-resource"
+                
+                    >Software, E-Resources</option>
+            
+            <option value="original-format:archived web site"
+                
+                    >Archived Web Sites</option>
+            
+            <option value="original-format:web page"
+                
+                    >Web Pages</option>
+            
+            <option value="original-format:3d object"
+                
+                    >3D Objects</option>
+            
+
+            
+        </select>
+    </div>
+    <div class='header-search-input-wrapper'>
+        <input  type="search"
+                title="Search the Library of Congress"
+                placeholder="Search Loc.gov"
+                name="q"
+                id="search"
+                class='locsuggest header-search-input'
+                maxlength="250"
+                value=''
+                onFocus="this.select();"
+                accesskey="/"/>
+        <div class='searchtarget'>
+            <input id='search_within_default'
+                type="hidden"
+                name="new"
+                value="true" />
+        </div>
+    </div>
+    <button
+            type="submit"
+            value="submit" class="header-search-button"><span>Search</span><i
+            class="icon icon-search"></i></button>
+
+    
+    <input type='hidden'
+        name='st'
+        value=''/>
+    
+    
+</form>
+
+        <button class="header-search-toggle"><span>Search toggle</span><i
+            class="icon icon-search"></i></button>
+    </div>
+    
+    <div class="header-menu">
+        <button class="header-menu-button"
+                id="header-menu-button"
+                aria-controls="header-menu-container"
+            ><span>menu </span><i class="icon icon-bars"></i></button>
+        <nav class="header-menu-container"
+             id="header-menu-container"
+             aria-labelledby="header-menu-button">
+            <ul class="">
+                <li class=""><a href="../discover/index.html">Discover</a></li>
+                <li class=""><a href="../services-and-programs/index.html">Services</a></li>
+                <li class=""><a href="https://www.loc.gov/visit/">Visit</a></li>
+                <li class=""><a href="../education/index.html">Education</a></li>
+                <li class=""><a href="../homepage/connect.html">Connect</a></li>
+                <li class=""><a href="https://www.loc.gov/about/">About</a></li>
+            </ul>
+            <ul class="header-menu-tertiary">
+                <li class=""><a href="../rr/askalib/index.html">Ask a Librarian</a></li>
+                <li class=""><a href="../help/index.html">Help</a></li>
+                <li class=""><a href="../help/contact-general.html">Contact</a></li>
+            </ul>
+            <ul class="header-menu-external">
+                <li class=""><a href="https://catalog.loc.gov/">Search Online Catalog</a></li>
+                <li class=""><a href="http://copyright.gov/">Copyright.gov</a></li>
+                <li class=""><a href="https://www.congress.gov/">Congress.gov</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+</div>
+
+
+
+
+
+<div class="header-overlay"><!-- --></div>
+
+</header>
+  <div id="crumb_nav"><a href="../index.html">The Library of Congress</a> &gt; Library of Congress Magazine</div>
+  <div id="content">
+    <div id="left_nav" role="navigation">
+  <div class="box leftnavtitle"><a href="index.html"><img src="images/left-img-head.gif" alt="Magazine" width="219" height="50" /></a></div>
+  <div class="box leftnavimg">Magazine Image</div>
+  <div class="box">
+    <ul class="arrow_o bold">
+      <li><a href="../today/pr/index.html">News Releases</a></li>
+      <li><a href="../loc/events/index.html">Events: Talks, Films, Concerts</a></li>
+      <li><a href="http://blogs.loc.gov">Library of Congress Blog</a></li>
+    </ul>
+  </div>
+  <div class="box">
+    <ul class="std">
+	  <h2>Related Resources at the Library of Congress</h2>
+      <li><a href="../exhibits/index.html">Exhibitions at the Library of Congress</a></li>
+      <li><a href="https://www.loc.gov/about/">About the Library of Congress</a></li>
+      <li><a href="https://www.loc.gov/wiseguide/">Wise Guide to loc.gov (2002-2011)</a></li>
+    </ul>
+  </div>
+  <div class="box">
+  	<h2>For More Information</h2>
+    <p>Office of Communications<br />
+    Library of Congress<br />
+    101 Independence Ave., S.E.<br />
+    Washington, D.C. 20540-1600<br />
+    Voice: 202.707.2905<br />
+    Fax: 202.707.9199<br />
+    Email: <a href="../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="f282939db29e9d91dc959d84">[email&#160;protected]</a></p>
+  </div>
+</div>
+<!-- end id:left_nav -->
+
+    <div id="main_body" role="main">
+      <!-- Toolbar -->
+      <div class="locshare-this" id='instance_access1001'></div>
+      <div class="clear-share">
+        <!-- -->
+      </div>
+      <div id="page_head"><span style="width: 100%;"><a id="skip_menu"></a></span>
+        <h1>Library of Congress Magazine</h1>
+      </div>
+      <p>Library of Congress Magazine (LCM) is published bimonthly to  tell the Library's stories, to showcase its many talented staff, and to share and promote the use of the resources of the world's largest library.</p>
+	  <p class="jump-links">Read issues from: <a href="index.html#issues-2020">2020</a> | <a href="index.html#issues-2019">2019</a> | <a href="index.html#issues-2018">2018</a> | <a href="index.html#issues-2017">2017</a> | <a href="index.html#issues-2016">2016</a> | <a href="index.html#issues-2015">2015</a> | <a href="index.html#issues-2014">2014</a> | <a href="index.html#issues-2013">2013</a> | <a href="index.html#issues-2012">2012</a></p>
+	  <h2 class="dot-top">Current Issue</h2>
+      <div class="issue">
+      	<img src="images/issue-20201112.jpg" alt="Nov.-Dec. issue cover" />
+        <h3>Vol. 9 No. 5: Nov.-Dec. 2020</h3>
+        <p>Exceptional photographs communicate with viewers in a universal language to inspire, provoke, educate. In this issue of LCM, Library of Congress curators and reference librarians choose great photographs from Library collections that have inspired them, images from the dawn of the photography to the present day.</p>
+        <p><a href="pdf/LCM_2020_1112.pdf" target="_blank">(Download PDF 3.03MB)</a></p>
+      </div>
+	  <h2 class="dot-top clear-std" is="issues-2020">Issues from 2020</h2>
+      <div class="issue">
+      	<img src="images/issue-20200910.jpg" alt="Sept.-Oct. issue cover" />
+        <h3>Vol. 9 No. 4: Sept.-Oct. 2020</h3>
+        <p>The Library of Congress this summer marks a major milestone: the 150th anniversary of copyright at the Library. Also, copyrighting the Statue of Liberty; why copyright protects the great American novel but not a selfie taken by a monkey; and Broadway composer Stephen Schwartz discusses the importance of copyright to creators.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2020_0910.pdf" target="_blank">(Download PDF 4.04MB)</a></p>
+      </div>
+      <div class="issue">
+      	<img src="images/issue-20200708.jpg" alt="July-Aug. 2020 issue cover" />
+        <h3>Vol. 9 No. 3: July-Aug. 2020</h3>
+        <p>The Library commemorates the 75th anniversary of World War II and the service of the men and women who fought it. Also, a one-of-a-kind Japanese map details the damage inflicted at Pearl Harbor, and Manuscript Division collections preserve photos taken in the field by Gen. George S. Patton.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2020_0708.pdf" target="_blank">(Download PDF 5.67MB)</a></p>
+      </div>
+      <div class="issue">
+      	<img src="images/issue-20200304.jpg" alt="Mar.-Apr. 2020 issue cover" />
+        <h3>Vol. 9 No. 2: Mar.-Apr. 2020</h3>
+        <p>Researchers use the Library’s vast collections to further their work and pursue their passions. Also, a Library project will give visitors a new view of the institution and its historic Jefferson Building, and an NLS program helps blind and visually impaired musicians pursue their careers.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2020_0304.pdf" target="_blank">(Download PDF 4.26MB)</a></p>
+      </div>
+      <div class="issue">
+      	<img src="images/issue-20200102.jpg" alt="Jan.-Feb. 2020 issue cover" />
+        <h3>Vol. 9 No. 1: Jan.-Feb. 2020</h3>
+        <p>In her writings, civil rights icon Rosa Parks reveals the fierce spirit beneath her soft-spoken public persona. Also, Library collections preserve drawings created by child survivors of Nazi concentration camps, and the papers of nearly three dozen justices reveal the inner dynamics of the Supreme Court.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2020_0102.pdf" target="_blank">(Download PDF 4.01MB)</a></p>
+      </div>
+      <h2 class="dot-top clear-std" id="issues-2019">Issues from 2019</h2>
+      <div class="issue">
+      	<img src="images/issue-20191112.jpg" alt="Nov.-Dec. 2019 issue cover" />
+        <h3>Vol. 8 No. 6: Nov.-Dec. 2019</h3>
+        <p>The Library's collections reflect documents from an important group of innovators who developed inventions that changed the course of civilization. Also, the first Christmas card and the restoration of a rare Buddhist scroll.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2019_1112.pdf" target="_blank">(Download PDF 4.40MB)</a></p>
+      </div>
+      <div class="issue">
+      	<img src="images/issue-20190910.png" alt="Sept.-Oct. 2019 issue cover" />
+        <h3>Vol. 8 No. 5: Sept.-Oct. 2019</h3>
+        <p>Crime & murder take the spotlight in this issue, featuring the Library’s more chilling collections, from Capote’s notebooks for “In Cold Blood” to the original draft of Jackson’s “Hill House” to courtroom illustrations of serial killers.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2019_0910.pdf" target="_blank">(Download PDF 4.25MB)</a></p>
+      </div>
+      <div class="issue">
+      	<img src="images/issue-20190708.jpg" alt="July-Aug. 2019 issue cover" />
+        <h3>Vol. 8 No. 4: July-Aug. 2019</h3>
+        <p>The Library kicks off the run-up year to the 100th anniversary of women’s suffrage in the U.S. with a powerful new exhibition displaying the history of the struggle through photos, documents and the papers of the movement’s greatest figures. </p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2019_0708.pdf" target="_blank">(Download PDF 5.13MB)</a></p>
+      </div>
+      <div class="issue">
+      	<img src="images/issue-20190506.jpg" alt="May-June 2019 issue cover" />
+        <h3>Vol. 8 No. 3: May-June 2019</h3>
+        <p>The advent of digital technology changed them forever, but today’s libraries use those tech tools to find new ways to reach patrons on a more human level. Also: Walt Whitman at 200, next-generation librarians and how crushed bugs are used in preservation.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2019_0506.pdf" target="_blank">(Download PDF 3.58MB)</a></p>
+      </div>
+      <div class="issue">
+      	<img src="images/issue-20190304.jpg" alt="Mar.-Apr. 2019 issue cover" />
+        <h3>Vol. 8 No. 2: Mar.-Apr. 2019</h3>
+        <p>In this issue celebrating our Gershwin Prize for Popular Song, we look at the creative process of songwriting. Plus: Native American voices restored, the story of a slave memoir written in Arabic, and more.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2019_0304.pdf" target="_blank">(Download PDF 3.59MB)</a></p>
+      </div>
+      <div class="issue">
+      	<img src="images/issue-20190102.jpg" alt="Jan.-Feb. 2019 issue cover" />
+        <h3>Vol. 8 No. 1: Jan.-Feb. 2019</h3>
+        <p>With a new look for 2019, this issue features the robust film collections of the Library of Congress and our efforts at preserving historical and contemporary cinema of all kinds for generations to come.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2019_0102.pdf" target="_blank">(Download PDF 3.24MB)</a></p>
+      </div>
+	  <h2 class="dot-top clear-std" id="issues-2018">Issues from 2018</h2>
+      <div class="issue">
+      	<img src="images/issue-20180910.jpg" alt="Sept.-Oct. 2018 issue cover" />
+        <h3>Vol. 7 No. 5: Sept.-Oct. 2018</h3>
+        <p>The Library of Congress can be a library for kids. This back-to-school issue highlights resources for children and their teachers, kids' questions to librarians, great figures of history (as kids) and more.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2018_0910.pdf" target="_blank">(Download PDF 4.23MB)</a></p>
+      </div>
+      <div class="issue">
+      	<img src="images/issue-20180708.jpg" alt="July-Aug. 2018 issue cover" />
+        <h3>Vol. 7 No. 4: July-Aug. 2018</h3>
+        <p>From sandlot to the major leagues, baseball remains a source of community in small towns and big cities alike. We devote our entire issue to the national pastime and our exhibition "Baseball Americana."</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2018_0708.pdf" target="_blank">(Download PDF 5.5MB)</a></p>
+      </div>
+      <div class="issue">
+      	<img src="images/issue-20180506.jpg" alt="May-June 2018 issue cover" />
+        <h3>Vol. 7 No. 3: May-June 2018</h3>
+        <p>An issue devoted to "brilliant Broadway" features stage design, music, lyrics, and more, from Rodgers and Hammerstein to Leonard Bernstein to Lin-Manuel Miranda, Jonathan Larson, Jason Robert Brown and more.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2018_0506.pdf" target="_blank">(Download PDF 5.23MB)</a></p>
+      </div>
+      <div class="issue">
+      	<img src="images/issue-20180304.jpg" alt="Mar.-Apr. 2018 issue cover" />
+        <h3>Vol. 7 No. 2: Mar.-Apr. 2018</h3>
+        <p>We profile several "hidden figures" in women's history who broke ground and led extraordinary lives. Also: science reveals new information from old manuscripts, Mark Twain's white suit, circus clowns and more.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2018_0304.pdf" target="_blank">(Download PDF 6.3MB)</a></p>
+      </div>
+	  <div class="issue">
+      	<img src="images/issue-20180102.jpg" alt="Jan.-Feb. 2018 issue cover" />
+        <h3>Vol. 7 No. 1: Jan.-Feb. 2018</h3>
+        <p>We partner with a new museum to bring a newly-found treasure of African-American history to light. Plus, finding your roots, celebrating Frederick Douglass' birthday and hearing the voices of slavery.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2018_0102.pdf" target="_blank">(Download PDF 3.8MB)</a></p>
+      </div>
+	  <h2 class="dot-top clear-std" id="issues-2017">Issues from 2017</h2>
+	  <div class="issue">
+      	<img src="images/issue-20171112.jpg" alt="Nov.-Dec. 2017 issue cover" />
+        <h3>Vol. 6 No. 6: Nov.-Dec. 2017</h3>
+        <p>We honor our veterans and celebrate their achievements on the home front, with selections from our Veterans History Project. Also, coming home in film and song, plus the papers of Alexander Hamilton online.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2017_1112.pdf" target="_blank">(Download PDF 4.42MB)</a></p>
+      </div>
+      <div class="issue">
+      	<img src="images/issue-20170910.jpg" alt="Sep.-Oct. 2017 issue cover" />
+        <h3>Vol. 6 No. 5: Sep.-Oct. 2017</h3>
+        <p>Hey everyone: comics! We find interesting stories from our exhaustive collection of American comic books and comic art, plus feature webcomics and web culture, 1970s Wonder Woman Lynda Carter and more.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2017_0910.pdf" target="_blank">(Download PDF 5.3MB)</a></p>
+      </div>
+      <div class="issue">
+      	<img src="images/issue-20170708.jpg" alt="July-Aug. 2017 issue cover" />
+        <h3>Vol. 6 No. 4: July-Aug. 2017</h3>
+        <p>For the summer reading season, we offer an issue filled with short stories, from classics from Edgar Allan Poe and Mark Twain to Shirley Jackson's "The Lottery" — and a brand new story from Salman Rushdie.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2017_0708.pdf" target="_blank">(Download PDF 2.82MB)</a></p>
+      </div>
+      <div class="issue">
+      	<img src="images/issue-20170506.jpg" alt="May-June 2017 issue cover" />
+        <h3>Vol. 6 No. 3: May-June 2017</h3>
+        <p>The visionaries of design represented in the Library's collections reveal where creativity and the day-to-day intersect. Plus, stories on monumental architecture, container design, courtroom illustration and more.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2017_0506.pdf" target="_blank">(Download PDF 2.25MB)</a></p>
+      </div>
+      <div class="issue">
+      	<img src="images/issue-20170304.jpg" alt="Mar.-Apr. 2017 issue cover" />
+        <h3>Vol. 6 No. 2: Mar.-Apr. 2017</h3>
+        <p>Special World War I Centennial issue, commemorating the U.S. entry into the Great War. Profiles on personalities, an overview of the American involvement in the conflict, art and technology of the war, and more.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2017_0304.pdf" target="_blank">(Download PDF 2.46MB)</a></p>
+      </div>
+      <div class="issue">
+      	<img src="images/issue-20170102.jpg" alt="Jan.-Feb. 2017 issue cover" />
+        <h3>Vol. 6 No. 1: Jan.-Feb. 2017</h3>
+        <p>All things presidential, from campaigns and women on the ballot to the electoral college and inaugurations. Also, Hamilton and the Federalist Papers, Washington’s first inaugural address and surrogate first ladies.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2017_0102.pdf" target="_blank">(Download PDF 1.75MB)</a></p>
+      </div>
+	  <h2 class="dot-top clear-std" id="issues-2016">Issues from 2016</h2>
+      <div class="issue">
+      	<img src="images/issue-20161112.jpg" alt="Nov.-Dec 2016. issue cover" />
+        <h3>Vol. 5 No. 6: Nov.-Dec. 2016</h3>
+        <p>From daguerreotypes to digital, the Library's photo collections illustrate history and inspire new works. Also, photos in social media, opera before Instagram, documentary photography and women photographers.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2016_1112.pdf" target="_blank">(Download PDF 1.67MB)</a></p>
+      </div>
+      <div class="issue">
+      	<img src="images/issue-20160910.jpg" alt="Sept.-Oct. 2016 issue cover" />
+        <h3>Vol. 5 No. 5: Sept.-Oct. 2016</h3>
+        <p>Advances in technology and the way we use maps continue to transform the ancient art and science of cartography. Also: imaginary maps and we welcome our new Librarian of Congress, Carla Hayden.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2016_0910.pdf" target="_blank">(Download PDF 2.91MB)</a></p>
+      </div>
+      <div class="issue clear-std">
+      	<img src="images/issue-20160708.jpg" alt="July-Aug. 2016 issue cover" />
+        <h3>Vol. 5 No. 4: July-Aug. 2016</h3>
+        <p>The Library is working to identify important American radio broadcasts for preservation. Also, we look back at Orson Welles’ “War of the Worlds” broadcast,the 1936 Olympics and more.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2016_0708.pdf" target="_blank">(Download PDF 2.4MB)</a></p>
+      </div>
+      <div class="issue">
+      	<img src="images/issue-20160504.jpg" alt="May-June 2016 issue cover" />
+        <h3>Vol. 5 No. 3: May-June 2016</h3>
+        <p>We look at the evolving role of public libraries in America and how the Library's collection has been enhanced through private libraries. Plus, Alice in Wonderland, James Madison, Mother's Day and more.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2016_0506.pdf" target="_blank">(Download PDF 1.62MB)</a></p>
+      </div>
+	  <div class="issue">
+      	<img src="images/issue-20160304.jpg" alt="Mar.-Apr. 2016 issue cover" />
+        <h3>Vol. 5 No. 2: Mar.-Apr. 2016</h3>
+        <p>The Library has been a leader in the field of folklife for generations, and the ways of capturing &amp; accessing it have seen much change through the years. Also, we uncover the only known audio recording made by the inventor of basketball.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2016_0304.pdf" target="_blank">(Download PDF 2.21MB)</a></p>
+      </div>
+      <div class="issue">
+      	<img src="images/issue-20160102.jpg" alt="Jan.-Feb. 2016 issue cover" />
+        <h3>Vol. 5 No. 1: Jan.-Feb. 2016</h3>
+        <p>Not only does the Library acquire and maintain the world's premiere collection of knowledge, it must make it searchable, findable and usable. Also, shared cataloging, law of indigenous peoples, African American History and more.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2016_0102.pdf" target="_blank">(Download PDF 2.40MB)</a></p>
+      </div>
+	  <h2 class="dot-top clear-std" id="issues-2015">Issues from 2015</h2>
+      <div class="issue">
+      	<img src="images/issue-20151112.jpg" alt="Nov.-Dec. 2015 issue cover" />
+        <h3>Vol. 4 No. 6: Nov.-Dec. 2015</h3>
+        <p>The Library offers a veritable feast of food-related collections, from cookbooks to food-related sheet music, posters and photos. Also, 13 Librarians of Congress, the end of WWII, recipes for pancakes and chocolate-chip cookies and more.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2015_1112.pdf" target="_blank">(Download PDF 3.02MB)</a></p>
+      </div>
+      <div class="issue">
+      	<img src="images/issue-20150910.jpg" alt="Sept.-Oct. 2015 issue cover" />
+        <h3>Vol. 4 No. 5: Sept.-Oct. 2015</h3>
+        <p>The Library promotes reading and literacy nationally and internationally through a variety of programs and events. Also, baseball collections, a WWII sailor’s map journal, 15 years of the John W. Kluge Center and more.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2015_0910.pdf" target="_blank">(Download PDF 2.73MB)</a></p>
+      </div>
+      <div class="issue">
+      	<img src="images/issue-20150708.jpg" alt="July-Aug. 2015 issue cover" />
+        <h3>Vol. 4 No. 4: July-Aug. 2015</h3>
+        <p>The Library seeks, finds and collects the creative output of the entire world in every format imaginable. Also, the path a book takes when it comes to the Library, remarkable gifts, the Civil War in 3-D and more.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2015_0708.pdf" target="_blank">(Download PDF 2.46MB)</a></p>
+      </div>
+      <div class="issue">
+      	<img src="images/issue-20150506.jpg" alt="May-June 2015 issue cover" />
+        <h3>Vol. 4 No. 3: May-June 2015</h3>
+        <p>The many facets of comedy in the Library’s collections range from stage, screen & television to newspapers &amp; comic books. Bob Hope, Lucille Ball, Jerry Lewis, George Carlin, Jerry Seinfeld, the 3 Stooges and more.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2015_0506.pdf" target="_blank">(Download PDF 2.98MB)</a></p>
+      </div>
+      <div class="issue clear-std">
+      	<img src="images/issue-20150304.jpg" alt="Mar.-Apr. 2015 issue cover" />
+        <h3>Vol. 4 No. 2: Mar.-Apr. 2015</h3>
+        <p>The Library has been a repository and patron of poetry throughout its history and is the home of the Poet Laureate. Also: Rosa Parks and the struggle for racial justice, Walt Whitman, Billie Holliday and more.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2015_0304.pdf" target="_blank">(Download PDF 2.25MB)</a></p>
+      </div>
+	  <div class="issue">
+      	<img src="images/issue-20150102.jpg" alt="Jan.-Feb. 2015 issue cover" />
+        <h3>Vol. 4 No. 1: Jan.-Feb. 2015</h3>
+        <p>The Library has some of the most advance material preservation labs and some of the most skilled preservation scientists in the world. Also, folklorist Alan Lomax, Mickey Hart, Downton Abbey and more.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2015_0102.pdf" target="_blank">(Download PDF 2.4MB)</a></p>
+      </div>
+	  <h2 class="dot-top clear-std" id="issues-2014">Issues from 2014</h2>
+	  <div class="issue">
+      	<img src="images/issue-20141112.jpg" alt="Nov.-Dec. 2014 issue cover" />
+        <h3>Vol. 3 No. 6: Nov.-Dec. 2014</h3>
+        <p>The great charter of 1215, Magna Carta, comes to the Library for a limited engagement &amp brings with it an incredible history. Also, Look Magazine offers a view into the world of 1950s America, and more.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2014_1112.pdf" target="_blank">(Download PDF 2.23MB)</a></p>
+      </div>
+      <div class="issue">
+      	<img src="images/issue-20140910.jpg" alt="Sept.-Oct. 2014 issue cover" />
+        <h3>Vol. 3 No. 5: Sept.-Oct. 2014</h3>
+        <p>The archetypical American ballet, "Appalachian Spring," was commissioned by and premiered at the Library of Congress. Also, a history of the anthem of the Civil Rights Movement and a look at Mark Twain's work on copyright.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2014_0910.pdf" target="_blank">(Download PDF 2.02MB)</a></p>
+      </div>
+      <div class="issue">
+      	<img src="images/issue-20140708.jpg" alt="July-Aug. 2014 issue cover" />
+        <h3>Vol. 3 No. 4: July-Aug. 2014</h3>
+        <p>The Library's six overseas offices help grow and maintain a diverse international collection. Also, the World Digital Library shares world treasures in six languages and the Law Library contains laws of nations that no longer exist.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2014_0708.pdf" target="_blank">(Download PDF 2.59MB)</a></p>
+      </div>
+      <div class="issue">
+      	<img src="images/issue-20140506.jpg" alt="May-June 2014 issue cover" />
+        <h3>Vol. 3 No. 3: May-June 2014</h3>
+        <p>For 100 years the staff of the Library's Congressional Research Service  has served Congress with important research and information for its  lawmaking work. Also, Roy Wilkins and the Civil Rights movement, a  centennial of ASCAP and more.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2014_0506.pdf" target="_blank">(Download PDF 2.05MB)</a></p>
+      </div>
+      <div class="issue">
+      	<img src="images/issue-20140304.jpg" alt="Mar.-Apr. 2014 issue cover" />
+        <h3>Vol. 3 No. 2: Mar.-Apr. 2014</h3>
+        <p>More than 400 years of great American pastimes — from baseball to volleyball, badminton to hunting, football to roller derby — can be found in the nation’s library. Also, preserving pulp fiction, Mexican treasures and historical computing.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2014_0304.pdf" target="_blank">(Download PDF 2.17MB)</a></p>
+      </div>
+      <div class="issue">
+      	<img src="images/issue-20140102.jpg" alt="Jan.-Feb. 2014 issue cover" />
+        <h3>Vol. 3 No. 1: Jan.-Feb. 2014</h3>
+        <p>The Library preserves first-hand accounts from several key points in history, from the Civil War to the Civil Rights era to today. Also, oddities in the collections, an app for the annotated Constitution and the Library in works of fiction.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2014_0102.pdf" target="_blank">(Download PDF 7.22MB)</a></p>
+      </div>
+	  <h2 class="dot-top clear-std" id="issues-2013">Issues from 2013</h2>
+	  <div class="issue">
+      	<img src="images/issue-20130910.jpg" alt="Sept.-Oct. 2013 issue cover" />
+        <h3>Vol. 2 No. 5: Sept.-Oct. 2013</h3>
+        <p>It's back to school season! We feature resources and features designed to help teachers use the Library's unmatched primary resources to help in their classroom work. Also, 200 years of Wagner and Verdi and social media milestones.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2013_0910.pdf" target="_blank">(Download PDF 10.29MB)</a></p>
+      </div>
+	  <div class="issue">
+      	<img src="images/issue-20130708.jpg" alt="July-August 2013 issue cover" />
+        <h3>Vol. 2 No. 4: July-August 2013</h3>
+        <p>We set the clock back 50 years and examine 1963, a seminal year in American history, with events in the civil rights movement, shifts in popular culture and the assassination of a president. Also: federal buying power and a book by another Obama.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2013_0708.pdf" target="_blank">(Download PDF 6.14MB)</a></p>
+      </div>
+	  <div class="issue">
+      	<img src="images/issue-20130506.jpg" alt="May-June 2013 issue cover" />
+        <h3>Vol. 2 No. 3: May-June 2013</h3>
+        <p>The "Gibson Girl" set the archetype for young women at the start of the last century and was the epitome of illustration style for two decades. Also, the struggles for women's suffrage, celebrating Danny Kaye and Sylvia Fine and the high-tech cloning of a Stradivari violin.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2013_0506.pdf" target="_blank">(Download PDF 7.12MB)</a></p>
+      </div>
+	  <div class="issue">
+      	<img src="images/issue-20130304.jpg" alt="March-April 2013 issue cover" />
+        <h3>Vol. 2 No. 2: March-April 2013</h3>
+        <p>The mission of the Library is to support the Congress in fulfilling its constitutional duties, and here’s exactly how we do it. Also, a profile of Mary Pickford, Hollywood’s first female mogul, rock and roll interviews, March madness, and a word from the Poet Laureate.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2013_0304.pdf" target="_blank">(Download PDF 8.16MB)</a></p>
+      </div>
+	  <div class="issue">
+      	<img src="images/issue-20130102.jpg" alt="January-February 2013 issue cover" />
+        <h3>Vol. 2 No. 1: Jan.-Feb. 2013</h3>
+        <p>A presidential inauguration comes just once every four years, but each  has had its special character. This issue focuses on presidents and the  national celebrations where they are sworn in. Also: sharing  Rachmaninoff&rsquo;s music, preserving our film heritage and how to register  for copyright.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2013_0102.pdf" target="_blank">(Download PDF 4.13MB)</a></p>
+      </div>
+      <h2 class="dot-top clear-std" id="issues-2012">Issues from 2012</h2>
+      <div class="issue">
+      	<img src="images/issue-20121112.jpg" alt="November-December 2012 issue cover" />
+        <h3>Vol. 1 No. 2: Nov.-Dec. 2012</h3>
+        <p>A new exhibition highlighting the personal aspects of the Civil War in America is the focus of the cover story of this issue, which also includes a celebration of books that shaped America, the facts behind the Maya calendar and 2012, and the first recipe for pumpkin pie.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2012_1112.pdf" target="_blank">(Download PDF 20.9MB)</a></p>
+      </div>
+	  <div class="issue">
+      	<img src="images/issue-20120910.jpg" alt="September-October 2012 issue cover" />
+        <h3>Vol. 1 No. 1: Sept.-Oct. 2012</h3>
+        <p>The War of 1812 resulted in the burning of the U.S. Capitol and its contents. The Library of Congress arose from those ashes to become the largest library in the history of the world. Our premiere issue discusses our history and the services we offer to Congress and to researchers today.</p>
+        <p><a href="https://www.loc.gov/lcm/pdf/LCM_2012_0910.pdf" target="_blank">(Download PDF 14.55MB)</a></p>
+      </div>
+      <h2 class="dot-top clear-std">Library of Congress Information Bulletin</h2>
+      <p>The first issue of the Library of Congress Staff Information Bulletin was published on Jan. 23, 1942—nearly two months after the attack on Pearl Harbor that led to America’s entry into World War II. The publication provided the staff with wartime information such as air-raid watches, In July 1943, the publication was renamed the Library of Congress Information Bulletin and its audience was broadened to include the public as well as the staff. Through improvements in technology, the Information Bulletin evolved from a mimeographed sheet to a four-color printed publication produced using digital technology. Issues dating from 1993-2011 are accessible online. Its successor publication, Library of Congress Magazine, debuted in 2012.</p>
+      <p><a href="https://www.loc.gov/loc/lcib/past_issues.html" class="ar-more">Go to Library of Congress Information Bulletin (1993-2011)</a></p>
+	  <p>Issues of the Library of Congress Information Bulletin from 1972 to 1992 are available via the <a href="http://catalog.hathitrust.org/Record/000639205" class="external">Hathi Trust Digital Library<span> (external link)</span></a>.</p>
+
+      
+    </div>
+    <!-- end id:main_body -->
+  </div>
+  <!-- end id:content -->
+  	<!-- begin: global footer -->
+  <div id="f-wrapper" class="fix-float">
+  <div id="footer" class="fix-float">
+      <div class="cols heading">
+        <h2>Connect with the Library</h2>
+        <p><a class="ar-more foot" href="../homepage/connect.html">All ways to connect</a></p>
+      </div>
+      <div class="cols">
+        <h3>Find Us On</h3>
+        <a href="http://www.pinterest.com/LibraryCongress/"><img src="https://cdn.loc.gov/images/img-foot/pinterest.gif" alt="Pinterest" width="16" height="16" /></a> &nbsp; <a href="http://www.facebook.com/libraryofcongress"><img src="https://cdn.loc.gov/images/img-foot/facebook.gif" alt="Facebook" width="16" height="16" /></a> &nbsp; <a href="http://twitter.com/#!/librarycongress"><img src="https://cdn.loc.gov/images/img-foot/twitter.gif" alt="Twitter" width="16" height="16" /></a> &nbsp; <a href="http://www.youtube.com/libraryofcongress"><img src="https://cdn.loc.gov/images/img-foot/youtube.gif" alt="YouTube" width="16" height="16" /></a> &nbsp; <a href="http://www.flickr.com/photos/library_of_congress/"><img src="https://cdn.loc.gov/images/img-foot/flickr.gif" alt="Flickr" width="16" height="16" /></a>
+      </div>
+      <div class="cols">
+        <h3>Subscribe &amp; Comment</h3>
+        <ul class="plain">
+          <li><a href="../rss/index.html">RSS &amp; E-Mail</a></li>
+          <li><a href="http://blogs.loc.gov/">Blogs</a></li>
+        </ul>
+      </div>
+      <div class="cols">
+        <h3>Download &amp; Play</h3>
+        <ul class="plain">
+          <li><a href="../apps/index.html">Apps</a></li>
+          <li><a href="../podcasts/index.html">Podcasts</a></li>
+          <li><a href="../today/cyberlc/index.php.html">Webcasts</a></li>
+          <li><a href="http://itunes.apple.com/us/institution/library-of-congress/id386017159" class="external foot mod">iTunesU<span> (external link)</span></a></li>
+        </ul>
+      </div>
+      <div class="cols">
+        <h3>Questions</h3>
+        <ul class="plain">
+          <li><a href="../rr/askalib/index.html">Ask a Librarian</a></li>
+          <li><a href="../help/contact-general.html" accesskey="8">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="clear"><!-- --></div>
+      <p class="links">
+      <a href="https://www.loc.gov/about/">About</a> |
+      <a href="../news/index.html">Press</a> |
+      <a href="../hr/employment/index.php.html">Jobs</a> |
+      <a href="../philanthropy/index.html">Donate</a>
+      <br />
+      <a href="../about/oig/index.html">Inspector General</a> |
+      <a href="../homepage/legal.html" accesskey="9">Legal</a> |
+      <a href="../access/index.html" accesskey="0">Accessibility</a> |
+      <a href="../global/disclaim.html">External Link Disclaimer</a> |
+      <a href="http://www.usa.gov/">USA.gov</a>
+      </p>
+      <span class="speech"><a href="../access/web.html">Speech Enabled</a></span>
+  </div><!-- end id:footer -->
+  </div><!-- end id:f-wrapper -->
+	<!-- end: global footer -->
+</div>
+</div>
+<!-- end id:container -->
+<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+</html>

@@ -1,0 +1,488 @@
+#main_menu {
+	width: auto;
+	height: auto;
+	margin: 0px 0px 0px 208px;
+	font:90% verdana, helvetica, sans-serif;
+	text-align:left;
+	padding: 0px;
+}
+#main_menu #main_left {
+	width:324px;
+	height: auto;
+	float: left;
+	margin: 0px 0px 10px 0px;
+	padding: 0px 0px 10px 0px;
+	border: 0;
+}
+/*#main_menu #main_left #left_top {
+	width:324px;
+	height: auto;
+	float: left;
+	margin: 0px 5px 10px 0px;
+	padding: 0px 0px 10px 0px;
+	border: 0;
+}*/
+
+#main_left #left_top p {
+	padding: 0 0 0 10px;
+	margin: 0;
+}
+#main_left h2 {
+	font: bold 95%/100% Georgia, "Times New Roman", Times, serif;
+	color: #36c;
+	margin: 0;
+	padding: 10px 0px 12px 10px;
+}
+#main_left h2 span,#right_top h2 span, #right_mid h2 span, #right_bottom h2 span {
+	color: #9c0;
+}
+#main_left a, #main_right a {
+	font-size: 75%;
+	margin: 0px;
+	padding: 0px;
+	font-weight: 100;
+}
+a#spot_link1, a#spot_link2, a#spot_link3, a#spot_link4, a#spot_link5 {
+	font:bold 110% Verdana, Arial, Helvetica, sans-serif;
+	margin: 0px 0px 5px 0px;
+}
+#left_mid {
+	margin: 10px 0 0 0;
+	padding: 10px 0px 10px 0px;
+	background: transparent;
+	color: #999;
+	font-size: 90%;
+	border: 1px solid #fc0;
+}
+#main_left #left_mid h2 {
+	clear: left;
+	font: bold 105%/100% Georgia, "Times New Roman", Times, serif;
+	color: #36c;
+	margin: 0px 0px 5px 0px;
+	padding: 10px 0px 10px 10px;
+}
+#main_left #left_mid h2.noborder {
+	padding: 0px 0px 10px 10px;	
+	border-top: 0;
+}
+#main_left #left_mid h3 {
+	font: bold 95%/100% Georgia, "Times New Roman", Times, serif;
+	color: #333;
+	margin: 0px 0px 5px 0px;
+	padding: 10px 0px 10px 10px;
+}
+#left_top p, #left_mid p {
+	font: normal 90%/110% verdana, helvetica, sans-serif;
+	color: #333;
+	padding: 0px 10px 10px 10px;
+	margin: 0 0 0 80px;
+}
+#left_top p a, #left_mid p a {
+	font: bold 100%/100% verdana, helvetica, sans-serif;
+}
+#left_mid p img {
+	border: 0;
+	margin: 0;
+}
+#left_mid img {
+	border: 0;
+	margin: 0px 5px 10px 10px;
+}
+#left_mid ul {
+	/*border-top: 0px dotted #ccc;*/
+	padding: 0px 0px 0px 10px;
+	margin: 0px 2px 10px 10px;
+}
+#left_mid ul li {
+	list-style-type: none;
+	font: normal 90%/100% verdana, helvetica, sans-serif;
+	background: transparent url(../../images/arrow.gif) no-repeat 0px 5px;
+	padding: 2px 5px 2px 15px; 
+	margin: 0px;
+}
+#left_mid form {
+	width: 250px;
+	height: auto;
+	margin: 0 0 10px 0;
+	padding: 0;
+}
+#left_mid form input.button {
+	background-color: #fff;
+	width:auto;
+	color: #f60;
+	font: bold 90%/100% verdana, helvetica, sans-serif;
+	margin: 5px 0 0 10px;
+	padding: 0;
+	border: 1px solid #f60;
+}
+#left_mid form label {
+	padding: 0 0 0 10px;
+	font: bold 95%/100% verdana, helvetica, sans-serif;
+	margin: 0;
+	color: #333;
+}
+#left_mid form input, #left_mid form select {
+	width: 250px;
+	padding: 0;
+	margin: 5px 0 5px 10px;
+	font: normal 110%/100% verdana, helvetica, sans-serif;
+	background-color: #fff;
+	border: 1px solid #999;
+}
+#main_right {
+	width: 186px;
+	height: auto;
+	font-size: 90%;
+	margin: 0px 0px 10px 337px;
+	border: 1px solid #9cf;
+	padding: 0px 0px 10px 0px;
+}
+#right_top, #right_mid, #right_bottom {
+	margin: 0;
+	padding: 0px 0px 5px 0px;
+	color: #999;
+	font-size: 100%;
+}
+
+.thumbnail {
+	border: 0px solid #333;
+	float: left;
+	margin-right: 5px;
+}
+
+#right_top h2, #right_mid h2, #right_bottom h2 {
+	font: bold 110%/100% Georgia, "Times New Roman", Times, serif;
+	color: #06c;
+	margin: 0;
+	padding: 10px 0px 12px 10px;
+	border-top: 1px solid #9cf;
+	background: transparent url(../images/dots_right.jpg) bottom left no-repeat;
+}
+#right_top h2.noborder, #right_mid h2.noborder, #right_bottom h2.noborder  {
+	border-top: 0;
+}
+#right_top h2 span, #right_mid h2 span, #right_bottom h2 span {
+	color: #0cf;
+}
+#main_right h3 {
+	margin: 0;
+	padding: 5px 5px 0px 10px;
+	color: #333;
+	font: bold 100%/100% Georgia, "Times New Roman", Times, serif;
+}
+#main_right p {
+	margin: 0;
+	padding: 5px 5px 7px 10px;
+	color: #333;
+	font: normal 90%/110% verdana, helvetica, sans-serif;
+}
+#main_right p a {
+	font: bold 100%/100% verdana, helvetica, sans-serif;
+	padding: 5px 0 0 0;
+}
+#right_top ul, #right_mid ul, #right_bottom ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px 0px 10px 10px;
+	font: normal 85%/150% verdana, helvetica, sans-serif;
+}
+#right_top ul li, #right_mid ul li, #right_bottom ul li  {
+	list-style-type: none;
+	display: block; 
+	padding: 0px 2px 0px 10px; 
+	background: transparent url(../../images/gt.gif) no-repeat 0px 5px;
+	margin: 0px;
+	font: normal 115%/100% Verdana, Arial, Helvetica, sans-serif;
+	color: #666;
+}
+
+#right_top ul li a:link, #right_top ul li a:hover, #right_top ul li a:visited, #right_mid ul li a:link, #right_mid ul li a:hover, #right_mid ul li a:visited, #right_bottom ul li a:link,#right_bottom ul li a:hover, #right_bottom ul li a:visited {
+	font: normal 100%/140% verdana, helvetica, sans-serif;
+}
+#right_bottom form#sub_cat {
+	width: 186px;
+	height: auto;
+	margin: 0px 0px 10px 5px;
+	font: normal 130%/100% verdana, helvetica, sans-serif;
+	padding: 0px 0px 0px 0px;
+}
+#right_bottom form#sub_cat input.button {
+	background-color: #fff;
+	width:auto;
+	color: #f60;
+	font: bold 75%/100% Verdana, Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	border: 1px solid #f60;
+}
+#right_bottom form#sub_cat input {
+	width: 120px;
+	padding: 0;
+	margin: 0 0 0 5px;
+	font-size: 90%;
+	background-color: #fff;
+	border: 1px solid #999;
+}
+#right_bottom ul.email {
+	margin: 0;
+	padding: 0;
+	background-color: #fff;
+	border-bottom: 0;
+	border-top: 0;
+}
+#right_bottom ul.email li {
+	list-style-type: none;
+	display: block; 
+	height: auto;
+	padding: 0px 0px 0px 10px; 
+	background: transparent url(../../images/gt.gif) no-repeat;
+	margin: 0px 0px 0px 10px;
+	font: normal 90%/130% Verdana, Arial, Helvetica, sans-serif;
+}
+#right_bottom ul.email li a:link, #left_nav_mid ul.email li a:visited {
+	font: normal 120%/110% verdana, helvetica, sans-serif;
+}
+#announce p {
+	padding: 0px 15px 25px 10px;
+	margin: 0;
+	font: normal 80%/120% Verdana, Arial, Helvetica, sans-serif;
+	color: #000;
+}
+#announce p.red {
+	color:#f00;
+	padding: 0px 15px 5px 10px;
+}
+
+#left_nav_mid ul#navigate {
+	border-bottom: 1px dotted #cccccc;
+}
+#left_nav_mid div#navigation_header {
+	padding:0 0 0 10px;
+	background-color:#f5f5f5;
+	font-weight:bold;
+	font-size:90%;
+}
+.clear {clear:both;height:1px;overflow:hidden;}
+.feature {
+	width:496px;
+	/*height:194px;*/
+	height:auto;
+	/*background:transparent url(/podcasts/images/feature.jpg) 0 0 no-repeat;*/
+	padding:12px 7px 12px 12px;
+	margin-bottom:12px;
+	border: 5px solid #d5d6d8;
+	overflow:hidden;
+}
+html .feature {height:1%;}
+
+/*.slaves {
+	background:transparent url(/podcasts/images/bground.jpg) 0 0 no-repeat;
+}
+.bookfest {
+	background:transparent url(/podcasts/bookfest10/images/background.jpg) 0 0 no-repeat;
+}
+.biblioteca {
+	background:transparent url(/podcasts/la-biblioteca/images/background.jpg) 0 0 no-repeat;
+}
+.preservation {
+	background:transparent url(/podcasts/digitalpreservation/images/bground.jpg) 0 0 no-repeat;
+	background-size: cover;
+}
+.corpse {
+	background:transparent url(/podcasts/exquisitecorpse/images/bground.gif) 0 0 no-repeat;
+}
+.raitt {
+	background:transparent url(/podcasts/raitt/images/background.jpg) 0 0 no-repeat;
+}
+.qalcm {
+	background:transparent url(/podcasts/qalcm/images/background.jpg) 0 0 no-repeat;
+}
+.lomax {
+	background:transparent url(/podcasts/lomax/images/background.jpg) 0 0 no-repeat;
+}
+.mexico {
+	background:transparent url(/podcasts/celebration-of-mexico/images/background.jpg) 0 0 no-repeat;
+}
+.catbird {
+	background:transparent url(/podcasts/from-the-catbird-seat/images/background.jpg) 0 0 no-repeat;
+}
+.folklifetoday {
+	background:transparent url(/podcasts/folklife-today/images/background.jpg) 0 0 no-repeat;
+}
+.africanamericanpassages {
+	background:transparent url(/podcasts/african-american-passages/images/background.jpg) 0 0 no-repeat;
+}*/
+.feature p {
+	margin:10px 0 0 0;
+	/*color:#cccccc;*/
+	font: 100%/110% Arial, Helvetica, sans-serif;
+}
+.feature ul#meta {
+	margin:15px 0 0 0;
+	padding:0;
+	color:#cccccc;
+	font:80%/100% Arial, Helvetica, sans-serif;
+	float:left;
+	width:170px;
+}
+.feature ul#meta li {
+	list-style-type:none;
+}
+.feature ul.actions {
+	margin:15px 0 15px 170px;
+	padding:0;
+	color:#cccccc;
+	font:80%/100% Arial, Helvetica, sans-serif;
+	width:101px;
+}
+.feature ul.actions li {
+	list-style-type:none;
+}
+.feature a, .feature a:link, .feature a:visited, .feature a:hover, .feature a:active {
+	font:100%/100% Arial, Helvetica, sans-serif;
+	font-weight:bold;
+}
+
+.feature_info {
+	margin:2px 0 0 210px;
+}
+.feature_info h2 {
+    margin: 0px;
+    padding: 0;
+    font: bold 95%/120% Georgia, "Times New Roman", Times, serif;
+    color: #36c;    
+}
+.feature_info p {
+	font:normal 85% Verdana, Arial, Helvetica, sans-serif;
+}
+/* buttons */
+ul.btn {list-style:none;margin:0;padding:0;font:85%/100% Arial, Helvetica, sans-serif;margin-top:14px;}
+ul.btn li { display:inline;}
+ul.btn li.subscribe a, ul.btn li.subscribe2 a, ul.btn li.subscribe3 a, ul.btn li.subscribe4 a, ul.btn li.subscribe5 a, ul.btn li.subscribe6 a{
+width:101px;
+height:22px;
+display:block;
+text-indent:-9000em;
+float:left;
+}
+ul.btn li.subscribe a{background: transparent url(../slavenarratives/images/subscribe-but.gif) 0 0 no-repeat;}
+ul.btn li.subscribe2 a{background: transparent url(../images/subscribe_green.gif) 0 0 no-repeat;}
+ul.btn li.subscribe3 a{background: transparent url(../digitalpreservation/images/subscribe-but.gif) 0 0 no-repeat;}
+ul.btn li.subscribe4 a{background: transparent url(../exquisitecorpse/images/subscribe-but.gif) 0 0 no-repeat;}
+ul.btn li.subscribe5 a{background: transparent url(../bookfest10/images/subscribe-but.gif) 0 0 no-repeat;}
+ul.btn li.subscribe6 a{background: transparent url(../lomax/images/subscribe.gif) 0 0 no-repeat;}
+
+ul.btn li.std a{margin-left:70px;padding-top:5px;}
+ul.btn li.single a{margin-left:136px;}
+/*.subscribe_button {
+	float:left;
+	margin-top:14px;
+}*/
+
+ul.viewing-options {
+	list-style: none;
+	font-size: 85%;
+	padding: 0;
+}
+ul.viewing-options li {
+	padding-bottom: 10px;
+}
+ul.viewing-options li a {color: #342d4e;}
+ul.viewing-options li a.green {color:#99cc00;}
+ul.viewing-options li a.white {color:#fff;}
+span.external2 {margin-left:3px;}
+
+.player {
+	border:1px solid #666666;
+	padding:2px;
+	width:193px;
+	height:193px;
+	float:left;
+	text-align:center;
+}
+#player {
+	border:1px solid #666666;
+	padding:2px;
+	width:193px;
+	height:193px;
+	float:left;
+	text-align:center;
+}
+#podcast_feature_index div.content span {
+	display:block;
+	font:95%/100% Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	color:#ffffcc;
+}
+#podcast_feature_index div.content p {
+	padding:0;
+	font:95%/100% Arial, Helvetica, sans-serif;
+	color:#ffffff;
+}
+#podcast_feature_index div.content p.more {
+	font: normal 85% Verdana, Arial, Helvetica, sans-serif;
+	padding-left:7px;
+	margin-top:4px;
+}
+#podcast_feature_index div.content p.more img {
+	margin-right:7px;
+}
+#podcast_feature_index div.content p.more a {
+	color:#ffffff;
+	font: bold;
+}
+#podcast_feature1 {
+	width:auto;
+	height:73px;
+	margin:10px;
+	background:#90231e;
+	border:1px solid #700200;
+}
+#podcast_feature2 {
+	width:auto;
+	height:73px;
+	margin:10px;
+	background:#4a6581;
+	border:1px solid #000033;
+}
+#podcast_feature3 {
+	width:auto;
+	height:73px;
+	margin:10px;
+	background:#55772e;
+	border:1px solid #005d05;
+}
+#podcast_feature1 img.teaser_podcast_thumb{
+	float:left;
+	border-right:1px solid #700200;
+}
+#podcast_feature2 img.teaser_podcast_thumb{
+	float:left;
+	border-right:1px solid #000033;
+}
+#podcast_feature3 img.teaser_podcast_thumb{
+	float:left;
+	border-right:1px solid #005d05;
+}
+#podcast_feature1 div.content {
+	margin-left:175px;
+	padding:7px 5px 5px 7px;
+	border-top:4px solid #700200;
+}
+#podcast_feature2 div.content {
+	margin-left:175px;
+	padding:7px 5px 5px 7px;
+	border-top:4px solid #000033;
+}
+#podcast_feature3 div.content {
+	margin-left:175px;
+	padding:7px 5px 5px 7px;
+	border-top:4px solid #005d05;
+}
+#left_nav_mid div#rss {
+	border-top: 1px solid #ccc;
+}
+/* end of content rules   */
+.podcast-list p {
+	line-height:14px !important;
+}

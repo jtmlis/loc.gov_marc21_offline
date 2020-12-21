@@ -1,0 +1,142 @@
+/* FLICC site global styles */
+#content #left_nav_top {
+	width: 197px;
+	height: auto;
+	margin: 0px 0px 11px 0px;
+	border: 0;
+	text-align:left;
+	padding: 0;
+}
+#content #left_nav_mid {
+	width: 196px;
+	height: auto;
+	margin: 0px 0px 10px 0px;
+	text-align:left;
+	padding: 48px 0 0px 0;
+	background: transparent url(../images/left_nav.jpg) 0px 0px no-repeat;
+	border: 1px solid #ccc;
+}
+#content #left_nav_mid h2 {
+	color: #690;
+	background: transparent url(../../images/dots.gif) bottom left no-repeat;
+}
+#content #left_nav_mid form#site_search {
+	width: 186px;
+	height: 20px;
+	margin: 0;
+	padding: 5px 0px 5px 10px;
+	border-top: 1px solid #ccc;
+}
+#left_nav ul {
+	border-bottom: 0;
+	padding: 5px 0px 10px 10px;
+}
+#left_nav ul#resources {
+	background-color: #f5f5f5;
+	margin: 0px 0px 0px 0px;
+	border-top: 1px solid #ccc;
+}
+#left_nav_mid ul li {
+	list-style-type: none;
+	display:block;
+	font: normal 90%/120% verdana, helvetica, sans-serif;
+	background: transparent url(../../images/arrow_o.gif) no-repeat 0px 5px;
+	padding: 2px 5px 2px 15px; 
+	margin: 1px 0px 1px 0px;
+}
+/*Toolbar navigation*/
+#left_nav #left_nav2 {
+	width: 196px;
+	margin: 10px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	border: 1px solid #ccc;
+	background-color: #eff0ee;
+}
+#left_nav #left_nav2 #box {
+	height: auto;
+	width: 180px;
+	margin: 7px;
+	padding: 0;
+	border: 1px solid #cc9;
+	background-color: #fbfef3;
+}
+#left_nav #left_nav2 #box h2 {
+	width: 150px;
+	padding: 8px 0px 7px 0px;
+	margin: 0 10px 0 10px;
+	background: transparent url(../images/dot_box.gif) bottom left repeat-x;
+	font: bold 90%/100% Georgia, "Times New Roman", Times, serif;
+	color: #900;
+}
+#left_nav #left_nav2 #box ul {
+	padding: 5px 0px 5px 0px;
+	margin: 0px 0px 0px 10px;
+	border-bottom: 0px solid #ccc;
+	border-top: 0px solid #ccc;
+}
+#left_nav2 #box ul li {
+	list-style-type: none;
+	font: normal 100%/130% verdana, helvetica, sans-serif;
+	background: transparent url(../images/arrow.gif) no-repeat 0px 8px;
+	padding: 2px 0px 2px 10px; 
+	margin: 1px 0px 1px 0px;
+}
+#left_nav #left_nav2 p {
+	padding: 0px 0px 5px 10px;
+	font: normal 80%/100% verdana, helvetica, sans-serif;
+}
+#left_nav #left_nav2 p a:link, #left_nav #left_nav2_mid p a:hover, #left_nav #left_nav2_mid p a:visited {
+	font-weight: 100;
+}
+/*  end left nav rules  */
+/* start content rules */
+#page_head h1.flicch1 {
+	padding: 10px 10px 10px 10px;
+	font: bold 110%/120% Georgia, "Times New Roman", Times, serif;
+}
+#page_head h1.flicch1 span {
+	color: #000;
+	font-size: 85%;
+	font-weight: 200;
+}
+#main_left {
+	width: 300px;
+}
+#left_mid img {
+	float: none;
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+#left_mid p a {
+	font-size: 95%;
+	font-weight: normal;
+}
+#main_left h2 {
+	background: transparent url(../images/dot_h2_left.gif) bottom left repeat-x;
+}
+#main_left #left_mid h2 {
+	background: transparent url(../images/dot_h2_left.gif) bottom left repeat-x;
+	margin: 0px 0px 5px 0px;
+	padding: 10px 0 10px 10px;
+}
+#main_right {
+	width: 213px;
+	margin: 0px 0px 10px 310px;
+}
+#right_top h2, #right_mid h2, #right_bottom h2 {
+	background: transparent url(../images/dot_h2_right.gif) bottom left repeat-x;
+}
+#right_top p, #right_mid p, #right_bottom p {
+	font: normal 85%/120% Verdana, Arial, Helvetica, sans-serif;
+	color: #333;
+	margin: 0;
+	padding: 6px 0px 4px 10px;
+}
+#right_top p a, #right_mid p a, #right_bottom p a {
+	font: bold 100%/120% Verdana, Arial, Helvetica, sans-serif;
+}
+span.italics {
+	font-style:italic;
+}
+/* end content rules */

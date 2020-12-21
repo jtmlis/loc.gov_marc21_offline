@@ -1,0 +1,260 @@
+/***************specific styles*************/
+
+/********************
+left nav
+********************/
+#left_nav .leftnavimg {
+background: transparent url(http://www.loc.gov/law/images/llc-logo_scaled.png) 0 0 no-repeat;
+height: 211px;
+}
+#left_nav ul.social {
+	padding: 0px;
+	margin: 0px;
+	border-bottom: 0;
+	border-top: 0;
+	list-style-type: none;
+	background-color: #fff;
+}
+#left_nav ul.social li {
+background: transparent;
+padding: 2px 0 2px 0;
+margin: 7px 0 7px 0;
+font-weight: 100;
+}
+#left_nav ul.social li.facebook {
+background: transparent url(http://www.loc.gov/include/images/facebook.gif) top left no-repeat;
+padding: 2px 0 2px 20px;
+}
+#left_nav ul.social li.twitter {
+background: transparent url(http://www.loc.gov/include/images/twitter.gif) top left no-repeat;
+padding: 2px 0 2px 20px;
+}
+#left_nav ul.social li.youtube {
+background: transparent url(http://www.loc.gov/include/images/youtube.gif) top left no-repeat;
+padding: 2px 0 2px 20px;
+}
+#left_nav ul.social li.itunes {
+background: transparent url(http://www.loc.gov/law/images/apple-podcasts.png) top left no-repeat;
+padding: 2px 0 2px 20px;
+}
+#left_nav .blog {
+	background: url(http://www.loc.gov/law/images/blog.jpg) no-repeat left bottom;
+}
+#left_nav .blog p {color:#666666;}
+#left_nav .blog h2, #left_nav .blog p {margin-left:60px;}
+#left_nav h2 {
+	font-size: 100%;
+	color: #000;
+}
+
+/********************
+Homepage Styles
+********************/
+div#services-for-congress {
+	border: 10px solid #ececec;
+	padding: 25px;
+	margin-bottom: 20px;
+	background: url(http://www.loc.gov/law/images/services-background.jpg) no-repeat 0 0;
+	max-height: 247px;
+}
+div#services-for-congress h2 {color:#990000; margin:0; text-transform:uppercase;}
+div#services-for-congress p {color:#666666; margin:0;}
+div#services-for-congress div.col3_equal {margin-top:15px;}
+div#services-for-congress div.col3_equal div {width:174px;margin: 0 auto;}
+div#services-for-congress div.col3_equal h3 {
+	color: #000;
+	font-size: 100%;
+	margin-bottom: 0;
+}
+div#services-for-congress div.col3_equal p {margin-bottom:10px;}
+div#services-for-congress p.button {margin:40px 0 0 0 !important;}
+div#services-for-congress p.button a {
+	background: url(http://www.loc.gov/images/btn_submit_bg.gif) repeat-x scroll left bottom #D0CECF;
+    border: 1px solid #666666;
+    border-radius: 2px 2px 2px 2px;
+    color: #532553;
+    cursor: pointer;
+    font: 1em Arial,Helvetica,sans-serif;
+    margin: 0;
+    overflow: visible;
+    padding: 2px 7px;
+    text-align: center;
+	font-weight: bold;
+	text-decoration:none;
+}
+
+h2.twitter-feed {
+	background: url(http://www.loc.gov/law/images/icon-twitter.jpg) no-repeat scroll 12px 10px transparent;
+	padding-left:40px;
+}
+.border-blue {border: 1px solid #a5b3c5;}
+
+.homepage #page_head {margin-top: -10px;}
+.homepage #col2_left h2 {color:#003366;}
+.homepage #col2_right h2 {color: #000;}
+
+#carousel_light h2 {text-align:center;}
+
+/********************
+Congressional Styles
+********************/
+div.congress {border: 4px solid #d4e9ff;margin-bottom:10px;padding: 10px 10px 0 10px;}
+
+
+/* inline bullet list */
+#main_body div#inlinelist ul {
+margin-top:0px;
+padding:0 0 0 10px;
+}
+#main_body div#inlinelist ul li {
+margin-top:0px;
+padding:0 20px 0 15px;
+display:inline;
+}
+
+div.dot-top {
+border-top:1px dotted #ccc;
+padding-top: 10px;
+}
+div.dot-bot {
+border-bottom:1px dotted #ccc;
+padding-bottom: 13px;
+}
+
+.col_padding {
+padding-left:10px;
+}
+
+/*news columns*/
+#col2_left.customNews {
+width:60px;
+}
+
+#col2_right.customNews {
+width:624px;
+}
+
+/*image gallery styles*/
+.image_table {
+list-style:none;
+padding:0;
+margin:0 0 1.25em 0;
+}
+.image_table li {
+display:inline-block;
+[if lte IE 7] display: inline;
+vertical-align:top;
+width:125px;
+margin-right:45px;
+}
+.image_table li p {
+text-align:center;
+}
+
+div.i_alignright ul.std, div.i_alignleft ul.std {
+text-align:left;
+}
+
+/* begin: anchor link container */
+.box-anchor {background-color:#eee;padding:10px 30px 2px 30px;margin-bottom:1.25em;}
+.box-anchor .leftanchor {float:left;width:204px;}
+.box-anchor .centeranchor {float:left;width:204px;margin-left:15px;}
+.box-anchor .rightanchor {float:left;width:204px;margin-left:15px;}
+/* end: anchor link container */
+
+#rr, #rr_wide {
+	border: 2px solid #ccc;
+	float: right;
+	margin: 10px 0 0 10px;
+	padding: 0px;
+	width: 200px;
+}
+#rr_wide {width:400px!important;}
+#rr h2 {	
+	color: #333;
+	font-size: 100%;
+	font-weight: bold;
+	padding-left: 5px;
+	padding-top: 5px;
+}
+#rr p {
+	padding-right: 5px;
+	padding-left: 5px;
+}
+div.equal_right {padding-left: 20px;width:45%!important;}
+a.email {background-color: tranparent;background-image:url(http://www.loc.gov/images/email.gif);background-repeat:no-repeat;padding:0 20px 0 0;background-position: 100%;}
+
+/* GLM-specific Styles */
+div.glm_column {padding-left: 20px;width:45%!important;}
+h2.alpha {font-size:200%;}
+.date-columns {width:75px;float:left;}
+/*#searchresults {
+	width: auto;
+	margin: 0 0 10px 0;
+	padding: 10px 0px 10px 0px;
+	height: auto;
+	border-bottom: 1px dotted #CCCCCC;
+}
+#searchresults p {
+	padding: 3px 10px 3px 0px;
+	margin: 0;
+	color: #000;
+}
+*.resultsnum {
+	color:#900;
+	font-weight: normal;
+}*/
+.nav-results {
+    background-color:transparent;
+    clear:both;
+    padding:5px 0;
+}
+.nav-results p {
+    margin-bottom:0;
+}
+.nav-pag-top, 
+.nav-pag-bot {
+    background-color:#e8e8e4;
+    clear:both;
+    padding:4px 7px;
+    text-align:center;
+}
+.pagination {
+    text-align:center;
+}
+.pagination a,
+.pagination a:visited {
+	display:inline-block;
+	color:#36c;
+    padding: 1px 5px;
+    border: 1px solid transparent;
+}
+.pagination a:hover, 
+.pagination a:focus  {
+    background-color:#eee;
+	border-radius:2px;
+	border:1px solid #ccc;
+}
+.pagination a.selected,
+.pagination a.selected:visited,
+.pagination a.selected:hover,
+.pagination a.selected:focus {
+    color:#333333;
+    cursor:text;
+    text-decoration:none !important;
+    background:transparent;
+	border-color:transparent;
+	font-weight:bold;
+}
+.nav-control {
+    background-color:#f8f8f6;
+    clear:both;
+    overflow:hidden;
+    padding:5px;
+    margin-bottom:10px;
+}
+
+/* Web Archiving Page-specific Styles */
+table.archive td {padding: 5px;}
+
+.list_three_columns {column-count:3;}

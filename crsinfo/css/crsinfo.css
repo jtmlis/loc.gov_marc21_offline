@@ -1,0 +1,15 @@
+/***************specific styles*************/
+
+/********************
+left nav
+********************/
+
+#left_nav .leftnavimg {
+background: transparent url(http://www.loc.gov/crsinfo/images/logo_crs.gif) 0 0 no-repeat;
+height: 146px;
+}
+
+/* custom width */
+#col2_left.custom {width:443px;}
+#col2_right.custom {width:219px;}
+#col4_equal.custom {width:25%;}

@@ -1,0 +1,683 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                        "http://www.w3.org/TR/html40/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/marc_generic.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Diskette Transfer: Exchange Media: MARC 21 Specifications for Record Structure, Character Sets, and Exchange Media (Library of Congress)</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<meta name="description" content="The diskette formatting and labeling specifications used
+in the distribution of MARC 21 authority, bibliographic, classification, community information,
+and holdings records on diskette are described. These diskette label specifications were
+provisionally approved by the Library of Congress and the MARC 21 Advisory Committee in
+November 1990 and apply to internal diskette labels only.Microcomputer diskette volume and
+file labels, like tape labels, communicate information from the originating system to the
+receiving system.  The volume and file labels identify and characterize the diskette(s), the
+transaction, and the information contained on the microcomputer diskette(s). The volume and
+file labels provide an eye-readable display of identifying information and also enable machine
+processing of the information.">
+<meta name="keywords" content="MARC 21, Specifications, Exchange Media, Diskette,
+Floppy Disk, Disc, Microdisc, Transfer">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+<style type="text/css">
+p {text-align:justify;}
+li {text-align:justify;}
+table {margin-bottom:2em;}
+.tablecontents {list-style:circle;}
+.tablesubcontents {list-style:circle; margin-left:2em;}
+</style>
+<!-- InstanceEndEditable -->
+<link href="http://www.loc.gov/marc/marc-generic.css" rel="stylesheet" type="text/css">
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+
+<body bgcolor="#ffffff">
+
+<a name="skip_menu"></a>
+<!-- InstanceBeginEditable name="content" -->
+
+<h3><em>MARC 21 Specifications for Record Structure, Character Sets, and Exchange Media</em></h3>
+<h2>EXCHANGE MEDIA: Part 2</h2>
+<h2>Diskette Transfer</h2>
+<div class="title">January 2000</div>
+<h4>CONTENTS</h4>
+<ul>
+<li><a href="specexchdisc.html#intro">Introduction</a></li>
+<li><a href="specexchdisc.html#format">Format</a></li>
+<li><a href="specexchdisc.html#fileorg">File Organization</a></li>
+<li><a href="specexchdisc.html#labfile">Label Files</a></li>
+<li><a href="specexchdisc.html#filename">File Names</a></li>
+<li><a href="specexchdisc.html#filestruc">Label File Structure</a></li>
+<li><a href="specexchdisc.html#volume">Volume Labels - tags/fields</a></li>
+<li><a href="specexchdisc.html#filelab">File Labels - tags/fields</a></li>
+<li><a href="specexchdisc.html#direct">Directory Display</a></li>
+</ul>
+
+
+
+
+
+
+<h4><a name="intro">INTRODUCTION</a></h4>
+
+<p>The diskette formatting and labeling specifications used in the distribution of
+
+MARC 21 authority, bibliographic, classification, community information, and holdings records
+on diskette are described below. These diskette label specifications were provisionally approved
+by the Library of Congress, the MARC 21 Advisory Committee in November 1990 and by the
+Canadian Committee on MARC in June 1991.  The specifications apply to internal diskette
+labels only.</p>
+
+<p>Microcomputer diskette volume and file labels, like tape labels, communicate
+
+information from the originating system to the receiving system.  The volume and file labels
+identify and characterize the diskette(s), the transaction, and the information contained on the
+microcomputer diskette(s). The volume and file labels provide an eye-readable display of
+identifying information and also enable machine processing of the information.</p>
+
+
+
+<h4><a name="format">DISKETTE FORMAT</a></h4>
+
+<p>A MARC 21 microcomputer diskette for information interchange is a magnetic
+
+diskette (e.g.,3.5 inch microdisc) that contains label files and at least one
+
+file of MARC
+
+records.</p>
+
+
+
+
+
+<h4><a name="fileorg">DISKETTE FILE ORGANIZATION</a></h4>
+
+<p>Files may be organized for a transaction in one of three ways: 1) single volume,
+
+single file; 2)
+
+single volume, multiple files; and 3) multiple volumes, multiple files.  Each
+
+single diskette
+
+constitutes
+
+one volume.  Record blocking is not used and individual records do not span files
+
+or volumes. 
+
+Files
+
+do not span volumes.  Large logical files of records can be segmented into multiple
+
+physical files
+
+on
+
+separate volumes.  The following configurations may be used.  NOTE: The names in
+
+parentheses
+
+are
+
+required filenames.  The notation nnn represents sequential numbers determined by
+
+the originator of the volume(s)/file(s).</p>
+
+
+
+
+
+<pre><B>Single volume, Single file     Single volume, Multiple files</B>
+
+   Volume Label File (VOL.nnn)    Volume Label File (VOL.nnn)
+   File Label File (FIL.nnn)      File Label File (FIL.nnn)
+   Bibliographic File             Bibliographic File 
+                                  File Label File (FIL.nnn)
+                                  Bibliographic File
+</pre>
+
+<pre><B>Multiple volumes, Multiple files</B>
+
+          Volume A                       Volume B 
+        
+   Volume Label File (VOL.nnn)    Volume Label File (VOL.nnn)
+   File Label File (FIL.nnn)      File Label File (FIL.nnn)
+   Bibliographic File             Bibliographic File 
+   File Label File (FIL.nnn)      File Label File (FIL.nnn)
+   Bibliographic File             Bibliographic File
+</pre>
+
+<h4><a name="labfile">DISKETTE LABEL FILES</a></h4>
+
+<p>MARC 21 Microcomputer diskettes contain label files that identify and characterize
+the volume(s) and the file(s) of MARC 21 records.  The label files are used to transfer
+non-MARC information between an originating system and a receiving system.  The label files
+are written using only ASCII Latin characters.  A <em> volume label</em> file is required
+for each new physical volume (i.e., each diskette).  A <em> file label</em> file is required
+for each named file of MARC 21 records. </p>
+
+<p>Diskettes should also bear an external eye-readable label which lists the Originating System ID
+(ORS), the Volume ID (VID), and the Date Volume(s) Compiled (DAT).</p>
+
+
+
+<h4><a name="filename">DISKETTE FILE NAMES</a></h4>
+
+<p>File names for label files must accommodate dissimilar operating systems, such as
+Windows, PC-DOS, MS-DOS, APPLE-DOS and Macintosh environments.  While certain
+operating systems have
+
+more
+
+flexible naming conventions than others, label files are named according to DOS
+
+filename
+
+conventions
+
+that specify filenames of 1-to-8 characters and a 1-to-3 character extension. 
+
+Alphabetic
+
+characters
+
+in filenames and extensions shall be in uppercase.</p>
+
+<p>Volume label files are named "VOL.nnn" (nnn are numerics designating the volumes,
+
+e.g.,
+
+VOL.001, VOL.002).  The 3-digit numeric extensions in the filename are assigned in a
+
+sequential
+
+order, and the highest number in the extension will equal the total number of
+
+volumes in a
+
+transaction.</p>
+
+<p>File label files are named "FIL.nnn" (nnn are numerics designating the files,
+
+e.g.,
+
+FIL.001).</p>
+
+<p>Record files are named according to DOS naming conventions that allow names of
+
+1-8
+
+characters
+
+in length, a 1-3 character extension, etc. (e.g., SERMARC.nnn).  The 3-digit numeric
+
+filename
+
+extension of the bibliographic file will match the 3-digit numeric filename
+
+extension of the file
+
+label
+
+with which it is associated. </p>
+
+
+
+<h4><a name="filestruc">LABEL FILE STRUCTURE</a></h4>
+
+<p>A label file consists of a sequence of fields.  Fields have a maximum length of
+
+80 characters. 
+
+Each field in a label file begins with a three-character tag identifying the field. 
+
+The tag is followed
+
+by two blanks (ASCII character 20(hex)).  The field's data content follows the two
+
+blanks.  Each
+
+field
+
+ends with a number sign "#" (ASCII character 23(hex)) and a carriage return (ASCII
+
+character
+
+0D(hex))
+
+or carriage return/line feed (ASCII characters 0D(hex) 0A(hex)), dependent on
+
+operating
+
+systems and
+
+subject to the agreement between originating and receiving systems.  The 80
+
+character maximum
+
+length of the field includes the three character tag, the two blanks, the data
+
+content, the number
+
+sign,
+
+and the carriage return or carriage return/line feed.  This results in a text string
+
+that is easily
+
+displayed
+
+on a monitor or printed out.</p>
+
+<p>Certain fields in the label files are specified as mandatory and must be present
+
+in each label
+
+file. 
+
+In these fields, data content or one fill character the vertical bar (| - ASCII
+
+character
+
+7C(hex)),
+
+must
+
+be
+
+supplied.  Mandatory or optional characteristics of the fields are noted below. </p>
+
+<p>Several of the fields are repeatable when either of the following two conditions
+
+exist: 1) the
+
+data
+
+content exceeds the space available in the field (73 characters between the blank
+
+space and
+
+number
+
+sign);  or, 2) for eye readability, the sections of the data are moved to a new
+
+line.  In each case,
+
+the
+
+three-character tag and two blank spaces are repeated.</p>
+
+
+
+<h4><a name="volume">DISKETTE VOLUME LABELS -- Tags/Fields</a></h4>
+
+<p>The following order of the fields in the volume label is mandatory whether or not
+
+all fields are
+
+present.</p>
+
+<pre>                                                     <em>Mandatory
+  Tag    Element Name                   Description  /Optional  Repeatable</em>
+  ORS    Originating System ID          Alphanumeric     M        NR
+  RCS    Receiving System ID            Alphanumeric     O        R
+  DAT    Date Volume(s) Compiled        YYYYMMDD         M        NR
+  DES    Description of Records         Alphanumeric     O        R
+  TRN    Transaction ID                 Alphanumeric     O        NR
+  VID    Volume ID                      Numeric          M        NR
+  VTR    No. of Vols. in Transaction    Numeric          M*       NR
+  BFV    Bibl. Files in Volume          Numeric          M        NR
+  BFT    Bibl. Files in Transaction     Numeric          O        NR
+  PON    Purchase Order Number(s)       Alphanumeric     O        R
+  INV    Invoice No(s). in Transaction  Alphanumeric     O        R
+  CSN    Transaction Bill-To ID         Alphanumeric     O        NR
+  LOC    Location(s)                    Alphanumeric     O        R
+  NOT    Note(s)                        Alphanumeric     O        R
+</pre>
+<p>*Field VTR is only mandatory on the final volume of a transaction.</p>
+
+<p>ORS (Originating System ID):  Mandatory.  Not Repeatable.  The name of the system
+
+that
+
+compiled the files of records and produced the volume(s) in the transaction. 
+
+Alphanumeric.</p>
+
+<p>RCS (Receiving System ID):  Optional.  Repeatable.  Number(s) and/or name(s) of
+
+the
+
+receiving
+
+system(s) (e.g., library, processing center, school, collection, agency, or office)
+
+of the records in
+
+this
+
+transaction.  The number/name can be assigned by the system listed in the field ORS,
+
+chosen by
+
+the
+
+system listed in this field, or a designated standard number, i.e., SAN.  Multiple
+
+names are
+
+separated
+
+by two blank spaces followed by a backslash (\ - ASCII character 5C(hex)). 
+
+Alphanumeric.</p>
+
+<p>DAT (Date Volume(s) Compiled):  Mandatory.  Not Repeatable.  This is the date
+when the originating system completed the compilation of bibliographic records on the
+volume(s) in this transaction.  This is not the date of the creation of the particular bibliographic
+records contained in the bibliographic files.  This field is recorded according to
+<em>Representation of Dates and Times</em> (ISO 8601).  The date requires 8 numeric
+characters in the pattern yyyymmdd (4 for the year, 2 for the month, and 2 for the day; right
+justified and zero filled).</p>
+
+<p>DES (Description of Records):  Optional.  Repeatable.  A description of the records
+contained on the volume or the application(s) for which the records are intended to be used
+(e.g., test records, cataloging, union list, MARC 21 Holdings, etc.)  Alphanumeric.</p>
+
+<p>TRN (Transaction ID):  Optional.  Not Repeatable.  Identifier that identifies a
+
+volume or set
+
+of
+
+volumes transferred in one operation.  Alphanumeric.</p>
+
+<p>VID (Volume ID):  Mandatory.  Not Repeatable.  Numeric identifier of the volume.
+
+Three
+
+numeric characters, right justified and zero filled.</p>
+
+<p>VTR (Number of Volumes in Transaction):  Mandatory on final volume of transaction
+only; Optional on other volumes.  Not Repeatable.  The total number of volumes in this
+transaction.  Three numeric characters, right justified and zero filled.</p>
+
+<p>BFV (Bibliographic Files on Volume):  Mandatory.  Not Repeatable.  The total
+number of bibliographic files in the volume.  Three numeric characters, right justified and
+zero filled.</p>
+
+<p>BFT (Bibliographic Files in Transaction):  Optional.  Not Repeatable.  The total
+
+number of
+
+bibliographic files on all the diskettes in this transaction.  Three numeric
+
+characters, right justified
+
+and
+
+zero filled.</p>
+
+<p>PON (Purchase Order Number(s)):  Optional.  Repeatable.  The purchase orders
+
+number(s)
+
+covered by the transaction.  Alphanumeric.</p>
+
+<p>INV (Invoice Number(s) in Transaction):  Optional.  Repeatable.  This includes
+
+all invoice
+
+numbers for all files in this transaction.  Alphanumeric.</p>
+
+<p>CSN (Transaction Bill-To ID):  Optional.  Not Repeatable.  Number and/or name of
+
+the
+
+agency/institution which is billed for the transaction.  The number/name can be
+
+assigned by the
+
+system
+
+listed in the field ORS, chosen by the system listed in this field, or a designated
+
+standard number,
+
+i.e.,
+
+SAN.  Alphanumeric.</p>
+
+<p>LOC (Location(s)):  Optional.  Repeatable.  This field lists the locations
+
+related to the records
+
+in the bibliographic files of the transaction.  Multiple locations  are separated by
+
+two blank spaces
+
+followed by a backslash (\ - ASCII character 5C(hex)).  MARC Organization or other codes can
+be
+
+used to
+
+designate
+
+locations.  Alphanumeric.</p>
+
+<p>NOT (Note(s)):  Optional.  Repeatable.  This field is available for textual
+
+information,
+
+messages,
+
+etc.  Alphanumeric.</p>
+
+<p><em>Example of volume label:</em> File name
+
+"VOL.001"
+
+ (Filename extension corresponds to the
+
+VID)</p>
+
+<pre>      ORS  Library X System Identification#
+      RCS  University of Michigan Library Processing Center#
+      DAT  19900322#
+      DES  Cataloging#
+      TRN  03201990NAR#
+      VID  001#
+      VTR  022#
+      BFV  002#
+      BFT  893#
+      PON  12311989UML#
+      INV  1211990CDS#
+      CSN  University of Michigan Financial Office#
+      LOC  Law Library  \Medical Library  \Engineering Library#
+      NOT  Contact B. Smith, (202) 707-1111, if you have questions.#
+</pre>
+<p>NOTE:  In the above example # = number sign (ASCII graphic 23(hex).</p>
+
+<h4><a name="filelab">DISKETTE FILE LABELS -- Tags/Fields</a></h4>
+
+<p>The following order of the fields in the file label is mandatory whether or not
+
+all fields are
+
+present.</p>
+
+<pre>                                                     <em>Mandatory
+  <u>Tag    Element Name                   Description  /Optional  Repeatable</u></em>
+  VID    Volume Number ID               Numeric          O        NR
+  FID    File ID                        Alphanumeric     M        NR
+  DES    Description of Records         Alphanumeric     O        R
+  RBF    Records in  Bibl. File         Numeric          M        NR
+  INV    Invoice Number(s)Covering      Alphanumeric     O        R
+           Records in File  
+  LOC    Location(s)                    Alphanumeric     O        R
+  NOT    Note(s)                        Alphanumeric     O        R
+</pre>
+
+<p>VID (Volume ID):  Optional.  Not Repeatable.  Numeric identifier of the volume. 
+
+Three
+
+numeric
+
+characters, right justified and zero filled.</p>
+
+<p>FID (File ID):  Mandatory.  Not Repeatable.  Identifier that gives the name
+
+and/or number of
+
+the
+
+file containing the records. Alphanumeric.</p>
+
+<p>DES (Description of Records):  Optional.  Repeatable.  Indicates the
+
+application(s) for which
+
+the
+
+records are intended to be used (e.g., cataloging, union list, test records, MARC 21
+
+Holdings,
+
+etc.) 
+
+Alphanumeric.</p>
+
+<p>RBF (Number of Records in Bibliographic File):  Mandatory.  Not Repeatable.  The
+
+total
+
+number
+
+of records contained in the file.  Seven numeric characters, right justified and
+
+zero filled.</p>
+
+<p>INV (Invoice Number(s) Covering the Records in Bibliographic File):  Optional. 
+
+Repeatable. 
+
+This includes all invoice numbers for all records in the bibliographic file. 
+
+Alphanumeric.</p>
+
+<p>LOC (Locations):  Optional.  Repeatable.  This field lists the locations related
+
+to the records
+
+in
+
+the file.  Multiple locations  are separated by two blanks followed by a backslash
+
+(\ - ASCII
+
+character
+
+5C(hex)).  MARC 21 or other codes can be used to designate locations. 
+
+Alphanumeric.</p>
+
+<p>NOT (Note(s)):  Optional.  Repeatable.  This field is available for textual
+
+information,
+
+messages,
+
+etc.  Alphanumeric.</p>
+
+<p><em>Example of file label:</em> File name: "FIL.002"  (Filename extension corresponds
+to the FID)</p>
+
+
+
+<pre>      VID  001#
+      FID  002#
+      DES  Union Catalog Records#
+      RBF  0000258#
+      INV  1211990CDS#
+      LOC  UMML#  
+      NOT  Records are in LCCN order per your request#
+</pre>
+<p>NOTE:  In the above example # = number sign (ASCII graphic 23(hex).</p>
+
+
+<h4><a name="direct">DISKETTE DIRECTORY DISPLAY</a></h4>
+
+<p>The MARC 21 diskette volume and file label files are designed to allow the
+
+determination of
+
+the
+
+content of a diskette by listing its directory using the DOS "dir" command (or
+
+similar command in
+
+other system environments).  Below is an example of the directory listing for a
+
+typical diskette
+
+containing files of MARC 21 records.  In this example, the diskette contains three
+
+files of
+
+bibliographic records.</p>
+
+<p><em>Example:</em>
+
+<pre>      A:&gt; dir
+
+      Volume in drive A is 001
+      Directory of A:\
+
+      VOL.001
+      FIL.001
+      BOOKMARC.001
+      FIL.002
+      SERMARC.002
+      FIL.003
+      VMMARC.003
+</pre>
+
+
+
+<p>Since the data and files on microcomputer diskettes are usually accessed in
+
+random order, the
+
+sequence of the various files listed in the directory does not matter.  The example
+
+above has
+
+ordered
+
+the files so as to show the correspondence between the file label files and the
+
+bibliographic
+
+files.</p>
+
+<!-- InstanceEndEditable -->
+<hr size="1" noshade>
+<p><a href="../../marc.html">MARC 21 HOME</a> &gt;&gt; <!-- InstanceBeginEditable name="bottombreadcrumb" --><a href="spechome.html">Specifications</a> &gt;&gt; <a href="specexchintro.html">Exchange Media</a> &gt; &gt; <strong>Part 2</strong> <!-- InstanceEndEditable --></p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr valign="bottom">
+    <td><a href="../../index.html">The Library of Congress</a> &gt;&gt; <a href="../../library/index.html">Especially
+    for Librarians and Archivists</a> &gt;&gt; <a href="../../standards/index.html">Standards</a><br>
+    (<!-- MM:BeginLock type="mmdate" format="Am3" orig=" -->
+    <!-- #BeginDate format:Am3 -->12/06/2007<!-- #EndDate -->
+    ) </td>
+    <td align="right"><a href="http://www.loc.gov/cdn-cgi/l/email-protection#f799939a8498b79b9894d9909881">Contact Us</a></td>
+  </tr>
+</table>
+<script data-cfasync="false" src="http://www.loc.gov/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+<!-- InstanceEnd --></html>

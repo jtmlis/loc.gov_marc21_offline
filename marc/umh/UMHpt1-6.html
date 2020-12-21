@@ -1,0 +1,605 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Understanding MARC Holdings Records: Parts 1 to 6</title>
+<!-- <base> tags no longer used by LC web developers -->
+<meta name="keywords" content="MARC 21, Holdings Format, MFHD, UMH">
+<meta name="description" content="This document contains parts 1 to 6 of Understanding MARC Holdings Records">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel=stylesheet href="umh-redesign.css" type="text/css">
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+<body>
+<!--Begin outer border; centers document; fixes line length-->
+<table align="center" class="main">
+  <tr>
+    <td><p><a href="UMHpt1-6.html#skip_menu" name="top"><img src="http://www.loc.gov/marc/images/clear.gif" alt="Skip Navigation Links" width="1" height="1" border="0"></a><a href="../../index.html">Library of Congress</a> &gt;&gt; <a href="../../standards/index.html">Standards</a> &gt;&gt; <a href="../../marc.html">MARC</a> &gt;&gt; <a href="index.html">Understanding MARC Holdings Records</a></p>      <hr size="1" noshade></td>
+  </tr>
+  <tr>
+    <td><a name="skip_menu"></a>
+<h1>WHAT IS A MARC HOLDINGS RECORD<br>
+        AND WHY IS IT IMPORTANT?</h1>
+      <p class="intro"> <span style="color: #ad4b4b; font-size: 150%; font-weight: bold">I</span>t is impossible these days 
+        to read a library journal, attend a library conference, or even have an informal chat with other 
+        librarians without hearing the phrases &quot;MARC format,&quot; &quot;MARC records,&quot; 
+        or &quot;MARC-compatible.&quot; Many library professionals have not had an opportunity 
+        to take formal courses explaining the important topics of library automation and the role of MARC, 
+        yet automated library systems remain an  important part of their libraries.</p>
+      <p class="intro">This guide will explain&mdash;in the simplest terms possible&mdash;what a MARC holdings record is, 
+        and it will provide the basic information needed to understand and evaluate a MARC holdings record. 
+        Companion documents include <a href="../umb.html"><cite>Understanding MARC Bibliographic,</cite></a> which focuses on the MARC bibliographic record, and <a href="../uma.html">Understanding MARC Authority</a>, which introduces you to MARC authority records.</p>
+      <hr align=center size=4 width=100>
+      <p class="contents"> <a href="UMHpt1-6.html#pt1">Part I: What Is a MARC Holdings Record?</a><br>
+        <a href="UMHpt1-6.html#pt2">Part II: Why is a MARC Holdings Record Necessary?</a><br>
+        <a href="UMHpt1-6.html#pt3">Part III: MARC Terms and Their Definitions</a><br>
+        <a href="UMHpt1-6.html#pt4">Part IV: Holdings Standards and MARC Holdings Records</a><br>
+        <a href="UMHpt1-6.html#pt5">Part V: Are MARC Holdings Records Shared?</a><br>
+        <a href="UMHpt1-6.html#pt6">Part VI: In Conclusion</a></p>
+      <hr align=center size=4 width=100>
+      <!-- MARC records overview -->
+      <p>If you are reading this guide you probably already know something about MARC records but here is a very brief review.</p>
+      <p>A <span class="strong">MARC</span> record is a <span class="strong">MA</span>chine-<span class="strong">R</span>eadable <span class="strong">C</span>ataloging record.</p>
+      <p><span class="strong">And what is a machine-readable cataloging record?</span></p>
+      <p><span class="strong">Machine-readable:</span> &quot;Machine-readable&quot; means that one particular type of machine, a computer, can read and interpret the data in the record. The following pages will explain why this is important and how it is made possible.</p>
+      <p><span class="strong">Cataloging record:</span> Cataloging records come in three types: 1) <em>Bibliographic</em> records, which contain information describing a book, serial, sound recording, videorecording, etc.; 2) <em>Authority</em> records, which contain standardized forms for names, titles, and subjects that are used on bibliographic records and provide cross references in catalogs; 3) <em>Holdings</em> records, which contain information about whether an institution holds or can provide access to bibliographic items, in both physical and electronic forms, which parts of a bibliographic item it holds, and where to find them.</p>
+      <p>This guide will discuss holdings records, specifically the <em>MARC 21 Format for Holdings Data</em>.</p>
+      <!-- Part I: what is a MARC holdings record? Part I: what is a MARC holdings record? Part I: what is a MARC holdings record? --><a name="pt1"></a>
+      <hr align=center size=4 width=100>
+<h2 class="no">Part I</h2>
+      <h2 class="title">What Is a MARC Holdings Record and Why Is It Important?</h2>
+      <p class="main"><span class="strong">What is a MARC record?</span></p>
+      <p><span class="strong">MARC holdings records</span> contain the holdings information&mdash;what copies are owned and where they are held&mdash;for bibliographic items in both physical and electronic forms. For example, if you searched in your library's online catalog for the magazine <em>Time</em>, you could retrieve the following bibliographic record display which combines the data from the MARC bibliographic record (not bold) with that from the holdings record (in bold):</p>
+      <blockquote>
+        <table class="table">
+          <tr>
+            <td>Type of Material:</td>
+            <td>Serial (Periodical, Newspaper, etc.)</td>
+          </tr>
+          <tr>
+            <td>Title:</td>
+            <td>Time.</td>
+          </tr>
+          <tr>
+            <td>Variant Title:</td>
+            <td>Popularly known as: Time magazine</td>
+          </tr>
+          <tr>
+            <td>Published/Created:</td>
+            <td>[New York, etc., Time Inc.]</td>
+          </tr>
+          <tr>
+            <td>ISSN:</td>
+            <td>0040-781X</td>
+          </tr>
+          <tr>
+            <td valign="top">Note:</td>
+            <td>Preceded by a specimen issue dated Dec. 30, 1922.<br>
+              Issued also in a large-print ed.</td>
+          </tr>
+          <tr>
+            <td valign="top">Subjects:</td>
+            <td>Periodicals.<br>
+              Current events.</td>
+          </tr>
+          <tr>
+            <td><strong>Location:</strong></td>
+            <td><strong>Newspaper &amp; Current Periodical Reading Room</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Call Number:</strong></td>
+            <td><strong>AP2 .T37</strong></td>
+          </tr>
+          <tr>
+            <td valign="top"><strong>Latest Receipts:</strong></td>
+            <td><strong>v. 176, no. 17 (2010 Oct. 25)<br>
+              v. 176, no. 16 (2010 Oct. 18)<br>
+              v. 176, no. 15 (2010 Oct. 11)<br>
+              v. 176, no. 14 (2010 Oct. 4)<br>
+              &hellip;<br>
+              v. 176, no.1 (2010 July 5)</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Earlier Receipts:</strong></td>
+            <td><strong>v.4-v.175 (1924:July-2010:June)</strong></td>
+          </tr>
+        </table>
+      </blockquote>
+      <p class="cont">The LOCATION, CALL NUMBER, LATEST RECEIPTS, and EARLIER RECEIPTS entries (highlighted above) are holdings data. They contain information that leads the user to the location of a bibliographic item.</p>
+      <p class="main"><span class="strong">MARC 21 Holdings format:</span> When the Library of Congress began to use computers in the 1960s, it devised the LC MARC Bibliographic format, a system of using brief markers (numbers, letters, and symbols) within the bibliographic record itself to identify different types of information. The holdings format, completed in 1984, was a joint effort of the MARC users and the Library of Congress. The original MARC formats evolved into MARC 21 and have become the standards used by most libraries for bibliographic, authority and holdings records implemented within different library systems. The MARC 21 Holdings format, as well as all official MARC 21 documentation, is maintained by the Library of Congress in partnership with the Library and Archives Canada, the British Library, and the global library community. It is published as the <em>MARC 21 Format for Holdings Data</em>.</p>
+      <p class="cont">A holdings record is dependent on its associated bibliographic record and must be linked to it (or embedded in it). If you are familiar with the MARC 21 bibliographic record you will know that minimal holdings and location data may be contained in the bibliographic record but not to the detail possible in a holdings record. A common configuration is to link the separate holdings record to the bibliographic record within a system and embed the holdings data for export. The holdings record does not have data fields for the descriptive data of the bibliographic record so that link is essential.</p>
+      <p class="cont">Holdings can be expressed in a record as textual and/or parsed data. This guide will provide an introduction to both approaches. A holdings record contains four basic components that are described briefly below and also discussed throughout the rest of this guide.</p>
+      <ol>
+        <li><em>Location:</em> The institution that holds the item and the location within the institution where the item can be found, such as call number or shelf location.</li>
+        <li><em>Items held:</em> For a single-part monograph, this is simply the number of copies; for a multipart monograph or a serial it is the number of copies and volumes and issues held.</li>
+        <li><em>Publication pattern:</em> For serials, the holdings record can indicate the expected publication dates and numbering for issues. This information enables a system to assist with check-in and to automatically claim missing issues.</li>
+        <li><em>Notes:</em> This part of the holdings record contains information about special attributes of a copy or conditions for its use.</li>
+      </ol>
+      <br>
+      <p class="nav">[<a href="UMHpt1-6.html#top">Back to Top of Page</a>]</p>
+      <a name="pt2"></a>
+      <hr align=center size=4 width=100>
+      <!-- Part II: why is a MARC holdings record necessary? Part II: why is a MARC holdings record necessary? -->
+      <h2 class="no">Part II</h2>
+      <h2 class="title">Why Is a MARC Holdings Record Necessary?</h2>
+      <p class="main">First and foremost the MARC holdings record tells library users which copies of a book, magazine, or other resources that a library owns and where they are held. For example, while a MARC <em>bibliographic</em> record indicates to the user that, yes, the library owns the magazine that the user wants to read, the MARC <em>holdings</em> record tells the user how many copies and what volumes or years of the magazine the library owns. It also tells the user exactly where these issues of the magazine are located in the library.</p>
+      <p class="cont">MARC holdings records can also promote higher efficiency and productivity in library technical service units by supporting automated processing for serials. For example, MARC holdings records can make &quot;automated check-in&quot; and &quot;automated claiming&quot; possible. Automated check-in allows computerized updating of an existing holdings record for a recently received magazine. Therefore, a librarian does not have to manually update the holdings record when a new issue of a magazine arrives. &quot;Automated claiming&quot; uses the MARC holdings records to predict when a magazine issue is expected to arrive from its publisher to the library. If an issue has not arrived by its scheduled date, the system can use information on MARC holdings records to issue a &quot;claim alert.&quot; The library can use the claim alert file to determine which publishers need to be contacted about missing items.</p>
+      <p class="main"><span class="strong">Why can't a computer read textual holdings statements?</span> The holdings information cannot simply be typed into a computer and then be manipulated for various displays or processes as part of a library catalog unless there is predictability in the way the information is expressed. The computer needs a means to interpret the different types of information found in the holdings statement, especially if the computer is to assist in the automated checking in of serial holdings and automatic claiming.</p>
+      <p class="main"><span class="strong">Data &quot;signposts&quot;:</span> The computer cannot assume that a certain type of information begins and ends at the same position in every holdings record. For example, the <em>location</em> of a book will <strong>not</strong> always begin with the 220th character of the record and end at the 248th position. Therefore as is true for MARC bibliographic records, the MARC holdings record contains a guide to its data, or little &quot;signposts,&quot; before each piece of holdings information.</p>
+      <p class="cont">If a holdings record has been marked with the correct &quot;signposts&quot; and saved in a computer data file, computer programs can then be written to format the information correctly for displaying the information on a computer screen or to search for and retrieve certain types of information within specific fields.</p>
+      <p class="cont">A comparison of the same record with textual display &quot;signposts&quot; and the equivalent MARC data &quot;signposts&quot; in the boxes below illustrates the configuration of a MARC holdings record.</p>
+      <!-- Record with textual signposts Record with textual signposts Record with textual signposts -->
+      <h3 align="center" class="table"><a name="table1">Record with textual display signposts and MARC fields and tags</a></h3>
+      <blockquote>
+        <table width="100%" class="signposts">
+          <tr>
+            <td width="25%" align="center" class="sp" scope="col"><span class="strong">DISPLAY &quot;SIGNPOSTS&quot;</span></td>
+            <td width="25%" align="center" class="sp" scope="col"><span class="strong">DISPLAY DATA</span></td>
+            <td width="25%" align="center" class="sp" scope="col"><span class="strong">MARC &quot;SIGNPOSTS&quot;</span></td>
+            <td width="25%" align="center" class="sp" scope="col"><span class="strong">MARC DATA</span></td>
+          </tr>
+          <tr>
+            <td class="sp">Location</td>
+            <td class="sp">ABC Public Library<br>
+              Call Number: Z735.A1C27</td>
+            <td class="sp">852	01  $a<br>
+              852	01  $h<br>
+              852	01  $i<br></td>
+            <td class="sp">Abc<br>
+              Z735.A1<br>
+              C27</td>
+          </tr>
+          <tr>
+            <td class="sp">Items held </td>
+            <td class="sp">Vol. 1-86, 1941-1986</td>
+            <td class="sp">853	01  $a<br>
+              863	30  $a<br>
+              853	01  $i<br>
+              863	30  $i</td>
+            <td class="sp">vol.<br>
+              1-86<br>
+              (year)<br>
+              1941-1986</td>
+          </tr>
+          <tr>
+            <td class="sp">Publication pattern</td>
+            <td class="sp">Published monthly</td>
+            <td class="sp">853	01  $w</td>
+            <td class="sp">m</td>
+          </tr>
+          <tr>
+            <td class="sp">Note</td>
+            <td class="sp">Accessible onsite only.</td>
+            <td class="sp">506	##  $a</td>
+            <td class="sp">Accessible onsite only.</td>
+          </tr>
+        </table>
+      </blockquote>
+      <br>
+      <p class="main"><span class="strong">Why use standards?</span> You could devise your own method of marking holdings information, but you would be isolating your library, limiting its options, and creating much more work for yourself. Using standards prevents duplication of work and allows libraries to better share their holdings information.</p>
+      <p class="cont">Using holdings standards also enables libraries to make use of commercially available or open source library automation systems to manage library operations. Many different systems are available for libraries of all sizes and they are designed to work with accepted standards. If a library uses the same standards that are supported in these systems, the library can benefit from the latest advances as vendors make improvements to their technology. Holdings standards also allow libraries to replace one system with another with the assurance that their data will still be compatible.</p>
+      <p class="cont">For information on related holdings display standards, see <a href="UMHpt1-6.html#pt4">Part IV-1</a>.</p>
+      <p class="nav">[<a href="UMHpt1-6.html#top">Back to Top of Page</a>]</p>
+      <a name="pt3"></a>
+      <hr align=center size=4 width=100>
+      <!-- Part III: MARC terms and their definitions Part III: MARC terms and their definitions -->
+      <h2 class="no">Part III</h2>
+      <h2 class="title">MARC Terms and Their Definitions</h2>
+      <p class="cont">This part contains information on how to read, understand, and use a MARC holdings record. It deals with what librarians using a library automation system will see and need to understand on their computer screens when adding, editing, or examining records. The emphasis will be on the areas commonly used in holdings records.</p>
+      <p class="cont">In the previous part, an example was given of some data &quot;signposts&quot; used in a MARC holdings record. The proper names of these &quot;signposts&quot; are <em>field</em>, <em>tag</em>, <em>indicator</em>, <em>subfield</em>, <em>subfield code</em>, and <em>content designator</em>. These MARC 21 terms are covered in this part.</p>
+      <!-- Part III: MARC terms and their definitions: 1. FIELDS are marked by TAGS -->
+      <h3 class="title">1. FIELDS are marked by TAGS.</h3>
+      <p class="main"><span class="strong">A field:</span> Each holdings record is divided logically into fields. There is a field for codes, textual information, and so on. These fields are subdivided into one or more "subfields."</p>
+      <p class="main"><span class="strong">A tag:</span> Each field is associated with a 3-digit number called a &quot;tag.&quot; A tag identifies the field&mdash;the kind of data&mdash;that follows. Even though a printout or screen display may show the tag immediately followed by indicators (making it appear to be a 4- or 5-digit number), the tag is always the first 3 digits.</p>
+      <p class="cont">A sample of tags used in a holdings record is:</p>
+      <blockquote>
+        <table class="no">
+          <tr>
+            <td width="18%" class="ex1"><strong>004 tag</strong></td>
+            <td width="82%" class="ex2">marks a <strong>bibliographic record number</strong> that relates a separate holdings record to its bibliographic record</td>
+          </tr>
+          <tr>
+            <td class="ex1"><strong>852 tag</strong></td>
+            <td class="ex2">marks the <strong>location</strong> of the bibliographic item</td>
+          </tr>
+          <tr>
+            <td class="ex1"><strong>866 tag</strong></td>
+            <td class="ex2">marks the <strong>textual holdings information</strong> of the bibliographic item</td>
+          </tr>
+        </table>
+      </blockquote>
+      <br>
+      <p class="cont">Here is an example of a field with a tag number of 852, which designates that the data is a location.</p>
+      <table class="yes">
+        <tr>
+          <td class="example"><pre><span class="uma">852</span>	0#   $aAbc $bGenColl $hRA421 $i.P68 $t1</pre></td>
+        </tr>
+      </table>
+      <br>
+      <p class="cont">The Cataloging Distribution Service (CDS for short) of the Library of Congress distributes a detailed listing of all tags in both the full <em>MARC 21 Format for Holdings Data</em> and a summarized version entitled <em>MARC 21 Concise Formats</em>. For continued work with MARC holdings records, these specifications are highly recommended. They are detailed documents containing many examples. The documents are also available on the MARC 21 website at: <a href="../../marc.html">www.loc.gov/marc/</a>.</p>
+      <p class="cont">After even a short exposure to the MARC 21 holdings format, it is common to hear librarians speaking in &quot;MARCese.&quot; Librarians who work with MARC records soon memorize the numbers for the fields common to the holdings records that they create.</p>
+      <p class="cont">An outline of many of the most frequently-used tags is listed in <a href="UMHpt7-9.html#pt7">Part VII</a> of this guide.</p>
+      <!-- Part III: MARC terms and their definitions: 2. Some fields are further defined by INDICATORS -->
+      <h3 class="title">2. Some fields are further defined by INDICATORS.</h3>
+      <p class="main"><span class="strong">Indicators:</span> Two character positions follow each tag (with the exception of fields 001 through 009). One or both of these character positions may be used for &quot;indicators.&quot; In some fields, only the first or second position is used; in some fields, both are used; and in some fields, like the 010 field, neither is used. When an indicator position is not used, that indicator is referred to as &quot;undefined&quot; and the position is left blank. In this guide, it is the convention to represent a blank or undefined indicator position by the character &quot;#&quot;. </p>
+      <p class="main"><span class="strong">Each indicator value is a number from 0 to 9.</span> (Although the rules say it can be a letter, letters are uncommon.) Even though two indicators together may look like a 2-digit number, they really are two single-digit numbers. The allowable indicator values and their meanings are spelled out in the MARC 21 documentation. In the example that follows, the 2 digits following the 852 tag (a 0 and a #) are indicator values. The 0 is the first indicator. The # is the second indicator.</p>
+      <p class="cont">A <em>first indicator</em> value of 0 in the location field indicates that the item is assigned a classification number from the Library of Congress. The second indicator value of # indicates that no information is provided about the shelving order for the item.</p>
+      <table class="yes">
+        <tr>
+          <td class="example"><pre>852	0#   $aAbc $bGenColl $hRA421 $i.P68 $t1</pre></td>
+        </tr>
+      </table>
+      <br>
+      <!-- Part III: MARC terms and their definitions: SUBFIELDS are marked by SUBFIELD CODES and DELIMITORS -->
+      <h3 class="title">3. SUBFIELDS are marked by SUBFIELD CODES and DELIMITERS.</h3>
+      <p class="main"><span class="strong">A subfield:</span> Most fields contain several related pieces of data. Each type of data within the field is called a <span class="uma">subfield</span>, and each subfield is preceded by a <span class="uma">delimiter-subfield code combination</span>. Fields 001 through 009 have no subfields.
+      <p class="cont">For example, the field for a location includes  subfields for the location of an item, a sublocation, call number, and copy number.</p>
+      <table class="yes">
+        <tr>
+          <td class="example"><pre>852	0#   $aAbc $bGenColl $hRA421 $i.P68 $t1</pre></td>
+        </tr>
+      </table>
+      <p class="main"><span class="strong">A subfield code:</span> Subfield codes are one lowercase letter (occasionally a number) preceded by a delimiter. A delimiter is a character used to separate subfields. Each subfield code indicates what type of data follows it. (For each field in the MARC 21 holdings format, the MARC 21 documentation lists and describes the valid subfield codes.)</p>
+      <p class="cont">In the above example, the subfield codes are <span class="uma">$a</span> for location, <span class="uma">$b</span> for sublocation, <span class="uma">$h</span> for the classification part of location number, <span class="uma">$i</span> for the item part of location number, and <span class="uma">$t</span> for the copy number of the item.</p>
+      <p class="main"><span class="strong">A delimiter:</span> Different software programs use different characters to represent the delimiter on the screen or on printouts. Examples are a double dagger (&Dagger;), an &quot;at sign&quot; (@), a dollar sign ($), an underline (_), or the graphic symbol (<img src="../uma/ddelim2.gif" width="10" height="18" border="0" align="bottom" alt="delimiter symbol-855 Bytes">). In this publication the dollar sign ($) is used as the delimiter portion of the subfield code.</p>
+      <p class="nav">[<a href="UMHpt1-6.html#top">Back to Top of Page</a>]</p>
+      <a name="pt4"></a>
+      <hr align=center size=4 width=100>
+      <!-- Part IV: Holdings Standards and MARC Holdings Records -->
+      <h2 class="no">Part IV</h2>
+      <h2 class="title">Holdings Standards and MARC Holdings Records</h2>
+      <table class="yes" cellspacing="10">
+        <tr>
+          <td><h3><span class="strong">Types of bibliographic items</span></h3>
+            <p class="main">A holdings record is made for three types of bibliographic items. These are: <span class="strong">single-part</span>, <span class="strong">multipart</span>, and <span class="strong">serial items</span>.</p>
+            <p class="main">A <span class="strong">single-part</span> bibliographic item is complete in a single physical entity. Examples include single maps, one-volume books, a single disc DVD, or a computer file.</p>
+            <p class="main">A <span class="strong">multipart</span> bibliographic item has multiple physical parts but is intended to be finite. Examples include a set of maps, a ten-volume encyclopedia, a multimedia kit, or a manuscript collection.</p>
+            <p class="main">A <span class="strong">serial item</span> is issued in many parts, is intended to be issued indefinitely, and generally follows some pattern of issuance. Examples include a monthly magazine, a serial update service to a looseleaf publication, or an annual review compilation.</p></td>
+        </tr>
+      </table>
+      <h3 class="title">1. Holdings standards.</h3>
+      <p class="main">The <em>MARC 21 Format for Holdings Data</em> is, like all the MARC formats, a communications format that allows computer systems to read, interpret, and exchange holdings information by defining record structure. It does not, however, define the content of the holdings or how holdings are displayed. Content and display is determined by other standards, the most common being:</p>
+      <ul>
+        <li>American National Standard for holdings statements, <em>Holdings Statements for Bibliographic Items</em> (ANSI/NISO Z39.71).</li>
+        <li>International Organization for Standardization, <em>Holdings Statements &ndash; Summary Level</em> (ISO 10324).</li>
+      </ul>
+      <p class="cont">Both standards define the  data elements to include in a holdings statement and discuss punctuation. The ISO 10324 only covers summary statements, while the ANSI/NISO standard covers both summary and detailed.</p>
+      <p class="cont">The ANSI/NISO and ISO holdings standards  organize the various types of holdings information into data &quot;areas.&quot; The inclusion of elements from a data area in a MARC holdings record will determine the &quot;level&quot; of holdings being reported and an indication of level was incorporated into the MARC holdings record to facilitate indication of the completeness of the holdings information &quot;up front.&quot; The data areas and their contents are the following. Section 3 below indicates their corresponding MARC fields and Section 4 below relates them to standard holdings levels.</p>
+      <p class="main"><span class="strong">Item Identification</span> &ndash; identification of the bibliographic item whose holdings are being expressed.</p>
+      <p class="main"><span class="strong">Location Data</span> &ndash; identifies the institution and location within the institution:  sublocation and call number or shelf location.</p>
+      <p class="main"><span class="strong">Date of Report</span> &ndash; date the holdings were last reported.</p>
+      <p class="main"><span class="strong">General Holdings</span> &ndash; simple high level holdings information expressed in textual or coded form such as type of unit, physical form, completeness, acquisition status, and retention.</p>
+      <p class="main"><span class="strong">Extent of Holdings</span> &ndash; specific holdings, usually expressed as extent for single and multipart items and enumeration and chronology for serials.</p>
+      <p class="main"><span class="strong">Holdings Note</span> &ndash; notes relevant to a location expressed in the Location Data Area. Examples include &quot;Vol.16 is badly damaged&quot; or &quot;Captions vary&quot;.</p>
+      <p class="main">It should be noted that although the ISO and ANSI standards helped form the framework for the format, other holdings standards can be used for recording data in the MARC 21 Holdings format and for generating displays.</p>
+      <h3 class="title">2. Holdings record content</h3>
+      <p class="main">Holdings records can contain a variety of information, as described  above. However, because of the complexity of recording holdings for serial items, separate fields  are defined for three different types of units. These are: <span class="strong">basic bibliographic units</span>, <span class="strong">supplementary material</span>, and <span class="strong">indexes</span>. Generally a single part or multipart bibliographic item will only express holdings for the basic unit. Separate supplements and indexes occur most often for serials.</p>
+      <p class="main">A <span class="strong">basic bibliographic unit</span> is the actual item for which a bibliographic description is made. Examples include a magazine, a book, or an encyclopedia.</p>
+      <p class="main"><span class="strong">Supplementary materials</span> are bibliographic items that are appended to basic bibliographic units as supplements. Examples include appendixes to books or special issues to magazines.</p>
+      <p class="main">An <span class="strong">index</span> is a detailed list, usually arranged alphabetically, of the specific information in a bibliographic item. For example, many serial items issue indexes to a year or multi-year group of issues.</p>
+      <h3 class="title">3. Structural components of holdings records</h3>
+      <p class="main">Like MARC 21 bibliographic and authority records, MARC 21 holdings records consist of three main components: the<span class="strong"> Leader</span>, the <span class="strong">Directory</span>, and the <span class="strong">Variable Fields</span>.</p>
+      <p class="main">The <span class="strong">Leader</span> provides information required for the processing of a record. The data elements contain numbers or coded values and are identified by relative character positions. The Leader is 24 character positions long and is the first field in a MARC 21 holdings record. Much of the information in the Leader is for computer use in reading and processing the record and is computer generated. See Part VIII for more information about the Leader.</p>
+      <p  class="main">The <span class="strong">Directory</span> is a series of entries that contain the tag, length, and starting location of each variable field within a record. Each Directory entry is 12 character positions in length. The Directory is always generated by the computer. See Part VIII for a more information about the Directory.</p>
+      <p  class="main"><span class="strong">Variable fields</span> are identified by a three-character numeric tag that is stored in the Directory entry for the field. Each variable field ends with a field terminator character. </p>
+      <p class="cont">It is important to note that there are two types of variable fields. Variable <span class="strong">control</span> fields are the 00X fields. Although these fields are identified by a field tag in the Directory, they contain no indicator positions or subfield codes. Instead, they may contain either a single data element or a series of fixed-length data elements identified by relative character positions. The 008 field, for example, is referred to as Fixed-Length Data Elements, or Fixed Field Codes. Its 32 characters contain important information, but in an abbreviated form. Its data is often used to identify and retrieve records matching specific criteria. Part VIII discusses the 008 field in greater length. </p>
+      <p class="cont">Variable <span class="strong">data</span> fields, on the other hand, contain two indicator positions stored at the beginning of each field and a two-character subfield code preceding each data element within the field. Part VII describes the most common variable fields.</p>
+      <p class="cont">The variable  fields that supply data to the holdings data areas  described above are as follows:</p>
+      <blockquote>
+        <table class="no">
+          <tr>
+            <td scope="col"><span class="strong">Tags</span></td>
+            <td scope="col"><span class="strong">Data  Area</span></td>
+          </tr>
+          <tr>
+            <td>004, 0XX</td>
+            <td>Item Identification</td>
+          </tr>
+          <tr>
+            <td>008/26-31</td>
+            <td>Date of Report</td>
+          </tr>
+          <tr>
+            <td>007, 008, 3XX, 842 </td>
+            <td>General Holdings</td>
+          </tr>
+          <tr>
+            <td>5XX, 843, 845 </td>
+            <td>Holdings Note</td>
+          </tr>
+          <tr>
+            <td>852, 856 </td>
+            <td>Location Data</td>
+          </tr>
+          <tr>
+            <td>844, 853-878 </td>
+            <td>Extent of Holdings</td>
+          </tr>
+        </table>
+      </blockquote>
+      <p class="cont">There are also parallels of content designation within the holdings data fields that may help you in identifying the content within holdings fields. These are:</p>
+      <blockquote>
+        <table class="no">
+          <tr>
+            <td>853-855 </td>
+            <td>contain captions and publication pattern</td>
+          </tr>
+          <tr>
+            <td>863-865 </td>
+            <td>contain enumeration and chronology (numbering and dates)</td>
+          </tr>
+          <tr>
+            <td>866-868 </td>
+            <td>contain textual holdings (unparsed holdings statements)</td>
+          </tr>
+          <tr>
+            <td>876-878 </td>
+            <td>contain item information</td>
+          </tr>
+        </table>
+      </blockquote>
+      <p class="cont">Each of the three-field spans above are for recording the information for the basic bibliographic unit, the supplementary material, and the separate indexes. For instance 853 is for the basic, 854 is for supplementary, and 855 is for indexes. </p>
+      <p class="cont">These groups and the parallel content designation with them allow you to &quot;predict&quot; the content of a field, even when you do not know precisely what is in it.</p>
+      <table class="yes" cellspacing="10">
+        <tr>
+          <td>A <span class="strong">Caption</span> is a word or phrase that  gives a name to the divisions indicated by the numbers in the enumeration. This is generally the way that the item is subdivided.</td>
+        </tr>
+        <tr>
+          <td class="example">For example, volume, vol., v.,  number, no., part, side.</td>
+        </tr>
+        <tr>
+          <td>The <span class="strong">Enumeration</span> is the numbered element on a publication that is usually paired with a caption. Enumeration for serials is frequently hierarchical.</td>
+        </tr>
+        <tr>
+          <td class="example">For example, a serial issue that is the second number in volume 1 has the caption &quot;no.&quot; and the numeration &quot;2&quot;:   v. 1, no. 2.</td>
+        </tr>
+        <tr>
+          <td>The <span class="strong">Chronology</span> is the date of publication noted on the item. It is frequently hierarchical. </td>
+        </tr>
+        <tr>
+          <td class="example">For example v. 1, no. 3, March 2009</td>
+        </tr>
+        <tr>
+          <td>The <span class="strong">Pattern</span> contains multiple pieces of information that designate how the item is published: its frequency, timing of publication, etc. This code is needed for automated claiming. The coding patterns are very precise. See the MARC Format for Holdings Data for details.</td>
+        </tr>
+        <tr>
+          <td>The Enumeration and Chronology can be Compressed or Itemized. If <span class="strong">Compressed</span>, only the first item held and the last item held are listed, e.g., v.1-5. If <span class="strong">Itemized</span>, each item held is listed individually, e.g., v.1, no.1; v.1, no.2; v.1, no.3.</td>
+        </tr>
+        <tr>
+          <td><span class="strong">Textual holdings</span> contain free text strings instead of parsed data to describe the enumeration and chronology. This textual description may be used instead of or in addition to the parsed data in the Enumeration and Chronology.</td>
+        </tr>
+      </table>
+      <h3 class="title">4. Levels used for holdings records</h3>
+      <p class="cont">Recall that <a href="UMHpt1-6.html#pt4">Part IV</a>, section 1, told how holdings information can be described at four different levels of specificity, with the data "Areas" described earlier as the descriptors of a level.</p>
+      <p class="main"><span class="strong">Level 1</span> is the simplest and uses only the Item Identification data and the Location data to show that the library owns an item. This may be sufficient for a single-part item such as a monograph but will not indicate the holdings for serials or multi-part items.</p>
+      <table class="yes">
+        <tr>
+          <td width="9%">004</td>
+          <td colspan="2">88662974</td>
+          <td width="48%">[Item Identification]</td>
+        </tr>
+        <tr>
+          <td>852</td>
+          <td width="6%">0#</td>
+          <td width="37%">$aAbc $hZ671 $i.L7</td>
+          <td>[Location]</td>
+        </tr>
+        <tr>
+          <td colspan="4">[The ABC Public Library holds the bibliographic item and stores it at Z671.L7.]</td>
+        </tr>
+      </table>
+      <p class="main"><span class="strong">Level 2</span> provides General Holdings information, in addition to the Item Identification and the Location data of Level 1. This is the highest level that a single-part item, such as a single-volume monograph can be described.</p>
+      <table class="yes">
+        <tr>
+          <td width="6%">004</td>
+          <td colspan="2">88662974</td>
+          <td width="48%">[Item Identification]</td>
+        </tr>
+        <tr>
+          <td>007</td>
+          <td colspan="2"><span class="uma">ta</span></td>
+          <td>[General Holdings information]</td>
+        </tr>
+        <tr>
+          <td>008</td>
+          <td colspan="2">061205<span class="uma">4</span>p####<span class="uma">8</span>###<span class="uma">2</span>###ba###<span class="uma">0090115</span></td>
+          <td>[General Holdings information]</td>
+        </tr>
+        <tr>
+          <td>852</td>
+          <td width="6%">0#</td>
+          <td width="40%">$aAbc $hZ671 $i.L7</td>
+          <td>[Location]</td>
+        </tr>
+        <tr>
+          <td colspan="4">[The ABC Public Library reported in January 2009 that their general holdings for the <br>
+            print copy of a serial were: currently received and permanently retained, but the holdings are incomplete.]</td>
+        </tr>
+      </table>
+      <p class="main"><span class="strong">Level 3</span> provides more detail about the holdings. In addition to Item Identification, Location, and General Holdings information, this level also includes the Extent of Holdings information, but as a summary, using only the highest level of enumeration and chronology.  This level is often used for serials, especially where there are no gaps in the enumeration/chronology.</p>
+      <table class="yes">
+        <tr>
+          <td width="5%">004</td>
+          <td colspan="2">88662974</td>
+          <td width="49%">[Item Identification]</td>
+        </tr>
+        <tr>
+          <td>007</td>
+          <td colspan="2">ta</td>
+          <td>[General Holdings information]</td>
+        </tr>
+        <tr>
+          <td>008</td>
+          <td colspan="2">0612054p####8###2###ba###0090115</td>
+          <td>[General Holdings information]</td>
+        </tr>
+        <tr>
+          <td>852</td>
+          <td width="9%">0#</td>
+          <td width="37%">$aAbc $hZ671 $i.L7</td>
+          <td>[Location]</td>
+        </tr>
+        <tr>
+          <td><span class="uma">853</span></td>
+          <td><span class="uma">01</span></td>
+          <td><span class="uma">$81 $av. $i(year)</span></td>
+          <td>[Extent (captions)]</td>
+        </tr>
+        <tr>
+          <td><span class="uma">863</span></td>
+          <td><span class="uma">30</span></td>
+          <td><span class="uma">$81.1 $a1- $i1983-</span></td>
+          <td>[Extent (enumeration and chronology)]</td>
+        </tr>
+        <tr>
+          <td colspan="4">[The ABC Public Library's holdings begin with volume 1 dated 1983 and the serial continues to be received.]</td>
+        </tr>
+      </table>
+      <p class="main"><span class="strong">Level 4</span> is the most detailed description of the holdings for the item as it gives complete information about the copies and parts, indicating all of the items held. It includes  the same areas as Level 3 but enumeration and chronology use the itemized approach.  This level is useful for serials or multi-part items where: the holdings are more complex, there are gaps in the enumeration/chronology, multiple copies in different formats, or some parts vary from the normal pattern or numbering.</p>
+      <table class="yes">
+        <tr>
+          <td width="5%">004</td>
+          <td colspan="2">88662974</td>
+          <td width="48%">[Item Identification]</td>
+        </tr>
+        <tr>
+          <td>007</td>
+          <td colspan="2">ta</td>
+          <td>[General Holdings information]</td>
+        </tr>
+        <tr>
+          <td>008</td>
+          <td colspan="2">0612054p####8###2###ba###0101015</td>
+          <td>[General Holdings information]</td>
+        </tr>
+        <tr>
+          <td>852</td>
+          <td width="9%">0#</td>
+          <td width="38%">$aAbc $hZ671 $i.L7</td>
+          <td>[Location]</td>
+        </tr>
+        <tr>
+          <td><span class="uma">853</span></td>
+          <td><span class="uma">20</span></td>
+          <td><span class="uma">$81 $av. $bno. $i(year) $j(month)</span></td>
+          <td>[Extent (captions)]</td>
+        </tr>
+        <tr>
+          <td><span class="uma">863</span></td>
+          <td><span class="uma">40</span></td>
+          <td><span class="uma">$81.1 $a1 $b1-26 $i1983-2009</span></td>
+          <td>[Extent (enumeration and chronology)]</td>
+        </tr>
+        <tr>
+          <td><span class="uma">863</span></td>
+          <td><span class="uma">41</span></td>
+          <td><span class="uma">$81.2 $a27 $b1 $i2010 $j01</span></td>
+          <td>[Extent (enumeration and chronology)]</td>
+        </tr>
+        <tr>
+          <td><span class="uma">863</span></td>
+          <td><span class="uma">41</span></td>
+          <td><span class="uma">$81.2 $a27 $b2 $i2010 $j02</span></td>
+          <td>[Extent (enumeration and chronology)]</td>
+        </tr>
+        <tr>
+          <td colspan="4">[The ABC Public Library's holdings begin with volume 1 dated 1983 and the last issue received is v. 27, no.2, Feb. 2010.]</td>
+        </tr>
+      </table>
+      <h3 class="title">5. Other aspects of a holdings record's detailed holdings fields (Tags 853-865)</h3>
+      <p class="main">There are four special characteristics of a holdings record that are not found in other MARC 21 formats.</p>
+      <p class="main"><span class="strong">Compression vs. expansion.</span> Codes that indicate whether the data recorded in the enumeration and chronology field can be compressed or expanded for display purposes by using a computer algorithm. This allows the data to be recorded at the most detailed level, but still displayed in more compact forms where needed, or conversely, to regain a detailed listing from a compact one.</p>
+      <table class="yes">
+        <tr>
+          <td>Expanded display:</td>
+          <td>v.1 no.1, v.1 no.2, v.2 no.1, v.2 no.2, v.3 no.1, v.3 no.2</td>
+        </tr>
+        <tr>
+          <td>Compressed display:</td>
+          <td>v.1-v.3</td>
+        </tr>
+      </table>
+      <p class="main"><span class="strong">Publication patterns.</span> Codes that provide information about a serial's regularity or frequency. Such codes allow the computer to predict when the next issue should be available, which is useful for automated check-in and claiming. These codes can also be used to indicate the number of parts a serial has at different levels of enumeration. The details for codes for patterns are explained in the MARC 21 Format for Holdings Data.</p>
+      <table class="yes">
+        <tr>
+          <td>853</td>
+          <td>03</td>
+          <td>$81 $av. $bno. $i(year) $j(month) $wm $yom08</td>
+        </tr>
+        <tr>
+          <td colspan="3">[Item is published monthly except August.]</td>
+        </tr>
+      </table>
+      <p class="main"><span class="strong">Paired tags.</span> Used to allow data stored in one field to be combined with data from another field for display. This is most common with the 853 and 863 fields where, for example, a caption stored in 853 is combined with the related data that is stored in 863. The fields are linked together using a special subfield, $8, to enable combining the captions with the numeration and chronology for display of the data as a holdings statement.</p>
+      <table class="yes">
+        <tr>
+          <td>853</td>
+          <td>03</td>
+          <td>$81 $av $bno. $i(year) $j(month)</td>
+        </tr>
+        <tr>
+          <td>863</td>
+          <td>40</td>
+          <td>$81.1 $a1-7 $b1-6 $i1951-1957 $j01-06</td>
+        </tr>
+        <tr>
+          <td>863</td>
+          <td>41</td>
+          <td>$81.2 $a7 $b7 $i1957 $j07</td>
+        </tr>
+      </table>
+      <p class="main"><span class="strong">Parsed vs. textual holdings.</span> Holdings data can be recorded in parsed form using the 853-865 fields, or free-form text using the 866-868 fields, or both. One example of using both would be to record data for holdings that are needed for current activities such as check-in, claiming, or binding, using the parsed fields while older already bound volumes would be recorded using the text fields. A textual field could also be used for an alternate way of expressing the holdings if needed for a particular report or to illustrate gaps.</p>
+      <table class="yes">
+        <tr>
+          <td>866</td>
+          <td>31</td>
+          <td>$80 $av. 1-4 (1941-1944), v. 6-46 (1946-1986) $zSome issues missing</td>
+        </tr>
+      </table>
+      <h3 class="title">6. Relationship to bibliographic record: separate or embedded</h3>
+      <p class="main">A holdings record does not stand on its own but must be related to a bibliographic record that contains all the descriptive information. This relationship can be done in two different ways.</p>
+      <p class="main"><span class="strong">Embedded holdings</span> are included within the bibliographic record. This is easily done if there is only a single item held in a single location. If there are multiple copies in various locations, the holdings record can be embedded only if there is no need to associate location information in field 852 with specific holdings, because you would not be able to tell which location applies to which associated holdings information.</p>
+      <p class="main"><span class="strong">Separate records can also be created for the holdings.</span> The holdings record is  linked to the relevant bibliographic record through a linking Item Identification field. Although separate records can be used for any type of holding, they are especially useful for more complex holdings as they allow the use of more fields and data elements and are more flexible in dealing with multiple copies, multiple formats, and multiple locations. Separate records also support circulation data in library systems.</p>
+      <p class="main"><span class="strong">Fields defined in both bibliographic and holdings formats.</span> There are a number of fields that are in both the MARC bibliographic format and the MARC holdings format. This allows you to give the information for the whole bibliographic resource in the bibliographic record and to give the information for a particular copy or item in the holdings record. For instance, the bibliographic record may describe all versions of a resource but you can give physical description information in field 007 of the holdings record to bring out specifics about a particular version, e.g. a microform or electronic version.</p>
+      <p class="nav">[<a href="UMHpt1-6.html#top">Back to Top of Page</a>]</p>
+      <a name="pt5"></a>
+      <hr align=center size=4 width=100>
+      <!-- Part V: Are MARC Holding Records Shared?  -->
+      <h2 class="no">Part V</h2>
+      <h2 class="title">Are MARC Holdings Records Shared?</h2>
+      <p class="cont">As in the case of bibliographic records, libraries share some or all of their holdings information with library cooperatives and consortiums. Use of the <em>MARC 21 Format for Holdings Data</em> allows libraries to participate in union lists and other cooperative resource sharing programs by providing their holdings information in the same machine-readable format. MARC also allows library automation venders to design their systems to receive and process standard holdings information. Data can easily be transferred from one ILS system to another without having to do major reformatting, conversion, or data editing.</p>
+      <p class="cont">To implement automated check-in and claiming, a library must determine and code the publication pattern for each serial that is held. This information is time consuming to code, and, if each library does the work for its system, there is much duplication of effort. The CONSER Publication Pattern Initiative has promoted the sharing this information so that the coding need only be done once. Just as librarians have shared bibliographic cataloging records to make cataloging more efficient, the CONSER program has allowed librarians to use pattern information that was input to the shared system by others.</p>
+      <p class="nav">[<a href="UMHpt1-6.html#top">Back to Top of Page</a>]</p>
+      <a name="pt6"></a>
+      <hr align=center size=4 width=100>
+      <!-- Part VI: In Conclusion -->
+      <h2 class="no">Part VI</h2>
+      <h2 class="title">In Conclusion</h2>
+      <p class="cont">In these pages you've learned what the <em>MARC 21 for Format Holdings Data</em> specification is and why a standard format for identifying elements of holdings data is important. You have learned to define and identify the three types of MARC content designators: tags, subfield codes, and indicators. You have also learned what type of content is included in a holdings record, the component structure of the record, the levels of specificity that can be used for holdings, and the special characteristics of a holdings record that are not found in other MARC 21 formats.</p>
+      <p class="cont">To build on this basic introduction to MARC holdings records, additional reading on the subject or courses in online cataloging can be beneficial. Further readings are suggested in the bibliography. MARC holdings records may appear difficult at first, but with knowledge and use, it will begin to make sense. As you become more familiar with the MARC 21 holdings format, the simpler it will become.</p>
+      <p class="nav">[<a href="UMHpt1-6.html#top">Back to Top of Page</a>]</p>
+      <hr align=center size=4 width=100>
+      <br>
+      <p class="nav1">[<a href="index.html">Table of Contents</a>]  --  
+        [Parts I-VI]  --  
+        [<a href="UMHpt7-9.html">Part VII-IX</a>] <span class="nav1">--  
+        [<a href="UMHpt10-12.html">Parts X-XII</a>]</span> <br>
+      <!-- LC Footer -->
+      </p>
+      <hr>
+      <IMG src="../../homepage/lc2.gif" alt="" width=91 height=46 hspace="6" align="left"> <STRONG>Library of Congress</STRONG><br>
+      <a href="../../homepage/legal.html">Legal</a> | <a href="../../global/disclaim.html">External Link Disclaimer</a><BR>
+      <em>
+      <!-- help desk email start -->
+      <a 
+      href="http://www.loc.gov/help/help-desk.html">Library of Congress Help 
+        Desk</a>
+      <!-- help desk email end -->
+(
+<!-- #BeginDate format:Am3 -->01/28/2011<!-- #EndDate -->
+) </em></tr>
+</table>
+<hr size="1" noshade>
+<script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+</html>

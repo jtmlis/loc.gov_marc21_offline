@@ -1,0 +1,150 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #333333;
+	margin: 0;
+	padding: 0;
+}
+td {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #333333;
+}
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #333333;
+}
+dd {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #666666;
+	margin-left: 10pt;
+
+
+}
+dt {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+}
+.larger {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	font-weight: bold;
+}
+.caption {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	text-align: center;
+
+}
+.largecap {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14pt;
+	font-weight: bold;
+	color: #663366;
+}
+.blue-header {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	font-weight: bold;
+	color: #663366;
+}
+address {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+}
+.selected {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #663366;
+}.caption {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+}
+a.white {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #EEEEEE;
+	text-decoration: none;
+}
+a.white:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+.white-text {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #EEEEEE;
+}
+.drop-box {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+}
+.purple {
+	background-color: #FFFFCC;
+}
+h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16pt;
+	font-weight: bold;
+	color: #663366;
+}
+h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14pt;
+	font-weight: bold;
+	color: #996699;
+}
+h3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	color: #666666;
+}
+.adecaption {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	text-align: center;
+	color: #666666;
+
+}
+.smalltext {font-family: arial, helvetica, sans-serif; font-size: 10pt;}
+.table {font-family: Arial, Helvetica, sans-serif; font-size: 8pt;}
+p.indent {   text-indent: 3em; }
+br.indent {  text-indent: 10em; }
+dd { font-family: arial, helvetica, sans-serif; font-size: 10pt; }
+.annotation {font-family: Arial, Helvetica, sans-serif; font-size: 10pt;}
+.pics {  font-size: 9pt; }.indexcap {
+	font-size: 24pt;
+	color: #660066;
+}
+.redtext {
+color: #990000;
+font-weight: bold;
+}
+
+.tdColorAlt1{
+	background-color: #EEE9EE;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+}
+.tdColorAlt2{
+	background-color: #E2DBE2;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+}
+.whitetext{
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-align: right;
+}
+.redtext2{
+	color: #993333;
+	font-weight: bold;
+}
+

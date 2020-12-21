@@ -1,0 +1,1171 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+"http://www.w3.org/TR/HTML40/loose.dtd">
+
+<html>
+
+<head>
+<title>Understanding MARC Authority Records: Parts 1 to 7</title>
+<base href="">
+<meta name="keywords" content="MARC 21, Authority Format"> 
+<meta name="description" content="This document contains parts 1 to 7 of Understanding MARC Authority Records"> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel=stylesheet href="uma-redesign.css" type="text/css">
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+
+<body>
+
+<!--Begin outer border; centers document; fixes line length-->
+
+<table align="center" class="main">
+<tr>
+  <td><p><a href="../../index.html">Library of Congress</a>&gt;&gt; <a href="../../standards/index.html">Standards</a> &gt;&gt; <a href="../../marc.html">MARC</a>    &gt;&gt; <a href="index.html">Understanding MARC Authority Records</a></p>
+    <hr size="1" noshade>
+  </tr>
+<tr>
+<td> 
+
+<h1>WHAT IS A MARC RECORD,<br>
+AND WHY IS IT IMPORTANT?</h1>
+
+
+<p class="intro">
+<span style="color: #0099FF; font-size: 150%; font-weight: bold">I</span> t is impossible these days 
+to read a library journal, attend a library conference, or even have an informal chat with other 
+librarians without hearing the phrases &quot;MARC format,&quot; &quot;MARC records,&quot; 
+or &quot;MARC-compatible.&quot; Many library professionals have not had an opportunity 
+to take formal courses explaining the important topics of library automation and the role of MARC, 
+yet automated library systems remain an  important part of their libraries.</p>
+
+<p class="intro">This booklet will explain  --  in the simplest terms possible  --  what a MARC record is, 
+and it will provide the basic information needed to understand and evaluate a MARC authority record. 
+A companion document, <a href="../umb.html"><cite>Understanding MARC Bibliographic,</cite></a> 
+focuses on the MARC bibliographic record.</p>
+
+
+
+<a name="top"></a>
+<hr align=center size=4 width=100>
+
+<p class="contents">
+<a href="pt1-7.html#pt1">Part I: What Does MARC Mean?</a><br>
+<a href="pt1-7.html#pt2">Part II: Why is a MARC Record Necessary?</a><br>
+<a href="pt1-7.html#pt3">Part III: MARC Terms and Their Definitions</a><br>
+<a href="pt1-7.html#pt4">Part IV: What is a MARC Authority Record?</a><br>
+<a href="pt1-7.html#pt5">Part V: Are MARC Authority Records Shared?</a><br>
+<a href="pt1-7.html#pt6">Part VI: MARC Data Issues</a><br>
+<a href="pt1-7.html#pt7">Part VII: In Conclusion</a>
+</p>
+
+<hr align=center size=4 width=100>
+
+
+<!-- Part I: what does MARC mean? Part I: what does MARC mean? Part I: what does MARC mean? -->
+
+<h2 class="no"><a name="pt1">Part I</a></h2>
+<h2 class="title">What Does MARC Mean?</h2>
+
+<p class="main"><span class="strong">What is a MARC record?</span> 
+A MARC record is a <span class="uma">MA</span>chine-<span class="uma">R</span>eadable 
+<span class="uma">C</span>ataloging record.</p>
+
+<p class="main"><span class="strong">And what is a machine-readable cataloging record?</span></p>
+
+<p class="main"><span class="strong">Machine-readable:</span> 
+&quot;Machine-readable&quot; means that a computer, can read and interpret the data in a record. 
+The following pages will explain why this is important and how it is made possible.</p>
+
+<p class="main"><span class="strong">Cataloging record:</span>  
+Cataloging records come in two types:
+1) <em>Bibliographic</em> records, which contain information about 
+a book, serial, sound recording, videorecording, etc., and
+2) <em>Authority records</em>, which contain standardized forms for names, titles, and subjects 
+that are used on bibliographic records and provide cross references in catalogs. 
+<a href="../umb.html"><cite>Understanding MARC Bibliographic</cite></a> describes the first type, 
+this booklet describes the second.</p>
+
+<p class="main"><span class="strong">MARC Authority Record:</span> 
+MARC authority records contain the standardized forms of names for people, 
+corporate bodies (for example, societies, businesses, institutions, etc.), 
+meetings, titles, and subjects. 
+In doing this, authority records provide <span class="uma">authority control</span>. 
+Authority control means establishing a recognized form for an entity name 
+and using that form whenever the name is needed as an access point in a bibliographic record.</p>
+
+<p class="cont">For example, if you searched in your library's online catalog for the popular book, 
+&quot;The Adventures of Tom Sawyer,&quot; by Mark Twain, 
+you could retrieve the following bibliographic record display:</p>
+
+<table class="yes" style="padding: 10px;">
+	<tr>
+		<td class="ex1">TITLE:</td>
+		<td class="ex2">The adventures of Tom Sawyer / Mark Twain ; with an introduction by Robert S. Tilton.</td>
+	</tr>
+	<tr>
+		<td class="ex1">AUTHOR:</td>
+		<td class="ex2"><span class="uma-hilite">Twain, Mark, 1835-1910.</span></td>
+	</tr>
+	<tr>
+		<td class="ex1">PUBLISHED:</td>
+		<td class="ex2">New York : Signet Classic, [1997]</td>
+	</tr>
+	<tr>
+		<td class="ex1">MATERIAL:</td>
+		<td class="ex2">xxi, 216 p. ; 18 cm.</td>
+	</tr>
+	<tr>
+		<td class="ex1">NOTE:</td>
+		<td class="ex2">Includes bibliographical reference (p. 213-216)</td>
+	</tr>
+	<tr>
+		<td class="ex1">SUBJECTS:</td>
+		<td class="ex2"><span class="uma-hilite">Sawyer, Tom (Fictitious character) -- Fiction.<br>
+Boys -- Missouri -- Fiction.<br>
+Mississippi River -- Fiction.<br>
+Missouri -- Fiction.<br>
+Adventure stories.</span></td>
+	</tr>
+</table>
+
+<br>
+
+<p class="cont">The AUTHOR and SUBJECT entries (highlighted above) are controlled, 
+recognized forms of name and subject headings that are contained in separate authority 
+records and used as access points in the bibliographic record.</p>
+
+<p class="cont">Without authority control, finding particular books in a large library 
+catalog would be like finding a needle in a haystack!</p>
+
+<p class="cont">It is important to note that the formulation of a name, 
+or subject heading in an authority record is based on generally accepted 
+cataloging and thesaurus-building conventions. 
+The MARC 21 authority record simply <em>holds</em> or <em>carries</em> these headings 
+for use in library systems. Thus, it does not itself set the rules for formulating name or subject headings.</p>
+
+<p class="cont">It is also important to note that unlike bibliographic records, 
+authority records do not represent materials in a library's collection. 
+Rather, they are tools used by librarians to achieve consistency among bibliographic records 
+and provide a linking framework for related names and subjects in a catalog  --  
+thus organizing the catalog to assist users in finding resources.</p>
+
+<p class="main">An authority record includes three basic components:</p>
+
+<p class="main">1) Headings, 2) Cross references, and 3) Notes. 
+(MARC authority records often also contain additional information.) 
+Although these components are described briefly below, 
+they are also discussed throughout the rest of this booklet.</p>
+
+<p class="main"><strong><em>1) Heading:</em></strong> 
+The standardized &quot;authoritative&quot; form of a name, subject, or title 
+that is used for access points on bibliographic records. 
+The purpose of using standardized names and subjects on bibliographic records 
+is to help related records be retrieved together.</p>
+
+<p class="main"><strong><em>2) Cross references:</em></strong> 
+References that direct a user from a variant form of a name or subject 
+to the authoritative form (this is called a see reference) 
+or from one authoritative form to another authoritative form 
+because they are related to one another (this is called a see also reference). 
+For MARC authority records, the references are carried or &quot;traced&quot; 
+on the record for the authoritative heading.</p>
+
+<p class="main"><strong><em>3) Notes:</em></strong> 
+Notes that contain general information about standardized headings 
+or more specialized information, such as citations for a consulted source 
+in which information is either found or not found about a heading.</p>
+
+<br>
+
+<p class="cont">An example of the use of an authority-type cataloging record 
+in the catalog is one for the well-known French Romantic writer, George Sand. 
+Users may approach the catalog with knowledge of either her real name, 
+Amandine Aurore Lucie Dupin, or her pen name, George Sand. 
+The authority record assures that all bibliographic records use 
+her most commonly known name in its most frequently used form 
+so that all of her works can be efficiently retrieved together  --  
+and that there is a cross reference in the catalog from the other names 
+and forms not used to the one used. 
+The cross references enable either an end user to adjust a search 
+to the correct form or the system to automatically adjust the search.</p>
+
+<blockquote>
+<table class="no">
+	<tr>
+		<td class="sidebar-hd">Quick Terminology Review</td>
+	</tr>
+	<tr>
+		<td class="sidebar">
+<div class="flush">An authority record is created for the <strong>standardized</strong> form of a name or term. 
+This form is sometimes called the <strong>authorized</strong>, <strong>authoritative</strong>, 
+or <strong>established</strong> form. 
+On the authority record the standardized form is the key element for which the record was made, 
+so it is also called the <strong>heading</strong>.</div>
+
+<div class="flush">On authority records, <strong>variant</strong> forms 
+of the standardized heading are traced (i.e., recorded). 
+In the authority record variants are often called <strong>see from tracings</strong> 
+since they are used in the catalog to direct the user from the variant to the standardized heading.</div>
+
+<div class="flush">Also other standardized names and terms that are <strong>related</strong> 
+to the standardized heading (for which the record is made) 
+are traced (i.e., recorded) in an authority record. 
+In the authority record they are often called <strong>see also from tracings</strong> 
+since they are used to direct the user from a closely related name or concept to the standardized heading. 
+But note, related names and terms are themselves standardized forms 
+so they are also the standardized heading on their own authority record.</div>
+
+<div class="flush">To summarize, the authority record contains:</div>
+<div class="indented">Standardized heading</div>
+<div class="indented">Variant name(s) or term(s) (see from tracings)</div>
+<div class="indented">Related name(s) or term(s) (see also from tracings)</div>
+
+<div class="flush">The information in the authority record is used 
+to create the following displays in the public catalog:</div>
+<div class="indented">Variant name or term</div>
+<div class="indented2">See Standardized heading</div>
+<div class="indented">Related name or term</div>
+<div class="indented2">See also Standardized heading</div>
+
+<div class="flush">The configuration of the authority record to include references 
+as tracings is an efficient technique for recording the data needed for authority control. 
+It successfully leads the user to sought material from a variety of names and terms.</div>
+<br>
+		</td>
+	</tr>
+</table>
+</blockquote>
+
+<br>
+
+<p class="nav">[<a href="pt1-7.html#top">Back to Top of Page</a>]</p>
+
+<a name="pt2"></a><hr align=center size=4 width=100>
+
+
+<!-- Part II: why is a MARC record necessary? Part II: why is a MARC record necessary? -->
+
+
+<h2 class="no">Part II</h2>
+<h2 class="title">Why Is a MARC Record Necessary?</h2>
+
+<p class="main"><span class="strong">Why can't a computer just read an authority card?</span>  
+The information from an authority card cannot simply be typed into a computer 
+to become part of an automated catalog. 
+The computer needs a means to interpret the information found on an authority card. 
+The MARC record contains a guide to its data, or little &quot;signposts,&quot; 
+before each piece of authority information.</p>
+
+<p class="cont">The place provided for each of the pieces of authority records 
+(headings, cross references and notes) is called a &quot;field.&quot; 
+The MARC file structure allows for records with an unlimited number 
+of fields and unlimited field lengths. 
+This flexibility is necessary because, for example, not all headings 
+are the same length (&quot;Plato&quot; <em>versus</em> 
+&quot;Kennedy, Albert J. (Albert Joseph), 1879-1968&quot;).</p>
+
+<p class="cont">The computer cannot assume a certain type of information 
+begins and ends at the same position in every authority record. 
+For example, a <em>see also</em> reference tracing will <strong>not</strong> 
+always begin with the 220th character of the record and end at the 248th position. 
+Therefore, each MARC record contains a little &quot;table of contents&quot; 
+formulated according to a predefined standard.</p>
+
+<p class="main"><span class="strong">Data &quot;signposts&quot;:</span> 
+The computer must have assistance if it is to read and interpret the authority record correctly. 
+The box charts below illustrate the information that these &quot;signposts&quot; need to convey.</p>
+
+<p class="cont">If an authority record has been marked correctly and saved in a computer data file, 
+computer programs can then be written to format the information correctly 
+for displaying the information on a computer screen. 
+Programs can also be written to search for and retrieve certain types 
+of information within specific fields. 
+Computer programs can also display lists of headings and references meeting specific search criteria.</p>
+
+
+      <!-- Record with textual signposts Record with textual signposts Record with textual signposts -->
+
+<h3 class="table"><a name="table1">Record with textual &quot;signposts&quot;</a></h3>
+
+<blockquote>
+	<table class="signposts">
+		<tr>
+			<td class="sp"><span class=strong>&quot;SIGNPOSTS&quot;</span></td>
+			<td class="sp"><span class=strong>DATA</span></td>
+		</tr>
+		<tr>
+			<td class="sp">
+				<div class="nobold">Heading area</div>
+				<div class="indented">Name:</div>
+				<div class="indented">Dates:</div>
+			</td>
+			<td class="sp">
+				<div class="nobold">&nbsp;</div>
+				<div class="nobold">King, Stephen,</div>
+				<div class="nobold">1947-</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="sp">
+				<div class="nobold"><em>See from</em> reference tracing area</div>
+				<div class="indented">Name:</div>
+				<div class="indented">Dates:</div>
+			</td>
+			<td class="sp">
+				<div class="nobold">&nbsp;</div>
+				<div class="nobold">King, Stiven,</div>
+				<div class="nobold">1947-</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="sp">
+				<div class="nobold"><em>See also from</em> reference tracing area</div>
+				<div class="indented">Name:</div>
+				<div class="indented">Dates:</div>
+			</td>
+			<td class="sp">
+				<div class="nobold">&nbsp;</div>
+				<div class="nobold">Bachman, Richard,</div>
+				<div class="nobold">1947-</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="sp">
+				<div class="nobold">Note area</div>
+				<div class="indented">Source citation:</div>
+				<div class="indented">Source citation:</div>
+				<div class="indented">Information found:</div>
+			</td>
+			<td class="sp">
+				<div class="nobold">&nbsp;</div>
+				<div class="nobold">His Carrie, 1974.</div>
+				<div class="nobold">Washington post, 4/9/85</div>
+				<div class="nobold">(Stephen King has written 5 novels 
+					using the pseudonym Richard Bachman)</div>
+			</td>
+		</tr>
+	</table>
+</blockquote>
+
+
+      <!-- Same record with textual MARC tags Same record with textual MARC tags Same record with textual MARC tags -->
+
+<h3 class="table"><a name="table2">Same record with MARC tags</a></h3>
+
+<blockquote>
+	<table class="signposts">
+		<tr>
+			<td class="sp2"><span class=strong>&quot;SIGNPOSTS&quot;</span></td>
+			<td class="sp"><span class=strong>DATA</span></td>
+		</tr>
+		<tr>
+			<td class="sp2">
+				<div class="nobold"><pre>100 1#  $a</pre></div>
+				<div class="nobold"><pre>        $d</pre></div>
+				<div class="nobold"><pre>400 1#  $a</pre></div>
+				<div class="nobold"><pre>        $d</pre></div>
+				<div class="nobold"><pre>500 1#  $a</pre></div>
+				<div class="nobold"><pre>        $d</pre></div>
+				<div class="nobold"><pre>670 ##  $a</pre></div>
+				<div class="nobold"><pre>670 ##  $a</pre></div>
+				<div class="nobold"><pre>        $b</pre></div>
+			</td>
+			<td class="sp">
+				<div class="nobold"><pre>King, Stephen,</pre></div>
+				<div class="nobold"><pre>1947-</pre></div>
+				<div class="nobold"><pre>King, Stiven,</pre></div>
+				<div class="nobold"><pre>1947-</pre></div>
+				<div class="nobold"><pre>Bachman, Richard,</pre></div>
+				<div class="nobold"><pre>1947-</pre></div>
+				<div class="nobold"><pre>His Carrie, 1974.</pre></div>
+				<div class="nobold"><pre>Washington post, 4/9/85</pre></div>
+				<div class="nobold"><pre>(Stephen King has written 5 novels using
+the pseudonym Richard Bachman)</pre>
+				</div>
+			</td>
+		</tr>
+	</table>
+</blockquote>
+
+
+<p class="main"><span class="strong">Why one standard?</span>  
+You could devise your own method of organizing authority information, 
+but you would be isolating your library, limiting its options, 
+and creating much more work for yourself. 
+Using the MARC standard prevents duplication of work and allows libraries 
+to better share authority information. 
+Choosing to use MARC enables libraries to acquire authority data 
+that is predictable and reliable. 
+If a library were to develop a &quot;homegrown&quot; system 
+that did not use MARC records, it would not be taking advantage 
+of an industry-wide standard whose primary purpose is to foster communication of information.</p>
+
+<p class="cont">Using the MARC standard also enables libraries to make use 
+of commercially available library automation systems to manage library operations. 
+Many systems are available for libraries of all sizes and are designed to work 
+with the MARC formats. 
+Systems are maintained and improved upon by the vendor so that libraries can benefit 
+from the latest advances in computer technology. 
+The MARC standard also allows libraries to replace one system with another 
+with the assurance that their data will still be compatible. 
+See <a href="pt1-7.html#pt5">Part V</a> <!--(p. 10)--> of this booklet 
+for more information about the importance and benefits of using the MARC authority standard.</p>
+
+<p class="main"><span class="strong">MARC 21:</span>  
+Because of the Library of Congress' large collections 
+and its cooperative programs with other libraries, 
+it is a primary source of authority records for U.S. and international catalogs. 
+When the Library of Congress began to use computers in the 1960s, 
+it devised the LC MARC bibliographic format, a system of using brief numbers, 
+letters, and symbols within the bibliographic record itself 
+to mark different types of information. 
+The Library of Congress developed the companion authority format in the 1970's. 
+The original MARC formats evolved into MARC 21 and have become the standards 
+used by most libraries for bibliographic and authority records. 
+The MARC 21 authority format, as well as all official MARC 21 documentation, 
+is maintained by the Library of Congress. 
+It is published as the <cite>MARC 21 Format for Authority Data</cite>.</p>
+
+<p class="cont">A comparison of the same record with textual information 
+and with MARC tags illustrates the compactness of the MARC 21 format. 
+It's a matter of storage space. Look at <a href="pt1-7.html#table1">the boxes above</a>. <!--at left-->
+The MARC 21 format uses &quot;670&quot; &quot;$a&quot; and &quot;$b&quot; 
+to mark fields that contain source data found notes instead of storing 
+the words &quot;source,&quot; &quot;citation,&quot; &quot;information&quot; and &quot;found&quot; 
+in each authority record. This convention makes more efficient use of computer storage space.</p>
+<!--This text doesn't match the captions in the table!-->
+
+
+<p class="nav">[<a href="pt1-7.html#top">Back to Top of Page</a>]</p>
+
+<a name="pt3"></a><hr align=center size=4 width=100>
+
+
+<!-- Part III: MARC terms and their definitions Part III: MARC terms and their definitions -->
+
+<h2 class="no">Part III</h2>
+<h2 class="title">MARC Terms and Their Definitions</h2>
+
+<p class="main">This section contains information on how to read, understand, and use a MARC authority record. 
+It deals with what librarians using a library automation system will see and need to understand 
+on their computer screens when adding, editing, or examining records. 
+The emphasis will be on the areas commonly used in authority records.</p>
+
+<p class="cont">A box chart in Part II <!--LINK--> showed a MARC record labeled 
+with MARC tag &quot;signposts.&quot; 
+The proper names of these &quot;signposts&quot; are <em>field</em>, <em>tag</em>, 
+<em>indicator</em>, <em>subfield</em>, <em>subfield code</em>, and <em>content designator</em>. 
+These MARC 21 terms are covered in this section.</p>
+
+      <!-- Part III: MARC terms and their definitions: 1. FIELDS are marked by TAGS -->
+
+<h3 class="title">1. FIELDS are marked by TAGS.</h3>
+
+<p class="main"><span class="strong">A field:</span>  
+Each authority record is divided logically into fields. 
+There is a field for the heading, fields for reference tracings, and so on. 
+These fields are subdivided into one or more &quot;subfields.&quot;</p>
+
+<p class="cont">As previously noted, the textual names of the fields are too lengthy 
+to be reproduced within each MARC record. Instead they are represented by 3-digit tags. 
+(Although online catalogs may display the names of the fields, 
+the names are supplied by the system software, not by the MARC record.)
+</p>
+
+<p class="main"><span class="strong">A tag:</span>  
+Each field is associated with a 3-digit number called a &quot;tag.&quot;  
+A tag identifies the field  --  the kind of data  --  that follows. 
+Even though a printout or screen display may show the tag immediately followed by indicators 
+(making it appear to be a 4- or 5-digit number), the tag is always the first 3 digits.</p>
+
+<p class="cont">A sample of tags used in an authority record for a personal name are:</p>
+
+	<table class="no">
+		<tr>
+			<td class="no"><strong>100 tag</strong></td>
+			<td class="no">marks a <strong>personal name heading</strong> (author)</td>
+		</tr>
+		<tr>
+			<td class="no"><strong>400 tag</strong></td>
+			<td class="no">marks a personal name <strong>see from reference tracing</strong></td>
+		</tr>
+		<tr>
+			<td class="no"><strong>500 tag</strong></td>
+			<td class="no">marks a personal name <strong>see also from reference tracing</strong></td>
+		</tr>
+		<tr>
+			<td class="no"><strong>670 tag</strong></td>
+			<td class="no">marks s <strong>source data found</strong> note</td>
+		</tr>
+	</table>
+
+<br>
+
+<p class="cont">Here is an example of a field. The number 100 is the tag, 
+defining it as a personal name heading field.</p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre>100 1#   $a Woolf, Virginia, $d 1882-1941</pre>
+			</td>
+		</tr>
+	</table>
+
+<br>
+
+<p class="cont">The Cataloging Distribution Service (CDS, for short) 
+of the Library of Congress distributes a detailed listing of all tags 
+in both the full <cite>MARC 21 Format for Authority Data</cite> 
+and a summarized version entitled <cite>MARC 21 Concise Formats</cite>. 
+For continued work with MARC authority records, these specifications are highly recommended. 
+They are detailed documents containing many examples. 
+Information is also available on the MARC 21 web site at: 
+<a href="../../marc.html">www.loc.gov/marc/</a>.</p>
+
+<p class="cont">Even after a short exposure to the MARC 21 authority format, 
+it is common to hear librarians speaking in &#047;MARCese.&quot; 
+Librarians who work with MARC records soon memorize the numbers 
+for the fields common to the authority records that they create.</p>
+
+<p class="cont">An outline of many of the most frequently-used tags 
+is listed in <a href="pt8-11.html#pt8">Part VIII</a> of this booklet. 
+A brief list of some of the other tags is included <a href="pt8-11.html#pt9">Part IX</a>.</p>
+
+
+      <!-- Part III: MARC terms and their definitions: 2. Some fields are further defined by INDICATORS -->
+
+<h3 class="title">2. Some fields are further defined by INDICATORS.</h3>
+
+<p class="main"><span class="strong">Indicators:</span>  
+Two character positions follow each tag (with the exception of Fields 001 through 009). 
+One or both of these character positions may be used for &quot;indicators.&quot; 
+In some fields, only the first or second position is used; in some fields, both are used; 
+and in some fields, like the 010 field, neither is used. 
+When an indicator position is not used, that indicator is referred to as &quot;undefined&quot; 
+and the position is left blank. 
+In this booklet, it is the convention to represent a blank, or undefined indicator position 
+by the character &quot;#&quot;.</p>
+
+<p class="main"><span class="strong">Each indicator value is a number from 0 to 9.</span>  
+(Although the rules say it can be a letter, letters are uncommon.) 
+Even though two indicators together may look like a 2-digit number, 
+they really are two single-digit numbers.  
+The allowable indicator values and their meanings are spelled out in the MARC 21 documentation. 
+In the example that follows, the 2 digits following the 100 tag (a 3 and a #) are indicator values. 
+The 3 is the first indicator. The # is the second indicator.</p>
+
+<p class="indent">A <em>first indicator</em> value of 3 in the personal name heading field 
+indicates that the name is a family name, rather than an individual person's name. 
+The second indicator value in field 100 is currently undefined. It thus contains a &quot;#.&quot;</p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre>100 3#  $a Guelf, House of</pre>
+			</td>
+		</tr>
+	</table>
+
+<br>
+
+      <!-- Part III: MARC terms and their definitions: SUBFIELDS are marked by SUBFIELD CODES and DELIMITORS -->
+
+<h3 class="title">3. SUBFIELDS are marked by SUBFIELD CODES and DELIMITERS.</h3>
+
+<p class="main"><span class="strong">A subfield:</span>  
+Most fields contain several related pieces of data. 
+Each type of data within the field is called a <span class="uma">subfield</span>, 
+and each subfield is preceded by a <span class="uma">delimiter-subfield code combination</span>. 
+Fields 001 through 009 have no subfields.</p>
+
+<p class="cont">For example, the field for a personal name heading 
+includes a subfield for a personal name, numeration, titles and dates 
+associated with the name, among several others.</p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre>100 0#  $a Gustaf
+        $b V, 
+        $c King of Sweden, 
+        $d 1858-1950</pre>
+			</td>
+		</tr>
+	</table>
+
+<p class="main"><span class="strong">A subfield code:</span>  
+Subfield codes are one lowercase letter (occasionally a number) preceded by a delimiter. 
+A delimiter is a character used to separate subfields. 
+Each subfield code indicates what type of data follows it. 
+(For each field in the MARC 21 authority format, 
+the MARC 21 documentation lists and describes the valid subfield codes.)</p>
+
+<p class="cont">In the above example, the subfield codes are 
+<span class="uma-strong">$a</span> for personal name, 
+<span class="uma-strong">$b</span> for numeration, 
+<span class="uma-strong">$c</span> for titles and other words associated with a name, 
+and <span class="uma-strong">$d</span> for dates associated with a name.</p>
+
+<p class="main"><span class="strong">A delimiter:</span>  
+Different software programs use different characters 
+to represent the delimiter on the screen or on printouts. 
+Examples are a double dagger 
+(<img src="ddagger2.gif" width="10" height="18" border="0" align="bottom" alt="double dagger">), 
+an &quot;at sign&quot; (@), a dollar sign ($), an underline ( _ ), 
+or the graphic symbol 
+&quot;<img src="ddelim2.gif" width="10" height="18" border="0" align="bottom" 
+alt="delimiter symbol - 855 Bytes">&quot;. 
+In this publication the dollar sign ($) <!--the graphic symbol =|--> 
+is used as the delimiter portion of the subfield code.</p>
+
+      <!-- Part III: MARC terms and their definitions: 4. CONTENT DESIGNATORS is an inclusive term used.... -->
+
+<h3 class="title">4. CONTENT DESIGNATORS is an inclusive term used to refer 
+to tags, indicators, and subfield codes.</h3>
+
+<p class="main">The three kinds of content designators  --  tags, indicators, 
+and subfield codes  --  are the keys to the MARC 21 notation system. 
+In his book, <cite>MARC for Library Use</cite> (2nd ed. (Boston: G.K. Hall & Co., 1989), p. 5), 
+Walt Crawford calls the MARC system a &quot;shorthand notation&quot; system. 
+The three types of content designators are the shorthand symbols that label and explain the authority record.</p>
+
+<p class="nav">[<a href="pt1-7.html#top">Back to Top of Page</a>]</p>
+
+
+<a name="pt4"></a><hr align=center size=4 width=100>
+
+
+<!-- Part IV: What is a MARC Authority Record? Part IV: What is a MARC Authority Record? -->
+
+<h2 class="no">Part IV</h2>
+<h2 class="title">What is a MARC Authority Record</h2>
+
+<h3 class="title">1. The authority record content.</h3>
+
+<p class="main"><span class="strong">Headings</span></p>
+
+<p class="main">An authority record is made for each authorized form of a heading. 
+For names, one of the most widely used authority files is 
+the Library of Congress Name Authority File (or LCNAF). 
+That file is used in this document for examples. 
+The whole file is available from the Cataloging Distribution Service (or CDS) 
+or may be searched for free online at: http://authorities.loc.gov/. 
+For topics or geographic names, the most used subject authority file is the LCSH. 
+It is available from CDS in print and electronic form. 
+There are many other subject heading lists, such as the <cite>Sears List of Subject Headings</cite> 
+and the <cite>Art and Architecture Thesaurus</cite>. 
+The form of a subject heading should match one on these lists or follow their rules for construction.</p>
+
+<p class="cont">All headings are one of the following types: 
+<span class="strong">names</span>, <span class="strong">name/title combinations</span>, 
+<span class="strong">uniform titles</span>, or <span class="strong">subjects</span>. 
+Examples of name headings include:</p>
+
+<br>
+
+<p class="cont">A <span class="strong">name heading</span> may be 
+a personal, corporate, meeting, or jurisdiction (including geographic) name.</p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre>100 1#  $a Woolf, Virginia, $d 1882-1941
+             <span class="ex-comment">(personal name heading)</span>
+110 2#  $a Association for Childhood Education International
+             <span class="ex-comment">(corporate name heading)</span>
+111 2#  $a La Crosse Health and Sports Science Symposium
+             <span class="ex-comment">(meeting name heading)</span>
+151 ##  $a Mexico
+             <span class="ex-comment">(geographic name heading)</span>
+</pre>
+			</td>
+		</tr>
+	</table>
+
+<br>
+
+<p class="cont">A <span class="strong">name/title heading</span> consists of both a name and a title of a work. 
+The name portion contains a personal, corporate, meeting, or jurisdiction name. 
+The title portion contains the title by which an item or a series 
+is to be identified for cataloging purposes. 
+It is especially used for classic works that have been published under different titles over time. 
+An example of a name/title heading is:</p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre>100 1#  $a Dostoyevsky, Fyodor, 
+        $d 1821-1881.  
+        $t Crime and punishment</pre>
+			</td>
+		</tr>
+	</table>
+
+<br>
+
+<p class="cont">A <span class="strong">uniform title heading</span> consists of a title 
+not associated with a particular author. A familiar example is:
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre>130 #0  $a Bible. $l Latin. $s Vulgate</pre>
+			</td>
+		</tr>
+	</table>
+
+<br>
+
+<p class="cont">A <span class="strong">subject heading</span> may be a single term, 
+phrase, or a group of terms. The tag for the subject is based on the first term or phrase 
+in the heading  --  topic, genre/form, geographic, chronological, personal name, 
+corporate name, meeting name, or title. 
+The other terms in the heading are in specific subfields that are called subdivisions.</p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre>100 1#  $a Shakespeare, William, $d 1564-1616  
+        $x Criticism and interpretation $x History 
+        $y 18th century
+150 ##  $a Books and reading $z Argentina</pre>
+			</td>
+		</tr>
+	</table>
+
+
+<p class="main"><span class="strong">Tracings and references</span>
+
+<p class="main">MARC 21 authority records contain two types of cross references 
+that either lead a user from an unauthorized heading to an authorized heading 
+(these are called &quot;see references&quot; and use 4XX tags) 
+or from one authorized heading to another 
+(these are called &quot;see also references&quot; and use 5XX tags). 
+Actual cross references are generally not carried explicitly in authority records, however. 
+Instead, variant form and related headings are &quot;traced&quot; 
+in the authority record for the authorized form. 
+Tracing cross references rather than making separate authority records 
+for references enables efficient and accurate display of authority information by catalogs  --  
+and the users see the information in the form that is appropriate for them. 
+Cross reference displays may then be generated by systems 
+which combine the contents of a tracing reference field and the 1XX heading field of a record. </p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre><span class="ex-comment">Authority record information:</span>
+100 1#  $a Twain, Mark, $d 1835-1910
+             <span class="ex-comment">[Standardized heading]</span>
+400 1#  $a Conte, Louis de, $d 1835-1910
+             <span class="ex-comment">[See from tracing]</span>
+500 1#  $a Clemens, Samuel Langhorne, $d 1835-1910
+             <span class="ex-comment">[See also from tracing]</span>
+</pre>
+			</td>
+		</tr>
+	</table>
+
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre><span class="ex-comment">Display generated from the above record:</span>
+ <strong>Twain, Mark, 1835-1910</strong>
+      see also: Clements, Samuel Langhorne, 1835-1910
+   Clemens, Samuel Langhorne, 1835-1910
+      see also: Twain, Mark, 1835-1910
+   Conte, Louis de, 1835-1910
+      see: Twain, Mark, 1835-1910
+</pre>
+			</td>
+		</tr>
+	</table>
+
+<br>
+
+<p class="main"><span class="strong">Notes</span>
+
+<p class="main">The MARC 21 authority record may contain notes. 
+These may be intended for display in the public catalog, or only for viewing 
+by librarians using the records in their work.</p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre><span class="ex-comment">Authority record information:</span>
+670 ##  $a Phone call to National Register of Historic Places
+             <span class="ex-comment">[Note for cataloging use]</span>
+680 ##  $i Surgery performed on an outpatient basis. May be
+           hospital-based or performed in an office or 
+           surgicenter.
+             <span class="ex-comment">[Note for public catalog use]</span>
+</pre>
+			</td>
+		</tr>
+	</table>
+
+<br>
+
+<h3 class="title">2. Structural components of authority records.</h3>
+
+<p class="main">Like MARC 21 bibliographic records, MARC 21 authority records 
+consist of three main components: the Leader, the Directory, and the Variable Fields.</p>
+
+<p class="cont">The <span class="strong">Leader</span> provides information 
+required for the processing of a record. 
+The data elements contain numbers or coded values and 
+are identified by relative character positions. 
+The Leader is 24 character positions long and is the first field 
+in a MARC 21 authority record. 
+Much of the information in the Leader is for computer use in reading 
+and processing the record and is computer generated. 
+See <a href="pt8-11.html#pt10">Part X</a> for more information about the Leader.</p>
+
+<p class="cont">The <span class="strong">Directory</span> is a series of entries 
+that contain the tag, length, and starting location of each variable field within a record. 
+Each Directory entry is 12 character positions in length. 
+The Directory is always generated by the computer. 
+See <a href="pt12.html#pt12">Part XII</a> for a more in-depth discussion about the Directory.</p>
+
+<p class="cont"><span class="strong">Variable fields</span> are identified 
+by a three-character numeric tag that is stored in the Directory entry for the field. 
+Each field ends with a field terminator character. 
+<a href="pt8-11.html#pt8">Part VIII</a> describes the most common variable fields.</p>
+
+<p class="cont">It is important to note that there are two types of <span class="uma">variable fields</span>. 
+<span class="uma">Variable <em>control</em> fields</span> are the 00X fields. 
+Although these fields are identified by a field tag in the Directory, 
+they contain no indicator positions or subfield codes. 
+Instead, they may contain either a single data element 
+or a series of fixed-length data elements identified by relative character positions. 
+The 008 field, for example, is referred to as Fixed-Length Data Elements, or Fixed Field Codes. 
+Its 40 characters contain important information, but in an abbreviated form. 
+Its data is often used to identify and retrieve records matching specific criteria. 
+<a href="pt8-11.html#pt11">Part XI</a> discusses the 008 field in greater length. 
+The following is an example of the 008 variable control field:</p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre>008  860107in#acannaaan##########sa#ana#####u</pre>
+			</td>
+		</tr>
+	</table>
+
+<p class="main"><span class="uma">Variable <em>data</em> fields</span>, 
+on the other hand, contain two <span class="uma">indicator positions</span> 
+stored at the beginning of each field and a two-character <span class="uma">subfield code</span> 
+preceding each data element within the field. 
+The following is an example of the 100 variable data field (Personal name main entry field):
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre>100 1#  $a Cameron, Simon, $d 1799-1889</pre>
+			</td>
+		</tr>
+	</table>
+
+<br>
+
+<p class="cont">The <span class="uma">variable data fields</span> are grouped 
+into blocks according to the first character of the tag, 
+which identifies the function of the data within the field. 
+The type of information in the field is identified by the remainder of the tag. 
+The blocks are:</p>
+
+<blockquote>
+	<table class="no" style="margin-top: 0pt">
+		<tr>
+			<td class="no">0XX</td>
+			<td class="no">Standard numbers, classification numbers, codes</td>
+		</tr>
+		<tr>
+			<td class="no">1XX</td>
+			<td class="no">Headings (authoritative and reference)</td>
+		</tr>
+		<tr>
+			<td class="no">2XX</td>
+			<td class="no">Complex see references</td>
+		</tr>
+		<tr>
+			<td class="no">3XX</td>
+			<td class="no">Complex see also references</td>
+		</tr>
+		<tr>
+			<td class="no">4XX</td>
+			<td class="no">See from tracings</td>
+		</tr>
+		<tr>
+			<td class="no">5XX</td>
+			<td class="no">See also from tracings</td>
+		</tr>
+		<tr>
+			<td class="no">6XX</td>
+			<td class="no">Notes</td>
+		</tr>
+		<tr>
+			<td class="no">7XX</td>
+			<td class="no">Linking entries</td>
+		</tr>
+		<tr>
+			<td class="no">8XX</td>
+			<td class="no">Alternative graphics</td>
+		</tr>
+		<tr>
+			<td class="no">9XX</td>
+			<td class="no">Reserved for local implementation</td>
+		</tr>
+	</table>
+</blockquote>
+
+<p class="main">There are also parallels of content designation within the 1XX, 4XX, 
+and 7XX blocks that may help you in identifying the content within authority fields. 
+The following meanings, with some exceptions, are given to the final two characters of the tag of fields:</p>
+
+<blockquote>
+	<table class="no" style="margin-top: 0pt">
+		<tr>
+			<td class="no">X00</td>
+			<td class="no">Personal names</td>
+		</tr>
+		<tr>
+			<td class="no">X10</td>
+			<td class="no">Corporate names</td>
+		</tr>
+		<tr>
+			<td class="no">X11</td>
+			<td class="no">Meeting names</td>
+		</tr>
+		<tr>
+			<td class="no">X30</td>
+			<td class="no">Uniform titles</td>
+		</tr>
+		<tr>
+			<td class="no">X48</td>
+			<td class="no">Chronological terms</td>
+		</tr>
+		<tr>
+			<td class="no">X50</td>
+			<td class="no">Topical terms</td>
+		</tr>
+		<tr>
+			<td class="no">X51</td>
+			<td class="no">Geographic names</td>
+		</tr>
+		<tr>
+			<td class="no">X55</td>
+			<td class="no">Genre/form  terms</td>
+		</tr>
+	</table>
+</blockquote>
+
+<p class="cont">The 1XX, 4XX, 5XX, and 7XX blocks and the parallel content designations 
+within them are very important to remember when working with authority records. 
+They allow you to &quot;predict&quot; the content of a field, 
+even when you do not know precisely what is in it.</p>
+
+<p class="nav">[<a href="pt1-7.html#top">Back to Top of Page</a>]</p>
+
+<a name="pt5"></a><hr align=center size=4 width=100>
+
+
+<!-- Part V: Are MARC Authority Records Shared? Part V: Are MARC Authority Records Shared? -->
+
+<h2 class="no">Part V</h2>
+<h2 class="title">Are MARC Authority Records Shared?</h2>
+
+<p class="main">As in the case of bibliographic records, 
+libraries have been sharing authority information for many years. 
+Although libraries may (and many do) maintain their own name and subject authority files, 
+many institutions have found that sharing the responsibility 
+of authority file maintenance is both cost effective and quality enhancing. 
+Doing so prevents different authority librarians from reinventing the wheel 
+by creating the same authority record over and over again. 
+The long established <span class="uma-strong">NACO</span> program 
+(Name Authority Cooperative) allows institutions to help build the LCNAF authority
+file. More information about the NACO project may be found online at:
+<a href="http://www.loc.gov/catdir/pcc/">www.loc.gov/catdir/pcc/</a>.</p>
+
+<p class="cont">A corresponding but &quot;younger&quot; cooperation is 
+<span class="uma-strong">SACO</span> (Subject Authority Cooperative Program). 
+This program was established to provide a means for libraries 
+to submit subject headings and classification numbers to the Library of Congress. 
+More information about the SACO project may be found online at: 
+<a href="http://www.loc.gov/catdir/pcc/">www.loc.gov/catdir/pcc/</a>.</p>
+
+<p class="cont">MARC 21 allows libraries to participate in these 
+and other cooperative cataloging programs by providing standard means 
+for representing and communicating authority information in machine-readable form. 
+Without MARC's stability, libraries would not be able to share 
+their authority data as readily because each library's system 
+could not &quot;talk to&quot; other systems. 
+MARC prevents this virtual Tower of Babel by providing technical specifications 
+that allow librarians, library vendors  --  anyone at all  --  
+who distributes authority data to communicate with each other. 
+Likewise, MARC allows library automation venders to design their systems 
+to receive and process standard MARC records.</p>
+
+<p class="cont">You may now wonder about how MARC provides standard 
+technical specifications to libraries throughout the world. 
+The Library of Congress issues and keeps up-to-date the document, 
+<cite>MARC 21 Specifications for Record Structure, Character Sets, and Exchange Media</cite>, 
+to aid libraries and other organizations who create or acquire MARC 21 records. 
+This document provides technical information on the structure of MARC records, 
+the character sets used in MARC records, and the format for distribution media for MARC 21 records. 
+It is intended for the use of personnel involved in the design and maintenance 
+of systems for the exchange and processing of MARC records.</p>
+
+<p class="cont">The Library of Congress serves as the maintenance agency 
+for the MARC 21 formats for bibliographic and authority data. 
+As part of that responsibility, the Library of Congress maintains the MARC Forum, 
+an electronic discussion list for the formats (<a href="http://www.loc.gov/cdn-cgi/l/email-protection#e08d819283a08c8f83ce878f96"><span class="__cf_email__" data-cfemail="cea3afbcad8ea2a1ade0a9a1b8">[email&#160;protected]</span></a>) 
+that provides a conduit for broad, open discussion of proposed changes 
+and other issues for MARC 21 users from around the world. 
+The Library of Congress and the National Library of Canada also hold open meetings 
+for discussion of changes to the MARC 21 formats.</p>
+
+<p class="cont">In the United States, there are actually two groups that are
+  responsible for reviewing changes to the MARC 21 format documentation specification:
+  The MAchine-Readable Bibliographic Information Committee (MARBI)
+and the MARC Advisory Committee. 
+MARBI is a committee of the American Library Association (ALA) 
+and is composed of three representatives from each of the three function-oriented
+  divisions of ALA: ALCTS (technical services); LITA (automation); and RUSA (reference).
+  ALA tries to assure that all types of expertise are represented on MARBI.
+The broader MARC Advisory Committee is composed of representatives 
+from the institutions and organizations that have adopted MARC 21 
+and that participate in its development, such as national libraries, 
+the bibliographic networks, vendor groups, and other library and scholarly associations.
+  MARBI meets in conjunction with the MARC Advisory Committee
+at each ALA conference (both annual and midwinter). 
+The major activity of the Committee is the review of discussion papers and proposals
+  submitted by and through the Library of Congress for changes or additions to
+  existing MARC formats.
+When needed, the MARC Advisory Committee also develops new MARC format support
+  in emerging areas. Decisions on changes are made by consensus of all review
+  parties
+with responsibility resting with the adopting national libraries, 
+such as the Library of Congress, the National Library of Canada and the British
+  Library.</p>
+
+<p class="cont">As you can see, individual libraries are the direct beneficiaries 
+of all of this MARC 21 standards work. Without it, libraries would not be able 
+to share authority records with ease and accuracy.</p>
+
+
+<p class="nav">[<a href="pt1-7.html#top">Back to Top of Page</a>]</p>
+
+<a name="pt6"></a><hr align=center size=4 width=100>
+
+
+<!-- Part VI: MARC Data Issues Part VI: MARC Data Issues Part VI: MARC Data Issues-->
+
+<h2 class="no">Part VI</h2>
+<h2 class="title">MARC Data Issues</h2>
+
+<p class="main">As computers and technology continue to advance, 
+important issues arise about the quality of library data and computer-based library systems. 
+You need to be aware of these issues and their importance to your library.</p>
+
+<p class="main"><span class="strong">A. Data questions:</span>  
+When authority records are evaluated, some important questions which need to be addressed are:  
+<em>What is the quality of the MARC data? Which MARC 21 fields are present? 
+Is the data based on Library of Congress MARC records? 
+If so, is the full information that is available evident in the records? 
+Is anything added to the records?</em></p>
+
+<br>
+
+<p class="cont">Some librarians ask several vendors of authority data 
+for printed examples of their MARC records in order 
+to compare their fullness and compliance with MARC 21 standards.</p>
+
+<p class="cont">Clearly, the contents of the authority records 
+will determine the success of a library's automated authority control efforts. 
+It is very important to ensure receipt of the highest quality records available.</p>
+
+<p class="main"><span class="strong">B. Software questions:</span>  The next logical questions to ask are: 
+<em>Does the library automation system being evaluated make full use of the cataloging information?  
+Does it retain all of the data and the MARC 21 content designators?</em></p>
+
+<br>
+
+<p class="cont">Does the system load in the full record, with no unreasonable 
+or false limitations on such things as the references it will index or the length of the note fields? 
+Even though the disk contained excellent, full records, any library automation system 
+will be able to use only what was transferred to the hard disk.</p>
+
+<p class="cont">Are the MARC tags, indicators, and subfield codes still present 
+on the librarian's data entry screen? Are the indicators used correctly? 
+Are the subfield codes used correctly? 
+(The information in <a href="pt8-11.html#pt8">Part VIII</a> 
+will help in evaluating correct use of the content designators.)</p>
+
+<p class="cont">After records are added to a database, 
+it is important to store them in the MARC 21 authority format. 
+Future projects may require their use. The MARC 21 format is an industry-wide standard. 
+As additional programs become available, a library's ability 
+to participate in them could hinge on the quality of its authority records.</p>
+
+<p class="cont">That brings up another point. Does the system allow for downloading, 
+or writing the records back out to a disk to be used in other projects, such as participation in NACO?   
+Will a program be available to write them in the MARC communications format?</p>
+
+
+<p class="nav">[<a href="pt1-7.html#top">Back to Top of Page</a>]</p>
+
+<a name="pt7"></a><hr align=center size=4 width=100>
+
+
+<!-- Part VII: In Conclusion Part VII: In Conclusion Part VII: In Conclusion -->
+
+<h2 class="no">Part VII</h2>
+<h2 class="title">In Conclusion</h2>
+
+<p class="main">In these pages you've learned what the acronym MARC means. 
+You have seen why a standard format for identifying elements of authority data is important. 
+You have learned to define and identify the three types of MARC content designators: 
+tags, subfield codes, and indicators. 
+You have also found out about what kind of information is recorded 
+within the various content designator blocks and the parallel content designation within them. 
+Most importantly, you have learned what a MARC 21 authority record actually is, 
+how access points are recorded in authority records, 
+and the difference between subject and name authority records.</p>
+
+<p class="cont">To build on this basic introduction to MARC 21 authority records, 
+additional reading on the subject or courses in online cataloging can be beneficial. 
+Further readings are suggested in the <a href="pt12.html#bibl">bibliography</a><!-- on page 25-->. 
+MARC 21 authority records may appear difficult at first, but with knowledge and use, 
+it will begin to make sense. 
+As you become more familiar with the MARC 21 authority format, the more simple it will become.</p>
+
+
+<p class="nav">[<a href="pt1-7.html#top">Back to Top of Page</a>]</p>
+
+<hr align=center size=4 width=100>
+
+<br>
+
+<p class="nav1">[<a href="index.html">Back to Table of Contents</a>]  --  
+[<a href="pt8-11.html">Continue to Part 8</a>]</p>
+
+<br>
+<!-- LC Footer -->
+<hr>
+<img src="../../homepage/lc2.gif" height=46 width=91 alt=""> 
+<strong>Library of Congress</strong><br>
+<address> 
+<!-- help desk email start -->
+<a href="http://www.loc.gov/help/help-desk.html">Library of Congress Help Desk</a> 
+<!-- help desk email end -->
+( 
+<!-- #BeginDate format:Am3 -->10/28/2005<!-- #EndDate -->
+) </address>
+
+</tr>
+</table>
+
+<script data-cfasync="false" src="http://www.loc.gov/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+</html>

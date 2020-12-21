@@ -1,0 +1,188 @@
+<!doctype html public "-//W3C//DTD HTML 3.2 Final//EN">
+
+<html>
+
+<head>
+
+<title>MARC 21 Summary of Data Coding Interdependencies (Library of Congress) </title>
+
+<base href="">
+
+<meta name="description" content="This document contains analyses that summarize data coding interdependencies that must be considered in each kind of record identified in 008/09 and in established heading records for specific types of headings in the MARC 21 Authority Format.">
+
+<meta name="keywords" content="MARC 21, authority format, data coding interdependencies">
+
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<h4 align=center><em>MARC 21 Format for Authority Data</em></h4>
+
+<h2 align=center>Summary of Data Coding Interdependencies</H2>
+
+<h3 align=center>Network Development and MARC Standards Office <br>
+   Library of Congress</h3>
+
+
+
+<hr>
+<p> The following analyses summarize data coding interdependencies that must be 
+  considered in each kind of record identified in 008/09 and in established heading 
+  records for specific types of headings. All of the data elements that may (or 
+  may not be) used in an authority record are not listed here. Only those elements 
+  that are dependent upon other codes or data elements are cited. Annotated full 
+  record examples are provided in Appendix B of the <i> MARC 21 Format for Authority 
+  Data.</i> 
+<p> 
+<H4>Established heading record (general requirements)</H4>
+<UL>
+  <LI><b>008/09 = a or f</b></LI>
+  <LI>Record must contain a Leader, Directory, and the following variable <br>
+    fields: 001, 003, 005, 008, 040, 1XX</LI>
+  <LI>The following fields may not be in the record: 260, 664, 666</LI>
+  <LI>008/06 is code n or fill character if 008/15 = b</LI>
+  <LI>If 008/10 = n, 008/11 must not be code n</LI>
+  <LI>If 008/11 = n, 008/10 must not be code n</LI>
+  <LI>008/13 is code n if 008/12 = n or 008/16 = b</LI>
+  <LI>008/14 is code a if 008/10 is not code n (x, y, z must not be present in 
+    1XX)</LI>
+  <LI>008/15 is code a if 008/11 is not code n (x, y, z may be present in 1XX)</LI>
+  <LI>008/16 is code a if 008/12 is not code n (x, y, z must not be present in 
+    1XX)</LI>
+  <LI>008/17 is any defined code (if 008/09 = f) or a fill character ( | )</LI>
+  <LI>008/29 is code a or b if 4XX/5XX fields are present</LI>
+  <LI>008/32 is code n if 1XX is not a 100 field having Indicator 1 = 0, 1, or 
+    2</LI>
+  <LI>008/33 must not be code n</LI>
+</UL>
+<p> 
+<H4>Established name, name/title, and uniform title headings (other than headings 
+  for series) </H4>
+<UL>
+  <LI><b>008/09 = a</b></LI>
+  <LI>The following series-specific variable fields may not be in the <br>
+    record: 014, 020, 022, 050, 060, 070, 082, 09X, 64X series <br>
+    treatment fields</LI>
+  <LI>008/10 must not be code n</LI>
+  <LI>008/11 may be code other than n</LI>
+  <LI>008/12-13 must be n if 008/16 = b</LI>
+  <LI>008/14 must be code a</LI>
+  <LI>008/15 must be code a if 008/11 is not n</LI>
+  <LI>008/16 must be code b</LI>
+  <LI>008/28 must be a defined code or a fill character ( | )</LI>
+</UL>
+<I>See also general requirements for established heading record</I> 
+<p> 
+<H4>Established heading for a series </H4>
+<UL>
+  <LI><b>008/09 = a</b></LI>
+  <LI>The record may contain any of the following series-specific variable <br>
+    fields: 014, 020, 022, 050, 060, 070, 082, 09X</LI>
+  <LI>The record may contain 64X series treatment fields with the following <br>
+    restrictions:</LI>
+  <UL>
+    <LI>641 and 642 must not be present if 008/13 = b or n</LI>
+    <LI>642 requires field 645a be code t</LI>
+    <LI>644, 645, and 646 must not be present if 008/12 = c </LI>
+  </UL>
+  <LI>008/10, 12, and 33 must not be code n 
+  <LI>008/14 and 16 must be code a 
+  <LI>008/15 must be code a if 008/11 is not code n 
+  <LI>008/28 may be coded # or a fill character ( | ) 
+  <LI>008/32 must be code n 
+</UL>
+<I>See also general requirements for established heading record</I> 
+<P> 
+<H4>Established topical term and nonjurisdictional geographic headings </H4>
+<UL>
+  <LI><b>008/09 = a</b></LI>
+  <LI>The following field may not be in the record: 663</LI>
+  <LI>008/07 and 17 may be code n or a fill character ( | )</LI>
+  <LI>008/10, 12-13, and 32 must be code n</LI>
+  <LI>008/11 must not be code n</LI>
+  <LI>008/14 must be code b</LI>
+  <LI>008/15 must be code a</LI>
+  <LI>008/16 must be code b</LI>
+  <LI>008/28 may be code # or a fill character ( | )</LI>
+</UL>
+<I>See also general requirements for established heading record</I> 
+<P> 
+<H4>Record containing alternate graphic representation fields </H4>
+<UL>
+  <LI>Field 066 must be present</LI>
+  <LI>The following roman fields may contain a subfield 6: 014, <br>
+    020, 022, 035, 050, 060, 070, 072, 073, 082, 083, 1XX, 260, 360, 4XX, <br>
+    5XX, 6XX, 7XX</LI>
+  <LI>Record must contain at least one 880 field which contains nonroman <br>
+    form of the roman data in an associated field</LI>
+</UL>
+<P> 
+<H4>Reference record </H4>
+<UL>
+  <LI><b>008/09 = b, c, or g</b></LI>
+  <LI>Record must contain a Leader, a Directory, and the following <br>
+    variable fields: 001, 003, 005, 008, 040, 1XX</LI>
+  <LI>One of the following reference note fields must be in the <br>
+    record: 260, 664, 666</LI>
+  <LI>The following fields may not be in the record: 4XX, 5XX</LI>
+  <LI>008/06 must be code n or a fill character ( | )</LI>
+  <LI>008/10 may not be code n if 008/09 = b or c and 664 <br>
+    or 666 is present</LI>
+  <LI>008/11 may not be code n if 008/09 = b or g and 260 is present</LI>
+  <LI>008/14-16 must be code b</LI>
+  <LI>008/12, 13, 29, and 33 must be code n</LI>
+  <LI>008/28 must be code or a fill character ( | )</LI>
+</UL>
+<P> 
+<H4>Subdivision record </H4>
+<UL>
+  <LI><B>008/09 = d</B></LI>
+  <LI>Record must contain a Leader, a Directory, and the following <br>
+    variable fields: 001, 003, 005, 008, 040, and 18X</LI>
+  <LI>008/07 must be code n or a fill character ( | )</LI>
+  <LI>008/10, 12, 13, 32, 33 must be code n</LI>
+  <LI>008/11 must not be code n</LI>
+  <LI>008/14-16 must be code b</LI>
+  <LI>008/17 must not be code n but may be a fill character ( | )</LI>
+</UL>
+<P> 
+<H4>Node label record </H4>
+<UL>
+  <LI><B>008/09 = e</B></LI>
+  <LI>Record must contain a Leader, a Directory, and the following <br>
+    variable fields: 001, 003, 005, 008, 040, and 1XX</LI>
+  <LI>The record contains no tracings and references (260, 4XX, 5XX)</LI>
+  <LI>008/06 and 07 must be code n or a fill character ( | )</LI>
+  <LI>008/10, 12, 13, 17, 29, 32, and 33 must be code n</LI>
+  <LI>008/11 must not be code n</LI>
+  <LI>008/14-16 must be code b</LI>
+</UL>
+<p> 
+  <!---Navigation--->
+<hr>
+<br>
+<em>Go to:</em> 
+<ul>
+  <li><a href="../../marc.html">MARC Home Page</a> 
+  <li><a href="../../index.html">Library of Congress Home Page</a> 
+</ul>
+<p> 
+  <!---LC Footer--->
+<hr>
+<IMG SRC="../../homepage/lc2.gif" height=46 width=91 ALT=""> <strong>Library 
+of Congress</strong><br>
+<address> 
+<!--help desk email start -->
+<a href="http://www.loc.gov/help/help-desk.html">Library of Congress Help Desk</a> 
+<!--help desk email end -->
+( 
+<!-- #BeginDate format:Am3 -->12/31/2002<!-- #EndDate -->
+)</address>
+
+<script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+
+</html>
+
+
+

@@ -1,0 +1,85 @@
+/***************PCC specific styles*************/
+
+/********************
+1024 adjustments
+********************/
+/* carousel */
+.jcarousel-skin-tango .jcarousel-container-horizontal {width: 634px !important;}
+.jcarousel-skin-tango .jcarousel-clip-horizontal {width: 634px !important;color:#ccc !important; /*height:;*/}
+.jcarousel-skin-tango .jcarousel-next-horizontal {top: 35% !important;}
+.jcarousel-skin-tango .jcarousel-prev-horizontal {top: 35% !important;}
+.jcarousel-skin-tango .jcarousel-item {display:block !important;}
+
+/* custom width */
+#col2_left.tab {width:443px;}
+#col2_right.tab {width:219px;}
+
+#col4_equal.tab {width:25%;}
+
+
+/********************
+general
+********************/
+h4 {color:#333;}
+
+
+/********************
+tabnav
+********************/
+ul.tabnav {
+border-left: none !important;
+}
+
+/********************
+left nav
+********************/
+#left_nav .leftnavimg {
+background: transparent url(https://www.loc.gov/aba/pcc/images/leftnav.jpg) 0 0 no-repeat;
+}
+
+table.pcc {
+border-color:#666;
+border-width: 1px 0 0 0;
+}
+table.pcc td {
+border-width: 0 0 1px 0;
+border-style:dotted;
+padding:8px 0;
+}
+table.pcc th {
+border-color:#666;
+border-width: 0 0 1px 0;
+border-style:solid;
+padding:5px 0;
+}
+/*********************
+ Wider Anchor Links
+*********************/
+.box-anchor .leftanchor, .box-anchor .rightanchor {width: 285px;}
+
+/*********************
+ Classification Indents
+*********************/
+.indent {padding-left: 20px;}
+.indent-double {padding-left: 40px;}
+
+/**********************
+form input.submit and .clear - override <button> 
+*****************************/
+input.primary, input.reset {
+background: url("../../../images/btn_submit_bg.gif") repeat-x scroll left bottom #D0CECF;
+    border: 1px solid #666666;
+    border-radius: 2px 2px 2px 2px;
+    color: #666666;
+    cursor: pointer;
+    font: 1em Arial,Helvetica,sans-serif;
+    margin: 0;
+    overflow: visible;
+    padding: 2px 7px;
+    text-align: center;
+}
+input.primary {
+    border: 2px solid #000000;
+    color: #000000;
+    font-weight: bold;
+}

@@ -1,0 +1,564 @@
+
+
+
+td h1.popup {
+    background: transparent url(http://www.loc.gov/exhibits/images/discover-bulb.gif) 0 0 no-repeat;
+	height: 60px;
+	color: #343268;
+    font: bold 1.0em/0.9em Arial, Helvetica, sans-serif;
+	padding: 25px 0 5px 65px;
+}
+
+td p {
+	font: normal 0.8em/1.2em Arial, Helvetica, sans-serif;
+}
+/****left nav *****/
+#left_nav .leftnavimg {
+background: transparent url(http://www.loc.gov/exhibits/images/leftnav.jpg) 0 0 no-repeat;
+}
+
+ul.plain li {
+    padding: 3px 0 3px 0;
+}
+
+/* custom width */
+#col2_left.custom {width:400px;}
+#col2_right.custom {width:282px;}
+
+div.item, div.video-item {
+	margin: 20px 0;
+	min-height: 67px;
+	clear: left;
+}
+div.item h4 {margin-left: 100px;}
+div.item p {
+	margin-left: 100px;
+	margin-bottom: 5px;
+}
+div.item img, img.thumbnail {
+	border: 1px solid #ccc;
+	padding:2px;	
+}
+div.video-item h4 {margin-left: 132px;}
+div.video-item p {
+	margin-left: 132px;
+	margin-bottom: 10px;
+}
+div.video-item img {
+	border: 1px solid #ccc;
+	padding:2px;	
+	margin-bottom: 10px;
+}
+#flash-clear {height:20px;}
+
+
+/******main_nav - with tert bottom **************/
+
+#main_nav_bot.w_tert {
+    margin-bottom: 0;
+}
+#main_nav_bot {
+    background-color: #EFF6FD;
+    border: 1px solid #D4E9FF;
+    color: #666666;
+    margin-bottom: 1.25em;
+    padding: 9px;
+}
+#tert_nav_bot {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #F7FAFD;
+    border-color: -moz-use-text-color #D4E9FF #D4E9FF;
+    border-right: 1px solid #D4E9FF;
+	border-left: 1px solid #D4E9FF;/*added lak*/
+	border-bottom: 1px solid #D4E9FF;/*added lak*/
+    border-style: none solid solid;
+    border-width: medium 1px 1px;
+    color: #666666;
+    margin-bottom: 1.25em;
+    padding: 9px;
+}
+
+/* exhibit styles */
+
+.section_intro {
+	background-color:#efefef;
+	padding:20px 20px 8px;
+	margin-bottom:1.5em;
+	overflow:hidden;
+}
+.section {
+	border:4px solid #ccc;
+	padding:20px 20px 8px;
+	margin-bottom:1.5em;
+	overflow:hidden;
+}
+.section h3 {
+	border-bottom:1px solid #ccc;
+	padding-top:5px;
+	padding-bottom:5px;
+	margin-bottom:1em;
+}
+/* columns 684-40-8=636 */
+.section .exhibit2col-left {
+	width:318px;
+	margin-right: 20px;
+	float: left;
+	clear: left;
+}
+.section .exhibit2col-right {
+	width:318px;
+	float: left;
+	clear: right;
+}
+.section .exhibit2col-pic-left {
+	width:296px;
+	margin-right: 20px;
+	float: left;
+	clear: left;
+}
+.section .exhibit2col-pic-right {
+	width:340px;
+	float: left;
+	clear: right;
+}
+.section .exhibit2col-pic-right .picframe {
+	background-color:#efefef;
+	padding:20px 20px 5px;
+	margin-bottom:1.5em;
+	position:relative;
+}
+.section .exhibit2col-pic-right .picframe.nobg {
+	background-color:transparent;
+	padding-top:0;
+}
+.section .exhibit2col-pic-right .picframe img.border {
+	background-color:#fff;
+}
+.transcript {
+	text-align:right;
+	border-top: 1px solid #ccc;
+	padding-top: 7px;
+}
+
+/* discover button */
+.discover-button-wrapper {
+	display:inline;
+	padding:0;
+	margin:0;
+}
+.discover-button-wrapper.only {
+	display:block;
+	overflow:hidden;
+	margin-bottom:7px;
+}
+a.discover-button {
+	position:relative;
+	float:right;
+	clear:right;
+}
+a.discover-button,
+a.discover-button:visited {
+	border:1px solid #ccc;
+	border-radius: 10px;
+	padding:3px 16px 3px 24px;
+	text-decoration:none;
+	font-style:italic;
+	text-transform:uppercase;
+	font-size:9px;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	letter-spacing:1px;
+	line-height:1.3;
+	color:#555;
+	background: #f8f8f6 url(http://www.loc.gov/exhibits/images/exhibit_sprite.png) 88% -346px no-repeat;
+}
+a:hover.discover-button,
+a:focus.discover-button {
+	color:#fff;
+	background-color:#36c;
+	background-position: 88% -378px;
+}
+a.discover-button span {
+	width:18px;
+	height:18px;
+	border-radius: 10px;
+	display:block;
+	position:absolute;
+	left:0;
+	top:0;
+	background: #36c url(http://www.loc.gov/exhibits/images/exhibit_sprite.png) -1px -480px no-repeat;
+}
+
+p.bookmark {
+	color: #666;
+	font-style: italic;
+}
+
+/* pic box alt */
+.pic-box-alt {
+	margin-bottom:1.25em;
+	position:relative;
+}
+.pic-box-alt img {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+.pic-box-alt .pic-box-enlarge {
+	display:none;
+}
+.pic-box-alt:hover a .pic-box-enlarge,
+.pic-box-alt:hover a:hover .pic-box-enlarge,
+.pic-box-alt:hover a:focus .pic-box-enlarge {
+	position:absolute;
+	width:50px;
+	text-align:center;
+	margin-left: -43px;
+	left:50%;
+	bottom:10%;
+	background: #333 url(http://www.loc.gov/exhibits/images/exhibit_sprite.png) 12px -538px no-repeat;
+	color: #fff;
+	padding:5px 10px 5px 24px;
+	text-decoration:none;
+	display:block;
+	cursor:pointer;
+	opacity: 0.7;
+  	filter: alpha(opacity=70);
+	border-radius: 5px;
+	border:1px solid #999;
+	/* 50 10 24 2 = 86 */
+}
+
+/* media links */
+.media-links,
+.media-links li {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.media-links {
+	text-align:center;
+	margin-bottom:1.5em;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #eee;
+	-moz-box-shadow: 0 15px 15px -15px #777;
+	-webkit-box-shadow: 0 15px 15px -15px #777;
+	box-shadow: 0 15px 15px -15px #777;
+}
+.media-links li {
+	display:inline;
+}
+.media-links li a,
+.media-links li a:visited {
+	border:1px solid #ccc;
+	border-radius: 10px;
+	padding:2px 10px 2px 26px;
+	margin: 0 5px;
+	text-decoration:none;
+	background: #f8f8f6 url(http://www.loc.gov/exhibits/images/exhibit_sprite.png) -5px -155px no-repeat;
+}
+.media-links li a:hover,
+.media-links li a:focus {
+	color:#fff;
+	background-color:#36c;
+	background-position: -5px -219px;
+}
+.media-links li.media-links-audio a,
+.media-links li.media-links-audio a:visited {
+	background-position: -5px -252px;
+}
+.media-links li.media-links-audio a:hover,
+.media-links li.media-links-audio a:focus {
+	background-position: -5px -316px;
+}
+
+/* truncate links */
+a.truncate_more,
+a.truncate_less {
+	display:block;
+	margin-top:1em;
+	position:relative;
+	left:0;
+	padding-left: 11px;
+	background: transparent url(http://www.loc.gov/exhibits/images/exhibit_sprite.png) 0 -26px no-repeat;
+}
+a.truncate_less {
+	background-position: 0 -90px;
+}
+
+/* carousel global */
+.ex01_logbox p,
+.ex03_logbox p {
+	text-align:center;
+	margin:0;
+}
+.ex01_logbox p {
+	padding-top:2px;
+}
+.ex03_logbox {
+	margin-bottom:10px;
+}
+.ex01_prev,
+.ex01_next,
+.ex02_prev,
+.ex02_next,
+.ex03_prev,
+.ex03_next {
+	cursor:pointer;
+	display:block;
+	width:16px;
+	height:18px;
+	background: transparent url(http://www.loc.gov/exhibits/images/exhibit_sprite.png) 0 0 no-repeat;
+}
+.ex01_next,
+.ex02_next,
+.ex03_next {
+	background: transparent url(http://www.loc.gov/exhibits/images/exhibit_sprite.png) 0 0 no-repeat;
+	background-position: -16px 0;
+}
+
+/* carousel single */
+.ex01,
+.ex01 li {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.ex01 {
+	margin-bottom: 0;
+	overflow:visible;
+}
+.ex01 li {
+	width:300px;
+	float:left;
+}
+.ex01 li img {
+	background-color:#fff;
+	border:1px solid #ccc;
+	padding:4px;
+}
+a:hover img.border,
+a:focus img.border,
+.ex01 li a:hover img,
+.ex01 li a:focus img {
+	border-color:#333;
+}
+.ex01_controller {
+	position:relative;
+	margin-bottom:10px;
+}
+.ex01_prev {
+	position:absolute;
+	left:0;
+	top:0;
+}
+.ex01_next {
+	position:absolute;
+	right:0;
+	top:0;
+}
+
+/* carousel multiple */
+.ex02,
+.ex02 li {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.ex02 {
+	margin-bottom: 1.25em;
+}
+.ex02_header {
+	margin-bottom: 10px;
+	text-align:center;
+}
+.ex02 li {
+	width:60px;
+	height:60px;
+	float:left;
+	overflow:hidden;
+	margin:3px;
+	border:1px solid #ccc;
+	position:relative !important;
+}
+.ex02 li:hover,
+.ex02 li:focus {
+	border-color: #000;
+}
+.ex02_prev {
+	position:absolute;
+	left:0;
+	top:25px;
+}
+.ex02_next {
+	position:absolute;
+	right:0;
+	top:25px;
+}
+.ex02_logbox {
+	text-align:center;
+	height:1%;
+}
+.ex02_logbox span {
+	margin: 0 3px;
+	text-decoration: none;
+	border:1px solid #ccc;
+	display:inline-block;
+	width:10px;
+	height:10px;
+	padding: 0;
+	text-indent: -9999px;
+	outline: 0;
+	background-color:#fff;
+	border-radius:10px;
+	-moz-box-shadow: inset 0px 1px 1px #999;
+	-webkit-box-shadow: inset 0px 1px 1px #999;
+	box-shadow: inset 0px 1px 1px #999;
+	/* ie7 */
+	*display: inline;
+	*zoom:1;
+	*text-indent:0;
+	*font-size:0;
+}
+.ex02_logbox span:hover,
+.ex02_logbox span:focus {
+	border-color:#666;
+	background-color:#ccc;
+}
+.ex02_logbox span.selected {
+	border-color:#888;
+	background-color:#666;
+	-moz-box-shadow: inset 0px 1px 1px #333;
+	-webkit-box-shadow: inset 0px 1px 1px #333;
+	box-shadow: inset 0px 1px 1px #333;
+}
+
+/* carousel multiple rows */
+.ex03,
+.ex03 li {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.ex03 {
+	margin-bottom: 0;
+}
+.ex03.last {
+	margin-bottom: 1.25em;
+}
+.ex03 li {
+	width:60px;
+	height:60px;
+	float:left;
+	overflow:hidden;
+	margin:3px;
+	border:1px solid #ccc;
+}
+.ex03 li:hover,
+.ex03 li:focus {
+	border-color: #000;
+}
+.ex03_prev {
+	position:absolute;
+	left:6px;
+	top:106px;
+}
+.ex03_next {
+	position:absolute;
+	right:6px;
+	top:106px;
+}
+.wrapper_carousel .pager {
+	margin-top:1em;
+	text-align: center;
+	padding: 0 45px 0;
+}
+.ex03_logbox {
+	text-align:center;
+	height:1%;
+}
+.ex03_logbox span {
+	margin: 0 3px;
+	text-decoration: none;
+	border:1px solid #ccc;
+	display:inline-block;
+	width:10px;
+	height:10px;
+	padding: 0;
+	text-indent: -9999px;
+	outline: 0;
+	background-color:#fff;
+	border-radius:10px;
+	-moz-box-shadow: inset 0px 1px 1px #999;
+	-webkit-box-shadow: inset 0px 1px 1px #999;
+	box-shadow: inset 0px 1px 1px #999;
+	/* ie7 */
+	*display: inline;
+	*zoom:1;
+	*text-indent:0;
+	*font-size:0;
+}
+.ex03_logbox span:hover,
+.ex03_logbox span:focus {
+	border-color:#666;
+	background-color:#ccc;
+}
+.ex03_logbox span.selected {
+	border-color:#888;
+	background-color:#666;
+	-moz-box-shadow: inset 0px 1px 1px #333;
+	-webkit-box-shadow: inset 0px 1px 1px #333;
+	box-shadow: inset 0px 1px 1px #333;
+}
+
+/* qtip preview */
+.exhibit_preview {
+	width:180px;
+	overflow:hidden;
+	padding: 2px 0 0;
+	
+}
+.exhibit_preview img {
+	display:block;
+	margin-bottom:10px;
+}
+
+.section_nav {text-align:right;}
+.section_nav span {float:left;}
+
+/** Teacher Institutes Resources **/
+ul.image_table {
+	list-style: none outside none;
+    margin: 0 0 1.25em;
+    padding: 0;
+    clear:left;
+}
+ul.image_table li {
+	display: inline-block;
+    margin-right: 44px;
+    vertical-align: top;
+    width: 125px;
+    background:none;
+    padding: 0;
+    float:left;
+	margin-bottom:5px;
+	font-size:100%;
+}
+ul.image_table li img {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	border: 1px solid #CCCCCC;
+    padding: 4px;
+}
+ul.image_table li p {
+	margin: 8px 0;
+}
+
+#main_body form label.nonbold {
+	font-weight: normal;
+	font-size: 90%;
+}

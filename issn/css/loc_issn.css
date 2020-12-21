@@ -1,0 +1,340 @@
+/* CSS Document */
+#content #left_nav_top {
+	width: 197px;
+	height: 50px;
+	margin: 0px 0px 5px 0px;
+	border: 0;
+	text-align:left;
+	padding: 0;
+}
+#content #left_nav_cobrand {
+	width: 196px;
+	height: 82px;
+	margin: 0px;
+	border: 0px;
+	text-align:left;
+	padding: 0px;
+}
+#content #left_nav_mid {
+	width: 196px;
+	height: auto;
+	margin: 0px 0px 10px 0px;
+	border: 0;
+	text-align:left;
+	padding: 0 0 10px 0;
+	border: 1px solid #ccc;
+}
+#content #left_nav_mid form#site_search {
+	width: 186px;
+	height: 20px;
+	margin: 10px 0px 10px 8px;
+	padding: 0px 0px 0px 0px;
+	border: 0;
+}
+#left_nav_mid h2 {
+	padding: 10px 5px 7px 10px;
+	color: #690;
+	margin: 0px 0px 5px 0px;
+	background: transparent url(../images/dots_leftnav_sq.gif) bottom left no-repeat;
+	font: bold 100%/100% Georgia, "Times New Roman", Times, serif;
+}
+#left_nav_mid h2.border {
+	margin: 10px 0 5px 0;
+	border-top: 1px solid #ccc;
+}
+#left_nav_mid span {
+	color: #666;
+	font-weight: 500;
+}
+#left_nav_mid div#rss {
+	border-top: 1px solid #ccc;
+}
+#left_nav_mid ul#resources {
+	border-top: 1px solid #ccc;
+}
+#main_menu img.right {
+	float: right;
+	margin: 0px;
+}
+#content #main_menu #main_body h4 {
+	color: #666666;
+}
+/* content */
+#main_left {
+	width: 274px;
+	height: auto;
+	float: left;
+	margin: 0px 0px 10px 0px;
+	padding: 0px 0px 0px 0px;
+	border: 1px solid #fc0;
+}
+#main_left h2 {
+	font: bold 95%/100% Georgia, "Times New Roman", Times, serif;
+	color: #36c;
+	margin: 0;
+	padding: 10px 0px 12px 10px;
+	background: transparent url(../images/dots_h2_green.gif) bottom left no-repeat;
+}
+#main_left h2 span,#right_top h2 span, #right_mid h2 span, #right_bottom h2 span {
+	color: #9c0;
+}
+#main_left #left_mid, #main_left #left_top {
+	margin: 0;
+	padding: 10px 0px 10px 0px;
+	background: transparent;
+	color: #999;
+	font-size: 90%;
+}
+#main_left #left_mid h2 {
+	clear: left;
+	font: bold 105%/100% Georgia, "Times New Roman", Times, serif;
+	color: #36c;
+	margin: 0px 0px 5px 0px;
+	border-top: 1px solid #fc0;
+	padding: 10px 0px 10px 10px;
+	background: transparent url(../images/dots_h2_green.gif) bottom left no-repeat;
+}
+#main_left #left_mid h3 {
+	font: bold 95%/100% Georgia, "Times New Roman", Times, serif;
+	color: #333;
+	margin: 0px 0px 5px 0px;
+	padding: 5px 0px 5px 10px;
+}
+#left_mid p, #left_top p {
+	color: #333;
+	padding-bottom: 10px;
+}
+#left_mid p a, #left_top p a {
+	font-size: 100%;
+}
+#left_mid img, #left_top img {
+	float: none;
+	border: 0;
+	margin: 0;
+}
+#left_mid ul, #left_top ul {
+	/*border-top: 0px dotted #ccc;*/
+	padding: 0px 0px 0px 0px;
+	margin: 0px 2px 10px 10px;
+}
+#left_mid ul li, #left_top ul li {
+	list-style-type: none;
+	font: normal 95%/100% verdana, helvetica, sans-serif;
+	background: transparent url(../images/arrow.gif) no-repeat 0px 5px;
+	padding: 2px 5px 2px 15px; 
+	margin: 0px;
+	color: #333;
+}
+#left_mid ul li a, #left_top ul li a {
+	font: normal 100% Verdana, Arial, Helvetica, sans-serif;
+}
+#left_top img.thumb, #left_mid img.thumb, #left_bot img.thumb, #right_mid img.thumb, #right_bot img.thumb {
+	float: left;
+	border: 1px solid #9c0;
+	margin: 5px 10px 10px 13px;
+	padding: 3px;
+}
+#right_top img.thumb, #right_mid img.thumb, #right_bottom img.thumb {
+	float: left;
+	border: 1px solid #9c0;
+	margin: 10px 13px 10px 10px;
+	padding: 3px;
+}
+#left_top p.thumb, #left_mid p.thumb, #left_bottom p.thumb, #right_top p.thumb, #right_mid p.thumb, #right_bottom p.thumb {
+	padding: 3px 10px 10px 84px;
+}
+#left_mid p.thumb a, #left_mid p.nothumb a {
+	font-weight: normal;
+}
+
+#main_right {
+	width: 236px;
+	height: auto;
+	font-size: 90%;
+	margin: 0px 0px 10px 287px;
+	border-left: 1px solid #9cf;
+	border-right: 1px solid #9cf;
+	border-bottom: 1px solid #9cf;
+	padding: 0px 0px 0px 0px;
+}
+#right_top, #right_mid, #right_bottom {
+	margin: 0;
+	padding: 0px 0px 5px 0px;
+	color: #999;
+	font-size: 100%;
+}
+
+.thumbnail {
+	border: 0px solid #333;
+	float: left;
+	margin-right: 5px;
+}
+
+#right_top h2, #right_mid h2, #right_bottom h2 {
+	font: bold 105%/105% Georgia, "Times New Roman", Times, serif;
+	color: #06c;
+	margin: 0;
+	padding: 10px 0px 12px 10px;
+	border-top: 1px solid #9cf;
+	background: transparent url(../images/dots_h2_blue.gif) bottom left no-repeat;
+}
+#right_top h2, #right_mid h2, #right_bottom h2 {
+	border-top: 0;
+}
+#right_mid h2.extra {
+	border-top: 1px solid #9cf;
+}
+#right_top h2 span, #right_mid h2 span, #right_bottom h2 span {
+	color: #0cf;
+}
+#main_right h3 {
+	margin: 0;
+	padding: 10px 0 0 10px;
+	color: #333;
+	font: bold 95%/100% Georgia, "Times New Roman", Times, serif;
+}
+#main_right p {
+	margin: 0;
+	padding: 5px 10px 10px 10px;
+	color: #333;
+	font: normal 95%/130% verdana, helvetica, sans-serif;
+}
+#main_right p a {
+	font: normal 100%/100% verdana, helvetica, sans-serif;
+	line-height: 13px;
+}
+#right_top p {
+	margin-bottom: 0px;
+	padding-bottom: 5px;
+	margin-top: 3px;
+}
+#right_top p.link {
+	margin-top: 0px;
+	padding-top: 0;
+}
+#right_top ul, #right_mid ul, #right_bottom ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px 0px 10px 10px;
+	font: normal 85%/150% verdana, helvetica, sans-serif;
+}
+#right_top ul li, #right_mid ul li, #right_bottom ul li  {
+	list-style-type: none;
+	display: block; 
+	padding: 0px 2px 0px 10px; 
+	background: transparent url(https://www.loc.gov/issn/images/gt.gif) no-repeat 0px 5px;
+	margin: 0px;
+	font: normal 115%/100% Verdana, Arial, Helvetica, sans-serif;
+	color: #666;
+}
+#right_top ul li a:link, #right_top ul li a:hover, #right_top ul li a:visited, #right_mid ul li a:link, #right_mid ul li a:hover, #right_mid ul li a:visited, #right_bottom ul li a:link,#right_bottom ul li a:hover, #right_bottom ul li a:visited {
+	font: normal 100%/140% verdana, helvetica, sans-serif;
+}
+#page_head {
+	margin-bottom: 8px;
+}
+#main_body h2.extra {
+	border-top: 1px dashed #d4e9ff;
+	margin-top: 10px;
+	padding-top: 15px;
+}
+#main_body h2 span {
+	font-weight: normal;
+	color: #333333;
+}
+#main_body p.extra {
+	border-top: 1px dashed #d4e9ff;
+	margin-top: 10px;
+	padding-top: 15px;
+}
+#main_body p.permalink {
+	font: normal 80%/120% Verdana, Arial, Helvetica, sans-serif;
+}
+/*added for print test*/
+#main_body ul {
+	padding: 7px 10px 10px 0px;
+	margin: 0 0 0 10px;
+}
+#main_body ol ul li {
+	padding: 3px 2px 3px 10px;
+}
+#main_body ol li ol {
+	margin: 3px 0 3px 20px;
+	padding: 0 0 0 5px;
+}
+#main_body ol li ol li {
+	margin: 0;
+	padding: 3px 0 3px 0;
+	font-size: 100%;
+}
+#main_body ol li ol li ol {
+	margin: 3px 0 3px 20px;
+	padding: 0;
+}
+#main_body ol li ol li ol li {
+	font-size: 100%;
+	padding: 3px 0 3px 0;
+}
+#main_body ul li ul li {
+	font-size: 100%;
+}
+#main_body #rr {
+	border: 2px solid #ccc;
+	float: right;
+	margin: 10px 10px 0 10px;
+	padding: 0px;
+	width: 200px;
+}
+#main_body #rr h2 {	
+	color: #333;
+	font: bold 90%/100% verdana, helvetica, sans-serif;
+	padding-left: 5px;
+	padding-top: 5px;
+}
+#main_body #rr p {
+	font-size: 80%;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+#main_body h3 {
+	padding: 10px 10px 10px 10px;
+}
+#main_body h3 a {
+	font: bold 100%/100% Georgia, "Times New Roman", Times, serif;
+}
+#main_body p.indent {
+	padding: 7px 10px 7px 20px;
+}
+#main_body #video {
+	padding: 10px;
+}
+#main_body #photos {
+	float: right;
+	width: 200px;
+	padding: 10px 0 10px 10px;
+}
+
+#main_body #photos p {
+	font: normal 80% Verdana, Arial, Helvetica, sans-serif;
+	color: #666;
+}
+
+#main_body #photos img {
+	border: 3px solid #d4e9ff;
+	margin-left: 5px;
+}
+#main_body .smallcaps {
+	text-transform: uppercase;
+	font: normal 80%/100% Verdana, Arial, Helvetica, sans-serif; 
+}
+/* external links */
+a.external {
+background: transparent url(../../img-std/loc_sprite_ss.png) 100% 4px no-repeat !important;
+padding: 0 10px 0 0 !important;
+text-decoration: underline !important;
+}
+a.external:hover, 
+a.external:focus {background-position: 100% -12px;}
+a.external span {
+display:none;
+} 

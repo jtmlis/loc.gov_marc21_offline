@@ -1,0 +1,37 @@
+/***************specific styles*************/
+
+/********************
+left nav
+********************/
+#left_nav .leftnavimg {
+background: transparent url(../images/leftnav.jpg) 0 0 no-repeat;
+}
+
+.issue {
+	float: left;
+	width: 47%;
+	min-height: 210px;
+	margin-right:20px;
+	overflow: hidden;
+}
+.issue img {
+	float:left;
+    border: 1px solid #000000;
+}
+.issue h3 {
+	font-size: 1em;
+	color: #000;
+	margin-left: 133px;
+}
+.issue p {
+	margin-left: 133px;
+}
+.jump-links a {
+	font-weight: bold;
+	margin: 0 3px;
+}
+
+/* custom width */
+#col2_left.custom {width:443px;}
+#col2_right.custom {width:219px;}
+#col4_equal.custom {width:25%;}

@@ -1,0 +1,283 @@
+/* CSS Document */
+body {
+	color:#333;
+	margin:0px;
+	padding:0px;
+	text-align:center;
+	background: #fff;
+	font:100% verdana, helvetica, sans-serif;
+}
+a#skip {
+	position: absolute;
+	top:-100px;
+}
+a:link, a:visited  {
+	color: #036;
+	text-decoration: underline;
+}
+a:hover {
+	color:#333;
+	text-decoration: underline;
+}
+img {
+	border: 0;
+}
+div#container {
+	width:765px;
+	height: auto;
+	margin-right:auto;
+	margin-left:auto;
+	margin-top:0px;
+	margin-bottom:0px;
+	padding:0px;
+	background-color: #fff; 
+	border: 1px solid #999;
+	color:#333;
+	
+}
+/*  top navigation    */	
+div#topnav	{
+	display: none;
+}
+/* bread crumb  navigation  */
+div#crumb_nav {
+	clear: both;
+	height: 30px;
+	padding: 0px 0px 0px 15px;
+	color: #fff;
+	background-color: #000;
+	border-top: 0px solid #999;
+	border-bottom: 1px solid #333;
+}
+div#crumb_nav div#crumb {
+	color: #fff;
+	text-align: left;
+	padding: 10px 0px 0px 0px;
+	font: 70% Verdana, Helvetica, sans-serif;
+}
+div#crumb_nav #crumb a {
+	color: #ccc;
+	font-size: 95%;
+	font-weight: 100;
+}
+div#crumb_nav div#crumb span {
+	color: #fff;
+	font: 80% Verdana, Helvetica, sans-serif;
+	font-weight:700;
+}
+/* crumb nav ends*/
+div#content {
+	width: 745px;
+	height: auto;
+	margin: 10px 10px 5px 10px;
+	font:90% verdana, helvetica, sans-serif;
+	background-color: #fff;
+	text-align:left;
+	padding: 0px;
+}
+/* left nav rules */
+div#content div#left_nav {
+	display: none;
+}
+div#left_nav1 {
+	display: none;
+}
+div#left_nav2 {
+	display: none;
+}
+/*  end left nav rules  */
+/* content rules */
+div#page_head {
+	width: auto;
+	height: 55px;
+	margin: 0px 0px 0px 15px;
+	font:90% verdana, helvetica, sans-serif;
+	background: transparent url(https://www.loc.gov/aba/images/page_head.gif) top left no-repeat;
+	text-align:left;
+	padding: 2px 0px 2px 0px;
+}
+div#page_head h1 {
+	color: #900;
+	padding: 5px 10px 5px 10px;
+	font: bold 150%/105% Georgia, "Times New Roman", Times, serif;
+	margin: 0px;
+}
+div#page_head h1 span {
+	color: #000;
+	font-size: 75%;
+	font-weight: 200;
+}
+div#main_menu {
+	width: auto;
+	height: auto;
+	margin: 15px 0px 10px 15px;
+	font:90% verdana, helvetica, sans-serif;
+	text-align:left;
+	padding: 0px;
+}
+div#main_left {
+	width: 254px;
+	height: auto;
+	background: transparent url(https://www.loc.gov/aba/images/librarian_left_bot.gif) bottom left no-repeat;
+	float: left;
+	margin: 0px 0px 10px 0px;
+	padding: 0px 0px 10px 0px;
+}
+div#left_top {
+	width: 254px;
+	height: 73px;
+	margin: 0px;
+	background: transparent url(https://www.loc.gov/aba/images/swan_left_top.gif) 0px 0px no-repeat;
+	padding: 0px;
+}
+div#left_top h2 {
+	font-size: 100%;
+	font: bold 100%/110% Georgia, "Times New Roman", Times, serif;
+	color: #06c;
+	margin: 0px;
+	padding: 10px 10px 10px 10px;
+}
+#left_top h2 span, #main_right h2 span, #right_bottom h2 span {
+	color: #9c0;
+}
+#left_mid {
+	margin: 0px;
+	padding: 10px 10px 0px 10px;
+	width: 254px;
+	height: auto;
+	background: transparent url(https://www.loc.gov/aba/images/librarian_left_mid.gif) 0px 0px repeat-y;
+	color: #666;
+	font-size: 80%;
+}
+a#spot_link1 {
+	font:bold 110% Verdana, Arial, Helvetica, sans-serif;
+	margin: 0px 0px 5px 0px;
+}
+#left_mid p {
+	font-size: 100%;
+	color: #666;
+	padding: 10px 10px 0px 0px;
+	margin: 0px 5px 0px 0px;
+}
+#left_mid img {
+	float: left;
+	border: 0px;
+	margin: 0px 5px 50px 0px;
+}
+#left_bottom {
+	clear: left;
+	padding: 10px;
+	width: 235px;
+	background: transparent url(https://www.loc.gov/aba/images/librarian_left_mid.gif) 0px 0px repeat-y;
+	color: #666;
+	font-size: 80%;
+}
+#left_bottom a#foot_link1, #left_bottom a#foot_link2, #left_bottom a#foot_link3 {
+	font: bold 95% Verdana, Arial, Helvetica, sans-serif;
+}
+#left_bottom a {
+	font: bold 90% Verdana, Arial, Helvetica, sans-serif;
+}
+#main_right {
+	width: 254px;
+	height: auto;
+	background: transparent url(https://www.loc.gov/aba/images/librarian_right_bot.gif) bottom left no-repeat;
+	font-size: 90%;
+	margin: 0px 0px 0px 265px;
+	padding: 0px 0px 10px 0px;
+}
+#right_top {
+	width: 254px;
+	height: 73px;
+	margin: 0px;
+	background: transparent url(https://www.loc.gov/aba/images/swan_right_top.gif) 0px 0px no-repeat;
+	padding: 0px;
+}
+#right_top h2 {
+	font: bold 110%/100% Georgia, "Times New Roman", Times, serif;
+	color: #06c;
+	padding:10px 0px 10px 10px;
+	margin: 0px 0px 5px 0px;
+}
+img#feature {
+	border: 1px solid #900;
+	float: left;
+	margin: 0px 10px 0px 0px;
+}
+
+#right_mid {
+	margin: 0px;
+	padding: 10px 5px 5px 10px;
+	width: auto;
+	background: transparent url(https://www.loc.gov/aba/images/librarian_right_mid.gif) 0px 0px repeat-y;
+	color: #999;
+	font-size: 90%;
+}
+#right_mid ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	font-size: 85%;
+}
+#right_bottom {
+	margin: 0px;
+	padding: 10px 5px 5px 0px;
+	width:254px;
+	background: transparent url(https://www.loc.gov/aba/images/librarian_right_mid.gif) 0px 0px repeat-y;
+	color: #999;
+	font-size: 90%;
+}
+#right_bottom h2 {
+	font: bold 130%/100% Georgia, "Times New Roman", Times, serif;
+	color: #06c;
+	border-top: 1px solid #b4e3ef;
+	padding: 10px 0px 10px 10px;
+	margin: 0px 0px 5px 0px;
+	background: transparent url(https://www.loc.gov/aba/images/dots_h2.gif) bottom left no-repeat;
+}
+#right_bottom ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px 0px 10px 10px;
+	font-size: 85%;
+}
+#right_mid ul li, #right_bottom ul li  {
+	list-style-type: none;
+	display: block; 
+	line-height: 15px;
+	padding: 0px 2px 0px 10px; 
+	background: transparent url(https://www.loc.gov/aba/images/gt.gif) no-repeat 0px 5px;
+	margin: 0px;
+	font-size: 115%;
+	color: #666;
+}
+
+#right_mid ul li a:link, #right_mid ul li a:visited, #right_bottom ul li a:link, #right_bottom ul li a:visited  {
+	font: normal 100% verdana, helvetica, sans-serif;
+}
+/* end of content rules   */
+/*  footer rules */
+div#footer {
+	clear: both;
+	font: 80% verdana, helvetica, sans-serif;
+	height: 30px;
+	text-align: left;
+	border-color: #005194;
+	border-width: 0px;
+	background: #efefef url(https://www.loc.gov/aba/images/line_blue.gif) top left no-repeat;
+	padding: 15px 0px 0px 15px;
+}
+div#footer a{
+	color:#666;
+	font-size: 80%;
+	font-family: verdana, helvetica, sans-serif;
+	font-weight: normal;
+	text-decoration:underline;
+}
+div#footer a:hover {
+	color: #333;
+	font-size: 80%;
+	font-family: verdana, helvetica, sans-serif;
+	font-weight: normal;
+	text-decoration: underline;
+}

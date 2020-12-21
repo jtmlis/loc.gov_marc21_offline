@@ -1,0 +1,819 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html40/loose.dtd">
+<html>
+<head>
+<title>MARC to Dublin Core Crosswalk</title>
+<!-- <base href="//www.loc.gov/marc/marc2dc.html"> -->
+<meta name="description" content=
+"Crosswalk from MARC 21 data fields to the Dublin Core element set.">
+<meta name="keywords" content="MARC Dublin Core Crosswalk">
+<meta name="author" content=
+"Library of Congress Network Development and MARC Standards Office">
+<meta http-equiv="Content-Type" content=
+"text/html; charset=utf-8">
+<style type="text/css">
+/* <![CDATA[ */
+body {margin-left: 2.5em; margin-right: 2.5em;  background-color: #FFFFFF;}
+h1 {font-size: 150%; text-align: center;}
+h2 {font-size: 125%;  margin-bottom: -0.5em;}
+h3, h4 {font-size: 115%;}
+ul {list-style: none;}
+table {height: 1px; border-collapse: collapse; border: 1px solid black;}
+td, th {height: 1px; border: 1px solid black; padding: 5px;}
+thead {background-color: #CCCCCC;}
+tr {vertical-align: top;}
+.byline {font-weight: bold; text-align: center;}
+.label {font-weight: bold;}
+/* ]]> */       
+</style>
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+<body>
+<h1>MARC to Dublin Core Crosswalk</h1>
+
+<p class="byline">Development and MARC Standards Office<br>
+Library of Congress</p>
+
+<p><span class="label">Date issued:</span> 2008/04/24</p>
+<p><span class="label">Previous version:</span> <a href=
+"http://www.loc.gov/marc/marc2dc-2001.html">http://www.loc.gov/marc/marc2dc-2001.html</a></p>
+
+<br>
+<hr>
+<h2>Table of Contents</h2>
+
+<ul>
+<li><a href="marc2dc.html#intro">I. Introduction</a></li>
+
+<li><a href="marc2dc.html#unqualifiedlist">II. MARC to Dublin Core
+(Unqualified)</a></li>
+
+<li><a href="marc2dc.html#qualifiedlist">III. MARC to Dublin Core
+(Qualified)</a></li>
+
+<li><a href="marc2dc.html#notes">IV. Appendix 1--Notes</a></li>
+
+<li><a href="marc2dc.html#ldr06conversionrules">V. Appendix 2--Conversion rules for Leader/06 to dc:Type mapping</a></li>
+</ul>
+
+<h2><a name="intro">I. Introduction</a></h2>
+
+<p>The following is a crosswalk between core <a href=
+"bibliographic/ecbdhome.html">MARC 21</a> bibliographic data
+elements and elements in the <a href=
+"http://purl.oclc.org/metadata/dublin_core">Dublin Core Element
+Set</a>. It may be used in conversion of metadata from MARC into
+Dublin Core. Since MARC is richer in data than Dublin Core, it
+differs from the <a href="dccross.html">Dublin Core to MARC
+Crosswalk</a> in that multiple MARC fields are mapped to a Dublin
+Core element. The Dublin Core to MARC crosswalk maps a Dublin
+Core element to a single MARC field. In both crosswalks there are
+different mappings for Dublin Core simple or qualified. Not all
+possible MARC fields are included in this mapping, but only those
+considered useful for broad cross-domain resource discovery.
+Applications may wish to include other MARC elements that are
+prevalent in their data but are not listed here, or they may not
+include all that are listed.</p>
+
+<p>MARC 21 fields are listed by field number with specific
+subfields if applicable. In many cases specific subfields are not
+provided, since applications may differ in subfields used.
+Applications may not need control subfields such as $2, $5.
+Notes concerning implementation are given. Further information
+about the mapping is given at the end of the document.
+Definitions of MARC elements may be found at the <a href=
+"bibliographic/ecbdhome.html">MARC Bibliographic format</a> site
+and definitions of Dublin Core elements from the 
+<!-- <a href="http://purl.org/dc/documents/rec-dces-19990702.htm"> -->
+<a href="http://dublincore.org/documents/dces/">Dublin Core
+Metadata Element Set Reference Description, Version 1.1</a> and 
+<!-- <a href="http://purl.org/dc/documents/rec/dcmes-qualifiers-20000711.htm"> -->
+<a href="http://dublincore.org/documents/dcmi-terms/">DCMI Metadata Terms</a>.</p>
+
+<p>Note that it is not expected that round-trip mapping is
+possible using this crosswalk. Once MARC data is converted to
+Dublin Core, not enough information is retained to allow for
+mapping back to MARC accurately. This is inevitable when mapping
+a complex set of data elements to a simpler set. Where a tag is used 
+in mapping to more than one DC element, a decision
+  may need to be made which Dublin Core element to map it to.</p>
+
+<h2><a name="unqualifiedlist">II. MARC to Dublin Core Crosswalk
+(Unqualified)</a></h2>
+
+<ul>
+	<li>Conventions:
+	<ul>
+	<li>1.&quot;$&quot; is used to specify the subfield used. If none is
+specified, use all subfields.</li>
+<li>2. DC element is repeated if multiple MARC fields are used.</li>
+</ul>
+</li>
+</ul>
+
+<!--<summary>MARC to Dublin Core Crosswalk (Unqualified) </summary> -->
+<!-- <caption>MARC to Dublin Core Crosswalk (Unqualified)</caption> -->
+<table>
+<tr>
+<td scope="col"><strong>MARC fields</strong></td>
+<td scope="col"><strong>DC Element</strong></td>
+<td scope="col"><strong>Implementation Notes</strong></td>
+</tr>
+
+<tr>
+<td>100, 110, 111, 700, 710, 711</td>
+<td rowspan="2">Contributor</td>
+<td rowspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td>720</td>
+</tr>
+
+<tr>
+<td>651, 662</td>
+<td rowspan="2">Coverage</td>
+<td rowspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td>751, 752</td>
+</tr>
+
+
+<tr>
+<td>&nbsp;</td>
+<td>Creator</td>
+<td>Creator element not used.</td>
+</tr>
+
+<tr>
+<td>008/07-10</td>
+<td rowspan="2">Date</td>
+<td rowspan="2">&nbsp;</td>
+</tr>
+<tr>
+  <td>260$c$g</td>
+</tr>
+
+<tr>
+<td>500-599, except 506, 530, 540, 546</td>
+<td>Description</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>340</td>
+<td rowspan="2">Format</td>
+<td rowspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td>856$q</td>
+</tr>
+
+<tr>
+<td>020$a, 022$a, 024$a</td>
+<td rowspan="2">Identifier</td>
+<td rowspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td>856$u</td>
+</tr>
+
+<tr>
+<td>008/35-37</td>
+<td rowspan="3">Language</td>
+<td rowspan="3">&nbsp;</td>
+</tr>
+<tr>
+<td>041$a$b$d$e$f$g$h$j</td>
+</tr>
+<tr>
+<td>546</td>
+</tr>
+
+<tr>
+<td>260$a$b</td>
+<td>Publisher</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>530, 760-787$o$t</td>
+<td>Relation</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>506, 540</td>
+<td>Rights</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>534$t</td>
+<td rowspan="2">Source</td>
+<td rowspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td>786$o$t</td>
+</tr>
+
+<tr>
+<td>050, 060, 080, 082</td>
+<td rowspan="2">Subject</td>
+<td rowspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td> 600, 610, 611, 630, 650, 653</td>
+</tr>
+
+<tr>
+<td> 245, 246</td>
+<td>Title</td>
+<td>Repeat dc:title for each. Some applications may wish to include 210, 222,
+  240, 242, 243, and 247. </td>
+</tr>
+
+<tr>
+<td>Leader06, Leader07</td>
+<td rowspan="2">Type</td>
+<td rowspan="2">See Appendix 2 for Leader-Type rules.</td>
+</tr>
+<tr>
+<td>655</td>
+</tr>
+</table>
+
+<br>
+
+<h2><a name="qualifiedlist">III. MARC to Dublin Core Crosswalk (Qualified)</a></h2>
+<br>
+<!--<summary>MARC to Dublin Core Crosswalk (Unqualified) </summary> -->
+<!-- <caption>MARC to Dublin Core Crosswalk (Unqualified)</caption> -->
+<table>
+<tr>
+<td><strong>MARC fields</strong></td>
+<td><strong>DC Element</strong></td>
+<td><strong>DC Qualifier(s)</strong></td>
+<td><strong>Implementation Notes</strong></td>
+</tr>
+
+<tr>
+<td>541$c</td>
+<td>Accrual Method</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>310$a</td>
+<td>Accrual Periodicity</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>521</td>
+<td>Audience</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>100, 110, 111, 700, 710, 711$e</td>
+<td rowspan="2">Contributor</td>
+<td rowspan="2">Value in $e. </td>
+<td rowspan="2">Roles may be used as refinements of Contributor if using
+  qualified DC. See &quot;Roles&quot; <a href="marc2dc.html#notes">note</a> below.</td>
+</tr>
+<tr>
+<td>720$e</td>
+</tr>
+
+<tr>
+<td>255, 034 </td>
+<td rowspan="4">Coverage</td>
+<td rowspan="4">Spatial</td>
+<td>Some 255 information equivalent to DC encoding scheme but different syntax.</td>
+</tr>
+<tr>
+<td>522</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>650$z, 651, 662 </td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>751, 752 </td>
+<td>&nbsp;</td>
+</tr>
+
+
+<tr>
+<td>043$c,044$c</td>
+<td rowspan="2">Coverage</td>
+<td>Spatial<br>
+ ISO3166</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>651 if  ind2=7 &amp; $2=tgn</td>
+<td>Spatial<br>
+ TGN</td>
+<td>&nbsp;</td>
+</tr>
+
+
+
+
+<tr>
+<td>033$a</td>
+<td rowspan="2">Coverage</td>
+<td rowspan="2">Temporal</td>
+<td rowspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td>533$b</td>
+</tr>
+
+<tr>
+<td>260$c if precedes date</td>
+<td rowspan="2">Date</td>
+<td rowspan="2">Copyrighted</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>542$g</td>
+<td>This field was defined in MARC in January 2008.</td>
+</tr>
+
+
+
+
+
+<tr>
+<td>260$c$g</td>
+<td rowspan="2">Date</td>
+<td rowspan="2">Created</td>
+<td rowspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td>533$d</td>
+</tr>
+
+<tr>
+<td>008/07-10</td>
+<td rowspan="2">Date</td>
+<td rowspan="2">Issued</td>
+<td rowspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td>260$c</td>
+</tr>
+
+<tr>
+<td>046$j</td>
+<td>Date</td>
+<td>Modified</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>046$m$n</td>
+<td>Date</td>
+<td>Valid</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>520 if ind1=# or 3 </td>
+<td>Description</td>
+<td>Abstract</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>505</td>
+<td>Description</td>
+<td>TableofContents</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>300$a</td>
+<td rowspan="4">Format</td>
+<td rowspan="2">Extent</td>
+<td rowspan="2">&nbsp;</td>
+</tr>
+<tr>
+  <td>533$e</td>
+</tr>
+<tr>
+<td>856$q</td>
+<td>IMT</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>340$a</td>
+<td>Medium</td>
+<td>&nbsp;</td>
+</tr>
+
+
+<tr>
+<td>856$u</td>
+<td>Identifier</td>
+<td>URI</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>008/35-37</td>
+<td rowspan="6">Language</td>
+<td>IS0369-2</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>041 with no $2</td>
+<td>ISO639-2</td>
+<td rowspan="2">&nbsp;</td>
+</tr>
+<tr>
+  <td>041 with $2=iso639-3</td>
+  <td>ISO639-3</td>
+</tr>
+<tr>
+<td>041 with $2=rfc1766 </td>
+<td>RFC1766</td>
+<td rowspan="3">&nbsp;</td>
+</tr>
+<tr>
+  <td>041 with $2=rfc3066</td>
+  <td>RFC3066</td>
+</tr>
+<tr>
+  <td>041 with $2=rfc4646</td>
+  <td>RFC4646</td>
+</tr>
+
+<tr>
+<td>561</td>
+<td>Provenance</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>530</td>
+<td rowspan="2">Relation</td>
+<td rowspan="2">HasFormat</td>
+<td rowspan="2">&nbsp;</td>
+</tr>
+
+<tr>
+<td>776$n$t</td>
+</tr>
+
+<tr>
+<td>530$u</td>
+<td rowspan="2">Relation</td>
+<td rowspan="2">HasFormat<br>
+ URI</td>
+<td rowspan="2">&nbsp;</td>
+</tr>
+
+<tr>
+<td>776$o</td>
+</tr>
+
+
+<tr>
+<td>774$n$t</td>
+<td>Relation</td>
+<td>HasPart</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>774$o</td>
+<td>Relation</td>
+<td>HasPart<br>
+URI</td>
+<td>&nbsp;</td>
+</tr>
+
+
+
+
+<tr>
+<td>775$n$t</td>
+<td>Relation</td>
+<td>HasVersion </td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>775$o</td>
+<td>Relation</td>
+<td>HasVersion<br>
+URI</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>530</td>
+<td rowspan="2">Relation</td>
+<td rowspan="2">IsFormatOf</td>
+<td rowspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td>776$n$t</td>
+</tr>
+
+<tr>
+<td>530$u</td>
+<td rowspan="2">Relation</td>
+<td rowspan="2">IsFormatOf<br>
+ URI</td>
+<td rowspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td>776$o</td>
+</tr>
+
+
+
+<tr>
+<td>440, 490, 800, 810, 811, 830
+<td rowspan="2">Relation</td>
+<td rowspan="2">IsPartOf</td>
+<td rowspan="2">&nbsp;</td>
+</tr>
+
+<tr>
+<td>760, 773$n$t</td>
+</tr>
+
+<tr>
+<td>760, 773$o</td>
+<td>Relation</td>
+<td>IsPartOf<br>
+URI</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>510</td>
+<td>Relation</td>
+<td>IsReferencedBy</td>
+<td>&nbsp;</td>
+</tr>
+
+
+
+<tr>
+<td>785$n$t</td>
+<td>Relation</td>
+<td>IsReplacedBy</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>785$o</td>
+<td>Relation</td>
+<td>IsReplacedBy<br>
+URI</td>
+<td>&nbsp;</td>
+</tr>
+
+
+<tr>
+<td>775,786$n$t</td>
+<td>Relation</td>
+<td>IsVersionOf</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>775, 786$o</td>
+<td>Relation</td>
+<td>IsVersionOf<br>
+URI</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>780$n$t</td>
+<td>Relation</td>
+<td>Replaces</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>780$o</td>
+<td>Relation</td>
+<td>Replaces<br>
+URI</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>538</td>
+<td>Relation</td>
+<td>Requires</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>506$a$d</td>
+<td rowspan="2">Rights</td>
+<td rowspan="2">AccessRights</td>
+<td rowspan="2">&nbsp;</td>
+</tr>
+<tr>
+<td>540$a$d</td>
+</tr>
+
+<tr>
+<td>542$d</td>
+<td>Rights</td>
+<td>RightsHolder</td>
+<td>This field was defined in MARC in January 2008.</td>
+</tr>
+
+
+<tr>
+<td>786$o</td>
+<td>Source</td>
+<td>URI</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>082</td>
+<td>Subject</td>
+<td>DDC</td>
+<td>&nbsp;</td>
+</tr>
+
+
+<tr>
+<td>050</td>
+<td>Subject</td>
+<td>LCC</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>600, 610, 611, 630, 650 if ind2=0 </td>
+<td>Subject</td>
+<td>LCSH</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>600, 610, 611, 630, 650 if ind2=2 </td>
+<td>Subject</td>
+<td>MeSH</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>060</td>
+<td>Subject</td>
+<td>NLM</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>655 if ind2=7 &amp; $2=tgn </td>
+<td>Subject</td>
+<td>TGN</td>
+<td>&nbsp;</td>
+</tr>
+
+
+<tr>
+<td>080</td>
+<td>Subject</td>
+<td>UDC</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>245</td>
+<td>Title</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>130, 210, 240, 242, 246, 730, 740</td>
+<td>Title</td>
+<td>Alternative</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>Leader06, Leader07</td>
+<td rowspan="2">Type</td>
+<td rowspan="2">DCMI Type Vocabulary</td>
+<td>See Appendix 2 for Leader-Type rules.<br></td>
+</tr>
+<tr>
+<td>655 if $2=dct</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+
+<h2><a name="notes">Appendix 1--Notes</a></h2>
+
+<p><strong>DC Refinements and encoding schemes.</strong> Some 
+DC refinements or encoding
+schemes have not been included because they are
+not generally found or can not be specifically identified in MARC data. Examples include DCMI Point,
+DCMI Box and Mediator.</p>
+
+<p><strong>Roles.</strong> Those roles in the MARC Relators list 
+that indicate that they refine 
+&quot;Contributor&quot; may be used in qualified DC. See: 
+<a href="http://lcweb2.loc.gov/cocoon/loc.terms/relators/dc-relators.html"> Relator
+Terms and Dublin Core Elements</a>.</p>
+
+<h2><a name="ldr06conversionrules">Appendix 2 - Conversion rules for Leader06
+    - dc:Type mapping</a></h2>
+
+<p>Multiple Type fields may be used; conversions below may result
+in 2 or 3 Type fields. There are several additional sources of
+type information in the MARC record; only coded values in
+Leader/06 and Leaader/07 are detailed in this chart. Field 655
+may also be used for more specific type information.</p>
+
+
+<table>
+<!--<summary>MARC to Dublin Core Crosswalk (Unqualified) </summary> -->
+<!-- <caption>MARC to Dublin Core Crosswalk (Unqualified)</caption> -->
+<tr>
+<td><strong>Leader/06 value</strong></td>
+<td><strong>Leader/07 value</strong></td>
+<td><strong>Type value</strong></td>
+</tr>
+<tr>
+<td>a,c,d,t</td>
+<td>&nbsp;</td>
+<td>text</td>
+</tr>
+
+<tr>
+<td>e,f,g,k</td>
+<td>&nbsp;</td>
+<td>image</td>
+</tr>
+
+<tr>
+<td>i,j</td>
+<td>&nbsp;</td>
+<td>sound</td>
+</tr>
+
+<tr>
+<td>m,o,p,r</td>
+<td>&nbsp;</td>
+<td>no type provided</td>
+</tr>
+
+<tr>
+<td>p</td>
+<td>c,s</td>
+<td>collection</td>
+</tr>
+</table>
+
+<p>Institutions may want to consider generating additional type
+values, such as &quot;map&quot; or &quot;cartographic&quot; for codes e or g; &quot;musical notation&quot; for codes c or d, etc.</p>
+
+<hr>
+<p><b>Go to:</b></p>
+
+<ul>
+<li><a href="dccross.html">Dublin Core to MARC Crosswalk</a></li>
+
+<li><a href="marc.html">MARC Home Page</a></li>
+
+<li><a href="../index.html">Library of Congress Home
+Page</a></li>
+</ul>
+
+<hr>
+<img src="../homepage/lc2.gif" alt="" width="91"
+height="46"> <strong>Library of Congress</strong><br>
+<address><!--help desk email start -->
+<a href="http://www.loc.gov/help/help-desk.html">Library of
+Congress Help Desk</a> <!--help desk email end -->
+( <!-- #BeginDate format:Am3 -->05/02/2008<!-- #EndDate -->
+)</address>
+<script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+</html>
+
+

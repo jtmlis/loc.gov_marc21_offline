@@ -1,0 +1,99 @@
+jQuery.fn.fontresizermanager = function () {
+    
+    if(window.location.href.indexOf("wp-admin") === -1){
+        jQuery(".boxed-blurb").css("height", "");
+        resizeBox();    
+    }
+
+    var fontResizer_value = jQuery('#fontResizer_value').val();
+    var fontResizer_ownid = jQuery('#fontResizer_ownid').val();
+    var fontResizer_ownelement = jQuery('#fontResizer_ownelement').val();
+    var fontResizer_resizeSteps = jQuery('#fontResizer_resizeSteps').val();    
+    var fontResizer_maxFontsize = jQuery('#fontResizer_maxFontsize').val();
+    var fontResizer_minFontsize = jQuery('#fontResizer_minFontsize').val();
+    var fontResizer_element = fontResizer_value;
+ 
+	if(fontResizer_value == "innerbody") {
+		fontResizer_element = "div#innerbody";
+	} else if(fontResizer_value == "ownid") {
+		fontResizer_element = "div#" + fontResizer_ownid;
+	} else if(fontResizer_value == "ownelement") {
+		fontResizer_element = fontResizer_ownelement;
+	}
+
+	var startFontSize = parseFloat(jQuery(fontResizer_element+"").css("font-size"));
+    
+        var savedSize = jQuery.cookie('fontSize');
+	if(savedSize > 4) {
+		jQuery(fontResizer_element).css("font-size", savedSize + "px");
+	}
+
+	jQuery('.fontResizer_add').css("cursor","pointer");
+        jQuery('.fontResizer_add_max').css("cursor","pointer");
+	jQuery('.fontResizer_minus').css("cursor","pointer");
+	jQuery('.fontResizer_reset').css("cursor","pointer");
+        
+        
+        if( fontResizer_maxFontsize === 0 || fontResizer_maxFontsize === '' ) {
+            fontResizer_maxFontsize = 18;
+        }        
+        
+        if( fontResizer_minFontsize === 0 || fontResizer_minFontsize === '' ) {
+            fontResizer_minFontsize = 12;
+        }        
+
+	// Increase font size - max      
+	jQuery('.fontResizer_add_max').click(function(event) {
+		event.preventDefault();
+                jQuery(fontResizer_element+"").css("font-size",fontResizer_maxFontsize+"px");			
+                jQuery.cookie('fontSize', fontResizer_maxFontsize, {path: '/'});
+                jQuery(".boxed-blurb").css("height", "");
+                resizeBox();
+	});        
+        
+        // Increase font size - step
+	jQuery('.fontResizer_add').click(function(event) {                
+                var sizeIncrease = (fontResizer_maxFontsize - fontResizer_minFontsize) / 2;
+                var midRangeSize = +sizeIncrease + +fontResizer_minFontsize;            
+		event.preventDefault();
+                jQuery(fontResizer_element+"").css("font-size",midRangeSize+"px");			
+                jQuery.cookie('fontSize', midRangeSize, {path: '/'});
+                jQuery(".boxed-blurb").css("height", "");
+                resizeBox();
+	});
+
+	// Decrease font size
+        // miev - not used
+        /*
+	jQuery('.fontResizer_minus').click(function(event) {
+		event.preventDefault();
+		var newFontSize = parseFloat(jQuery(fontResizer_element+"").css("font-size"))
+		newFontSize=newFontSize-fontResizer_resizeSteps;
+		if( newFontSize >= fontResizer_minFontsize || fontResizer_minFontsize == 0 || fontResizer_minFontsize == '' ) {
+			jQuery(""+fontResizer_element+"").css("font-size",newFontSize+"px");			 
+                        jQuery.cookie('fontSize', newFontSize, {path: '/'});
+                        jQuery(".boxed-blurb").css("height", "");
+                        resizeBox();
+		}
+	});
+        */
+	// Reset font size
+	jQuery('.fontResizer_reset').click(function(event) {
+		event.preventDefault();
+		jQuery(""+fontResizer_element+"").css("font-size",startFontSize);
+                //on reset, delete the cookie
+                jQuery.cookie('fontSize', null, {path: '/'});
+                jQuery(".boxed-blurb").css("height", "");
+                resizeBox();
+	});
+
+	// Accessibility stuff
+	jQuery('.fontResizer_minus, .fontResizer_reset, .fontResizer_add .fontResizer_add_max').keypress(function (e) {
+	var key = e.which;
+		if(key == 13) {
+			$(this).click();
+			return false;  
+		}
+	});        
+
+}

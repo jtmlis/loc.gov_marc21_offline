@@ -1,0 +1,181 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                        "http://www.w3.org/TR/html40/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/marc_generic.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Character Sets:  MARC-8 Encoding Environment: MARC 21 Specifications for Record Structure, Character Sets, and Exchange Media (Library of Congress)</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<meta name="description" content="MARC 21 records in the MARC-8 encoding environment are
+encoded according to the specifications below. All characters are 8-bit per character or 24-bit
+per character (Chinese, Japanese and Korean).  Different sets of characters are accessed via
+escape sequences.">
+<meta name="keywords" content="MARC 21, Specifications, Character Sets, UCS,
+Unicode, 16-bit environment, MARC-8">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+<style type="text/css">
+th {text-align:left;}
+p {text-align:justify;}
+li {text-align:justify;}
+.figure {font-style:italic;}
+.levela {margin-left:2em; margin-top:2em;}
+.levelb {margin-left:4em;}
+.levelc {margin-left:6em;}
+.leveld {margin-left:4em; text-align:justify;}
+.example {text-align:left;}
+.examplecap1 {margin-left:2em; text-align:justify; font-style:italic; margin-bottom:1em;}
+.examplecap {margin-left:2em; text-align:justify; font-style:italic; margin-top:.5em; margin-bottom:1em;}
+.subheading {margin-left:3em;}
+</style>
+<!-- InstanceEndEditable -->
+<link href="http://www.loc.gov/marc/marc-generic.css" rel="stylesheet" type="text/css">
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+
+<body bgcolor="#ffffff">
+<div class="head-nav"><a id="skip" href="speccharmarc8.html#skip_menu"><img src="http://www.loc.gov/marc/images/clear.gif" border="0" alt="Skip Navigation Links"></a><a href="../../index.html">The Library of Congress</a> &gt;&gt; <a href="../../library/index.html">Especially
+  for Librarians and Archivists</a> &gt;&gt; <a href="../../standards/index.html">Standards</a></div>
+<a href="../../marc.html"><img src="http://www.loc.gov/marc/images/marc-bar.gif" alt="MARC Standards" width="620" height="36" border="0"></a>
+<div class="head-nav"><a href="../../marc.html">MARC 21 HOME</a> &gt;&gt; <!-- InstanceBeginEditable name="topbreadcrumb" --><a href="spechome.html">Specifications</a> &gt;&gt; <a href="speccharintro.html">Character
+Sets</a> &gt;&gt; <strong>Part 2</strong><!-- InstanceEndEditable --></div>
+<hr size="1" noshade><a name="skip_menu"></a>
+<!-- InstanceBeginEditable name="content" -->
+<h3><em>MARC 21 Specifications for Record Structure, Character Sets, and Exchange Media</em></h3>
+<h2>CHARACTER SETS AND ENCODING OPTIONS: Part 2</h2>
+<h2>MARC-8 Encoding Environment</h2>
+<div class="title">December 2007</div>
+<h4><a href="../../global/disclaim.html"><img src="http://www.loc.gov/images/disclaimer.gif" alt="Link disclaimer" width="91" height="16" border="0" align="right"></a>CONTENTS</h4>
+<ul>
+<li><a href="speccharmarc8.html#intro">Introduction</a></li>
+<li><a href="speccharmarc8.html#repertoire">MARC-8 Repertoire</a>
+<div class="subheading"><a href="speccharmarc8.html#graphic">Graphic character sets in MARC-8 encoding</a></div>
+<div class="subheading"><a href="speccharmarc8.html#control">Control function code sets</a></div></li>
+<li><a href="speccharmarc8.html#implementation">Implementation</a>
+<div class="subheading"><a href="speccharmarc8.html#marker">MARC 21 encoding marker</a></div>
+<div class="subheading"><a href="speccharmarc8.html#field066">MARC field 066</a></div>
+<div class="subheading"><a href="speccharmarc8.html#combine">Combining characters</a> (diacritics)</div>
+<div class="subheading"><a href="speccharmarc8.html#directionality">Directionality of text</a></div></li>
+<li><a href="speccharmarc8.html#alternative">Accessing Alternative Graphic Character Sets</a>
+<div class="subheading"><a href="speccharmarc8.html#technique1">Technique 1: Using custom sets for Greek Symbols, Subscript, and Superscript characters</a></div>
+<div class="subheading"><a href="speccharmarc8.html#technique2">Technique 2: Using standard alternate graphic character sets</a></div>
+<div class="subheading"><a href="speccharmarc8.html#escape">Use and placement of escape sequences</a></div></li>
+</ul>
+<hr>  
+<h4><a name="intro">INTRODUCTION</a></h4>  
+<p>Specifications for MARC 21 records using MARC-8 encoding are given below in this section.  MARC-8 code points are derived from several sources, most of these being standard script-specific character sets.  The various component sets of the MARC-8 set are identified and accessed through the use of escape sequences.  The total collection of characters that are encoded by the component sets constitutes the MARC-8 repertoire.  The MARC-8 repertoire is a closed repertoire and no additions are planned.  Implementations that require characters beyond this repertoire should consider using the Unicode encoding instead of MARC-8.</p>
+
+<hr>  
+<h4><a name="repertoire">MARC-8 REPERTOIRE</a></h4>  
+<p>The MARC-8 character repertoire is composed of the combined repertoires of several character sets, either standard or custom.  These are identified below in the section Accessing Alternative Graphic Character Sets, and their encoding is specified in <a href="specchartables.html">Part 5</a>.</p>
+<p>The character sets used to encode the MARC-8 repertoire were developed at a time character set design and specification was conceived in terms of fitting sets into the 128 code points available in a 7-bit matrix.  Such a set is frequently referred to as a code page.  Employing the eighth bit available in most computer architectures allows two code pages to be used at the same time.  An 8-bit environment is assumed throughout the following discussion.</p>
+<p>Graphic character sets encoding a larger character repertoire need values of greater length than 8 bits.  The standard sets specified for use in MARC-8-encoded MARC 21 records are all of the code page type except for the East Asian Character Code, which uses a fixed length of 24 bits per code point.</p>
+<p>An 8-bit working environment accommodates two sets of 32 control functions (C0 and C1), two code pages of 94 graphic characters apiece (G0 and G1), a <em>space</em> character, a <em>delete</em> character, and two reserved character positions (see <em>Figure</em> below).  The C0 and C1 control functions, and the <em>space</em> character can be accessed at any time as they are not affected by the designation and invocation of different graphic sets.</p>
+<div class="figure">Figure:  8-bit Code Matrix</div>
+<p><img src="images/spec1501.gif" alt="8-bit Code Matrix" width="640" height="350"></p>
+<p>According to <em>Code Extension Techniques for Use with 7-bit and 8-bit Character Sets</em> (ANSI X3.41) and its international counterpart <em>Character Code Structure and Extension Techniques</em> (ISO/IEC 2022), the general technique for the use of code sets requires first the <strong>designation</strong> of the sets, then the <strong>invocation</strong> of a designated set as the <strong>working</strong> set. For 8-bit codes, two sets of control functions and four graphic character sets may be designated at any given time. The designated sets of control functions are called the C0 and C1 sets. The designated sets of graphic characters are called the G0, G1, G2, and G3 sets. Two Cn and two Gn sets may be in an invoked, working set status at any given time. If, for example, a specific character set is designated as the G0 set and invoked as the working set, in order to change a working set either another character set must be designated as the G0 set, or another character set must be designated as set G1, G2 or G3 and that set invoked as a working set. The following sections specify the designation and invocation of code sets in MARC-8-encoded MARC 21 records.</p>
+<h5><a name="graphic">Graphic character sets in MARC-8 encoding</a></h5>
+<p>ASCII graphics are the default G0 set and ANSEL graphics are the default G1 set for MARC 21 records. ASCII graphics are invoked as the working set for codes 21(hex) through 7E(hex). ANSEL, a graphic character set of letters, symbols and combining marks complementing ASCII, is designated as the graphic G1 set, invoked as the working set for codes A1(hex) through FE(hex). These are the default working sets for data transcribed in the fields and subfields unless other default sets are specified in the record field <a href="../bibliographic/ecbdclas.html#mrcb066">066</a> (Character Sets Present). Additional graphic character sets may also be accessed using techniques described below. Upon exit from a subfield, ASCII must be designated the G0 set.</p>
+<p>There are two special character positions in every "G" code block; one at the beginning (20(hex) in a G0 set or A0(hex) in a G1 set) and one at the end (7F(hex) in a G0 set or FF(hex) in G1 set). The <em>space</em> character occupies code point 20(hex). The <em>space</em> is used as a graphic character in all parts of a MARC 21 record and is universally recognized by the standard MARC-8 character sets.  This <em>character</em> is also referred to as "blank" in MARC 21 documentation. The <em>delete</em> character occupies the second of the two special character positions (7F(hex)) in a G0 set. It is a <em>control character</em> that is not used in MARC 21 records.  A0(hex) and FF(hex) are reserved values and must not be used in MARC-8-encoded records.</p>
+<h5><a name="control">Control function code sets</a></h5>
+<p>The C0 and C1 control function code sets are fixed for MARC 21 records using the MARC-8 encoding. They are thus designated and invoked by default and need not be designated and invoked in the record.  More information about control function code use in MARC 21 records is given in <a href="specchargeneral.html">Part 1</a>.</p>
+<hr>  
+<h4><a name="implementation">IMPLEMENTATION</a></h4> 
+
+<h5><a name="marker">MARC 21 encoding marker</a></h5>
+<p>In a MARC-8-encoded MARC 21 record, Leader character position 9 (Character coding scheme) must contain a <em>space</em> character (20(hex)).</p> 
+<h5><a name="field066">MARC field 066</a></h5>
+<p>Field 066 (Character Sets Present) is used to indicate the MARC-8 character sets other than the default sets that are invoked in the record.  (See <em><a href="../bibliographic/ecbdclas.html#mrcb066">MARC 21 Format for Bibliographic Data</a></em>.)  Whenever standard alternate graphic character sets accessed using Technique 2 (see <a href="speccharmarc8.html#alternative">Accessing Alternative Graphic Character Sets</a> below) are used in a MARC 21 bibliographic record, field 066  must appear in the record. The alternate graphic character sets are identified in subfield $c of field 066 to assist machine processing. However a record should not have a 066 field if only Technique 1 escape sequences are used in it.</p>
+<h5><a name="combine">Combining characters (diacritics)</a></h5>
+<p>Graphic combining characters are always used in conjunction with other graphic characters, functionally referred to as base characters.  More than one combining character may be associated with one base character. As noted in <a href="specchargeneral.html">Part 1</a>, MARC 21 uses ANSEL combining characters rather than similar appearing ASCII characters, which are not combining characters, to encode diacritics associated with alphabetic characters. The combining marks that are used in conjunction with base characters appear in the ANSEL character set in code point range E0-FE(hex)  (G1 set). The Greek, the Hebrew, and the Basic and Extended Arabic character sets also include some MARC-8 combining marks.  In a MARC-8 encoded character string, these <em>combining characters precede the base</em> character that they modify. When a graphic character in MARC-8 encoding requires multiple combining characters, they are entered in the order in which they appear, reading left to right (or right to left with right-to-left scripts) and top to bottom.</p>
+<h5><a name="directionality">Directionality of text</a></h5>
+<p>The contents of a field in a MARC 21 record using the MARC-8 encoding are always recorded in their logical order, from the first character to the last, regardless of the directionality of the text being recorded. When data in a subfield are written in a bidirectional script (such as Arabic or Hebrew), the subfield delimiter/code pair (always a left-to-right sequence) is followed by the escape sequence which invokes the character set for the script and then immediately by the logically first character of the text (i.e., exactly the same as for text in a left-to-right script). The first character of text in a bidirectional script does not occur at the end of the field just before the field terminator.  An example of 
+a field with bidirectional script data is given at the bottom of the following section.
+</p>
+<hr>  
+<h4><a name="alternative">ACCESSING ALTERNATE GRAPHIC CHARACTER SETS</a></h4>
+<p>There are currently two techniques to access an alternate graphic character set in MARC 21 records using the MARC-8 encoding. One way is a MARC-specific technique for accessing a small number of characters; the other involves using standard escape sequences to access various registered character sets. Below is an explanation of these two techniques.</p>
+<h5><a name="technique1">Technique 1: Using custom sets for Greek Symbols, Subscript, and Superscript characters</a></h5>
+<p>Three Greek Symbols (alpha, beta, and gamma), fourteen Subscript characters, and fourteen Superscript characters have been placed in three custom graphic character sets, created exclusively for MARC, that are accessed by a locking escape sequence. The technique for accessing these characters is outside the framework specified in ANSI X3.41 or ISO 2022. These three custom sets are designated as sets in code point ranges 21(hex) through 7E(hex) by means of a two-character sequence consisting of the <em>escape</em> character and an <em>ASCII graphic character</em>. The specific escape sequences for the three custom sets are:</p>
+<ul>
+<li>ESCg (ASCII 1B(hex) 67(hex)) for the Greek Symbol set</li>
+<li>ESCb (ASCII 1B(hex) 62(hex)) for the Subscript set</li>
+<li>ESCp (ASCII 1B(hex) 70(hex)) for the Superscript set</li>
+</ul>
+<p>When one of these character sets is invoked using the escape sequence, the escape is locking which means that all characters following the escape sequence are interpreted as being part of the newly designated character set until another escape sequence is encountered. This follow-on escape sequence may redesignate ASCII or designate another custom character set. To redesignate ASCII, the following two-character escape sequence is used:</p>
+<ul>
+<li>ESCs (ASCII 1B(hex) 73(hex)) for ASCII default character set</li>
+</ul>
+<p>The use of the three characters in this Greek Symbol set is discouraged as they present mapping difficulties.  (See <a href="speccharconversion.html">Part 4</a>, Special Mapping Issues.)</p>
+<h5><a name="technique2">Technique 2: Using standard alternate graphic character sets</a></h5>
+<p>All other alternate graphic character sets should be designated and invoked in accordance with ANSI X3.41, <em>Code Extension Techniques for Use with 7-bit and 8-bit Character Sets</em> or its international counterpart ISO 2022.  Consult these standards for a complete specification of the techniques.  The following discussion is simplified, but covers all cases pertaining to MARC-8 practice.</p>
+<p>At the present time, additional sets are accessed through designation as either G0 (codes 21(hex) through 7E(hex)) or G1 (codes A1(hex) through FE(hex)). Alternate graphic character sets are designated and invoked by means of a multiple character escape sequence consisting of the <em>escape</em> character, an Intermediate character sequence, and a Final character in the form ESC I F, where:</p>
+<ul>
+<li>ESC is the <em>escape</em> character (ASCII 1B(hex))</li>
+<li>  I is the Intermediate character sequence, which may be one or more characters in length and indicates whether the set is designated as the G0 set or the G1 set and whether the set has one byte or multiple bytes per character, and, if the Intermediate sequence contains more than one character, additional information. The following values may be used for the Intermediate character sequence:</li>
+</ul>
+<div class="levela">To designate as the G0 set:</div>
+<div class="levelb">For a set with one byte per character</div>
+<div class="levelc">I = 28(hex) [ASCII graphic: ( ]</div>
+<div class="levelc">or I = 2C(hex) [ASCII graphic: , ].</div>
+<div class="levelb">For a set with multiple bytes per character</div>
+<div class="levelc">I = 24(hex) [ASCII graphic: $ ]</div>
+<div class="levelc">or I = 24(hex) 2C(hex) [ASCII graphics: $ , ].</div>
+<div class="levela">To designate as the G1 set:</div>
+<div class="levelb">For a set with one byte per character</div>
+<div class="levelc">I = 29(hex) [ASCII graphic: ) ]</div>
+<div class="levelc">or I = 2D(hex) [ASCII graphic: - ].</div>
+<div class="levelb">For a set with multiple bytes per character</div>
+<div class="levelc">I = 24(hex) 29(hex) [ASCII graphics: $ ) ]</div>
+<div class="levelc">or I = 24(hex) 2D(hex) [ASCII graphics: $ - ].</div>
+<ul>
+<li> F is the Final character in the escape sequence, which identifies the graphic character set being designated. The codes for Final characters are assigned by the registration authority of the <a href="http://www.iso.org">International Organization for Standardization</a> (ISO) for many sets. These sets are assigned codes in the range 40(hex) through 7E(hex); other character sets intended for local use may be assigned a code outside this range. The Final characters for alternate graphic character sets approved for use in MARC-8-encoded MARC 21 are the following:</li>
+</ul>
+<div class="leveld">33(hex) [ASCII graphic: 3] = Basic Arabic</div>
+<div class="leveld">34(hex) [ASCII graphic: 4] = Extended Arabic</div>
+<div class="leveld">42(hex) [ASCII graphic: B] = Basic Latin (ASCII)</div>
+<div class="leveld">21(hex)45(hex) [ASCII graphics: !E] = Extended Latin (ANSEL) (the 21(hex) technically is a second character of the Intermediate segment of this escape sequence.)</div>
+<div class="leveld">31(hex) [ASCII graphic: 1] = Chinese, Japanese, Korean (EACC)</div>
+<div class="leveld">4E(hex) [ASCII graphic: N] = Basic Cyrillic</div>
+<div class="leveld">51(hex) [ASCII graphic: Q] = Extended Cyrillic</div>
+<div class="leveld">53(hex) [ASCII graphic: S] = Basic Greek</div>
+<div class="leveld">32(hex) [ASCII graphic: 2] = Basic Hebrew</div>
+<h5><a name="escape">Use and placement of escape sequences</a></h5>
+<p>Escape sequences to designate alternate graphic character sets may occur wherever the alternate characters are needed, e.g., within a word, at the beginning of a subfield, or in the middle of a subfield. However, the escape sequence never replaces a space.</p>
+<p>Escape sequences are locking. The alternate graphic character set remains designated as the Gn set until another graphic character set is designated. If the ASCII graphics have been displaced as the G0 set within a subfield, ASCII graphics must be designated as the G0 set before a subfield delimiter or field terminator. Some alternate character sets include separately defined marks of punctuation that duplicate those defined in ASCII. They may be used when the alternate graphics are used.  (See <a href="speccharconversion.html">Part 4</a>, Special Mapping Issues.)</p> 
+<p><em>Example</em>:</p>
+<p><img src="images/spec1901.gif" alt="Alternate Graphics Example" width="600" height="27"></p>
+<div class="leveld">E = <em>Escape</em> control function code (1B(hex))  </div>
+<div class="leveld">( = set is designated as the G0 set and has one byte per character</div>
+<div class="leveld">N = Basic Cyrillic character set</div>
+<div class="leveld">B = ASCII default character set</div>
+<p>When the text of a field which has an indicator for nonfiling characters begins with an escape sequence, the bytes in the escape sequence are not included in the count of nonfiling characters.</p>
+<p>Example of a field containing bidirectional script data:</p>
+<div class="examplecap">Order of data as it might be displayed</div>
+<!-- stop -->
+<div class="example"><img src="images/spec1903.gif" alt="Field Orientation Example" width="600" height="39"></div>
+<div class="examplecap1">Order of data in MARC record</div>
+<div class="example"><img src="images/spec1902.gif" alt="Field Orientation Example"  width="600" height="38"></div>
+<div class="leveld">E = <em>Escape</em> control function code 1B(hex)</div>
+<div class="leveld">( = set is to be designated as the G0 set and has one byte per character</div>
+<div class="leveld">2 = Hebrew character set</div>
+<div class="leveld">B = ASCII default character set</div>
+
+<!-- InstanceEndEditable -->
+<hr size="1" noshade>
+<p><a href="../../marc.html">MARC 21 HOME</a> &gt;&gt; <!-- InstanceBeginEditable name="bottombreadcrumb" --><a href="spechome.html">Specifications</a> &gt;&gt; <a href="speccharintro.html">Character
+      Sets</a> &gt;&gt; <strong>Part 2
+</strong><!-- InstanceEndEditable --></p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr valign="bottom">
+    <td><a href="../../index.html">The Library of Congress</a> &gt;&gt; <a href="../../library/index.html">Especially
+    for Librarians and Archivists</a> &gt;&gt; <a href="../../standards/index.html">Standards</a><br>
+    (<!-- MM:BeginLock type="mmdate" format="Am3" orig=" -->
+    <!-- #BeginDate format:Am3 -->12/05/2007<!-- #EndDate -->
+    ) </td>
+    <td align="right"><a href="http://www.loc.gov/cdn-cgi/l/email-protection#79171d140a163915161a571e160f">Contact Us</a></td>
+  </tr>
+</table>
+<script data-cfasync="false" src="http://www.loc.gov/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+<!-- InstanceEnd --></html>

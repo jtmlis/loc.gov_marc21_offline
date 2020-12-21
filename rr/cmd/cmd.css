@@ -1,0 +1,140 @@
+body {
+    margin: 0px;
+	padding: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #333333;
+}
+td {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #333333;
+}
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #333333;
+}
+dd {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #666666;
+	margin-left: 10pt;
+
+
+}
+dt {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #000066;
+
+}
+.larger {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	font-weight: bold;
+}
+.caption {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+}
+a.white {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #EEEEEE;
+	text-decoration: none;
+}
+a.white:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+.white-text {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #EEEEEE;
+}.drop-box {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+}
+h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16pt;
+	font-weight: bold;
+	color: #330066;
+}
+h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14pt;
+	font-weight: bold;
+	color: #996633;
+}
+.largecap {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14pt;
+	font-weight: bold;
+	color: #000066;
+}
+.blue-header {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	font-weight: bold;
+	color: #330066;
+}
+address {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+}
+.selected {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #330066;
+}
+.redtext {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: bold;
+	color: #990000;
+}
+h3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13pt;
+	font-weight: bold;
+	color: #666666;
+}
+li {
+	line-height: 20px;
+	list-style-type: square;
+	margin-left: -20px;
+}
+.redtext2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-style: bold;
+	color: #FF0000;
+}
+.center{
+	text-align: center;
+}
+h4{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #333333;
+}
+.background-brown {
+	background-image: url(images/spacer-brown.gif);
+	background-color: #996633;
+}
+.background-gray {
+	background-image: url(images/spacer-gray.gif);
+	background-color: #DDDDDD;
+}
+.background-ltbrown {
+    background-image: url(images/spacer-ltbrown.gif);
+	background-color: #F4EBE0;
+}
+     

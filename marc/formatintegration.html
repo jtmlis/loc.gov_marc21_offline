@@ -1,0 +1,148 @@
+<!doctype html public "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+
+<head>
+<title>006, 007, and 008 in the MARC 21 Bibliographic Format (Library of Congress) </title>
+<base href="">
+<meta name="description" content="This document compares the relationship between the 006, 007, and 008 fields of the MARC 21 formats.  It uses a general model that clarifies how repetitions of field 006 and a single field 008 coexists in a record, especially in relation to the values in Leader character position 06 (Type of record) and 07 (Bibliographic level).">
+<meta name="keywords" content="MARC 21 formats, 006, 007, 008, format integration">
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<h4 align="center"><i>MARC 21 Bibliographic Format</i></h4>
+<h2 align="center">Relationship of Fields 006, 007, and 008</h2>
+<h3 align=center>Network Development and MARC Standards Office <br>
+Library of Congress </h3>
+<hr>
+<p>
+
+
+
+<h3>GENERAL MODEL</h3>
+
+<p>Because of special circumstances regarding MARC 21 variable control fields, special attention was focused on that area during the Format Integration discussions of 1983-1988.  A new bibliographic data element, field 006 (Fixed-Length Data Elements--Additional Material Characteristics), was defined to solve the problem of the non-repeatability of field 008 (Fixed-Length Data Elements).  A general model was adopted to indicate how repetitions of field 006 and a single field 008 would coexist in a record, especially in relation to the values in Leader character positions 06 (Type of record) and 07 (Bibliographic level).  The relationship of field 007 (Physical Description Fixed Field) to fields 008 and 006 was also clarified.</p>
+
+<h4>Form of Material Designations in MARC 21</h4>
+
+        The MARC 21 bibliographic format identifies form of material on several levels.  The first level consists of seven general forms of material.  They are:
+<pre>     <u>Form of Material Level I (field 008)</u>
+     Books
+     Computer files
+     Maps
+     Music 
+     Serials
+     Visual materials
+     Mixed materials  
+</pre>
+<p>Seventeen positions in field 008 (positions 18-34) are defined differently in MARC 21 bibliographic records for each of the seven Level I forms of material.  Field 008 does not carry any explicit flag identifying the definition of positions 18-34.  Instead, the identification of the type of field 008 is dependent on the content of Leader/06 (Type of record) and,in the case of textual material (i.e., when Leader/06 contains value a), the content of Leader/07 (Bibliographic level).  The combination of Leader/06 and Leader/07 values determine Level II form of material in MARC 21 bibliographic records.  The relationships between Level I designations and Level II are as follows:</p>
+<pre><u>Form of Material <b>Level II</b> (Leader/06)</u>        <u>Form of Material <b>Level I</b> (field 008)</u>
+
+Language material (and any bibliographic   Books
+   level except serial or serial compon-
+   ent part)
+Manuscript language material               Books
+
+Language material (bibliographic level     Serials
+   is for a serial or serial component 
+   part only)
+
+Projected medium                           Visual Materials
+Kit                                        Visual Materials
+Two-dimensional nonprojectable graphic     Visual Materials
+Three-dimensional artifact or naturally    Visual Materials 
+   occurring object     
+
+Mixed material (often an archival          Mixed materials
+    collection)
+Printed music                              Music
+Manuscript music                           Music
+Nonmusical sound recording                 Music
+Musical sound recording                    Music
+
+Cartographic material                      Maps
+Manuscript cartographic material           Maps
+
+Computer file                              Computer files
+</pre>
+<p>Since field 008 is not repeatable and is dependent on the content of Leader/06 and Leader/07 for its definition, only one occurrence of field 008 can be included in a MARC 21 record.  Field 008 thus provides coded information about only one aspect of an item.  Data concerning additional aspects of a bibliographic item are coded in repeating fields 006.
+<p>
+Field 006 contains the same elements as the part of field 008 that varies for different forms of material (i.e., character positions 18-34).  There are seven different configurations of field 006 defined, one for each type of field 008.  Since the configuration of field 006 is identified by the content of the first character position of the field, as many occurrences of field 006 may be included in a record as are needed.  Most often this would be to record additional information about a non-textual serial or multimedia item.
+<p>
+It should be noted that a third level of material designation is found in MARC 21 bibliographic records in field 007 (Physical Description Fixed Field).  The following forms of material are identified in this field:
+<pre>     <u>Form of Material Level III (field 007)</u>
+     Map
+     Computer file
+     Globe
+     Tactile material 
+     Projected graphic
+     Microform
+     Nonprojected graphic
+     Motion picture
+     Kit
+     Notated music
+     Remote-sensing image
+     Sound recording
+     Text
+     Videorecording
+     Unspecified
+</pre>
+<p>
+These categories are identified as ones for which information about special physical features need to be recorded.  Field 007 is defined differently for each of the Level III forms and  uses the first character position to identify the configuration.  All types of field 007 may be used with any of the Level I forms, if needed.
+<p>
+In general, the 008 and 006 are regarded as containing "bibliographic" information about a work, while the 007 is regarded as carrying information about the "physical" characteristics of the item.  This dichotomy does not hold for all character position definitions, however, and the line between bibliographic and physical is not always clear in some media.
+
+<h4>Model</h4>
+The following model is used to determine the data to be included in a MARC 21 bibliographic record:
+<p>
+If an item is <u>basically textual</u>:
+<ul>
+<li>Leader/06 is coded for language material, manuscript language material, 
+       or mixed material;
+<li>Leader/07 is coded for monograph, serial, collection, etc.;
+<li>Field 008 is configured for book, serial, or mixed material (depending on Leader/06 and /07 values);
+<li>Field 006 with any configuration is coded as needed (books, computer 
+       files, maps, music, serials, visual materials, mixed materials);
+<li>Variable fields of any type, if applicable to the form or control 
+       of the item, are used.
+</ul>
+If an item is <u>not</u> basically textual:
+<ul>
+     <li>Leader/06 is coded for printed map, manuscript map, projected medium,
+       two-dimensional nonprojectable graphic, printed music, manuscript 
+       music, nonmusical sound recording, musical sound recording, computer 
+       file, kit, or three-dimensional artifact or naturally occurring object;
+     <li>Leader/07 is coded for monograph, serial, collection, etc.;
+<li>  Field 008 is configured for computer file, map, music, or visual material;
+ <li>  Field 006 with any configuration is coded as needed (books, computer 
+       files, maps, music, serials, visual materials, mixed materials);
+     <li> Variable fields of any type, if applicable to the form or control 
+       of the item, are used.
+</ul>
+<p>
+<!---Navigation--->
+<hr>
+<br>
+<em>Go to:</em> 
+<ul>
+<li><a href="../marc.html">MARC Home Page</a>
+<li><a href="../index.html">Library of Congress Home Page</a>
+</ul>
+<p>
+
+<!---LC Footer--->
+<hr>
+<IMG SRC="../homepage/lc2.gif" height=46 width=91 ALT="Library of Congress"> <strong>Library of Congress</strong><br>
+<address> 
+<!--help desk email start -->
+<a href="http://www.loc.gov/help/help-desk.html">Library of Congress Help Desk</a> 
+<!--help desk email end -->
+( 
+<!-- #BeginDate format:Am3 -->12/31/2002<!-- #EndDate -->
+)</address>
+
+
+<script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+
+</html>

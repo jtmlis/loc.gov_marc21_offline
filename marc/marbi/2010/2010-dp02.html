@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                        "http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/marc_dp.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Encoding URIs for controlled values in MARC records</title>
+<!-- InstanceEndEditable --><!-- InstanceBeginEditable name="head" -->
+<meta name="description" content="This paper suggests recording URIs for controlled values in the subfield appropriate to the value itself, distinguished by angle brackets around the URI, which is a standard way of representing them. (Network Development and MARC Standards Office, Library of Congress">
+<meta name="keywords" content="URIs, Controlled values, RDA , marbi, marc, discussion paper">
+<meta name="author" content="Library of Congress Network Development and MARC Standards Office">
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../../marc_prop.css" rel="stylesheet" type="text/css">
+
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+
+<body bgcolor="#ffffff">
+<p><a id="skip" href="2010-dp02.html#skip_menu"><img src="http://www.loc.gov/marc/images/clear.gif" border="0" alt="Skip Navigation Links"></a><a href="../../../index.html">The Library of Congress</a> &gt;&gt; <a href="../../../library/index.html">Especially
+  for Librarians and Archivists</a> &gt;&gt; <a href="../../../standards/index.html">Standards</a></p>
+<p><a href="../../../marc.html"><img src="http://www.loc.gov/marc/marc-bar.gif" alt="MARC Standards" width="620" height="36" border="0"></a></p>
+<p><a href="../../../marc.html">HOME</a> &gt;&gt; <a href="http://www.loc.gov/marc/development.html">MARC
+    Development</a> &gt;&gt; <a href="http://www.loc.gov/marc/marbi/list-dp.html">Discussion Paper List</a></p>
+<hr size="1" noshade><a name="skip_menu"></a>
+<h1>MARC DISCUSSION PAPER NO. <!-- InstanceBeginEditable name="dpno" -->2010-DP02<!-- InstanceEndEditable --></h1>
+<!-- InstanceBeginEditable name="content" -->
+<p><strong>DATE:</strong> December 14, 2009 <br>
+<strong>REVISED:</strong></p>
+<p><strong>NAME:</strong> Encoding URIs for controlled values in MARC records </p>
+<p><strong>SOURCE:</strong> RDA/MARC Working Group </p>
+<p><strong>SUMMARY:</strong> This paper suggests recording URIs for controlled values in the subfield appropriate to the value itself, distinguished by angle brackets around the URI, which is a standard way of representing them. </p>
+<p><strong>KEYWORDS:</strong> URIs; Controlled values; RDA </p>
+<p><strong>RELATED:</strong> <a href="http://www.loc.gov/marc/marbi/2009/2009-dp01-1.html">2009-DP01/1</a>; <a href="http://www.loc.gov/marc/marbi/2009/2009-dp06-1.html">2009-DP06/1</a></p>
+<p><strong>STATUS/COMMENTS:</strong> <br>
+12/14/2009 - Made available to the MARC 21 community for discussion. </p>
+<p>1/17/10 - <u>Results of MARC Advisory Committee discussion:</u> Some participants were reluctant to experiment with encoding URIs in MARC records because of the large amount of effort for systems to support experimentation. This includes questions about how to explain, what to get back, how to define the relationship between a value and a URI. Some were interested in experimenting with a set of test records. Nothing will be finalized on this until issues are sorted out, but a document will be prepared with some guidelines and examples of how URIs might be used in MARC records so that those that wish to may experiment. </p>
+<hr>
+<h2>Discussion Paper No. 2010-DP02: Encoding URIs for controlled values in MARC Records</h2>
+<h3>1. BACKGROUND</h3>
+<p>Elements in the MARC format may use different types of value strings, such  as text, codes, or URI for controlled values. The use of a URI instead of plain  text is particularly applicable to situations where the value of the particular  element comes from a controlled vocabulary, which could be an authority list or  formal thesaurus (e.g. a name from the LC Name Authority File or a topic for an  LCSH heading) or any other list of controlled codes or terms (e.g. the MARC  Code List for Languages). Although URIs have not been made available for  values in all of the aforementioned controlled vocabularies, work is underway  to provide them. LC&rsquo;s Network Development and MARC Standards Office is  developing a registry service for controlled lists and in so doing is  establishing URIs both for the lists themselves and for each value on a list. When  completed these will be available at <a href="http://id.loc.gov/">http://id.loc.gov/</a> and will include the MARC language codes, MARC country codes, MARC relator  codes, MARC geographic area codes, ISO 639-2 language codes, and other value  lists. Other agencies are also developing URI lists. OCLC's terminologies  service is one instance. RDA has many vocabularies and a DCMI Task Group is  establishing URIs that identify each value or concept in those RDA  vocabularies.<br>
+  <br>
+Encoding URI to represent controlled values was first discussed during the  Midwinter 2009 MARBI meeting in <a href="http://www.loc.gov/marc/marbi/2009/2009-dp01-1.html">2009-DP01/1</a>.  The MARC Advisory Committee considered whether to use the applicable URI in the  appropriate subfield in place of the value or to define a new subfield for the  URI. The preference was to define subfield $1 (one) across fields and formats  to enable the encoding of a URI that would replace or supplement the textual or  coded value. The topic was presented again at the Annual 2009 meetings in  Chicago in another discussion paper, <a href="http://www.loc.gov/marc/marbi/2009/2009-dp06-1.html">2009-DP06/1. </a>There  was not consensus about the best approach.&nbsp;  Some participants were wary of the proposed subfield $1, which would  derive its meaning from its order of placement, in relation to other subfields  within the field. Others suggested a new field modeled on field 880 (Alternate  graphic representation) where URIs are included in appropriate subfields where  the value would otherwise be recorded and linked to the field that contains the  literal values. Although a mechanism for recording controlled value URIs is not  a necessity for implementation of RDA, participants expressed interest in  having such a method for experimentation. This paper reconsiders previous  discussion, suggesting a simpler mechanism for recording them that does not  require change to the format.&nbsp; It focuses  on relating vocabulary values with their corresponding URI links. </p>
+<h3>2. DISCUSSION</h3>
+<h4>2.1 URIs for controlled vocabularies</h4>
+<p>URIs for controlled vocabularies are identifiers for a concept, which may  take the form of a code (e.g., language code &quot;eng&quot;), a term (e.g.,  RDA content type &quot;sounds&quot;), or a string that identifies a  bibliographic resource (e.g., a subject, name, or name/title heading). &nbsp;Whether the URI is resolvable is another  issue.&nbsp; URIs may be pure identifiers or resolvable ones.<br>
+  <br>
+The URIs for bibliographic resources themselves are not considered  here.&nbsp; URIs for resources themselves may  be identified in field 856, or, if a resource is a supplemental resource, in  subfield $u within other MARC fields. </p>
+<h4>2.2 Data elements where URIs might be desirable</h4>
+<p>URIs for controlled values and headings are most likely to be used for the  following:<br>
+  <br>
+Values:</p>
+<ul type="disc">
+  <li type="disc">Relator term/code $e and $4       subfields (e.g., in Bibliographic 1XX, 6XX, 7XX and 8XX fields) </li>
+  <li type="disc">Subfields being defined for       RDA that can use controlled vocabularies (e.g., in newly defined fields       336, 337, and 338). </li>
+  <li type="disc">Coded data subfields (e.g. in       fields 040, 041, 043, 044) </li>
+  <li type="disc">Other subfields that use controlled       vocabularies (e.g., in some that currently contain a subfield $2) </li>
+</ul>
+<p>Headings:</p>
+<ul type="disc">
+  <li type="disc">Any controlled access points       (e.g., Bibliographic 1XX, 240, 6XX, 7XX and 8XX fields; Authority 1XX, 5XX       and 7XX fields) </li>
+</ul>
+<h4><strong>2.3. Problems with former approaches for including URIs</strong></h4>
+<p>Previous discussions have suggested defining a new subfield $1 (the only  subfield available across MARC fields and formats) for controlled value URIs,  but there is no easy way to link them to the subfield(s) to which they pertain.  Therefore one would have to rely on subfield sequencing to identify which  subfield they relate to. Extensive rules would need to be written to specify subfield  sequencing.&nbsp; The automated systems  libraries use would need to be able to retain and understand the importance of  subfield sequencing. The other suggestion, using a field similar to field 880,  which links to another field to identify the related data element, is a  cumbersome technique that requires special computer processing. </p>
+<h4><strong>2.4.&nbsp; New approach for including  URIs for values and headings </strong></h4>
+<p><em>For Values:<br>
+</em><br>
+For code and term values this paper suggests using the same subfield for a  URI that is already defined for a given data element. URIs are clearly  identifiable by their syntax and systems know what to do with them. A convention  could be used to indicate that they are URIs rather than literal values. It is  suggested that angle brackets be used around the URI, which is a standard way  to reference URIs. &nbsp;Instead or in  addition, a mark such as the exclamation point could be used before the  URI.&nbsp; Programmers at LC have indicated  that it would be easier to process these URIs if they are in appropriate  subfields rather than the other alternatives. Therefore, so that order does not  determine what value a URI is related to, it is suggested that URIs be recorded  in the same subfield as the value, separated by angle brackets or by  exclamation and angle brackets as noted above. Systems will be able to identify  that a value is a URI if it is in the standard syntax and surrounded by angle brackets. </p>
+<p>For exchange of records the best practice would be to supply both the URIs  and the values in records. Internally systems may store only one or the other  or both. </p>
+<p>Since fixed fields have a specified number of characters, URIs can not be  added to them. In cases where it is necessary to record a URI for data that  belongs in a fixed field, an alternate variable field should be used. The code  would be in the fixed field and repeated in the variable field with its  URI.&nbsp; For example, the format already specifies  for field 041 (Language Code) that the code in 008 is repeated as the first  code in 041, therefore the URI for that code would be in the subfield with the  repetition of the code.&nbsp; All other fixed  fields would need to be examined and the appropriate variable fields that  relate to them specified with guidelines where needed.</p>
+<p>There are currently some uses of angle brackets in MARC data to show,  primarily, partial runs of multipart items, especially series and serials.&nbsp; The main areas are in subfield $3 (Materials  specified) in the 490 and 8XX series fields and in field 300 (Physical  Description) subfield $a (Extent).&nbsp; Also  the parts to which a characteristic may apply may be indicated with angle  brackets in the Bibliographic 5XX note fields, especially field 500 (General  Note).&nbsp; It is also expected that the  specifications for the repetition of field 260 (Publication, Distribution, etc.)  will use subfield $3 for data that may contain angle brackets.&nbsp; A URI would not be used in these subfields  but a careful analysis is needed to determine where the URI would be  needed.&nbsp; </p>
+<p><em>For Headings:<br>
+</em><br>
+URIs that identify headings -- which are often composed of several subfields  -- would be recorded in subfield $0 (Authority Record Control Number for  headings in Authority records) or subfield $w (Bibliographic Record Control  Number for headings in Bibliographic records).&nbsp;  Those subfields are already defined and used for (local) control number  type identifiers.<br>
+<br>
+For exchange of records the best practice would be to supply both the URIs  and the headings in records. Internally systems may store only one or the other  or both.</p>
+<h3>3. EXAMPLES</h3>
+<p>Note that some of the following examples have hypothetical URIs where final  decisions have not yet been made as to what to use. The subfields in bold are  ones for which URIs for the values are also in the field.&nbsp; (Two of the examples show the option of using  also an exclamation point to separate the URI from the value.)</p>
+<p><em>Heading and relator URIs</em><br>
+700 1# <strong>$aGalway, James.</strong> $0&lt;http://lccn.loc.gov/n81042545&gt;<strong>$4prf</strong> <br>
+&lt; http://id.loc.gov/vocabulary/relators/prf&gt; <strong>$4cnd</strong> <br>
+&lt;http://id.loc.gov/vocabulary/relators/cnd&gt;</p>
+<p>or<br>
+  <br>
+700 1# <strong>$aGalway, James.</strong> $0&lt;http://lccn.loc.gov/n81042545&gt;<strong>$4prf</strong>!<br>
+&lt;  http://id.loc.gov/vocabulary/relators/prf&gt; <strong><br>
+$4cnd</strong><strong>!</strong><strong>&lt;</strong>http://id.loc.gov/vocabulary/relators/cnd&gt;<br>
+<br>
+  <em>Heading and relator URIs </em><br>
+  110 2# <strong>$aUniversity of Texas.  $bDept. of Anthropology.</strong> <br>
+  $0&lt;http://lccn.loc.gov/n86041077&gt; <strong>$4spn</strong> &lt;http://id.loc.gov/vocabulary/relators/spn&gt;<br>
+  <br>
+  <em>Subject Heading URI</em><em><br>
+  </em>650 #0 <strong>$aWorld Wide Web.</strong> <br>
+$0(DLC)sh9500541$0&lt;http://id.loc.gov/authorities/sh95000541&gt;<br>
+<br>
+  <em>Source List code and organization code URIs </em><br>
+  583 1# $awill transform digitally $c20031104 $iOCR $zqueued for digitization, Nov. 4, <br>
+  2003 <strong>$2pda</strong> &lt;http://id.loc.gov/vocabulary/sources/pda&gt; <strong>$5NIC</strong> <br>
+  &lt;http://id.loc.gov/vocabulary/organizations/nic&gt;<br>
+  <br>
+  <em>Carrier type text, code, and code list URIs </em><br>
+338 ## <strong>$aaudio</strong><strong>disc</strong>&lt;http://RDVocab.info/termList/RDACarrierType/1004&gt;<br>  
+$b<strong>sd</strong>&lt;http://id.loc.gov/vocabulary/marccarrier/sd&gt; <strong><br>
+$2marccarrier</strong>&lt;http://id.loc.gov/vocabulary/sources/marccarrier&gt; </p>
+<p>or <br>
+  <br>
+338 ## <strong>$aaudio </strong><strong>disc</strong>!&lt;http://RDVocab.info/termList/RDACarrierType/1004&gt;$b<strong>sd</strong><strong>!</strong><br>&lt;http://id.loc.gov/vocabulary/marccarrier/sd&gt; <br>
+<strong>$2marccarrier</strong><strong>!</strong>&lt;http://id.loc.gov/vocabulary/sources/marccarrier&gt;<br>
+<br>
+  <em>Language code URI </em><br>
+041 1# <strong>$aeng</strong> &lt;http://id.loc.gov/vocabulary/languages/eng&gt; <strong>$hger</strong> <br>
+&lt;http://id.loc.gov/vocabulary/languages/ger&gt; <strong>$hswe</strong> <br>
+&lt;http://id.loc.gov/vocabulary/languages/swe</p>
+<!-- InstanceEndEditable -->
+<hr size="1" noshade>
+<p><a href="../../../marc.html">HOME</a> &gt;&gt; <a href="http://www.loc.gov/marc/development.html">MARC
+  Development</a> &gt;&gt; <a href="http://www.loc.gov/marc/marbi/list-dp.html">Discussion Paper  List</a></p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr valign="bottom">
+    <td width="64%"><a href="../../../index.html">The Library of Congress</a> &gt;&gt; <a href="../../../library/index.html">Especially
+    for Librarians and Archivists</a> &gt;&gt; <a href="../../../standards/index.html">Standards</a><br>
+    (<!-- MM:BeginLock type="mmdate" format="Am3" orig=" -->
+    <!-- #BeginDate format:Am3 -->12/21/2010<!-- #EndDate -->
+    ) </td>
+    <td width="27%" align="center" valign="bottom"><a href="../../../homepage/legal.html">Legal</a> | <a href="../../../global/disclaim.html">External Link Disclaimer</a>
+	      </td>
+    <td width="9%" align="right"><a href="http://www.loc.gov/cdn-cgi/l/email-protection#5638323b2539163a393578313920">Contact Us</a></td>
+  </tr>
+</table>
+<address>
+</address>
+
+<script data-cfasync="false" src="http://www.loc.gov/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+<!-- InstanceEnd --></html>

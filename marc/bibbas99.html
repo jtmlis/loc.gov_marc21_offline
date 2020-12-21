@@ -1,0 +1,136 @@
+<!doctype html public "-//W3C//DTD HTML 3.2 Final//EN">
+
+<html>
+<head>
+<title>MARC 21 Format for Bibliographic Data Format Change List (Library of Congress) </title>
+<base href="">
+<meta name="description" content="This document contains a list of the format changes that accompany the MARC 21 Format for Bibliographic Data">
+<meta name="keywords" content="MARC 21, bibliographic format, format changes, change appendix, Appendix G, Base Text, February 1999">
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+<body>
+<em>MARC: News and Announcements (July 21, 1999)</em>
+<hr>
+<h1 align=center>TECHNICAL NOTICE (July 21, 1999)</h1>
+<h4 align=center><em>Format for Bibliographic Data</em></h4>
+<h3 align=center>Format Changes List <br>
+Base Text (February 1999)</h3>
+<h3 align=center>Network Development and MARC Standards Office
+<br>Library of Congress</h3>
+<hr>
+<p>
+This section is provided for the lists of format changes that accompany each update to the <i>MARC 21 Format for Bibliographic Data</i>.  It can also be found in Appendix G of the <i>MARC 21 Bibliographic Format</i>.
+<p>
+This edition of the <I>MARC 21 Format for Bibliographic Data</I> supersedes the March 1994 base text and updates No. 1 (March 1995) through No. 3 (July 1997) to the <I>USMARC Format for Bibliographic Data</I> as well as the September 1993 base text and updates No. 1 (October 1994) through No. 6 (January 1998) to the <I>Canadian MARC Communication Format for Bibliographic Data</I>.  It includes changes resulting from proposals which were considered by the ALA ALCTS/LITA/RASD Machine-Readable Bibliographic Information Committee (MARBI) at its meetings from 1998 through February 1999 and by the Canadian Committee on MARC (CCM) at its meetings from 1998 through February 1999.
+<p>
+<u>LC Implementation Plans</u><br>
+Subscribers can anticipate receiving MARC records reflecting these changes in all distribution services not earlier than October 21, 1999.
+<hr>
+<UL>
+<LI><I>Deleted content designators:</I>
+<UL type="disc" >
+<LI><U>Field</U>
+<UL type="circle"><LI><B>551  Entity and Attribute Information Note </B><I>[redefined as field 552]</I></UL></UL>
+<UL type="disc">
+<LI><U>Code values</U>
+<UL type="circle"><LI>007 Remote-sensing image - character position 01 (Specific <br>material designation): <B>code # (No type specified)</B> <I>[redefined as code u <br>(Unspecified)]</UL>
+</I></UL></UL></UL>
+<UL type="disc">
+<LI><I>Local content designators</I><UL type="disc">
+<LI><U>Fields</U><UL type="circle">
+<LI><B>261  Imprint Statement for Films (Pre-AACR 2)
+<LI>262  Imprint Statement for Sound Recordings (Pre-AACR 2)
+<LI>400  Series Statement/Added Entry Personal Name
+<LI>410  Series Statement/Added Entry Corporate Name
+<LI>411  Series Statement/Added Entry Meeting Name</B></UL></UL><UL type="disc">
+<LI><U>Subfield codes</U><UL type="circle">
+<LI><B>$d  Plates or publisher's number for music (Pre-AACR 2)</B> <I>in</I> <br> field 260 (Publication, Distribution,etc. (Imprint)
+</UL></UL></UL>
+
+<UL>
+<LI><I>Obsolete content designators</I><UL type="disc">
+<LI><U>Code values</U><UL type="circle">
+<LI>006 Maps - character positions 16-17 (Special format <br> characteristics): <B>codes m  (Braille), q (Large print) </B>
+<LI>008 Maps - character positions 33-34 (Special format <br> characteristics): <B>codes m  (Braille), q (Large print)</B>
+</UL></UL></UL>
+
+<UL>
+<LI><I>New content designators:</I><UL type="disc">
+<LI><U> Fields</U><UL type="circle">
+<LI><B>007  Physical Description Fixed Field (Tactile Material)
+<LI>007  Physical Description Fixed Field (Kit)
+<LI>007  Physical Description Fixed Field (Notated Music)
+<LI>526  Study Program Information Note
+<LI>552  Entity and Attribute Information Note</B> <I>[provisionally defined <br> with tag 551]</I></UL></UL>
+<UL type="disc"><LI><U>Indicators</U><UL type="circle">
+<LI>028 Publisher Number - 1st indicator (Type of publisher number): <B>value 5 (Other <br>publisher number)</B>
+<LI>052 Geographic Classification - <B>1st indicator (Source of code): values <br> (LC classification), 0 (U.S. Department of Defense classification),<br> 7 (Source in subfield 2)</B>
+<LI>210 Abbreviated Title - <B>2nd indicator (Type of abbreviated title): values <br> (Abbreviated key title), 0 (Other abbreviated title)</B>
+<LI>355 (Security Classification Control) - 1st indicator (Controlled <br>element): value 5 (Record)</UL></UL><UL type="disc">
+<LI><U> Subfield codes</U><UL type="circle">
+<LI><B>$b  Item number</B> <I>in</I> 080 (Universal Decimal Classification)
+<LI><B>$d  Populated place name</B> <I>in</I> 052 (Geographic Classification)
+<LI>$<B>x  Common auxiliary subdivision</B> <I>in </I>080 (Universal Decimal Classification)
+<LI><B>$2  Source of code</B> <I>in</I> 052 (Geographic Classification)
+<LI><B>$2  Edition</B> <I>in</I> 080 (Universal Decimal Classification)
+<LI><B>$2  Source</B> <I>in</I> 210 (Abbreviated Title)</UL></UL>
+<UL type="disc"><LI><U>Code values</U><UL type="circle">
+<LI>Leader -<B> character position 09 (Character coding scheme): codes # (MARC-8), <BR> a (UCS/Unicode)</B>
+<LI>006 Books - character position 06 (Form of item): <B>code s (Electronic)</B>
+<LI>006 Maps - <B>character position 12 (Form of item): codes # (None of the <BR> following), a (Microfilm), b (Microfiche), c (Microopaque), d (Large print), <BR> f (Braille), r (Regular print reproduction), s (Electronic)</B>
+<LI>006 Music - character position 06 (Form of item): <B>code s (Electronic)</B>
+<LI>006 Serials - character position 05 (Form of original item): <B>code s (Electronic)</B>
+<LI>006 Serials - character position 06 (Form of item): <B>code s (Electronic)</B>
+<LI>006 Visual materials - character position 12 (Form of item): <B>codes # (None <br>of the following), a (Microfilm), b (Microfiche), c (Microopaque), <BR> d (Large print), f (Braille), r (Regular print reproduction), s (Electronic)</B>
+<LI>006 Mixed material - character position 06 (Form of item): <B>code s (Electronic)</B>
+<LI>007 All materials - character position 01 (Specific material designation): <BR><B>code u (Unspecified)</B>
+<LI>007 Computer file - <B>character positions 06-08 (Image bit depth), <BR> 09 (File formats), 10 (Quality assurance targets), <BR> 11 (Antecedent/source), 12 (Level of compression), 13 (Reformatting quality)</B>
+<LI>008 Books - character position 23 (Form of item): <B>code s (Electronic)</B>
+<LI>008 Maps - <B>character position 29 (Form of item): codes # <BR> (None of the following), a (Microfilm), b (Microfiche), c (Microopaque),<BR> d (Large print), f (Braille), r (Regular print reproduction), s (Electronic)</B>
+<LI>008 Music - character position 23 (Form of item): <B>code s (Electronic)</B>
+<LI>008 Serials - character position 22 (Form of original item): <B>code s (Electronic)</B>
+<LI>008 Serials - character position 23 (Form of item): <B>code s (Electronic)</B>
+<LI>008 Visual materials - <B>character position 29 (Form of item): codes # <BR>(None of the following), a (Microfilm), b (Microfiche), c (Microopaque), <BR> d (Large print), f (Braille), r (Regular print reproduction), s (Electronic)</B>
+<LI>008 Mixed material - character position 23 (Form of item): <B>code s (Electronic)</B>
+<LI>046 (Special Coded Dates) - a (Type of date code): <B>code x (Corrected dates <BR> and incorrect dates)</B>
+</UL></UL></UL>
+<UL>
+<LI><I>Changes in repeatability:</I>
+<UL type="disc"><LI><U> Field</U>
+<UL type="circle"><LI><B>080  Universal Decimal Classification:</B> changed from Not repeatable (NR) <BR>to Repeatable (R)
+<LI><B>210  Abbreviated Title:</B> changed from <BR>Not repeatable (NR) to Repeatable (R)</UL></UL>
+<UL type="disc"><LI><U>Subfield codes</U>
+<UL type="circle"><LI><B>$a Classification number</B> <I>in</I> 080 (Universal Decimal Classification: changed from <BR> Repeatable (R) to Not repeatable (NR)
+<LI><B>$u  Uniform Resource Locator:</B> changed from Repeatable (R) to Not repeatable (NR)
+</UL></UL></UL><I>
+<UL>
+<LI>Changes in content designator field names:</I>
+<UL><LI><B>Special Coded Dates <strike>Type of Date Code, Date 1, Date 2 (B.C. Dates)</strike></B>
+<LI><B>052  Geographic Classification <strike>Code </strike></B>
+<LI><B>Abbreviated <strike>Key</strike> Title</B>
+<LI><B>362  Dates of Publication and/or Sequential <strike>Volume </strike> Designation</B> 
+</UL></UL>
+<p>
+<!---Navigation--->
+<hr>
+<em>Go to:</em>
+
+<ul>
+<li><a href="../marc.html">MARC Home Page</a>
+<li><a href="../index.html">Library of Congress Home Page</a>
+</ul>
+<p>
+
+<!---LC Footer--->
+<hr>
+<IMG SRC="../homepage/lc2.gif" height=46 width=91 ALT=""> <strong>Library of Congress</strong><br>
+<address><!--help desk email start -->
+<a href="http://www.loc.gov/help/help-desk.html">Library of Congress Help Desk</a>
+<!--help desk email end -->
+
+(07/21/99)</address>
+<script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+</html>
+
+

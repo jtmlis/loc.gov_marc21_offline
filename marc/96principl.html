@@ -1,0 +1,829 @@
+<html>
+<head>
+<title>The MARC 21 Formats: Background and Principles</title>
+<base href="">
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h2 align=center>The MARC 21 Formats: Background and Principles</h2>
+<h3 align=center> Revised November 1996</h3>
+<h3 align=center>
+                                                 MARBI<br>
+          American Library Association's ALCTS/LITA/RUSA<br>
+       Machine-Readable Bibliographic Information Committee
+<br>
+                       in conjunction with<br>
+          Network Development and MARC Standards Office<br>
+                       Library of Congress<br>
+                         
+                     </h3>
+
+<hr>
+<p>
+     The following statement of background and principles for content designation in the MARC
+21 formats
+was approved by the American Library Association's ALCTS/LITA/RUSA Machine-Readable
+Bibliographic
+Information Committee (MARBI), in consultation with representatives from United States and
+Canadian
+national libraries and designated bibliographic networks.  The statement includes the principles
+under which
+the MARC 21 formats were developed and constitutes a set of working principles for the
+ongoing process of
+format development.  This document will be revised as necessary.
+<p>
+
+               <a href="96principl.html#one">Section 1: Introduction</a><br>
+               <a href="96principl.html#two">Section 2: General Considerations</a><br>
+               <a href="96principl.html#three">Section 3: Structural Features</a><br>
+               <a href="96principl.html#four">Section 4: Content Designation</a><br>
+               <a href="96principl.html#five">Section 5: Organization of the Record</a><br>
+               <a href="96principl.html#six">Section 6: Variable Fields and Tags</a><br>
+               <a href="96principl.html#seven">Section 7: Variable Control Fields</a><br>
+               <a href="96principl.html#eight">Section 8: Variable Data Fields</a><br>
+               <a href="96principl.html#nine">Section 9: Coded Data</a><br>
+               <a href="96principl.html#other">Standards and Other Documents Related to MARC 21
+Formats</a>
+<p>
+<hr>
+<p>
+<h3><a name="one">1. Introduction</a></h3>
+
+1.1. The MARC 21 formats are standards for the
+     representation and communication of
+     bibliographic and related information in machine-readable form.
+<p>
+<dl>
+<dt>1.2. A MARC record involves three elements: the
+     record <strong>structure</strong>, the <strong>content designation</strong>, and
+     the data <strong>content</strong> of the record.<br>
+
+<dd><p>1.2.1.  The <strong>structure</strong> of MARC records is an
+          implementation of national and international
+          standards, e.g.,  <em>Information Interchange
+          Format</em> (ANSI Z39.2) and <em>Format for
+          Information Exchange</em> (ISO 2709).<p>
+1.2.2.    <strong>Content designation</strong>, the codes and
+          conventions established to identify explicitly
+          and characterize further the data elements
+          within a record and to support the
+          manipulation of those data, is defined in the
+          MARC 21 formats.<p>
+1.2.3.    The <strong>content</strong> of most data elements is defined
+          by standards outside the formats, e.g., <em>Anglo-American Cataloguing
+Rules</em>, <em>Library of
+          Congress Subject Headings</em>, <em>National Library
+          of Medicine Classification</em>.  The content of
+          other data elements, e.g., coded data section 9 below), is defined in the MARC 21
+          formats.
+<p>
+
+<dt>1.3. A MARC 21 format is a set of codes and content
+     designators defined for encoding  machine-readable records.  Formats are defined for five
+     types of data: bibliographic, holdings, authority,
+     classification, and community information.<br>
+<dd><p>1.3.1.    <em>MARC 21 Format for Bibliographic Data</em>
+          contains format specifications for encoding
+          data elements needed to describe, retrieve, and
+          control various forms of bibliographic
+          material.  The <em>MARC 21 Format for
+          Bibliographic Data</em> is an integrated format
+          defined for the identification and description of
+          different forms of bibliographic material. 
+          MARC 21 specifications are defined for
+          books, serials, computer files, maps, music,
+          visual materials, and mixed material.  With
+          the full integration of the previously discrete
+          bibliographic formats, consistent definition
+          and usage are maintained for different forms
+          of material.<p>
+1.3.2.    <em>MARC 21 Format for Holdings Data</em> contains
+          format specifications for encoding data
+          elements pertinent to holdings and location
+          data for all forms of material.  <p>
+1.3.3.    <em>MARC 21 Format for Authority Data</em> contains
+          format specifications for encoding data
+          elements that identify or control the content
+          and content designation of those portions of a
+          bibliographic record that may be subject to
+          authority control.<p>
+1.3.4.    <em>MARC 21 Format for Classification Data</em>
+          contains format specifications for encoding
+          data elements related to classification numbers
+          and the captions associated with them. 
+          Classification records are used for the
+          maintenance and development of classification
+          schemes.<p>
+1.3.5.    <em>MARC 21 Format for Community Information</em>
+          provides format specifications for records
+          containing information about events,
+          programs, services, etc. so that this
+          information can be integrated into the same
+          public access catalogs as data in other record
+          types.
+<p>
+
+<dt>1.4. The MARC 21 formats are maintained by the
+     Library of Congress in consultation with various
+     user communities.<br>
+<dd><p>1.4.1.    Through maintenance and revision, content
+          designation is added to and existing content
+          designation is made obsolete or deleted from
+          formats.  Content designation is made obsolete
+          when it is found to be no longer appropriate or
+          when the data element involved is no longer
+          needed.  An obsolete content designator may
+          continue to appear in records created prior to
+          the date it was made obsolete.  Obsolete
+          content designators are not used in new
+          records.  A deleted content designator is one
+          that had been reserved in MARC 21 but had
+          not been defined or one that had been defined
+          but it is known with near certainty that it had
+          not been used.<p>  
+1.4.2.    The principles stated in this document have
+          developed over time.  The formats contain
+          exceptions to the principles due to early format
+          development decisions.  While many
+          exceptions have been made obsolete, others
+          remain because of the need to maintain upward
+          compatibility of the formats in current
+          development.</dl>
+
+<p>
+
+<h3><a name="two">2. General Considerations</a></h3>
+
+2.1. The MARC 21 formats are communication
+     formats, primarily designed to provide
+     specifications for the exchange of bibliographic
+     and related information between systems.  They
+     are widely used in a variety of exchange and
+     processing environments.  As communication
+     formats, they do not mandate internal storage or
+     display formats to be used by individual systems.
+<p>
+
+2.2. The MARC 21 formats, particularly the
+     bibliographic and authority formats, were initially
+     developed to enable the Library of Congress to
+     communicate its catalog records to other
+     institutions.  The formats have had a close
+     relationship to the needs and practices of North
+     American libraries with universal collections. 
+     They reflect both the various cataloging codes
+     applied in the library community and the
+     requirements of the archives community.
+<p>
+
+2.3. The MARC 21 formats were designed to facilitate
+     the exchange of bibliographic and related
+     information.  An attempt has been made to
+     preserve compatiblity with other national and
+     international formats, e.g., UKMARC and
+     UNIMARC.
+<p>
+
+2.4. National agencies in the United States and Canada
+     (Library of Congress, National Agricultural
+     Library, National Library of Medicine, United
+     States Government Printing Office, and National
+     Library of Canada) are given special emphasis
+     and consideration in the formats because they
+     serve as sources of authoritative cataloging and as
+     agencies responsible for certain data elements.
+<p>
+<dl>
+<dt>2.5. The institutions responsible for the content,
+     content designation, and transcription accuracy of
+     bibliographic and authority data within a
+     MARC record are identified at the record
+     level in field 008/39 (Fixed-Length Data
+     Elements--Cataloging source) and in field 040
+     (Cataloging Source).  This responsibility may be
+     evaluated in terms of the following rule.<br>
+
+<dd><p>2.5.1.    Responsible Parties Rule:<p>
+<blockquote>2.5.1.1.  Unmodified records--The institution
+          identified as the cataloging institution (field
+          040$a) is considered responsible for data
+          content in the record except for agency-assigned data (see section 2.5.2.1. below). 
+          The institution identified as the transcribing
+          institution (field 040$c) is considered
+          responsible for <strong>content designation</strong> and
+          <strong>transcription</strong> accuracy for all data.<p>
+
+2.5.1.2.  Modified records--Institutions identified as
+          cataloging or modifying institutions (field
+          040$a,$d) are considered collectively
+          responsible for data content in the record
+          except for agency-assigned and authoritative-agency data (see section 2.5.2. below). 
+          Institutions identified as transcribing or
+          modifying institutions (field 040$c,$d) are
+          considered collectively responsible for
+          <strong>content designation</strong> and <strong>transcription</strong>
+          accuracy.</blockquote>
+<p>
+2.5.2.    Exceptions to Responsible Parties Rule:<br>
+<blockquote>
+2.5.2.1.  Certain data elements are defined in the
+          MARC 21 formats as being exclusively
+          assigned by particular agencies, e.g.,
+          International Standard Serial Number (field
+          022), Library of Congress Control Number
+          (field 010).  The content of such <strong>agency-assigned</strong> elements is
+always the
+          responsibility of the agency.<p>
+
+2.5.2.2.  Certain data elements have been defined in
+          the MARC 21 formats in relation to one or
+          more <strong>authoritative</strong> agencies that maintain
+          the lists or rules upon which the data is
+          based, e.g., Library of Congress Call
+          Number (field 050), National Library of
+          Medicine Call Number (field 060).  Where
+          it is possible for other agencies to create
+          similar or identical content for these data
+          elements, content designation may be
+          provided to distinguish between content
+          actually assigned by the authoritative agency
+          and that assigned by other agencies.  In the
+          former case, responsibility for content rests
+          with the authoritative agency.  In the latter
+          case, the Responsible Parties Rule applies,
+          and no further identification of the assigning
+          agency is provided.
+</blockquote>
+</dl>
+
+
+
+<p>
+<dl>
+<dt>2.6. The MARC 21 bibliographic format provides
+     content designation only for data that are
+     applicable to all copies of the bibliographic entity
+     described.<br>
+<dd><p>2.6.1.    Information which applies only to some copies
+          (or even to a single copy) of a title may be of
+          interest beyond the institutions holding such
+          copies. The MARC 21 formats provide limited
+          content designation for the encoding of this
+          information and for identifying the holding
+          institution, e.g., subfield $5 in the 700-740
+          added entry fields in the bibliographic format.<p>
+
+2.6.2.    Information that does not apply to all copies of
+          a title, and is not of interest to other
+          institutions, is coded in local fields. For
+          instance, the 59X block is reserved for local
+          notes in the bibliographic format (see section
+          6.7. below).</dl>
+<p>
+
+2.7. Although a MARC record is usually
+     autonomous, data elements are provided that
+     contain information used to link related records. 
+     These linkages may be implicit, through identical
+     access points in each record, or explicit, through
+     a linking entry field.  The 76X-78X linking entry
+     fields in the bibliographic format may contain
+     either selected data elements that identify the
+     related item or a control number that identifies
+     the related record.  In addition, an explicit code
+     in the leader identifies a record that is linked to
+     another record through a control number.
+<p>
+
+<h3><a name="three">3. Structural Features</a></h3>
+
+3.1. The MARC 21 formats are an imple-mentation of
+     the<em> Information Interchange Format</em> (ANSI
+     Z39.2).  The formats also incorporate other
+     relevant ANSI standards.
+<p>
+
+3.2. All information in a MARC record is stored in
+     character form.  MARC communications
+     records are coded in Extended ASCII, as defined
+     in the <em>MARC 21 Specifications for Record
+     Structure, Character Sets, and Exchange Media</em>.
+<p>
+
+3.3. The length of each variable field can be
+     determined either from the <strong>length-of-field</strong> portion
+     of the directory entry or from the occurrence of
+     the <strong>field terminator</strong> character [1E(16), 8-bit].  The
+     length of a record can be determined either from
+     the <strong>logical record length</strong> element in Leader/00-04 or from the
+occurrence of the <strong>record
+     terminator</strong> character [1D(16), 8-bit].  The location
+     of each variable field is explicitly stated in the
+     <strong>starting character position</strong> element in its
+     directory entry.
+<p>
+
+<h3><a name="four">4. Content Designation</a></h3>
+
+4.1. The goal of content designation is to identify and
+     characterize the data elements that comprise a
+     MARC record with sufficient precision to
+     support manipulation of the data for a variety of
+     functions.<p>
+
+<dl><dt>4.2. MARC content designation is designed to
+     support functions that include:<br>
+<dd ><p>4.2.1.    Display--the formatting of data for screen
+          display, for printing on 3x5 cards or in book
+          catalogs, for production of COM catalogs, or
+          for other visual presentation of the data.<p>
+
+4.2.2.    Information retrieval--the identification,
+          categorization, and retrieval of any identifiable
+          data element in a record.</dl>
+
+<P>
+4.3. Some fields serve multiple functions.  For
+     example, field 245 (Title Statement) serves both
+     as the bibliographic transcription of the title and
+     the statement of responsibility and as an access
+     point for the title.
+<p>
+4.4. The MARC 21 formats provide for display
+     constants.  A display constant is a term, phrase,
+     and/or spacing or punctuation convention that
+     may be system generated under prescribed
+     circumstances to make a visual presentation of
+     data in a record more meaningful to a user.  Such
+     display constants are not carried in the data, but
+     may be supplied for display by the processing
+     system.  For example, subfield $x in Series
+     Statement field 490 (and in some other fields)
+     implies the display constant <em>ISSN</em>; also, the
+     combination of tag 780 (Preceding Entry) and
+     second indicator value 2 implies the display
+     constant <em>Supersedes</em>.
+<p>
+
+4.5. The MARC 21 formats support the sorting of
+     data only to a limited extent.  In general, sorting
+     must be accomplished through the application of
+     external algorithms to the data.
+<p>
+<h3><a name="five">5. Organization of the Record</a></h3>
+
+5.1. A MARC record consists of three main
+     sections: the <strong>leader</strong>, the <strong>directory</strong>, and the
+     <strong>variable fields</strong>.
+<p>
+
+5.2. The <strong>leader</strong> consists of data elements that contain
+     coded values and are identified by relative
+     character position.  Data elements in the leader
+     define parameters for processing the record.  The
+     leader is fixed in length (24 characters) and
+     occurs at the beginning of each MARC record.
+<p>
+
+5.3. The <strong>directory</strong> contains the tag, starting location,
+     and length of each field within the record. 
+     Directory entries for variable control fields
+     appear first, in ascending tag order.  Entries for
+     variable data fields follow, arranged in ascending
+     order according to the first character of the tag. 
+     The order of the fields in the record does not
+     necessarily correspond to the order of directory
+     entries.  Duplicate tags are distinguished only by 
+     location of the respective fields within the record. 
+     The length of the directory entry is defined in the
+     entry map elements in Leader/20-23.  In the
+     MARC 21 formats, the length of a directory entry
+     is 12 characters.  The directory ends with a <strong>field
+     terminator</strong> character.
+<p>
+
+5.4. The data content of a record is divided into
+     <strong>variable fields</strong>.  The MARC 21 formats
+     distinguish two types of variable fields: <strong>variable
+     control fields</strong> and <strong>variable data fields</strong>.  Control
+     and data fields are distinguished only by structure
+     (see sections 7 and 8 below). The term <strong>fixed
+     fields</strong> is occasionally used in MARC 21
+     documentation, referring either to control fields
+     generally or to specific coded-data fields, e.g.,
+     007 (Physical Description Fixed Field) or 008
+     (Fixed-Length Data Elements).
+<p>
+
+<h3><a name="six">6. Variable Fields and Tags</a></h3>
+
+6.1. The data in a MARC record is organized into
+     fields, each identified by a three-character tag.
+<p>
+
+6.2. According to ANSI Z39.2, the tag must consist of
+     alphabetic or numeric ASCII graphic characters,
+     i.e., decimal integers 0-9 or letters A-Z
+     (uppercase or lowercase, but not both).  The
+     MARC 21 formats have used only numeric tags.
+<p>
+
+6.3. The tag is stored in the directory entry for the
+     field, not in the field itself.
+<p>
+<dl>
+<dt>6.4. Variable fields are grouped into blocks according
+     to the first character of the tag, which identifies
+     the function of the data within a record, e.g.,
+     main entry, added entry, subject entry.  The type
+     of information in the field, e.g., personal name,
+     corporate name, or title, is identified by the
+     remainder of the tag.<br>
+<dd><p>6.4.1.     Bibliographic format blocks:<p>
+
+                    <blockquote>0XX = Control information, numbers, codes<br>
+                    1XX = Main entry<br>
+                    2XX = Titles, edition, imprint<br>
+                    3XX = Physical description, etc.<br>
+                    4XX = Series statements <br>
+                    5XX = Notes <br>
+                    6XX = Subject access fields<br>  
+                    7XX = Name, etc. added entries or series; linking<br>
+                    8XX = Series added entries; holdings and locations<br>
+                    9XX = Reserved for local implementation</blockquote><p>
+6.4.2.     Authority format blocks: <p>
+
+<blockquote>0XX = Control information, numbers, codes<br>
+                    1XX = Heading<br>
+                    2XX = Complex see references<br>
+                    3XX = Complex see also references<br>
+                    4XX = See from tracings<br>
+                    5XX = See also from tracings <br>
+                    6XX = Reference notes, treatment, notes, etc.<br>
+                    7XX = Heading linking entries<br>
+                    8XX = Not defined<br>
+                    9XX = Reserved for local implementation</blockquote><p>
+6.4.3.     Holdings format blocks:<p>
+<blockquote>0XX = Control information, numbers, codes<br>
+                    1XX = Not defined<br>
+                    2XX = Not defined<br>
+                    3XX = Not defined<br>
+                    4XX = Not defined<br>
+                    5XX = Notes <br>
+                    6XX = Not defined<br>
+                    7XX = Not defined<br>
+                    8XX = Holdings and location data, notes<br>
+                    9XX = Reserved for local implementation</blockquote><p>
+
+6.4.4.     Classification format blocks:<p>
+<blockquote>0XX = Control information, numbers, codes<br>
+                    1XX = Classification numbers and terms<br>
+                    2XX = Complex see references<br>
+                    3XX = Complex see also references<br>
+                    4XX = Invalid number tracings<br>
+                    5XX = Valid number tracings<br>
+                    6XX = Notes<br>
+                    7XX = Index terms and number building fields<br>
+                    8XX = Miscellaneous<br>
+                    9XX = Reserved for local implementation</blockquote><p>
+6.4.5.     Community information format blocks:<p>
+<blockquote>0XX = Control information, numbers, codes<br>
+                    1XX = Primary names<br>
+                    2XX = Titles, addresses<br>
+                    3XX = Physical information, etc.<br>
+                    4XX = Series information<br>
+                    5XX = Notes<br>
+                    6XX = Subject access fields<br>
+                    7XX = Added entries other than subject<br>
+                    8XX = Miscellaneous<br>
+                    9XX = Reserved for local implementation</blockquote>
+<p>
+<dt>
+6.5. Certain blocks in the MARC 21 formats contain
+     data which may be subject to authority control
+     (1XX, 4XX, 6XX, 7XX, 8XX for bibliographic
+     records; 1XX, 4XX, 5XX, 7XX for authority
+     records, etc.).<br>
+
+<dd><p>
+6.5.1.    In these blocks, certain parallels of content
+          designation are preserved.  The following
+         meanings are generally given to the final two
+          characters of the tag:<p>
+<blockquote>X00 = Personal names<br>
+                    X10 = Corporate names<br>
+                    X11 = Meeting names<br>
+                    X30 = Uniform titles<br>
+                    X40 = Bibliographic titles<br>
+                    X50 = Topical terms<br>
+                    X51 = Geographic names<p>
+
+               Further content designation (indicators and
+               subfield codes) for data elements subject to
+               authority control are defined consistently
+               across the bibliographic and authority formats. 
+               These guidelines apply only to the main range
+               of fields in each block, not to secondary
+               ranges, e.g., the linking entry fields 760-787
+               in the bibliographic format.</blockquote><p>
+
+6.5.2.    Within fields subject to authority control, data
+          elements may exist which are not subject to
+          authority control and which may vary from
+          record to record containing the same heading,
+          e.g., subfield $e, Relator term.<p>
+ 
+6.5.3.    In fields not subject to authority control, each
+          tag is defined independently.  Parallel
+          meanings have been preserved whenever
+          possible.
+
+<p>
+
+<dt>6.6. Principles have been established to assist in
+     determining when a separate field should be
+     defined for note data and when the data should be
+     included in a general note field.<br>
+<dd><p>6.6.1.    In the MARC 21 bibliographic format, a
+          specific 5XX note field is defined when at
+          least one of the following is true:<p>
+
+<blockquote>6.6.1.1.  Categorical indexing or retrieval is required
+          on the data defined for the note.  The note is
+          used for structured access purposes but does
+          not have the nature of a controlled access
+          point.<p>
+
+6.6.1.2.  Special manipulation of that specific category
+          of data is a routine requirement.  Such
+          manipulation includes special print/display
+          formatting or selection/suppression from
+          display or printed product.
+<p>
+6.6.1.3.  Specialized structuring of information for
+          reasons other than those given in (a) or (b),
+          e.g., to support particular standards of data
+          content when they cannot be supported in
+          existing fields.</blockquote><p>
+
+6.6.2.    In the MARC 21 authority format, the
+          specifications for notes are covered in the
+          following two conditions:
+
+<p><blockquote>
+6.6.2.1.  A specific note field is needed when special
+          manipulation of that specific category of data
+          is a routine requirement.  Such manipulation
+          includes special print/display formatting or 
+          selection/suppression from display or printed
+          product.
+<p>
+6.6.2.2.  Multiple notes are generally not established
+          to accommodate the same type of
+          information for different types of authorities. 
+          Notes are thus not differentiated by or
+          limited to subject, name, or series if the
+          same information applies to more than one
+          type.</blockquote><p>
+
+
+
+<dt>6.7. Certain tags have been reserved for local
+     implementation.  The MARC 21 formats specify
+     no structure or meaning for local fields. 
+     Communication of local fields between systems
+     is governed by mutual agreements on the content
+     and content designation of the fields
+     communicated.<br>
+<dd><p>
+6.7.1.    The 9XX block is reserved for local
+          implementation.
+<p>
+6.7.2.    In general, any tag containing the character 9
+          is reserved for local implementation within the
+          block structure (see section 6.4. above).<p>
+
+6.7.3.    The historical development of the MARC 21
+          formats has left one exception to this general
+          principle:  field 490 (Series Statement) in the
+          bibliographic format.  There are several
+          obsolete fields with tags containing the
+          character 9.<p></dl>
+
+
+6.8. Theoretically, all fields, except field 001 (Control
+     Number), 003 (Control Number Identifier) and
+     field 005 (Date and Time of Latest Transaction),
+     may be repeated.  The nature of the data,
+     however, often precludes repetition.  For
+     example, a bibliographic record may contain only
+     one field 245 (Title Statement) and an authority
+     record may contain only one 1XX heading field. 
+     The repeatability/nonrepeatability of each field is
+     defined in the MARC 21 formats.
+
+<p>
+<h3><a name="seven">7.   Variable Control Fields</a></h3>
+
+7.1. The 00X fields in the MARC 21 formats are
+     variable control fields.
+<p>
+
+7.2. Variable control fields consist of data and a field
+     terminator.  They  contain neither indicators nor
+     subfield codes (see sections 8.3 and 8.4 below).
+<p>
+
+7.3. Variable control fields contain either a single data
+     element or a series of fixed-length data elements
+     identified by relative character position.
+<p>
+
+<h3><a name="eight">8. Variable Data Fields</a></h3>
+
+8.1. All fields except 00X are variable data fields.
+<p>
+<dl>
+<dt>8.2. Four levels of content designation are provided
+     for variable data fields in ANSI Z39.2:<br>
+<dd><p>
+8.2.1.    A three-character tag, stored in the directory
+          entry.
+<p>
+8.2.2.    Indicators stored at the beginning of each
+          variable data field, the number of indicators
+          being reflected in Leader/10 (Indicator count).
+<p>
+8.2.3.    Subfield codes preceding each data element,
+          the length of the code being reflected in
+          Leader/11 (Subfield code count).
+<p>
+8.2.4.    A field terminator following the last data
+          element in the field.<p>
+
+
+<dt>8.3. Indicators<br>
+<dd><p>
+8.3.1.    Indicators contain values conveying
+          information that interprets or  supplements the
+          data found in the field.
+<p>
+8.3.2.    The MARC 21 formats specify two indicator
+          positions at the beginning of each variable data
+          field.
+<p>
+8.3.3.    Indicators are defined independently for each
+          field.  Parallel meanings are preserved
+          whenever possible.
+<p>
+8.3.4.    Indicator values are interpreted independently;
+          meaning is not ascribed to the two indicators
+          taken together.
+<p>
+8.3.5.    Indicators may be any lowercase alphabetic or
+          numeric character or a blank (#).  Numeric
+          values are defined first.  A blank (#) is used in
+          an undefined indicator position or to mean
+          <em>information not provided</em> in a defined indicator
+          position.  The blank may have specific
+          meaning when necessary for upward
+          compatibility.
+<p>
+8.3.6.    The value 9 is reserved for local
+          implementation.<p>
+<dt>8.4. Subfield Codes<br>
+<dd><p>
+8.4.1.    Subfield codes identify data elements within a
+          field that require (or might require) separate
+          manipulation.
+<p>
+8.4.2.    Subfield codes in the MARC 21 formats
+          consist of two characters--a  delimiter [1F(16), 8-bit], followed by a data element
+identifier.  A
+          data element identifier may be any lowercase
+          alphabetic or numeric character.<p>
+<blockquote>8.4.2.1.  Numeric identifiers are defined for
+          parametric data used to process the field, or
+          coded data needed to interpret the field. 
+          (Note that not all numeric identifiers defined
+          in the past have followed this specification.)
+<p>
+8.4.2.2.  Alphabetic identifiers are defined for the
+          separate elements that constitute the data
+          content of the field.
+<p>
+8.4.2.3.  The character 9 and the following graphic
+          symbols are reserved for local definition as
+          data element identifiers:  ! &quot; # $ % &amp; '  ( )
+          * + ' - . / : ; &lt; = &gt; ?</blockquote>
+<p>
+8.4.3.         Subfield codes are defined independently for
+               each field.  Parallel  meanings are preserved
+               whenever possible.
+<p>
+8.4.4.         Subfield codes are defined for purposes of
+               identification, not arrangement.  The order
+               of subfields is specified by content
+               standards, e.g., cataloging rules.  In some
+               cases, however, such specifications may be
+               incorporated in the MARC 21 format
+               documentation.
+<p>
+8.4.5.    Theoretically, all data elements may be
+          repeated.  The nature of the data, however,
+          often precludes repetition. The
+          repeatability/nonrepeatability of each subfield
+          code is defined in the MARC 21 formats.
+</dl><p>
+
+<h3><a name="nine">9.  Coded Data</a></h3>
+
+9.1. In addition to content designation, the MARC 21
+     formats include specifications for the content of
+     certain data elements, particularly those that
+     provide for the representation of data by coded
+     values.
+<p>
+9.2. Coded values consist of fixed-length character
+     strings.  Individual elements within a coded-data
+     field or subfield are identified by relative
+     character position.
+<p>
+9.3. Although coded data occur most frequently in the
+     leader, directory, and variable control fields, any
+     field or subfield may be defined for coded-data
+     elements.
+<p>
+<dl>
+<dt>9.4. Certain common values have been defined
+     whenever applicable:
+         <dd><P># -- Undefined (element not defined)<br>
+          n -- Not applicable (element is not applicable to the
+               item) <br>
+          u -- Unknown (record creator was unable to
+               determine value)<br>
+          z -- Other (value other than those defined for the
+               element)<br>
+          | -- Fill character (record creator has chosen not to
+               provide information)<p>
+          Historical exceptions do occur in the formats.  In
+          particular, the blank (#) often has been defined as
+          not applicable or has been assigned a specific
+                    meaning.</dl>
+                                                      
+
+<h3><a name="other">Standards and Other Documents Related to MARC 21
+Formats</a></h3>
+<dl> 
+  <dt><strong>National and international standards:</strong> 
+  <dd>These publications are available from the American National Standards Institute, 
+    Inc., 1430 Broadway, New York, NY 10018. 
+    <p> <em>Information Interchange Format</em> (ANSI/NISO Z39.2-1994)<br>
+      <em>Format for Information Exchange</em> (ISO 2709-1996) 
+    <p> 
+  <dt><strong>MARC 21 standards:</strong> <br>
+    <br>
+  <dd>These publications are available from the Library of Congress, Cataloging 
+    Distribution Service, Washington, D.C. 20541. 
+    <p> <em><a href="concise/index.html">MARC 21 Concise Formats</a></em><br>
+      <em>MARC 21 Format for Authority Data</em><br>
+      <em>MARC 21 Format for Bibliographic Data</em><br>
+      <em>MARC 21 Format for Classification Data</em><br>
+      <em>MARC 21 Format for Community Information</em><br>
+      <em>MARC 21 Format for Holdings Data</em><br>
+      <em><a href="specifications.html">MARC 21 Specifications 
+      for Record Structure, Character Sets, and Exchange Media</a></em><br>
+      <em><a href="languages/index.html">MARC Code 
+      List for Languages</a></em><br>
+      <em><a href="countries/index.html">MARC Code 
+      List for Countries</a></em><br>
+      <em><a href="geoareas/index.html">MARC Code List 
+      for Geographic Areas</a></em><br>
+      <em><a href="organizations/orgshome.html">MARC Code 
+      List for Organizations</a></em><br>
+      <em><a href="http://www.loc.gov/marc/relators/relahome.html">MARC Code Lists 
+      for Relators, Sources, Descriptive Conventions </a></em> 
+  
+</dl>
+<p>
+<hr>
+<p>
+<em>Go to:</em>
+<P>
+<ul>
+<li><a href="../marc.html">MARC Home Page</a>
+<li><A HREF ="../index.html">Library of Congress Home Page</A>
+</ul>
+ <p>
+<HR>
+<IMG SRC="../homepage/lc2.gif" ALT=""> <strong>Library 
+of Congress</strong><br>
+<address> 
+<!--help desk email start -->
+<a href="http://www.loc.gov/help/help-desk.html">Library of Congress Help Desk</a> 
+<!--help desk email end -->
+(12/18/2007)</address>
+
+<script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+</html>

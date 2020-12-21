@@ -1,0 +1,527 @@
+BODY { 
+	font-family: 'Times New Roman', 'Times Roman', Times, Serif; 
+	font-size: 100%; 
+	background-color: #FFFFFF;
+	}
+
+/*
+a:link {
+	color: #003399; 
+	text-decoration: underline;
+	}
+
+a:visited {
+	color: #3366CC;
+	text-decoration: underline; 
+	}
+
+a:active {
+	color: #006633;
+	text-decoration: underline; 
+	}
+	
+	*/
+	
+a:link {
+	color: #660000; 
+	text-decoration: underline;
+	}
+
+a:visited {
+	color: #cc6666;
+	text-decoration: underline; 
+	}
+
+a:active {
+	color: #cc6666;
+	text-decoration: underline; 
+	}
+
+a.onbackground:link {
+	color: #ffdddd; 
+	text-decoration: underline;
+	}
+
+a.onbackground:visited {
+	color: #eeaaaa;
+	text-decoration: underline; 
+	}
+
+a.onbackground:active {
+	color: #eeaaaa;
+	text-decoration: underline; 
+	}
+/*
+a.onbackground:link {
+	color: #330000; 
+	text-decoration: underline;
+	}
+
+a.onbackground:visited {
+	color: #660000;
+	text-decoration: underline; 
+	}
+
+a.onbackground:active {
+	color: #990000;
+	text-decoration: underline; 
+	}
+*/
+
+H1 {
+	color: #ac2222; 
+	font-family: Castellar, 'Times New Roman', 'Times Roman', Times, Serif; 
+	font-size: 300%; 
+	text-align: center; 
+	}
+
+H2.no {
+	color: #ac2222; 
+	font-family: Albertus, 'Copperplate Gothic Light', 'Times New Roman', 'Times Roman', Times, Serif; 
+	font-size: 150%; 
+	margin-bottom: 6px; 
+	text-align: center; 
+	}
+
+H2.title {
+	font-family: Castellar, 'Times New Roman', 'Times Roman', Times, Serif; 
+	font-size: 200%; 
+	font-variant: small-caps; 
+	margin-top: 0px; 
+	text-align: center; 
+	}
+
+H3.title {
+	color: #ac2222; 
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 125%; 
+	font-weight: bold; 
+	margin-bottom: 0pt; 
+	margin-top: 18pt; 
+	}
+
+H3.table {
+	font-family: Arial, Helvetica, sans-serif; 
+	font-weight: bold; 
+	margin-bottom: 0pt; 
+	margin-top: 18pt; 
+	text-align: center; 
+	}
+
+DIV.bold {
+	font-weight: bold; 
+	margin: 0pt; 
+	padding-left: 0pt; 
+	}
+
+DIV.nobold {
+	margin: 0pt; 
+	padding-left: 0pt; 
+	}
+
+DIV.flush {
+	margin-top: 10pt; 
+	padding-left: 0pt; 
+	}
+
+DIV.indented {
+	margin: 0pt; 
+	padding-left: 25px; 
+	}
+
+DIV.indented2 {
+	margin: 0pt; 
+	padding-left: 75px; 
+	}
+
+P.bibl {
+	font-size: 100%; 
+	margin-top: 12pt; 
+	margin-bottom: 0pt; 
+	padding-left: 25px; 
+	text-indent: -25px; 
+	}
+
+P.bibl2 {
+	font-size: 100%; 
+	margin-top: 3pt; 
+	margin-bottom: 0pt; 
+	padding-left: 50px; 
+	text-indent: -25px; 
+	}
+
+P.contents {
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 90%; 
+	padding-left: 50px; 
+	}
+
+P.field1 {
+	font-size: 100%; 
+	margin-top: 18pt; 
+	margin-bottom: 0pt; 
+	}
+
+P.field2 {
+	font-size: 100%; 
+	margin-top: 3pt; 
+	margin-bottom: 0pt; 
+	padding-left: 50px; 
+	text-indent: -25px; 
+	}
+
+P.field3 {
+	font-size: 100%; 
+	margin-top: 0pt; 
+	margin-bottom: 0pt; 
+	padding-left: 75px; 
+	text-indent: -25px; 
+	}
+
+P.intro {
+	font-style: italic; 
+	font-size: 140%; 
+	}
+
+P.main {
+	font-size: 100%; 
+	margin-top: 12pt; 
+	margin-bottom: 0pt; 
+	}
+
+P.cont {
+	font-size: 100%; 
+	margin-bottom: 0pt; 
+	margin-top: 0pt; 
+	text-indent: 25px; 
+	}
+
+P.indent {
+	margin-left: 25px; 
+	margin-top: 12pt; 
+	margin-bottom: 0pt; 
+	}
+
+P.indent-cont {
+	margin-left: 25px; 
+	margin-bottom: 0pt; 
+	margin-top: 0pt; 
+	text-indent: 25px; 
+	}
+
+P.nav {
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 80%; 
+	font-weight: bold; 
+	text-align: right
+	}
+
+P.nav1 {
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 80%; 
+	font-weight: bold; 
+	text-align: center
+	}
+
+P.title {
+	font-size: 120%; 
+	margin-top: 24pt; 
+	margin-bottom: 0pt; 
+	text-align: center; 
+	}
+
+P.toc1 {
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 85%; 
+	font-weight: bold; 
+	margin: 0px; 
+	padding-top: 6pt; 
+	text-align: left; 
+	}
+
+P.toc2 {
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 80%; 
+	margin: 0px;
+	padding-left: 50px; 
+	text-indent: -25px; 
+	text-align: left; 
+	}
+
+P.toctitle {font-family: Arial, Helvetica, sans-serif; font-size: 120%; margin-top: 18pt; 
+text-align: center}
+
+
+PRE {
+	margin: 0px;
+	padding: 0px;
+	font-family: "Courier New", Courier, mono;
+	font-size: 10pt;
+
+	}
+
+TABLE.main {
+	width: 600px; 
+	}
+
+TABLE.no {
+	margin-bottom: 0pt; 
+	margin-top: 12pt; 
+	padding: 0px;  
+	width: 100%; 
+	}
+
+TABLE.yes {
+	border-color: #000000; 
+	border-style: solid; 
+	border-width: 1; 
+	margin-bottom: 0pt; 
+	margin-top: 12pt; 
+	padding: 0px;  
+	width: 100%; 
+	}
+
+TABLE.signposts {
+	border-color: #000000; 
+	border-style: solid; 
+	border-left-width: 1; 
+	border-top-width: 1; 
+	border-bottom-width: 0; 
+	border-right-width: 0; 
+	margin-bottom: 0pt; 
+	margin-top: 0pt; 
+	padding: 0px;  
+	width: 100%; 
+	}
+
+TABLE.values {
+	border-style: none; 
+	margin: 0pt; 
+	padding: 0px;  
+	width: 100%; 
+	}
+
+TD.answers {
+	background-color: #CCCCCC; 
+	padding-left: 25px; 
+	padding-right: 25px; 
+	padding-top: 6pt; 
+	padding-bottom: 6pt; 
+	}
+
+TD.dir1 {
+	font-family: Courier, 'Courier New'; 
+	text-align: center; 
+	width: 40px; 
+	}
+
+TD.dir2 {
+	font-family: Courier, 'Courier New'; 
+	text-align: center; 
+	width: 60px; 
+	}
+
+TD.dir3 {
+	font-family: Courier, 'Courier New'; 
+	text-align: center; 
+	width: 70px; 
+	}
+
+TD.dir4 {
+	width: 20px; 
+	}
+
+TD.ex1 {
+	padding: 0px; 
+	vertical-align: top; 
+	width: 20%; 
+	}
+
+TD.ex2 {
+	padding: 0px; 
+	vertical-align: top; 
+	}
+
+TD.example {
+	padding-left: 25px; 
+	padding-right: 25px; 
+	padding-bottom: 0px; 
+	padding-top: 0px; 
+	}
+
+TD.double {
+	padding-left: 25px; 
+	padding-right: 25px; 
+	padding-top: 6pt; 
+	padding-bottom: 6pt; 
+	vertical-align: top; 
+	width: 50%; 
+	}
+
+TD.border {
+	border-color: #000000; 
+	border-style: solid; 
+	border-width: 1; 
+	padding: 8px; 
+	}
+
+TD.sidebar {
+	background-color: #CCCCCC; 
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 100%; 
+	margin: 0px; 
+	padding-top: 10px; 
+	padding-bottom: 10px; 
+	padding-left: 25px; 
+	padding-right: 25px; 
+	}
+
+TD.sidebar-hd {
+	background-color: #999999; 
+	color: #FFFFFF; 
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 150%; 
+	font-weight: bold; 
+	margin: 0px; 
+	padding: 10px; 
+	text-align: center; 
+	}
+
+TD.sp {
+	border-color: #000000; 
+	border-style: solid; 
+	border-left-width: 0; 
+	border-top-width: 0; 
+	border-bottom-width: 1; 
+	border-right-width: 1; 
+	margin: 0pt; 
+	padding: 10px;  
+	vertical-align: top; 
+	width: 50%; 
+	}
+
+TD.sp2 {
+	border-color: #000000; 
+	border-style: solid; 
+	border-left-width: 0; 
+	border-top-width: 0; 
+	border-bottom-width: 1; 
+	border-right-width: 1; 
+	margin: 0pt; 
+	padding: 10px;  
+	vertical-align: top; 
+	width: 20%; 
+	}
+
+TD.no {
+	padding-bottom: 0px; 
+	padding-top: 0px; 
+	padding-left: 10px; 
+	padding-right: 10px; 
+	vertical-align: top; 
+	}
+
+TD.tag1 {
+	border-style: none; 
+	padding-top: 12pt; 
+	vertical-align: top; 
+	width: 10%; 
+	}
+
+TD.tag2 {
+	border-style: none; 
+	padding-top: 12pt; 
+	vertical-align: top; 
+	}
+
+TD.value0 {
+	border-style: none; 
+	margin: 0pt; 
+	padding: 0pt; 
+	vertical-align: top; 
+	width: 10%; 
+	}
+
+TD.value1 {
+	border-style: none; 
+	margin: 0pt; 
+	padding: 0pt; 
+	vertical-align: top; 
+	width: 25px; 
+	}
+
+TD.value2 {
+	border-style: none; 
+	margin: 0pt; 
+	padding: 0pt; 
+	vertical-align: top; 
+	width: 25px; 
+	}
+
+TD.value3 {
+	border-style: none; 
+	margin: 0pt; 
+	padding: 0pt; 
+	vertical-align: top; 
+	}
+
+TR {
+	border-style: none; 
+	padding: 0px; 
+	margin: 0px; 
+	}
+
+.ex-comment {
+	font-family: 'Times New Roman', 'Times Roman', Times, Serif; 
+	font-size: 110%; 
+	font-style: italic; 
+	}
+
+.no {
+	font-style: normal; 
+	font-weight: normal; 
+	}
+
+.strong {
+	color: #ac2222; 
+	font-family: Arial, Helvetica, sans-serif; 
+	font-weight: bold; 
+	}
+
+.strong-black {
+	color: #000000; 
+	font-family: Arial, Helvetica, sans-serif; 
+	font-weight: bold; 
+	}
+
+.uma {
+	color: #ac2222; 
+	}
+
+.umb {
+	color: #FF9900; 
+	}
+
+.uma-hilite {
+	background-color: #99CCFF; 
+	font-weight: bold; 
+	}
+
+.uma-strong {
+	color: #ac2222; 
+	font-weight: bold; 
+	}
+
+.umb-strong {
+	color: #FF9900; 
+	font-weight: bold; 
+	}
+.largecap {
+	font-size: 24pt;
+	color: #ac2222;
+	font-weight: bold;
+}
+.whitetext {
+	
+	color:#ffffff;
+	}

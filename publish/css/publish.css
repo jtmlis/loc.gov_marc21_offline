@@ -1,0 +1,25 @@
+/***************specific styles*************/
+
+/********************
+left nav - Publishers Top Level Page
+********************/
+#left_nav .leftnavimg {
+background: transparent url(http://www.loc.gov/publish/images/leftnav.jpg) 0 0 no-repeat;
+}
+
+/* custom width */
+#col2_left.custom {width:375px;}
+#col2_right.custom {width:290px;}
+#col4_equal.custom {width:25%;}
+
+div.item {
+    clear: left;
+    margin: 20px 0;
+    min-height: 67px;
+}
+div.item img, img.thumbnail {
+    border: 1px solid #CCCCCC;
+    padding: 2px;
+}
+
+

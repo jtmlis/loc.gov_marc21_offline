@@ -1,0 +1,379 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                        "http://www.w3.org/TR/html40/loose.dtd">
+<html>
+<head>
+<title>FRBR Display Tool (Library of Congress) </title>
+<base href="">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="description" content="The FRBR Display Tool transforms bibliographic data found in
+MARC records into a meaningful display to assist users in selecting items from
+bibliographic collections">
+<meta name="keywords" content="FRBR sorter transformation display MARC">
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h4 align=center><i>Functional Analysis of the MARC 21 Bibliographic and Holdings 
+  Formats</i></h4>
+<h2 align=center>FRBR Display Tool<br>
+Version 2.0</h2>
+<h3 align=center>Network Development and MARC Standards Office <br>
+  Library of Congress </h3> 
+<hr>
+<h2>Contents</h2>
+<ul>
+  <li>  <a href="../marc-functional-analysis/frbr-survey.php.html">Download
+  Tool</a> (ZIP file)
+  <br>  
+  <li><a href="tool.html#intro">Introduction</a>   
+  <li><a href="tool.html#usage">Suggested Usage</a>  <li><a href="tool.html#description">Tool Description</a></li>
+  <li><a href="tool.html#instructions">How to Use</a>  
+  <li><a href="tool.html#table"> Matching, Sorting and Display Specifications</a>  </li>
+  <li><a href="tool.html#display">Display Example</a>
+  </li>
+  <li><a href="tool.html#examples">Full Examples</a> </li>
+  <li><a href="tool.html#enhancements">Future Enhancements Under Consideration</a> </li>
+  <!-- <li><a href="#list">MARCFRBR Electronic Discussion List</a></li> -->
+  <li><a href="tool.html#comments">Comments and Suggestions</a></li>
+</ul>
+<p> 
+<hr>
+<h2><a name="intro">Introduction</a></h2>
+<p>In 2001, the Network Development and MARC Standards Office released the publication, 
+  &quot;<a href="multiple-versions.html">Displays
+   for Multiple Versions from MARC 21 and FRBR</a>,&quot; which outlined how
+   the 
+  <a href="http://archive.ifla.org/VII/s13/frbr/">FRBR</a> (Functional Requirements
+   for Bibliographic Records) model can be used to cluster bibliographic records
+  
+  retrieved via a search in more meaningful displays to assist users in selecting
+  items from bibliographic collections. It contained several hierarchical <a href="multiple-versions.html#displays">display
+    examples</a> of bibliographic data using the FRBR model. 
+<p>The <b>FRBR Display Tool</b>, based on the above analysis,
+    is an XSLT program that transforms
+  the bibliographic data found in MARC record retrieval files
+  into meaningful displays by grouping the
+   bibliographic 
+  data into the &quot;Work,&quot; &quot;Expression&quot; and &quot;Manifestation&quot; 
+  FRBR entities. The matching and sorting <a href="tool.html#table">specifications</a> 
+  for the tool are outlined below.</p>
+<p>The<b> FRBR Display Tool </b> <i>sorts</i> and <i>arranges </i>bibliographic
+    record sets using the FRBR model. It then generates useful hierarchical displays
+    of these record sets containing works that consist of multiple expressions
+and manifestations.</p>
+<p>The tool<b> </b> is very flexible. Because the tool is written in <a href="http://www.w3.org/TR/xslt">XSLT</a>,
+  it is easy to augment based on an institution's individual needs. Likewise,
+  the output may be augmented by simply changing the XSL stylesheet that controls
+  display. No change in the XSLT program is needed.</p>
+<p>The tool<b> </b>does not <em>search</em> bibliographic databases to create the
+    record set on which it operates. A retrieved file
+    (e.g., an OPAC search result) of MARC unit records must be created <i>before</i> using
+    the tool.</p>
+<p>In its current version, the <b>FRBR Display Tool </b> works best with record
+  sets resulting from searches of name and title fields. Broader searches (for
+  example, that include data matched in the 5XX note fields) promote less useful
+  display results because the <b>FRBR Display Tool</b> does
+  not display the field that caused the retrieval of a record unless that field
+  was one already in the display elements. </p>
+<p>One important factor that greatly impacts the usefulness of the <b>FRBR Display
+    Tool's</b> results is the consistency of the bibliographic data. Data, for
+    example, with typos or inconsistent headings, lessen the utility of the display
+    because it prevents accurate and consistent collocation of data.</p>
+<h2><a name="usage">Suggested Usage</a></h2>
+<p>The following list indicates a few possible uses of
+  the <b>FRBR Display Tool</b>. Please contact the Network Development and MARC
+  Standards Office (<a href="http://www.loc.gov/cdn-cgi/l/email-protection#e18f858c928ea18d8e82cf868e97"><span class="__cf_email__" data-cfemail="b8d6dcd5cbd7f8d4d7db96dfd7ce">[email&#160;protected]</span></a>) if you
+  have used it for other purposes and would like to contribute to this
+list.</p>
+<ol>
+  <li>Test FRBR concepts through experimentation
+    with collocating and sorting files by segmenting MARC 21 records into the
+    FRBR &quot;Works,&quot; &quot;Expressions,&quot; and &quot;Manifestations&quot; entities.<br>
+  </li>
+  <li>Evaluate consistency and potential of
+      local data for FRBR display. <br>
+  </li>
+  <li>Experiment with an alternative front end display
+    for library catalogs, based on FRBR concepts as a user option.</li>
+</ol>
+<h2><a name="description">Tool Description</a></h2>
+<p>The <b>FRBR Display Tool </b> works with flat files of MARC
+  unit records. It first generates a <a href="../../marcxml/index.html">MARCXML</a> document
+  using the <a href="../../standards/marcxml/marcxml.zip">MARCXML
+   Toolkit</a>. It then transforms the MARCXML data into an
+   XML encoded FRBR structure that uses selected <a href="../../mods/index.html">MODS</a> (Metadata
+    Object Description Schema)) elements. Both <a href="http://www.w3.org/TR/xslt">XSLT
+    1.0</a> and portions of <a href="http://www.w3.org/TR/xslt20/">XSLT 2.0</a> standards
+    are used to do most of the grouping of bibliographic items into the FRBR &quot;Work, 
+  &quot;Expression&quot; and &quot;Manifestation&quot; entities.
+  An HTML display is then generated from the FRBR XML document using an <a href="http://www.w3.org/Style/XSL/">XSL
+  stylesheet</a>.
+  The user of the <strong>FRBR Display Tool</strong>
+may alter the matching and sorting specifications in the XSLT components to
+accommodate
+characteristics of local data and change the XSL display
+stylesheet
+to reflect local display preferences.
+  
+<p>The <em>default</em> HTML output used in the <strong>FRBR Display
+      Tool</strong> links
+    to the individual manifestations&#8217; <a href="http://catalog.loc.gov">Library
+    of Congress OPAC </a>record using URLs that query
+  the ILS. This linking mechanism may be changed so that the resulting display
+  links to individual institutions&#8217; online catalogs by modifying the FRBR
+  XML-to-HTML stylesheet. Batch programs are packaged with the tool that provide
+  a command line interface to it on a user&#8217;s computer. The only requirement
+is to have at least version 1.4 of the Java runtime environment installed. 
+<h2><a name="instructions">How to Use</a></h2>
+<p>There is currently one way to use the <b>FRBR Display Tool</b>.</p>
+<p><b>Transformation Program and XSL Stylesheet</b>: You may download a <a href="../marc-functional-analysis/frbr-survey.php.html">zip
+     file</a> containing the following components: 1) <b>FRBR Display Tool</b> transformation
+      stylesheets (written in XSLT); 2) the <a href="../../marcxml/index.html">MARCXML</a> 
+  Toolkit. (As noted above,  the original matching and sorting <a href="tool.html#table">specifications</a> 
+  contained within the stylesheet components may be altered to match the needs
+  of individual institutions.</p>
+<hr>
+<h2><a name="table">Matching, Sorting and Display Specifications</a></h2>
+<p><b>The current version of the <i>FRBR Display Tool</i> is version 2.0.</b></p>
+<p>The following display table outlines the matching, sorting and displaying
+  processes  used in generating the resulting FRBR display. They are given to
+  assist analysis 
+  of results when using the tool and to help users determine where they may want
+   to adjust the tool for their individual needs. <br>
+  <br>
+  See the <a href="tool.html#display">display example</a> for further guidance on the
+display specifications used with the <b>FRBR Display Tool</b>. </p>
+<p><b>Work Level<br>
+  Define work level under: author <i>and</i> title</b><i><br>
+  <br>
+  Author: </i></p>
+<ul type="disc">
+  <li><b>Match</b>: The following fields in this order: 100$a$b$c$d (or) 110$a$b$c$d 
+    (or) 111$a$c$d$n$q 
+    <ul type="disc">
+      <ul type="disc">
+        <li><i>Ignore:</i> Extra white space, case, nonfiling characters, brackets, 
+          parentheses and all punctuation<br>
+        </li>
+      </ul>
+      <li><i>Sort</i>: Alphabetically by first sorting character in string<br>
+      </li>
+      <li><i>Display:</i> The following fields in this order: <b>100$a$b$c$d$q 
+        (or) 110$a$b$c$d (or) 111$a$c$d$n$q</b><br>
+      </li>
+      <ul type="disc">
+        <li>Maintain all punctuation</li>
+        <li><i>Display label</i>: <b>Author:</b></li>
+      </ul>
+    </ul>
+  </li>
+</ul>
+<p> <i>and Title:</i></p>
+<ul type="disc">
+  <li><b>Match</b>: The following fields in this order: 240$a$d$k$m$n$p$r
+     (or) 243$a$d$m$n$p$r (or) 245$a$g$k$n$p 
+    <ul type="disc">
+      <ul type="disc">
+        <li><i>Delete</i>: Data contained in brackets, along with the brackets</li>
+        <li><i>Ignore:</i> Extra white space, case, nonfiling characters, brackets,
+          parentheses and all punctuation</li>
+      </ul>
+      <li><i>Sort</i>: Alphabetically by first sorting character in string
+      (beneath the content of the 1XX field)</li>
+      <li><i>Display</i>: The following fields in this order: <b> 240$a$d$k$m$n$p$r
+           (or) 243$a$d$m$n$p$r (or) 245$a$g$k$n$p</b> 
+      </li>
+      <ul type="disc">
+        <li>Maintain all punctuation </li>
+        <li><i>Display label</i>: <b>Work:</b></li>
+      </ul>
+    </ul>
+  </li>
+</ul>
+<p><b>Work Level</b><br>
+  <b>Define work level under: title <i>only</i> </b><i>(do when no 100 (or) 110 
+  (or) 111 field exists in record) </i></p>
+<ul type="disc">
+  <li><b>Match:</b> The following fields in this order: 130$a$d$k$m$n$p$r
+     (or) 240$a$d$k$m$n$p$r (or) 243$a$d$m$n$p$r (or) 245$a$g$k$n$p
+    <ul type="disc">
+      <ul type="disc">
+              <li><i>Ignore:</i> Extra white space, case, nonfiling characters, brackets,
+          parentheses and all punctuation
+              </li>
+      </ul>
+      <li><i>Sort</i>: Alphabetically by first sorting character in string. <i>Note:</i> 
+        Place works containing no 100 (or) 110 (or) 111 field <i><b>after</b></i> 
+        the displays containing them</li>
+      <li><i>Display</i>: The following fields in this order:<b> 130$a$d$k$m$n$p$r
+                             (or) 240$a$d$k$m$n$p$r (or) 243$a$d$m$n$p$r (or) 245$a$g$k$n$p</b> 
+        <ul type="disc">
+              <li><i>Display label</i>: <b>Author: Not entered under author</b> </li>
+              <li><i>Display label</i>:<b> Work:</b></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+<p><i>Expression Level</i></p>
+<ul type="disc">
+  <li><b>Match</b>: Leader/06 and field 008/35-37<br>
+    <ul type="disc">
+      <li><i>Sort</i>: Alphabetically by the Leader/06 code. Then sort alphabetically 
+        by the language code from field 008/35-37<br>
+      </li>
+      <li><i>Display</i>: 
+        <ul type="disc">
+          <li><i>Form: Leader/06 - 008/35-37</i></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+<p><i>Manifestation Level</i></p>
+<ul type="disc">
+  <li><b>Match:</b> There is no <b>match</b> at the manifestation level<br>
+    <ul type="disc">
+      <li><i>Sort</i>: Chronologically by date using value from 008/07-10<br>
+      </li>
+      <li><i>Display</i>: <br>
+        <ul type="disc">
+          <li>Edition: 250$a$b          </li>
+          <li>Title:245$a$b$n$p (if subfield $b begins with a bracket, do not 
+            display)          </li>
+          <li>Statement of responsibility: 245$c          </li>
+          <li>Imprint: 260$b$c$g          </li>
+          <li>Physical description: 300 (all subfields except $6, $8)          </li>
+          <li>ISBN: 020$a$c$z          </li>
+          <li>ISSN:<i> </i>022$a$y$z          </li>
+          <li>Publisher number: 028$a$b</li>
+          <li>CODEN: 030$a$z          </li>
+          <li>Reproduction: <i> </i>533 (all subfields except $6, $7, $8) </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+<hr width="50%">
+<h2><a name="display">Display Example</a></h2>
+<ul type="disc">
+  <li><b>Author: Rhys, Jean</b></li>
+  <li><b>Work: Wide Sargasso Sea</b></li>
+  <li><i>Form: text - English</i></li>
+  <ul type="disc">
+    <li>Edition: 1st ed.</li>
+    <ul type="disc">
+      <li>Title: <a href="http://catalog.loc.gov/cgi-bin/Pwebrecon.cgi?DB=local&amp;CMD=lccn+98014266&amp;CNT=25+records+per+screen">Wide 
+        Sargasso Sea</a></li>
+      <li>Statement of responsibility: Jean Rhys ; backgrounds, criticism edited 
+        by Judith L. Raiskin.</li>
+      <li>Imprint: W.W. Norton, c1999</li>
+      <li>Physical Description: xiii, 270 p. : ill., map ; 22 cm. </li>
+      <li>ISBN: 0393960129 (pbk.)</li>
+    </ul>
+    <li>Edition: </li>
+    <ul type="disc">
+      <li>Title: <a href="http://catalog.loc.gov/cgi-bin/Pwebrecon.cgi?DB=local&amp;CMD=lccn+93035502&amp;CNT=25+records+per+screen">Wide 
+        Sargasso Sea</a></li>
+      <li>Statement of responsibility: Jean Rhys ; introduction by Francis Wyndham.</li>
+      <li>Imprint: Thorndike Press, 1994</li>
+      <li>Physical Description: 231 p. (large print) ; 23 cm. </li>
+      <li>ISBN: 0786200731 (acid-free paper)<br>
+      </li>
+    </ul>
+    <br>
+  </ul>
+  <li><b>Author: Not entered under author</b></li>
+  <li><b>Work: King of Queens. Educating Doug</b> 
+  <li><i>Form: moving image - English</i></li>
+  <ul type="disc">
+    <li>Edition: </li>
+    <ul type="disc">
+      <li>Title: <a href="http://catalog.loc.gov/cgi-bin/Pwebrecon.cgi?DB=local&amp;CMD=lccn+00564452&amp;CNT=25+records+per+screen">King 
+        of Queens. Educating Doug</a></li>
+      <li>Statement of responsibility: directed by Rob Schiller ; written by Cathy 
+        Yuspa, Josh Goldsmith.</li>
+      <li>Imprint: CBS-TV, 1998</li>
+      <li>Physical Description: 1 videocassette of 1 (ca. 30 min.) : sd., col. 
+        ; 3/4 in. viewing copy. </li>
+    </ul>
+  </ul>
+</ul>
+</ul>
+<hr>
+<h2><a name="examples">Full Examples</a></h2>
+<p><a href="../marc-functional-analysis/frbr-mid.html">Example 1</a>: Title Search<i> (Heart of Midlothian)</i> 
+  (15 records)<br>
+  <a href="../marc-functional-analysis/frbr-welty.html">Example 2</a>: Author Search <i>(Welty, Eudora, 1909-)</i> 
+  (86 records) 
+<p> 
+<hr>
+<h2><a name="enhancements">Future Enhancements Under Consideration</a></h2>
+
+<p>The following enhancements are under consideration:</p>
+<ol>
+  <li>Extension of matching, sorting and displaying to analytical headings from 
+    the 7XX fields.
+  </li>
+  <li>Display of the MARC 21 field that contains the retrieval data.
+  </li>
+  <li>Selective normalization of headings to circumvent cataloging rule changes 
+  found in large files. </li>
+</ol>
+<hr>
+<!-- <h2><a name="list">MARCFRBR Electronic Discussion List</a></h2>
+The MARCFRBR electronic discussion list has been set up to provide a means for
+discussion
+about
+experiments
+with and
+implementations of the <strong>FRBR Display Tool</strong>. This low volume
+list is focused on the tool so that the Library of Congress staff may
+share
+changes
+to
+the
+tool
+with those who are experimenting with it and implementors may share
+local
+changes
+and additions that they make to the Tool, as well
+as any problems
+ they discover while using it.  <br>
+<br>
+To
+join the MARCFRBR discussion list, http://www.loc.gov/marc/frbr/marcfrbr.html>click
+here</a>.<br> -->
+<br>
+<hr>
+<h2><a name="comments">Comments and Suggestions</a></h2>
+Please direct any comments and suggestions about the <b>FRBR Display Tool </b> 
+to the Network Development and MARC Standards Office at: <a href="http://www.loc.gov/cdn-cgi/l/email-protection#741a1019071b34181b175a131b02"><span class="__cf_email__" data-cfemail="056b6168766a45696a662b626a73">[email&#160;protected]</span></a>. 
+We would especially like to hear about the following from you: 
+<ol>
+  <li>Was the <b>FRBR Display Tool </b> easy to install and initially use? 
+  <li> How did you use the<b> FRBR Display Tool</b>? Did you experiment with it 
+    as is, or did you augment the program to meet your individual needs? 
+  <li>What problems, if any, did you have while using the <b>FRBR Display Tool</b>? 
+</ol>
+<hr>
+<p> 
+<p><b>Go to:</b> <a href="../../marc.html">MARC Home Page</a> | <a href="../../index.html">Library 
+  of Congress Home Page</a> 
+<p> 
+<hr>
+<img src="../../homepage/lc2.gif" height=46 width=91 alt="Library of
+Congress"> <strong>Library of Congress</strong><br>
+<address> 
+<!--help desk email start -->
+<a href="http://www.loc.gov/help/help-desk.html">Library of Congress Help Desk</a> 
+<!--help desk email end -->
+( 
+<!-- #BeginDate format:Am3 -->07/12/2019<!-- #EndDate -->
+) 
+</address>
+
+
+<script data-cfasync="false" src="http://www.loc.gov/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+
+</html>

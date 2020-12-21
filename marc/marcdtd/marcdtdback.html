@@ -1,0 +1,857 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                        "http://www.w3.org/TR/html40/loose.dtd">
+
+<html>
+<head>
+<title>MARC DTD: Background and Development</title>
+<base href="">
+<meta name="description" content="This document gives background
+and describes the development of the MARC SGML document type
+definitions (DTD).">
+<meta name="keywords" content="MARC 21, MARC, SGML, DTD, beta
+test, conversion utilities">
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+<body bgcolor="#ffffff">
+<center>
+  <a name="top"><img src="http://lcweb.loc.gov/marc/marcdtd/images/dtd-back.gif" alt="MARC DTDs (Document Type 
+Definitions): Background and Development" height=108 width=500></a> 
+</center>
+<h2>Introduction</h2>
+<h3>1.  Definitions</h3>
+<br>The term "MARC DTD" 
+(<i><b>MA</b>chine 
+<b>R</b>eadable 
+<b>C</b>ataloging 
+<b>D</b>ocument 
+<b>T</b>ype 
+<b>D</b>efinition</i>), refers to
+implementations of 
+<i>Standard Generalized Markup Language</i> (SGML). 
+SGML is a technique for representing documents in machine-readable
+form which was approved as an international standard, ISO 8879
+(<i>Information processing--Text and office
+systems--Standard Generalized Markup Language)</i>.  It was
+developed to fill the need for a non-proprietary standard for text
+encoding so that machine-readable data could be exchanged between
+dissimilar text encoding environments.  SGML is widely used in the
+publishing industry where documents are created using various
+computer systems.  SGML supports the definition of sets of
+elements, some of them abstract, that constitute specific document
+types (for example, journal articles).  The MARC DTDs treat
+machine-readable cataloging records as a distinct type of document. 
+ They define all the elements that might constitute a MARC record in
+parallel with the lists of data elements defined in the five MARC formats.
+
+<h3>2.  Framework of the MARC DTD Project</h3>
+<br>The primary purpose of the MARC DTD project was to create standard
+SGML Document Type Definitions to support the conversion of
+cataloging data from the MARC data structure to SGML
+(and back) without loss of data.  The
+MARC data structure is also an international standard (ISO 2709),
+approved decades ago.  Although both ISO 2709 and ISO 8879
+provide standardized techniques
+for encoding data, the relationships between the two could be
+established in different ways unless a standard MARC DTD (or set
+of DTDs) was developed.  The driving force behind this project was
+the desire for a standardized non-proprietary conversion by machine
+between MARC encoded data and SGML.  The project
+included two major tasks: 1) the development of the SGML DTDs
+corresponding to the five MARC  formats, and 2) the development of
+software utilities based capable of converting between the two
+encoding standards.
+<br>Because of its existing involvement in MARC and SGML-related
+activities, not to mention its role as the maintenance agency for
+the MARC 21 formats, the Network Development and MARC Standards
+Office at the Library of Congress agreed to assume the task of
+developing the MARC DTDs and the conversion utilities.  Work began
+in December 1995 on the development of the MARC DTDs needed.
+Simultaneously, resources were requested to contract out the
+development of the conversion utilities.  The project
+was opened for input from any interested MARC and/or SGML users.
+
+<h3>3.  Progress of Work</h3>
+<br>Throughout 1995 the Library of Congress had gathered information
+from outside agencies interested in the application of SGML
+to MARC data.  During this period a number of prototype MARC DTDs
+were found.  As can be imagined, each prototype applied different
+solutions to bridging the gap between the MARC and SGML
+structures.  Considerable differences were found in the SGML tags
+established for corresponding MARC data elements.  Differences in
+the content models of the elements in each DTD were also
+numerous.
+<br>LC established an internal working group to amalgamate the
+ different approaches to a MARC DTD.  The
+working group added its own ideas to features derived from the
+external prototypes.  The resulting draft MARC DTD was discussed in
+detail by a special group of MARC and SGML experts (many from
+outside LC) who came to Washington in October 1995.  The results of
+those discussions and recommendations made at the 1995 meeting of
+experts were incorporated into specifications written for the 
+<i>alpha</i> version of the official MARC DTDs.
+<br>The MARC DTDs were developed by the ATLIS Consulting Group based on
+the draft MARC DTD and recommendations just described.  ATLIS
+worked with the machine-readable version of the MARC  formats to
+generate the final (complete) MARC DTDs.  The earlier drafts had
+never included the entire set of unique data elements defined in the
+five MARC  formats.  The 
+<i>alpha</i> version of the MARC DTDs were made
+available in May 1996.  Copies of the MARC DTDs, actually DTD
+fragments, SGML declarations, and entity reference files, were made
+publically available on a special FTP (File Transfer Protocol) site
+put up by the Library of Congress. This constituted the completion
+of the first phase of the MARC DTD project.
+<br>The MARC DTD project was also to include the development of
+conversion software that would allow files of MARC (ISO 2709)
+records to be converted to SGML (ISO 8879) structure. 
+Unfortunately, the funding provided by LC's National Digital Library
+Project, which covered the 1995 meeting of experts and
+contractor work on the DTDs done in 1996, was insufficient to fund the
+development of the conversion software still needed for the MARC
+DTD project to continue.  It was not until July of 1997 that work on
+the MARC-to-SGML conversion utilities began.
+
+<h3>4.  Work on the Conversion Utilities</h3>
+<br>The availability of end-of-the-year funds in late Fiscal 1997
+(the Federal government's fiscal year ends September 30th) allowed
+work to begin on developing the MARC-to-SGML and SGML-to-MARC
+conversion software that would
+allow library information to be converted between the two data
+structures.  Conversion specifications were written by Library of
+Congress staff in July and August 1997.  Mulberry Technologies, Inc.
+(a local SGML contractor) revised the draft specifications and
+developed initial versions of the conversion utilities using
+the PERL (
+<i><b>P</b>ractical 
+<b>E</b>xtraction and
+<b>R</b>eport 
+<b>L</b>anguage</i>) Version 5.  It was decided
+to develop the utilities as PERL "scripts" since as an interpreted
+programming language, it would not be necessary to recompile the
+PERL scripts to run on different software platforms.  PERL
+interpreters are available for a variety of platforms including DOS,
+Windows, Windows NT, OS/2, Macintosh, and UNIX.  PERL interpreters
+are also free, which means that potential users would not have
+to buy anything to make use of the utilities.  PERL is optimized
+for for text and works good with binary data in external files.
+The choice seemed like a perfect fit.
+<br>Work on the conversion utilities revealed problems with the
+MARC DTDs themselves which had to be resolved.  The alpha
+versions of the MARC DTDs had incorporated into two DTDs the
+MARC data elements from five separate formats.  Each DTD was
+rather complex, branching at a particularly high level to 
+identify the MARC format to which a data element belonged.  In
+some cases, data elements with the same identifier (i.e., field
+tag) had different meanings.  It was decided to eliminate
+such conflicts between the definitions of elements within each
+DTD which required proposing minor changes to the MARC  formats
+themselves.  Proposals for changes to the affected MARC formats
+were written by the Library of Congress for consideration at
+the January 1998 MARBI meetings (MARBI approves all changes
+to the MARC formats).  Fixes were made to the MARC DTDs to
+incorporate the proposed changes.
+<br>The initial (alpha) version of the PERL conversion utilities
+were delivered to the Library of Congress in late November 1997
+for testing.  Testing progressed slowly due to problems with
+the MARC test files which had to be modified to reflect changes
+to the formats.  Some errors in the MARC DTDs themselves were
+also uncovered during initial testing.  These were corrected
+and a modified version of the utilities was installed at LC in
+January 1998.
+
+<h3>5.  Shakedown of the New Utilities</h3>
+<br>Before making the conversion utilities available to other
+users the Library of Congress began testing to see if the PERL
+scripts would function equally well on different platforms.  PERL
+interpreters for Windows 95, DOS, and OS/2 were downloaded from
+FTP sites for testing with the MARC-to-SGML conversion scripts. 
+Unfortunately, this initial testing revealed that complexities
+in the design of the PERL scripts, necessitated in part by the
+rigorous functional specifications, did not allow the PERL scripts
+to run in the DOS environment.  The use of NSGMLS, an SGML utility
+used in parsing SGML instances actually caused the problem, not
+PERL itself.  To date the PERL scripts have not been able to
+run in DOS because of this problem with NSGMLS.  Since most
+users of the utilities are likely to use Windows or some
+non-DOS platform, this may not be a long term problem.
+Work is ongoing nonetheless to remedy this problem for DOS
+users, if possible.
+<br>
+<a href="http://lcweb.loc.gov/marc/marcdtd/marcdtdback.html#top">To return to the top of this document, click here</a>
+<hr>
+<h2>Design Principles</h2>
+<h3>1.  Generality</h3>
+<br>The MARC DTDs were made general rather than designed for any
+specific MARC or SGML-based application.  Therefore they can be
+used for interchange,
+to create MARC records in SGML, as part of another DTD for
+inclusion in other SGML documents, etc.
+
+<h3>2.  Reversibility</h3>
+<br>The mapping of MARC data elements to corresponding SGML
+encodings was specifically designed to be reversible, that is,
+conversion from one structure to the other could be done without
+loss of the intellectual content or information relating to
+essential elements of the other record structure.  Data elements
+defined in MARC can be moved to SGML with the MARC tagging and
+semantics intact.
+
+<h3>3.  Flexibility</h3>
+<br>Another characteristic of the DTDs was that they were to be 
+<i>enabling</i> and not 
+<i>enforcing</i>, that is, as much as possible,
+the DTDs should not require that any specific subset of MARC record
+elements be present in the corresponding SGML data set (in SGML
+parlance, an 
+<i>SGML instance</i>).  The MARC DTDs were to take
+a
+<i>data dictionary</i> approach to data elements and be flexible, with
+no cross-field rules or interelement dependencies.  It was assumed
+that MARC users who establish particular rules in their MARC-based
+applications
+would need to have those same rules enforced by an SGML-based
+application they might use.  The MARC DTDs would have to enforce
+optionality and repeatability where possible, in the knowledge that
+"gaps" in enforcement can be filled in by the application
+systems.
+
+<h3>4.  User Friendly</h3>
+<br>Another design principle applied to the project was that the
+MARC DTDs should support ease of use with off-the-shelf SGML tools.
+ Historically, MARC-based systems represented a specialty market
+catering to libraries and related institutions.  Because of SGML's
+wide base of implementation, the developers of the MARC DTDs knew
+they would need to target their use to less specialized computer
+systems.  The most noticeable result of this principle was the
+introduction of hierarchical elements in the MARC DTDs.  The
+implicit grouping
+of MARC elements at the field level into "centuries" (for example, 2XX--
+Title Statements) is explicitly identified in corresponding SGML
+elements.  It should be noted that these implicit MARC element
+groups are represented in printed MARC documentation by tabbed
+sections, thus the SGML elements have come to be referred to as the
+"tab elements".  The developers of the MARC DTDs felt that this additional
+level of element hierarchy would be useful, in
+particular for those creating MARC records in SGML systems.
+
+<h3>5.  Relationship to TEI</h3>
+<br>A final design consideration in developing the MARC DTDs was the
+relationship of MARC bibliographic data to bibliographic metadata
+accommodated by elements in a specialized portion of documents
+encoded according to the TEI (Text Encoding and Interchange) DTD. 
+During the development of the TEI DTD the importance of
+bibliographic metadata and MARC was recognized.  Elements defined
+for a TEI structure called the 
+<i>header</i> provide elements that relate to
+specific cataloging data (for example, ISBN).  Although the TEI metadata
+elements constitute fairly granular bibliographic data, the
+granularity is not as fine as in MARC.  Developers of the TEI DTD
+were included in early planning for the MARC DTD so that the two
+standards might compliment each other.  The TEI header is not a subset of the
+MARC record.
+<br>There is additional information in the file
+description section of the TEI header that is not appropriate for
+the MARC record.  Additionally, the MARC record has an independent
+existence, that is it may be separated from the electronic document
+whereas the TEI header may not.  Current thinking is that the TEI
+header and MARC record may exist in parallel.  Neither will
+necessarily replace the other.  At some point a link between a TEI
+instance (document) and its corresponding MARC record may be all
+that is needed.  The TEI link to a MARC record could be to the MARC
+(ISO 2709) representation of the bibliographic data or the SGML
+(ISO 8879) representation.  At some point the MARC DTDs may be more
+formally linked by an element in the TEI header, although no move
+to define such an element have been made yet.
+<br>
+<a href="http://lcweb.loc.gov/marc/marcdtd/marcdtdback.html#top">To return to the top of this document, click here</a>
+<hr>
+<h2>Specific Design Decisions</h2>
+<h3>1.  Accommodation of the Five MARC Formats</h3>
+<br>The first design decision made regarding the creation of the MARC
+DTD was that the five MARC formats would be handled by only two SGML
+DTDs.  A DTD for the 
+<i>MARC  Format for Bibliographic Data</i> would
+include additional data elements from the 
+<i>MARC  Format for Community Information</i> and
+the 
+<i>MARC  Format for Holdings Data</i> to permit the
+creation of three record types within the framework of a single
+DTD.  This design decision was made based on the development
+history and characteristics of the MARC  bibliographic, community
+information, and holdings formats.  In MARC records it has always been possible to attach
+holdings data
+elements to bibliographic data elements in the same record.  The holdings
+format, which includes MARC data elements mostly in the 8XX field
+range, rarely defines differently a data element with the same name
+as a data element in the bibliographic format.  This is also true,
+for the most part, with data elements in the community information
+format.  Similarly, a DTD for the 
+<i>MARC  Format for Authority Data</i> includes
+additional data elements from the 
+<i>MARC  Format for Classification Data</i> to
+permit the creation of authority and classification records within the framework
+of a single "authority" DTD.
+<br>This approach had the advantage of requiring fewer
+implementations of SGML to be developed.  When the DTDs are loaded
+to parsers it will also mean that users will be able to create
+various record types with a single DTD.  The decision to
+incorporate elements from several formats into a pair of DTDs did
+present some challenges, however.
+<br>For some MARC data elements, such as field 008 which is defined
+differently in each format (and which in the Bibliographic format
+involves various "flavors"), separate elements had to be defined for
+each variant or "flavor" of the data element.  In such cases the
+DTDs offer possibilities as an 
+<i>OR</i> choice.
+
+<h3>2.  Treatment of Leader Elements</h3>
+<br>The Leader elements, as a case in point, are dealt with for each
+particular MARC format (for example, Holdings) by having been gathered
+together into a Leader container element.  There is a different
+leader element for each MARC format.  In both DTDs, all relevant
+leader choices are presented in an 
+<i>OR</i> grouping.  During record creation, the
+inputter (or the application using information from the document
+type attribute), must choose the appropriate leader element.  The
+following positional elements (when applicable) are defined for
+each of the possible MARC Leaders:
+
+<ul>
+<li>05 - Record status</li>
+<li>06 - Type of record</li>
+<li>07 - Bibliographic level</li>
+<li>08 - Type of control</li>
+<li>17 - Encoding level (for Bibliographic)</li>
+<li>18 - Descriptive cataloging form</li>
+<li>19 - Linked record requirement </li>
+</ul>
+
+
+<h3>3.  Treatment of Subfield $7 and Subfield $w Subelements</h3>
+<br>The alpha version of the MARC DTDs treated subfield $7 (Control
+subfield) in the bibliographic Linking Entry Fields, and subfield
+$w (Control subfield) in the authority and classification formats
+in much the same manner as the character position(s) in other
+fixed-length data elements, such as the Leader. 
+A separate SGML element was defined for each character position (or
+group of positions when they were logically one unit).  When work
+was begun on the conversion utilities it was realized that processing
+these elements of these control subfields individually added
+considerable complexity to conversion.  Particularly in the case
+of subfield $7, which is rarely used in the Linking Entry Fields,
+the added complexity to the SGML-MARC conversion did not seem
+justified.
+<br>A decision was made to simplify the MARC DTDs and conversion
+between the MARC and SGML structures by eliminating the subelements
+constituting the content model for subfield $7 and subfield $w.  Rather
+than each containing a variety of empty subelements, the content
+model for each is now simply #PCDATA (parsed character data).  If
+during the beta test of the MARC DTDs and conversion utilities
+this decision proves to have been unwise, restoring these elements
+could be considered.
+
+<h3>4.  Variable Fields</h3>
+<br>Each variable field, such as fields 245, is defined as 
+an element in the DTD.  Each subfield of each variable field is 
+also defined as a unique element.  That is, subfield $a is defined in 
+the content model for field 245 is a unique element, with a unique 
+name, and
+<i>not</i> the same as the subfield $a element for field 100. 
+
+The definition of subfields in the SGML DTDs was done this way to 
+facilitate authoring and ease conversion since context will not
+need 
+to be determined to identify the meaning of each subfield
+element.
+
+<h3>5.  Variable Control Fields</h3>
+<br>For each control field, such as field 007 and field 008, each
+significant variation is defined as an element in the DTD.  For
+example, there are eight flavors of field 008 defined in the Bibliographic
+DTD.  All choices are presented in an "<i>OR</i>" grouping, and the
+author
+(or the application, using record type information from the leader)
+chooses the appropriate element.
+<br>Defined positions in each leader that use a limited set of named
+
+values are defined to have "<i>EMPTY</i>" content.  The explicit
+values named as a
+Declared Value list of the "VALUE" attribute.  The meaning of the
+value codes are built into the DTD only as comments.  It is left to
+an SGML application to display these meanings for the user,
+possibly as a menu or picklist.
+<br>For example: the element for position 00 in field 006-Visual
+Materials is declared as "<i>EMPTY</i>", with a Declared Value of
+ "(g | k | o | r | fill)", read as "g" or "k" or "o" or "r" or
+"fill".  The translation of these codes (for example "projected
+medium" for "g" and "Two-dimensional nonprojectable graphic" for
+"k") is listed as a comment in the DTD.
+<br>Certain value attributes require more values than can be
+enumerated in the DTD (for example, language codes)  The
+application must obtain these values from sources outside the DTD,
+such as ISO standards.  For these elements, the "VALUE" attribute
+will be declared as data characters.
+
+<h3>6.  Order/Repeatability of Elements</h3>
+<br>Due to constraints presented by the SGML standard itself,
+certain things had to be specified in the MARC DTDs that are not
+explicitly specified for MARC (ISO 2709) records.  In some cases
+these specifications represent new requirements on MARC data.  For the most part the impact
+should be minimal.
+
+<dl>
+
+<dt>Order</dt><dd>MARC fields are defined in the DTD in
+enforced numerical order, in logical groupings corresponding to the
+groupings represented by tabs in printed MARC
+documentation.</dd>
+
+<dt>Optionality</dt><dd>All fields except the Leader are
+optional</dd>
+
+<dt>Repeatability</dt><dd>A specialized attribute identifies
+repeatability</dd>
+
+<dt>Order in control fields</dt><dd>The order of subelements
+in fixed-length fields is strictly enforced.</dd>
+
+<dt>Order in variable fields</dt><dd>The order of subelements
+in variable-length data fields is not enforced nor are any
+distinctions made between single versus multiple repeatability (?
+and *).  The repeatability of subfields is indicated using the
+"REPEATABLE" attribute since it cannot be controled by the DTD
+itself.  A MARC SGML system would need to validate repeatability as
+is done now in current MARC-based systems.</dd>
+
+</dl>
+
+<h3>7.  Element Groupings</h3>
+<br>Container elements are constructed for the major implied element
+groupings in the MARC formats.  The groupings were based on
+the headings in the electronic version of the MARC formats.  These generally
+relate to the printed tabs in MARC documentation.  For the variable
+fields, these are essentially century groupings (for example, 1XX fields)
+with further subdivisions within some centuries such as the 7XX and
+8XX fields which are divided into multiple field groups.
+
+<h3>8.  Required versus Optional</h3>
+<br>Whether a data element is mandatory, mandatory if applicable, or
+optional is explicitly indicated in the MARC  formats.  Similar
+specifications were needed in the MARC DTDs as
+well.  The following decisions were made for the MARC DTDs.  Only the highest level tag in
+the DTD and the Leader is required.  All other elements are optional, either directly or
+because they are contained in an optional element.
+
+<h3>9.  Obsolete Elements, Attributes, and Values</h3>
+<br>Elements in the MARC format that were once valid but that are
+now considered 
+<i>obsolete</i>, and thus should not be used in
+newly-created records, presented a special challenge for the MARC
+DTDs.  In SGML an element is either defined or it isn't.  There
+is no way to say a element should only occur in data
+created before a particular date.  The solution was to define an attribute in each SGML element
+that
+would allow obsolescence to be flagged.  The use of obsolete data
+elements could then be controled at the system level, as is done
+with MARC-based systems.
+<br>Thus, in the MARC DTDs, even obsolete data elements are defined. 
+ To identify them as obsolete, the 
+"<b>OBSOLETE</b>" attribute is set to the value
+"yes".  When the attribute is set to "no", or if no attribute
+value is supplied, the implied meaning is "not obsolete" (or
+"currently valid").
+<br>This solution could not be applied to obsolete indicators and
+indicator values since, in the MARC DTDs, indicators are handled as
+attributes.  In SGML, it is not possible to define attributes for
+attributes.  Thus, all obsolete indicators and obsolete indicator values are
+listed in the same way as currently valid indicators and values, without any
+coding to indicate obsolescence.  In these cases, the
+comment which contains the name of the data element includes the
+suffix phrase "[OBSOLETE]".  Some obsolete elements had to be
+eliminated all together if they had the same content designator
+as a valid elements.  SGML parser cannot handle two elements
+with the same name.  It was decided to handle this situation by
+including the obsolete name of a duplicated element in the
+SGML comment where the valid name is given.
+
+<h3>10.  Locally Defined Elements and Variations</h3>
+<br>The developers of the MARC DTDs chose not
+to accommodate local structural format characteristics, such
+as local data elements, or structural components (for example, local tag
+sequencing numbers).   Since accommodation of local data elements
+was not a requirement, no mechanism was built into the MARC DTDs. 
+It is assumed that users of the MARC DTDs will modify either the
+DTDs or the systems parsing them, to accommodate locally-defined
+data elements.  This is the way local data requirements are handled
+with the MARC data conforming to the ISO 2709 structure.
+
+<h3>11.  Multiple Definitions</h3>
+<br>In a small number of cases, a MARC data element has had more
+than one definition which affects the name.  If a field,
+subfield, or indicator position has been differently defined in the past
+and the name has changed, at least one definition/name must be
+obsolete.  If the element or attribute is currently valid, both
+names are preserved in the name and they are separated by a slash
+(/).  The legend "<i>[OBSOLETE]</i>" follows the
+ obsolete name.  If a
+data element including multiple names is obsolete, for example, in
+field 041, subfield $c from the Bibliographic format, both names
+are flagged as obsolete (the names associated with field 041,
+subfield $c read: "Languages of separate titles
+[Obsolete]/Languages of available translation [Obsolete]").
+<br>If a field or subfield has multiple definitions, the element is
+flagged as obsolete in the 
+"OBSOLETE" attribute only if all of the
+definitions are obsolete.
+<br>
+<a href="http://lcweb.loc.gov/marc/marcdtd/marcdtdback.html#top">To return to the top of this document, click here</a>
+<hr>
+<h2>Attributes</h2>
+<h3>1.  "Document Type" Attribute</h3>
+<br>At the highest level, each DTD has an attribute which must be
+set to select the specific MARC format specification.  The choices
+for the attribute value provided in the first MARC DTD are "bd" (for the Bibliographic
+format), "ci" (for the Community Information format), and "hd" (for
+the Holdings format).  Choices provided in the second MARC DTD are
+"ad" (for the Authority format) and "cl" (for the Classification
+format).  These high-level attributes allow users to differentiate
+between the record type groups that are defined in the five MARC 
+formats.
+
+<h3>2.  Treatment of Indicators</h3>
+<br>In MARC fields that have indicator positions defined (of which
+a maximum of two can be defined), the indicators are defined as
+attributes to the field tag.  The decision to treat indicators as
+attributes was made since indicators may contain only a finite
+number of possible values, and those values are easily controled. 
+In all cases, the indicator attributes bear the generic names "i1"
+and "i2", for the first and second indicator positions,
+respectively.  Valid and obsolete indicator values are defined as
+attribute values.  As already mentioned, obsolete indicators are
+also defined with their obsolete status indicated as a comment to
+the attribute.
+
+<h3>3.  "Name" Attribute</h3>
+<br>MARC fields and subfields are often referred to by their popular
+names (for example, 110, is known as the Main Entry--Corporate Name). 
+Each field and subfield element has an attribute that gives the
+fuller MARC name by which it is also known.  This information is
+important since in some cases the name is used as a display
+constant in catalogs and other output products.
+
+<h3>4.  "Repeatable" Attribute</h3>
+<br>Subfield elements within MARC field elements are defined as
+large 
+"<b>OR</b>" groups.  Due to limitations in what the
+syntax of an SGML DTD can specify, there is no way to indicate
+whether any subfields in the group may be repeated.  So that this
+information is not lost, an attribute identifying repeatability is
+defined.  The attribute is only given in
+cases where an element is repeatable, thus it known as the 
+"<i>REPEATABLE</i>" attribute.<br>
+
+<h3>5.  Attributes and Use of Declared Value Lists</h3>
+<br>Most positionally-defined elements in control (fixed-length)
+data elements that use specified values are defined as EMPTY,
+given a "VALUE" attribute, and the explicit values
+defined for the attribute are given in a Declared Value list.  The
+meaning of the value codes is built into the DTD only as comments. 
+It is left to an SGML application to display these meanings for the
+user, possibly as a menu or list of choices.
+<br>Some value lists, such as those for language codes and country
+codes, are too long and/or dynamic to be internal to the MARC DTDs.
+ Attributes intended to contain these codes are declared as 
+"<b>CDATA</b>" attributes and enforcement/validation
+
+of them is left to the SGML system parsing the MARC DTD.
+<br>
+<a href="http://lcweb.loc.gov/marc/marcdtd/marcdtdback.html#top">To return to the top of this document, click here</a>
+<hr>
+<h2>Naming Conventions</h2>
+<h3>1.  General Naming Rules</h3>
+<br>The names chosen for the elements (that is, SGML "tags") in the
+MARC DTDs are number-based, derived from the variable field tags
+and subfield codes in the MARC formats themselves.  The prefix used
+in every MARC DTD element is "mrc".  This prefix was suggested to
+help guarantee that the tags defined in the MARC DTDs would not
+conflict with tags defined in DTDs that might be used in
+conjunction with instances of the MARC DTD (for example, TEI documents). 
+A single alphabetic character immediately follows the "mrc" prefix
+to identify the type of MARC format to which the tag belongs.  All
+elements in the MARC Bibliographic DTD group (covering
+bibliographic, community information, and holdings records) begin
+with "mrcb".  All elements in the MARC Authority DTD group
+(covering authority and classification records) begin with
+"mrca".
+<br>Other characteristics of the SGML element names include:
+
+<ul>
+<li>All names are composed of lower case letters</li>
+<li>Legal name characters include a-z, 0-9, and
+hyphen</li>
+<li>Name length is limited to 32 characters</li>
+</ul>
+
+<h3>2.  Names of Field-Level Elements</h3>
+<br>For all variable fields identified in MARC by three-digit tags,
+the corresponding SGML tags are composed of the alphabetic prefix
+followed by the same three digits.  For example: "mrca100" for MARC
+field 100, and "mrcb245" for MARC field 245.
+<br>Although the rules of SGML syntax would have allowed longer and
+more descriptive names for MARC elements, it was decided that the
+existing numeric MARC names were preferable.  Firstly, people who
+currently deal with MARC data are familiar with the three-digit
+MARC tags.  They have become part of library automation jargon.  
+Secondly, numeric names would be
+much more readily accepted internationally, since numbers are free
+of language centricity.  The international MARC community would not
+likely want or be able to use a MARC DTD with English-based names
+any more than the U.S. could use Chinese-based names if the DTD
+were being developed in China with non-numeric tags.
+
+<h3>3.  Names and Scope of Subfield-Level
+ Elements</h3>
+<br>The content model of most MARC fields includes at least one
+subfield element.  (Control fields are the one exception to this
+rule where neither indicator positions nor subfields are defined.) 
+The one-character alphanumeric codes designating MARC
+subfields were used as the basis for subfield elements in the MARC
+DTDs as well.  The structure of subfield-level SGML elements would
+be the expected alphabetic prefix ("mrcb" or "mrca", depending upon
+the DTD), the three-digit numeric tag for the field in which the
+subfield is valid, a hyphen (-), and the one-character subfield
+identifier, usually a lowercase letter a-z or digits 2-8 (for
+example: mrcb245-a, mrcb245-b, mrcb245-6).
+<br>A conscious decision was made to define subfield elements that
+include as part of their name the three-digit MARC field tag for
+whose content model they were defined.  An alternative to this
+approach was seen in prototype MARC DTDs, where a small set
+of generic subfield elements were defined.  The main advantage to
+defining generic subfield elements is a shorter DTD with less
+possible elements.  The advantages of field-specific subfield tags
+include easier validation of elements and manipulation of SGML data
+without the constant need to determine context when providing print
+constants for particular tags.  In library OPAC environments where
+the MARC DTDs are likely to be used the most, this should be very
+important.
+
+<h3>4.  Indicator Names</h3>
+<br>As already described in the section on the treatment of
+indicators, the naming of indicators, which are handled as
+attributes to field-level elements, uses the generic identifiers 
+"<i>i1</i>" and 
+"<i>i2</i>".  Since indicators usually qualify
+and/or make more precise the meaning of a MARC field, it is
+unlikely that more specific names for indicators would be of any
+use.
+
+<h3>5.  Names of Fixed-Length Control Field Elements</h3>
+<br>The characteristic shared by all fixed-length data elements in
+the MARC formats is that meaning is positionally defined.  In MARC
+data structured according to ISO 2709, the relative position of a
+code in a fixed-length element determines its meaning.  The MARC
+DTDs provide uniquely named elements for each positionally-defined
+element in fixed-length fields and subfields.  An indication of the
+relative position (relative to position "0", the first position in
+the field or subfield) is explicitly identified in the element
+name.  This technique is used primarily for constituent
+elements of MARC fields 006-008, but is also applied in a small
+number of subfields whose content is positionally defined (for example,
+subfield $w in authority records.)
+<br>The syntax of the SGML names for MARC fixed-length data elements
+is as follows:
+<ul>
+<li>the alphabetic prefix "mrcb" or "mrca"</li>
+<li>the three-digit numeric tag for the field</li>
+<li>when applicable, an alphabetic identifier for the
+"flavor", preceded by a hyphen (-), and</li>
+<li>numeric identifier for the applicable character
+position(s), also preceded by a hyphen (-)</li>
+</ul>
+
+(for example: mrcb008-BK-22).  When multiple fixed-length positions
+constitute the data element, the numeric identifier consists of the
+starting and ending positions, separated by hyphen (for example:
+mrcb006-SE-08-10). For field 006, the flavor is identified by one
+of the following two-character codes: BK, CF, MP, MU, SR, VM, and
+MX.  For field 007, the flavor is identified by one of the
+following one-character codes: a, c, d, g, h, k, m, s, t, v, and z. 
+For field 008, the flavor is identified by one of the same
+two-character codes as in field 006 (that is: BK, CF, MP, MU, SR,
+VM, and MX).
+
+<h3>6.  Names of Leader Elements</h3>
+<br>Since the MARC record Leader is a positionally-defined
+fixed-length data element and it does not have an associated
+three-character field tag, a unique element set was defined in the
+MARC DTDs for each possible Leader configuration.  As with other fixed-length
+data elements, the names of Leader elements are concatenated
+strings consisting of:
+<ul>
+<li>The prefix "mrcaldr" or "mrcbldr"</li>
+<li>a MARC format type code, preceded by a hyphen (one of: bd,
+hd, ci, ad, or cl)</li>
+<li>numeric identifier for the applicable character
+position(s), also preceded by a hyphen (-)</li>
+</ul>
+(for example: mrcbldr-bd-05).
+
+<h3>7.  Comments</h3>
+<br>The MARC DTDs in their fullest form are heavily commented. 
+Comments were included to make the DTDs more intelligible but are
+not needed to parse either of the DTDs.  The comment associated
+with the "NAME" attribute contains the same MARC  name for the data element
+that would be found in printed MARC  documentation.  Names are
+generally field, subfield, or character position names.
+<br>
+<a href="http://lcweb.loc.gov/marc/marcdtd/marcdtdback.html#top">To return to the top of this document, click here</a>
+<hr>
+<h2>Issues Surrounding Conversion</h2>
+<h3>1.  Conversion of Fill Characters</h3>
+<br>In variable fields, a subfield is present only if it has
+content.  For fixed-length data elements, which are positionally
+defined, omission of elements is generally not allowed.  (NOTE:
+Omission of character positions is allowed in some fixed-length
+data elements in cases where all subsequent positions are
+not required.)  There are, however, conversion issues for
+the fixed field data elements.  The character positions of
+fixed-length data elements can be defined or undefined, but there
+should always be some value applicable to the position, even if
+only a blank.  For many defined character positions in fixed-length
+data elements, a blank is a meaningful value (for example in
+mrcb008-bk-22 blank means "unknown or not specified").  A fill
+character (hexadecimal value '7C') may be used in any fixed-length
+data element position, whether it is defined or not.  Thus, an
+undefined positional element in a MARC record may, in theory,
+contain blank or fill.  A defined position may be fill or another
+value (one of which could be blank).
+<br>In the MARC DTDs, all positional elements in fixed-length
+elements are required (if the element itself is applicable.
+
+<h3>2.  MARC Elements Not Converted</h3>
+<br>Although in principle conversion of data from MARC (ISO 2709)
+structure to SGML (ISO 8879) structure should treat all data,
+certain structural elements of MARC data are not needed in SGML.  The
+retention of certain elements in SGML might actually make
+conversion back to MARC more difficult, particularly if
+modifications are made to the record data while in SGML.
+<br>A decision was made that a small group of elements in the MARC
+record should not be converted or moved to an analogous SGML
+element.  The elements include the Record Length portion of the
+Leader (Leader character positions 00-04); Undefined character
+positions in the record Leader (for bibliographic records this
+would include Leader position 10, and others); and the entire
+record Directory (12-character entries for each variable field). 
+These structures, since dropped during conversion to SGML, would
+need to be generated when a record is converted from SGML to
+MARC.
+<br>Other MARC record features that would not be carried over into
+the SGML instance include the end-of-record character (hexadecimal
+'1D') and occurrences of the end-of-field character (hexadecimal
+'1E', which appears at the end of the Directory and each tagged MARC
+field.  The content designation itself, that is, field tags,
+indicator values, and subfield codes, would be converted to their
+corresponding SGML elements: elements for MARC field and
+subfield content designators and SGML attributes for MARC
+indicators.
+<br>A decision was made not to provide for the conversion of
+locally-defined data elements, although certainly locally-defined
+data elements could be added to the MARC DTDs and added to the
+conversion processing by end users.  Since by definition locally-defined data
+elements are outside the purview of MARC , it did not seem wise to
+invest heavily in a technique for dealing with it in the DTDs.  It
+should be noted that the MARC  field 886 (Foreign MARC
+Information), defined in the bibliographic format, already allows for the
+embedding of unrecognized MARC fields.  Unrecognized subfields,
+indicators, and indicator values are not covered by the use of field
+886.
+
+<h3>3.  Character Set Conversion</h3>
+<br>Decisions made by the MARC DTD development group regarding the conversion of the
+MARC  characters sets took into account the unique nature of MARC  sets and
+the common trends in character encoding in non-library applications.  The MARC  character
+sets for Latin and non-Latin scripts make use of a large number of special characters, including
+a powerful repertoire of "combining" (non-spacing) marks, chiefly diacritical marks, that can
+be combined "on-the-fly" with spacing alphabet characters.  The technique of combining
+non-spacing diacritic characters with alphabetic characters has allowed libraries to encode data
+in a
+variety of languages represented by their holdings.
+<br>The SGML community, following the lead of the popular (non-library) computer industry,
+has never made great use of non-spacing characters.  Letters with diacritical marks are generally
+coded as single characters ("precomposed characters").  The resulting limitations of using this
+technique in the 8-bit character
+set environment has been a problem for the computer industry.  Newly-developed 16-bit
+"universal" character sets, such as ISO 10646 and
+<i>Unicode</i> have
+mitigated the problem by providing larger repertoires of precomposed characters.  For SGML
+data,
+letters with diacritics are generally represented as single character encodings.  In cases where
+the character
+set being used does not provide all the necessary characters, SGML provides an 
+<i>entity reference</i> technique, whereby missing characters can be
+represented using the characters that are available.
+<br>For the conversion of the MARC  character sets to SGML, characters that map
+one-to-one can be passed unchanged to the SGML structure.  This accounts for most
+of the data in the average MARC record.  When diacritics are involved, that is, when a
+letter is intended to be modified by a diacritic, the converter can replace the
+MARC  pair of characters (diacritic character
+plus base letter) with a single SGML entity reference for the corresponding "precomposed"
+character.  This yields SGML data that is more compatible with ordinary SGML files.
+<br>A decision was made to allow three options for converting MARC  characters.  One
+option performs only minimal character conversion, mapping only characters reserved for special
+functions in SGML to character entities.  Another option allows the conversion of upper-register
+characters (hexadecimal values 80 to FF) to entities using a built-in character conversion table. 
+The third option makes use of external tables that would be supplied by the end user.  This
+allows the user to specify special character conversion.  With this third option, the minimal
+character conversion is also performed to protect SGML reserved characters.
+<br>Providing options for dealing with special and non-spacing characters was a very practical
+decision.  The SGML version of MARC record data will integrated, most likely, with other
+kinds of SGML data.  Textual documents encoded using SGML do not always follow the
+MARC model of character encoding.  By allowing special handling of the transformation of
+character
+encoding in the MARC-to-SGML and SGML-to-MARC conversion software, users of both
+communities will not have to alter their current character encoding traditions.
+<br>Some challenges to character conversion will certainly come up.  For one thing, MARC
+data has a larger number of diacritic-with-letter combinations than are currently covered by the
+existing SGML entity reference sets that are used with most DTDs.  A more robust set of entity
+references may be needed, or at least, default mapping for MARC  character combinations
+that do not have equivalent SGML entity references.  More will be known about the extent of
+the
+problem and the workability of the solution with experience in developing the conversion
+utilities.
+<br>
+<a href="http://lcweb.loc.gov/marc/marcdtd/marcdtdback.html#top">To return to the top of this document, click here</a>
+<hr>
+<h2>Conclusions</h2>
+<br>Despite the delays in developing the MARC-SGML conversion utilities, several
+institutions
+have already begun to experiment with using the MARC DTDs.  Some have even developed
+some simple conversions between the two structures on their own.  With the availability of
+freeware to move between MARC and SGML, many more MARC and SGML users will be able
+to experiment with conversion and processing of MARC data in SGML environments.  There
+is increasing
+interest in pursuing the development of the MARC DTDs as interest in SGML and the Internet
+becomes more widespread.  Now that the conversion utilities are available
+it is suspected that a considerable increase in experimentation and useful application of the
+MARC DTDs will be seen.
+<p>
+<a href="http://lcweb.loc.gov/marc/marcdtd/marcdtdback.html#top">To return to the top of this document, click here</a>
+<p>
+<hr>
+<p>
+Go to the <a href="../marc.html">MARC Home Page</a>
+<p>
+Go to the <a href="../../index.html">Library of Congress Home Page</a>
+<p>
+<hr>
+<img src="../../homepage/lc2.gif" alt="Library of Congress"> <strong>Library 
+of Congress</strong><br>
+<address><!--help desk email start -->
+<a href="http://www.loc.gov/help/help-desk.html">Library of Congress Help Desk</a>
+<!--help desk email end -->
+ 
+(01/08/2002)</address>
+
+<script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                        "http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/marc_generic.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Analysis of Data Overlap Between the MARC21 Bibliographic Format and the PREMIS Data Dictionary : MARC Standards (Network Development and MARC Standards Office, Library of Congress)</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="description" content="Analysis of Data Overlap Between the MARC21 Bibliographic Format and the PREMIS Data Dictionary : MARC Standards (Network Development and MARC Standards Office, Library of Congress)">
+<meta name="keywords" content="marc, marc21, marc standards">
+<meta name="author" content="Library of Congress Network Development and MARC Standards Office">
+<!-- InstanceEndEditable -->
+<link href="http://www.loc.gov/marc/marc-generic.css" rel="stylesheet" type="text/css">
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+
+<body bgcolor="#ffffff">
+<div class="head-nav"><a id="skip" href="MARC21-PREMIS.html#skip_menu"><img src="http://www.loc.gov/marc/images/clear.gif" border="0" alt="Skip Navigation Links"></a><a href="../../../index.html">The Library of Congress</a> &gt;&gt; <a href="../../../library/index.html">Especially
+  for Librarians and Archivists</a> &gt;&gt; <a href="../../../standards/index.html">Standards</a></div>
+<a href="../../../marc.html"><img src="http://www.loc.gov/marc/images/marc-bar.gif" alt="MARC Standards" width="620" height="36" border="0"></a>
+<div class="head-nav"><a href="../../../marc.html">MARC 21 HOME</a> &gt;&gt; <!-- InstanceBeginEditable name="topbreadcrumb" --><a href="../ecbdhome.html">Bibliographic Format</a> &gt;&gt; <a href="index.html">Overlaps Between MARC21</a> &gt;&gt; MARC21 to PREMIS Mapping<!-- InstanceEndEditable --></div>
+<hr size="1" noshade><a name="skip_menu"></a>
+<!-- InstanceBeginEditable name="content" -->
+<h1>Analysis of Data Overlap Between the MARC21 Bibliographic Format </h1>
+<h1>and the PREMIS Data Dictionary</h1>
+<p><strong>INTRODUCTION</strong></p>
+<p>The task of relating contents of
+  <a href="../ecbdhome.html">MARC21 Bibliographic format</a>  and the <a href="http://loc.gov/standards/premis/">PREMIS Data Dictionary</a>  confronts a variety of challenges.</p>
+<p>MARC21 was designed primarily as
+  an exchange format for bibliographic data pertaining to a wide variety of
+  materials, a purpose requiring its specification to be understood and applied
+  similarly by users in many libraries.&nbsp; For some data elements &ndash; countries, languages, relators, etc. &ndash; code
+  lists are provided that provide uniformity of content for several fields.&nbsp; However, most fields accept free text, with
+  issues of intelligible display frequently having priority over machine-processable
+  uniformity&nbsp;&nbsp; (The issue arose, for
+  example, on the MARC Forum in a discussion about copyright jurisdiction in the
+  proposal establishing field 542 (Information Relating to Copyright Status)). &nbsp;Such consistency as is achieved in the free
+  text fields results from application of a set of cataloging rules employed by
+  the majority of MARC21 users.&nbsp; These
+  rules are distinct from the format, and, in an earlier form, antedated and
+  influenced the creation of the MARC format.</p>
+<p>In contrast, PREMIS is intended to
+  facilitate the management of preservation metadata primarily within individual
+  digital archives or repositories.&nbsp; Data
+  exchange has been a secondary concern.&nbsp; The specification shows this clearly, allowing each PREMIS instantiation
+  a great deal of latitude in what data are recorded, and in the vocabularies
+  employed.&nbsp; The phrase, &ldquo;Value should be
+  taken from a controlled vocabulary,&rdquo; present as a data constraint for many
+  PREMIS semantic units is indicative of this design philosophy, the implication being
+  that the choice of vocabulary may be a local one.&nbsp; </p>
+<p>The result of these differences in
+  purpose is that the two schemes focus, in their concern for particularity, on
+  rather different metadata elements.&nbsp; Even
+  when the same metadata particular is represented in the two schemes, it is
+  almost never done in a way that would allow the value to be transferred
+  directly or unambiguously from PREMIS to MARC21, or vice versa.&nbsp; MARC21 is at a disadvantage in the areas on
+  which PREMIS concentrates, because much of the MARC specification was done when
+  preservation of digital resources was a field in its infancy. &nbsp;The PREMIS Data Dictionary embodies an attempt
+  to codify metadata needs in this area where standards and best practices are
+  only emerging.&nbsp; There are no longstanding
+  traditions to guide (or hamper) the effort.</p>
+<p><strong>NOTES ON THE ANALYSIS</strong></p>
+<p>The present paper examines these
+  two metadata schemes for correspondences in the data which they
+  accommodate.&nbsp; The findings are expressed
+  in a pair of tables that have the same contents arranged differently.&nbsp; Table <i><a href="http://www.loc.gov/marc/bibliographic/mapping/MARC21vsPREMIStable.html">MARC21
+    vs. PREMIS</a></i> is ordered by MARC tag and subfield code; table <i><a href="http://www.loc.gov/marc/bibliographic/mapping/PREMISvsMARC21table.html">PREMIS vs. MARC21</a></i> follows the order of PREMIS
+  semantic units specified in version 2.0 of the Data Dictionary.&nbsp; </p>
+<p>Where feasible, the tables work at
+  MARC subfield and PREMIS subunit levels.&nbsp; Departures from this principle occur for two main reasons.</p>
+<ol>
+  <li>There are a number of situations in which
+    a single MARC element represents, implicitly or explicitly, a Type/Value pair
+    of PREMIS subunits.&nbsp; For succinctness, a
+    single reference to the appropriate container is used in these cases.</li>
+  <li>&nbsp;Sometimes
+    the specification of a MARC field relates in an uncertain or complex way at the
+    subfield level to the subunits of a PREMIS container.&nbsp; Creating a table entry at the field/container
+    level expresses the relationship as clearly as seems possible; <i>viz</i>, fields 506 and 542.</li>
+</ol>
+<p>The tables have been built
+  assuming that it is preferable to identify possible correspondences that may be
+  tenuous, or even erroneous, than inadvertently to omit a connection of
+  importance.&nbsp; Two systematic exceptions
+  from the policy of inclusiveness should be mentioned.</p>
+<ol>
+  <li>Fields from bibliographic format ranges
+    1XX, 6XX, and 7XX-75X have not been included as potential PREMIS agents.</li>
+  <li>Numbers based on knowledge classification
+    (fields 050 et al.) have been excluded as possible
+    linkingIntellectualEntityIdentifiers since their primary purpose is to bring
+    materials together rather than to distinguish between them at levels useful for
+    preservation management.</li>
+</ol>
+<p>Users of these tables who are more
+  knowledgeable of their and other's PREMIS implementations may be able to
+  eliminate some table entries as universally inappropriate or too rare to be
+  worthy of consideration.&nbsp; For instance,
+  subfield 260$f, manufacturer&rsquo;s name, is listed as a possible agentName,
+  although the likelihood of that relationship&rsquo;s being useful seems small.&nbsp; </p>
+<p>Certain subfields whose roles in
+  this context are obscure have generally been omitted.&nbsp; Their evaluation will require examination of individual
+  instances.</p>
+<ol>
+  <li>Subfield $u when it contains a URI in
+    fields other than 856; i.e, in notes 538, 540, 542, and 583.&nbsp; In these cases the entity to which the URI
+    points may provide data that might otherwise be present in one or more other
+    subfields, though it is not possible abstractly to predict what data are to be
+    found via the URI link.</li>
+  <li>Subfield $3 &ldquo;Materials specified.&rdquo; can be
+    significant in defining a specific electronic resource within the context of a
+    complex MARC record, but its relation to PREMIS semantic units may be limited
+    at most to construction of a linkingIntellectualEntity Identifier.</li>
+</ol>
+<p>In general, there are no table
+  entries for semantic units whose names begin with the element &ldquo;linking,&rdquo; because
+  their type and value subunits inherit data from similarly named units lacking
+  the &ldquo;linking&rdquo; prefix.&nbsp; There are
+  exceptions.</p>
+<ol>
+  <li>Entries have been provided for
+    linkingAgentRole (2.6.3 and 4.1.8.3) because role is not a semantic unit of an
+    Agent entity.</li>
+  <li>Entries have been provided for
+    linkingIntellectualEntityIdentifier because there is no
+    intellectualEntityIdentifier semantic unit in PREMIS.&nbsp; </li>
+</ol>
+<p>Finally, this analysis examined
+  the question of MARC21 data that a repository might find appropriate to include
+  in its PREMIS database, but that appear to fit only in the &ldquo;Extension&rdquo; containers.&nbsp; Sometimes it is unclear whether these
+  marginal data would be appropriate to &ldquo;Note&rdquo; subunits.&nbsp; In the end, only the rightsExtension (4.2)
+  appears in the tables; <i>viz</i>. fields
+  355 and 506. &nbsp;</p>
+<p>The process of deciding what kinds
+  of data are expected in any subfield of interest, particularly in free text
+  note fields, was guided by the examples provided in the full online MARC21
+  Bibliographic Format document.&nbsp; No
+  attempt was made to search for additional examples in library databases.</p>
+<p>The investigator is aware of his
+  tendency to think of metadata comparisons of this sort in terms of conversions
+  from one scheme to another.&nbsp; That is a
+  matter more limited than the general question of data overlap, and one that the
+  character of these two schemes renders impracticable.&nbsp; Nevertheless, that mindset has crept
+  occasionally into the language used to talk about the relationships between
+  certain data elements and semantic units.&nbsp; This fact should not seriously affect interpretation of the findings,
+  but it seems wise to mention it.</p>
+<p><i>Prepared for the Library of Congress </i><br>
+<i>by Charles W. Husbands<br>
+</i><i>14 December 2009</i></p>
+<!-- InstanceEndEditable -->
+<hr size="1" noshade>
+<p><a href="../../../marc.html">MARC 21 HOME</a> &gt;&gt; <!-- InstanceBeginEditable name="bottombreadcrumb" --><a href="../ecbdhome.html">Bibliographic Format</a> &gt;&gt; <a href="index.html">Overlaps Between MARC21</a> &gt;&gt; MARC21 to PREMIS Mapping<!-- InstanceEndEditable --></p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr valign="bottom">
+    <td><a href="../../../index.html">The Library of Congress</a> &gt;&gt; <a href="../../../library/index.html">Especially
+    for Librarians and Archivists</a> &gt;&gt; <a href="../../../standards/index.html">Standards</a><br>
+    (<!-- MM:BeginLock type="mmdate" format="Am3" orig=" -->
+    <!-- #BeginDate format:Am3 -->12/20/2010<!-- #EndDate -->
+    ) </td>
+    <td align="right"><a href="http://www.loc.gov/cdn-cgi/l/email-protection#f698929b8599b69a9995d8919980">Contact Us</a></td>
+  </tr>
+</table>
+<script data-cfasync="false" src="http://www.loc.gov/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+<!-- InstanceEnd --></html>

@@ -1,0 +1,47 @@
+/* CSS Document */
+
+.main {
+	background-image: url(http://www.loc.gov/cds/desktop/images/dcs_bg2.gif);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+
+.footer {
+	background-image: url(images/cds_bg3.gif);
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #31517D;
+	border-bottom-color: #31517D;
+	background-repeat: repeat-x;
+	font-family: tahoma, arial, helvetica;
+	font-size: 11px;
+	line-height: 16px;
+	background-color: #98B3D6;
+}
+
+.footer a {
+	color: #092854;
+	}
+
+td {
+	font-family: tahoma, arial, helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 16px;
+	color: #092854;
+}
+a {
+	color: #75352F;
+	text-decoration: none;
+
+}
+
+h2 {
+	line-height:24px;
+}.NoteTables {
+	font-size: 12px;
+}
+a:hover {
+	color: #FF6600;
+}

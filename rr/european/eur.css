@@ -1,0 +1,243 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #333333;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+
+}
+td {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #333333;
+}
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #333333;
+}
+dd {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #666666;
+	margin-left: 10pt;
+
+
+}
+dt {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #000066;
+
+}
+.larger {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	font-weight: bold;
+}
+
+ 
+.larger2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	font-weight: bold;
+	font-style: italic 
+	 
+}
+
+.larger3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: italic;
+    color: #000066 
+}
+
+
+.caption {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	text-align: center;
+
+}
+
+.caption2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+ font-weight: bold;
+
+}
+
+.bibentry {
+	font-weight: bold;
+	font-style: italic;
+}
+
+
+a.white {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #EEEEEE;
+	text-decoration: none;
+}
+a.white:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+.white-text {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #EEEEEE;
+}
+.redtext { color:#990000;
+font-weight: bold; 
+}
+.drop-box {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+}
+h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18pt;
+	font-weight: bold;
+	color: #000066;
+}
+h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15pt;
+	font-weight: bold;
+	color: #666666;
+}
+
+h3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13pt;
+	font-weight: bold;
+	color: #336699;
+}
+h4 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	font-weight: bold;
+	color: #333333;
+}
+
+
+.largecap {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14pt;
+	font-weight: bold;
+	color: #000066;
+}
+.blue-header {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	font-weight: bold;
+	color: #000066;
+}
+address {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+}
+.selected {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #000066;
+}
+
+strong {
+	font-weight: bold;
+	color: #000066;
+}
+ul { padding-left: 15px;}
+ul li, ol li {margin-bottom: 4px;}
+li ul, li ol {margin: .5em 0 .5em 0;}
+li {
+	line-height: 16pt;
+}
+pre {
+	font-family: "Courier New", Courier, mono;
+	font-size: 9pt;
+}
+
+.background-blue {
+	background-image: url(images/space-blue.gif);
+	background-color: #000066;
+
+}
+.background-gray {
+	background-image: url(images/space-gray.gif);
+	background-color: #dddddd;
+}
+
+
+div.photo-caption { 
+	float: right;
+	font: normal 80%/120% Verdana, Arial, Helvetica, sans-serif;
+	background-color: #eeeeee;
+	margin: 10px 10px 10px 10px;
+	padding: 10px 10px 10px 10px;
+	width: auto;
+}
+div.photo-caption a {
+	text-decoration: none;
+}
+div.photo-caption a img {
+	border: 5px #d4e9ff solid;
+	padding: 0;
+	margin: 0 0 5px 0;
+}
+div.photo-caption img {
+	border: 5px #aaaaaa solid;
+	padding: 0;
+	margin: 0 0 5px 0;
+}
+
+
+div.photo-caption_200 { 
+	float: right;
+	font: normal 80%/120% Verdana, Arial, Helvetica, sans-serif;
+	background-color: #eeeeee;
+	margin: 10px 10px 10px 10px;
+	padding: 10px 10px 10px 10px;
+	width: 200px;
+	/*
+	You can also use 
+	width: auto;
+	But then you will need to put breaks in the caption text.
+	*/
+}
+div.photo-caption_200 a {
+	text-decoration: none;
+}
+div.photo-caption_200 a img {
+	border: 5px #d4e9ff solid;
+	padding: 0;
+	margin: 0 0 5px 0;
+}
+div.photo-caption_200 img {
+	border: 5px #aaaaaa solid;
+	padding: 0;
+	margin: 0 0 5px 0;
+}
+label.normal {
+    display:inline;	
+}
+
+.new { 
+	font: 8px Verdana, Arial, Helvetica, sans-serif; 
+	color: #000000; 
+	background: #FFE28A; 
+	padding: 1px; 
+	vertical-align: middle; 
+}
+
+.centered-cell {
+  text-align: center;
+} 

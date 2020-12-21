@@ -1,0 +1,78 @@
+/***************Duplication Services specific styles*************/
+dd {margin: 0 0 0.5em 0;}
+
+
+
+/* table.ds_align th, table.ds_align td { */
+
+table {table-layout:fixed;}
+th, td {word-wrap:break-word;}
+
+table.ds_align th, table.ds_align td {
+vertical-align:top;
+}
+th.ds_4col_even {
+width: 25%;
+}
+
+td.ds_tyo_col_image { width: 50px; padding:5px;} 
+th.ds_tyo_col_1, td.ds_tyo_col_1 { width: 30%; } 
+th.ds_tyo_col_2, td.ds_tyo_col_2 { width: 20%; } 
+th.ds_tyo_col_3, td.ds_tyo_col_3 { width: 20%; } 
+th.ds_tyo_col_4, td.ds_tyo_col_4 { width: 20%; } 
+th.ds_tyo_col_5, td.ds_tyo_col_5 { width: 10%; } 
+
+
+img.ds_homepage_1 { width:50px; height:50px; } 
+td.ds_hp_col_image { width: 50px; padding: 0px 5px 5px 0px;} 
+
+
+OL.ds_type_lower_alpha { list-style-type: lower-alpha }
+
+
+span.link_look { color:blue; margin:5px; cursor:pointer; }
+span.link_highlight { background:yellow; }
+
+
+/* styles used by the order form */
+
+div.item_options {
+	margin-left: 40px;
+}
+table.item_options, table.item_options td, table.item_options th {
+	border: none !important;
+	padding-top:3px !important;
+	padding-right:20px !important;
+	padding-bottom:0px !important;
+	padding-left:0px !important;
+	vertical-align:bottom !important;
+}
+div.box1 {
+	margin:5px !important;
+	padding:3px !important;
+}
+div.box2 {
+	margin:5px !important;
+	padding:3px !important;
+}
+div.box3 {
+	margin:5px !important;
+	padding:3px !important;
+	border-width:1px;
+	border-style:solid;
+}
+
+/***
+.originalTextareaInfo {
+	font-size: 12px;
+	color: #000000;
+	font-family: Tahoma, sans-serif;
+	text-align: right;
+}
+.warningTextareaInfo {
+	font-size: 12px;
+	color: #FF0000;
+	font-family: Tahoma, sans-serif;
+	text-align: right;
+}
+***/

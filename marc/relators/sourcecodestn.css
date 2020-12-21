@@ -1,0 +1,35 @@
+/* stylesheet to format technical 
+announcements for relator and source codes */
+
+body { 
+	padding-left: 25px;
+	padding-right: 25px;
+	}
+h1 {
+	font-size: 150%; 
+	text-align: center;
+	}
+h2 {
+	font-size: 125%;
+	text-align: center;
+	}
+h3 {
+	margin-bottom: 0;
+	}
+p {
+	margin: 0 0 1em;
+	}
+.ndmsobyline {
+	text-align: center;
+	font-weight: bold;
+	}
+.label 	{
+	font-weight: bold;
+	font-style: italic;
+	}
+.codename {
+	font-weight: bold;
+	}
+.note {
+	font-style: italic;
+	}

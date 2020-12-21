@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Understanding MARC Holding Records</title>
+<!-- <base> tags no longer used by LC web developers -->
+<meta name="keywords" content="MARC 21, Holdings Format, UMH, MFHD">
+<meta name="description" content="This document contains the publication, Understanding MARC Holdings Records">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel=stylesheet href="umh-redesign.css" type="text/css">
+<style type="text/css">
+<!--
+BODY {
+	/*background-color: #ad4b4b;*/
+	background-color: #ac2222;
+}
+-->
+</style>
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+<body>
+<!--Begin outer border; centers document; fixes line length-->
+<table width=620 border="0" align=center cellpadding="0" cellspacing="0">
+  <tr>
+    <!--Begin "title page" frame (white background, black text): 
+title, credits, availability, copyright-->
+    <td><table cellpadding=8>
+        <tr>
+          <td colspan="2" valign=top><p class="whitetext"><a id="skip" href="index.html#skip_menu" style="display:none;">&nbsp;</a><a href="../../index.html" class="onbackground">Library
+              of Congress</a> &gt;&gt; <a href="../../standards/index.html" class="onbackground">Standards</a> &gt;&gt; <a href="../../marc.html" class="onbackground">MARC</a> &gt;&gt; Understanding
+              MARC Holdings Records</p></td>
+        </tr>
+        <tr>
+          <td width=310 align=center valign=top bgcolor="#FFFFFF"><img src="../umb/images/umbhome.jpg" width=250 height=304 alt="Cover art from Understanding MARC Bibliographic">
+            <p><strong><font size="-1" face="Arial, Helvetica, sans-serif" color="#ac2222"><a name="skip_menu"></a>Understanding MARC Holdings Records</font></strong>
+            <p align="center"><font size="-1" face="Arial, Helvetica" color="#003333">Published
+              by the Network Development and MARC
+              Standards Office, Library of Congress</font></p>
+            <p align="center"><font size="-1" face="Arial, Helvetica" color="#003333">First
+              edition</font></p>
+            <p align="center"><font size="-1" face="Arial, Helvetica" color="#003333">Copyright &copy;2011
+              The Library of Congress, except within the U.S.A. (Credit must
+              be given when excerpting from this publication). For permission
+              to translate, excerpt, or adapt this publication, contact the
+              Library of Congress, Network Development and MARC Standards Office
+              (<a href="http://www.loc.gov/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a9c7cdc4dac6e9c5c6ca87cec6df">[email&#160;protected]</a>).</font></p></td>
+          <!--Begin "contents" frame-->
+          <td align=center valign=top><img src="images/umhtitle-trans.gif" width=300 height=175 alt="Understanding MARC Holdings Records">
+            <hr width="50%" align="center" size="4">
+            <p class="toctitle">TABLE OF CONTENTS</p>
+            <p class="toc1"><a class="onbackground" href="UMHpt1-6.html">What is a MARC Holdings Record, and Why Is It Important? [Parts I&nbsp;-&nbsp;VI]</a></p>
+            <p class="toc2"><a class="onbackground" href="UMHpt1-6.html#pt1">Part I: What Is a MARC Holdings Record?</a></p>
+            <p class="toc2"><a class="onbackground" href="UMHpt1-6.html#pt2">Part II: Why Is a MARC Holdings Record Necessary?</a></p>
+            <p class="toc2"><a class="onbackground" href="UMHpt1-6.html#pt3">Part III: MARC Terms and Their Definitions</a></p>
+            <p class="toc2"><a class="onbackground" href="UMHpt1-6.html#pt4">Part IV: Holdings Standards and MARC Holdings Record?</a></p>
+            <p class="toc2"><a class="onbackground" href="UMHpt1-6.html#pt5">Part V: Are MARC Holdings Records Shared?</a></p>
+            <p class="toc2"><a class="onbackground" href="UMHpt1-6.html#pt6">Part VI: In Conclusion</a></p>
+            <p class="toc1"><a class="onbackground" href="UMHpt7-9.html">Holdings Format Reference Materials [Parts VII&nbsp;-&nbsp;IX]</a></p>
+            <p class="toc2"><a class="onbackground" href="UMHpt7-9.html#pt7">Part VII: A Summary of Commonly Used MARC 21 Holdings Fields</a></p>
+            <p class="toc2"><a class="onbackground" href="UMHpt7-9.html#pt8">Part VIII: The Leader, Directory, Field 007, and Field 008</a></p>
+            <p class="toc2"><a class="onbackground" href="UMHpt7-9.html#pt9">Part IX: Sample Records</a></p>
+            <p class="toc1"><a class="onbackground" href="UMHpt10-12.html">MARC 21 Reference Materials [Parts X-XII]</a></p>
+            <p class="toc2"><a class="onbackground" href="UMHpt10-12.html#pt10">Part X: Selected Bibliography</a></p>
+            <p class="toc2"><a class="onbackground" href="UMHpt10-12.html#pt11">Part XI: Selected Library of Congress Cataloging Distribution Service Publications</a></p>
+            <p class="toc2"><a href="UMHpt10-12.html#pt12" class="onbackground">Part XII: MARC 21 Holdings Records: A Review</a></p></td>
+        </tr>
+      </table>
+      <!--Navigation-->
+      <p class="whitetext"><a id="skip2" href="index.html#skip_menu" style="display:none;">&nbsp;</a><a href="../../index.html" class="onbackground">Library
+        of Congress</a> &gt;&gt; <a href="../../standards/index.html" class="onbackground">Standards</a> &gt;&gt; <a href="../../marc.html" class="onbackground">MARC</a> &gt;&gt; Understanding
+        MARC Holdings Records</p>      <p class="whitetext"><IMG src="../../homepage/lc2.gif" alt="" width=91 height=46 hspace="6" align="left"> <STRONG>Library of Congress</STRONG><br>
+        <a href="../../homepage/legal.html" class="onbackground">Legal</a> | <a href="../../global/disclaim.html" class="onbackground">External Link Disclaimer</a><BR>
+        <em>
+        <!-- help desk email start -->
+        <a 
+      href="http://www.loc.gov/help/help-desk.html" class="onbackground">Library of Congress Help 
+        Desk</a>
+        <!-- help desk email end -->
+(
+<!-- #BeginDate format:Am3 -->01/28/2011<!-- #EndDate -->
+) </em></td>
+  </tr>
+</table>
+<script data-cfasync="false" src="http://www.loc.gov/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+</html>

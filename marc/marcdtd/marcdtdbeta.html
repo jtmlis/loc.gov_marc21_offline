@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<title>Beta Test Version of the MARC DTDs and Converters Available</title>
+<base href="">
+<meta name="description" content="Announces the availability of the
+beta test version of the MARC DTD, MARC to SGML conversion software,
+and changes since the alpha version.">
+<meta name="keywords" content="USMARC, MARC DTD, SGML, beta version,
+conversion software">
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+<body bgcolor="#ffffff">
+<center>
+  <img src="http://lcweb.loc.gov/marc/marcdtd/images/dtd-beta.gif" alt="MARC DTDs and Converters: Beta Version"
+ width=500 height=108> 
+</center>
+<h2 align=center>Announcement to Users of MARC and SGML</h2>
+<hr>
+<p>We are happy to announce the availability not only of the <i>beta</i>
+test version of the MARC DTDs, but also new freeware utilities that
+permit the conversion between the MARC and SGML structures.  The new
+beta versions of the DTDs are intended to be used for field testing and
+continued implementation of MARC in SGML (Standard Generalized
+Markup Language) systems.  We are targeting this announcement to
+subscribers to the MARC Electronic Forum since you represent those
+most interested in the development and use of this
+new implementation of SGML for MARC data.</p>
+
+<p>SGML, as applied in this suite of DTD's and related files, makes
+it possible to move MARC cataloging data into the SGML environments. 
+Another goal of the MARC DTD project was to develop freeware
+MARC-to-SGML and SGML-to-MARC conversion utilities
+to facilitate this movement of data between the two data
+structures.  This beta release includes those long-awaited utilities
+which should facilitate advanced testing of the MARC DTDs.</p>
+
+<h2>Conversion Utilities and Other Things New</h2>
+
+<p>The development of the conversion utilities was a major effort and
+led to a few changes in the MARC DTDs themselves.  It was decided
+to write conversion software using PERL (
+<i><b>P</b>ractical 
+<b>E</b>xtraction and
+<b>R</b>eport 
+<b>L</b>anguage</i>) Version 5.  It was decided
+to develop the utilities as PERL "scripts" since as an interpreted
+programming language, it would not be necessary to recompile the
+PERL scripts to run on different software platforms.  PERL
+interpreters are available for a variety of platforms including DOS,
+Windows, Windows NT, OS/2, Macintosh, and UNIX.  PERL interpreters
+are also free, which means that potential users would not have
+to buy anything to make use of the utilities.</p>
+
+<p>Besides the availability of conversion software, MARC SGML
+experimenters will also notice a change in the MARC DTDs themselves. 
+The names of the DTDs are now "mrcafile.dtd" and "mrcbfile.dtd",
+instead of "mrca.dtd" and "mrcb.dtd" as they were with the alpha test
+versions.  The names were changed to reflect
+the change in the scope of the DTDs.  They now support the creation
+of multiple MARC records (that is, files of records) as a single
+SGML instance.  The alpha test version forced each MARC record to be
+handled as a separate SGML document, which did not prove to be an
+effective use of SGML.  Since MARC records are rarely exchanged
+individually, the handling of them in SGML as files of records
+made sense and was incorporated into the beta version.</p>
+
+<h2>What You Need To Do:</h2>
+
+<p>To make use of the beta version of the MARC DTDs and the conversion
+software, you will need various files and support documents.  They are
+all available to you electronically via FTP (File Transfer Protocol)
+from an anonymous file server maintained by the Library of
+Congress in Washington, D.C.  The host domain (address) of LC's
+FTP server is: <b>ftp.loc.gov</b></p>
+
+<p>Once an FTP session is initiated, you will be prompted for a
+name.  You should enter:
+<ol>
+<li>"<i>anonymous</i>"</li>
+
+<li>When you are prompted for a password, enter your <i>Internet
+address</i>, or simply your name.</li>
+
+<li>At the FTP> prompt, change to the MARC DTD subdirectory by
+entering the command: "<i>cd pub/marcdtd</i>"  NOTE: The character
+between the subdirectory names is a forward slash!</li>
+
+<li>Enter the command "<i>dir</i>", if needed, to see a list of the
+files available in the MARC DTD subdirectory.
+</ol>
+
+<p>Files are actually transferred using the "<i>get</i>" command,
+which is available with most FTP software.  The "<i>get</i>" command
+will copy a file to the default directory on the machine you are
+using locally.  Some of the files should be transferred as ASCII
+text files.  ASCII mode is usually the default with FTP software.
+To verify that you are in ASCII mode, enter the command "<i>asc</i>".
+You FTP software should respond with the message "<i>Type is A</i>"
+or some similar message which confirms you are set in the ASCII mode.
+The other possible mode is the binary mode.  Entering "<i>bin</i>",
+or "<i>binary</i>" will switch to binary mode.  <b>NOTE:</b> Failure
+to use ASCII mode when transferring text files such as DTDs and PERL
+scripts will corrupt them.</p>
+
+<ul>FILES TRANSFERABLE AS ASCII TEXT:
+<li>mrcsgml.dec</li>
+<li>mrcafile.dtd</li>
+<li>mrcbfile.dtd</li>
+<li>*.ent  [Entity reference files, i.e., files with the
+ extension ".ent"]</li>
+</ul>
+
+<p>To retrieve the numerous entity reference files, use the
+command "<i>mget</i>" instead of "<i>get</i>".  You will be prompted as the
+systems begins to transfer each entity reference file to you. 
+Answer "<i>y</i>" (yes) to each prompt.</p>
+
+<p>Because the MARC-to-SGML and SGML-to-MARC conversion utilities involve a
+number of files, they have been compressed into a single file using
+compression software called PKZIP (from PKWARE).  You will need to
+use PKUNZIP to decompress the conversion utilities.  As compressed
+files, they need to be transferred using the FTP "<i>binary</i>" mode.
+
+<ul>FILES TRANSFERABLE IN BINARY MODE:
+<li><a href="ftp://ftp.loc.gov/pub/marcdtd/marcconv.zip">marcconv.zip</a></li>
+<li><a href="ftp://ftp.loc.gov/pub/marcdtd/pkunzip.exe">pkunzip.exe</a></li>
+</ul>
+
+<p>If you do not have access to FTP, you may request a diskette
+containing this file by contacting the Library of Congress, <a href=
+"http://lcweb.loc.gov/marc/ndmso.html">Network Development and MARC
+Standards Office (NDMSO)</a>, who will be acting as the maintenance
+agency for these utilities. </p>
+
+<p>We encourage you to experiment with the MARC DTDs. The
+results of testing the beta version of the DTDs and the conversion utilities will allow us to
+perfect them for future users.  If you know of anyone else interested
+in this effort, encourage them to subscribe to the MARC electronic
+forum by sending a subscription message to "<a href="http://lcweb.loc.gov/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8ae6e3f9fef9eff8fccae6e5e9a4ede5fc">[email&#160;protected]</a>".</p>
+<p>
+<hr>
+<p>
+<em>Go to:</em>
+<p>
+<ul>
+<li><a href="http://lcweb.loc.gov/marc/marc.html">MARC Home
+Page</a>
+<li><a href="http://lcweb.loc.gov/loc/standards/">Standards Home
+Page</a>
+<li><a href ="http://lcweb.loc.gov/">Library of Congress Home
+Page</a>
+</ul>
+<p>
+<hr>
+<p><img 
+src="http://lcweb.loc.gov/homepage/lc2.gif" alt=""> 
+<strong>The Library of Congress</strong><br>
+<address><!--help desk email start -->
+<a href="http://www.loc.gov/help/help-desk.html">Library of Congress Help Desk</a>
+<!--help desk email end -->
+
+
+(08/14/98)</address>
+
+<script data-cfasync="false" src="http://lcweb.loc.gov/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+</html>

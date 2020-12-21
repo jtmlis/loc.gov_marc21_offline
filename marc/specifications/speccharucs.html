@@ -1,0 +1,239 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                        "http://www.w3.org/TR/html40/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/marc_generic.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Character Sets: UCS/Unicode Environment: MARC 21 Specifications for Record Structure, Character Sets, and Exchange Media (Library of Congress)</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<meta name="description" content="The Universal Coded Character Set (ISO/IEC
+10646) is approved for standard interchange of MARC 21 records within the
+following specifications.  The restrictions in these specifications are intended
+to enable broad interchange among MARC-8 and UCS/Unicode to be possible during
+the period of transition from a largely 8-bit environment to a UCS/Unicode 16-bit
+environment.  The specifications are built around enabling round trip
+movement of MARC data between MARC-8 and UCS/Unicode without loss.">
+<meta name="keywords" content="MARC 21, Specifications, Character Sets, UCS,
+Unicode, 16-bit environment">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+<style type="text/css">
+th {text-align:left;}
+p {text-align:justify;}
+li {text-align:justify;}
+.examplecap {font-style:italic;}
+</style>
+<!-- InstanceEndEditable -->
+<link href="http://www.loc.gov/marc/marc-generic.css" rel="stylesheet" type="text/css">
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+
+<body bgcolor="#ffffff">
+<div class="head-nav"><a id="skip" href="speccharucs.html#skip_menu"><img src="http://www.loc.gov/marc/images/clear.gif" border="0" alt="Skip Navigation Links"></a><a href="../../index.html">The Library of Congress</a> &gt;&gt; <a href="../../library/index.html">Especially
+  for Librarians and Archivists</a> &gt;&gt; <a href="../../standards/index.html">Standards</a></div>
+<a href="../../marc.html"><img src="http://www.loc.gov/marc/images/marc-bar.gif" alt="MARC Standards" width="620" height="36" border="0"></a>
+<div class="head-nav"><a href="../../marc.html">MARC
+    21 HOME</a> &gt;&gt; <!-- InstanceBeginEditable name="topbreadcrumb" --><a href="spechome.html">Specifications</a> &gt;&gt; <a href="speccharintro.html">Character Sets</a> &gt;&gt; <strong>Part 3</strong><!-- InstanceEndEditable --></div>
+<hr size="1" noshade><a name="skip_menu"></a>
+<!-- InstanceBeginEditable name="content" -->
+<h3><em>MARC 21 Specifications for Record Structure, Character Sets, and Exchange Media</em></h3>
+<h2>CHARACTER SETS AND ENCODING OPTIONS: Part 3</h2>
+<h2>Unicode Encoding Environment</h2>
+<div class="title">December 2007</div>
+<h4><a href="../../global/disclaim.html"><img src="http://www.loc.gov/images/disclaimer.gif" alt="Link disclaimer" width="91" height="16" border="0" align="right"></a>CONTENTS</h4>
+<ul>
+<li><a href="speccharucs.html#intro">Introduction</a></li>
+<li><a href="speccharucs.html#constraints">Constraints on Unicode Repertoire</a>
+  <div class="subheading"><a href="speccharucs.html#exclusions">Exclusions <em>a priori</em></a></div>
+<div class="subheading"><a href="speccharucs.html#cautions">Cautions</a></div></li>
+<li><a href="speccharucs.html#implementation">Implementation</a>
+<div class="subheading"><a href="speccharucs.html#encodingform">UTF-8 encoding form</a></div>
+<div class="subheading"><a href="speccharucs.html#lengths">Expressing lengths</a></div>
+<div class="subheading"><a href="speccharucs.html#encodingmark">MARC 21 encoding marker</a></div>
+<div class="subheading"><a href="speccharucs.html#field066">MARC field 066</a></div>
+<div class="subheading"><a href="speccharucs.html#subfield6">MARC subfield $6 (Linkage)</a></div>
+<div class="subheading"><a href="speccharucs.html#combining">Combining marks</a> (diacritics)</div>
+<div class="subheading"><a href="speccharucs.html#directionality">Directionality of text</a></div></li>
+<li><a href="speccharucs.html#transformation">UTF-8 Transformation Details</a></li>
+</ul>
+<hr>  
+<h4><a name="intro">INTRODUCTION</a></h4>
+<p>Use of the Universal Coded Character Set (UCS or ISO/IEC 10646) was approved in 1998 as a second encoding for MARC 21 records.  To facilitate the movement of records between MARC-8 and Unicode environments, it was recommended for an initial period that the use of Unicode be restricted to a repertoire identical in extent to the MARC-8 repertoire. In 2007, however, such a restriction is no longer appropriate. The full UCS repertoire, as currently defined at the <a href="http://www.unicode.org">Unicode web site</a>, is valid for encoding MARC 21 records, subject only to the constraints described below.</p>
+<p>The <a href="http://www.unicode.org">Unicode Consortium</a> web site is the most complete and authoritative resource to supplement the information on Unicode given in this document.  
+Correspondences between the MARC-8 and Unicode encodings can be found in 
+<a href="specchartables.html">Part 5: Code Tables</a>.  Some of the complexities of conversion between MARC-8 and Unicode will be discussed in <a href="speccharconversion.html">Part 4: Conversions between Encoding Environments</a>.</p>
+<p>Note: Only one encoding scheme may be used in a MARC 21 record:  MARC-8 <em>or</em> Unicode</p>
+<hr>  
+<h4><a name="constraints">CONSTRAINTS ON UNICODE REPERTOIRE</a></h4>
+<h5><a name="exclusions">Exclusions <em>a priori</em></a></h5>
+<p>There are many undefined code points in Unicode codespace; they are reserved for character set expansion and may not be used by any application.  Unicode designates a small number of assigned code points as either non-characters or deprecated characters; none of these should be included in a MARC 21 record.  Neither is use of surrogate pairs allowed for representing code points beyond FFFF(hex) because surrogates  (D800 to DFFF (hex)) have meaning only in a UTF-16 context.  UTF-8 allows code points beyond FFFF(hex) to be encoded directly.</p>
+<p>MARC-21 as a matter of policy avoids the use of characters in the Private Use Area (PUA) (E000-E8FF (hex)) as detrimental to effective information exchange.  While the initial mapping of EACC to Unicode assigned several ideograph variants and certain other CJK characters to the PUA, those assignments have subsequently been remapped to standard Unicode code points.  The latter should be used to represent those characters in future exchanges and, wherever feasible, to replace existing instances of the PUA code points.</p>
+<h5><a name="cautions">Cautions</a></h5>
+<p>The original restriction of MARC 21 Unicode character repertoire to the MARC-8 repertoire is no longer practicable because of the increased availability of Unicode-encoded data sources that are not bound by such a limitation.  Through a variety of techniques, only the most common being copy-and-paste, non-MARC-8 characters can and do get introduced into MARC 21 records.  Frequently these characters will escape detection when a record is created, or even when used locally, but they may impede the effectiveness of the data interchange that is the primary purpose of MARC 21.  Characters such as single quotation marks and apostrophe, compressed to a single character in ASCII because of space limitations, are among the most common to be encountered accidentally.  Data in European languages are likely to contain precomposed Latin characters.  Users of CJK data may discover characters from the Halfwidth and Fullwidth Forms block (FF00 to FFEF (hex)).</p>
+<p>It is infeasible to identify a particular collection of Unicode characters to be prohibited from MARC 21 records.  But creators of MARC 21 records should take into account the capabilities of their likely exchange partners as they choose to expand their working repertoire.   For limited distributions, agreements among exchange partners can support aggressive repertoire expansion.  For general distribution, a more conservative approach is warranted.  Such an approach would minimize or avoid entirely the use of certain types of characters.  For example, characters in the CJK Compatibility Ideographs area and the several Presentation Forms blocks were included in the Unicode repertoire primarily to accommodate pre-existing standards.  In the future fewer applications can be expected to continue supporting the old standards; so avoiding these characters is wise.</p>
+<p>The control function codes defined for MARC 21 are listed in <a href="specchargeneral.html">Part 1</a>.  In addition, there are a few other format control characters available in Unicode encoding that may be useful for controlling bidirectional display.  Aside from those, introduction of new control characters into MARC 21 records should be done only with the greatest caution.  In particular, code points in the 0 to 1C(hex) range should not be used.</p>
+<hr>  
+<h4><a name="implementation">IMPLEMENTATION</a></h4>
+<h5><a name="encodingform">UTF-8 encoding form</a></h5>
+<p>Unicode specifies three encoding forms, of which only one, UTF-8 (UCS Transformation Format 8), is authorized for use in MARC 21 records.  UTF-8 transforms a full 32-bit representation of Unicode code points, or the original 16-bit representation of Unicode (now known as UTF-16), into 8-bit units (octets).  A Unicode character can be represented in a single octet or a sequence of two, three, or four octets, depending on its code point.</p>
+<p>Only values from 00(hex) to 7F(hex) require a single octet.  This part of the repertoire is identical in its UTF-8 encoding to ASCII.  This is the reason only ASCII characters are allowed in the leader and other parts of the MARC 21 record on which the parsing of the record depends; and conversely, the reason that UTF-8 is the only Unicode encoding form currently permitted in MARC 21.</p>
+<p>In many contexts it is unnecessary to know what the transformed code points look like; knowing the scalar values is sufficient.  In other situations, such as examining a dump of a MARC 21 record, or creating certain tables of values, it is necessary to be able to interpret the transformed octets.  (See the section UTF-8 Transformation Details below for more information.)</p>
+<h5><a name="lengths">Expressing lengths</a></h5>
+<p>Lengths in MARC 21 records are generally expressed in octets rather than characters.  This distinction is important in Unicode encoding because of the variability of character length inherent in UTF-8.  The record length contained in Leader positions 0-4, and field lengths and starting positions in directory entries are counts of octets, not characters.</p>
+<h5><a name="encodingmark">MARC 21 encoding marker</a></h5>
+<p>A Unicode-encoded MARC 21 record must have value a in <a href="http://www.loc.gov/marc/bibliographic/ecbdldrd.html#mrcblea">Leader</a> position 9 (Character coding scheme).</p>
+<h5><a name="field066">MARC field 066</a></h5>
+<p>Field <a href="../bibliographic/ecbdclas.html#mrcb066">066</a> (Character Sets Present) is not used in Unicode-encoded MARC 21 records in the Unicode environment. During conversion of MARC 21 records from MARC-8 encoding to Unicode, field <a href="../bibliographic/ecbdclas.html#mrcb066">066</a> should be deleted.</p>
+<h5><a name="subfield6">MARC subfield $6 (Linkage)</a></h5>
+<p><a href="../bibliographic/ecbdcntf.html#mrcs6">Subfield $6</a> (Linkage) is used in MARC 21 records to link alternate graphic representations of the same data, to identify the presence of specific scripts in a field, and to flag fields in which the display/print directionality of data is right-to-left (e.g., for Arabic script). The <a href="../bibliographic/ecbdcntf.html#mrcs6">subfield $6</a> script identification code in MARC-8-encoded MARC 21 records identifies MARC-8 character sets, rather than scripts <em>per se</em>; hence the code is irrelevant in the Unicode environment because the character set is always UCS, which has no script identification code value.  The script identification code should be dropped from <a href="../bibliographic/ecbdcntf.html#mrcs6">subfield $6</a> when converting to Unicode from MARC-8 encoding.   The Field Orientation Code, which flags a field as having right-to-left display directionality, should be used in Unicode-encoded MARC 21 records.  When present, the Field Orientation code is separated from the <a href="../bibliographic/ecbdcntf.html#mrcs6">subfield $6</a> tag linkage data by two solidus (slash) characters (002F(hex)).</p>
+<h5><a name="combining">Combining marks (diacritics)</a></h5>
+<p>Unicode requires that separately encoded diacritical marks and similar combining
+  characters used with base letters from the Latin and other scripts be encoded <em>following</em> the base letter they modify. This is the opposite of the MARC-8 rule for encoding
+  order. Further, the rules that apply to base letters with more than one combining
+  mark differ between the encodings. In MARC-8, the rule is to encode the combining
+  marks from top to bottom. In <a href="http://www.unicode.org">Unicode</a>, if one of the marks displays below the base letter and the other above, it
+  is preferable to encode the one below the letter first. Multiple marks in the same typographic space (e.g., above the letter) should be encoded starting with the one that appears nearest the base letter, or, when at the same height, in the order in which they appear in the writing direction of the script, reading left to right (or right to left with right-to-left scripts).</p>
+<h5><a name="directionality">Directionality of text</a></h5>
+<p>Data are recorded in logical order, from the first character to the last, regardless of field orientation.  In the scripts included in the MARC-8 repertoire there are no exceptions to this rule.  (One known exception occurs in the Thai script where, to conform with Thai data input standards, vowel characters that display before the consonants they are associated with are recorded before the consonants, instead of after them, which would be the logical way.)   In bidirectional scripts such as Arabic and Hebrew, where the dominant writing direction is right to left but numbers are written left to right, the logical order rule still obtains.  A full explanation of bidirectionality in Unicode encoding will be found in: <em>The Bidirectional Algorithm; Unicode Standard Annex # 9</em>.</p>
+<hr>  
+<h4><a name="transformation">UTF-8 TRANSFORMATION DETAILS</a></h4>
+<p>The UTF-8 transformation of a Unicode scalar value into an octet sequence is accomplished by reallocating its bits into octets that begin with bit sequences identifying the function of the octet.</p>
+
+
+<table>
+<tr>
+<th width="121" scope="col">Left-most bits</th>
+<th width="602" scope="col">Meaning of left-most bits for character encoding</th>
+</tr>
+<tr>
+<td>0</td><td>character composed of 1 octet</td>
+</tr>
+<tr>
+<td>110</td><td>first octet of 2-octet character</td>
+</tr>
+<tr>
+<td>1110</td><td>first octet of 3-octet character</td>
+</tr>
+<tr>
+<td>11110</td><td>first octet of 4-octet character</td>
+</tr>
+<tr>
+<td>10</td><td>octet is not the first octet of a character, it is the 2nd, 3rd, or 4th octet of a multi-octet character</td>
+</tr>
+</table>
+<p>The following patterns show how bits of the scalar value are allocated to UTF-8 octets.</p>
+<table>
+<tr>
+<th width="179" scope="col">Range(hex)</th>
+<th width="195" scope="col">Unicode scalar value</th>
+<th width="288" scope="col">UTF-8 value</th>
+</tr>
+<tr>
+<td>0000 to 007F</td>
+<td>00000000  0xxxxxxx</td>
+<td>0xxxxxxx</td>
+</tr>
+<tr>
+<td>0080 to 07FF</td>
+<td>00000yyy yyxxxxxx</td>
+<td>110yyyyy 10xxxxxx</td>
+</tr>
+<tr>
+<td>0800 to FFFF</td>
+<td>zzzzyyyy  yyzzzzzz</td>
+<td>1110zzzz 10yyyyyy 10xxxxxx</td>
+</tr>
+<tr>
+<td>10000 to 10FFFF</td>
+<td>000uuuuu  zzzzyyyy  yyxxxxxx</td>
+<td>11110uuu 10uuzzzz</td>
+</tr>
+</table>
+<p>Note: x,y,z, and u  are used show how bits get distributed among UTF-8 octets; the final two octets of a four-octet sequence, not shown here, are identical to the final two of the three-octet sequence.  Observe that the first hex digit of a four-octet sequence will always be F because the initial octet begins with bits 11110.  Similarly, the first hex digit of a three-octet sequence will always be E, and the first one of a two-octet sequence will be C or D.  A second or subsequent octet will begin with hex 8,9,A, or B.</p>
+<div class="examplecap">Example of three encodings expressed in binary and hexadecimal notation:</div>
+<table>
+<tr>
+<th width="145" scope="col">Character</th>
+<th width="127" scope="col">MARC-8</th>
+<th width="180" scope="col">Unicode scalar value</th>
+<th width="230" scope="col">Unicode UTF-8</th>
+</tr>
+<tr>
+<td>Comma</td>
+<td>00101100</td>
+<td>00000000 00101100</td>
+<td>00101100</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>2C (hex)</td>
+<td>002C (hex)</td>
+<td> 2C (hex)</td>
+</tr>
+<tr>
+<td>Latin small letter h</td>
+<td>01101000</td>
+<td>00000000 01101000</td>
+<td>01101000</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>68 (hex)</td>
+<td>0068 (hex)</td>
+<td>68 (hex)</td>
+</tr>
+<tr>
+<td>Macron</td>
+<td>11100101</td>
+<td>00000011 00000100</td>
+<td>11001100 10000100</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>E5 (hex)</td>
+<td>0304 (hex)</td>
+<td>CC84 (hex)</td>
+</tr>
+<tr>
+<td>Hebrew letter tav</td>
+<td>01111010</td>
+<td>00000101 11101010</td>
+<td>11010111 10101010</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>7A (hex)</td>
+<td>05EA (hex)</td>
+<td>D7AA (hex)</td>
+</tr>
+<tr>
+<td>Script small <em>l</em></td>
+<td>11000001</td>
+<td>00100001  00010011</td>
+<td>11100010 10000100 10010011</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>C1 (hex)</td>
+<td>2113 (hex)</td>
+<td>E28493 (hex)</td>
+</tr>
+</table>
+<p>No example of a four-octet sequence is shown, but the preceding table gives the pattern.  Characters beyond FFFF (hex) are very rarely encountered in MARC 21.</p>
+<!-- InstanceEndEditable -->
+<hr size="1" noshade>
+<p><a href="../../marc.html">MARC 21 HOME</a> &gt;&gt; <!-- InstanceBeginEditable name="bottombreadcrumb" --><a href="spechome.html">Specifications</a> &gt;&gt; <a href="speccharintro.html">Character
+Sets</a> &gt;&gt; <strong>Part 3</strong><!-- InstanceEndEditable --></p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr valign="bottom">
+    <td><a href="../../index.html">The Library of Congress</a> &gt;&gt; <a href="../../library/index.html">Especially
+    for Librarians and Archivists</a> &gt;&gt; <a href="../../standards/index.html">Standards</a><br>
+    (<!-- MM:BeginLock type="mmdate" format="Am3" orig=" -->
+    <!-- #BeginDate format:Am3 -->12/04/2007<!-- #EndDate -->
+    ) </td>
+    <td align="right"><a href="http://www.loc.gov/cdn-cgi/l/email-protection#fa949e978995ba969599d49d958c">Contact Us</a></td>
+  </tr>
+</table>
+<script data-cfasync="false" src="http://www.loc.gov/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+<!-- InstanceEnd --></html>

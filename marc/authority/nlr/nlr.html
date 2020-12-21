@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html40/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MARC 21 Format for Authority Data:  National Level Requirements (Network Development and MARC Standards Office, Library of Congress)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="description" content="This page contains the national level requirements for the MARC 21 Format for Authority Data (Network Development and MARC Standards Office, Library of Congress)">
+<meta name="keywords" content="marc, marc21, marc standards">
+<meta name="author" content="Library of Congress Network Development and MARC Standards Office">
+<style type="text/css">
+body {margin-left: 2em; margin-right: 2em;} 
+h1 {text-align: center; font-size: 125%;}
+h2 {text-align: center; font-size: 125%;}
+h3 {font-size: 125%;}
+h4 {margin-top: .5em; margin-bottom: .5em;}
+p {margin-left: 2em; margin-right: 2em;}
+.banner {text-align: center;}
+.byline {font-weight: bold; font-family: Arial, Helvetica, sans-serif; text-align: center;}
+.contents {font-style: italic; font-weight: bold; margin-left: 2em; font-size: 20px; margin-top: 1em;}
+.contentslist {margin-left: 3em;}
+.head-navigation {font-family: Arial, Helvetica, sans-serif; font-size: 9pt;}
+.bottom-navigation {font-family: Arial, Helvetica, sans-serif; font-size: 9pt;}
+</style>
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+<body>
+<div class="head-navigation"><a id="skip" href="nlr.html#skip_menu">
+<img src="http://www.loc.gov/marc/images/clear.gif" border="0" alt="Skip Navigation Links"></a>
+<a href="../../../index.html">The Library of Congress</a> 
+
+&gt;&gt; <a href="../../../library/index.html">Especially for Librarians and Archivists</a> 
+&gt;&gt; <a href="../../../standards/index.html">Standards</a>
+<br><br>
+<a href="../../../marc.html">
+<img src="http://www.loc.gov/marc/images/marc-bar.gif" alt="MARC Standards" width="620" height="36" border="0"></a>
+<br><br>
+<a href="../../../marc.html">MARC 21 HOME</a> &gt;&gt; 
+<a href="../../marcdocz.html">MARC 21 Formats</a> &gt;&gt;
+<strong>National Level Requirements--Authority</strong></div>
+<hr>
+
+<h1>MARC 21 Format for Authority Data</h1>
+<h2>National Level Requirements</h2>
+<hr>
+<div class="byline">1999 Edition<br>
+Update No. 1 (October 2001) through 
+Update No. 12 (October 2010)</div>
+<hr>
+<div class="contents">Table of Contents</div>
+<div class="contentslist">
+
+<ul>
+
+<li><a href="nlr.html#intro">Introduction</a></li>
+
+<li><a href="http://www.loc.gov/marc/authority/nlr/nlrlead.html">Leader/Directory</a></li>
+
+<li><a href="http://www.loc.gov/marc/authority/nlr/nlrtrace.html">Tracing Fields</a> </li>
+
+<li>
+<a href="http://www.loc.gov/marc/authority/nlr/nlr00x.html">00X</a> -- Control Fields</li>
+
+<li>
+
+<a href="http://www.loc.gov/marc/authority/nlr/nlr0xx.html">01X-09X</a> -- Numbers and Codes</li>
+
+<li>
+
+<a href="http://www.loc.gov/marc/authority/nlr/nlr1xx.html">1XX</a> -- Headings</li>
+
+<li>
+
+<a href="http://www.loc.gov/marc/authority/nlr/nlr2xx.html">2XX</a> -- Complex See Reference</li>
+
+<li>
+
+<a href="http://www.loc.gov/marc/authority/nlr/nlr3xx.html">3XX</a> -- Complex See Also Reference - Subject</li>
+
+<li>
+
+<a href="http://www.loc.gov/marc/authority/nlr/nlr4xx.html">4XX</a> -- See From Tracing Fields</li>
+
+<li>
+
+<a href="http://www.loc.gov/marc/authority/nlr/nlr5xx.html">5XX</a> -- See Also From Tracing Fields</li>
+
+<li>
+
+<a href="http://www.loc.gov/marc/authority/nlr/nlr6xx.html">6XX</a> -- Complex See and See Also References; Series
+Treatment; Notes</li>
+
+<li>
+
+<a href="http://www.loc.gov/marc/authority/nlr/nlr7xx.html">7XX</a> -- Heading Linking Entries</li>
+
+<li>
+
+<a href="http://www.loc.gov/marc/authority/nlr/nlr8xx.html">8XX</a> -- Other Variable Fields</li>
+</ul>
+</div>
+<hr>
+<h3><a name="intro"></a>INTRODUCTION</h3>
+
+
+<p>This document contains a list of MARC 21 authority data elements with codes
+showing requirements for national-level records in the United States. National-level
+records are required to contain sufficient information to allow them to be
+used  by various national and world-wide agencies. The national-level record
+requirements presented here are not intended to prevent a cataloging agency from using 
+any valid MARC 21 authority data element. They are provided to facilitate the
+standardization of the content of MARC 21 authority records.</p>
+
+<h4>REQUIREMENT CODES</h4>
+<p>MARC 21 authority records are represented by codes. Three different codes have 
+been used to differentiate between data elements that must always be present, 
+that should be present when information is available, and optional data elements. 
+The requirement codes used in this document are defined as follows:</p>
+
+<p><strong>A - Mandatory if applicable</strong><br>
+A data element that must be present in an authority record if it is appropriate 
+for the heading, etc. and if the information is available. The fill character 
+(|) is not permitted in data elements that are mandatory if applicable.</p>
+
+<p><strong>M - Mandatory</strong><br>
+A data element that must be present in every authority record. The fill character 
+(|) is not permitted in mandatory data elements.</p> 
+
+<p><strong>O - Optional</strong><br>
+An optional data element is not required 
+in an authority record, but may be present if desired. The fill character 
+(|) is permitted in the optional character positions of field 008 
+(Fixed-Length Data Elements) and control subfield $w character positions in 
+the 4XX and 5XX fields.</p>
+
+<h4>INDICATOR POSITIONS</h4>
+<p>In MARC 21, a valid value is mandatory in both indicator positions for fields 
+that include indicator positions. In the <cite><a href="../ecadhome.html">MARC 21 
+Format for Authority Data</a></cite>this includes fields 010 through 8XX and any 
+locally-defined fields within the 010 to 999 range that may be used by a cataloging 
+agency. When an indicator position is present, but undefined a blank is always used. 
+The fill character (|) is never used in indicator positions in MARC 21. Since 
+indicator values are mandatory in all MARC 21 fields (except 001-008), 
+no national-level requirements are given. If a field is present in a record, 
+valid indicator values must be supplied. The individual field descriptions provide 
+listings of valid indicator values.</p>
+
+<hr>
+<div class="bottom-navigation">
+<a href="../../../marc.html">MARC 21 HOME</a> &gt;&gt; 
+<a href="../../marcdocz.html">MARC 21 Formats</a> &gt;&gt;
+<strong>National Level Requirements--Authority</strong>
+<br><br>
+<a href="../../../index.html">The Library of Congress</a> 
+&gt;&gt; <a href="../../../library/index.html">Especially for Librarians and Archivists</a> 
+&gt;&gt; <a href="../../../standards/index.html">Standards</a>
+</div>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+         <tr valign="bottom">
+            <td>
+            </td>
+            <td align="right"><a href="http://www.loc.gov/cdn-cgi/l/email-protection#fb959f968894bb979498d59c948d">Contact Us</a></td>
+         </tr>
+      </table>
+<script data-cfasync="false" src="http://www.loc.gov/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+</html>
+

@@ -1,0 +1,440 @@
+/* CSS Document */
+
+
+
+/* content rules */
+
+
+
+#main_body {
+	width: 524px;
+	margin: 0;
+	padding: 0;
+	border: 1px solid #d4e9ff;
+}
+#main_body #main_nav1, #main_body #main_nav2 {
+	width: auto;
+	margin: 0;
+	padding: 10px 0px 10px 10px;
+	height: auto;
+	border-bottom: 1px solid #d4e9ff;
+	background-color: #eff6fd;
+	font-size:85%;
+	line-height: 110%;
+	color: #666;
+}
+#main_body #main_nav2 {
+	background-color: #f7fafd;
+}
+#main_nav1 h2 {
+	color: #900;
+	font-size: 130%;
+}
+#main_nav1 a, #main_nav2 a {
+	font-size: 95%;
+	line-height: 110%;
+}
+#main_body h2 {
+	margin: 0px;
+	padding: 10px 10px 5px 10px;
+	font: bold 100%/120% Georgia, "Times New Roman", Times, serif;
+	color: #36c;
+}
+h2.first {
+	padding: 0px 10px 5px 10px;
+}
+#main_body h3 {
+	padding: 5px 10px 5px 10px;
+	margin: 5px 0 0 0;
+	font: bold 90%/95% Georgia, "Times New Roman", Times, serif;
+	line-height: 110%;
+	color: #000;
+}
+#main_body #warning {
+	width: 481px;
+	margin: 10px 5px 10px 10px;
+	padding: 10px;
+	border: 1px solid #f71d0c;
+	background: #f5f5f5;
+}
+#main_body img.feature {
+	margin: 10px 0 0 10px;
+}
+#main_body img.reg {
+	border: 5px #d4e9ff solid;
+}
+#main_body img.reg2 {
+	border-bottom: 5px #d4e9ff solid;
+}
+#main_body p {
+	padding: 7px 15px 7px 10px;
+	margin: 0;
+	font: normal 85%/120% Verdana, Arial, Helvetica, sans-serif;
+	color: #000;
+}
+#main_body p.right {
+	float:right;
+	font-weight: 300;
+	color:#666;
+	padding: 10px 10px 10px 10px;
+	margin: 0px;
+}
+#main_body p.disclaimer {
+	float: right;
+}
+main_body p.disclaimer img {
+	padding: 10px;
+}		
+#main_body p.nextpage {
+	text-align:right;
+	padding-right:10px;
+}
+#main_body p.nextpage a {
+	font-size: 95%;
+}
+#main_body p.byline {
+	text-align: center;
+	padding-top: 12px;
+}
+#main_body p.expand {
+	color: #666;
+	padding-top: 0px;
+	padding-bottom: 15px;
+	font: normal 80%/110% verdana, helvetica, sans-serif;
+}
+#main_body p.expand_nocap {
+	color: #666;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font: normal 80%/110% verdana, helvetica, sans-serif;
+}
+.leftimagesmall {
+	/*clear: both;          this might be what's throwing the single images down to just below the left nav --
+	confirmed */ 
+	margin: 5px 30px 10px 10px;
+	border: 5px #d4e9ff solid;
+	float: left;
+	/* width: 150px; this had been commented out for a while; changed from 200px on 12/27/2010 by J. Mangin */
+	line-height: normal;
+	font-size: 100%;
+	color: #666;
+}
+.leftimage2 {
+	margin: 5px 30px 10px 10px;
+	border: 5px #d4e9ff solid;
+	float: left;
+	width: 200px;
+	line-height: normal;
+	font-size: 100%;
+	color: #666;
+}
+.leftimgsmall {
+	margin: 5px 30px 10px 10px;
+	border: 5px #d4e9ff solid;
+	float: left;
+	width: auto;
+	line-height: normal;
+	font-size: 100%;
+	color: #666;
+}
+#main_menu p.caption2 {
+	color: #666;
+	padding-top: 10px;
+	font:80% verdana, helvetica, sans-serif;
+}
+
+/* external links */
+a.external {
+	text-decoration: none;
+}
+#container a.nounderline, #container #main_menu a.nounderline, #container #bookintro a.nounderline {
+	text-decoration: none;
+	color: #036;
+	font-weight: normal;
+}
+/*a span.external2 {
+	background: url(/preservation/images/icon-ext2.gif) 100% 100% no-repeat;
+	padding: 0 7px 0 0;
+	width:8px;
+	height:10px;
+	text-decoration:none;
+}*/
+a.external:link span.external2, a.external:hover span.external2, a.external:visited span.external2 {
+	background: url(../images/icon-ext2.gif) 100% 100% no-repeat;
+	padding: 0 8px 0 5px;
+	width:8px;
+	height:10px;
+	text-decoration:none;
+}
+#container span.underline {
+	text-decoration:underline;
+	color: #036;
+	font-weight: normal;
+}
+/* end external links */
+
+#swfVideo {
+	float:right;
+	font-weight: 300;
+	color:#666;
+	padding: 10px 10px 10px 10px;
+	margin: 0px;
+}
+#swfVideo2 {
+	float:right;
+	font-weight: 300;
+	color:#666;
+	padding: 10px 10px 10px 10px;
+	margin: 0px;
+}
+#main_body ul {
+	padding: 0px 10px 10px 10px;
+	margin: 10px 0 0 0;
+}
+#main_body ul.multiline li {
+	line-height: 110%;
+}
+#main_body ul li {
+	list-style-type: none;
+	display: block;
+	margin: 0px 0px 0px 10px;
+	padding: 0px 10px 3px 10px;
+	background: transparent url(../../images/gt.gif) no-repeat 0px 6px;
+	font: normal 85%/150% Verdana, Arial, Helvetica, sans-serif;
+}
+#main_body ul li ul {
+	padding: 0px 10px 10px 0px;
+	margin: 0 0 0 10px;
+}
+#main_body ul li ul li {
+	margin: 0px 0px 0px 5px;
+	padding: 0px 10px 3px 15px;
+	list-style-type: none;
+	background: transparent url(https://www.loc.gov/images/bullet.gif) no-repeat 0px 6px;
+	font: normal 100%/150% Verdana, Arial, Helvetica, sans-serif;
+}
+#main_body ul li ol {
+	padding: 0px 10px 10px 5px;
+	margin: 0 0 0 10px;
+}
+#main_body ul li ol li {
+	margin: 0px 0px 0px 5px;
+	padding: 0px 10px 3px 15px;
+	list-style-type: decimal;
+	background: transparent;
+	font: normal 100%/150% Verdana, Arial, Helvetica, sans-serif;
+}
+#main_body ol {
+	margin: 10px 10px 0px 10px;
+	padding: 0px 0px 10px 20px;
+}
+#main_body ol.poetry {
+	margin: 10px 10px 0px 20px;
+	padding: 0px 0px 10px 10px;
+	width: auto;
+}
+#main_body ol li {
+	margin: 0 0 0 5px;
+	padding: 3px 0px 3px 0px;
+	font: normal 85%/130% Verdana, Arial, Helvetica, sans-serif;
+}
+#main_body ol.poetry li {
+	margin: 0 0 0 5px;
+	padding: 3px 0px 3px 0px;
+	font: normal 85%/120% Verdana, Arial, Helvetica, sans-serif;
+}
+#main_body li p {
+	padding: 5px 5px 3px 0px;
+	font-size: 100%;
+}
+#main_body ol li ul {
+	padding: 0px 10px 10px 0px;
+	margin: 0 0 0 10px;
+}
+#main_body ol li ul li {
+	list-style-type: none;
+	display: block;
+	margin: 10px 0px 5px 5px;
+	padding: 0px 0px 3px 20px;
+	background: transparent url(https://www.loc.gov/images/bullet.gif) no-repeat 0px 6px;
+	font: normal 100%/150% Verdana, Arial, Helvetica, sans-serif;
+}
+#main_body dl {
+	padding: 0px 10px 10px 0px;
+	margin: 0 0 0 10px;
+	font: normal 85%/120% Verdana, Arial, Helvetica, sans-serif;
+	color: #000;
+}
+#main_body dl dt {
+	font-weight:bold;
+}
+#main_body dl dd {
+	margin: 5px 0 10px 10px;
+}
+blockquote {
+	font: normal 85%/120% verdana, helvetica, sans-serif;
+}
+table, ul li table, ol li table {
+	color:#333;
+	background-color: #fff;
+	border-collapse:collapse;
+	border: 1px solid #ccc;
+	padding:0;
+	margin: 10px;
+	font:normal 90%/100% verdana, helvetica, sans-serif;
+}
+ul li table, ol li table, ol li ul li table {
+	font-size: 110%;
+}
+ol li ul li table {
+	font-size: 130%;
+ }
+table caption, li table caption {
+	font: bold 90%/140% verdana, helvetica, sans-serif;
+}
+td, li table td {
+	padding: 5px;
+	font: normal 85%/120% verdana, helvetica, sans-serif;
+	color: #666;
+	font-size: 85%;
+	vertical-align: top;
+	border: 1px solid #ccc;
+}
+ol li ul li table td {
+	font-size: 80%;
+}
+td img.content, li td img.content {
+	margin: 5px 5px 5px 10px;
+	border: 5px solid #d4e9ff;
+}
+th, li th {
+	color: #333;
+	padding: 4px 5px 4px 5px;
+	border: 1px solid #ccc;
+	text-align: left;
+	font:bold 85%/100% verdana, helvetica, sans-serif;
+}
+#main_body img.content {
+	margin: 5px 5px 5px 10px;
+	border: 5px solid #d4e9ff;
+}
+#main_body form {
+	margin: 0 0 10px 10px;
+	padding: 0;
+	height: auto;
+	width:auto;
+	font: normal 95%/100% verdana, helvetica, sans-serif;
+}
+#main_body form input, #main_body form select {
+	width: 400px;
+	height: auto;
+	background-color: #fff;
+	color: #333;
+	border: 1px solid #ccc;
+	margin: 5px 0px 5px 0px;
+	font: normal 100%/100% verdana, helvetica, sans-serif;
+}
+#main_body form.search_pub input, #main_body form.search_pub select {
+	width: auto;
+}
+#main_body form span {
+	font: bold 100% verdana, helvetica, sans-serif;
+	color: #900;
+}
+#main_body form p {
+	font: normal 90% verdana, helvetica, sans-serif;
+	padding: 5px 20px 10px 0px;
+}
+#main_body form textarea {
+	width: 230px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	margin: 5px 0px 0px 0px;
+	font: normal 100%/100% verdana, helvetica, sans-serif;
+}
+#main_body form input.radio, #main_body form input.check {
+	width: auto;
+	background-color: #fff;
+	font-weight: normal;
+	color:#333;
+	border: 0;
+	margin: 5px 3px 0px 0px;
+	padding: 0;
+	font-size: 100%;
+}
+#main_body form label {
+	padding: 0;
+	font: normal 95%/100% verdana, helvetica, sans-serif;
+	margin: 0;
+}
+#main_body form label span {
+	color: #000;
+	font-size: 100%;
+	font-weight: 100;
+}
+#main_body form input.button {
+	width: auto;
+	background-color: #fff;
+	font-weight: 900;
+	font: bold 100%/100% Verdana, Arial, Helvetica, sans-serif;
+	color: #f60;
+	margin: 5px 0px 5px 0px;
+	text-align: center;
+	padding: 0;
+	border: 1px solid #f60;
+}
+#main_body p span {
+	font: bold 100% verdana, helvetica, sans-serif;
+	color: #900;
+}
+div.bio {
+	width: auto;
+	height: 200px;
+	margin: 0;
+	padding: 0px 10px 0 0;
+}
+div.bio img#detail, div.bioBicent img#detail, div.bio500 img#detail, div.bio250 img#detail {
+	float: right;
+	margin: 10px 0px 0px 10px;
+	padding: 0px;
+}
+div.bio h3, div.bioBrooks h3, div.bioBicent h3, div.bio500 h3, div.bio250 h3 {
+	font-size: 100%;
+	color: #666;
+}
+.border {
+	border: 5px solid #d4e9ff;
+}
+/****** ADDED STYLES ******/
+
+#main_body p.pdf {
+	text-align: right;
+	font-size: 85%;
+	color:#999;
+}
+#main_body p.pdf img {
+	float:right;
+	margin-left:5px;
+}
+/* search results */
+
+#main_body .results dl {
+	padding: 15px 15px 15px 10px;
+	margin: 0 0 1em 0;
+	font: normal 85%/120% Verdana, Arial, Helvetica, sans-serif;
+	color: #000;
+	border-top:1px solid #d4e9ff;
+}
+#main_body .results dl dt {
+	font-weight:bold;
+	width:85px;
+	float:left;
+	padding:0px 0;
+	margin:0;
+}
+#main_body .results dl dd {
+	clear:right;
+	padding:0;
+	margin:0px 0 3px 90px;
+}
+

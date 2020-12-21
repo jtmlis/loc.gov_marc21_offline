@@ -1,0 +1,221 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #333333;
+}
+td {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #000000;
+}
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #000000;
+}
+dd {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #666666;
+	margin-left: 10pt;
+}
+dt {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #000066;
+
+}
+.larger {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	font-weight: bold;
+}
+.caption {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	text-align: center;
+}
+a.white {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #EEEEEE;
+	text-decoration: none;
+}
+a.white:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+.white-text {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #EEEEEE;
+}.drop-box {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+}
+h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16pt;
+	font-weight: bold;
+	color: #660000;
+}
+h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14pt;
+	font-weight: bold;
+	color: #660000;
+}
+h3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	color: #666666;
+}
+h4 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #009999;
+}
+h5 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-weight: bold;
+	color: #999999;
+}
+
+
+.largecap {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14pt;
+	font-weight: bold;
+	color: #660000;
+}
+.blue-header {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	font-weight: bold;
+	color: #663333;
+}
+address {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+}
+.selected {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #663333;
+}
+.burg-bold {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #660000;
+}
+h3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13pt;
+	font-weight: bold;
+	color: #666666;
+}
+.cite {  
+	font-family: Arial, Helvetica, sans-serif; "Times New Roman", Times, serif; 
+	font-size: 10pt; 
+	font-weight: bold; 
+	color: #330000
+}
+.abstract {  
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 9pt; 
+	color: #333300; 
+	 margin-right: 20pt; 
+	margin-left: 20pt 
+}
+.callno {  
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 10pt; 
+	font-weight: bold; 
+	text-align: left
+}
+.background-ltblue {
+	background-image: url(images/spacer-ltblue.gif);
+	background-color: #e5eded;
+}
+
+.background-blue {
+	background-image: url(images/spacer-blue.gif);
+	background-color: #009999;
+}
+
+.background-gray {
+	background-image: url(images/spacer-gray.gif);
+	background-color: #DDDDDD;
+}
+
+th{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	background-color: #EEEEEE;
+	text-align: center;
+
+}
+.alternatetr{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	background-color: #EEEEEE;
+	font-weight: bold;
+
+}
+.box {
+	border: 1px dotted #2D542D;
+	float: right;
+	width: 200px;
+	padding: 4px;
+	margin: 4px;
+	background-color: #FFF9E5;
+
+}
+.box2 {
+	border: 1px dotted #2D542D;
+	float: right;
+	width: 160px;
+	padding: 2px;
+	margin-left: 8px;
+	background-color: #FFF9E5;
+	text-align: center;
+}
+.box3 {
+	clear: both;
+	border: 1px dotted #2D542D;
+	align: center;
+	margin: 2px;
+	padding: 8px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 75%;
+	line-height: 160%;
+	background-color: #EBEFEB;
+}
+.redtext {
+	font-weight: bold;
+	color: #990000;
+
+}
+.requiredtext {
+	font-weight: bold;
+	color: #990000;
+/*	font-family: Verdana, Arial, Helvetica, sans-serif;*/
+	font-size: 13pt;
+
+}
+.small {
+	
+		font-size: 9pt;
+}

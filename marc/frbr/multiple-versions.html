@@ -1,0 +1,1214 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                        "http://www.w3.org/TR/html40/loose.dtd">
+<html>
+
+<head>
+<title>Displays for Multiple Versions from MARC 21 and FRBR  (Library of Congress) </title>
+<base href="">
+<meta name="description" content="This document contains information on how to display MARC records using FRBR">
+<meta name="keywords" content="MARC, FRBR, Displays">
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF">
+<a name="top"></a>
+<h4 align=center><em>Functional Analysis of the MARC 21 Bibliographic and Holdings 
+  Formats</em></h4>
+<h2 align=center>Displays for Multiple Versions from MARC 21 and FRBR</h2>
+<h3 align=center>Network Development and MARC Standards Office <br>
+  Library of Congress </h3>
+<hr>
+<p> The following is based on an analysis prepared by Tom Delsey as part of the 
+  <i>Functional Analysis of the MARC 21 Bibliographic and Holdings Formats</i> 
+  study that he developed for the Network Development and MARC Standards Office 
+  (NDMSO). NDMSO has added display examples to accompany the study as <a href="multiple-versions.html#displays">Section 
+  4</a>. 
+<p> 
+<hr>
+<h3>Contents</h3>
+<ol>
+  <li><a href="multiple-versions.html#intro">Introduction </a> 
+  <li><a href="multiple-versions.html#display">Display of Records for Multiple Manifestations of the 
+    Same Work</a> 
+  <li><a href="multiple-versions.html#single">Single Record for Manifestations of an Expression</a> 
+  <li><a href="multiple-versions.html#displays">Hierarchical Display Examples</a> 
+</ol>
+<p> 
+<hr>
+<h3><a name="intro">1. Introduction</a></h3>
+<p>The feasibility of creating records describing multiple <i>manifestations</i> 
+  of the same <i>work</i> has been a recurring topic of discussion within the 
+  MARC community for more than a decade, but to date there has been no effective 
+  resolution of the issue. Within the last few years, the issue has become even 
+  more pressing as a result of the increasing use of digital technologies both 
+  to create original materials and to convert existing materials to digital form, 
+  and the resulting proliferation of alternative <i>manifestations</i> of the 
+  same content.</p>
+<p>A number of recommendations relating to the &quot;multiple versions&quot; issue 
+  were put forward at the Bicentennial Conference on Bibliographic Control in 
+  the New Millennium, hosted by the Library of Congress in November 2000. Several 
+  of those recommendations, subsequently incorporated into the LC action plan, 
+  relate more or less directly to the MARC format. The following are the specific 
+  tasks from the action plan: 
+<p> 
+<ul>
+  <li>development of functional requirements for systems to manage separate records 
+    for related<i> manifestations </i>at the global level and to consolidate them 
+    for display at the local level (near-term) (2.4); <br>
+    <br>
+  <li>development of guidelines for determining when a single record rather than 
+    separate records should be created for <i>manifestations</i> of an <i>expression</i> 
+    (near-term) (3.5);<br>
+    <br>
+  <li>enhancements to the MARC formats to support the display of hierarchical 
+    relationships among records for a<i> work</i>, its <i><i><i>expression</i>s</i></i>, 
+    and its <i>manifestations</i>, based on FRBR (longer term) (3.4). 
+</ul>
+<p>Outlined below are a number of conclusions drawn from the mapping of MARC data 
+  elements to FRBR that are directly relevant to those three MARC-related recommendations 
+  in the LC action plan.</p>
+<p><a href="multiple-versions.html#top">Go to top</a></p>
+<p> 
+<hr>
+<h3><a name="display">2. Display of Records for Multiple Manifestations of the 
+  Same Work</a></h3>
+<h4>2.1 Hierarchical Level Tables</h4>
+<p>The tables below illustrate how a hierarchical display of records for multiple 
+  <i>manifestations</i> of the same <i>work</i> could be generated from data contained 
+  in separate records for the individual <i>manifestations</i>. The hierarchical 
+  display comprises five levels of data:<br>
+<ol>
+  <li>a citation for the <i>work</i> (<a href="multiple-versions.html#table1">Table 1</a>) <br>
+    <br>
+  <li>&quot;guide cards&quot; for the various <i>expressions</i> of the <i>work</i> 
+    (<a href="multiple-versions.html#table2">Table 2</a>) <br>
+    <br>
+  <li>brief entries for the various <i>manifestations</i> of each <i>expression</i> 
+    - title/edition/numbering (<a href="multiple-versions.html#table3">Table 3</a>) <br>
+    <br>
+  <li>brief entries for the various <i>manifestations</i> of each <i>expression</i> 
+    - imprint (<a href="multiple-versions.html#table4">Table 4</a>) <br>
+    <br>
+  <li>brief entries for the various <i>manifestations</i> of each <i>expression</i> 
+    - physical description/standard number (<a href="multiple-versions.html#table5">Table 5</a>) 
+</ol>
+<p>The tables were compiled using the mapping of FRBR to MARC data elements in 
+  <i>Functional Analysis of the MARC 21 Bibliographic and Holdings Formats</i>, 
+  <a href="http://www.loc.gov/marc/marc-functional-analysis/source/table2.pdf">Table
+  2</a>, <a href="http://www.loc.gov/marc/marc-functional-analysis/source/table3.pdf">Table
+  3</a>,
+  and the basic data requirements identified in <i>Functional Requirements
+    for Bibliographic Records</i>, Tables 7.3, 7.4, 7.5, and 7.8 (pp. 102-105,
+    109). 
+</p>
+<p>For each of the five levels in the hierarchical display, the tables contain 
+  the following:
+<p> 
+<ul>
+  <li><i>Column 1</i>: identifies the user task supported by that level of the 
+    display. <br>
+    <br>
+  <li><i>Column 2</i>: identifies the attributes and relationships associated 
+    with the <i>work</i>, <i>expression</i>, or <i>manifestation</i> that need 
+    to be reflected in order to support the designated user task.<br>
+    <br>
+  <li><i>Column 3</i>: identifies the data elements in the MARC record that would 
+    be displayed for each of the designated attributes or relationships. <br>
+    <br>
+  <li><i>Column 4</i>: identifies the coded data in the MARC record that could 
+    be used to verify that all records collocated under the citation for a <i>work</i> 
+    or a &quot;guide card&quot; for an <i>expression</i> are relevant to that 
+    <i>work</i> or <i>expression</i>. <br>
+    <br>
+  <li><i>Column 5</i>: provides explanatory comments on the generation and grouping 
+    of data for the hierarchical display. 
+</ul>
+<h4><a name="2.2">2.2</a> Matching Data for the Work</h4>
+<p>For the purposes of this analysis, records for the &quot;same <i>work</i>&quot; 
+  are considered to include two groups:</p>
+<ol>
+  <li> records that match on the name subfields in the main entry (100/110/111) 
+    and title (240/243/245 - in that order of precedence - subfields $a, $n, and 
+    $p). In cases where main entry is under title (130, or 245 - where there is 
+    no 1XX field), records that match on the title subfields are considered to 
+    be records for the same <i>work</i>.<br>
+    <br>
+  </li>
+  <li> records that contain an analytical added entry (700/710/711/730/740, with 
+    a second indicator value of 2) that matches the main entry/title elements 
+    in records from group one (1) above.</li>
+</ol>
+<p>Added entries of an unspecified type (700/710/711/730/740, where the second 
+  indicator value is blank) are considered, by default, to be either secondary 
+  added entries or related <i>work</i> added entries and are not taken into account 
+  in the matching process.</p>
+<h4>2.3 Display</h4>
+<p>An assumption is made that the third, fourth, and fifth levels in the hierarchical 
+  display (i.e., the brief entries for the <i>manifestations</i>) would be linked 
+  to the full records for the <i>manifestations</i> identified, and that any additional 
+  data the user required for purposes of selecting or obtaining that <i>manifestation</i>, 
+  or for purposes associated with resource use, could be found in the linked record. 
+  The linked record would also provide additional information on the <i>work</i> 
+  (e.g., intended audience), the <i>expression</i> (e.g., projection, representation 
+  of relief), and on relevant <i>work</i>-to-<i>work</i>, <i>expression</i>-to-<i>expression</i>, 
+  and <i>manifestation</i>-to-<i>manifestation</i> relationships). Therefore, 
+  the data included in the hierarchical display is limited to that which is essential 
+  to identify the <i>work</i>, <i>expression</i>, or <i>manifestation</i>, and 
+  a limited number of data elements to assist the user in selecting appropriate 
+  <i>manifestations</i> among those identified.</p>
+<p>For purposes of hierarchical display, the citation for the <i>work</i> would 
+  be displayed only once, preceding the first of the &quot;guide cards&quot; for 
+  the various <i>expressions</i> of the <i>work</i>. Brief entries for the various 
+  <i>manifestations</i> would be listed under the appropriate &quot;guide card&quot;. 
+  If all the data recorded in the first two segments of the brief entry for the 
+  <i>manifestation</i> are applicable to more than one physical form of that <i>manifestation</i> 
+  (e.g., in the case of a sound recording released simultaneously on tape and 
+  on compact disc) a single brief entry combining title/edition/numbering and 
+  imprint could be listed, followed by physical descriptions and standard numbers 
+  for each of the formats. Similarly, for <i>manifestations</i> bearing the same 
+  title, statement of responsibility, edition statement, and numbering, but issued 
+  by different publishers and/or at different times, a single brief entry for 
+  title/edition/numbering could be listed, followed by separate listings for the 
+  various imprints, each of which in turn would be followed by one or more segments 
+  containing the physical description/standard number applicable to each of the 
+  imprints. </p>
+<p><i>Recommendation:<br>
+  <br>
+  Use the specifications for hierarchical display set out in Tables 1-5 as input 
+  to the development of functional requirements for systems to manage the consolidated 
+  display of separate records for related <i>manifestations</i>.</i></p>
+<p> 
+<hr>
+<p> <strong><a name="table1">Table 1:</a> Citation for the work</strong> (see 
+  <a href="multiple-versions.html#2.2">section 2.2</a> for initial matching data) <br>
+  <br>
+<table width="100%" border="1">
+  <tr valign="top"> 
+    <td width="15%"> 
+      <div align="center"><b>1. User Task</b></div>
+    </td>
+    <td width="19%"> 
+      <div align="center"><b>2. Attribute/<br>
+        Relationship</b></div>
+    </td>
+    <td width="27%"> 
+      <div align="center"><b>3. Data Element Displayed</b></div>
+    </td>
+    <td width="20%"> 
+      <div align="center"><b>4. Verification of Match</b></div>
+    </td>
+    <td width="19%"> 
+      <div align="center"><b>5. Comments</b></div>
+    </td>
+  </tr>
+  <tr valign="top"> 
+    <td height="198" rowspan="7" width="15%"> 
+      <div align="center"><b>Identify <br>
+        the <i>work</i></b></div>
+    </td>
+    <td height="22" width="19%">Created by -&gt; person/corporate body</td>
+    <td height="22" width="27%">100/110/111 <br>
+      <i>analytic entries</i>:<br>
+      700/710/711 &lt;02=2&gt; (excluding $t, $n, $p, $d, $f, $k, $s, $m, $r, 
+      $l, $o, $h) </td>
+    <td height="22" width="20%">&nbsp;</td>
+    <td height="22" width="19%">Fields 700/710/711 are used to generate name entry 
+      for works identified in analytical added entries.</td>
+  </tr>
+  <tr> 
+    <td width="19%" valign="top">Title of work</td>
+    <td width="27%" valign="top">130 $a, $n, $p<br>
+      <i>or</i> 240 $a, $n, $p <br>
+      <i>or</i> 243 $a, $n, $p <br>
+      <i>or</i> 245 $a, $n, $p<br>
+      <i>analytic entries</i>:<br>
+      700/710/711/730/740 &lt;02=2&gt; <br>
+      $t, $n, $p</td>
+    <td width="20%">&nbsp;</td>
+    <td width="19%" valign="top">Fields 700/710/711/730/740 are used to generate 
+      titles for works identified in analytical added entries.</td>
+  </tr>
+  <tr> 
+    <td width="19%" valign="top">Date of work</td>
+    <td width="27%" valign="top">130 $d<br>
+      <i>or</i> 240 $d<br>
+      <i>or</i> 243 $d<br>
+      <i>or</i> 245 $g<br>
+    <i>analytic entries</i>: <br>
+    700/710/711 $d; 730 $d</td>
+    <td width="20%">&nbsp;</td>
+    <td width="19%">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="19%" valign="top">Form of work</td>
+    <td width="27%" valign="top">130 $k<br>
+      <i>or</i> 240 $k<br>
+      <i>or</i> 240 $k<br>
+      <i>or</i> 245 $k<br>
+      <i>analytic entries: </i>700/710/711/730 $k</td>
+    <td width="20%" valign="top">Music: 008/18-19<br>
+      Serials: 008/24<br>
+    </td>
+    <td width="19%">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="19%" valign="top">Medium of performance</td>
+    <td width="27%" valign="top">130 $m<br>
+      <i>or</i> 240 $m<br>
+      <i>or</i> 243 $m<br>
+      <i>analytic entries:</i> <br>
+      700/710/730 $m</td>
+    <td width="20%" valign="top">048 $a, $b</td>
+    <td width="19%">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="19%" valign="top" height="98">Key</td>
+    <td width="27%" valign="top" height="98">130 $r<br>
+      <i>or</i> 240 $r<br>
+      <i>or</i> 243 $r<br>
+      <i>analytic entries</i>: <br>700/710/730 $r</td>
+    <td width="20%" height="98">&nbsp;</td>
+    <td width="19%" height="98">&nbsp;</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="19%" height="30">Coordinates</td>
+    <td width="27%" height="30" valign="top">255 $c</td>
+    <td width="20%" height="30">034 $d, $e, $f, $g<br>
+      034 $j, $k, $m, $n</td>
+    <td width="19%" height="30">&nbsp;</td>
+  </tr>
+</table>
+<p> 
+<hr>
+<p><strong><a name="table2">Table 2: </a> "Guide cards" for the expression(s)</strong> 
+  (initial matching data: Leader/06) </p>
+<table width="100%" border="1">
+  <tr valign="top"> 
+    <td width="16%"> 
+      <div align="center"><b>1. User Task</b></div>
+    </td>
+    <td width="19%"> 
+      <div align="center"><b>2. Attribute/<br>
+        Relationship</b></div>
+    </td>
+    <td width="15%"> 
+      <div align="center"><b>3. Data Element Displayed</b></div>
+    </td>
+    <td width="18%"> 
+      <div align="center"><b>4. Verification <br>
+        of Match</b></div>
+    </td>
+    <td width="32%"> 
+      <div align="center"><b>5. Comments</b></div>
+    </td>
+  </tr>
+  <tr valign="top"> 
+    <td width="16%" height="166" rowspan="5"> 
+      <div align="center"><b>Identify the <i>expression(s)</i></b></div>
+    </td>
+    <td width="19%" height="22">Form of expression</td>
+    <td width="15%" height="22">Leader/06</td>
+    <td width="18%" height="22">&nbsp;</td>
+    <td width="32%" height="22">Generating form of expression from leader/06 would 
+      serve to organize entries for the same work under subdivisions such as texts, 
+      scores, recordings, etc.</td>
+  </tr>
+  <tr> 
+    <td width="19%" valign="top">Language of expression</td>
+    <td width="15%" valign="top">130 $l<br>
+      <i>or</i> 240 $l<br>
+      <i>or</i> 243 $l<br>
+    <i>or</i> 008/35-37 </td>
+    <td width="18%" valign="top">008/35-37</td>
+    <td width="32%" valign="top">In the absence of fields 130, 240, or 243, field 
+      008/35-37 can be used to organize entries by language.</td>
+  </tr>
+  <tr> 
+    <td width="19%" valign="top">Other distinguishing characteristic</td>
+    <td width="15%" valign="top">130 $o<br>
+      <i>or</i> 240 $o<br>
+      <i>or</i> 243 $o<br>
+    or 245 $s</td>
+    <td width="18%" valign="top">&nbsp;</td>
+    <td width="32%" valign="top">Subfield $o in fields 130, 240, or 243 can be used to separate 
+      arrangements from original compositions. </td>
+  </tr>
+  <tr> 
+    <td width="19%" valign="top">Type of score</td>
+    <td width="15%" valign="top">254 $a</td>
+    <td width="18%" valign="top">Music: 008/20<br>
+    </td>
+    <td width="32%" valign="top">Field 254 $a can be used to organize entries for scores by 
+      type.</td>
+  </tr>
+  <tr> 
+    <td width="19%" valign="top">Scale</td>
+    <td width="15%" valign="top">255 $a</td>
+    <td width="18%" valign="top">034 $b, $c, $h</td>
+    <td width="32%" valign="top">&nbsp;</td>
+  </tr>
+</table>
+<p> 
+<hr>
+<p> <strong><a name="table3">Table 3:</a> Brief entries for the manifestation(s) 
+  - title/edition/numbering</strong> <br>
+  <br>
+<table width="100%" border="1">
+  <tr valign="top"> 
+    <td width="17%"> 
+      <div align="center"><b>1. User Task</b></div>
+    </td>
+    <td width="24%"> 
+      <div align="center"><b>2. Attribute/Relationship</b></div>
+    </td>
+    <td width="25%"> 
+      <div align="center"><b>3. Data Element Displayed</b></div>
+    </td>
+    <td width="16%"> 
+      <div align="center"><b>4. Verification of Match</b></div>
+    </td>
+    <td width="18%"> 
+      <div align="center"><b>5. Comments</b></div>
+    </td>
+  </tr>
+  <tr valign="top"> 
+    <td height="166" rowspan="4" width="17%"> 
+      <div align="center"><b>Identify the <i>manifestation(s)</i></b></div>
+    </td>
+    <td height="22" width="24%">Title of manifestation</td>
+    <td height="22" width="25%">245 $a, $n, $p <br>
+      <i>or</i> 242 $a, $n, $p </td>
+    <td height="0"><br>
+    </td>
+    <td height="0">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="24%" valign="top">Statement of responsibility</td>
+    <td width="25%" valign="top">245 $c <br>
+      <i>or</i> 242 $c</td>
+    <td height="1">&nbsp;</td>
+    <td height="1">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="24%" valign="top">Edition/issue designation</td>
+    <td width="25%" valign="top">250 $a, $b</td>
+    <td height="4">&nbsp;</td>
+    <td height="4">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="24%" valign="top">Numbering</td>
+    <td width="25%" valign="top">362 $a<br>
+    </td>
+    <td height="11">&nbsp;</td>
+    <td height="11">&nbsp;</td>
+  </tr>
+</table>
+<p> 
+<hr>
+<p> <strong><a name="table4">Table 4:</a> Brief entries for the manifestation(s) 
+  - imprint</strong> <br>
+  <br>
+<table width="100%" border="1">
+  <tr valign="top"> 
+    <td width="17%"> 
+      <div align="center"><b>1. User Task</b></div>
+    </td>
+    <td width="24%"> 
+      <div align="center"><b>2. Attribute/Relationship</b></div>
+    </td>
+    <td width="25%"> 
+      <div align="center"><b>3. Data Element Displayed</b></div>
+    </td>
+    <td width="16%"> 
+      <div align="center"><b>4. Verification of Match</b></div>
+    </td>
+    <td width="18%"> 
+      <div align="center"><b>5. Comments</b></div>
+    </td>
+  </tr>
+  <tr valign="top"> 
+    <td height="166" rowspan="2" width="17%"> 
+      <div align="center"><b>Identify the <i>manifestation(s)</i></b></div>
+    </td>
+    <td height="22" width="24%">Publisher/distributor</td>
+    <td height="22" width="25%">260 $b<br>
+      <i>reproductions:</i><br>
+      533 $c</td>
+    <td height="4"><br>
+    </td>
+    <td height="22" rowspan="2">Brief entries for reproductions that have not 
+      been described in a separate record can be generated from field 533.</td>
+  </tr>
+  <tr> 
+    <td width="24%" valign="top" height="61">Date of publication/distribution</td>
+    <td width="25%" valign="top" height="61">260 $c<br>
+      <i>reproductions:</i><br>
+      533 $d</td>
+    <td height="5">&nbsp;</td>
+  </tr>
+</table>
+<br>
+<hr>
+<p> <strong><a name="table5">Table 5:</a> Brief entries for the manifestation(s) 
+  - physical description/standard number</strong><br>
+  <br>
+<table width="100%" border="1">
+  <tr valign="top"> 
+    <td width="17%"> 
+      <div align="center"><b>1. User Task</b></div>
+    </td>
+    <td width="24%"> 
+      <div align="center"><b>2. Attribute/Relationship</b></div>
+    </td>
+    <td width="25%"> 
+      <div align="center"><b>3. Data Element Displayed</b></div>
+    </td>
+    <td width="16%"> 
+      <div align="center"><b>4. Verification of Match</b></div>
+    </td>
+    <td width="18%"> 
+      <div align="center"><b>5. Comments</b></div>
+    </td>
+  </tr>
+  <tr valign="top"> 
+    <td height="334" rowspan="5"> 
+      <div align="center"><b>Select the <i>manifestation(s)</i></b></div>
+    </td>
+    <td height="22" width="24%">Form of carrier, extent ot carrier</td>
+    <td height="22" width="25%">300 $a<br>
+      <i>reproductions:</i><br>
+      533 $e</td>
+    <td height="0"><br>
+    </td>
+    <td height="0">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="24%" valign="top">Dimensions of carrier</td>
+    <td width="25%" valign="top">300 $c<br>
+      <i>reproductions:</i><br>
+      533 $e</td>
+    <td height="1">&nbsp;</td>
+    <td height="1">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="24%" valign="top">Physical medium, capture mode, playing speed, 
+      groove width, kind of cutting, tape configuration, kind of sound, special 
+      reproduction characteristics, colour, polarity, presentation format, file 
+      characteristics</td>
+    <td width="25%" valign="top">300 $b</td>
+    <td height="4">&nbsp;</td>
+    <td height="4" valign="top">Field 300 $b is included specifically to cover 
+      two attributes identified in the FRBR basic level record: physical medium 
+      and presentation format.</td>
+  </tr>
+  <tr> 
+    <td width="24%" valign="top">Reduction ratio</td>
+    <td width="25%" valign="top">340 $f<br>
+      <i>reproductions:</i><br>
+      533 $e (?)<br>
+    </td>
+    <td height="11">&nbsp;</td>
+    <td height="11">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="24%" valign="top">Manifestation identifier</td>
+    <td width="25%" valign="top">Books: 020, 027, 074<br>
+      Serials: 022, 030, 074<br>
+      Other materials: 024, 028, 074</td>
+    <td height="22">&nbsp;</td>
+    <td height="22">&nbsp;</td>
+  </tr>
+</table>
+<p><a href="multiple-versions.html#top">Go to top</a><br>
+  <br>
+<hr>
+<h3><a name="single">3. Single Record for Manifestations of an Expression </a></h3>
+<p>The recommendation in the LC action plan regarding the development of guidelines 
+  for determining when a single record rather than separate records should be 
+  created for<i> manifestations</i> of an <i>expression</i> is set in the context 
+  of AACR, and does not refer explicitly to the MARC format. It is obvious, however, 
+  that any changes to current AACR practice with respect to the inclusion of data 
+  for multiple <i>manifestations</i> within a single descriptive record could 
+  have implications for the MARC format. Conversely, the degree of flexibility 
+  that exists within the current MARC format structure to accommodate changes 
+  in AACR practice may be a constraining factor in the consideration of options 
+  for the proposed AACR guidelines. </p>
+<p>As for structural constraints within the MARC format structure that could have 
+  a bearing on options under consideration, the following facts need to be highlighted. 
+<h4>3.1 Field Repeatability Concern</h4>
+<p>Current specifications as to repeatability of variable fields allow only one 
+  occurrence of each of the following fields: 
+<p> 
+<ul>
+  <li> 245 - Title statement <br>
+  <li>250 - Edition statement<br>
+  <li>254 - Musical presentation statement<br>
+  <li>256 - Computer file characteristics<br>
+  <li>257 - Country of producing entity for archival films<br>
+  <li>306 - Playing time<br>
+  <li>310 - Current publication frequency<br>
+  <li>507 - Scale note for graphic material<br>
+  <li>514 - Data quality note 
+</ul>
+<p>Given the current policy commitment to maintain compatibility between AACR 
+  and ISBD(G), it is unlikely that any guidelines developed in response to the 
+  action plan's recommendation would involve repeatability of either the title 
+  statement or the edition statement. It can probably be assumed, therefore, that 
+  any guidelines developed for AACR would limit the single-record description 
+  to <i>manifestations</i> bearing the same title, parallel titles, other title 
+  information, statements of responsibility, edition statement, statements of 
+  responsibility relating to the edition, statement relating to a named revision 
+  of an edition, and statements of responsibility relating to a named revision 
+  of an edition. Presumably, the general material designation, if not applicable 
+  to all the <i>manifestations</i> described in the record, would simply be omitted. 
+  The non-repeatability of fields 245 and 250 should therefore not be an issue.</p>
+<p>The data recorded in fields 254 and 256 correlate with attributes of <i>expression</i> 
+  in FRBR (type of score and extent of <i>expression</i>, respectively). It is 
+  reasonable to assume, therefore, that any guidelines developed for AACR would 
+  require separate records for<i> manifestations</i> of the same musical <i>work</i> 
+  presented in a different form, or for computer files that differed with respect 
+  to the number of files, records, statements, etc. If that is not the case, fields 
+  254 and 256 would have to be made repeatable.</p>
+<p>As for field 257, practices within the archival film community would have to 
+  be examined more closely before determining whether the non-repeatability of 
+  the field would pose any problems with respect to using a single record for 
+  multiple <i>manifestations</i> of the same motion picture.</p>
+<p>As playing time, publication frequency, and scale correlate with attributes 
+  of <i>expression</i> in FRBR (extent of <i>expression</i>, frequency, and scale, 
+  respectively), it is reasonable to assume that any guidelines developed for 
+  AACR would require separate records to be created for<i> manifestations</i> 
+  of the same <i>work</i> exhibiting differences in any of those attributes. If 
+  that is not the case, fields 306, 310, and 507 would have to be made repeatable. 
+</p>
+<p>If the guidelines developed for AACR were to permit a single record describing 
+  <i>manifestations</i> that differed in data quality, field 514 would have to 
+  be made repeatable.</p>
+<h4>3.2 Field 008 Interpretation</h4>
+Fixed-length data elements are a different matter. Current specifications as to 
+the repeatability of fields containing fixed-length data elements permit the use 
+of one or more occurrences of field 006 in conjunction with field 008 only for 
+purposes of recording data that pertains to components or special aspects of the 
+item described in the record. As field 008 itself is not repeatable, consistency 
+with current MARC practice would limit the use of a single record describing multiple 
+<i>manifestations</i> to those instances where the code values recorded for each 
+of the data elements defined in field 008 would have to apply to all <i>manifestations</i> 
+described in the record. 
+<p>For the most part, the data elements defined in field 008 pertain either to
+   the <i>manifestation</i> or to the <i>expression</i>. Assuming that any guidelines
+    proposed for describing multiple <i>manifestations</i> in a single record
+    would  be limited to <i>manifestations</i> of the same <i>expression</i> of
+    the <i>work</i>, 
+  those data elements would pose no problem. However, as noted in the mapping
+     of MARC to FRBR (<a href="http://www.loc.gov/marc/marc-functional-analysis/source/table3.pdf">Table
+     3</a>),
+     the following data elements defined in field 008 correlate with attributes
+      of the <i>manifestation</i>:</p>
+
+<ul>
+  <li>form of item (form of carrier)<br>
+  <li>form of original (form of carrier for a related <i>manifestation</i>) 
+  <li>original alphabet of title (original alphabet of title) 
+</ul>
+
+<p>As for form of item, it is highly unlikely that any one of the code values 
+  currently defined would apply to all <i>manifestations </i>described in such 
+  records. To accommodate records describing multiple <i>manifestations</i>, a 
+  new code value would have to be defined for form of item to reflect the fact, 
+  where applicable, that a variety of carriers are described in the record. To 
+  allow for the specific coding of the various forms of carrier described, the 
+  definition and scope of field 007 could be modified to indicate that in records 
+  describing more than one <i>manifestation</i>, multiple occurrences of field 
+  007 could be used to code the physical characteristics of the different <i>manifestations</i>. 
+  Form of carrier could then be recorded in character position 01 (specific material 
+  designation) of a separate occurrence of field 007 for each <i>manifestation</i>.</p>
+  
+<p>The fixed-length data element for form of original (defined in field 008 for 
+  serials) would not present a problem, provided all <i>manifestations</i> described 
+  in the record were related to the same original.</p>
+
+<p>The fixed-length data element for original alphabet of title (defined in field 
+  008 for serials) should not present a problem, provided the guidelines allow 
+  the use of a single record only in cases where the title and statement of responsibility 
+  area (field 245) is identical for all the<i> manifestations</i> described. If 
+  that is the case, the original alphabet of the title could be assumed to be 
+  the same for all the <i>manifestations</i>, provided AACR instructions for the 
+  transcription of title information are followed.</p>
+
+<p><i>Recommendation:<br>
+  <br>
+  Convey the characteristics inherent in the MARC format to those responsible 
+  for developing the AACR guidelines for describing multiple manifestations in 
+  a single record. </i></p>
+<p> 
+<a href="multiple-versions.html#top">Go to top</a><br>
+<br>
+<hr>
+<h3><a name="displays">4. Hierarchical Display Examples</a></h3>
+<h4>4.1 Contents of Hierarchical Displays</h4>
+<blockquote>
+  <p>Example One: <a href="multiple-versions.html#sister-carrie">Sister Carrie </a> <br>
+    Example Two: <a href="multiple-versions.html#english-patient">The English Patient </a>
+</blockquote>
+<p> The following examples illustrate the use of the tables in <a href="multiple-versions.html#display">Section 
+  2</a>. 
+<h4><a name="sister-carrie">4.2 Sister Carrie</a></h4>
+<p> The following example includes three records for texts of the novel <i>Sister 
+  Carrie</i> and one record for a recording of a lecture about the novel. The 
+  example illustrates how entries for the three manifestations of the novel could 
+  be displayed hierarchically, followed by a subject entry for the lecture. 
+<p>See <a href="multiple-versions.html#appendixa">Appendix A</a> for corresponding MARC records.<br>
+  See <a href="multiple-versions.html#appendixb">Appendix B</a> for an outline of the hierarchical display 
+  levels.</p>
+<p> 
+<pre><strong>Possible Hierarchical Display                                    </strong><strong>Level</strong> [Not part 
+                                                                 of display] 
+Dreiser, Theodore, 1871-1945.
+Sister Carrie.                                                   [Work]
+   Text - English                                                [Expression]
+        Sister Carrie / Theodore Dreiser.                        [Manifestations
+                Edition:  Modern Library ed.                     (two combined)] 
+                   Imprint:  Modern Library, 1997.
+                   Physical description: xvii, 659 p. ; 20cm.
+                   ISBN:  067960250X
+                Edition:  The Pennsylvania ed.
+                   Imprint:  University of Pennsylvania Press, 
+                             1981.
+                   Physical description: xi, 679 p. : ill. ; 24cm.
+                   ISBN:  0812277848 
+                   ISBN:  0812211103 (pbk.)
+        Sister Carrie.                                            [Manifestation]
+                Edition:  An abridged ed. by Theodore 
+                          Dreiser and Arthur Henry.  
+                          With a new introd. By Jack Salzman.
+                Imprint:  Johnson Reprint Corp., 1969.
+                Physical description: x, 357 p. 21 cm.
+<em>Works about Sister Carrie</em>
+Grebstein, Sheldon Norman.                                        [Work]
+Sister Carrie.
+   Sound recording - English                                      [Expression]
+        Sister Carrie (Theodore Dreiser). / Lecturer, Sheldon     [Manifestation]  
+          Grebstein.                 
+                Imprint:  Everett/Edwards, p1970.
+                Physical description:  1 cassette. 1/2 track. mono.
+                Publisher number:  105 Everett/Edwards
+                Reproduction:  Preservation master Washington, D.C.  
+                               Library of Congress Magnetic Recording 
+                               Laboratory.1978. On 1 sound tape reel : 
+                               analog, 7 2 ips, 2 track, mono. ; 10 in.</pre>
+<h4><a name="english-patient">4.3 The English Patient</a></h4>
+The following example includes three records for the novel <i>The English Patient</i> 
+(two for texts and one for a sound recording), and four records for related works 
+(one for the screenplay and three for the motion picture). The example illustrates 
+how entries for the three manifestations of the novel could be displayed hierarchically, 
+followed by related work entries for the screenplay and the motion picture. 
+<p>See <a href="multiple-versions.html#appendixa">Appendix A</a> for corresponding MARC records.<br>
+  See <a href="multiple-versions.html#appendixb">Appendix B</a> for an outline of the hierarchical display 
+  levels.</p>
+<p> 
+<pre><strong>Possible Hierarchical Display </strong>                                     <strong>Level</strong> [Not part 
+                                                                   of display] 
+Ondaatje, Michael, 1943?
+The English patient.                                               [Work]
+     Text - English                                                [Expression]
+        The English patient / Michael Ondaatje.                    [Manifestation]
+            Imprint:  Thorndike Press ; Chivers Press, 1997.   
+            Physical description:  455 p. (large print) :
+                                   ill. ; 23 cm.  
+            ISBN: 0786211512 (U.S. hd. : alk. paper)
+            ISBN: 0754010457 (U.K. hd.)
+            ISBN: 075402024X (U.K. pbk.)
+        The English patient / by Michael Ondaatje.                 [Manifestation]
+            Edition:  1st Vintage International ed.
+            Imprint:  Vintage Books, 1993.
+            Physical description: 305 p. ; 21 cm.
+            ISBN:  0679745203
+     Sound recording - English                                     [Expression]
+        The English patient / by Michael Ondaatje.                 [Manifestation]
+            Imprint:  Macmillan Audio Books, p1997.
+            Physical description: 2 sound cassettes 
+                                 (ca. 4 hrs.) : analog.
+            ISBN: 0333675568
+            Publisher's number:  MAB 15 Macmillan Audio Books
+<em>Related Works</em>
+The English patient.                                               [Work]
+     Motion picture - English                                      [Expression]
+        The English patient / Miramax Films presents a             [Manifestations
+        Saul Zaentz Production ; an Anthony Minghella Film.        (two combined)]
+            Imprint:  Miramax Home Entertainment, [1998]
+               Physical description:  1 videodisc (162 min.) : 
+                                      bsd., col. ; 4 &frac34; in.
+               ISBN: 1558908307
+               Publisher's number:  14175 Miramax
+            Imprint:  Miramax Home Entertainment, c1997.
+               Physical description:  2 laserdiscs (162 min.): 
+                                      sd., col. ; 12in.
+        The English patient / produced J&M Entertainment ;         [Manifestation]
+        Miramax films ; directed by Anthony Minghella.
+            Imprint:  1996.
+            Physical description: 18 reels of 18 on 9 : sd., 
+                                   col. ; 35 mm. ref print. 
+Minghella, Anthony.                                                [Work]
+The English patient.
+     Text - English                                                [Expression]
+        The English patient / Anthony Minghella ;                  [Manifestation]
+        based on the novel by Michael Ondaatje ; introduction by 
+        Michael Ondaatje.
+             Edition:  1st ed.
+             Imprint:  Hyperion Miramax Books, c1996.
+             Physical description:  xviii, 189 p. : ill. ; 21 cm.
+             ISBN:  078688245X</pre>
+<p><a href="multiple-versions.html#top">Go to top</a><br>
+  <br>
+<hr>
+<h3><a name="appendixa">Appendix A: MARC 21 Records</a></h3>
+<h4>Contents</h4>
+<ul>
+  <li><a href="multiple-versions.html#marc-sister">Sister Carrie</a> 
+  <li><a href="multiple-versions.html#marc-english">The English Patient</a> 
+</ul>
+<p> 
+<h4><a name="marc-sister">Example 1: </a>Sister Carrie</h4>
+<pre><strong>Record 1</strong>
+LDR   00848cam##2200277#a#450#
+001   691862
+005   20020220145543.0
+008   961125s1997####nyu###########000#1deng##
+010   ##$a96037888 
+020   ##$a067960250X
+040   ##$aDLC $cDLC $dYDX $dOCL
+043   ##$an-us-il $an-us-ny
+050   10$aPS3507.R55 $bS5 1997
+082   00$a813/.52$221
+100   1#$aDreiser, Theodore, $d1871-1945.
+245   10$aSister Carrie / $cTheodore Dreiser.
+250   ##$aModern Library ed.
+260   ##$aNew York : $bModern Library, $c1997.
+300   ##$axvii, 659 p. ; $c20cm.
+650   #0$aYoung women$zIllinois$zChicago$vFiction.
+650   #0$aYoung women$zNew York (State)$zNew York$vFiction.
+651   #0$aNew York (N.Y.)$vFiction.
+651   #0$aChicago (Ill.)$vFiction.
+
+
+<strong>Record 2</strong>
+LDR   01052cam##2200313#i#450#
+001   2300110
+005   20010313125533.0
+008   801010s1981####paua#####b####000#1#eng##
+010   ##$a80050691
+020   ##$a0812277848
+020   ##$a0812211103 (pbk.)
+040   ##$aDLC$cDLC$dDLC
+050   00$aPS3507.R55$bS5 1981
+082   00$a813/.52 $219
+100   1#$aDreiser, Theodore, $d1871-1945.
+245   10$aSister Carrie / $cTheodore Dreiser.
+250   ##$aThe Pennsylvania ed.
+260   ##$a[Philadelphia, Pa.] : $bUniversity of Pennsylvania  
+         Press, $c1981.
+300   ##$axi, 679 p. : $bill. ; $c24 cm.
+504   ##$aIncludes bibliographical references.
+650   #0$aYoung women$xFiction.
+650   #0$aMistresses$xFiction.
+651   #0$aNew York (N.Y.)$xFiction.
+651   #0$aChicago (Ill.)$xFiction.
+655   #7$aDidactic fiction.$2gsafd
+600   10$aDreiser, Theodore, $d1871-1945. $tSister Carrie.
+
+
+<strong>Record 3</strong>
+LDR   00973cam##2200289###450#
+001   2649689
+005   20010313124850.0
+008   690714r1969####nyu###########000#1#eng##
+010   ##$a68054227 
+040   ##$aDLC $cDLC $dDLC
+050   00$aPZ3.D814 $bS39 $aPS3507.R55
+082   00$a813/.5/2
+100   1#$aDreiser, Theodore, $d1871-1945.
+245   10$aSister Carrie.
+250   ##$aAn abridged ed. $bby Theodore Dreiser and Arthur Henry. 
+          With a new introd. by Jack Salzman.
+260   ##$aNew York, $bJohnson Reprint Corp., $c1969.
+300   ##$ax, 357 p.$c21 cm.
+490   0#$aBelles lettres in English
+650   #0$aYoung women$xFiction.
+650   #0$aMistresses$xFiction.
+651   #0$aNew York (N.Y.)$xFiction.
+651   #0$aChicago (Ill.)$xFiction.
+655   #7$aDidactic fiction.$2gsafd
+700   1#$aHenry, Arthur, $d1867-1934.
+
+<strong>Record 4</strong>
+LDR   01260cim##22003491##450#
+001   12045511
+005   20001006095103.0
+007   ssu-msnna-----
+007   st|oundmbunnue
+008   780315s19uu####flu##n#########l####eng##
+035   ##$a(OCoLC)ocm03719351
+010   ##$a99568173 
+028   02$a105 $bEverett/Edwards
+040   ##$aDLC $cIU $dDLC
+042   ##$alcderive
+050   00$aRYC 1776
+050   00$aLWO 12316 r11 A3;B1 (preservation master)
+100   1#$aGrebstein, Sheldon Norman.
+245   00$aSister Carrie (Theodore Dreiser)$h [Sound recording] / 
+        $cLecturer, Sheldon Grebstein.
+260   ##$aDeland, Fla.,$bEverett/Edwards, $cp1970.
+300   ##$a1 cassette. $b1/2 track. $cmono.
+306   ##$a003500
+440   #0$a20th century American novel
+490   0#$aCassette curriculum
+500   ##$aDuration : 35 min.
+533   ##$aPreservation master $bWashington, D.C. 
+        $cLibrary of Congress Magnetic Recording Laboratory. 
+        $d1978. $e On 1 sound tape reel : analog, 
+        7 1/2 ips, 2 track, mono. ; 10 in.
+600   10$aDreiser, Theodore, $d1871-1945. $t Sister Carrie.
+740   0#$aSister Carrie (Theodore Dreiser).</pre>
+<p> 
+<h4><a name="marc-english">Example 2: </a>The English Patient </h4>
+<pre><strong>Record 1</strong>
+LDR   01080pam##2200313#a#450#
+001   1652970
+005   19970926140326.1
+008   970430s1997####meua####d#####000#1#eng##
+010   ##$a97019594
+020   ##$a0786211512 (U.S. hd. : alk. paper)
+020   ##$a0754010457 (U.K. hd.)
+020   ##$a075402024X (U.K. pbk.)
+040   ##$aDLC $cDLC$dDLC
+043   ##$ae-it---
+050   10$aPR9199.3.O5 $bE54 1997
+082   00$a813/.54 $221
+100   1#$aOndaatje, Michael, $d1943-
+245   14$aThe English patient / $cMichael Ondaatje.
+260   ##$aThorndike, Me. : $bThorndike Press ; $aBath, England : 
+        $bChivers Press, $c1997.
+300   ##$a455 p. (large print) : $bill. ; $c23 cm.
+650   #0$aWorld War, 1939-1945 $xFiction.
+651   #0$aItaly $xFiction.
+655   #7$aHistorical fiction. $2gsafd
+655   #7$aWar stories. $2gsafd
+650   #0$aLarge type books.
+
+<strong>Record 2</strong>
+LDR   01023cam##2200289#a#450#
+001   4887131
+005   19970324095934.9
+008   930324r19931992nyu###########000#1#eng##
+010   ##$a93010492 
+020   ##$a0679745203
+040   ##$aDLC$cDLC$dDLC
+043   ##$ae-it---
+050   00$aPR9199.3.O5$bE54 1993
+082   00$a813/.54 $220
+100   1#$aOndaatje, Michael, $d1943-
+245   14$aThe English patient : $ba novel / $cby Michael Ondaatje.
+250   ##$a1st Vintage International ed.
+260   ##$aNew York : $bVintage Books, $c1993.
+300   ##$a305 p. ; $c21 cm.
+650   #0$aWorld War, 1939-1945 $zItaly $xFiction.
+651   #0$aItaly $xFiction.
+655   #7$aHistorical fiction.$2gsafd
+655   #7$aWar stories. $2gsafd
+
+<strong>Record 3</strong>
+LDR   00905cim##22003011a#450#
+003   OCoLC
+005   20020211084637.0
+007   ss_lunjlcuuuuu
+008   010222s1997####flunnn##############eng#d
+020   ##$a0333675568
+028   00$aMAB 15 $bMacmillan Audio Books
+035   ##$a(OCoLC)ocm46238995
+041   0#$beng
+082   04$a813.54 $221
+100   1#$aOndaatje, Michael, $d1943-
+245   14$aThe English patient $h [Sound recording] / 
+        $cby Michael Ondaatje.
+260   ##$aLondon : $bMacmillan Audio Books, $cp1997.
+300   ##$a2 sound cassettes (ca. 4 hrs.) : $banalog.
+500   ##$aAbridged
+500   ##$aMacmillan Audio Books: MAB 15.
+511   3#$aRead by Ralph Fiennes.
+650   #0$aAudiobooks.
+650   #0$aWorld War, 1939-1945 $zItaly $v Fiction.
+650   #0$aTalking books.
+700   1#$aFiennes, Ralph.  $4nrt
+
+<strong>Record 4</strong>
+LDR   01821cgm##22004331a#450#
+003   OCoLC
+005   20020208115607.0
+007   vd_cgaizq
+008   980327p19981996cau162############vleng#d
+020   ##$a1558908307 : $c$29.99
+028   40$a14175 $bMiramax
+245   04$aThe English patient $h [videorecording] / 
+        $cMiramax Films presents a Saul Zaentz Production 
+        ; an Anthony Minghella Film.
+260   ##$a[S.l.] : $bMiramax Home Entertainment, $c[1998]
+300   ##$a1 videodisc (162 min.) : $bsd., col. ; $c4 3/4 in.
+500   ##$aVideodisc releatse of a 1996 motion picture.
+500   ##$aBased on the novel by Michael Ondaatje
+500   ##$aIn English; Spanish subtitles available.
+511   0#$aRalph Fiennes, Juliette Binoche, Willem Dafoe, 
+          Kristin Scott Thomas, Naveen Andrews, Colin       
+          Firth, Julian Wadham, Jurgen Prochnow.
+521   8#$aClosed-captioned for the hearing impaired.
+521   8#$aRated R.
+538   ##$aDVD (with chapter stops); widescreen (letterbox format)
+586   #0$aAcademy Award for Best Picture, 1996.
+650   #0$aFeature films.
+650   #0$aVideorecordings for the hearing impaired.
+700   12$aOndaatje, Michael, $d1943- $tEnglish patient.
+700   1#$aMinghella, Anthony.
+700   1#$aZaentz, Saul.
+700   1#$aFiennes, Ralph.
+700   1#$aScott-thomas, Kristin, $d1960-
+700   1#$aBinoche, Juliette, $d1964-
+700   1#$aDafoe, Willem.
+710   2#$aMiramax Films.
+710   2#$aMiramax Home Entertainment (Firm)
+
+<strong>Record 5</strong>
+LDR   01440ngm##22003251a#450#
+003   OCoLC
+005   20020208115646.0
+007   vd_cgaizs
+008   971003s1997####xx#162############vleng#d
+020   ##$c$36.00
+035   ##$a(OCoLC)ocm37728690
+245   04$aThe English patient $h [videorecording] / 
+        $cMiramax Films presents a Saul Zaentz Production 
+        ; an Anthony Minghella Film.
+260   ##$a[S.l.] : $bMiramax Home Entertainment, $c1997.
+300   ##$a2 laserdiscs (162 min.) : $bsd., col. ; $c12 in.
+500   ##$aOriginally released as a motion picture.
+500   ##$a"Based on the novel by Michael Ondaatje" - container.
+511   3#$aRalph Fiennes, Juliette Binoche, Willem Dafoe, 
+         Kristin Scott Thomas, Naveen Andrews, Colin       
+         Firth, Julian Wadham, Jurgen Prochnow.
+521   8#$aClosed-captioned for the hearing impaired.
+521   8#$aRated R.
+538   ##$aLaserdisc, widescreen, extended play, scan & pause, 
+          THX, dolby digital, stereo.
+586   #0$aAcademy Award for Best Picture, 1996.
+650   #0$aFeature films.
+700   1#$aFiennes, Ralph.
+700   1#$aBinoche, Juliette, $d1964-
+700   1#$aDafoe, Willem.
+700   1#$aOndaatje, Michael, $d1943-$tEnglish patient.
+
+<strong>Record 6</strong>
+LDR   00982ngm##22002655a#450#
+001   11700778
+005   00000000000000.0
+008   970731s1996####xx################mleng##
+010   ##$a97513490 
+007   m| ||||||||||||||------
+040   ##$aDLC$cDLC$eamim
+050   00$aCGC 4247-4255 (ref print)
+245   04$aThe English patient / $cproduced J&M Entertainment ; 
+          Miramax films ; directed by Anthony Minghella.
+260   ##$c1996.
+300   ##$a18 reels of 18 on 9 : $bsd., col. ; $c35 mm. ref print.
+500   ##$aCopyright: no reg.. DCR ; PUB ; REG ; PA***-***.
+500   ##$aSource used: copyright data base.
+541   ##$dReceived: 1/10/97; $3 ref print; 
+        $ccopyright deposit--***; $aCopyright Collection.
+655   #7$aFeatures.$2mim
+655   #7$aDrama.$2mim
+710   2#$aCopyright Collection (Library of Congress)$5 DLC
+
+<strong>Record 7</strong>
+LDR   00985cam##2200253#a#450#
+001   3999966
+005   19980917121617.6
+008   960816s1996####nyua##########000#0#eng##
+010   ##$a96042250 
+020   ##$a078688245X
+040   ##$aDLC$cDLC$dDLC
+050   00$aPN1997 $b.E64 1996
+082   00$a791.43/72 $220
+100   1#$aMinghella, Anthony.
+245   14$aThe English patient : $ba screenplay / 
+         $cAnthony Minghella ; based on the novel by 
+         Michael Ondaatje ; introduction by Michael Ondaatje.
+250   ##$a1st ed.
+260   ##$aNew York : $bHyperion Miramax Books, $cc1996.
+300   ##$axviii, 189 p. : $bill. ; $c21 cm.
+700   1#$aOndaatje, Michael, $d1943- $t English patient.
+730   0#$aEnglish patient (Motion picture)</pre>
+<p> <a href="multiple-versions.html#top">Go to top</a><br>
+  <br>
+<hr>
+<h3><a name="appendixb">Appendix B:</a> Levels of Hierarchical Display</h3>
+<p> 
+<h4>Contents</h4>
+<ul>
+  <li><a href="multiple-versions.html#levels-sister">Sister Carrie</a> 
+  <li><a href="multiple-versions.html#levels-english">The English Patient</a> 
+</ul>
+<p> 
+<h4><a name="levels-sister">Sister Carrie</a></h4>
+<b>Work 1</b> 
+<pre>100   10$aDreiser, Theodore, $d1871-1945.  (Created by)
+245   10$aSister Carrie.  (Title of work)</pre>
+<p> <b>Expression 1</b> 
+<pre>LDR/06 a (Language material)  (Form of expression)
+008/35-37   eng (English)  (Language of expression)</pre>
+<p> <b>Manifestation 1</b> 
+<pre>020   ##$a067960250X  (Manifestation identifier)
+245   10$aSister Carrie / $cTheodore Dreiser.  
+        (Title/Statement of responsibility of manifestation)
+250   ##$aModern Library ed. .  (Edition/issue designation)
+260   ##$aNew York : $bModern Library, $c1997.  (Publisher/Date of publication)
+300   ##$ xvii, 659 p. ; $c20cm.  (Form, extent, dimensions, etc.)</pre>
+<p> <b>Manifestation 2</b> 
+<pre>020   ##$a0812277848 (Manifestation identifier)
+020   ##$a0812211103 (pbk.)  (Manifestation identifier)
+245   10$aSister Carrie / $cTheodore Dreiser.  
+        (Title/Statement of responsibility of manifestation)
+250   ##$aThe Pennsylvania ed.  (Edition/issue designation)
+260   ##$a[Philadelphia, Pa.] : $bUniversity of Pennsylvania Press, $c1981.  
+        (Publisher/Date of publication)
+300   ##$axi, 679 p. : $bill. ; $c24cm.  (Form, extent, dimensions, etc.)</pre>
+<p> <b>Manifestation 3</b> 
+<pre>245   10$aSister Carrie.  (Title of manifestation)
+250   ##$aAn abridged ed. $bby Theodore Dreiser and Arthur Henry.  
+         With a new introd. By Jack Salzman.  (Edition/issue designation)
+260   ##$aNew York, $bJohnson Reprint Corp., $c1969.  
+        (Publisher/Date of publication)
+300   ##$ax, 357 p. $c21 cm.  (Form, extent, dimensions, etc.)</pre>
+<p> <b>Work 2</b> 
+<pre>008/18-19   ##  (Verification of match)
+100   1#$aGrebstein, Sheldon Norman. (Created by)
+245   00$aSister Carrie (Theodore Dreiser). (Title of work)</pre>
+<p> <b>Expression 1</b> 
+<pre>LDR/06 i (Non-musical sound recording) (Form of expression)
+008/35-37   eng (English) (Language of expression)</pre>
+<p> <b>Manifestation 1</b> 
+<pre>028   02$a105 $bEverett/Edwards (Manifestation identifier)
+245   00$aSister Carrie (Theodore Dreiser). $h[Sound recording] / 
+        $cLecturer, Sheldon Grebstein.  
+        (Title/Statement of responsibility of manifestation)
+260   ##$aDeland, Fla., $bEverett/Edwards, $cp1970.  
+        (Publisher/Date of publication)
+300   ##$a1 cassette. $b1/2 track. $cmono.  (Form of carrier, dimensions, etc.)
+533   ##$aPreservation master$bWashington, D.C. $cLibrary of Congress 
+         Magnetic Recording Laboratory. $d1978. $eOn 1 sound tape reel : 
+         analog, 7 2 ips, 2 track, mono. ; 10 in.  
+         (Date of manifestation/Reproduction information)</pre>
+<h4><a name="levels-english">The English Patient</a></h4>
+<b>Work 1</b> 
+<pre>100   1#$aOndaatje, Michael, $d1943-  (Created by)
+245   14$aThe English patient.  (Title of work)</pre>
+<p> <b>Expression 1</b> 
+<pre>LDR/06 a (Language material)  (Form of expression)
+008/35-37   eng (English)  (Language of expression)</pre>
+<b>Manifestation 1</b> 
+<pre>020   ##$a0786211512 (U.S. hd. : alk. paper) (Manifestation identifier)
+020   ##$a0754010457 (U.K. hd.) (Manifestation identifier)
+020   ##$a075402024X (U.K. pbk.) (Manifestation identifier)
+245   14$aThe English patient / $cMichael Ondaatje.  
+         (Title/Statement of responsibility of manifestation)
+260   ##$aThorndike, Me. : $bThorndike Press ; $aBath, England : 
+        $bChivers Press, $c1997. (Publisher/Date of publication)
+300   ##$a455 p. (large print) : $bill. ; $c23 cm.  
+        (Form, extent, dimensions, etc.)</pre>
+<p> <b>Manifestation 2</b> 
+<pre>020   ##$a0679745203  (Manifestation identifier)
+245   14$aThe English patient / $cby Michael Ondaatje.  
+          (Title/Statement of responsibility of manifestation)
+250   ##$a1st Vintage International ed.  (Edition/issue designation)
+260   ##$aNew York : $bVintage Books, $c1993.  
+        (Publisher/Date of publication)
+300   ##$a305 p. ; $c21 cm.  (Form, extent, dimensions, etc.)</pre>
+<p> <b>Expression 2</b> 
+<pre>LDR/06 i (Non-musical sound recording)  (Form of expression)
+008/35-37   eng (English)  (Language of expression)</pre>
+<p> <b>Manifestation 1</b> 
+<pre>020   ##$a0333675568  (Manifestation identifier)
+028   00$aMAB 15 $bMacmillan Audio Books  (Manifestation identifier)
+245   14$aThe English patient $h [Sound recording] / $cby Michael Ondaatje. 
+        (Title/Statement of responsibility of manifestation)
+260   ##$aLondon : $bMacmillan Audio Books, $cp1997.  
+        (Publisher/Date of publication)
+300   ##$a2 sound cassettes (ca. 4 hrs.) : $banalog.  
+        (Form, extent, dimensions, etc.)</pre>
+<p> <b>Work 2</b> 
+<pre>245   04$aThe English patient (Title of work)</pre>
+<p> <b>Expression 1</b> 
+<pre>LDR/06 g (Projected medium) (Form of expression)
+008/35-37   eng (English) (Language of expression)</pre>
+<p> <b>Manifestation 1</b> 
+<pre>020   ##$a1558908307 : $c$29.99   (Manifestation identifier)
+028   40$a14175 $bMiramax   (Manifestation identifier)
+245   04$aThe English patient $h [videorecording] / $cMiramax Films presents 
+         a Saul Zaentz Production ; an Anthony Minghella Film.   
+        (Title/Statement of responsibility of manifestation)
+260   ##$a[S.l.] : $bMiramax Home Entertainment, $c[1998]   
+        (Date of publication)
+300   ##$a1 videodisc (162 min.) : $bsd., col. ; $c4 3/4 in.   
+        (Form, extent, dimensions, etc.)</pre>
+<p> <b>Manifestation 2</b> 
+<pre>245   04$aThe English patient $h [videorecording] / 
+        $cMiramax Films presents a Saul Zaentz Production 
+         ; an Anthony Minghella Film.   
+        (Title/Statement of responsibility of manifestation)
+260   ##$a[S.l.] : $bMiramax Home Entertainment, $c1997.   
+        (Date of publication)
+300   ##$a2 laserdiscs (162 min.) : $bsd., col. ; $c12 in.   
+        (Form, extent, dimensions, etc.)</pre>
+<p> <b>Manifestation 3</b> 
+<pre>245   04$aThe English patient / $cproduced J&M Entertainment ; 
+         Miramax films ; directed by Anthony Minghella.  
+         (Title/Statement of responsibility of manifestation)
+260   ##$c1996.  (Date of publication)
+300   ##$a18 reels of 18 on 9 : $bsd., col. ; $c35 mm. ref print.  
+         (Form, extent, dimensions, etc.)</pre>
+<p> <b>Work 3</b> 
+<pre>100   1#$aMinghella, Anthony.  (Created by)
+245   14$aThe English patient : $ba screenplay   (Title of work)</pre>
+<p> <b>Expression 1</b> 
+<pre>LDR/06 a (Language material)  (Form of expression)
+008/35-37   eng (English)  (Language of expression)</pre>
+<p> <b>Manifestation 1</b> 
+<pre>020   ##$a078688245X
+245   14$aThe English patient / $cAnthony Minghella ; 
+         based on the novel by Michael Ondaatje ; introduction by Michael Ondaatje.  
+         (Title/Statement of responsibility of manifestation)
+250   ##$a1st ed.  (Edition/issue designation)
+260   ##$aNew York : $bHyperion Miramax Books, $cc1996.  
+        (Publisher/Date of publication)
+300   ##$axviii, 189 p. : $bill. ; $c21 cm.  
+        (Form, extent, dimensions, etc.)</pre>
+<p><a href="multiple-versions.html#top">Go to top</a></p>
+<hr>
+<em>Go to:</em> 
+<ul>
+  <li><a href="http://lcweb.loc.gov/marc">MARC Home Page</a> 
+  <li><a href="http://lcweb.loc.gov/">Library of Congress Home Page</a> 
+</ul>
+<p> 
+  <!---LC Footer--->
+<hr>
+<img src="http://lcweb.loc.gov/homepage/lc2.gif" height=46 width=91 alt="Library of
+Congress"> <strong>Library of Congress</strong><br>
+<address> 
+<!--help desk email start -->
+<a href="http://www.loc.gov/help/help-desk.html">Library of Congress Help Desk</a> 
+<!--help desk email end -->
+( 
+<!-- #BeginDate format:Am3 -->12/18/2003<!-- #EndDate -->
+)</address>
+
+
+<script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+
+</html>
+

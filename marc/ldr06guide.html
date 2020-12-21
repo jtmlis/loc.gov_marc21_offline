@@ -1,0 +1,1359 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<title>Guidelines for Coding Electronic Resources in
+Leader/06</title>
+<base href="" />
+<meta http-equiv="Content-Type" content=
+"text/html; charset=utf-8" />
+<meta name="description" content=
+"Guidelines for coding MARC bibliographic records in Leader/06 (Type of record) and Computer files 008/26 and 006/09 (Type of computer file)" />
+<meta name="keywords" content=
+"MARC Leader Leader/06 Type of record Computer file Electronic resource" />
+<meta name="author" content=
+"Library of Congress Network Development and MARC Standards Office" />
+<style type="text/css">
+body {margin-left: 5em; margin-right: 5em;}
+h1 {font-size: 150%;}
+h2 {font-size: 125%; margin-bottom: -1em;}
+h3, h4 {font-size: 100%; margin-bottom: -1em;}
+h4 {margin-top: 2em;}
+dt {font-weight: bold;}
+table {margin: 1em 0 2em 0;}
+th {text-align: left; padding: 0.25em ; background-color: #CCCCCC;}
+td {vertical-align: top; padding-left: .5em; }
+address {margin-top: -1em;}
+.by-line {font-size: 115%;}
+.term {font-style: italic;}
+#title-page-info {font-weight: bold; text-align: center;}
+#appendices h3 {text-decoration: underline;}
+#appendices h2 dd {margin-bottom: 0.5em;}
+#documentation li {margin-bottom: 0.5em;}
+#fixed-field-coding-principles li {margin-bottom: 0.5em;}
+#coding-examples p {margin-bottom: -0.5em;}
+/*took out margin-left in style below...left-most characters were disappearing in IE6 -- Julie Mangin*/
+#coding-examples ul {list-style: none;} 
+/* #coding-examples ul {list-style: none; margin-left: -.75em;} */
+</style>
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+<body>
+<div id="title-page-info"> 
+<h1>Guidelines for Coding Electronic Resources in Leader/06</h1>
+
+<p>Revised December 2007</p>
+
+<p class="by-line">Network Development and MARC Standards Office,<br />
+ Library of Congress</p>
+</div>
+ 
+<hr />
+
+<div id="introduction">
+<p>The revision in 1997 of the definition for code
+&ldquo;m&rdquo; (<span class="term">Computer file</span>) in
+Leader/06 (<span class="term">Type of record</span>), that
+narrowed its use to a computer file content orientation, as well
+as the proliferation of electronic resources has prompted users
+to request additional guidance when coding these materials. This
+document presents some guidelines for coding Leader/06 in
+bibliographic records for electronic resources and includes
+examples with coding. Please note that this document discusses
+content designation (MARC coding and tagging); it is not a guide
+to cataloging rules and conventions used to create the content of
+bibliographic records for electronic resources.</p>
+
+<p>The list of <a href="ldr06guide.html#examples">examples</a> in this document
+is an ongoing work in progress. Users who encounter types of
+electronic resources not included in the list are encouraged to
+bring them to the attention of the Network Development and MARC
+Standards Office at the Library of Congress (<a href="http://www.loc.gov/cdn-cgi/l/email-protection#ff919b928c90bf93909cd1989089"><span class="__cf_email__" data-cfemail="6d0309001e022d01020e430a021b">[email&#160;protected]</span></a>).</p>
+
+<p>This document supersedes an <a href=
+"http://www.loc.gov/marc/ldr06guide2003rev.html">earlier edition</a> of these
+guidelines.</p>
+</div>
+
+<hr />
+
+<div id="table-of-contents">
+<h2>Contents</h2>
+<ul>
+<li><a href="ldr06guide.html#documents">Documentation</a></li>
+<li><a href="ldr06guide.html#ldr06">Principles and guidelines for coding
+leader/06</a></li>
+<li><a href="ldr06guide.html#fixed-fields">Principles and guidelines for coding
+fields 006, 007 and 008</a></li>
+<li><a href="ldr06guide.html#examples">Coding for different types of electronic
+resources (with examples)</a></li>
+<li><a href="ldr06guide.html#appendices-list">Appendices</a> 
+	<ul>
+	<li><a href="ldr06guide.html#ldr06-values">Leader/06 values</a></li>
+	<li><a href="ldr06guide.html#ldr06-definitions">Leader/06 definitions</a></li>
+	<li><a href="ldr06guide.html#pos00826-definitions">Definitions of data elements in
+	the 008/26 and 006/09 positions for computer files</a></li>
+	</ul>
+</li>
+</ul>
+</div>
+
+<hr />
+
+<div id="documentation">
+<h2><a id="documents">Documentation</a></h2>
+<ul>
+
+<li><a href="bibliographic/ecbdhome.html"><cite>MARC 21 Concise
+Format for Bibliographic Data</cite></a> defines the codes and
+conventions that identify data elements in MARC bibliographic
+records. It is updated on an annual basis.</li>
+
+<li>OCLC's <a href=
+"http://www.oclc.org/connexion/documentation/type.htm"><cite>Cataloging
+Electronic Resources: OCLC-MARC Coding Guidelines</cite></a>
+assists catalogers creating bibliographic records for electronic
+resources and includes information on the proper coding of fixed
+fields, including Leader/06 (<span class="term">Type of
+record</span>).</li>
+
+<li><a href="cfmap.html"><cite>Guidelines for Distinguishing
+Cartographic Materials on Computer File Carriers from other
+Materials on Computer File Carriers</cite></a> (January 1998,
+revised December 2001) helps catalogers working with cartographic
+electronic resources to distinguish them from other types of
+electronic resources and to select the correct Leader/06 (<span
+class="term">Type of record)</span> based on that
+distinction.</li>
+
+<li><a href="formatintegration.html"><cite>Relationship of
+Fields 006, 007, and 008</cite></a> explains the general model
+adopted to indicate how repetitions of field 006 (<span class=
+"term">Fixed-length data elements - Additional material
+characteristics</span>) and a single field 008 (<span class=
+"term">Fixed-length data elements - General information</span>)
+coexist in bibliographic records, especially in relation to the
+values in Leader character positions 06 (<span class="term">Type
+of record</span>) and 07 (<span class="term">Bibliographic
+level</span>), and clarifies the relationship of field 007 (<span
+class="term">Physical description fixed field</span>) to fields
+006 and 008.</li>
+
+<li><a href="http://www.loc.gov/acq/conser/ffuse.html"><cite>Use
+of fixed fields 006/007/008 and Leader codes in CONSER
+records</cite></a> presents guidelines for coding in CONSER
+records.</li>
+</ul>
+</div>
+
+<hr />
+
+<div id="ldr06-coding-principles">
+<h2><a id="ldr06">Principles and Guidelines for Coding
+Leader/06</a></h2>
+
+<p>An electronic resource is a manifestation of a work that
+requires the use of a computer for access. Peripheral devices
+attached to the computer (such as a CD-ROM drive) may also be
+required. The manifestation's carrier is accessed either directly
+(e.g., via CD-ROM, etc.) or remotely (e.g., via the Internet).
+Items that do not require the use of a computer, such as audio
+CDs or movies on DVD-videodiscs, are excluded from this
+definition.</p>
+
+<p>The <a href=
+"http://www.loc.gov/marc/bibliographic/ecbdldrd.html#mrcblea">Leader/06</a> <span class=
+"term">(Type of record)</span> character position in the
+<cite>MARC 21 Format for Bibliographic Data</cite> contains a
+one-character alphabetic code that differentiates MARC records
+created for various types of content and materials. The
+definition of code &ldquo;m&rdquo; (computer file) in Leader/06
+was revised in June 1997 as a result of <a href=
+"http://www.loc.gov/marc/marbi/1997/97-03R.html"><cite>Proposal
+No. 97-3R</cite></a>. The new definition narrowed the choice of
+code &ldquo;m&rdquo; to the following types of electronic
+resources:</p>
+
+<ul>
+<li>computer software (including programs, games, fonts)</li>
+<li>numeric data</li>
+<li>computer-oriented multimedia</li>
+<li>online systems or services</li>
+</ul>
+
+<p>Code &ldquo;m&rdquo; is defined as follows in the <cite>MARC
+21 Format for Bibliographic Data</cite>:</p>
+
+<dl>
+<dt>m - Computer file</dt>
+<dd>Code m indicates that the content of the record is for the
+following classes of electronic resources: computer software
+(including programs, games, fonts), numeric data,
+computer-oriented multimedia, online systems or services. For
+these classes of materials, if there is a significant aspect that
+causes it to fall into another Leader/06 category, code for that
+significant aspect (e.g., vector data that is cartographic is not
+coded as numeric but as cartographic). Other classes of
+electronic resources are coded for their most significant aspect
+(e.g. language material, graphic, cartographic material, sound,
+music, moving image). In case of doubt or if the most significant
+aspect cannot be determined, consider the item a computer
+file.</dd>
+</dl>
+
+<p>This revised definition stipulates that catalogers code
+electronic resources for the significant aspects of their
+content, as opposed to their carrier.</p>
+
+<p>The Leader/06 determines which 008 code (<span class=
+"term">Fixed-length data elements - General information</span>)
+is used and the appropriateness and validity of other fixed data
+elements in a record.</p>
+</div>
+
+<hr />
+<div id="fixed-field-coding-principles">
+<h2><a id="fixed-fields">Principles and Guidelines for Coding
+Fields 006, 007 and 008</a></h2>
+
+<p>The 008 field contains character positions that provide coded
+information about the record as a whole and about special
+bibliographic aspects of the item cataloged. This field is not
+repeatable. Field 006 (<span class="term">Fixed-length data
+elements - Additional material characteristics</span>) permits
+coding for additional aspects of an electronic resource
+(including any computer file aspects) if the 007 and 008 fields
+do not adequately describe it. Some cataloging utilities and
+groups (such as CONSER) require the use of 006 fields under
+certain conditions. Sample records in this document include 006
+fields for those who may wish to use this field.</p>
+
+<p>Coding all of these positions involves making a series of
+decisions. Consider the following when deciding what code values
+to select:</p>
+
+<ul>
+<li>What are the primary characteristics of the content of the
+resource (as opposed to the physical format or carrier)? Look at
+the definitions of the various Leader/06 codes. Is the content
+primarily language material, notated music, cartographic
+material, a computer file, a musical sound recording, etc.?</li>
+
+<li>Does the resource match the Leader/06 definition of a
+computer file? If so, &ldquo;m&rdquo; (for computer file) goes in
+Leader/06, and the 008 field is coded for computer files.
+Position 008/26 contains the code for the type of computer file
+described in the record.</li>
+
+<li>If Leader/06 is coded &ldquo;a&rdquo; (<span class=
+"term">language material</span>), is the resource a monograph or
+a continuing resource? This determines the code in Leader/07
+(<span class="term">Bibliographic level</span>), which in turn
+influences 008 field coding (<span class="term">Books</span> or
+<span class="term">Continuing resources</span>). For other
+material types, the Leader/06 code determines 008 coding.</li>
+
+<li>Does the cataloger wish to add a 006 field to record
+characteristics that cannot be coded in the 008 field? Some
+electronic resources might need more than one 006 field. For
+others, a 006 field may not really add any additional information
+and could be left out.</li>
+
+<li>Note that <a href="http://www.loc.gov/marc/marbi/1997/97-03R.html"><cite>Proposal No.
+97-3R</cite></a> specifies that a 007 field (<span class=
+"term">Physical description fixed field</span>) for electronic
+resources is mandatory regardless of the Leader/06 code value
+when the physical form of the resource is an electronic format in
+order to provide an explicit indication that the item is in an
+electronic format.</li>
+
+<li>Some combinations of 006, 007, and 008 fields may result in a
+certain amount of redundancy, in the sense that the same
+information about an electronic resource might appear in more
+than one of these fields. Catalogers must decide whether the
+information added as a result of recording additional
+characteristics of an item justifies the redundancy.</li>
+</ul>
+
+<p>In case of doubt, or if the most significant characteristic
+cannot be determined, code the resource &ldquo;m&rdquo; in the
+Leader/06 position.</p>
+</div>
+
+<hr />
+<div id="coding-examples">
+<h2><a id="examples">Coding for different types of electronic
+resources</a></h2>
+
+<ul>
+<li><a href="ldr06guide.html#bibdata">Bibliographic database on the
+Internet</a></li>
+
+<li><a href="ldr06guide.html#collbibdata">Collection of databases on the
+Internet</a></li>
+
+<li><a href="ldr06guide.html#textualserial">Textual continuing
+resource</a></li>
+
+<li><a href="ldr06guide.html#serialsearch">Textual continuing resource with
+search software</a></li>
+
+<li><a href="ldr06guide.html#emailserial">Textual continuing resource received
+via email</a></li>
+
+<li><a href="ldr06guide.html#textualdoc">Textual document</a></li>
+
+<li><a href="ldr06guide.html#map">Cartographic material</a></li>
+
+<li><a href="ldr06guide.html#stillimages">Still images</a></li>
+
+<li><a href="ldr06guide.html#notatedmusic">Notated music</a></li>
+
+<li><a href="ldr06guide.html#censustext">Census in textual form</a></li>
+
+<li><a href="ldr06guide.html#numdata">Database containing manipulable numeric
+data</a></li>
+
+<li><a href="ldr06guide.html#os">Computer operating system</a></li>
+
+<li><a href="ldr06guide.html#software">Computer software</a></li>
+
+<li><a href="ldr06guide.html#game">Computer game</a></li>
+
+<li><a href="ldr06guide.html#searchengine">Internet search engine</a></li>
+
+<li><a href="ldr06guide.html#portal">Web portal</a></li>
+
+<li><a href="ldr06guide.html#system">System or service on the Internet,
+such as an E-commerce site</a></li>
+
+<li><a href="ldr06guide.html#webaudiovideo">Web site with significant audio and
+video content</a></li>
+
+<li><a href="ldr06guide.html#streamingvideo">Streaming video</a></li>
+
+<li><a href="ldr06guide.html#streamingaudio">Streaming audio</a></li>
+</ul>
+
+<ul>
+<li>Notes: 
+<ol>
+<li>The sample records are partial records.</li>
+<li>Some of the records have a Leader/07 with a value of
+&ldquo;i&rdquo; (for <span class="term">integrating
+resource</span>). Bibliographic Level &ldquo;i&rdquo; for
+integrating resources was fully implemented in June 2006.</li>
+<li>Some of the 006 fields in the sample records do not
+necessarily provide much additional information but were added
+for illustrative purposes.</li>
+</ol>
+</li>
+</ul>
+
+<h4><a id="bibdata">Bibliographic database on the
+Internet</a></h4>
+
+<p>The record describes collections of bibliographic records
+retrieved via search software; the presence of such software does
+not change the content of the resource and does not mean that
+Leader/06 should be coded &ldquo;m.&rdquo; The resource is
+primarily textual bibliographic data, so it is coded as <span
+class="term">language material</span>. The type of computer file
+(006/09) is <span class="term">bibliographic data</span>.</p>
+
+<ul>
+<li>Example(s):
+	<ul>
+	<li>The Library of Congress' <a href=
+	"http://catalog.loc.gov/">online catalog</a> of bibliographic
+	data.
+<pre>   Ldr/06: a [type of record: language material]
+   Ldr/07: m [bibliographic level: monograph]
+   007:    [cr||||||||||||]
+   006/00: m [form of material: computer files/electronic resources]
+   006/09: e [type of computer file: bibliographic data]
+</pre>
+</li>
+</ul>
+</li>
+</ul>
+
+<h4><a id="collbibdata">Collection of databases on the
+Internet</a></h4>
+
+<p>The record describes the system itself and not the content of
+individual databases. The type of computer file is <span class=
+"term">online system or service</span>.</p>
+
+
+<ul>
+<li>Example(s):
+<ul>
+<li><a href=
+"http://medlineplus.gov/"><cite>MEDLINEplus</cite></a>, a system
+of databases and databanks on the Internet offered by the U.S.
+National Library of Medicine (NLM) and the National Institutes of
+Health (NIH). 
+<pre>   Ldr/06: m [type of record: computer files/electronic resources]
+   Ldr/07: m [bibliographic level: monograph]
+   007:    cr#m||||||||||
+   008/26: j [type of computer file: online system or service]
+   245 00: $aMEDLINEplus $h [electronic resource] 
+</pre>
+</li>
+</ul>
+</li>
+</ul>
+
+<h4><a id="textualserial"></a>Textual continuing resource</h4>
+
+<p>The resource is the equivalent of a print item, but in
+electronic form. The resource is coded as <span class=
+"term">language material</span>. If a 006 field for computer
+files/electronic resources is added, the type of computer file
+(006/09) depends on the content of the resource.</p>
+
+<ul>
+<li>Example(s):
+<ul>
+<li><cite>MEDLINE</cite>, a monthly periodical available in PDF
+format. 
+<pre>  Ldr/06: a [type of record: language material]
+  Ldr/07: s [bibliographic level: serial]
+  006/00: m [form of material: computer files/electronic resources]
+  006/09: d [type of computer file: document]
+  007:    cr#c|||||||||| [category of material: electronic resource
+                         specific material designation: remote]
+  008/21: # [type of continuing resource: periodical]
+  008/23: s [form of item (continuing resources) : electronic]
+  245 10: $a NIH MedlinePlus $h [electronic resource] :$b the magazine.
+</pre>
+</li>
+</ul>
+</li>
+</ul>
+
+<h4><a id="serialsearch"></a>Textual continuing resource with
+search software</h4>
+
+<p>The resource is the equivalent of a print item, but in
+electronic form. Search software is included. The presence of
+such software and/or the location of the serial on the Internet
+does not necessarily change the content of the resource and does
+not mean that Leader/06 should be coded &ldquo;m.&rdquo; The
+resource is primarily textual data and is coded as <span class=
+"term">language material</span>. If a 006 field for computer
+files/electronic resources is added, the type of computer file
+(006/09) depends on the content of the resource.</p>
+
+<ul>
+<li>Example(s):
+<ul>
+<li><cite>MLA international bibliography</cite>, a database of
+citations available on CD, cumulated quarterly. 
+<pre>  Ldr/06: a [type of record: language material]
+  Ldr/07: s [bibliographic level: serial]
+  006/00: m [form of material: computer files/electronic resources]
+  006/09: e [type of computer file: bibliographic data]
+  007:    co#ugu|||||||| [category of material: electronic resource
+                 specific material designation: optical disc]
+  008/21: p [type of continuing resource: periodical]
+  008/23: s [form of item (continuing resources): electronic] 
+  245 00: $a MLA international bibliography $h [electronic resource].
+</pre>
+</li>
+<li><cite>Project Muse</cite>, a service providing Internet access to
+a collection of over 110 journals from numerous scholarly
+publishers. 
+<pre>  Ldr/06: a [type of record: language material]
+  Ldr/07: i [bibliographic level: integrating resource]
+  006/00: m [form of material: computer files/electronic resources]
+  006/09: e [type of computer file: bibliographic data]
+  007:    cr|||||||||||| [category of material: electronic resource
+                 specific material designation: remote access]
+  008/21: d [type of continuing resource: updating database]
+  008/23: s [form of item (continuing resources): electronic]
+  245 00: $a Project Muse $h [electronic resource] : 
+          $b scholarly journals online.
+</pre>
+</li>
+</ul>
+</li>
+</ul>
+
+<h4><a id="emailserial"></a>Textual continuing resource
+received via email</h4>
+
+<p>The resource is the equivalent of a print item but is received
+via email from a news wire service. It is coded as <span class=
+"term">language material</span>. The type of computer file is
+<span class="term">document</span>.</p>
+
+<ul>
+<li>Example(s):
+<ul>
+<li><cite>CNS daily brief</cite>, a daily summary of appellate
+opinions. 
+<pre>  Ldr/06: a [type of record: language material]
+  Ldr/07: s [bibliographic level: serial]
+  006/00: m [form of material: computer files/electronic resources]
+  006/09: d [type of computer file: document]
+  007:    cr|||||||||||| [category of material: electronic resource
+                         specific material designation: remote access] 
+  008/23: s [form of item (continuing resources): electronic]
+  245 00: $a CNS daily brief $h [electronic resource].
+</pre>
+</li>
+</ul>
+</li>
+</ul>
+
+<h4><a id="textualdoc"></a>Textual document</h4>
+
+<p>The resource is the equivalent of a print item, but in
+electronic form. It is coded as <span class="term">language
+material</span>. If a 006 field for computer files/electronic
+resources is added, the type of computer file (006/09) depends on
+the content of the resource.</p>
+
+<ul>
+<li>Example(s):
+<ul>
+<li>William Blake's <cite><a href="ldr06guide.html#blake">The book of
+Urizen</a></cite>, available on CD-ROM. 
+<pre>  Ldr/06: a [type of record: language material]
+  Ldr/07: m [bibliographic level: monograph/item]
+  006/00: m [form of material: computer files/electronic resources]
+  006/09: d [type of computer file: document] 
+  007:    co#ug||||||||| [category of material: electronic resource
+                         specific material designation: optical disc]
+  008/23: s [form of item (books): electronic] 
+  245 14: $a The book of Urizen $h [electronic resource] : $b London, 
+          ca. 1818 / $c William Blake ; commentary by Nicolas Barker.
+</pre>
+</li>
+</ul>
+</li>
+</ul>
+
+<h4><a id="map"></a>Cartographic material in electronic
+form.</h4>
+
+<p>The resource is non-manuscript cartographic material in
+electronic form. It is coded as <span class="term">cartographic
+material</span>. The type of computer file is <span class=
+"term">representational</span>.</p>
+
+<ul>
+<li>Example(s):
+<ul>
+<li><cite>Vector map level 0 (VMAP0)</cite>, vector-based geospatial
+data issued by the National Imagery and Mapping Agency on optical
+discs. 
+<pre>  Ldr/06: e [type of record: cartographic material]
+  Ldr/07: m [bibliographic level: monograph/item]
+  006/00: m [form of material: computer files/electronic resources]
+  006/09: c [type of computer file: representational]
+  007:    co#cg#|||||||| [category of material: electronic resource 
+                         specific material designation: optical disc] 
+  008/29: s [form of item (maps): electronic]
+  245 10: $a Vector map level 0 (VMAP0) $h [electronic resource] / 
+          $c National Imagery and Mapping Agency.
+</pre>
+</li>
+</ul>
+</li>
+</ul>
+
+<h4><a id="stillimages"></a>Still images</h4>
+
+<p>The resource is an electronic collection of graphic materials,
+such as drawings or photographic prints. Additional items, such
+as captions and other explanatory text or manuals, may be
+present, but the primary content is graphic and the resource is
+coded as <span class="term">graphic material</span>. The type of
+computer file is <span class="term">representational</span>.</p>
+
+<ul>
+<li>Example(s):
+<ul>
+<li><cite>Corel stock photo library</cite>, a collection of
+photographs on CD-ROM. 
+<pre>  Ldr/06: k [type of record: two-dimensional nonprojectable graphic]
+  Ldr/07: m [bibliographic level: monograph/item]
+  006/00: m [form of material: computer files/electronic resources]
+  006/09: c [type of computer file: representational]
+  007:    co#cg#|||||||| [category of material: electronic resource 
+                         specific material designation: optical disc]
+  008/29: s [form of item (visual materials): electronic]  
+  245 04: $a The Corel stock photo library $h [electronic resource].
+</pre>
+</li>
+
+<li><cite>ArtServe</cite>, a collection of
+photographs of art and architecture available on the Internet. 
+<pre>  Ldr/06: k [type of record: two-dimensional nonprojectable graphic]
+  Ldr/07: i [bibliographic level: integrating resource]
+  006/00: m [form of material: computer files/electronic resources]
+  006/09: c [type of computer file: representational]
+  006/00: s [form of material: continuing resource]
+  006/01: k [frequency: continuously updated]
+  006/04: w [type of continuing resource: updating Web site]
+  006/06: s [form of item: electronic] 
+  007:    khbo| [category of material: non-projected graphic]
+                specific material designation: photoprint]
+  007:    cr|||||||||||| [category of material: electronic resource 
+                         specific material designation: remote resource]
+  008/29: s [form of item (visual materials): electronic]
+  245 00: $a ArtServe $h [electronic resource].
+</pre>
+</li>
+</ul>
+</li>
+</ul>
+
+<h4><a id="notatedmusic"></a>Notated music</h4>
+
+<p>The resource is an online collection of sheet music in
+electronic form. It is coded as <span class="term">notated
+music</span>. The type of computer file is <span class=
+"term">other</span>.</p>
+
+<ul>
+<li>Example(s):
+<ul>
+<li><cite>Historic American sheet music</cite>, a collection of sheet
+music on the Internet.
+<pre>  Ldr/06: c [type of record: notated music]
+  Ldr/07: m [bibliographic level: monograph/item]
+  006/00: m [form of material: computer files/electronic resources]
+  006/09: z [type of computer file: other]
+  007:    cr|||||||||||| [category of material: electronic resource
+                          specific material designation: remote resource]
+  008/23: s [form of item (music): electronic]
+  245 00: $a Historic American sheet music, 1850-1920 
+          $h [electronic resource] : $b selected from the 
+          collections of Duke University.
+</pre>
+</li>
+</ul>
+</li>
+</ul>
+
+<h4><a id="censustext"></a>Census in textual form</h4>
+
+<p>The resource consists largely of numeric data, perhaps in
+tabular form, but is the electronic equivalent of a print item.
+It is coded as <span class="term">language material</span>. The
+type of computer file is <span class="term">document</span>.</p>
+
+<ul>
+<li>Example(s):
+<ul>
+<li><cite>County business patterns (CD-ROM)</cite>, an annual series
+from the US Census Bureau that provides subnational economic data
+by industry. 
+<pre>  Ldr/06: a [type of record: language material] 
+  Ldr/07: s [bibliographic level: serial]
+  006/00: m [form of material: computer files/electronic resources]
+  006/09: d [type of computer file: document]
+  007:    co#ug||||||||| [category of material: electronic resource 
+                         specific material designation: optical disc]
+  008/23: s [form of item (continuing resources): electronic]
+  245 00: $a County business patterns $h [electronic resource].
+</pre>
+</li>
+</ul>
+</li>
+</ul>
+
+<h4><a id="numdata"></a>Database containing manipulable numeric
+data</h4>
+
+<p>The resource consists largely of numeric data that can be
+manipulated. It is coded as a <span class="term">computer
+file</span>. The type of computer file is <span class=
+"term">numeric data</span>.</p>
+
+<ul>
+<li>Example(s):
+<ul>
+<li><cite>Census 2000 redistricting data (P.L. 94-171)</cite>. 
+<pre>  Ldr/06: m [type of record: computer file]
+  Ldr/07: m [bibliographic level: monograph/item] 
+  007:    co#ug||||||||| [category of material: electronic resource 
+                         specific material designation: optical disc]
+  008/26: a [type of computer file: numeric data]
+  245 10: $a Census 2000 redistricting data (PL 94-171). $p Summary file
+          $h [electronic resource] : $b 2000 Census of population and
+          housing.          
+</pre>
+</li>
+</ul>
+</li>
+</ul>
+
+<h4><a id="os"></a>Computer operating system</h4>
+
+<p>The resource consists of an ordered set of instructions
+directing a computer to perform certain operations. It is coded
+as a <span class="term">computer file</span> in Leader/06 and the
+type of file is <span class="term">computer program</span>.</p>
+
+<ul>
+<li>Example(s):
+<ul>
+<li><cite>SuSE Linux 10.0</cite>, available on optical disc.
+<pre>  Ldr/06: m [type of record: computer file]
+  Ldr/07: m [bibliographic level: monograph/item]
+  007:    co#cgu|||||||| [category of material: electronic resource 
+                         specific material designation: optical disc]
+  008/26: b [type of computer file: computer program]
+  245 00: $a SuSE Linux 10.0 professional $h [electronic resource].
+</pre>
+</li>
+</ul>
+</li>
+</ul>
+
+<h4><a id="software"></a>Computer software</h4>
+
+<p>The resource consists of an ordered set of instructions
+directing a computer to perform certain operations. It is coded
+as a <span class="term">computer</span> file in Leader/06 and the
+type of file is <span class="term">computer program</span>.</p>
+
+<ul>
+<li>Example(s):
+<ul>
+<li><cite>Foxit</cite>, a PDF document viewer and printer.
+<pre>  Ldr/06: m [type of record: computer file]  
+  Ldr/07: m [bibliographic level: monograph/item]
+  007:    cz|||||||||||| [category of material: electronic resource 
+                       specific material designation: other]
+  008/26: b [type of computer file: computer program]
+  245 00: $a Foxit $h [electronic resource].
+</pre>
+</li>
+
+<li><cite>Universal currency converter</cite>, a
+continuously-updated software program on the Internet. 
+<pre>  Ldr/06: m [type of record: computer file]  
+  Ldr/07: i [bibliographic level: integrating resource]
+  006/00: s [form of material: continuing resource]
+  006/01: k [frequency: continuously updated]
+  006/04: w [type of continuing resource: updating Web site]
+  006/06: s [form of item: electronic] 
+  007:    cr#||||||||||| [category of material: electronic resource 
+                         specific material designation: remote access]
+  008/26: b [computer program]
+  245 04: $a The universal currency converter $h [electronic resource].
+</pre>
+</li>
+</ul>
+</li>
+</ul>
+
+<h4><a id="game"></a>Computer game</h4>
+
+<p>The resource is a game that allows multi-user play online. The
+type of file is <span class="term">game</span>.</p>
+
+<ul>
+<li>Example(s):
+<ul>
+<li><cite>World of warcraft</cite>, a computer game. 
+<pre>   Ldr/06: m [type of record: computer file]
+   Ldr/07: m [bibliographic level: monograph/item]
+   007:    co#cga|||||||| [category of material: electronic resource 
+                          specific material designation: optical disc]
+   008/26: g [type of computer file: game] 
+   245 00: $a World of warcraft $h [electronic resource].
+</pre>
+</li>
+</ul>
+</li>
+</ul>
+
+<h4><a id="searchengine"></a>Internet search engine</h4>
+
+<p>The bibliographic record below describes the system itself,
+not the system's content. It is coded as a <span class=
+"term">computer file</span>. The type of file is <span class=
+"term">computer program</span>. 006 fields may be added to bring
+out the &ldquo;seriality&rdquo; or any additional characteristics of the web
+site.</p>
+
+<ul>
+<li>Example(s):
+<ul>
+<li><cite>Google</cite>, a web search engine that allows users to
+search the Internet for web sites, news, images and postings in
+Usenet discussion forums. 
+<pre>  Ldr/06: m [type of record: computer file]
+  Ldr/07: i [bibliographic level: integrating resource]
+  006/00: s [form of material: continuing resource]
+  006/01: k [frequency: continuously updated]
+  006/04: w [type of continuing resource: updating Web site]
+  006/06: s [form of item: electronic] 
+  007:    cr|||||||||||| [category of material: electronic resource 
+                         specific material designation: remote access] 
+  008/26: b [type of computer file: computer program]
+  245 00: $a Google $h [electronic resource].
+</pre>
+</li>
+</ul>
+</li>
+</ul>
+
+<h4><a id="portal"></a>Web portal</h4>
+
+<p>The bibliographic record describes the system and its content.
+It is coded as a <span class="term">computer file</span>. The
+type of file is <span class="term">combination</span>. 006 fields
+may be added to bring out the &ldquo;seriality&rdquo; or any additional
+characteristics.</p>
+
+<ul>
+<li>Example(s):
+<ul>
+<li><cite>Yahoo!</cite>, a web portal organized by subject, that also
+offers a variety of other features, including news, sports and
+weather updates, an email service, business and shopping
+services, as well as a streaming audio and and video service. 
+<pre>  Ldr/06: m [type of record: computer file]
+  Ldr/07: i [bibliographic level: integrating resource]
+  006/00: s [form of material: continuing resource]
+  006/01: k [frequency: continuously updated]
+  006/04: w [type of continuing resource: updating web site]
+  006/06: s [form of item: electronic]  
+  007:    cr|||||||||||| [category of material: electronic resource 
+                         specific material designation: remote access]
+  008/26: m [type of computer file: combination]
+  245 00: $a Yahoo $h [electronic resource].
+</pre>
+</li>
+</ul>
+</li>
+</ul>
+
+<h4><a id="system"></a>System or service on the Internet
+(includes E-commerce sites)</h4>
+
+<p>The resource has system-based user interaction that allows
+users to purchase various types of products or services. The
+bibliographic record describes the web site. It is coded as a
+<span class="term">computer file</span>. The type of file is
+<span class="term">online system or service</span>. 006 fields
+may be added to bring out the &ldquo;seriality&rdquo; or any additional
+characteristics of the web site.</p>
+
+<ul>
+<li>Example(s):
+<ul>
+<li><cite>Travelocity</cite>, an online travel reservation service
+that also offers various types of travel packages. 
+<pre>  Ldr/06: m [type of record: computer file]
+  Ldr/07: i [bibliographic level: integrating resource]
+  006/00: s [form of material: continuing resource]
+  006/01: k [frequency: continuously updated]
+  006/04: w [type of continuing resource: updating web site]
+  006/06: s [form of item: electronic]     
+  007:    cr|||||||||||| [category of material: electronic resource 
+                         specific material designation: remote access] 
+  008/26: j [type of computer file: online system or service]
+  245 00: $a Travelocity.com $h [electronic resource]. 
+</pre>
+</li>
+
+<li><cite>Amazon.com</cite>, an online commerce site with browsing
+and search access to millions of items available for purchase. 
+<pre>  Ldr/06: m [type of record: computer file]
+  Ldr/07: i [bibliographic level: integrating resource]
+  006/00: s [form of material: continuing resource]
+  006/01: k [frequency: continuously updated]
+  006/04: w [type of continuing resource: updating web site]
+  006/06: s [form of item: electronic]
+  007:    cr|||||||||||| [category of material: electronic resource 
+                         specific material designation: remote access]
+  008/26: j [type of computer file: online system or service]
+  245 10: $a Amazon.com $h [electronic resource].
+</pre>
+</li>
+</ul>
+</li>
+</ul>
+
+<h4><a id="webaudiovideo"></a>Web site with significant audio
+and video content</h4>
+
+<p>The resource consists of several types of materials, including
+audio and video. Leader/06 is coded as a <span class=
+"term">computer file</span>. The type of file is <span class=
+"term">combination</span> since there is no one significant
+aspect. 006 fields may be added to bring out the &ldquo;seriality&rdquo; or
+any additional characteristics.</p>
+
+<ul>
+<li>Example(s):
+<ul>
+<li><cite>CNN Web site</cite>, a site that covers news, weather, and
+other subjects such as sports and entertainment. Includes text,
+still images, video and audio. 
+<pre>  Ldr/06: m [type of record: computer file]
+  Ldr/07: i [bibliographic level: integrating resource]
+  006/00: s [form of material: continuing resource]
+  006/01: k [frequency: continuously updated]
+  006/04: w [type of continuing resource: updating web site]
+  006/06: s [form of item: electronic]
+  007:    cr|||||||||||| [category of material: electronic resource 
+                         specific material designation: remote access] 
+  008/26: m [type of computer file: combination]
+  245 00: $a CNN.com $h [electronic resource].
+</pre>
+</li>
+</ul>
+</li>
+</ul>
+
+<h4><a id="streamingvideo"></a>Streaming video</h4>
+
+<p>The resource is an electronic moving image. It is coded as a
+<span class="term">projected medium</span> in Leader/06. The type
+of computer file is <span class="term">combination</span>, as
+there is audio as well as moving images.</p>
+
+<ul>
+<li>Example(s):
+<ul>
+<li><cite>Atoms &amp; molecules</cite>, an educational streaming
+video. 
+<pre>  Ldr/06: g [type of record: projected medium]
+  Ldr/07: m [bibliographic level: monograph/item]
+  006/00: m [form of material: computer file]
+  006/09: m [type of computer file: combination]
+  007:    vz#czazzu||||| [category of material: videorecording 
+                    specific material designation: other]
+  007:    cr|||||||||||| [category of material: electronic resource 
+                         specific material designation: remote access]
+  008/29: s [form of item (visual materials): electronic]
+  245 00: $a Atoms &amp; molecules $h [electronic resource].
+</pre>
+</li>
+</ul>
+</li>
+</ul>
+
+<h4><a id="streamingaudio"></a>Streaming audio</h4>
+
+<p>The resource is a collection of sound recordings in electronic
+format. It is coded as either a <span class="term">musical</span>
+or <span class="term">non-musical</span> sound recording,
+depending on the content. The type of computer file is <span
+class="term">sound</span>.</p>
+
+<ul>
+<li>Example(s):
+<ul>
+<li><cite>Fogler Library Listening Center Online</cite>, a collection
+of sound recordings. 
+<pre>  Ldr/06: j [type of record: musical sound recording]
+  Ldr/07: c [bibliographic level: collection]
+  006/00: m [form of material: computer file]
+  006/09: h [type of computer file: sound]
+  007:    sz|uunnnnnznud [category of material: sound recording
+                         specific material designation: other] 
+  007:    cr|||||||||||| [category of material: electronic resource 
+                         specific material designation: remote access]
+  008/23: s [form of item (music): electronic]
+  245 00: $a Fogler Library Listening Center Online $h [electronic resource] / 
+            Fogler Digital Library.
+</pre>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<hr />
+<div id="appendices">
+<h2><a id="appendices-list"></a>Appendices</h2>
+
+<br />
+<h3><a id="ldr06-values">Leader/06 values</a></h3>
+
+<table>
+<tr>
+<th colspan="2">Value</th>
+<th>Field 008/18-34 configuration</th>
+</tr>
+
+<tr>
+<td>a</td>
+<td>Language material</td>
+<td>Books OR Continuing resources</td>
+</tr>
+
+<tr>
+<td>c</td>
+<td>Notated music</td>
+<td>Music</td>
+</tr>
+
+<tr>
+<td>d</td>
+<td>Manuscript notated music</td>
+<td>Music</td>
+</tr>
+
+<tr>
+<td>e</td>
+<td>Cartographic material</td>
+<td>Maps</td>
+</tr>
+
+<tr>
+<td>f</td>
+<td>Manuscript cartographic material</td>
+<td>Maps</td>
+</tr>
+
+<tr>
+<td>g</td>
+<td>Projected medium</td>
+<td>Visual materials</td>
+</tr>
+
+<tr>
+<td>i</td>
+<td>Nonmusical sound recording</td>
+<td>Music</td>
+</tr>
+
+<tr>
+<td>j</td>
+<td>Musical sound recording</td>
+<td>Music</td>
+</tr>
+
+<tr>
+<td>k</td>
+<td>Two-dimensional nonprojectable graphic</td>
+<td>Visual materials</td>
+</tr>
+
+<tr>
+<td>m</td>
+<td>Computer file</td>
+<td>Computer files</td>
+</tr>
+
+<tr>
+<td>o</td>
+<td>Kit</td>
+<td>Visual materials</td>
+</tr>
+
+<tr>
+<td>p</td>
+<td>Mixed material</td>
+<td>Mixed materials</td>
+</tr>
+
+<tr>
+<td>r</td>
+<td>Three dimensional artifact or naturally occurring object</td>
+<td>Visual materials</td>
+</tr>
+
+<tr>
+<td>t</td>
+<td>Manuscript language material</td>
+<td>Books</td>
+</tr>
+</table>
+
+<hr />
+<h3><a id="ldr06-definitions"></a>Leader/06 definitions</h3>
+
+<p>The Leader/06 (Type of record) character position contains a
+one-character alphabetic code that is used to differentiate MARC
+records created for various types of content and material.</p>
+
+<p>Computer files are identified by a distinctive <span class=
+"term">Type of record code</span> only if they belong to certain
+categories of electronic resources as specified below; in all
+other cases the type of content characteristics described by
+other codes take precedence over the computer file
+characteristics of the item.</p>
+
+<dl>
+<dt>a - Language material</dt>
+
+<dd>Code &ldquo;a&rdquo; indicates that the content of the record is
+for non-manuscript language material. Code &ldquo;a&rdquo; is also
+used for microforms and electronic resources that are basically
+textual in nature, whether they are reproductions from print or
+originally produced. Manuscript language material uses code
+&ldquo;t&rdquo;.</dd>
+
+<dt>c - Notated music</dt>
+
+<dd>Code &ldquo;c&rdquo; indicates that the content of the record is
+for printed, microform, or electronic notated music.</dd>
+
+<dt>d - Manuscript notated music</dt>
+
+<dd>Code &ldquo;d&rdquo; indicates that the content of the record is
+for manuscript notated music or a microform of manuscript
+music.</dd>
+
+<dt>e - Cartographic material</dt>
+
+<dd>Code &ldquo;e&rdquo; indicates that the content of the record is
+for non-manuscript cartographic material or a microform of
+non-manuscript cartographic material. This code is used for maps,
+atlases, globes, digital maps, and other cartographic items.</dd>
+
+<dt>f - Manuscript cartographic material</dt>
+
+<dd>Code &ldquo;f&rdquo; indicates that the content of the record is
+for manuscript cartographic material or a microform of manuscript
+cartographic material.</dd>
+
+<dt>g - Projected medium</dt>
+
+<dd>Code &ldquo;g&rdquo; indicates that the content of the record is
+for a motion picture, videorecording (including digital video),
+filmstrip, slide, or transparency. All of these media are
+intended for projection. Material specifically designed for
+overhead projection is also included in this type of record
+category.</dd>
+
+<dt>i - Nonmusical sound recording</dt>
+
+<dd>Code &ldquo;i&rdquo; indicates that the content of the record is
+for a recording of nonmusical sounds (e.g., speech).</dd>
+
+<dt>j - Musical sound recording</dt>
+
+<dd>Code &ldquo;j&rdquo; indicates that the content of the record is
+for a musical sound recording.</dd>
+
+<dt>k - Two-dimensional nonprojectable graphic</dt>
+
+<dd>Code &ldquo;k&rdquo; indicates that the content of the record is
+for a two-dimensional nonprojectable graphic such as, activity
+cards, charts, collages, computer graphics, digital pictures,
+drawings, duplication masters, flash cards, paintings, photo CDs,
+photonegatives, photoprints, pictures, postcards, posters,
+prints, spirit masters, study prints, technical drawings,
+transparency masters, and reproductions of any of these.</dd>
+
+<dt>m - Computer file</dt>
+
+<dd>Code &ldquo;m&rdquo; indicates that the content of the record is
+for the following classes of electronic resources: computer
+software (including programs, games, fonts), numeric data,
+computer-oriented multimedia, online systems or services. For
+these classes of materials, if there is a significant aspect that
+causes it to fall into another Leader/06 category, code for that
+significant aspect (e.g., vector data that is cartographic is not
+coded as numeric but as cartographic). Other classes of
+electronic resources are coded for their most significant aspect
+(e.g. language material, graphic, cartographic material, sound,
+music, moving image). In case of doubt or if the most significant
+aspect cannot be determined, consider the item a computer
+file.</dd>
+
+<dt>o - Kit</dt>
+
+<dd>Code &ldquo;o&rdquo; indicates that the content of the record is
+for a mixture of various components issued as a unit and intended
+primarily for instructional purposes. No one component is
+identifiable as the predominant component of the item. Examples
+are packages of assorted materials, such as a set of school
+social studies curriculum material (books, workbooks, guides,
+activities, etc.), or packages of educational test materials
+(tests, answer sheets, scoring guides, score charts,
+interpretative manuals, etc.).</dd>
+
+<dt>p - Mixed materials</dt>
+
+<dd>Code &ldquo;p&rdquo; indicates that there are significant
+materials in two or more forms that are usually related by virtue
+of their having been accumulated by or about a person or body.
+The intended primary purpose is other than for instructional
+purposes (i.e., other than the purpose of those materials coded
+as &ldquo;o&rdquo; (Kit)). This category includes archival fonds and
+manuscript collections of mixed forms of materials, such as text,
+photographs, and sound recordings.</dd>
+
+<dt>r - Three-dimensional artifact or naturally occurring
+object</dt>
+
+<dd>Code &ldquo;r&rdquo; indicates that the content of the record is
+for a three-dimensional artifact or a naturally occurring object.
+This includes man-made objects such as models, dioramas, games,
+puzzles, simulations, sculptures and other three-dimensional art
+works, exhibits, machines, clothing, toys, and stitchery. It also
+includes naturally occurring objects such as, microscope
+specimens (or representations of them) and other specimens
+mounted for viewing.</dd>
+
+<dt>t - Manuscript language material</dt>
+
+<dd>Code &ldquo;a&rdquo; indicates that the content of the record is
+for manuscript language material or a microform of manuscript
+language material. This category is applied to items for language
+material in handwriting, typescript, or computer printout
+including printed materials completed by hand or by keyboard. At
+the time it is created, this material is usually intended, either
+implicitly or explicitly, to exist as a single instance. Examples
+include marked or corrected galley and page proofs, manuscript
+books, legal papers, and unpublished theses and
+dissertations.</dd>
+</dl>
+
+<hr />
+<h3><a id="pos00826-definitions"></a>Definitions of data elements
+in 008/26 and 006/09 positions for Computer files</h3>
+
+<dl>
+<dt>008/26 - Type of computer file (006/09)</dt>
+
+<dd>A one-character alphabetic code indicates the type of
+electronic resource being described. The specific type of
+electronic resource is also described in textual form in field
+516 (<span class="term">Type of Computer File or Data
+Note</span>). A fill character (|) is used when no attempt has
+been made to code this 008 position.</dd>
+
+<dt>a - Numeric data</dt>
+
+<dd>Code &ldquo;a&rdquo; indicates an electronic resource that
+contains mostly numbers or representation by numbers, such as
+records containing all information on student test scores, all
+information on football team statistics, etc. The information may
+be original surveys and/or information that has been summarized
+or statistically manipulated.</dd>
+
+<dt>b - Computer program</dt>
+
+<dd>Code &ldquo;b&rdquo; indicates an electronic resource containing
+an ordered set of instructions directing the computer to perform
+basic operations and identifying the information and mechanisms
+required. This category includes videogames and microcomputer
+software and computer models. Some types of computer programs
+(e.g., game, font) are identified by separate codes in this
+character position.</dd>
+
+<dt>c - Representational</dt>
+
+<dd>Code &ldquo;c&rdquo; indicates an electronic resource that
+contains pictorial graphic data that can be manipulated in
+conjunction with other types of files to produce graphic patterns
+that can be used to interpret and give meaning to the
+information. It does not include a document in image format.</dd>
+
+<dt>d - Document</dt>
+
+<dd>Code &ldquo;d&rdquo; indicates an electronic resource that is
+textual, consisting mostly of alphabetic information (words or
+sentences) converted into a coded format that can be processed,
+sorted, and manipulated by machine, and then retrieved in many
+optional formats. It includes language material intended to
+constitute a textual document, whether represented as ASCII or
+image data. It includes both single bibliographic entities or a
+collection of bibliographic entities. Documents whose primary
+purpose is textual, even if search software is present, are coded
+here.</dd>
+
+<dt>e - Bibliographic data</dt>
+
+<dd>Code &ldquo;e&rdquo; indicates that an electronic resource
+consists of data with bibliographic citations. This includes data
+from library catalogs or citation databases. The data may be in a
+structured or unstructured form. Search software may be present,
+but the purpose of the record is description of the content of
+the bibliographic data or database, rather than description of
+the online system or service.</dd>
+
+<dt>f - Font</dt>
+
+<dd>Code &ldquo;f&rdquo; indicates that an electronic resource
+contains information for a computer to produce fonts.</dd>
+
+<dt>g - Game</dt>
+
+<dd>Code &ldquo;g&rdquo; indicates that an electronic resource is a
+game, intended for recreational or educational use. Generally
+games consist of text and software. A videogame is included
+here.</dd>
+
+<dt>h - Sounds</dt>
+
+<dd>Code &ldquo;h&rdquo; indicates that the file consists of data
+encoding sounds producible by the computer.</dd>
+
+<dt>i - Interactive multimedia</dt>
+
+<dd>Code &ldquo;i&rdquo; indicates that the electronic resource
+described by the record supports navigation through and
+manipulation of many kinds of media (i.e., audio, video, etc.).
+Interactive multimedia usually gives the user a high level of
+control, often allowing almost conversational interaction with
+the computer and data.</dd>
+
+<dt>j - Online system or service</dt>
+
+<dd>Code &ldquo;j&rdquo; indicates that the record is for an online
+system or service and may contain nonbibliographic information.
+An online system or service supports system-based user
+interaction. If the focus of the record is to describe the system
+itself, with the content of the databases incidental contained
+therein, it is coded here. If the resource is an online file
+where the system is incidental to the description, it falls into
+another category. Examples of online systems or services are:
+online library systems (consisting of a variety of databases),
+FTP sites, electronic bulletin boards, network information
+centers.</dd>
+
+<dt>m - Combination</dt>
+
+<dd>Code &ldquo;m&rdquo; is used when the item is a combination of two
+or more of the above types of files.</dd>
+
+<dt>u - Unknown</dt>
+
+<dd>Code &ldquo;u&rdquo; indicates that the type of file is
+unknown.</dd>
+
+<dt>z - Other</dt>
+
+<dd>Code &ldquo;z&rdquo; indicates a type of file for which none of
+the other defined codes are appropriate.</dd>
+</dl>
+</div>
+
+<!-- LC Footer -->
+<hr />
+<p>
+<img src="../homepage/lc2.gif" height="46"
+width="91" alt="Image of Jefferson Building and U.S. Capitol" /> 
+<strong>Library of Congress</strong></p> 
+<address> 
+<!-- help desk email start -->
+<a href="http://www.loc.gov/help/help-desk.html">Library of Congress Help Desk</a> 
+<!-- help desk email end -->
+( 
+<!-- #BeginDate format:Am3 -->10/20/2010<!-- #EndDate -->
+) </address>
+
+
+<script data-cfasync="false" src="http://www.loc.gov/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+</html>
+
+

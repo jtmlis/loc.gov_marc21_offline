@@ -1,0 +1,243 @@
+<!doctype html public "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<title>MARC and the Year 2000</title>
+<base href="">
+<meta name="keywords" content="marc standards bibliographic
+format formats USMARC century year 2000"> 
+<meta name="description" content="Reviews impact of the century change in the year 2000 on the
+MARC formats."> 
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+<h2 align=center>MARC and the Year 2000</h2>
+<h3 align=center>March 1998</h3>
+<h3 align=center>Network Development and MARC Standards Office<br>Library of Congress</h3>
+<hr>
+<p>
+This document indicates data elements in the MARC formats that contain dates that could be affected
+by the century change in the year 2000.  Formats containing the data element are indicated as
+follows:<br>
+<ul><li>BD: USMARC Format for Bibliographic Data<br>
+<li>AD: USMARC Format for Authority Data<br>
+<li>CD: USMARC Format for Classification Data<br>
+<li>CI: USMARC Format for Community Information<br>
+<li>HD: USMARC Format for Holdings Data</ul>
+If the data element occurs in all formats, none is specified.  The following abbreviations
+are used to indicate date patterns:  <em>y</em>=year digit; <em>m</em>=month digit;
+<em>d</em>=day digit.<br>
+<p>
+<strong>FORMATTED DATES WITH 2-DIGIT YEARS</strong><br>
+<ul><li><strong>Library of Congress Control Numbers (Field 001 and 010)</strong><br>
+Library of Congress control numbers (LCCNs) use the last
+2 digits of the year as part of the number. This is a unique number that LC uses internally and
+includes on records distributed by LC in field 001 and in field 010.  In the year 2000 the LCCN year
+digits will be expanded to 4.<br>
+A document, <em><a href="lccn.html">Library of Congress Control
+Number
+(LCCN)--Restructuring to accommodate century change</a></em>, issued in April 1997, details
+LC's plans. 
+<li><strong>Date entered on file (Field 008/00-05)</strong><br>
+This field contains 6 digits that specify the date the record was first entered into
+machine-readable form.  The date is given in the pattern <em>yymmdd</em>.  Since MARC
+records were first created in 1968, no record can contain a year previous to that in this field. 
+Therefore the 2-digit date will not become ambiguous until 2068. The date will remain 2-digit.
+<li><strong>Intent to cancel date (Field 008/08-11)</strong> (HD)<br>
+This date contains 4 digits that indicate an intent to cancel, the effective date of a
+cancellation, or the date of the last expected part for a multipart or serial item. The date is given in
+the pattern <em>yymm</em>.  Since MARC holdings records could not have been created before
+1968, no record can contain a year previous to that in this
+field.  Therefore the 2-digit date will not become ambiguous until 2068. The date will remain
+2-digit.<br>
+<li><strong>Date of report (Field 008/26-31)</strong> (HD)<br>
+This date contains 6 digits that indicate the currency of the holdings information.  The
+date is given in the pattern <em>yymmdd</em>. 
+Since MARC holdings records could not have been created before 1968, no record can
+contain a year previous to that in this field.  Therefore the 2-digit date will not become ambiguous
+until 2068. The date will remain 2-digit.
+<li><strong>Projected Publication Date (Field 263): $a(Projected publication date)</strong>
+(BD)<br>
+This date contains 4 digits that indicate the projected date of publication for works
+that have not yet been published.  It is given in the pattern <em>yymm</em>.  Since MARC
+records were first created in 1968, no record can contain a year previous to that in this field.
+Therefore the 2-digit date will not become ambiguous until 2068. The date will remain
+2-digit.</ul>
+<p>
+Note that the year 1968 has been used as the earliest possible date for the creation of MARC records.
+However, in some cases, the earliest possible date may be later, since some formats were not
+developed before the 1970s or 1980s (e.g., holdings).
+<p>
+Systems that use <em>yy</em> dates for sequencing operations will have to take into account
+that these dates will not be changed with the year 2000 (i.e., 00 will follow 99). 
+</ul>
+<p>
+<p>
+<strong>FORMATTED DATES WITH 4-DIGIT YEARS</strong><br>
+The following formatted dates may appear in MARC records, but the format specifies that they be
+expressed with 4-digit years, thus they are all year-2000 compliant.<br>
+<ul><li><strong>Field 004 (Coded Dates Fixed Field)</strong> (CI)<br>
+Field 004 in Community Information contains coded date information.  The date is specified as 4
+digits in the pattern <em>yyyy</em>.  This field will be made obsolete in 1998 in favor of field
+046,
+which will also specify 4 digits for these years.<br>
+<li><strong>Field 005 (Date and Time of Latest Transaction)</strong><br>
+Field 005 contains 16 digits that indicate the date and time of the latest transaction and
+serves as a version identifier for the record.  The data is recorded according to
+<em>Representation for Calendar Date and Ordinal Date for Information Interchange</em>
+(ANSI X3.30).   The date is specified as 8 digits in the pattern <em>yyyymmdd</em>.
+<li><strong>Field 007/17-22--Motion pictures (Film inspection date)</strong> (BD)<br>
+These field 007 positions indicate the most recent film inspection date.  The date is specified as 6
+digits in the pattern <em>yyyymm</em>.
+<li><strong>Field 008/07-14 (Date of publication)</strong> (BD)<br>
+Field 008/07-10 positions contains the beginning date of publication and field 008/11-14 contains the
+ending date of publication (if applicable).  The year dates in these positions are specified as 4
+digits in the pattern <em>yyyy</em>.
+<li><strong>Field 013 (Patent Control Information): $d (Date)</strong> (BD)<br>
+Field 013 contains in subfield $d the date that a patent or certificate was granted or the date of
+acceptance of an application.  The date is specified as 8 digits in the pattern
+<em>yyyymmdd</em>.<br>
+<li><strong>Field 033 (Date/Time and Place of an Event): $a (Formatted date/time)</strong>
+(BD)<br>
+Field 033 contains in subfield $a the formatted date/time and/or coded place of creation, capture, or
+broadcast associated with an event. The date is specified as 8 digits in the pattern
+<em>yyyymmdd</em><br>
+<li><strong>Field 045 (Time Period of Content): $b (Formatted 9999 B.C. through A.D. time
+period) </strong> (AD, BD, CI)<br>
+Field 045 may contain a time period in subfield $b preceded by a code for the era (<em>c</em>
+ for B.C., <em>d</em> for A.D.).  The date is specified as 10 digits in the pattern
+<em>yyyymmddhh</em>.
+<li><strong>Field 046 (Type of Date Code, Date 1, Date 2 (B.C. Dates)): $b (Date 1 (B.C.
+date), $c (Date 1 (A.D. date)), $d (Date 2 (B.C. date)), $e (Date 2 (A.D. date))</strong> 
+(BD)<br>
+Field 046 contains in subfields $b, $c, $d, and $e date of item information when it cannot be
+recorded in the Fixed Length Data Elements (008/06-14).  The data in this field is not fixed length,
+but full year is specified.  Community Information Format field 004 dates are being added to this
+field, which is to be renamed Special Coded Dates.<br>
+<li><strong>Field 355 (Security Classification Control): $g (Downgrading date), $h
+(Declassification date)</strong> (BD)<br>
+Field 355 contains in subfield $g the date of downgrading and in subfield $h the date of
+declassification.  There is no standard specified, although examples record it in the form
+<em>yymmdd</em> or <em>yyyymmdd</em>.  Since MARC records were first created in
+1968, no record can contain a year previous to that in this field. Therefore the 2-digit date 
+will not become ambiguous until 2068. The format will specify 4-digit dates in all examples in the
+future.<br>
+<li><strong>Field 533 (Reproduction note): $7/01-04 (Date 1), $7/05-08 (Date 2)</strong>
+(BD)<br>
+Field 533 contains in subfield $7 dates associated with the reproduction.  The date is specified as 4
+digits in the pattern <em>yyyy</em>.<br>
+<li><strong>Field 551 (Entity and Attribute Information Note): $k (Beginning date and ending
+date of attribute values)</strong> (BD)<br>
+Field 551 contains the earliest and latest date for which the attribute values in the field are valid. 
+Although there is a standard is not specified for recording the date, the date is given by example in
+the pattern <em>yyyymmdd</em>. <br>
+<li><strong>Field 583 (Action Note): $c (Time of action) </strong> (BD, HD)<br>
+Field 583 contains in subfield $c a time or date of an action.  The date is specified as 8
+digits in the pattern <em>yyyymmdd.</em><br>
+<li><strong>Field 685 (History Note): $d (Date of implementation of authoritative agency), $e
+(Local implementation date) </strong> (CD)<br>
+Field 685 contains in subfield $d dates of implementation of the change.  Although a standard is not
+specified for recording the date, the date is given by example in the pattern
+<em>yyyymmdd</em>.<br>
+<li><strong>Field 843 (Reproduction Note): $7/01-04 (Date 1), $7/05-08 (Date 2)</strong>
+(HD)<br>
+Field 843 contains in subfield $7 dates associated with the reproduction.  The date is specified as 4
+digits in the pattern <em>yyyy</em>.<br>
+<li><strong>Fields 876-878 (Item Information Fields): $d (Date Acquired) </strong>
+(HD)<br>
+Fields 876-878 contain in subfield $d the date an item was acquired. The date is specified as 8 digits
+in the pattern <em>yyyymmdd.</em><br></ul>
+<p>
+<strong>TEXTUAL DATES</strong><br>
+There are variable length fields in the MARC formats that include dates in textual form.  The
+representation of the date in those fields is specified by the input rules used.  Following are fields that
+usually include textual dates, although a date may also be part of data in many other fields.
+<ul><li><strong>Field 050 (Library of Congress Call Number): $d (Volumes/dates to which
+call number applies)</strong> (AD)<br>
+<li><strong>Field 055 (National Library of Canada Call Number): $d (Volumes/dates to which
+call number applies)</strong> (AD) <br>
+<li><strong>Field 060 (National Library of Medicine Call Number): $d (Volumes/dates to which
+call number applies)</strong> (AD) <br>
+<li><strong>Field 070 (National Agricultural Library Call Number): $d (Volumes/dates to which
+call number applies) </strong> (AD) <br>
+<li><strong>Field 082 (Dewey Decimal Call Number): $d (Volumes/dates to which call number
+applies)</strong> (AD) <br>
+<li><strong>Field 086 (Government Document Call Number): $d (Volumes/dates to which call
+number applies)</strong> (AD) <br>
+<li><strong>Fields X00 (Personal Names): $d (Dates associated with a name), $f (Date of a
+work)</strong> (BD, AD, CD, CI)<br>
+<li><strong>Fields X10 (Corporate Names): $d (Date of meeting or treaty signing), $f (Date of a
+work)</strong> (BD, AD, CD, CI)<br>
+<li><strong>Field 111 (Meeting Name): $d (Date of meeting), $f (Date of a work) </strong>
+(BD, AD, CD, CI)<br>
+<li><strong>Fields X30 (Uniform Titles): $d (Date of treaty signing), $f (Date of a work)
+</strong> (BD, AD, CD, CI)<br>
+<li><strong>Field 240 (Uniform Title): $d (Date of treaty signing), $f (Date of a
+work)</strong> (BD)<br>
+<li><strong>Field 245 (Title Statement): $f (Inclusive dates), $g (Bulk dates)</strong> (BD,
+CI)<br>
+<li><strong>Field 246 (Varying Form of Title): $f (Designation of volume and issue number
+and/or date of a work)</strong> (BD, CI)<br>
+<li><strong>Field 247 (Former Title or Title Variations): $f (Designation of volume and issue
+number and/or date of a work) </strong> (BD, CI)<br>
+<li><strong>Field 260 (Publication, Distribution, etc. (Imprint)): $c (Date of publication,
+distribution, etc.)</strong> (BD)<br>
+<li><strong>Field 261 (Imprint Statement for Films (Pre-AACR1 Revised)): $d (Date of
+production, release, etc.)</strong> (BD)<br>
+<li><strong>Field 262 (Imprint Statement for Sound Recordings (Pre-AACR2)): $c (Date of
+production, release, etc.) </strong> (BD)<br>
+<li><strong>Field 310 (Current Publication Frequency): $b (Date of current publication
+frequency)</strong> (BD)<br>
+<li><strong>Field 321 (Former Publication Frequency): $b (Dates of former publication
+frequency)</strong> (BD)<br>
+<li><strong>Field 362 (Dates of Publication and/or Volume Designation): $a (Dates of
+publication and/or sequential designation) </strong> (BD)<br>
+<li><strong>Field 510 (Citation/References Note): $b (Dates of coverage of source)</strong>
+(BD)<br>
+<li><strong>Field 513 (Type of Report and Period Covered Note): $b (Period
+covered)</strong> (BD)<br>
+<li><strong>Field 518 (Date/Time and Place of an Event Note): $a (Date/time and place of an
+event note)</strong> (BD)<br>
+<li><strong>Field 533 (Reproduction Note): $d (Date of reproduction), $m (Dates of publication
+and/or sequential designation of issues reproduced)</strong> (BD) <br>
+<li><strong>Field 541 (Immediate Source of Acquisition Note): $d (Date of
+acquisition)</strong> (BD)<br>
+<li><strong>Field 640 (Series Dates of Publication and/or Volume Designation): $a (Series dates
+of publication and/or volume designation)</strong> (AD)<br>
+<li><strong>Field 642 (Series Numbering Example): $d (Volumes/dates to which series
+numbering example applies)</strong> (AD)<br>
+<li><strong>Field 643 (Series Place and Publisher/Issuing Body): $d (Volumes/dates to which
+place and publisher/issuing body applies)</strong> (AD)<br>
+<li><strong>Field 644 (Series Analysis Practice): $d (Volumes/dates to analysis practice
+applies)</strong> (AD)<br>
+<li><strong>Field 645 (Series Tracing Practice): $d (Volumes/dates to tracing practice
+applies)</strong> (AD)<br>
+<li><strong>Field 646 (Series Classification Practice): $d (Volumes/dates to classification practice
+applies)</strong> (AD)<br>
+<li><strong>Field 650 (Subject Added Entry--Topical Term): $d (Active dates)</strong>
+(BD)<br>
+<li><strong>Field 685 (History Note): $e (Local implementation date), $f (Title and publication
+date)</strong> (CD) <br>
+<li><strong>Fields 76X (Linking Entries): $d (Place, publisher, and date of
+publication)</strong> (BD)<br>
+<li><strong>Field 843 (Reproduction Note): $d (Date of reproduction), $m (Dates of publication
+and/or sequential designation of issues reproduced)</strong> (HD)<br>
+<p>
+<hr>
+<p>
+Go to the <a href="marc.html">MARC Home Page</a>
+<p>
+Go to the <a href="../index.html">Library of Congress Home
+Page</a>
+<p>
+<HR>
+<IMG SRC="../homepage/lc2.gif" ALT="">
+<strong>Library of Congress</strong><br> 
+<address><!--help desk email start -->
+<a href="http://www.loc.gov/help/help-desk.html">Library of Congress Help Desk</a>
+<!--help desk email end -->
+
+(3/4/98)</address>
+<script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+</HTML>
+ 
+

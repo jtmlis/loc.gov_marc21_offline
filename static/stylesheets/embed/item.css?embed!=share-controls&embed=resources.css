@@ -1,0 +1,93 @@
+
+html,
+body {
+    background-color: #fff;
+}
+.header,
+.footer,
+.breadcrumbs-wrapper,
+.back-to-top,
+.back-to-search-results,
+.format-label {
+    display: none !important;
+}
+
+
+.content,
+.content .item-container,
+.content .resource {
+    padding: 0 !important;
+}
+.content h1 {
+    font-size: 1.125rem;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    margin: 0 0 10px;
+}
+.content h1 .subheading {
+    font-size: 1rem;
+    line-height: 1;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+
+
+
+.content .resources .additional-resources {
+    display: none;
+}
+.content .add-to-playlist, .content .view-playlist {
+    display: none;
+}
+.content .resource-download-form {
+    display: none;
+}
+
+
+
+
+.content .about-this-item {
+    display: none;
+}
+
+
+
+
+.content .more-like-this {
+    display: none;
+}
+
+
+
+
+.content .you-might-like {
+    display: none;
+}
+
+
+
+
+.content .holdings {
+    display: none;
+}
+
+
+
+
+.content .cite-this {
+    display: none;
+}
+
+
+
+
+.content .rights-and-access {
+    display: none;
+}
+
+
+
+
+
+
+

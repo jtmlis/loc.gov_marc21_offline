@@ -1,0 +1,284 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                        "http://www.w3.org/TR/html40/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/marc_generic.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Introduction: Exchange Media: MARC 21 Specifications for Record Structure, Character Sets, and Exchange Media (Library of Congress)</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<meta name="description" content="The use of an exchange medium (e.g., electronic,
+diskette, tape) is an integral part of sharing files of MARC 21  records.  This section includes
+media format and labeling specifications for electronic file transfer, microcomputer diskettes,
+and magnetic tape which are being used to exchange MARC 21  data.  The specifications vary
+slightly for each medium to allow better utilization of the technology involved.  Adherence to
+media format and labeling specifications is essential for successful exchange of MARC 21 
+records.">
+<meta name="keywords" content="MARC 21, Exchange Media, Specifications, file transfer,
+FTP, microcomputer diskettes, magnetic tape">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+<style type="text/css">
+p {text-align:justify;}
+li {text-align:justify;}
+table {margin-bottom:2em;}
+.tablecontents {list-style:circle;}
+.tablesubcontents {list-style:circle; margin-left:2em;}
+</style>
+<!-- InstanceEndEditable -->
+<link href="http://www.loc.gov/marc/marc-generic.css" rel="stylesheet" type="text/css">
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+
+<body bgcolor="#ffffff">
+
+<a name="skip_menu"></a>
+<!-- InstanceBeginEditable name="content" -->
+
+<h3><em>MARC 21 Specifications for Record Structure, Character Sets, and Exchange Media</em></h3>
+<h2>EXCHANGE MEDIA</h2>
+<div class="title">January 2000</div>
+<h4>CONTENTS</h4>
+ <ul>
+<li><a href="specexchintro.html#intro">Introduction</a></li>
+<li><a href="specexchintro.html#define">Definitions</a></li>  
+<li><a href="specexchelectronic.html">Part 1:  Electronic
+File Transfer</a></li> 
+<li><a href="specexchdisc.html">Part 2:
+Diskette Transfer</a></li>
+<li><a href="specexchtape1.html">Part
+3:  Tape Transfer (Current)</a></li> 
+<li><a href="http://www.loc.gov/marc/specifications/specexchtape2.html">Part
+4:  Tape Transfer (Pre-1977)</a></li>
+</ul> 
+ <!-- stop -->
+<h4><a name="intro">INTRODUCTION</a></h4>  
+<p>The use of an exchange medium (e.g., electronic, diskette, tape) is an integral part of
+sharing files of MARC 21  records.  This section includes media format and labeling
+specifications for electronic file transfer (Part 1), microcomputer diskettes (Part 2), and magnetic
+tape (Parts 3 and 4) which are being used to exchange MARC 21  data.  The specifications vary
+slightly for each medium to allow better utilization of the technology involved.  Adherence to
+media format and labeling specifications is essential for successful exchange of MARC 21 
+records.</p>  
+  
+<h4><a name="define">DEFINITIONS</a></h4>
+<p>The following terms with these specialized definitions are used in the exchange media
+specifications.   
+<p> 
+<em>Italicized terms within definitions are terms for which definitions are also
+provided.</em> </p> 
+<dl compact>  
+<dt>  
+<strong> bibliographic file. </strong></dt>  
+<dd>  
+A <em>file</em> on the exchange  
+medium  
+(e.g., <em>diskette</em>) that contains  
+MARC  
+records.  When generally used, the term can refer to MARC records containing  
+authority,  
+bibliographic, classification, community information, and holdings data.</dd>  
+<dt>  
+<strong> blank. </strong></dt>  
+<dd>  
+ASCII character 20(hex).  Also referred to as the space character.</dd>  
+<dt>  
+<strong> block. </strong></dt>  
+<dd>  
+A collection of contiguously  
+recorded  
+characters written or read  
+as  
+a unit.  Blocks are separated by an <em>interblock gap</em>.  A block  
+may  
+contain  
+one or more complete <em>records</em>, or it may contain segments of  
+one or  
+more  
+<em>segmented records</em>.  A block does not contain multiple segments  
+of the  
+same record.</dd>  
+<dt>  
+<strong> blocked record. </strong></dt>  
+<dd>  
+A <em>record</em> contained in a  
+<em>file</em> in which each <em>block</em> may contain more than  
+one  
+record or <em>record segment</em>.</dd>  
+<dt>  
+<strong> data element. </strong></dt>  
+<dd>  
+A defined unit of  
+information. 
+<dt> 
+<strong>diskette.</strong> </dt>  
+<dd> 
+A physical exchange medium usually composed of a thin disk with a magnetic surface on both
+sides, enclosed in protective case.  A variety of diskette sizes exist, 5.25 inches or 3.5 inches
+in diameter being the most common.  Hardware to read from and write to such diskettes usually
+support various densities of encoded data.</dd>  
+<dt>  
+<strong> field. </strong></dt>  
+<dd>  
+A defined character string that  
+may  
+contain one or more <em>data elements</em>.</dd>  
+<dt>  
+<strong> file. </strong></dt>  
+<dd>  
+A set of related <em>records</em> treated as a unit.   
+A file may form part of a physical or logical <em>volume</em>.</dd>  
+<dt>  
+<strong> file section. </strong></dt>  
+<dd>  
+That part of a <em>file</em> that is recorded  
+on any one <em>volume</em>.  The sections of a file do not have sections of other files 
+interspersed.</dd>  
+<dt>  
+<strong> file transfer protocol (FTP). </strong></dt>  
+<dd>  
+A standard  
+technique and syntax for  
+communicating machine-readable data electronically in separate files without losing  
+data or file  
+integrity.</dd>  
+<dt>  
+<strong> interblock gap. </strong></dt>  
+<dd>  
+A magnetically-erased  
+section  
+of tape separating <em>blocks</em> of information.</dd>  
+<dt>  
+<strong> label. </strong></dt>  
+<dd>  
+A <em>record</em> at  
+the beginning of a <em>volume</em>, and at the beginning and end of a <em>file  
+section</em>,  
+that identifies and characterizes that volume and file section.  A label is not  
+considered to be part  
+of  
+a file section.  A label is identified by a three letter Label Identifier followed  
+by a single character,  
+the  
+Label Number.  Each label is recorded in a separate <em>block</em>.</dd>  
+<dt>  
+<strong> label file. </strong></dt>  
+<dd>  
+<em>File</em> on  
+an exchange medium that  
+identifies and characterizes the content of the <em>file(s)</em> and/or  
+<em>volume(s)</em>.</dd>  
+<dt>  
+<strong> label group. </strong></dt>  
+<dd>  
+One or more contiguous <em>label  
+sets</em>.</dd>  
+<dt>  
+<strong> label set. </strong></dt>  
+<dd>  
+One or more contiguous <em>labels</em> with  
+the same three initial characters (Label Identifier).</dd>  
+<dt>  
+<strong> originating system. </strong></dt>  
+<dd>  
+An information  
+processing system that writes <em>files</em> of MARC records for the purpose of data
+interchange with a  
+<em>receiving system</em>.</dd>  
+<dt>  
+<strong> receiving system. </strong></dt>  
+<dd>  
+An information  
+processing  
+system that is intended to  
+read  
+<em>files</em> of MARC records that have been processed by an <em>originating
+system</em> for the purpose of data interchange.</dd>  
+<dt>  
+<strong> record. </strong></dt>  
+<dd>  
+Related pieces of data treated as  
+a  
+unit.</dd>  
+<dt>  
+<strong> record segment. </strong></dt>  
+<dd>  
+That part of a <em>segmented  
+record</em>  
+that is contained in any one <em>block</em>.  The segments of a record do not have
+segments  
+of other  
+records  
+interspersed.</dd>  
+<dt>  
+<strong> segment control word (SCW). </strong></dt>  
+<dd>  
+A  
+fixed-length  
+string used to indicate the  
+type and content of a segment in a <em>file</em> of <em>segmented  
+records</em>.</dd>  
+<dt>  
+<strong> segmented record. </strong></dt>  
+<dd>  
+A <em>record</em> contained in a  
+<em>file</em> in which each record consists of a sequence of one or  
+more <em>record segments</em>.  Records are contained in one or more consecutive  
+<em>blocks</em>, such that only one segment of each record can appear in any  
+one  
+block.</dd>  
+<dt>  
+<strong> tape. </strong></dt>  
+<dd>  
+A physical exchange medium usually  
+composed of a thin acetate  
+film  
+in a variety of widths (2-inch (5.08cm), 1-inch (2.54cm), and 1/2-inch (1.27cm) tape  
+are the most  
+common).  The acetate film can be housed on reels or in cartridges.</dd>  
+<dt>  
+<strong> tape mark. </strong></dt>  
+<dd>  
+A special control block  
+recorded  
+on magnetic tape to serve  
+as  
+a separator between <em> file sections</em> and <em>label  
+groups</em> and also between certain label groups.</dd>  
+<dt>  
+<strong> transaction. </strong></dt>  
+<dd>  
+A single operation in which  
+a  
+<em>volume</em>  
+or set of volumes of MARC <em>file(s)</em> is transferred from an <em>originating
+system</em> to a <em>receiving  
+system</em>.</dd>  
+<dt>  
+<strong> volume. </strong></dt>  
+<dd>  
+A physical or logical unit which  
+includes part of a <em>file</em>, a complete file, or more than one file.  For separate  
+(dismountable) media  
+(e.g., a reel of magnetic tape), a volume is usually a single physical unit.  A  
+volume contains  
+<em>label file(s)</em> and one or more <em>bibliographic  
+file(s)</em>.  It  
+may contain sections of files but does not contain multiple sections of the same  
+file.</dd>  
+</dl>  
+<!-- InstanceEndEditable -->
+<hr size="1" noshade>
+<p><a href="../../marc.html">MARC 21 HOME</a> &gt;&gt; <!-- InstanceBeginEditable name="bottombreadcrumb" --><a href="spechome.html">Specifications</a> &gt;&gt; <strong>Exchange Media</strong> <!-- InstanceEndEditable --></p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr valign="bottom">
+    <td><a href="../../index.html">The Library of Congress</a> &gt;&gt; <a href="../../library/index.html">Especially
+    for Librarians and Archivists</a> &gt;&gt; <a href="../../standards/index.html">Standards</a><br>
+    (<!-- MM:BeginLock type="mmdate" format="Am3" orig=" -->
+    <!-- #BeginDate format:Am3 -->12/05/2007<!-- #EndDate -->
+    ) </td>
+    <td align="right"><a href="http://www.loc.gov/cdn-cgi/l/email-protection#6d0309001e022d01020e430a021b">Contact Us</a></td>
+  </tr>
+</table>
+<script data-cfasync="false" src="http://www.loc.gov/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+<!-- InstanceEnd --></html>

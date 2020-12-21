@@ -1,0 +1,24 @@
+/* for MARBI papers */
+body {background: #ffffff; margin: 0 2.5em;}
+/* was 0 4em; changed by JM on 12/14/2009 
+body {background: #ffffff; margin: 0 4em;}*/
+h1 {font-size: 150%; margin-bottom: -0.5em;}
+h2 {font-size: 125%; margin-bottom: -0.5em;}
+h3, h4, h5 {margin-bottom: -0.75em;}
+h5 {font-size: 90%;}
+dt {font-weight: bold;}
+ul {list-style: none}
+pre {padding-left: 2em;}
+.basic-information {margin-left: -2em;}
+.basic-information li {margin-bottom: 1em;}
+.label {font-weight: bold;}
+.note {font-style: italic;}
+.example-label {font-weight: bold;}
+.format-label {text-decoration: underline;}
+.summary-info {margin-left: -2.4em;}
+#discussion .example-label {margin-top: -.25em; margin-bottom: -0.5em;}
+
+.hangingindent {
+	text-indent: -30px;
+	padding-left: 30px;
+}

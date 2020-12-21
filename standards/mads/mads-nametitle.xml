@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mads xmlns="http://www.loc.gov/mads/" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mads/mads.xsd">
+<authority>
+<name authority="naf">
+<namePart>Bach, P D Q</namePart>
+</name>
+<titleInfo>
+<mods:title>Symphony in C</mods:title>
+<mods:partName>Adaggio</mods:partName>
+</titleInfo>
+</authority>
+<variant type="other">
+<name>
+<namePart>Bach, Pretty D Q</namePart>
+</name>
+<titleInfo>
+<mods:title>Symphony in Sea</mods:title>
+<mods:subTitle>the drowning symphony</mods:subTitle>
+<mods:partName>Rapidissimo</mods:partName>
+</titleInfo>	
+</variant>	
+<note>This guy is nuts.</note>
+</mads>
+

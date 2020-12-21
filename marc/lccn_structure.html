@@ -1,0 +1,1109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                        "http://www.w3.org/TR/html40/loose.dtd">
+
+<html>
+<head>
+<title>LC Control Number (Library of Congress) </title>
+<base href="">
+<meta name="description" content="This page contains a detailed explanation of the LC Control Number and its prefixes.  It also includes discussion and comparison about the LCCN Structure A and the LCCN Structure B.">
+<meta name="keywords" content="LCCN; Library Congress Control Number; LCCN Structure A; LCCN Structure B; field 010">
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+<body bgcolor="#ffffff">
+<table><tr>
+      <td> 
+        <h2 align=center>Structure of the LC Control Number</h2>
+        <h3 align=center>Network Development and MARC Standards Office <br>
+          Library of Congress</h3>
+        <hr>
+        <p> The LC control numbering system has had the same basic structure since 
+          its initial use to control Library of Congress bibliographic information 
+          in card form beginning in 1898 (LCCN structure A). On January 1, 2001, 
+          a structural change will occur (LCCN structure B). The basic control 
+          number has been fixed in length at 12 characters and will remain that 
+          length, although under LCCN structure A suffixes were occasionally used 
+          and under LCCN structure B the location of element parts is slightly 
+          altered to accommodate a four digit year. Under both structures, the 
+          prefix, year, and serial number are the basic elements required to make 
+          a LCCN unique. 
+        <p> 
+        <h3 align=center>LCCN Structure A (1898-2000)</h3>
+        <p> 
+        <table  width=100% border=1>
+          <tr > 
+            <th>Name of Element</th>
+            <th >Number of characters</th>
+            <th >Character position in field</th>
+          </tr>
+          <tr> 
+            <td ><a href="lccn_structure.html#prefix">Alphabetic Prefix</a></td>
+            <td >3</td>
+            <td >00-02</td>
+          </tr>
+          <tr>
+            <td ><a href="lccn_structure.html#year">Year</a></td>
+            <td >2</td>
+            <td >03-04</td>
+          </tr>
+          <tr>
+            <td ><a href="lccn_structure.html#number">Serial Number</a></td>
+            <td >6</td>
+            <td >05-10</td>
+          </tr>
+          <tr>
+            <td ><a href="lccn_structure.html#supplement">Supplement Number</a></td>
+            <td >1</td>
+            <td >11</td>
+          </tr>
+          <tr>
+            <td ><a href="lccn_structure.html#suffix">Suffix / Alphabetic Identifier</a></td>
+            <td >variable</td>
+            <td >12-n</td>
+          </tr>
+          <tr>
+            <td><a href="lccn_structure.html#date">Revision Date</a></td>
+            <td >variable</td>
+            <td >12-n</td>
+          </tr>
+        </table>
+        <p> 
+        <h3 align=center>LCCN Structure B (2001- )</h3>
+        <table  width=100% border=1>
+          <tr > 
+            <th >Name of Element</th>
+            <th >Number of characters</th>
+            <th >Character position in field</th>
+          </tr>
+          <tr> 
+            <td ><a href="lccn_structure.html#prefix">Alphabetic Prefix</a></td>
+            <td >2</td>
+            <td >00-01</td>
+          </tr>
+          <tr>
+            <td ><a href="lccn_structure.html#year">Year</a></td>
+            <td >4</td>
+            <td >02-05</td>
+          </tr>
+          <tr>
+            <td ><a href="lccn_structure.html#number">Serial Number</a></td>
+            <td >6</td>
+            <td >06-11</td>
+          </tr>
+        </table>
+        <p> 
+        <hr>
+        <p> 
+        <h3><a name="prefix">Alphabetic prefix</a></h3>
+        Prefixes are carried in a MARC record as lowercase alphabetic characters 
+        and serve to differentiate between different series of LC control numbers. 
+        Prefixes are left justified and unused positions contain blanks. If no 
+        prefix is present, the prefix portion contains blanks. 
+        <p> <strong>Authority Record Prefixes</strong>
+        <p> The following alphabetic prefixes have been established by the Library 
+          of Congress for Authority records. They are used in both LCCN Structures 
+          A and B.
+        <p> 
+        <table width="100%" border=1>
+          <tr valign="TOP">
+            <td><em><strong>MARC prefix</strong></em></td>
+            <td><strong><em>Explanation of usage</em></strong></td>
+          </tr>
+          <tr valign="TOP">
+            <td>n</td>
+            <td>Name or subject authority record keyed by LC</td>
+          </tr>
+          <tr valign="TOP">
+            <td>nb</td>
+            <td>Name or subject authority record originating in the British Library</td>
+          </tr>
+          <tr valign="TOP">
+            <td>nr</td>
+            <td>Name or subject authority record originating in the Research
+              Libraries Information Network (RLIN)</td>
+          </tr>
+          <tr valign="TOP">
+            <td>no</td>
+            <td>Name or subject authority record originating in the Online Computer
+               Library Center (OCLC)</td>
+          </tr>
+          <tr valign="TOP">
+            <td>sh</td>
+            <td>LCSH subject authority record distributed by LC</td>
+          </tr>
+          <tr valign="TOP">
+            <td>sj</td>
+            <td>Juvenile subject authority  keyed by LC and distributed
+               in the LC Annotated Children's Cataloging Program</td>
+          </tr>
+		  <tr valign="TOP">
+            <td>sp</td>
+            <td>Subject authority proposal record in the LC catalog.  (When it is approved, the record will be distributed with the prefix sh.)</td>
+          </tr>
+		  
+        </table>
+        <ul>
+          <table width=120>
+            <tr> 
+              <td><b>010</b></td>
+              <td><b>##$a</b>n##79051955#</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td><i>[LCCN structure A; number on printed card: n79-51955]</i></td>
+            </tr>
+          </table>
+          <table width=120>
+            <tr> 
+              <td><b>010</b></td>
+              <td><b>##$a</b>n#2001050268</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td><i>[LCCN structure B; number in print form: n2001-50284]</i></td>
+            </tr>
+          </table>
+        </ul>
+        <p> <b><a name="struca_prefix">Bibliographic Record Prefixes [Structure 
+          A Only]</a></b> 
+        <p> The following alphabetic prefixes were formally used by the Library 
+          of Congress for Bibliographic records. Since they were used in records 
+          before 2001, they are found in LCCN Structure A only. 
+        <P> Prior to the existence of MARC records, prefixes of various lengths 
+          were used on printed cards with combinations of uppercase or lowercase 
+          letters and numbers. For MARC records, equivalents have been defined 
+          by the Library of Congress for some of these early prefixes. The second 
+          column in the list below gives prefixes found on printed cards not printed 
+          from machine-readable records and shows how they are to be input into 
+          a MARC version of the record. Only card prefixes which have a MARC form 
+          noted below should be recorded in machine-readable records. 
+        <p> 
+        <TABLE WIDTH="100%" border=1>
+          <TR VALIGN="TOP"> 
+            <TD><STRONG><EM>MARC</EM></STRONG><br>
+              <STRONG><EM>Prefix</EM></STRONG></TD>
+            <TD><EM><STRONG>Prefix</STRONG></EM><br>
+              <STRONG><EM>on card</EM></STRONG></TD>
+            <TD><EM><STRONG>Explanation of usage</STRONG></EM></TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>a</TD>
+            <TD>A</TD>
+            <TD>Cataloging provided to LC by an American library, 1909-</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>ac</TD>
+            <TD>AC</TD>
+            <TD>Cataloging for foreign materials provided to LC by cooperating 
+              libraries under the auspices of the ALA Committee on Cooperative 
+              Cataloging, 1932-1942</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>ac</TD>
+            <TD VALIGN="MIDDLE">AC</TD>
+            <TD>Annotated cards for juvenile books, 1966-</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>af</TD>
+            <TD>AF</TD>
+            <TD>Cataloging for foreign acquisitions provided to LC by other American 
+              libraries, 1946-1950.</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>afl</TD>
+            <TD>AFLM</TD>
+            <TD>No explanation available</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>agr</TD>
+            <TD>Agr</TD>
+            <TD>U.S. Department of Agriculture cataloging, 1902-</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>bi</TD>
+            <td>&nbsp;</td>
+            <TD>Handbook of Latin American Studies record</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>br</TD>
+            <TD>BR</TD>
+            <TD>Library of Congress, Division for the Blind, Braille book</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>bs</TD>
+            <TD>BS</TD>
+            <TD>U.S. Bureau of Standards cataloging, 1913-1938.</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>c</TD>
+            <TD>C</TD>
+            <TD>U.S. Interstate Commerce Commission cataloging, 1915-1916</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>c</TD>
+            <TD>C</TD>
+            <TD>Library of Congress, Chinese entries, 1949-</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>c</TD>
+            <TD>C-245 <br>
+              or 245</TD>
+            <TD>LC card numbers for June-August 1898. Year prefix "98" added when 
+              input into MARC</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>ca</TD>
+            <TD>CA</TD>
+            <TD>LC temporary entries for books in the general classified collections, 
+              1905-1937</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>cad</TD>
+            <TD>CA Dupl</TD>
+            <TD>LC temporary entries for books in the general classified collections, 
+              1905-1937</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>cd</TD>
+            <TD>CD</TD>
+            <TD>LC analytical entries for sets and series prepared by the Card 
+              Division, 1916-1940</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>cd</TD>
+            <TD>CD</TD>
+            <TD>Cataloging prepared for LC card sales</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>clc</TD>
+            <td>&nbsp;</td>
+            <TD>Collection level cataloging; PREMARC record</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>cs</TD>
+            <TD>CS</TD>
+            <TD>Cataloging prepared by the LC Cooperative Cataloging and Classification 
+              Service, 1934-1939</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>cx</TD>
+            <TD>CX</TD>
+            <TD>Cross reference cards used in LC catalogs for Chinese entries, 
+              1958-</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>cy</TD>
+            <td>&nbsp;</td>
+            <TD>Federal Cylinder Project, Oct. 1980</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>d</TD>
+            <TD>1-D-245 <br>
+              or D-245</TD>
+            <TD>LC card numbers for May-December 1901. Year prefix "01" added 
+              when input into MARC</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>do</TD>
+            <TD>DO</TD>
+            <TD>U.S. Superintendent of Docs. cataloging, 1913-1916</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>e</TD>
+            <TD>E</TD>
+            <TD>U.S. Office of Education cataloging, 1908-1958</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>es</TD>
+            <TD>ES</TD>
+            <TD>U.S. Engineers School cataloging, 1913-1935</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>f</TD>
+            <TD>F</TD>
+            <TD>U.S. Bureau of Fisheries cataloging, 1910-1940</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>f</TD>
+            <TD>1-F-245 <br>
+              or F-245</TD>
+            <TD>LC card numbers for May-December 1901. Year prefix "01" added 
+              when input into MARC</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>fi</TD>
+            <TD>Fi</TD>
+            <TD>Films cataloged by LC, 1951-</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>fia</TD>
+            <TD>FiA</TD>
+            <TD>Cataloging provided by film producers, 1951-</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>fie</TD>
+            <TD>FiE</TD>
+            <TD>Cataloging provided by the Visual Education Service of the Office 
+              of Education, and other government agencies, 1951-</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>g</TD>
+            <TD>1-G-245 <br>
+              or G-245</TD>
+            <TD>LC card numbers for May-December 1901. Year prefix "01" added 
+              when input into MARC</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>gm</TD>
+            <TD>GM</TD>
+            <TD>Maps cataloged by LC, 1968-1972</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>gs</TD>
+            <TD>GS</TD>
+            <TD>U.S. Geological Survey cataloging, 1904-</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>h</TD>
+            <TD>H</TD>
+            <TD>U.S. National Institute of Health cataloging, 1914-1921</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>ha</TD>
+            <TD>HA</TD>
+            <TD>U.S. Housing Authority cataloging, 1940-</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>he</TD>
+            <TD>HE</TD>
+            <TD>Hebrew entries cataloged by LC, 1964-</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>hew</TD>
+            <TD>HEW</TD>
+            <TD>U.S. Dept. of Health, Ed., and Welfare cataloging, 1958-</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>hex</TD>
+            <TD>HEX</TD>
+            <TD>Cross reference cards used for Hebrew entries, 1964-</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>it</TD>
+            <TD>1-I-245 <br>
+              or It-245</TD>
+            <TD>LC card numbers for May-December 1901. Year prefix "01" added 
+              when input into MARC</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>int</TD>
+            <TD>Int</TD>
+            <TD>U.S. Department of the Interior cataloging, 1959</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>j</TD>
+            <TD>J</TD>
+            <TD>LC cataloging for Japanese materials 1949-</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>ja</TD>
+            <TD>JA</TD>
+            <TD>Cataloging for Japanese materials provided to LC by other American 
+              libraries, 1951</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>jx</TD>
+            <TD>JX</TD>
+            <TD>Cross reference cards used for Japanese entries, 1958-</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>k</TD>
+            <TD>K</TD>
+            <TD>Korean entries cataloged by LC, 1951-</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>kx</TD>
+            <TD>KX</TD>
+            <TD>Cross reference cards used for Korean entries, 1958-</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>l</TD>
+            <TD>L</TD>
+            <TD>U.S. Dept. of Labor cataloging, 1911-</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>llh</TD>
+            <td>&nbsp;</td>
+            <TD>Index to Hispanic Legislation cataloging</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>ltf</TD>
+            <td>&nbsp;</td>
+            <TD>Less-than-full cataloging; PREMARC record</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>m</TD>
+            <TD>M</TD>
+            <TD>Sheet music cataloged by LC, 1953-1962</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>ma</TD>
+            <TD>MA</TD>
+            <TD>Sheet music for which copy was supplied by another American library, 
+              1953-1961</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>map</TD>
+            <TD>Map</TD>
+            <TD>Atlases in the Maps Division of LC, 1901-</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>map</TD>
+            <TD>1-Map-50 <br>
+              or Map-50</TD>
+            <TD>LC card numbers for maps for period May-December 1901. Year prefix 
+              "01" added when input into MARC</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>med</TD>
+            <TD>Med</TD>
+            <TD>U.S. Armed Forces Medical Library cataloging, 1946-1948</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>mic</TD>
+            <TD>Mic</TD>
+            <TD>Microfilms cataloged by LC, 1949-</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>mid</TD>
+            <TD>MicA</TD>
+            <TD>Microfilms for which cataloging was provided by another American 
+              library, 1946-</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>mie</TD>
+            <TD>Micp</TD>
+            <TD>Microcards and microprints cataloged by LC, 1953-</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>mif</TD>
+            <TD>MicpA</TD>
+            <TD>Microcards and microprints for which cataloging was provided by 
+              another American library, 1953-</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>mm</TD>
+            <TD>&nbsp;</TD>
+            <TD>Library of Congress Manuscript Division</TD>
+          </TR>
+		  <TR VALIGN="TOP"> 
+            <TD>mp</TD>
+            <TD>&nbsp;</TD>
+            <TD>Early films cataloged by LC, 1970s</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>mpa</TD>
+            <TD>MPA</TD>
+            <TD>Pan American Union cataloging for sheet music, 1956-</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>ms</TD>
+            <TD>MS</TD>
+            <TD>Manuscripts cataloged by LC, 1959-</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>mus</TD>
+            <TD>1-Music-245 <br>
+              or <br>
+              Music-245</TD>
+            <TD>LC card numbers for music for May-December 1901. Year prefix "01" 
+              added when input into MARC</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>ncn</TD>
+            <td>&nbsp;</td>
+            <TD>Nitrate Film Service cataloging</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>ne</TD>
+            <TD>NE</TD>
+            <TD>Materials published in the Near East or in the languages of those 
+              countries, 1961-</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>nex</TD>
+            <TD>NEX</TD>
+            <TD>Cross reference cards used for books published in the Near East 
+              or in the languages of those countries, 1961-</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>no</TD>
+            <TD>NO</TD>
+            <TD>U.S. Naval Observatory cataloging, 1930-1940</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>ntc</TD>
+            <td>&nbsp;</td>
+            <TD>National Translation Center cataloging</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>nuc</TD>
+            <td>&nbsp;</td>
+            <TD>Records printed in the National Union Catalog for which no LC 
+              card number is available</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>or</TD>
+            <td>&nbsp;</td>
+            <TD>Order Division cataloging</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>pa</TD>
+            <TD>PA</TD>
+            <TD>Pan American Union cataloging, 1930-</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>pho</TD>
+            <TD>Pho</TD>
+            <TD>Cataloging provided by other libraries for photographic reproductions 
+              of books, 1927-</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>php</TD>
+            <TD>PhoM</TD>
+            <TD>Cataloging provided by Card Division for photographic facsimiles 
+              issued by the Modern Language Association of America, 1927-1938</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>phq</TD>
+            <TD>PhomA</TD>
+            <TD>Cataloging provided by other libraries for Modern Language Association 
+              of America photographic facsimiles</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>po</TD>
+            <TD>PO</TD>
+            <TD>U.S. Patent Office cataloging, 1917-1953</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>pp</TD>
+            <td>&nbsp;</td>
+            <TD>Prints and Photographs videodisc system, March 1984</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>r</TD>
+            <TD>R</TD>
+            <TD>Photograph records cataloged by LC, 1953-</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>ra</TD>
+            <TD>RA</TD>
+            <TD>Cataloging provided by other American libraries for photographs, 
+              1955-</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>rc</TD>
+            <TD>1-Rc-245 <br>
+              or Rc-245</TD>
+            <TD>LC card numbers for May-December 1901. Year prefix "01" added 
+              when input into MARC</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>re</TD>
+            <td>&nbsp;</td>
+            <TD>Cataloging for commercial ethnic sound recordings produced in 
+              the U.S. project, 1981</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>ru</TD>
+            <td>&nbsp;</td>
+            <TD>Cataloging from the Russian Book Chamber, 1988-</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>s</TD>
+            <TD>S</TD>
+            <TD>Smithsonian Institution cataloging, 1913-</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>sa</TD>
+            <TD>SA</TD>
+            <TD>Cataloging for materials published in Southeast Asia or in the 
+              languages of those countries, 1961-</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>sax</TD>
+            <TD>SAX</TD>
+            <TD>Cross reference cards used for materials published in Southeast 
+              Asia or in the languages of those countries, 1961-</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>sc</TD>
+            <td>&nbsp;</td>
+            <TD>Serials, CONSER item not in LC</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>sd</TD>
+            <TD>SD</TD>
+            <TD>U.S. Dept. of State cataloging, 1914-</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>sf</TD>
+            <td>&nbsp;</td>
+            <TD>Serials form card or Minimal Level Cataloging or classed separately 
+              monographic series</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>sg</TD>
+            <TD>SG</TD>
+            <TD>Surgeon General's Library, U.S. Army cataloging, 1916-</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>sn</TD>
+            <td>&nbsp;</td>
+            <TD>Serials, CONSER, item may or may not be in LC</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>ss</TD>
+            <TD>SS</TD>
+            <TD>Social Security Administration cataloging, 1944-1958</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>su</TD>
+            <TD>&nbsp;</TD>
+            <TD>Split manuscript records</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>tb</TD>
+            <TD>TB</TD>
+            <TD>Talking Books program cataloging</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>tmp</TD>
+            <td>&nbsp;</td>
+            <TD>Temporary cataloging from PREMARC</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>um</TD>
+            <td>&nbsp;</td>
+            <TD>Union map; an outside map record input by the Geography and Map 
+              Division for NUC use but residing in the G&amp;M database</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>unk</TD>
+            <td>&nbsp;</td>
+            <TD>Card for which no LC card number was available; PREMARC</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>w</TD>
+            <TD>W</TD>
+            <TD>District of Columbia Public Library cataloging, 1905-1942</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>war</TD>
+            <TD>War</TD>
+            <TD>U.S. Army, War College cataloging, 1907-1932</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>x</TD>
+            <TD>X</TD>
+            <TD>Cross reference cards used in LC catalogs, January 1941-</TD>
+          </TR>
+          <TR VALIGN="TOP"> 
+            <TD>z</TD>
+            <TD>1-Z-245 <br>
+              or Z-245</TD>
+            <TD>LC card numbers for May-December 1901. Year prefix "01" added 
+              when input into MARC</TD>
+          </TR>
+        </TABLE>
+        <ul>
+          <table width=120>
+            <tr> 
+              <td><b>010</b></td>
+              <td><b>##$a</b>###68004897#</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td><i>[LCCN structure A; number on printed card: 68-4897]</i></td>
+            </tr>
+          </table>
+          <table width=120>
+            <tr> 
+              <td><b>010</b></td>
+              <td><b>##$a</b>##2001045944</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td><i>[LCCN structure B; number in print form: 2001-45944]</i></td>
+            </tr>
+          </table>
+        </ul>
+        <p> <strong>Classification Record Prefixes</strong><br>
+          The following alphabetic prefixes have been established by the Library 
+          of Congress for Classification records. They are used in both LCCN Structures 
+          A and B.
+        <p> 
+        <table width=100% border=1>
+          <tr valign="top">
+            <td><em><strong>MARC prefix:</strong></em></td>
+            <td><strong><em>Explanation of usage</em></strong></td>
+          </tr>
+          <tr valign="top">
+            <td>cf</td>
+            <td>Classification record keyed by LC</td>
+          </tr>
+          <tr valign="top">
+            <td>ct</td>
+            <td>Table record keyed by LC</td>
+          </tr>
+        </table>
+        <ul>
+          <table width=120>
+            <tr> 
+              <td><b>010</b></td>
+              <td><b>##$a</b>cf#97051955#</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td><i>[LCCN structure A; number on printed card: cf97-51955]</i></td>
+            </tr>
+          </table>
+          <table width=120>
+            <tr> 
+              <td><b>010</b></td>
+              <td><b>##$a</b>cf2001050268</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td><i>[LCCN structure B; number in print form: cf2001-50268]</i></td>
+            </tr>
+          </table>
+        </ul>
+        <strong>Holdings and Community Information Record Prefixes</strong><br>
+        The alphabetic prefix portion contains blanks. 
+        <p> 
+        <hr>
+        <p> 
+        <h3><a name="year">Year</a></h3>
+        <strong>Authority Records</strong><br>
+        For control numbers assigned under LCCN structure A, the year portion 
+        consists of two digits representing the year the control number was assigned. 
+        In name authority records that were converted retrospectively by an agency 
+        under contract to LC, the digits 50 were used for the year for name authority 
+        records, and the digits 42 were used for series authority records. In 
+        subject authority records that were converted retrospectively from an 
+        LC internal format to MARC, the digits 85 were used instead of the actual 
+        year of creation. 
+        <p> For control numbers assigned under the LCCN structure B beginning 
+          with the year 2001, the year portion consists of four digits. 
+        <p> <strong>Bibliographic Records</strong><br>
+          For control numbers assigned under LCCN structure A, the year portion 
+          consists of two digits representing the year the control number was 
+          assigned. In most numbers, the year portion reflects the year in which 
+          the LC control number was assigned to the record for the bibliographic 
+          item. During the 1969-1972 period, a <i>7-series</i> year number was 
+          assigned. In these numbers the initial digit of 7 was followed by a 
+          modulus-ll check digit. The year in which the card number was assigned 
+          can be approximated from the year portion of the Date entered on file 
+          (008/00-05). With the re-institution of the year series number in 1972, 
+          provisions were made to skip those individual card numbers which could 
+          have been assigned previously as a 7-series number. <i>Note</i>: 7-series 
+          numbers were not used for non-book map material. The prefix <i>gm</i> 
+          was used from 1968 through 1972. 
+        <p> For control numbers assigned under the LCCN structure B beginning 
+          with the year 2001, the year portion consists of four digits. 
+        <p> For LC control numbers with two-digit years, the century may be determined 
+          according to the following table: 
+        <table width=88%>
+          <tr>
+            <th align=left>2-digit year</th>
+            <th align=left>Sequential number</th>
+            <th align=left>Century</th>
+            <th align=left>Sequential number</th>
+            <th align=left>Century</th>
+          </tr>
+          <tr> 
+            <td>98</td>
+            <td>Less than 3000</td>
+            <td>18</td>
+            <td>3000 or greater</td>
+            <td>19</td>
+          </tr>
+          <tr> 
+            <td>99</td>
+            <td>Less than 6000</td>
+            <td>18</td>
+            <td>6000 or greater</td>
+            <td>19</td>
+          </tr>
+          <tr>
+            <td>00</td>
+            <td>Less than 8000</td>
+            <td>19</td>
+            <td>8000 or greater</td>
+            <td>20</td>
+          </tr>
+        </table>
+        <p> <strong>Classification, Holdings and Community Information Records</strong><br>
+          For control numbers assigned under LCCN structure A, the year portion 
+          consists of two digits normally representing the year the record was 
+          created. 
+        <p> For control numbers assigned under LCCN structure B beginning with 
+          the year 2001, the year portion consists of four digits. 
+        <p> 
+        <hr>
+        <p> 
+        <h3><a name="number">Serial number (All Formats)</a></h3>
+        The serial number portion consists of one to six digits. Serial numbers 
+        of less than six digits are right justified and unused positions contain 
+        zeros. The hyphen which separates the year and the serial number on LC 
+        displays and printed products is not carried in the MARC record. For example, 
+        the number 85-2 is carried as 85000002 in a record. 
+        <p> 
+        <hr>
+        <p> 
+        <h3><a name="supplement">Supplement number (All Formats) [Structure A 
+          Only]</a></h3>
+        This character position was originally defined to carry a supplement number 
+        for dashed-on supplement entries in bibliographic records. Use of the 
+        supplement number was not implemented for bibliographic, authority, classification, 
+        holdings and community information records, therefore this position contains 
+        a blank in all LCCN Structure A identifiers. 
+        <p> 
+        <hr>
+        <p> 
+        <h3><a name="suffix">Suffix/Alphabetic Identifier (Bibliographic Records 
+          only) [Structure A Only]</a></h3>
+        Older LC control numbers sometimes include suffixes or alphabetic identifiers 
+        carried as variable length data following the Supplement number. A single 
+        slash (/) introduces the suffix/alphabetic identifier. Multiple occurrences 
+        of either suffixes or alphabetic identifiers are separated one from the 
+        other by a slash. Suffixes and alphabetic identifiers do not affect the 
+        uniqueness of the control number. 
+        <p> All suffixes and alphabetic identifiers, except the revision date, 
+          appear in the MARC record as uppercase alphabetic characters. On printed 
+          card copy, suffixes appear after the LC control number separated by 
+          a slash. Suffixes have not been assigned since 1969 and they will be 
+          deleted from Library of Congress files in 1999. Alphabetic identifiers 
+          appear on printed card copy as uppercase alphabetic characters beneath 
+          the LC card number in the lower right hand corner of the card. Alphabetic 
+          identifiers were first assigned in 1969 and were used as distribution 
+          information for card copy by LC. Alphabetic identifiers were deleted 
+          from the Library of Congress files in 1999. 
+        <ul>
+          <table width=120>
+            <tr>
+              <td><b>010</b></td>
+              <td><b>##$a</b>###79139101#/AC/MN</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td><i>[Printed number is 79-139101 with AC MN printed below the 
+                number.]</i> </td>
+            </tr>
+          </table>
+          <table width=120>
+            <tr>
+              <td><b>010</b></td>
+              <td><b>##$a</b>###65077628#/MN</td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td><i>[Printed number is 65-77628 with MN printed below the number.]</i></td>
+            </tr>
+          </table>
+        </ul>
+        <i>Suffix/alphabetic identifiers</i> 
+        <p> 
+        <table width=100% border=1>
+          <tr>
+            <td>AC</td>
+            <td>used on records included in the "Annotated Card" program</td>
+          </tr>
+          <tr>
+            <td>AM</td>
+            <td> used for works in Amharic</td>
+          </tr>
+          <tr>
+            <td>ACN</td>
+            <td> used for works in Chinese</td>
+          </tr>
+          <tr>
+            <td>AJ</td>
+            <td> used for works in Japanese</td>
+          </tr>
+          <tr>
+            <td>AK</td>
+            <td> used for works in Korean </td>
+          </tr>
+          <tr>
+            <td>F</td>
+            <td> used for records created by the Audiovisual Section, Special 
+              Materials Cataloging Division for motion pictures, filmstrips, sets 
+              of slides and transparencies, video recordings, etc.</td>
+          </tr>
+          <tr>
+            <td>HE</td>
+            <td> used for works published in the Hebrew alphabet, regardless of 
+              language</td>
+          </tr>
+          <tr>
+            <td>M</td>
+            <td> used for works classed in M</td>
+          </tr>
+          <tr>
+            <td> MAP</td>
+            <td> used for atlases</td>
+          </tr>
+          <tr>
+            <td> MN</td>
+            <td> used for works classed in ML and MT</td>
+          </tr>
+          <tr>
+            <td> MP</td>
+            <td> used for records created by the Motion Picture, Broadcasting 
+              and Recorded Sound Division</td>
+          </tr>
+          <tr>
+            <td> NE </td>
+            <td> used for works in Armenian, Arabic, Georgian, Ottoman Turkish, 
+              Persian, Pashto, and Turkish, as well as any non-Slavic language 
+              of Central Asia written in the Cyrillic alphabet</td>
+          </tr>
+          <tr>
+            <td> PP </td>
+            <td> used for records created by the Prints and Photographs Division</td>
+          </tr>
+          <tr>
+            <td> R </td>
+            <td> used for all sound recordings</td>
+          </tr>
+        </table>
+        <p> 
+        <hr>
+        <p> 
+        <h3><a name="date">Revision Date (Bibliographic Records only) [Structure 
+          A Only]</a> </h3>
+        The revision date associated with LC control numbers specified the latest 
+        date that the bibliographic data in a record underwent a change. Revision 
+        data do not affect the uniqueness of the control number. To account for 
+        the number of times significant changes have been made to a record beyond 
+        the first such change, a number was added as the last character of the 
+        revision date. The date a record was originally created is the Date entered 
+        on file (field 008/00-05). 
+        <p> A revision date such as <i>"r73"</i> means that the record was changed 
+          in 1973. The revision date <i>"r743"</i> means that significant changes 
+          have been made to the record three times, the last being made in 1974. 
+        <ul>
+          <table width=120>
+            <tr> 
+              <td><b>010</b></td>
+              <td><b>##$a</b>###75425165#//r75</td>
+            </tr>
+          </table>
+          <table>
+            <tr> 
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td><i>[Number 75-425165 revised in 1975.]</i></td>
+            </tr>
+          </table>
+          <p> 
+          <table width=120>
+            <tr> 
+              <td><b>010</b></td>
+              <td><b>##$a</b>###73002284#//r752</td>
+            </tr>
+          </table>
+          <table>
+            <tr> 
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td><i>[Number 73-2284 with [r75]rev 2 printed revision information.]</i></td>
+            </tr>
+          </table>
+          <p> 
+          <table width=120>
+            <tr> 
+              <td><b>010</b></td>
+              <td><b>##$a</b>###58062665#/L/r58</td>
+            </tr>
+          </table>
+          <table>
+            <tr> 
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td><i>[Printed number is 58-62665 rev. (The * was represented on 
+                the printed product by a double dagger and indicates limited cataloging; 
+                it was carried in the MARC record as an L. When the LC control 
+                number was printed from the MARC record, the L printed as Lim 
+                beneath the control number.]</i></td>
+            </tr>
+          </table>
+        </ul>
+        The revision date was used as an indication of the degree of importance 
+        of a change made to a record. A significant change to a record at the 
+        Library of Congress was defined as one important enough to warrant, among 
+        other things, redistribution of cards to LC's own catalogs. A significant 
+        change included changes to content designation, to an access point (fields 
+        020, $a or $z, 028, $a, 050, 051, 082, 1XX, 240, 245 #a, 4XX (excluding 
+        490), 6XX, 7XX, 8XX), a change to the extent of an item (300 #a), a change 
+        to the publication date (260 #c), a change to the record control number 
+        (field 001), or a change to Leader/18 (Descriptive cataloging form). 
+        <p> Revision information was separated from a suffix or an alphabetic 
+          identifier by one slash (/). If no suffixes or alphabetic identifiers 
+          are present, revision information was separated from the Supplement 
+          number by two slashes (//). The inclusion of revision data was discontinued 
+          in 1999 and deleted from all records in the Library of Congress files. 
+        <p> 
+          <!---Navigation--->
+        <hr>
+        <br>
+        <em>Go to:</em> 
+        <ul>
+          <li><a href="../marc.html">MARC Standards Home Page</a> 
+          <li><a href="../index.html">Library of Congress Home Page</a> 
+        </ul>
+        <p> 
+          <!---LC Footer--->
+        <hr>
+        <img src="../homepage/lc2.gif" height=46 width=91 alt="Library of Congress"> 
+        <strong>Library of Congress</strong><br>
+        <address> 
+        <!--help desk email start -->
+        <a href="http://www.loc.gov/help/help-desk.html">Library of Congress Help 
+        Desk</a> 
+        <!--help desk email end -->
+        ( 
+        <!-- #BeginDate format:Am3 -->06/16/2006<!-- #EndDate -->
+        )</address>
+
+</td></tr></table>
+<script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+
+</html>
+            

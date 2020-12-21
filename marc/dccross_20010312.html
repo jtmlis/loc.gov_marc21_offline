@@ -1,0 +1,555 @@
+<!doctype html public "-//W30//DTD WWW HTML 2.0//EN">
+<html>
+<head>
+<title>Dublin Core/MARC/GILS Crosswalk</title>
+<base href="">
+<meta name="description" content="Crosswalk from Dublin Core elements to MARC 21 and GILS data fields.">
+
+<meta name="keywords" content="MARC Dublin Core GILS Crosswalk">
+
+<meta name="author" content="Library of Congress Network Development and MARC Standards Office">
+
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+<body bgcolor="#FFFFFF">
+<h2 align=center>Dublin Core/MARC/GILS Crosswalk</h2>
+
+<h3 align=center>Network Development and MARC Standards Office
+<br> Library of Congress</h3>
+<b>Date issued:</b>  2001-03-12<br>
+<b>Previous version:</b> <a href="http://www.loc.gov/marc/dccross_199911.html">http://www.loc.gov/marc/dccross_199911.html</a><p></p>
+<hr>
+<h3><strong>I.  Introduction.</strong></h3><br>  The following is a crosswalk between the
+fifteen
+elements in the <a href="http://dublincore.org/documents/dces/">Dublin Core Element
+Set</a> and <a href="bibliographic/ecbdhome.html">MARC 21
+</a>bibliographic data elements.  In addition, it includes a crosswalk from Dublin Core to GILS
+attributes.  The
+crosswalk
+may be used in conversion of metadata from another syntax into MARC.  For conversion of
+MARC 21 into
+Dublin Core, many fields may be mapped into a single Dublin Core element.  A <a href="marc2dc.html">MARC to Dublin Core Crosswalk</a>
+ is also available.<p>
+In the Dublin Core to MARC mapping, two mappings are provided, one for unqualified Dublin
+Core elements and the other for qualified. Qualifiers used are generally based on the qualifiers approved by the Dublin Core Metadata Initiative and documented in <a href="http://purl.org/dc/documents/dcmes-qualifiers">Dublin Core Qualifiers</a>  There are some qualifiers given (for Contributor, Creator, and Publisher) that have not been approved by the Dublin Core Metadata Initiative; as these are further standardized, this crosswalk
+will be adjusted. 
+<p>
+        MARC 21 fields are listed with field number, then two indicator values with field
+name/subfield name in parentheses. If
+both the field and subfield have the same name, the subfield name is not included.  A blank
+(H'20') is indicated in this document by "#". 
+The label is a shortened form of the element name.  GILS attribute names for each Dublin Core
+element are also given.  Note that the GILS mapping has not been revised since the April 1997
+version of this document.
+<p>
+  Definitions are taken from <a
+href="http://dublincore.org/documents/dces/">Dublin Core Metadata Element Set,
+ Version 1.1: Reference Description</a>.  For further information about Dublin Core elements,
+including application notes (given in Comment), refer to that document.  All Dublin Core
+elements are optional and repeatable.  In this document elements are listed in alphabetical order
+by Dublin Core identifier (i.e. label).
+<p>
+<h3><strong>II.  Dublin Core to MARC and GILS Crosswalk.</strong></h3><br>
+
+<p><strong>Contributor</strong><br>
+An entity responsible for making contributions to the content of the resource.
+
+<p>
+
+<em>MARC 21</em>:
+<p>
+Unqualified:
+<ul>
+<li>720 ##$a (Added Entry--Uncontrolled Name/Name) with $e=collaborator (or other term
+used as value of role qualifier)<br></ul>
+Qualified:
+<ul><li>Personal: 700 1#$a (Added Entry--Personal Name) with $e=collaborator
+<br>
+<li>Corporate: 710 2#$a (Added Entry--Corporate Name) with $e=collaborator <br>
+<li>Conference: 711 2#$a (Added Entry--Conference Name) with
+$e=collaborator<br>
+<li>Role:  720 ##$e (Added Entry--Uncontrolled Name/Relator term</li>
+<li>Role (Personal):  700 1#$e (Added Entry--Personal Name/Relator term) </li>
+<li>Role (Corporate):</li>  710 2$e (Added Entry--Corporate Name/Relator term) 
+</ul>
+<i>Note: The above qualifiers have not been approved by DCMI.</i><p></p>
+<em>GILS</em>:
+<ul>
+<li>Contributor </ul>
+<p>
+<strong>Coverage</strong><br>
+The extent or scope of the content of the resource.
+
+<p>
+
+<em>MARC 21</em>: 
+<p>
+Unqualified:
+<ul>
+<li>500$a (General note)<br></ul>Qualified:<ul>
+<li>Spatial: 522  ##$a (Geographic Coverage Note) <br>
+<li>Temporal: 513 ##$b (Type of Report and Period Covered Note/Period
+covered)</ul><br>
+<em>GILS</em>:
+<ul>
+<li>Supplemental Information<br>
+<li>Spatial: Bounding Coordinates<br>
+<li>Temporal: Time Period Textual</ul>
+
+<p><strong>Creator</strong><br>          
+An entity primarily responsible for making the content of the resource.
+<br>
+<p>
+
+<em>MARC 21</em>: 
+<p>
+Unqualified:
+<ul>
+<li>720 ##$a (Added Entry--Uncontrolled Name/Name) with $e=author</ul>
+<br>
+Qualified:<ul><li>Personal: 700 1#$a (Added Entry--Personal Name) with
+$e=author<br>
+<li>Corporate: 710 2#$a (Added Entry--Corporate Name) with $e=author<br>
+<li>Conference: 711 2#$a (Added Entry--Conference Name) with $e=author<br>
+<li>Role:  720 ##$e (Added Entry--Uncontrolled Name/Relator term</li>
+<li>Role (Personal):  700 1#$e (Added Entry--Personal Name/Relator term) </li>
+<li>Role (Corporate):</li>  710 2$e (Added Entry--Corporate Name/Relator term) 
+</ul>
+<i>Note: The above qualifiers have not been approved by DCMI.</i><p></p>
+
+<em>GILS</em>:
+<ul>
+<li>Originator</ul>
+<p>
+<strong>Date</strong><br>
+A date associated with an event in the life cycle of the resource.<br>
+<p>
+
+<em>MARC 21</em>: 
+<p>
+Unqualified:
+<ul>
+<li>260 ##$c (Date of publication, distribution, etc.)<br></ul>
+Qualified:<ul>
+
+<li>Available: 307 ##$a (Hours, Etc.)
+<li>Created: 260 ##$g (Date of manufacture)
+
+<li>Issued: 260 ##$c (Date of publication, distribution, etc.)
+<li>Modified: 583 ##$d with $a=modified</li>
+<li>Valid: 518 ##$a (Date/Time and Place of an Event Note).  Text may be generated in $3
+to include qualifier name.
+<li>Scheme=ISO 8601: date may also be generated in 008/07-10; see below under Notes. If ISO
+8601, use basic form that does not include hyphens in 008.</ul>
+
+<p>
+
+<em>GILS:</em>
+<ul>
+<li>Date of Publication</ul>
+<p>
+<strong>Description</strong><br>
+An account of the content of the resource.<br>
+<p>
+
+<em>MARC 21</em>: 
+<p>
+Unqualified:
+<ul>
+<li>520 ##$a (Summary, etc. note)
+</ul>
+Qualified:<ul>
+<li>Description.Abstract: 520 ##$a (Summary, etc. note)
+
+<li>Description.TableofContents: 505 0#$a (Formatted Contents Note)</ul>
+
+<em>GILS</em>:
+<ul>
+<li>Abstract</ul>
+<p><strong>Format</strong><br>
+The physical or digital manifestion of the resource.
+<p>
+<em>MARC 21</em>: 
+<p>Unqualified:
+<ul>
+<li>856 ##$q (Electronic Location and Access/Electronic format type)<br></ul>
+Qualified:
+<ul><li>Extent: 300 ##$a (Physical Description)<br>
+<i>Note that "Extent" has been defined by the Format WG as "the size or duration of a
+resource"</i>
+<li>Medium: 340 ##$a (Physical Medium) 
+<li>Medium (Scheme=IMT): 856 ##$q (Electronic Location and Access/Electronic Format
+Type) </ul>
+
+<p>
+
+<em>GILS:</em>
+<ul>
+<li>Available Linkage Type</ul>
+<p>
+<strong>Identifier</strong><br>
+An unambiguous reference to the resource within a given context.
+<p>
+<em>MARC 21</em>: 
+<p>
+Unqualified:
+<ul>
+<li>024 8#$a (Other Standard Identifier/Standard number or code)<br></ul>Qualified:
+<ul>
+
+<li>Scheme=URI: 856 40$u (Electronic Location and Access/Uniform Resource Locator)
+<li>Scheme=ISBN: 020 ##$a (International Standard Book Number)<br>
+<li>Scheme=ISSN: 022 ##$a (International Standard Serial Number)<br>
+<li>Scheme=(other): 024 8#$a (Other Standard Identifier/Standard number or code) with
+$2=scheme value<br></ul>
+<i>Note: Only URI has been approved by DCMI.</i><p></p>
+<em>GILS:</em>
+<ul>
+<li>Available Linkage</ul>
+
+<p><strong>Language</strong><br>
+A language of the intellectual content of the resource.  
+<p>
+<em>MARC 21</em>: 
+<p>
+Unqualified:
+<ul>
+<li>546 ##$a (Language note)<br></ul>
+Qualified:
+<ul><li>Scheme=ISO 639-2: 041$a (Language code)
+<li>Scheme=RFC 1766: 546 ##$a (Language note) with $b=RFC 1766
+</ul>  
+<i>Note: RFC 1766 has been replaced by RFC 3066. When this change is reflected in DCMI Qualifiers, RFC 3066 should be used.</i><p></p>
+<em>GILS:</em>
+<ul>
+<li>Language of Resource  (note that GILS assumes use of Z39.53)</ul>
+<p>
+
+<strong>Publisher</strong><br>
+An entity responsible for making the resource available. 
+<p>
+
+<em>MARC 21</em>: 
+<p>
+Unqualified:
+<ul>
+<li>260 ##$b (Publication, Distribution, etc. (Imprint)/Name of publisher, distributor, etc.) 
+</ul>Qualified:
+<ul><li>Personal: 700 1#$a (Added Entry--Personal Name) with $e=publisher<br>
+<li>Corporate: 710 2#$a (Added Entry--Corporate Name) with $e=publisher <br>
+<li>Conference: 711 2#$a (Added Entry--Conference Name) with $e=publisher<br></ul>
+<i>Note: The above qualifiers have not been approved by DCMI.</i><br>
+
+<i>Note: It may be desirable to repeat a qualified publisher in 260$b</i>
+<p>
+
+<em>GILS:</em>
+<ul>
+<li>Distributor</ul>
+<p>     
+<p><strong>Relation</strong><br>
+A reference to a related resource.
+<p>
+<em>MARC 21</em>:
+<p>
+Unqualified: 
+<ul>
+<li>787 0#$n (Nonspecific Relationship Entry/Note)<br></ul>
+Qualified:
+<ul><li>Scheme=URI: 787 0#$o (Nonspecific Relationship Entry/Other identifier)
+<li>HasFormat: 776 0#$n (Additional Physical Form Entry/Note) 
+<li>HasFormat: (Scheme=URI): 776 0#$o (Additional Physical Form Entry/Other
+identifier) 
+<li>IsFormatOf: 776 0#$n (Additional Physical Form Entry/Note) 
+<li>IsFormatOf: (Scheme=URI): 776 0#$o (Additional Physical Form Entry/Other
+identifier) 
+<li>IsPartOf: 773 0#$n (Host Item Entry/Note) 
+<li>IsPartOf (Scheme=URI): 773 0#$o (Host Item Entry/Other identifier)
+<li>HasPart: 774 0#$n (Constituent Unit Entry/Note)
+<li>HasPart (Scheme=URI): 774 0#$o (Constituent Unit Entry/Other identifier) 
+<li>IsVersionOf: 775 0#$n (Other Edition Entry/Note) 
+<li>IsVersionOf (Scheme=URI): 775 0#$o (Other Edition Entry/Other identifier)
+<li>HasVersion: 775 0#$n (Other Edition Entry/Note)
+<li>HasVersion (Scheme=URI): 775 0#$o (Other Edition Entry/Other identifier)
+<li>IsBasedOn: 786 0#$n (Data Source Entry/Note) 
+<li>IsBasedOn (Scheme=URI): 786 0#$o (Data Source Entry/Other identifier) 
+<li>IsReferencedBy: 510 0#$a (Citation/References Note/Name of source)
+<li>Requires: 538 ##$a (System Details Note)
+<li>Replaces: 780 00$t (Preceding entry)
+<li>IsReplacedBy: 785 00$t (Succeeding entry)
+</ul><br>
+
+<p>
+
+<em>GILS:</em>
+<ul>
+<li>Cross Reference Relationship<br>
+<li>If scheme=URL: Cross Reference Linkage</ul><br>
+<p>
+<strong>Rights </strong><br>
+Information about rights held in and over the resource.<br>
+<p>
+<em>MARC 21</em>: 
+<p>
+Unqualified:
+<ul>
+<li>540 ##$a (Terms Governing Use and Reproduction Note)<br></ul>
+Qualified:
+<ul><li>Scheme=URL: 856 42$u (Electronic Location and Access/Uniform Resource Locator)
+with $3=Rights</ul>
+<em>GILS</em>:
+<ul>
+<li>Use Constraints</ul>
+<p>
+<strong>Source</strong><br>
+A reference to a resource from which the present resource is derived.<br>
+<p>
+<em>MARC 21</em>: 
+<p>
+Unqualified:
+<ul>
+<li>786 0#$n (Data Source Entry/Note)<br></ul>
+Qualified:
+<ul>
+<li>Scheme=URI: 786 0#$o (Data Source Entry/Other identifier)</ul>
+<em>GILS:</em>
+<ul>
+<li>Sources of Data</ul>
+<p> <strong>Subject </strong><br>
+The topic of the content of the resource.<br>
+<p>
+<em>MARC 21</em>: 
+<p>
+Unqualified:
+<ul>
+<li>653 ##$a (Index Term--Uncontrolled)</ul>
+Qualified:
+<ul>
+<li>Scheme=LCSH: 650 #0$a (Subject added entry--Topical term)<br>
+<li>Scheme=MeSH: 650 #2$a (Subject added entry--Topical term)<br>
+<li>Scheme=LCC: 050 ##$a (Library of Congress Call Number/Classification number)<br>
+<li>Scheme=DDC: 082 ##$a (Dewey Decimal Call Number/Classification number)<br>
+<li>Scheme=UDC: 080 ##$a (Universal Decimal Classification Number)<br>
+<li>Scheme=(other): 650 #7$a with $2=code from MARC Code List for Relators, Sources,
+Description Conventions<br></ul>
+<em>GILS</em>:
+<ul>
+<li>Uncontrolled Term</ul>
+<p>
+<strong>Title</strong><br>
+The name given to the resource.<br>
+<p>
+<em>MARC 21</em>: 
+<p>
+Unqualified:
+<ul><li>245 00$a (Title Statement/Title proper)
+<li>If repeated, all titles after the first: 246 33$a (Varying Form of Title/Title proper)<br>
+</ul>
+Qualified:<ul><li>Alternative: 246 33$a (Varying Form of Title/Title proper)
+</ul>
+<em>GILS</em>:
+<ul>
+<li>Title</ul>
+<p><strong>Type</strong><br>
+The nature or genre of the content of the resource.
+<p>
+<em>MARC 21</em>: 
+<p>
+Unqualified:
+<ul>
+<li>655 #7$a (Index Term--Genre/Form) with $2=local<br></ul>
+Qualified:
+<ul>
+<li>Scheme=DCMI Type: 655 #7$a (Index Term--Genre/Form) with $2=dct
+<li>Scheme=(other): 655 #7$a (Index Term--Genre/Form) with $2=code from MARC Code List
+for Relators, Sources, Description Conventions</ul>See Section III for use to determine
+Leader/06 (Type of Record) values.
+<p>
+
+<em>GILS</em>
+<ul>
+<li>Medium</ul>
+<p>
+<h3><strong>III. Notes.</strong></h3><br>In addition to the variable length fields listed in
+the
+mapping, a MARC 21 record will also include a Leader and field 008 (Fixed-Length Data
+Elements). 
+Certain
+character positions in each of these fixed length fields of a USMARC record will need to be
+coded,
+although
+most will generate default values. 
+<p>
+<strong>Leader:</strong> a fixed field comprising the first 24 character positions (00-23) of
+each
+record
+that provides information for the processing of the record.  The following positions should be
+generated:
+<ul>
+  <li> 
+   Character Position 06: Type of record<br>
+      Leader/06 value should be set according to value in Type as follows (these 
+      values are from Dublin Core List of Resource Types (DC Type Vocabulary): 
+ 
+    <p> 
+ 
+      <table border align="center">
+        <tr bgcolor="#999999"> 
+          <th><font color="#000000">Type value</font></th>
+          <th><font color="#000000">Leader/06 value</font></th>
+        </tr>
+        <tr> 
+          <td width="180"> 
+            <div align="center">collection</div>
+          </td>
+          <td width="224"> 
+            <div align="center">p</div>
+          </td>
+        <tr> 
+          <td width="180"> 
+            <div align="center">dataset</div>
+          </td>
+          <td width="224"> 
+            <div align="center">m</div>
+          </td>
+        </tr>
+        <tr> 
+          <td width="180"> 
+            <div align="center">event</div>
+          </td>
+          <td width="224"> 
+            <div align="center">r</div>
+          </td>
+        </tr>
+        <tr> 
+          <td width="180"> 
+            <div align="center">image</div>
+          </td>
+          <td width="224"> 
+            <div align="center">k</div>
+          </td>
+        </tr><tr><td>
+          <div align="center">interactive resource</div>
+        </td><td>
+          <div align="center">m</div>
+        </td></tr>
+        <tr> 
+          <td width="180"> 
+            <div align="center">service</div>
+          </td>
+          <td width="224"> 
+            <div align="center">m</div>
+          </td>
+        </tr>
+        <tr> 
+          <td width="180"> 
+            <div align="center">software</div>
+          </td>
+          <td width="224"> 
+            <div align="center">m</div>
+          </td>
+        </tr>
+        <tr> 
+          <td width="180"> 
+            <div align="center">sound</div>
+          </td>
+          <td width="224"> 
+            <div align="center">i</div>
+          </td>
+        </tr>
+        <tr> 
+          <td width="180"> 
+            <div align="center">text</div>
+          </td>
+          <td width="224"> 
+            <div align="center">a</div>
+          </td>
+        </tr>
+      </table>
+      
+    <p > If no type is indicated, use value "a". If two type values are indicated, 
+      and one of these is "collection" use the other value for setting Leader/06. 
+      If more than two, use &quot;m&quot;. 
+    <p> 
+  
+</ul>
+<ul><li>Character Position 07: Bibliographic level<ul>
+<li>If Type value is collection, use value "c" (Collection)
+<li>All others, use value "m" (Monograph).</ul>
+<li>Character Position 08: Type of control<ul><li>Use value "#" (blank: no specific type of
+control).</ul>
+<li>Character Position 09: Character coding scheme<ul><li>Use value "#" (blank:
+MARC-8).</ul>
+<li>Character Position 17: Encoding level<ul><li>Use value "3" (Abbreviated level) or other
+value as appropriate to application</ul>
+<li>Character Position 18: Descriptive cataloging form
+<ul>
+<li>Use value "u" (Unknown) to indicate that the descriptive cataloging form is unknown.</ul>
+</ul>
+<p>
+<strong>008 Fixed Length Data Elements:</strong> Forty character positions (00-39) containing
+positionally-defined data elements that provide coded information about the record as a whole or
+about special
+bibliographic aspects of the item being cataloged.  For records originating as Dublin Core, the
+following
+character positions are used:
+<ul>
+<li>Character positions 00-05: Date the MARC 21 record was created or converted (generate by
+date record entered system; formatted as YYMMDD)
+<li>Character positions 07-10: Date of Publication (YYYY portion from Date if present).
+Qualified DC: Date.Issued in ISO 8601 (only YYYY portion).
+<li>Character positions 35-37: Language. May be generated from data in Language if
+scheme=ISO 639-2.
+<li>Other character positions can default to fill characters (ASCII 7C)
+</ul>
+<p>
+<strong>042$a  Authentication Code</strong>: Use "dc" (identifies that MARC 21 record is
+derived from Dublin Core style record).
+<p>
+
+<h3><strong>IV.  Uses for mapping Dublin Core to MARC</strong></h3><br>  A mapping
+between
+the elements in the Dublin Core and USMARC fields is necessary so that conversions between
+various
+syntaxes can occur accurately.  Once Dublin Core style metadata is widely provided, it might
+interact
+with
+MARC records in various ways such as the following:  
+<p> <strong>Enhancement of simple resource description record.</strong> A cataloging 
+  agency may wish to extract the metadata provided in Dublin Core style (presumably 
+  in HTML or XML) and convert the data elements to MARC fields, resulting in a 
+  skeletal record. That record might then be enhanced as needed to add additional 
+  information generally provided in the particular catalog. Some projects convert 
+  data and use as basic record for reporting to national bibliography. 
+<p> <strong>Searching across syntaxes and databases.</strong> Libraries have large 
+  systems with valuable information in metadata records in MARC format. Over the 
+  past few years with the expansion of electronic resource over the Internet, 
+  other syntaxes have also been considered for providing metadata. It will be 
+  important for systems to be able to search metadata in different syntaxes and 
+  databases and have commonality in the definition and use of elements. 
+<p>
+<p>
+<hr>
+<p><b>Go to</b>: </p>
+<ul>
+  <li><a href="marc.html">MARC Home Page</a> </li>
+  <li><a href="../index.html">Library of Congress Home Page</a> </li>
+</ul>
+<p>
+<HR>
+<IMG SRC="../homepage/lc2.gif" ALT=""> <strong>Library 
+of Congress</strong><br>
+<address> 
+<!--help desk email start -->
+<a href="http://www.loc.gov/help/help-desk.html">Library of Congress Help Desk</a> 
+<!--help desk email end -->
+( 
+<!-- #BeginDate format:Am3 -->12/31/2002<!-- #EndDate -->
+)</address>
+
+<script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+</HTML>
+
+
+

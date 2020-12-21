@@ -1,0 +1,224 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                        "http://www.w3.org/TR/html40/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/marc_generic.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Character Sets:  Introduction: MARC 21 Specifications for Record Structure, Character Sets, and Exchange Media (Library of Congress)</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<meta name="description" content="MARC 21 records intended for broad, standard
+interchange should be encoded according to the specifications.  Either an 8-bit based encoding
+system, called in MARC 21 documentation MARC-8, or a variable 8/16-bit encoding following
+ISO/IEC 10646 (UCS) and Unicode UTF-8 encoding rules, called UCS/Unicode UTF-8 in
+MARC 21 documentation, may be used.  A very large repertoire of characters is defined for use
+in the MARC-8 environment, including over 15,000 Chinese, Japanese, and Korean ideographs. 
+For standard MARC 21 interchange the use of UCS/Unicode UTF-8 is limited to this same
+repertoire, a subset of UCS/Unicode.  This is necessary for interchange until all systems fully
+accommodate the full UCS/Unicode repertoire of characters.">
+<meta name="keywords" content="MARC 21, Specifications, Character Sets, UCS,
+Unicode, 16-bit environment, MARC-8">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+<style type="text/css">
+th {text-align:left;}
+p {text-align:justify;}
+li {text-align:justify;}
+.char_def_term {font-weight: bold;}
+.char_def_des {margin-left:2em; text-align:justify;}
+.ascii_name {margin-left:2em; font-weight:bold;}
+.ascii_definition {margin-left: 4em; text-align:justify;}
+</style>
+<!-- InstanceEndEditable -->
+<link href="http://www.loc.gov/marc/marc-generic.css" rel="stylesheet" type="text/css">
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+
+<body bgcolor="#ffffff">
+<div class="head-nav"><a id="skip" href="speccharintro.html#skip_menu"><img src="http://www.loc.gov/marc/images/clear.gif" border="0" alt="Skip Navigation Links"></a><a href="../../index.html">The Library of Congress</a> &gt;&gt; <a href="../../library/index.html">Especially
+  for Librarians and Archivists</a> &gt;&gt; <a href="../../standards/index.html">Standards</a></div>
+<a href="../../marc.html"><img src="http://www.loc.gov/marc/images/marc-bar.gif" alt="MARC Standards" width="620" height="36" border="0"></a>
+<div class="head-nav"><a href="../../marc.html">MARC
+    21 HOME</a> &gt;&gt; <!-- InstanceBeginEditable name="topbreadcrumb" --><a href="spechome.html">Specifications</a> &gt;&gt; <strong>Character Sets</strong><!-- InstanceEndEditable --></div>
+<hr size="1" noshade><a name="skip_menu"></a>
+<!-- InstanceBeginEditable name="content" -->
+<h3><em>MARC 21 Specifications for Record Structure, Character Sets, and Exchange Media</em></h3>
+<h2>CHARACTER SETS AND ENCODING OPTIONS</h2>
+<div class="title">December 2007</div>
+<h4><a href="../../global/disclaim.html"><img src="http://www.loc.gov/images/disclaimer.gif" alt="Link disclaimer" width="91" height="16" border="0" align="right"></a>CONTENTS</h4>
+
+<ul>
+<li><a href="speccharintro.html#intro">
+Introduction</a></li>
+<li><a href="speccharintro.html#define">Definitions</a></li>
+<li><a href="speccharintro.html#standard">Standards</a></li>
+<li><a href="specchargeneral.html">Part
+1:  General Character Set Issues</a> </li>
+<li><a href="speccharmarc8.html">Part 2:  MARC-8 Encoding Environment</a></li>
+<li><a href="speccharucs.html">Part 3:
+Unicode Encoding Environment</a></li>
+<li><a href="speccharconversion.html">Part 4:  Conversion Between Encoding Environments</a></li>
+<li><a href="specchartables.html">Part
+5:  Code Tables</a></li>
+</ul>
+<hr>  
+<h4><a name="intro">INTRODUCTION</a></h4>  
+<p>MARC 21 records intended for broad, standard interchange must employ either of two character encoding schemes.  Only one of them may be used within a single record.
+The encoding now known as MARC-8 was introduced in 1968 with the beginning of the use of the MARC format. Over the years it has grown to include code points for a large repertoire of characters including Latin, Cyrillic, Arabic, Hebrew, and Greek scripts and over 15,000 characters used in writing Chinese, Japanese and Korean.   The MARC-8 encoding is derived primarily from a collection of international standard character sets.  These are identified in <a href="speccharmarc8.html">Part 2</a>.  The total collection of characters that can be represented in MARC-8 encoding is called the MARC-8 character repertoire.  This extensive repertoire is adequate for many library environments.  No further additions will be made to it.</p>
+
+<p>Alternatively, the Universal Character Set (UCS or ISO/IEC 10646) encoding may be used.  Its first version was published in 1993.  As the name implies, the UCS aims to provide, in a single system, code points for the characters of all written languages.  At present it includes over 100,000 characters used in dozens of scripts.  ISO/IEC 10646 was developed in conjunction with the <a href="http://www.unicode.org">Unicode Consortium</a>, an international group of industries, educational institutions, government agencies, etc.  The consortium provides the primary energy for maintenance and expansion of the UCS. For that reason the UCS is frequently called Unicode.  In this specification the terms UCS/Unicode, UCS, and Unicode may be considered synonymous when referring to the standard, either as encoding or as repertoire.</p>
+
+<p>With the constantly growing adoption of the UCS/Unicode standard it will become a preferred option also for libraries. Conversions to Unicode have already taken place in many large library systems.  When UCS/Unicode encoding is used in MARC 21, characters are expressed in the UCS transformation format, UTF-8.  More information is given in <a href="speccharucs.html">Part 3</a>.</p>
+
+<ul>
+<li><a href="specchargeneral.html">Part 1</a> provides guidelines for character set handling in MARC 21 records that is common to both the MARC-8 and UCS/Unicode encoding environments. </li>
+<li><a href="speccharmarc8.html">Part 2</a> specifies the handling of character sets within the MARC-8 environment.</li>
+<li><a href="speccharucs.html">Part 3</a> describes encoding in the UCS/Unicode environment.</li>
+<li><a href="speccharconversion.html">Part 4</a> specifies the issues involved in converting back and forth between the MARC-8 environment and repertoire and the UCS/Unicode environment and repertoire. </li>
+<li><a href="specchartables.html">Part 5</a> specifies, in the form of code tables, the MARC-8 repertoire and its encodings.</li>
+</ul>
+<hr>  
+<h4><a name="define">DEFINITIONS</a></h4>  
+<p><em>Italicized terms found within definitions are terms for which  
+definitions are  
+also provided.</em></p>  
+<div class="char_def_term">ASCII. </div>  
+<div class="char_def_des">Acronym for American Standard Code for Information Interchange (ANSI X3.4), a 7-bit coded character set used as the default in MARC-8 encoding and, in its international counterpart (ISO/IEC 646 (IRV), serving as the foundation of the Universal Character Set (UCS).  Consequently, <em>code points</em> less than 80 (hex) have the same meaning in both of the encodings used in MARC 21 and may be referred to as ASCII in either environment.  It is useful to identify various subsets of the ASCII repertoire that are referenced in MARC 21 documentation:</div>
+<div class="ascii_name">ASCII numerics.</div>
+<div class="ascii_definition">ASCII code points 30(hex) through 39(hex).</div>
+<div class="ascii_name">ASCII uppercase alphabetics.</div>
+<div class="ascii_definition">ASCII code points 41(hex) through 4F(hex) and 50(hex) through 5A(hex).</div>
+<div class="ascii_name">ASCII lowercase alphabetics.</div>
+<div class="ascii_definition">ASCII code points 61(hex) through 6F(hex) and 70(hex) through 7A(hex).</div>
+<div class="ascii_name">ASCII graphic symbols.</div>
+<div class="ascii_definition">The ASCII graphic characters other than numerics, alphabetics, space, and delete.  Code points 21(hex) through 2F(hex), 3A(hex) through 3F(hex), 40(hex), 5B(hex) through 5F(hex), 60(hex), and 7B(hex) through 7E(hex) are included. </div>
+<div class="ascii_name">ASCII graphics.</div>
+<div class="ascii_definition">All ASCII characters (including space, numerics, alphabetics and graphic symbols) found in positions 20(hex) through 7E(hex).</div>
+<div class="ascii_name">ASCII space.</div>
+<div class="ascii_definition">ASCII point 20(hex), an atypical graphic characterized by the lack of a written symbol.  It has the unique property of being recognized by the standard non-ASCII graphic character sets employed in MARC-8 even though 20(hex) is not defined in those sets.</div>
+<div class="ascii_name">ASCII delete.</div>
+<div class="ascii_definition">ASCII code point 7F(hex), a control character never used in MARC 21.</div>
+<div class="char_def_term">base character.</div>
+<div class="char_def_des">A graphic character that is not a <em>combining character</em>, but one with which one or more combining characters may be associated.</div>
+<div class="char_def_term">bidirectional script.</div>
+<div class="char_def_des">A <em>script</em> in which the primary display direction is conventionally reversed in specific situations.  The most commonly encountered examples are the Arabic and Hebrew scripts, written from right-to-left in general but displaying multi-digit numbers left-to-right. </div>
+<div class="char_def_term">bit.</div>
+<div class="char_def_des">Short for binary digit.  One of the two digits in a base 2 number system. Conventionally these are represented by 0 and 1.  </div>
+<div class="char_def_term">byte.</div>
+<div class="char_def_des">A sequence of consecutive <em>bits</em> addressed and interpreted as a group.  In current usage it is understood to contain eight bits unless otherwise qualified.  An 8-bit byte is also called an <em>octet</em>.</div>
+<div class="char_def_term">character.</div>
+<div class="char_def_des">A unit of information used for the organization, control or representation of textual data.</div>
+<div class="char_def_term">coded character set.</div>
+<div class="char_def_des">A collection of characters in which each has been assigned a numeric <em>code point</em>.  In this document, a reference to a character set assumes a coded set.</div>
+<div class="char_def_term">code extension.</div>
+<div class="char_def_des">The techniques for encoding <em>characters</em> that are not included in a given <em>coded character set</em>.</div>
+<div class="char_def_term">code point.</div>
+<div class="char_def_des">Any integer in a particular <em>codespace</em>.</div>
+<div class="char_def_term">code table.</div>
+<div class="char_def_des">A list or matrix identifying the <em>character</em> allocated to each <em>code point</em> in a <em>coded character set</em>.</div>
+<div class="char_def_term">codespace.</div>
+<div class="char_def_des">A range of integers available for encoding characters.  The Unicode codespace includes integers from 0 to 10FFFF(hex).  The codespaces of MARC-8 character sets, other than the East Asian Character Code, are limited to integers between 0 and FF(hex).</div>
+<div class="char_def_term">combining character; combining mark.</div>
+<div class="char_def_des">A character representing a mark, point, or sign used in conjunction with alphabetic or other graphic characters to distinguish them in form, sound, or meaning (usually intended to be displayed above or below an alphabetic graphic character).</div>
+<div class="char_def_term">control character.</div>
+<div class="char_def_des">A <em>control function</em> that is coded as a single <em>code point</em>.</div>
+<div class="char_def_term">control function.</div>
+<div class="char_def_des">An action that affects the recording, processing, transmission or interpretation of data and that has a coded representation consisting of one or more <em>code points</em>.</div>
+<div class="char_def_term">diacritical marks; diacritics.</div>
+<div class="char_def_des">A subset of the <em>combining characters</em>, but in common usage synonymous with the broader term.</div>
+<div class="char_def_term">escape (ESC).</div>
+<div class="char_def_des">A <em>control character</em> (ASCII 1B(hex)) which is used to provide additional <em>characters</em> by <em>code extension</em>. It alters the meaning of a limited number of contiguously following encoded characters, which form an <em>escape sequence</em>.</div>
+<div class="char_def_term">escape sequence.</div>
+<div class="char_def_des">A byte string that is used to <em>invoke</em> a new <em>working set</em> in <em>code extension</em> procedures.  It comprises two or more characters, of which the first is the <em>escape</em> character.</div>
+<div class="char_def_term">field orientation.</div>
+<div class="char_def_des">Refers to the direction that <em>graphic characters</em> in a field are intended to be displayed and read (e.g., from left to right, or from right to left). In a MARC 21 record, the characters are to be recorded in their logical order, from the first character to the last character, irrespective of the direction they are intended to be read.</div>
+<div class="char_def_term">field orientation code.</div>
+<div class="char_def_des">A code that indicates the direction in which the displayed or printed <em>graphic characters</em> of a field would have been written and are intended to be displayed and read.</div>
+<div class="char_def_term">final character.</div>
+<div class="char_def_des">The <em>character</em> that terminates an <em>escape sequence</em>.</div>
+<div class="char_def_term">graphic character.</div>
+<div class="char_def_des">A <em>character</em>, other than a <em>control character</em>, that has a visual representation normally handwritten, printed, or displayed.</div>
+<div class="char_def_term">hexadecimal; hex.</div>
+<div class="char_def_des">Referring to a number system with sixteen digits, usually represented by 0-9 and A-F, each of which corresponds to a pattern of four bits.  Hexadecimal notation is widely used for expressing the <em>scalar values</em> of <em>code points</em> and other numeric values.  It is especially useful where <em>octets</em> are important because an octet can be expressed as two hex digits. </div>
+<div class="char_def_term">intermediate character.</div>
+<div class="char_def_des">Any <em>character</em> in an <em>escape sequence</em> occurring between the <em>escape</em> character and the <em>final character</em>.</div>
+<div class="char_def_term">invoke.</div>
+<div class="char_def_des">To designate a <em>coded character set</em> as the set of <em>code points</em> to be used in interpreting data.</div>
+<div class="char_def_term">MARC-8 encoding.</div>
+<div class="char_def_des">In this document MARC-8 encoding refers to character set encodings of the MARC-8 repertoire as described in <a href="speccharmarc8.html">Part 2</a> and specified in <a href="specchartables.html">Part 5</a>.</div>
+<div class="char_def_term">MARC-8 repertoire.</div>
+<div class="char_def_des">Over 16,000 characters for Latin, Cyrillic, Arabic, Hebrew, and Greek scripts and Chinese, Japanese and Korean ideographs, etc. as described in <a href="speccharmarc8.html">Part 2</a> and defined in <a href="specchartables.html">Part 5</a> of this document.</div>
+<div class="char_def_term">nonspacing graphic character.</div>
+<div class="char_def_des">In this specification, the term is synonymous with <em>combining character</em>.</div>
+<div class="char_def_term">octet.</div>
+<div class="char_def_des">A group of eight consecutive <em>bits</em>, also known as an 8-bit <em>byte</em>.</div>
+<div class="char_def_term">repertoire.</div>
+<div class="char_def_des">The collection of characters included in a particular <em>coded character set</em>.</div>
+<div class="char_def_term">scalar value.</div>
+<div class="char_def_des">A code point expressed as an integer without regard to a particular encoding form; for example, a UTF-8 representation is not appropriate.  Scalar values may be displayed in binary, decimal, or hexadecimal notation.  Hexadecimal is the most common and is used throughout this document except where binary is required for illustrative purposes.</div>
+<div class="char_def_term">script.</div>
+<div class="char_def_des">The set of characters used to write a language.  Some scripts serve more than one language.</div>
+<div class="char_def_term">space (SP).</div>
+<div class="char_def_des">ASCII code point 20(hex) which is interpreted as a <em>graphic character</em> with the unusual property of being recognized in all of the <em>standard character sets</em> in the <em>MARC-8 repertoire</em> even when not defined in such a set. This <em>character</em> is also referred to as "blank" in MARC 21 documentation.</div>
+<div class="char_def_term"><a name="unicode_def">UCS/Unicode</a>.</div>
+<div class="char_def_des">The Universal Character Set (UCS) embodied in ISO/IEC 10646 and its industry counterpart, <a href="http://www.unicode.org">Unicode</a>.  By design Unicode and ISO/IEC 10646 encode the same character repertoire using identical code points character by character.</div>
+<div class="char_def_term">UCS/Unicode encoding.</div>
+<div class="char_def_des">Representation of characters by the code points specified for them in ISO/IEC 10646 and the Unicode Standard.  Once established, the code point for a character is unchanging.</div>
+<div class="char_def_term">UCS/Unicode repertoire.</div>
+<div class="char_def_des">Over 100,000 characters for all scripts, symbols, and other characters included in ISO/IEE 10646 and the Unicode Standard.  Characters continue to be added.  The most recent version can be found at <a href="http://www.unicode.org">www.unicode.org</a>.</div>
+<div class="char_def_term">Unicode.</div>
+<div class="char_def_des">see <a href="speccharintro.html#unicode_def">UCS/Unicode</a></div>
+<div class="char_def_term">UTF-8.</div>
+<div class="char_def_des"><em>UCS</em> Transformation Format-8, an encoding form that algorithmically converts Unicode <em>scalar values</em> to an <em>octet</em>-based format.  A particular character in UTF-8 may require from one to four octets.  The algorithm is described in <a href="speccharucs.html">Part 3</a>.</div>
+<div class="char_def_term">working set.</div>
+<div class="char_def_des">The <em>coded character set[s]</em> currently <em>invoked</em>.</div>
+
+<hr>  
+<h4><a name="standard">STANDARDS</a></h4>  
+<ul>  
+<li><em>Character code structure and extension techniques</em> (ISO/IEC 2022) </li>
+<li><em>Code for Information Interchange</em> (ASCII) (ANSI X3.4)  </li>
+<li><em>Code Extension Techniques for Use with 7-bit and 8-bit Character Sets</em>
+(ANSI X3.41)  </li>
+<li><em>Coded Arabic Character Set for Information Interchange (ISO 9036) (equivalent to
+ASMO Standard Specification 449) - except the MARC 21 set contains 5 additional characters
+and Arabic digits 0-9. </em> </li> 
+<li><em>East Asian Character Code for Bibliographic Use</em> (EACC) (Z39.64)</li>    
+<li><em>Extended Latin Alphabet Coded Character Set for Bibliographic Use</em>
+(ANSEL) (ANSI Z39.47)</li>
+<li><em>Extension of the Arabic Alphabet Coded Character Set for Bibliographic
+Information Interchange</em> (ISO 11822)  </li> 
+<li><em>Extension of the Cyrillic Alphabet Coded Character Set for Bibliographic
+Information Interchange</em> (ISO 5427)  </li>
+<li><em>Greek Alphabet Coded Character Set for Bibliographic Information
+Interchange</em> (ISO 5428)  </li>
+<li><em>ISO 7-bit coded character set for information interchange</em> (ISO/IEC 646
+(IRV))  </li>
+<li><em>Hebrew Alphabet Coded Character Set for Bibliographic Information
+Interchange</em> (ISO 8957)  </li>
+<li><em>Universal Multiple-Octet Coded Character Set</em> (UCS) (ISO/IEC
+10646)  </li>
+<li><em>The Unicode Standard 5.0</em>, or latest version is found at: <a href="http://www.unicode.org">www.unicode.org</a> </li> 
+<li><em>International Register of Coded Character Sets to be Used with Escape Sequences,
+Registration Number 37, Basic Cyrillic Graphic  
+Character Set</em>
+
+</li>
+</ul>  
+  
+<!-- InstanceEndEditable -->
+<hr size="1" noshade>
+<p><a href="../../marc.html">MARC 21 HOME</a> &gt;&gt; <!-- InstanceBeginEditable name="bottombreadcrumb" --><a href="spechome.html">Specifications</a> &gt;&gt; <strong>Character
+Sets</strong><!-- InstanceEndEditable --></p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr valign="bottom">
+    <td><a href="../../index.html">The Library of Congress</a> &gt;&gt; <a href="../../library/index.html">Especially
+    for Librarians and Archivists</a> &gt;&gt; <a href="../../standards/index.html">Standards</a><br>
+    (<!-- MM:BeginLock type="mmdate" format="Am3" orig=" -->
+    <!-- #BeginDate format:Am3 -->12/04/2007<!-- #EndDate -->
+    ) </td>
+    <td align="right"><a href="http://www.loc.gov/cdn-cgi/l/email-protection#d2bcb6bfa1bd92bebdb1fcb5bda4">Contact Us</a></td>
+  </tr>
+</table>
+<script data-cfasync="false" src="http://www.loc.gov/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+<!-- InstanceEnd --></html>

@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                        "http://www.w3.org/TR/html40/loose.dtd">
+<html>
+<!-- InstanceBegin template="/Templates/marc_generic.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Character Sets:  General Character Set Issues: MARC 21 Specifications for Record Structure, Character Sets, and Exchange Media (Library of Congress)</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<meta name="description" content="Character set issues that pertain to both the MARC-8 and Unicode environments are dealt with here.  In this section, references to Unicode imply its UTF-8 encoding form, the only one approved for use in MARC 21.  References to a particular Unicode character will be expressed in the conventional way, as a hexadecimal number identifying the code point, not as a representation of the individual octets in the UTF-8 transformation.  See Part 3 for a discussion of UTF-8.">
+<meta name="keywords" content="MARC 21, Specifications, Character Sets, UCS,
+Unicode, 16-bit environment, MARC-8">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+<style type="text/css">
+th {text-align:left;}
+p {text-align:justify;}
+li {text-align:justify;}
+</style>
+<!-- InstanceEndEditable -->
+<link href="http://www.loc.gov/marc/marc-generic.css" rel="stylesheet" type="text/css">
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+
+<body bgcolor="#ffffff">
+<div class="head-nav"><a id="skip" href="specchargeneral.html#skip_menu"><img src="http://www.loc.gov/marc/images/clear.gif" border="0" alt="Skip Navigation Links"></a><a href="../../index.html">The Library of Congress</a> &gt;&gt; <a href="../../library/index.html">Especially
+  for Librarians and Archivists</a> &gt;&gt; <a href="../../standards/index.html">Standards</a></div>
+<a href="../../marc.html"><img src="http://www.loc.gov/marc/images/marc-bar.gif" alt="MARC Standards" width="620" height="36" border="0"></a>
+<div class="head-nav"><a href="../../marc.html">MARC 21 HOME</a> &gt;&gt; <!-- InstanceBeginEditable name="topbreadcrumb" --><a href="spechome.html">Specifications</a> &gt;&gt; <a href="speccharintro.html">Character
+Sets</a> &gt;&gt; <strong>Part 1 </strong><!-- InstanceEndEditable --></div>
+<hr size="1" noshade><a name="skip_menu"></a>
+<!-- InstanceBeginEditable name="content" -->
+<h3><em>MARC 21 Specifications for Record Structure, Character Sets, and Exchange Media</em></h3>
+<h2>CHARACTER SETS AND ENCODING OPTIONS:  Part 1</h2>
+<h2>General Character Set Issues</h2>
+<div class="title">December 2007</div>
+<h4><a href="../../global/disclaim.html"><img src="http://www.loc.gov/images/disclaimer.gif" alt="Link disclaimer" width="91" height="16" border="0" align="right"></a>CONTENTS</h4>
+<ul>
+<li>
+<a href="specchargeneral.html#intro">
+Introduction</a></li>
+<li><a href="specchargeneral.html#encoding">Encoding Marker</a></li>
+<li><a href="specchargeneral.html#contentdes">Leader, Directory, and Content Designation</a></li>
+<li><a href="specchargeneral.html#controlfunction">Control Function Codes</a> </li>
+<li><a href="specchargeneral.html#basechar">Base Characters and Diacritics</a></li>
+<li><a href="specchargeneral.html#directionality">Directionality of Text</a></li>
+<li><a href="specchargeneral.html#fill">Fill Character</a></li>
+</ul>
+<hr>  
+<h4><a name="intro">INTRODUCTION</a></h4>  
+<p>Character set issues that pertain to both the MARC-8 and Unicode environments are dealt with here.  In this section, references to <a href="http://www.unicode.org">Unicode</a> imply its UTF-8 encoding form, the only one approved for use in MARC 21.  References to a particular Unicode character will be expressed in the conventional way, as a hexadecimal number identifying the code point, not as a representation of the individual octets in the UTF-8 transformation.  See <a href="speccharucs.html">Part 3</a> for a discussion of UTF-8.</p>
+<hr>  
+<h4><a name="encoding">ENCODING MARKER</a></h4>  
+<p>In MARC 21 records, Leader character position 9 (Character coding scheme) must indicate whether the record uses MARC-8 encoding or Unicode encoding.  This is necessary processing information because any character other than an ASCII graphic or control character -- i.e., any character whose code point is greater than 7F(hex)  is represented by different code points in the two encoding schemes.  It is not permitted to use both encoding schemes in the same MARC 21 record.</p>  
+<hr>  
+<h4><a name="contentdes">LEADER, DIRECTORY, AND CONTENT DESIGNATION</a></h4>  
+<p>The Leader, Directory, and all content designation in MARC 21 records must be encoded using only the repertoire found in <em>Code for Information Interchange</em> (ASCII) (ANSI X3.4) or its international counterpart, ISO 646 (IRV).  The encoding of these characters in theMARC-8 and Unicode encodings is identical in the two MARC 21 encoding schemes, when the Unicode form is UTF-8.</p>
+<hr>  
+<h4><a name="controlfunction">CONTROL FUNCTION CODES</a></h4>  
+<p>Eight characters are specifically designated as control characters for MARC 21 use:</p>
+<ul>
+<li>escape character, 1B(hex) in MARC-8 and Unicode encoding</li>
+<li>subfield delimiter, 1F(hex) in MARC-8 and Unicode encoding</li>
+<li>field terminator, 1E(hex) in MARC-8 and Unicode encoding</li>
+<li>record terminator, 1D(hex) in MARC-8 and Unicode encoding</li>
+<li>non-sorting character(s) begin, 88(hex) in MARC-8 and 98(hex) in Unicode encoding</li>
+<li>non-sorting character(s) end, 89(hex) in MARC-8 and 9C(hex) in Unicode encoding</li>
+<li>joiner, 8D(hex) in MARC-8 and 200D (hex) in Unicode encoding </li>
+<li>nonjoiner, 8E(hex) in MARC-8 and 200C (hex) in Unicode encoding.</li>
+</ul>
+<p>These are the only control characters that may be used in MARC-8 encoded records.
+The joiner and nonjoiner characters are sometimes required to control the display form of graphic characters whose proximity to other characters affects their shape; as can happen, for example, in the Arabic script.  Specifications for use of the sorting control characters are contained in the 
+<em><a href="../bibliographic/ecbdhome.html">MARC 21 Format for Bibliographic Data</a></em>.</p>
+<hr>  
+<h4><a name="basechar">BASE CHARACTERS AND DIACRITICS</a></h4>
+<p>There are four characters appearing in ASCII and Unicode which look like combining marks but are actually base characters. (The four characters and their code points are: circumflex accent (5E(hex)), low line (5F(hex)), grave accent (60(hex)), tilde 7E(hex)).  MARC 21 records do not use these four code points as combining characters.  Equivalent combining characters are represented by other code points in either encoding.</p>
+
+<hr>  
+<h4><a name="directionality">DIRECTIONALITY OF TEXT</a></h4>  
+<p>The contents of a field in a MARC 21 record in either the MARC-8 or the Unicode environment are recorded in their logical order, from the first character to the last, regardless of the directionality of text. Although most scripts display characters from left to right, some scripts such as Arabic and Hebrew display characters primarily from right to left. More information on handling bidirectional text is found in <a href="speccharmarc8.html">Part 2</a> for MARC-8-encoded MARC 21 records. For MARC 21 records using the Unicode encoding consult the Unicode Standard, Annex #9: The Bi-Directional Algorithm.</p>
+<p>Note: When bidirectional scripts were first permitted in MARC, numerous records were created with the embedded sections of left-to-right data entered in visual rather than logical order.  This is no longer considered good practice.</p>
+<p>Left-to-right <em>field orientation</em> is the default for fields in MARC 21 records.  No designation of field orientation is required for character sets with left-to-right orientation. When a field contains data whose orientation is from right to left, orientation is indicated with a field orientation code appended to subfield $6 (Linkage). (See <em><a href="../bibliographic/ecbdcntf.html#mrcs6">MARC 21 Format for Bibliographic Data</a></em>, Appendix A, subfield $6).</p>
+<p>The decision to designate the field orientation as right-to-left depends on the predominance of data in a script that is read right-to-left at the field and/or the record level. A field may contain a mixture of scripts. Right-to-left field orientation is usually designated in the following instances:</p>
+<ul>
+<li>when a field contains only or mostly data in a right-to-left script</li>
+<li>when a field contains data in both a right-to-left and a left-to-right script, but the preponderance of data in other fields is right-to-left</li>
+<li> in order to maintain consistency among fields constituting the "body" of a bibliographic entry (2XX, 3XX, and 4XX fields)</li>
+</ul>
+<hr>  
+<h4><a name="fill">FILL CHARACTER</a></h4>
+
+<p>The key to retaining the MARC structure, while simultaneously reducing required coding specificity, is the fill character. For MARC 21 records, the use of this fill character is limited to variable control fields such as field 008 (Fixed-Length Data Elements). It may not be used in the leader or in tags, indicators, or subfield codes. Presence of a fill character in a variable control field indicates that the creator of the record has not attempted to supply a value. In contrast, use of a character signifying "unknown" in a variable control field indicates that the creator of the record has attempted to supply a value, but was unable to determine what the appropriate value should be. The fill character may be used in undefined character positions and in character positions for which the MARC 21 format defines one or more values. Use of the fill character in variable control fields is usually regulated by the policy of the inputting agency.</p>
+<p>For communication purposes, the fill character is represented by the code point 7C(hex). The fill character is represented graphically as the vertical bar ( | ). </p>
+<p>Note:  Another use of 7C(hex) is as a placeholder for a character outside the MARC-8 repertoire in a record converted from Unicode to MARC-8.  This lossy conversion technique is described in <a href="speccharconversion.html">Part 4</a>. There is no conflict between the functions of 7C(hex).  The places mentioned above where the 7C(hex) fill character is valid are constrained to use only characters in the ASCII repertoire; hence the placeholder 7C(hex) can only occur elsewhere, in the text of variable data fields.</p>
+<!-- InstanceEndEditable -->
+<hr size="1" noshade>
+<p><a href="../../marc.html">MARC 21 HOME</a> &gt;&gt; <!-- InstanceBeginEditable name="bottombreadcrumb" --><a href="spechome.html">Specifications</a> &gt;&gt; <a href="speccharintro.html">Character
+      Sets</a> &gt;&gt; <strong>Part 1
+</strong><!-- InstanceEndEditable --></p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr valign="bottom">
+    <td><a href="../../index.html">The Library of Congress</a> &gt;&gt; <a href="../../library/index.html">Especially
+    for Librarians and Archivists</a> &gt;&gt; <a href="../../standards/index.html">Standards</a><br>
+    (<!-- MM:BeginLock type="mmdate" format="Am3" orig=" -->
+    <!-- #BeginDate format:Am3 -->12/04/2007<!-- #EndDate -->
+    ) </td>
+    <td align="right"><a href="http://www.loc.gov/cdn-cgi/l/email-protection#6709030a1408270b080449000811">Contact Us</a></td>
+  </tr>
+</table>
+<script data-cfasync="false" src="http://www.loc.gov/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+<!-- InstanceEnd --></html>

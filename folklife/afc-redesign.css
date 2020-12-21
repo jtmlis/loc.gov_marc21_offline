@@ -1,0 +1,389 @@
+html {
+		height: 100%;
+		width: 100%;
+}
+body {
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	min-height: 100%;
+	border: none;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+}
+table.layout {
+   /* height: 100%; */
+}
+.drop-box {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+}
+a.spinner {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #20510E;
+	text-decoration: none;
+}
+a.spinner:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #20510E;
+	text-decoration: underline;
+}
+a.white {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #ffffff;
+	text-decoration: none;
+}
+a.white:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+.white-text {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #ffffff;
+}
+a.event {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #336600;
+	font-weight: bold;
+	text-decoration: none;
+}
+a.event:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #336600;
+	font-weight: bold;
+	text-decoration: underline;
+}
+a.homepage {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #336600;
+	text-decoration: none;
+}
+a.homepage:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #336600;
+	text-decoration: underline;
+}
+a.menubar {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #D4BC85;
+	font-weight: bold;
+	text-decoration: none;
+}
+a.menubar:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #FFFFFF;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.menubar-text {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-weight: bold;
+	color: #D4BC85;
+}
+.selected {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #999900;
+}
+h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16pt;
+	font-weight: bold;
+	color: #BB9034;
+}
+h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14pt;
+	font-weight: bold;
+	color: #528357;
+}
+h3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13pt;
+	font-weight: bold;
+	color: #003300;
+}
+h4 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 11pt;
+	color: #666666;
+}
+.hp-titles {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #336633;
+}
+ul {
+	margin-top: 2px;
+	margin-bottom: 0px;
+	list-style: none;
+	margin-left: 5px;
+	padding-left: 5px;
+}
+
+ul li 
+{
+   padding-left: 10px;
+   padding-top: 3px;
+   background-image:  url(images/arrow-bullet.gif);
+   background-repeat: no-repeat;
+   background-position: 0 .5em;
+}
+ul ul li
+{
+   margin-left: 10px;
+   padding-left: 10px;
+   padding-top: 3px;
+   background-image:  url(images/arrow-bullet2.gif);
+   background-repeat: no-repeat;
+   background-position: 0 .5em;
+}
+#content {
+	padding: 4px 4px 4px 10px;
+	margin: 5px 0px 3px 0px;
+	background: #F2ECE4;
+	border: 1px solid #E4D9C6;
+	width: 260px; /* ie5win fudge begins */
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	width: 235px;
+	}
+html>body #content {
+	width: 235px; /* ie5win fudge ends */
+	}
+td {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+
+}
+form {
+    margin-bottom: 0;
+	margin-top: 0;
+}
+select {
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px; 
+	background-color: #FFFFFF; 
+}
+.drop-box-title {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #886E29;
+}
+.event-title {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #336600;
+	font-weight: bold;
+}
+.event-text {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #666666;
+}
+p {
+	line-height: 16pt;
+}
+.largecap {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 16pt;
+	font-weight: bold;
+	color: #528357;
+}
+.caption {
+	font-size: 75%;
+	color: #666666;
+	text-align: center;
+
+}
+.whatis {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 13pt;
+	font-style: italic;
+	font-weight: bold;
+	color: #669966;
+}
+blockquote.italics {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 12pt;
+	color: #003300;
+	font-style: italic;
+	font-weight: normal;
+}
+blockquote.onlineblurb {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: #666666;
+	margin-right: 15px;
+	margin-left: 15px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-style: normal;
+	font-weight: normal;
+}
+.small {
+	font-size: 85%;
+	color: #666666;
+	line-height: 13pt;
+}
+pre {
+	font-family: "Courier New", Courier, mono;
+	font-size: 10pt;
+	color: #333333;
+}
+table.box-back {
+	background-image:  url(images/box-middle.gif);
+}
+table.box-back215 {
+	background-image:  url(images/box-middle-215.gif);
+}
+table.box-back320 {
+	background-image:  url(images/box-middle-320.gif);
+}
+td.barback {
+	background-image:  url(images/folklife-bar-back.gif);
+}
+.fandfbox {
+	background-image: url(fieldwork/images/fandf-middle.gif);
+}
+.edboxcenter
+{
+	background-image: url(edresources/Images/ed-box-center.gif);
+}
+.distributor-text {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	font-weight: bold;
+	color: #999900;
+}
+th {
+	font-weight: bold;
+	color: #663333;
+	font-size: 10pt;
+	text-align: center;
+}
+.h2smaller {
+	font-size: 10pt;
+	font-weight: bold;
+
+}
+.redtext {
+	color: #990000;
+	font-weight: bold;
+}
+.row {
+	font-weight: bold;
+	color: #FF0000;
+}
+.col {
+
+	font-weight: bold;
+	color: #FF0000;
+}
+.small-bio {
+	font: 8pt/13pt Verdana, Arial, Helvetica, sans-serif;
+}
+.jqzoom {
+	border: 1px solid black;
+	float: left;
+	position: relative;
+	padding: 0px;
+	cursor: pointer;
+}
+.jqzoom img {
+	float: left;
+}
+div.zoomdiv {
+	z-index: 100;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 200px;
+	height: 200px;
+	background: #ffffff;
+	border:1px solid #CCCCCC;
+	display:none;
+	text-align: center;
+	overflow: hidden;
+}
+div.jqZoomPup {
+	z-index: 10;
+	visibility: hidden;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 50px;
+	height: 50px;
+	border: 1px solid #aaa;
+	background: #ffffff url(http://www.loc.gov/images/zoom.gif) 50% top  no-repeat;;
+	opacity: 0.5;
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+	filter: alpha(Opacity=50);
+}
+.clear {
+	clear: both;
+}
+p.topmargin {
+	padding-top: 15px;
+}
+p.notop {
+	padding-top: 0px;
+	margin-top: 0px;
+}
+
+/* external links */
+
+a.external {
+	text-decoration: none;
+}
+span.underline {
+	text-decoration:underline;
+}
+.external2 {
+	background: transparent url(http://www.loc.gov/images/icon-ext2.gif) 100% 100% no-repeat;
+	padding: 0 5px 0 3px;
+	width:8px;
+	height:10px;
+	text-decoration:none;
+}
+/* end external links for icon links */
+
+/* CRHP STYLES */
+
+.list_p {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;	
+	
+	
+	}
+
+.menu_bg {
+	background-color:#FFE;
+	border: thin solid #333;
+	padding: 5px;
+	font-size: 8pt;
+	}
+.layout tr td table tr td table tr td .white-text {
+	font-family: Gill Sans, Gill Sans MT, Myriad Pro, DejaVu Sans Condensed, Helvetica, Arial, sans-serif;
+}
+.layout tr td table tr td table tr td .white-text {
+	font-family: Gill Sans, Gill Sans MT, Myriad Pro, DejaVu Sans Condensed, Helvetica, Arial, sans-serif;
+}

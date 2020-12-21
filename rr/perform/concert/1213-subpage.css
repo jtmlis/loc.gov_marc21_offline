@@ -1,0 +1,402 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: #eeeeee;
+	font: 9pt Verdana, Arial, Helvetica, sans-serif;
+	text-align: center;
+	color: #333333;
+}
+a#skip {
+	position: absolute;
+	top:-100px;
+}
+p {
+	font: 8pt/14pt Verdana, Arial, Helvetica, sans-serif;
+	text-align: left;
+	color: #333333;
+}
+a:link {
+	color: #012d3f;
+}
+a:visited {
+	color: #005376;
+}
+a:hover {
+	background: #f3eee6;
+}
+#subpage-layout {
+	width: 920px;
+	vertical-align: top;
+	margin-right: auto;
+	margin-left: auto;
+	border: 1px solid #999999;
+	background: #ffffff;
+}
+img.right {
+	float: right;
+	padding: 4px;
+	border: solid #CCC 1px;
+	margin: 5px 10px 15px 10px;
+}
+img.left {
+	float: left;
+	padding: 4px;
+	border: solid #CCC 1px;
+	margin: 5px 10px 5px 0px;
+}
+#homepage-layout {
+	width: 920px;
+	vertical-align: top;
+	margin-right: auto;
+	margin-left: auto;
+	border: 1px solid #000000;
+	background: #ffffff url(images/1213-home-image.jpg) no-repeat;
+	height: 576px;
+}
+#header {
+	width: 920px;
+	height: 25px;
+	vertical-align: top;
+	margin-right: auto;
+	margin-left: auto;
+}
+#top-left {
+	float: left;
+	margin-top: 5px;
+	font: 8pt Verdana, Arial, Helvetica, sans-serif;
+}
+#top-right {
+	float: right;
+	font: 8pt Verdana, Arial, Helvetica, sans-serif;
+}
+.drop-box {
+	font: 8pt Verdana, Arial, Helvetica, sans-serif;
+}
+form {
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	font: 8pt Verdana, Arial, Helvetica, sans-serif;
+}
+form input.button {
+	background-color: #005376;
+	font: bold 8pt Verdana, Arial, Helvetica, sans-serif;
+	color: #ffffee;
+	margin: 2px 0px 1px 0px;
+	border: 1px solid #a38300;
+}
+#heading {
+	width: 920px;
+	height: 98px;
+	padding: 0px;
+	border: 0px;
+	margin: 0px;
+}
+#heading a {
+	background: none;
+}
+#menu-top-left {
+	font: 8pt/15pt Verdana, Arial, Helvetica, sans-serif;
+	float: left;
+	background: none;
+}
+#menu-top-right {
+	font: 8pt/15pt Verdana, Arial, Helvetica, sans-serif;
+	float: right;
+	padding-right: 20px;
+	background: none;
+}
+#content {
+	width: 96%;
+	margin-left: 10px;
+	padding-left: 5px;
+	margin-right: 15px;
+	padding-right: 5px;
+	text-align: left;
+}
+#content-home {
+	margin-left: 10px;
+	padding-left: 5px;
+	margin-right: 0px;
+	padding-right: 0px;
+	text-align: left;
+}
+h1 {
+	margin-top: 5px;
+	margin-left: 0px;
+	margin-bottom: 0px;
+	padding: 15px 0px 0px 0px;
+	border: 0px;
+	font: bold 140% Arial, Helvetica, sans-serif;
+	color: #012d3f;
+	clear: both;
+}
+h2 {
+	margin-top: 5px;
+	margin-left: 0px;
+	margin-bottom: 0px;
+	padding: 0px;
+	border: 0px;
+	font: bold 130% "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", serif;
+	color: #947352;
+}
+h2.month {
+	font: bold 140% "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", serif;
+	color: #FFFFFF;
+	padding: 5px 5px 5px 5px;
+	background-image: url(images/1213-marble.jpg);
+}
+h3 {
+	margin-top: 5px;
+	margin-left: 0px;
+	margin-bottom: 0px;
+	padding: 0px;
+	border: 0px;
+	font: bold 110% "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", serif;
+	color: #7e3510;
+}
+ul {
+	margin: 15px;
+	padding: 0px;
+	list-style-type: square;
+	font: 90%/160% Verdana, Arial, Helvetica, sans-serif;
+}
+#navcontainer ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	float: right;
+}
+#navcontainer li { 
+	margin: 0 0 .8em 0;
+}
+#navcontainer a {
+	display: block;
+	color: #DDD6D2;
+	background: #968070;
+	width: 10em;
+	padding: .3em .8em;
+	text-decoration: none;
+	font: bold 12pt/16pt Georgia, "Times New Roman", Times, serif;
+	border-right: 1px solid #C3B1A6;	
+	border-left: 1px solid #C3B1A6;
+}
+#navcontainer a:hover {
+	background-image: url(https://www.loc.gov/rr/perform/concert/images/clear.gif);
+	background-color: #CCBDB0;
+	color: #7B0602;
+	border-right: 1px solid;	
+	border-left: 1px solid;
+}
+.selected {
+	color: #724c29;	
+	font-weight: bold;
+}
+strong {
+	color: #947352;
+}
+div.performer-first {
+	font: bold 120% Arial, Helvetica, sans-serif;
+	color: #724c29;
+	padding-top: 15px;
+}
+div.performer {
+	clear: both;
+	font: bold 120%/130% Arial, Helvetica, sans-serif;
+	border-top: 1px dotted #987b52;
+	color: #724c29;
+	padding: 10px 0px 0px 0px;
+	margin: 20px 0px 0px 0px;
+}
+div.date {
+	color: #012d3f;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	width: 80%;
+	font: 95%/120%;
+}
+div.date span.month {
+	font-weight: bold;
+	font-size: 110%;	
+}
+div.performer em, div.performer-first em {
+	font: italic 90% Arial, Helvetica, sans-serif;
+}
+p.quote {
+	font: italic 9pt Geneva, Arial, Helvetica, sans-serif;
+	color: #8d7759;
+}
+p.quote strong {
+	font-weight: bold;
+	color: #8d7759;
+}
+p.program {
+	margin: 5px 0px 0px 15px;
+	padding: 0px;
+	color: #333333;
+}
+p.program strong {
+	color: #947352;
+}
+p.program .curated {
+	margin: 5px 0px 0px 15px;
+	padding: 0px;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 10pt;
+	font-style: italic;
+	font-weight: bold;
+	color: #676794;
+}
+p.preconcert {
+	margin: 10px 0px 15px 15px;
+	padding: 0px;
+}
+#bottom-nav {
+	width: 900px;
+	height: 23px;
+	padding: 0px;
+	border: 0px;
+	margin: 0px;
+	vertical-align: bottom;
+}
+#menu-bottom-left {
+	font: 8pt/15pt Verdana, Arial, Helvetica, sans-serif;
+	float: left;
+}
+#menu-bottom-right {
+	font: 8pt/15pt Verdana, Arial, Helvetica, sans-serif;
+	float: right;
+	padding-right: 5px;
+}
+#footer-left {
+	font: 8pt/15pt Verdana, Arial, Helvetica, sans-serif;
+	float: left;
+	text-align: left;
+}
+#footer-right {
+	font: 8pt/15pt Verdana, Arial, Helvetica, sans-serif;
+	float: right;
+	text-align: right;
+}
+#footer {
+	width: 920px;
+	height: 25px;
+	vertical-align: bottom;
+	margin-right: auto;
+	margin-left: auto;
+	font: 90% Verdana, Arial, Helvetica, sans-serif;
+	padding-top: 10px;
+}
+#subpage-blurb {
+	margin: 10px;
+	padding: 10px;
+	font: 9pt/15pt Verdana, Arial, Helvetica, sans-serif;
+	margin-right: auto;
+	margin-left: auto;
+	color: #637449;
+}
+#subpage-blurb h2 {
+	font: bold 130% Georgia, "Times New Roman", Times, serif;
+	color: #947352;
+	margin: 0px;
+	padding: 0px;
+}
+#home-quote {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 10pt;
+	font-style: italic;
+	color: #a38300;
+	font-weight: bold;
+	line-height: 15pt;
+	text-align: center;
+	padding-top: 8px;
+	margin-top: 8px;
+}
+.quote-credit {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 10pt;
+	font-variant: normal;
+	color: #043C37;
+	font-weight: normal;
+	font-style: italic;
+}
+table.glance {
+	border-top: #999999 solid 1px;
+	border-left: #999999 solid 1px;
+	border-bottom: #999999 solid 1px;
+	border-collapse: collapse;
+	width: 95%;
+}
+table.glance th {
+	font: bold 85% Verdana, Arial, Helvetica, sans-serif;
+	color: #ffffff;
+	text-align: left;
+	background-color: #005376;
+	border-bottom: #999999 solid 1px;
+	border-right: #999999 solid 1px;
+	padding: 5px;
+}
+table.glance td {
+	font: 80% Verdana, Arial, Helvetica, sans-serif;
+	text-align: left;
+	border-bottom: #999999 solid 1px;
+	border-right: #999999 solid 1px;
+	padding: 5px;
+}
+#right-box {
+	float: right;
+	height: auto;
+	width: 346px;
+	padding-top: 10px;
+	vertical-align: top;
+}
+.center {
+	text-align: center;
+	font: 8pt/13pt Verdana, Arial, Helvetica, sans-serif;
+}
+.center strong {
+	color: #947352;
+}
+.soldout {
+	margin: 10px;
+	border: 1px dotted #75502d;
+	padding: 5px;
+	background-color: #f8f7fd;
+}
+.soldout strong {
+	color: #947352;
+}
+.coolidgeright {
+	text-align: right;
+	font: 80%/170% Verdana, Arial, Helvetica, sans-serif;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 10px;
+}
+.coolidgequote {
+	font: italic 80%/170% Verdana, Arial, Helvetica, sans-serif;
+	margin-left: 20px;
+	margin-right: 10px;
+	margin-top: 15px;
+}
+.curated {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 10pt;
+	font-style: italic;
+	font-weight: bold;
+	color: #676794;
+}
+div.quote {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 10pt;
+	font-style: italic;
+	color: #993300;
+	font-weight: bold;
+	line-height: 19pt;
+}
+.alert {
+	color: #F00;
+}
+.alert strong {
+	color: #F00;
+	font: bold;
+}

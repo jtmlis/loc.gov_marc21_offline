@@ -1,0 +1,124 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #333333;
+}
+td {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+}
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+}
+dd {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	margin-left: 10pt;
+}
+dt {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+}
+.larger {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	font-weight: bold;
+}
+.caption {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+}
+a.white {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #EEEEEE;
+	text-decoration: none;
+}
+a.white:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+.white-text {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #EEEEEE;
+}.drop-box {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+}
+h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16pt;
+	font-weight: bold;
+	color: #333366;
+}
+h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14pt;
+	font-weight: bold;
+	color: #660000;
+}
+.largecap {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14pt;
+	font-weight: bold;
+	color: #000066;
+}
+.blue-header {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	font-weight: bold;
+	color: #009;
+}
+address {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+}
+.selected {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #660000;
+}
+.burg-bold {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	font-weight: bold;
+	color: #660000;
+}
+h3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13pt;
+	font-weight: bold;
+	color: #666666;
+}
+li {
+	line-height: 20px;
+	list-style-type: square;
+	margin-left: -20px;
+}
+.background-ltblue {
+	background-image:  url(images/spacer-ltblue.gif);
+	background-color: #cacad7;
+}
+.background-dkblue {
+	background-image:  url(images/spacer-dkblue.gif);
+	background-color: #333366;
+}
+.background-gray {
+	background-image:  url(images/spacer-gray.gif);
+	background-color: #DDDDDD;
+}
+.bluetext {
+	color: #0033CC;
+}
+.blue-header em {
+	color: #009;
+}

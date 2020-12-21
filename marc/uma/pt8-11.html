@@ -1,0 +1,1878 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+"http://www.w3.org/TR/HTML40/loose.dtd">
+
+<html>
+
+<head>
+<title>Understanding MARC Authority Records: Parts 8 to 11</title>
+<base href="">
+<meta name="keywords" content="MARC 21, Authority Format"> 
+<meta name="description" content="This document contains parts 8 to 11 of Understanding MARC Authority Records"> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel=stylesheet href="uma-redesign.css" type="text/css">
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+
+<body>
+
+<!--Begin outer border; centers document; fixes line length-->
+
+<table align="center" class="main">
+<tr>
+  <td><p><a href="../../index.html">Library of Congress</a>&gt;&gt; <a href="../../standards/index.html">Standards</a> &gt;&gt; <a href="../../marc.html">MARC</a> &gt;&gt; <a href="index.html">Understanding
+    MARC Authority Records</a></p>
+    <hr size="1" noshade>
+  </tr>
+<tr>
+<td> 
+
+
+<h1>MARC 21 REFERENCE MATERIALS</h1>
+
+
+<a name="top"></a>
+<hr align=center size=4 width=100>
+
+<p class="contents">
+<a href="pt8-11.html#pt8">Part VIII: A Summary of Commonly Used MARC 21 Authority Fields</a><br>
+<a href="pt8-11.html#pt9">Part IX: A List of Other Fields Often Seen in MARC 21 Authority Records</a><br>
+<a href="pt8-11.html#pt10">Part X: The Leader</a><br>
+<a href="pt8-11.html#pt11">Part XI: Field 008</a><br>
+</p>
+
+<a name="pt8"></a><hr align=center size=4 width=100>
+
+
+<!-- Part VIII: A Summary of Commonly Used MARC 21 Authority Fields -->
+
+<h2 class="no">Part VIII</h2>
+<h2 class="title">A Summary of Commonly Used MARC 21 Authority Fields</h2>
+
+<p class="main"><span class="uma">This is a summary of the MARC 21 tags used most frequently 
+by libraries when creating their own authority records.</span> 
+For full listings of the MARC 21 tags, indicators and subfield codes, 
+see the <cite>MARC 21 Format for Authority Data</cite>.</p>
+
+<p class="main">In the explanations of these pages:</p>
+
+<p class="main"><span class="strong">Tags  -- </span> 
+The tags (3-digit numbers) are followed by the names of the fields they represent. 
+In this summary, and in the <cite>MARC 21 Format for Authority Data</cite>, 
+if a tag can appear more than once in an authority record, it is labeled repeatable (R). 
+If it can only be used once, it is labeled non-repeatable (NR). 
+For example, a record must only have one <em>authorized heading</em> (1XX fields), 
+however, it may have several see from tracings (4XX fields).</p>
+
+<p class="main"><span class="strong">Indicators  -- </span> 
+The use of indicators is explained in fields where they are used. 
+Indicators are one-digit numbers. 
+Beginning with the 010 field (Library of Congress Control Number), 
+in every field  --  following the tag  --  are two character positions, 
+one for Indicator 1 and one for Indicator 2. 
+The indicators are not actually defined in all fields, however. 
+And, it is possible that a second indicator will be used, 
+while the first indicator remains undefined (or vice versa). 
+When an indicator is undefined, the character position will be represented 
+by the character <!--b/--> # (for blank space).</p>
+
+<p class="main"><span class="strong">Subfield codes  -- </span> 
+All the data in each field (beginning with the 010 field) is divided into subfields, 
+each of which is preceded by a delimiter-subfield code combination. 
+The most common subfield codes used with each tag are shown. 
+Each subfield code is preceded by the character <!--°--> $, signifying a delimiter. 
+The name of the subfield follows the code.</p>
+
+<p class="cont">In general, every field should contain a subfield &#0145;a' (<strong>$a</strong>). 
+Some subfields are repeatable, while others may not be repeated. 
+In this summary, both repeatability and nonrepeatability are noted for all subfields.</p>
+
+<p class="main"><span class="uma">Examples:</span> 
+Examples follow the explanation for each field. 
+For clarity, one space has been placed between the tag and the first indicator, 
+one space has been placed between the second indicator and the first delimiter-subfield code, 
+and one space has been inserted between the delimiter-subfield code and the subfield data.</p>
+<!--Not accurate !!!-->
+
+<p class="field1"><span class="strong">010 Library of Congress Control Number</span> (LCCN)
+(NR, or Not Repeatable)</p>
+	<p class="field2"><em>Indicators undefined.</em></p>
+	<p class="field2"><em>Subfields used most often:</em></p>
+		<p class="field3"><strong>$a</strong> Library of Congress Control Number (NR)</p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre><span class="ex-comment">Example:</span>   010 ##  $a n##84214414#</pre>
+			</td>
+		</tr>
+	</table>
+
+<p class="field1"><span class="strong">040 Cataloging Source</span>  (NR)</p>
+	<p class="field2"><em>Indicators undefined.</em></p>
+	<p class="field2"><em>Subfields used most often:</em></p>
+		<p class="field3"><strong>$a</strong> Original cataloging agency (NR)</p>
+		<p class="field3"><strong>$c</strong> Transcribing agency (NR)</p>
+		<p class="field3"><strong>$d</strong> Modifying agency (R)</p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre><span class="ex-comment">Example:</span>   040 ##  $a DLC
+                  $c DLC
+                  $d Nc</pre>
+			</td>
+		</tr>
+	</table>
+
+<p class="field1"><span class="strong">100 Heading  --  Personal Name</span> (NR)</p>
+	<p class="field2"><em>Indicator 1:</em> Type of personal name entry element</p>
+		<p class="field3">0 &nbsp; Forename</p>
+		<p class="field3">1 &nbsp; Surname (this is the most common form)</p>
+		<p class="field3">3 &nbsp; Family name</p>
+	<p class="field2"><em>Indicator 2 undefined.</em></p>
+	<p class="field2"><em>Subfields used most often:</em></p>
+		<p class="field3"><strong>$a</strong> Personal name (NR)</p>
+		<p class="field3"><strong>$b</strong> Numeration (NR)</p>
+		<p class="field3"><strong>$c</strong> Titles and other words associated with a name (R)</p>
+		<p class="field3"><strong>$t</strong> Title of a work (in name/title headings) (NR)</p>
+		<p class="field3"><strong>$d</strong> Dates associated with a name (generally, year of birth) (NR)</p>
+		<p class="field3"><strong>$q</strong> Fuller form of name (NR)</p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre><span class="ex-comment">Example:</span>   100 0#  $a Gustaf 
+                  $b V, 
+                  $c King of Sweden, 
+                  $d 1858-1950.</pre>
+			</td>
+		</tr>
+	</table>
+
+<p class="field1"><span class="strong">110 Heading  --  Corporate Name</span> (NR)</p>
+	<p class="field2"><em>Indicator 1:</em> Type of corporate name entry element</p>
+		<p class="field3">0 &nbsp; Inverted name</p>
+		<p class="field3">1 &nbsp; Jurisdiction name</p>
+		<p class="field3">2&nbsp; Name in direct order</p>
+	    <p class="field2"><em>Indicator 2 undefined.</em></p>
+	<p class="field2"><em>Subfields used most often:</em></p>
+		<p class="field3"><strong>$a</strong> Corporate name or jurisdiction name as
+		  entry element (NR)</p>
+		<p class="field3"><strong>$b</strong> Subordinate unit (R)</p>
+		<p class="field3"><strong>$c</strong> Location of meeting (NR)</p>
+		<p class="field3"><strong>$d</strong> Date of meeting or treaty signing (R)</p>
+		<p class="field3"><strong>$t</strong> Title of a work (in name/title headings) (NR)</p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre><span class="ex-comment">Example:</span>   
+         110 2#  $a Association for Childhood Education 
+		 International.
+                 $b Summer Seminar 
+                 $d (1980 :  
+                 $c Taipei, Taiwan)</pre>
+			</td>
+		</tr>
+	</table>
+
+<p class="field1"><span class="strong">111 Heading  --  Meeting Name</span> (NR)</p>
+	<p class="field2"><em>Indicator 1:</em> Type of meeting name entry element</p>
+		<p class="field3">0 &nbsp; Inverted name</p>
+		<p class="field3">1 &nbsp; Jurisdiction name</p>
+		<p class="field3">2&nbsp; Name in direct order</p>
+	    <p class="field2"><em>Indicator 2 undefined.</em></p>
+	<p class="field2"><em>Subfields used most often:</em></p>
+		<p class="field3"><strong>$a</strong> Meeting name or jurisdiction name as
+		  entry element (NR)</p>
+		<p class="field3"><strong>$c</strong> Location of meeting (NR)</p>
+		<p class="field3"><strong>$d</strong> Date of meeting (NR)</p>
+		<p class="field3"><strong>$t</strong> Title of a work (in name/title headings) (NR)</p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre><span class="ex-comment">Example:</span>   
+         111 2#  $a Symposium International "Manuel Pedroso" 
+                     In Memoriam
+                 $d (1976 :  
+                 $c Guanajuato, Mexico)</pre>
+			</td>
+		</tr>
+	</table>
+
+<p class="field1"><span class="strong">130 Heading  --  Uniform Title</span> (NR)</p>
+	<p class="field2"><em>Indicator 1 undefined.</em></p>
+	<p class="field2"><em>Indicator 2:</em> Number of nonfiling characters present</p>
+		<p class="field3"><em>(For initial articles, including spaces)</em></p>
+	<p class="field2"><em>Subfields used most often:</em></p>
+		<p class="field3"><strong>$a</strong> Uniform title (NR)</p>
+		<p class="field3"><strong>$f</strong> Date of a work (NR)</p>
+		<p class="field3"><strong>$l</strong> Language of a work (NR)</p>
+		<p class="field3"><strong>$p</strong> Name of part/section of a work (R)</p>
+		<p class="field3"><strong>$s</strong> Version (NR)</p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre><span class="ex-comment">Example:</span>   130 #0  $a Bible
+                  $p O.T.   
+                  $p Five Scrolls.  
+                  $l Hebrew.  
+                  $s Biblioteca apostolica Vaticana.</pre>
+			</td>
+		</tr>
+	</table>
+
+<p class="field1"><span class="strong">150 Heading  --  Topical Term</span> (NR)</p>
+	<p class="field2"><em>Indicators undefined.</em></p>
+	<p class="field2"><em>Subfields used most often:</em></p>
+		<p class="field3"><strong>$a</strong> Topical term (NR)</p>
+		<p class="field3"><strong>$v</strong> Form subdivision (R)</p>
+		<p class="field3"><strong>$x</strong> General subdivision (R)</p>
+		<p class="field3"><strong>$y</strong> Chronological subdivision (R)</p>
+		<p class="field3"><strong>$z</strong> Geographic subdivision (R)</p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre><span class="ex-comment">Example:</span>   150 ##  $a Painting, Chinese
+                  $y Sung-Y&uuml;an dynasties, 960-1368   
+                  $x Societies, etc.</pre>
+			</td>
+		</tr>
+	</table>
+
+<p class="field1"><span class="strong">151 Heading  --  Geographic Name</span> (NR)</p>
+	<p class="field2"><em>Indicators undefined.</em></p>
+	<p class="field2"><em>Subfields used most often:</em></p>
+		<p class="field3"><strong>$a</strong> Geographic name (NR)</p>
+		<p class="field3"><strong>$v</strong> Form subdivision (R)</p>
+		<p class="field3"><strong>$x</strong> General subdivision (R)</p>
+		<p class="field3"><strong>$y</strong> Chronological subdivision (R)</p>
+		<p class="field3"><strong>$z</strong> Geographic subdivision (R)</p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre><span class="ex-comment">Example:</span>   151 ##  $a United States
+                  $x Foreign relations 
+                  $y 1933- 
+                  $v Periodicals</pre>
+			</td>
+		</tr>
+	</table>
+
+<p class="field1"><span class="strong">155 Heading  --  Genre/Form Term</span> (NR)</p>
+	<p class="field2"><em>Indicators undefined.</em></p>
+	<p class="field2"><em>Subfields used most often:</em></p>
+		<p class="field3"><strong>$a</strong> Genre/form term (NR)</p>
+		<p class="field3"><strong>$v</strong> Form subdivision (R)</p>
+		<p class="field3"><strong>$x</strong> General subdivision (R)</p>
+		<p class="field3"><strong>$y</strong> Chronological subdivision (R)</p>
+		<p class="field3"><strong>$z</strong> Geographic subdivision (R)</p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre><span class="ex-comment">Example:</span>   155 ##  $a Hymnals
+                  $z Massachusetts 
+                  $y 18th century</pre>
+			</td>
+		</tr>
+	</table>
+
+<p class="field1"><span class="strong">400 See From Tracing  --  Personal Name</span> (R)</p>
+	<p class="field2"><em>Indicator 1:</em> Type of personal name entry element</p>
+		<p class="field3">0 &nbsp; Forename</p>
+		<p class="field3">1 &nbsp; Surname (this is the most common form)</p>
+		<p class="field3">3 &nbsp; Family name</p>
+	<p class="field2"><em>Indicator 2 undefined.</em></p>
+	<p class="field2"><em>Subfields used most often:</em></p>
+		<p class="field3"><strong>$a</strong> Personal name (NR)</p>
+		<p class="field3"><strong>$b</strong> Numeration (NR)</p>
+		<p class="field3"><strong>$c</strong> Titles and other words associated with a name (R)</p>
+		<p class="field3"><strong>$d</strong> Dates associated with a name (generally, year of birth) (NR)</p>
+		<p class="field3"><strong>$q</strong> Fuller form of name (NR)</p>
+		<p class="field3"><strong>$t</strong> Title of a work (in name/title headings) (NR)</p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre><span class="ex-comment">Example:</span>   400 1#  $a Singh, Bhagat, 
+                  $d 1921-</pre>
+			</td>
+		</tr>
+	</table>
+
+<p class="field1"><span class="strong">410 See From Tracing  --  Corporate Name</span> (R)</p>
+	<p class="field2"><em>Indicator 1:</em> Type of corporate name entry element</p>
+		<p class="field3">0 &nbsp; Inverted name</p>
+		<p class="field3">1 &nbsp; Jurisdiction name</p>
+		<p class="field3">2&nbsp; Name in direct order</p>
+	    <p class="field2"><em>Indicator 2 undefined.</em></p>
+	<p class="field2"><em>Subfields used most often:</em></p>
+		<p class="field3"><strong>$a</strong> Corporate name or jurisdiction name as
+		  entry element (NR)</p>
+		<p class="field3"><strong>$b</strong> Subordinate unit (R)</p>
+		<p class="field3"><strong>$d</strong> Date of meeting or treaty signing (R)</p>
+		<p class="field3"><strong>$t</strong> Title of a work (in name/title headings) (NR)</p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre><span class="ex-comment">Example:</span>   410 1#  $a Honduras.
+                  $b Estudios Territoriales, Oficina de</pre>
+			</td>
+		</tr>
+	</table>
+
+<p class="field1"><span class="strong">411 See From Tracing  --  Meeting Name</span> (R)</p>
+	<p class="field2"><em>Indicator 1:</em> Type of meeting name entry element</p>
+		<p class="field3">0 &nbsp; Inverted name</p>
+		<p class="field3">1 &nbsp; Jurisdiction name</p>
+		<p class="field3">2&nbsp; Name in direct order</p>
+	    <p class="field2"><em>Indicator 2 undefined.</em></p>
+	<p class="field2"><em>Subfields used most often:</em></p>
+		<p class="field3"><strong>$a</strong> Meeting name or jurisdiction name as
+		  entry element (NR)</p>
+		<p class="field3"><strong>$c</strong> Location of meeting (NR)</p>
+		<p class="field3"><strong>$d</strong> Date of meeting (NR)</p>
+		<p class="field3"><strong>$t</strong> Title of a work (in name/title headings) (NR)</p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre><span class="ex-comment">Example:</span>   411 2#  $a Jakob-Stainer-Symposium
+                  $d (1983 :  
+                  $c Innsbruck, Austria)</pre>
+			</td>
+		</tr>
+	</table>
+
+<p class="field1"><span class="strong">430 See From Tracing  --  Uniform Title</span> (R)</p>
+	<p class="field2"><em>Indicator 1 undefined.</em></p>
+	<p class="field2"><em>Indicator 2:</em> Number of nonfiling characters present</p>
+		<p class="field3"><em>(For initial articles, including spaces)</em></p>
+	<p class="field2"><em>Subfields used most often:</em></p>
+		<p class="field3"><strong>$a</strong> Uniform title (NR)</p>
+		<p class="field3"><strong>$f</strong> Date of a work (NR)</p>
+		<p class="field3"><strong>$l</strong> Language of a work (NR)</p>
+		<p class="field3"><strong>$p</strong> Name of part/section of a work (R)</p>
+		<p class="field3"><strong>$s</strong> Version (NR)</p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre><span class="ex-comment">Example:</span> 
+      430 #0  $a Chronicles of Narnia 
+      (Collier Books (Firm))</pre>
+			</td>
+		</tr>
+	</table>
+
+<p class="field1"><span class="strong">450 See From Tracing  --  Topical Term</span> (R)</p>
+	<p class="field2"><em>Indicators undefined.</em></p>
+	<p class="field2"><em>Subfields used most often:</em></p>
+		<p class="field3"><strong>$a</strong> Topical term (NR)</p>
+		<p class="field3"><strong>$v</strong> Form subdivision (R)</p>
+		<p class="field3"><strong>$x</strong> General subdivision (R)</p>
+		<p class="field3"><strong>$y</strong> Chronological subdivision (R)</p>
+		<p class="field3"><strong>$z</strong> Geographic subdivision (R)</p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre><span class="ex-comment">Example:</span>   450 ##  $a Music
+                  $y 15th century
+                  $x Theory</pre>
+			</td>
+		</tr>
+	</table>
+
+<p class="field1"><span class="strong">451 See From Tracing  --  Geographic Name</span> (R)</p>
+	<p class="field2"><em>Indicators undefined.</em></p>
+	<p class="field2"><em>Subfields used most often:</em></p>
+		<p class="field3"><strong>$a</strong> Geographic name (NR)</p>
+		<p class="field3"><strong>$v</strong> Form subdivision (R)</p>
+		<p class="field3"><strong>$x</strong> General subdivision (R)</p>
+		<p class="field3"><strong>$y</strong> Chronological subdivision (R)</p>
+		<p class="field3"><strong>$z</strong> Geographic subdivision (R)</p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre><span class="ex-comment">Example:</span>   451 ##  $a West Washington (D.C.)
+                  $v Maps</pre>
+			</td>
+		</tr>
+	</table>
+
+<p class="field1"><span class="strong">455 See From Tracing  --  Genre/Form Term</span> (R)</p>
+	<p class="field2"><em>Indicators undefined.</em></p>
+	<p class="field2"><em>Subfields used most often:</em></p>
+		<p class="field3"><strong>$a</strong> Genre/form term (NR)</p>
+		<p class="field3"><strong>$v</strong> Form subdivision (R)</p>
+		<p class="field3"><strong>$x</strong> General subdivision (R)</p>
+		<p class="field3"><strong>$y</strong> Chronological subdivision (R)</p>
+		<p class="field3"><strong>$z</strong> Geographic subdivision (R)</p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre><span class="ex-comment">Example:</span>   455 ##  $a Sci-fi</pre>
+			</td>
+		</tr>
+	</table>
+
+<p class="field1"><span class="strong">500 See Also From Tracing  --  Personal Name</span> (R)</p>
+	<p class="field2"><em>Indicator 1:</em> Type of personal name entry element</p>
+		<p class="field3">0 &nbsp; Forename</p>
+		<p class="field3">1 &nbsp; Surname (this is the most common form)</p>
+		<p class="field3">3 &nbsp; Family name</p>
+	<p class="field2"><em>Indicator 2 undefined.</em></p>
+	<p class="field2"><em>Subfields used most often:</em></p>
+		<p class="field3"><strong>$a</strong> Personal name (NR)</p>
+		<p class="field3"><strong>$b</strong> Numeration (NR)</p>
+		<p class="field3"><strong>$c</strong> Titles and other words associated with a name (R)</p>
+		<p class="field3"><strong>$d</strong> Dates associated with a name (generally, year of birth) (NR)</p>
+		<p class="field3"><strong>$q</strong> Fuller form of name (NR)</p>
+		<p class="field3"><strong>$t</strong> Title of a work (in name/title headings) (NR)</p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre><span class="ex-comment">Example:</span>   500 1#  $a Faur&eacute;, Gabriel, 
+                  $d 1845-1924</pre>
+			</td>
+		</tr>
+	</table>
+
+<p class="field1"><span class="strong">510 See Also From Tracing  --  Corporate Name</span> (R)</p>
+	<p class="field2"><em>Indicator 1:</em> Type of corporate name entry element</p>
+		<p class="field3">0 &nbsp; Inverted name</p>
+		<p class="field3">1 &nbsp; Jurisdiction name</p>
+		<p class="field3">2&nbsp; Name in direct order</p>
+	    <p class="field2"><em>Indicator 2 undefined.</em></p>
+	<p class="field2"><em>Subfields used most often:</em></p>
+		<p class="field3"><strong>$a</strong> Corporate name or jurisdiction name as
+		  entry element (NR)</p>
+		<p class="field3"><strong>$b</strong> Subordinate unit (R)</p>
+		<p class="field3"><strong>$d</strong> Date of meeting or treaty signing (R)</p>
+		<p class="field3"><strong>$t</strong> Title of a work (in name/title headings) (NR)</p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre><span class="ex-comment">Example:</span>   510 1#  $a Missouri.
+                  $b State Highway Patrol. 
+                  $b Criminal Records Section</pre>
+			</td>
+		</tr>
+	</table>
+
+<p class="field1"><span class="strong">511 See Also From Tracing  --  Meeting Name</span> (R)</p>
+	<p class="field2"><em>Indicator 1:</em> Type of meeting name entry element</p>
+		<p class="field3">0 &nbsp; Inverted name</p>
+		<p class="field3">1 &nbsp; Jurisdiction name</p>
+		<p class="field3">2&nbsp; Name in direct order</p>
+	    <p class="field2"><em>Indicator 2 undefined.</em></p>
+	<p class="field2"><em>Subfields used most often:</em></p>
+		<p class="field3"><strong>$a</strong> Meeting name or jurisdiction name as
+		  entry element (NR)</p>
+		<p class="field3"><strong>$c</strong> Location of meeting (NR)</p>
+		<p class="field3"><strong>$d</strong> Date of meeting (NR)</p>
+		<p class="field3"><strong>$t</strong> Title of a work (in name/title headings) (NR)</p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre><span class="ex-comment">Example:</span>   
+         511 2#  $a International Drip/Trickle 
+                    Irrigation Congress</pre>
+			</td>
+		</tr>
+	</table>
+
+<p class="field1"><span class="strong">530 See Also From Tracing  --  Uniform Title</span> (R)</p>
+	<p class="field2"><em>Indicator 1 undefined.</em></p>
+	<p class="field2"><em>Indicator 2:</em> Number of nonfiling characters present</p>
+		<p class="field3"><em>(For initial articles, including spaces)</em></p>
+	<p class="field2"><em>Subfields used most often:</em></p>
+		<p class="field3"><strong>$a</strong> Uniform title (NR)</p>
+		<p class="field3"><strong>$f</strong> Date of a work (NR)</p>
+		<p class="field3"><strong>$l</strong> Language of a work (NR)</p>
+		<p class="field3"><strong>$p</strong> Name of part/section of a work (R)</p>
+		<p class="field3"><strong>$s</strong> Version (NR)</p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre><span class="ex-comment">Example:</span>   530 #0  $a Dead Sea scrolls</pre>
+			</td>
+		</tr>
+	</table>
+
+<p class="field1"><span class="strong">550 See Also From Tracing  --  Topical Term</span> (R)</p>
+	<p class="field2"><em>Indicators undefined.</em></p>
+	<p class="field2"><em>Subfields used most often:</em></p>
+		<p class="field3"><strong>$a</strong> Topical term (NR)</p>
+		<p class="field3"><strong>$v</strong> Form subdivision (R)</p>
+		<p class="field3"><strong>$x</strong> General subdivision (R)</p>
+		<p class="field3"><strong>$y</strong> Chronological subdivision (R)</p>
+		<p class="field3"><strong>$z</strong> Geographic subdivision (R)</p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre><span class="ex-comment">Example:</span>   550 ##  $a Indians of North America
+                  $x Wars
+                  $y 1862-1865</pre>
+			</td>
+		</tr>
+	</table>
+
+<p class="field1"><span class="strong">551 See Also From Tracing  --  Geographic Name</span> (R)</p>
+	<p class="field2"><em>Indicators undefined.</em></p>
+	<p class="field2"><em>Subfields used most often:</em></p>
+		<p class="field3"><strong>$a</strong> Geographic name (NR)</p>
+		<p class="field3"><strong>$v</strong> Form subdivision (R)</p>
+		<p class="field3"><strong>$x</strong> General subdivision (R)</p>
+		<p class="field3"><strong>$y</strong> Chronological subdivision (R)</p>
+		<p class="field3"><strong>$z</strong> Geographic subdivision (R)</p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre><span class="ex-comment">Example:</span>   
+         551 ##  $a Belgrano (Buenos Aires, Argentina)</pre>
+			</td>
+		</tr>
+	</table>
+
+<p class="field1"><span class="strong">555 See Also From Tracing  --  Genre/Form Term</span> (R)</p>
+	<p class="field2"><em>Indicators undefined.</em></p>
+	<p class="field2"><em>Subfields used most often:</em></p>
+		<p class="field3"><strong>$a</strong> Genre/form term (NR)</p>
+		<p class="field3"><strong>$v</strong> Form subdivision (R)</p>
+		<p class="field3"><strong>$x</strong> General subdivision (R)</p>
+		<p class="field3"><strong>$y</strong> Chronological subdivision (R)</p>
+		<p class="field3"><strong>$z</strong> Geographic subdivision (R)</p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre><span class="ex-comment">Example:</span>   
+				555 ##  $a 3-D films</pre>
+			</td>
+		</tr>
+	</table>
+
+<p class="field1"><span class="strong">670 Source Data Found</span> (R)</p>
+	<p class="field2"><em>Indicators undefined.</em></p>
+	<p class="field2"><em>Subfields used most often:</em></p>
+		<p class="field3"><strong>$a</strong> Source citation (NR)</p>
+		<p class="field3"><strong>$b</strong> Information found (R)</p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre><span class="ex-comment">Example:</span>   670 ##  $a His Ireland, 1974. 
+                  $b t.p. (Howard Smith)</pre>
+			</td>
+		</tr>
+	</table>
+
+<p class="field1"><span class="strong">680 Public General Note</span> (R)</p>
+	<p class="field2"><em>Indicators undefined.</em></p>
+	<p class="field2"><em>Subfields used most often:</em></p>
+		<p class="field3"><strong>$a</strong> Heading or subdivision term (R)</p>
+		<p class="field3"><strong>$i</strong> Explanatory text (R)</p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre><span class="ex-comment">Example:</span>   
+         680 ##  $i Here are entered works on 
+         methane as a combustible gas formed in coal mines.
+         Works on methane present in a stratum 
+         of coal are entered under $a Coalbed methane.</pre>
+			</td>
+		</tr>
+	</table>
+
+
+<p class="nav">[<a href="pt8-11.html#top">Back to Top of Page</a>]</p>
+
+<a name="pt9"></a><hr align=center size=4 width=100>
+
+
+<!-- Part IX: A List of Other Fields Often Seen in MARC 21 Authority Records -->
+
+
+<h2 class="no">Part IX</h2>
+<h2 class="title">A List of Other Fields Often Seen in MARC 21 Authority Records</h2>
+
+<blockquote>
+	<table class="no" style="margin-top: 0pt">
+		<tr>
+			<td class="no">001</td>
+			<td class="no">Control number</td>
+		</tr>
+		<tr>
+			<td class="no">003</td>
+			<td class="no">Control number identifier</td>
+		</tr>
+		<tr>
+			<td class="no">005</td>
+			<td class="no">Date and time of latest transaction</td>
+		</tr>
+		<tr>
+			<td class="no">008</td>
+			<td class="no">Fixed-length date elements (See <a href="pt8-11.html#pt11">Part XI</a>)</td>
+		</tr>
+		<tr>
+			<td class="no">035</td>
+			<td class="no">System control number</td>
+		</tr>
+		<tr>
+			<td class="no">053</td>
+			<td class="no">LC classification number</td>
+		</tr>
+		<tr>
+			<td class="no">083</td>
+			<td class="no">Dewey Decimal classification number</td>
+		</tr>
+	</table>
+</blockquote>
+
+<p class="main"><span class="uma-strong">Authority records for series often contain the following fields:</span></p>
+
+<blockquote>
+	<table class="no" style="margin-top: 0pt">
+		<tr>
+			<td class="no">640</td>
+			<td class="no">Series dates of publication and/or sequential designation</td>
+		</tr>
+		<tr>
+			<td class="no">641</td>
+			<td class="no">Series numbering peculiarities</td>
+		</tr>
+		<tr>
+			<td class="no">642</td>
+			<td class="no">Series numbering example</td>
+		</tr>
+		<tr>
+			<td class="no">643</td>
+			<td class="no">Series place and publisher/issuing body</td>
+		</tr>
+		<tr>
+			<td class="no">644</td>
+			<td class="no">Series analysis practice</td>
+		</tr>
+		<tr>
+			<td class="no">645</td>
+			<td class="no">Series tracing practice</td>
+		</tr>
+		<tr>
+			<td class="no">646</td>
+			<td class="no">Series classification practice</td>
+		</tr>
+	</table>
+</blockquote>
+
+<p class="main"><span class="uma-strong">Authority records sometimes contain the following reference fields:</span></p>
+
+<blockquote>
+	<table class="no" style="margin-top: 0pt">
+		<tr>
+			<td class="no">663</td>
+			<td class="no">Coomplex see also reference  --  Name</td>
+		</tr>
+		<tr>
+			<td class="no">664</td>
+			<td class="no">Complex see reference  --  Name</td>
+		</tr>
+		<tr>
+			<td class="no">665</td>
+			<td class="no">History reference</td>
+		</tr>
+		<tr>
+			<td class="no">666</td>
+			<td class="no">General explanatory reference  --  Name</td>
+		</tr>
+	</table>
+</blockquote>
+
+
+<p class="nav">[<a href="pt8-11.html#top">Back to Top of Page</a>]</p>
+
+<a name="pt10"></a><hr align=center size=4 width=100>
+
+
+<!-- Part X: The Leader Part X: The Leader Part X: The Leader Part X: The Leader -->
+
+
+<h2 class="no">Part X</h2>
+<h2 class="title">The Leader</h2>
+
+<p class="main">There are 24 positions in the Leader, numbered from 00 to 23. 
+For a fuller explanation, see the <cite>MARC 21 Format for Authority Data</cite>.</p>
+
+	<table class="values">
+		<tr>
+			<td class="tag1"><span class="uma-strong">00-04</span></td>
+			<td class="tag2"><span class="uma-strong">Record length 
+				(calculated by the computer for each record)</span></td>
+		</tr>
+	</table>
+
+	<table class="values">
+		<tr>
+			<td class="tag1"><span class="uma-strong">05</span></td>
+			<td class="tag2"><span class="uma-strong">Record status</span></td>
+		</tr>
+	</table>
+	<table class="values">
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">a</td>
+			<td class="value2">=</td>
+			<td class="value3">Increase in encoding level</td>
+		</tr>
+		<tr>
+			<td class="value0"><div align="justify"></div></td>
+			<td class="value1">c</td>
+			<td class="value2">=</td>
+			<td class="value3">Corrected or revised</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">d</td>
+			<td class="value2">=</td>
+			<td class="value3">Deleted</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">n</td>
+			<td class="value2">=</td>
+			<td class="value3">New</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">o</td>
+			<td class="value2">=</td>
+			<td class="value3">Obsolete</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">s</td>
+			<td class="value2">=</td>
+			<td class="value3">Deleted; heading split into two or more headings</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">x</td>
+			<td class="value2">=</td>
+			<td class="value3">Deleted; heading replaced by another heading</td>
+		</tr>
+	</table>
+
+	<table class="values">
+		<tr>
+			<td class="tag1"><span class="uma-strong">06</span></td>
+			<td class="tag2"><span class="uma-strong">Type of record</span></td>
+		</tr>
+	</table>
+	<table class="values">
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">z</td>
+			<td class="value2">=</td>
+			<td class="value3">Authority data (All authority records contain code z in Leader/06)</td>
+		</tr>
+	</table>
+
+	<table class="values">
+		<tr>
+			<td class="tag1"><span class="uma-strong">07-08</span></td>
+			<td class="tag2"><span class="uma-strong">Undefined character positions</span> (always &quot;##&quot;)</td>
+		</tr>
+	</table>
+
+	<table class="values">
+		<tr>
+			<td class="tag1"><span class="uma-strong">09</span></td>
+			<td class="tag2"><span class="uma-strong">Character coding scheme</span></td>
+		</tr>
+	</table>
+	<table class="values">
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">#</td>
+			<td class="value2">=</td>
+			<td class="value3">MARC-8</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">a</td>
+			<td class="value2">=</td>
+			<td class="value3">UCS/Unicode</td>
+		</tr>
+	</table>
+
+	<table class="values">
+		<tr>
+			<td class="tag1"><span class="uma-strong">10</span></td>
+			<td class="tag2"><span class="uma-strong">Indicator count</span> (always &quot;2&quot;)</td>
+		</tr>
+	</table>
+
+	<table class="values">
+		<tr>
+			<td class="tag1"><span class="uma-strong">11</span></td>
+			<td class="tag2"><span class="uma-strong">Subfield code length</span> (always &quot;2&quot;)</td>
+		</tr>
+	</table>
+
+	<table class="values">
+		<tr>
+			<td class="tag1"><span class="uma-strong">12-16</span></td>
+			<td class="tag2"><span class="uma-strong">Base address of data 
+				(calculated by the  computer for each record)</span></td>
+		</tr>
+	</table>
+
+	<table class="values">
+		<tr>
+			<td class="tag1"><span class="uma-strong">17</span></td>
+			<td class="tag2"><span class="uma-strong">Encoding level</span></td>
+		</tr>
+	</table>
+	<table class="values">
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">n</td>
+			<td class="value2">=</td>
+			<td class="value3">Complete authority record</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">o</td>
+			<td class="value2">=</td>
+			<td class="value3">Incomplete authority record</td>
+		</tr>
+	</table>
+
+	<table class="values">
+		<tr>
+			<td class="tag1"><span class="uma-strong">18-19</span></td>
+			<td class="tag2"><span class="uma-strong">Undefined character positions</span> (always &quot;##&quot;)</td>
+		</tr>
+	</table>
+
+	<table class="values">
+		<tr>
+			<td class="tag1"><span class="uma-strong">20</span></td>
+			<td class="tag2"><span class="uma-strong">Length of the length-of-field portion</span> 
+				(always &quot;4&quot;)</td>
+		</tr>
+	</table>
+
+	<table class="values">
+		<tr>
+			<td class="tag1"><span class="uma-strong">21</span></td>
+			<td class="tag2"><span class="uma-strong">Length of the starting-character-position portion</span> 
+				(always &quot;5&quot;)</td>
+		</tr>
+	</table>
+
+	<table class="values">
+		<tr>
+			<td class="tag1"><span class="uma-strong">22</span></td>
+			<td class="tag2"><span class="uma-strong">Length of the implementation-defined portion</span> 
+				(always &quot;0&quot;)</td>
+		</tr>
+	</table>
+
+	<table class="values">
+		<tr>
+			<td class="tag1"><span class="uma-strong">23</span></td>
+			<td class="tag2"><span class="uma-strong">Undefined</span> (always &quot;0&quot;)</td>
+		</tr>
+	</table>
+
+<br>
+
+<p class="main">An example of a Leader is the following:</p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre>LDR  00677nz###2200145n##4500</pre>
+			</td>
+		</tr>
+	</table>
+
+<br>
+
+<p class="nav">[<a href="pt8-11.html#top">Back to Top of Page</a>]</p>
+
+<a name="pt11"></a><hr align=center size=4 width=100>
+
+
+<!-- Part XI: Field 008 Part X: Field 008 Part X: Field 008 Part X: Field 008 -->
+
+
+<h2 class="no">Part XI</h2>
+<h2 class="title">Field 008</h2>
+
+<p class="main">Field 008 is used for Fixed-Length Data elements. 
+There are 40 character positions in field 008, numbered from 00-39. 
+Undefined positions must contain either a blank (#) or a fill character ( | ). 
+Please note that like all of the other <span class="uma-strong">variable control fields</span>, 
+field 008 has no indicators or subfield codes. 
+For a fuller explanation, see the <cite>MARC 21 Format for Authority Data</cite>.</p>
+
+	<table class="values">
+		<tr>
+			<td class="tag1"><span class="uma-strong">00-05</span></td>
+			<td class="tag2"><span class="uma-strong">Date entered on file</span> 
+				(YYMMDD, where Y=year,  M=month, and D=day)</td>
+		</tr>
+	</table>
+
+	<table class="values">
+		<tr>
+			<td class="tag1"><span class="uma-strong">06</span></td>
+			<td class="tag2"><span class="uma-strong">Direct or indirect geographic subdivision</span></td>
+		</tr>
+	</table>
+	<table class="values">
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">#</td>
+			<td class="value2">=</td>
+			<td class="value3">Not subdivided geographically</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">d</td>
+			<td class="value2">=</td>
+			<td class="value3">Subdivided geographically  --  direct</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">i</td>
+			<td class="value2">=</td>
+			<td class="value3">Subdivided geographically  --  indirect</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">n</td>
+			<td class="value2">=</td>
+			<td class="value3">Not applicable</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">|</td>
+			<td class="value2">=</td>
+			<td class="value3">No attempt to code</td>
+		</tr>
+	</table>
+
+	<table class="values">
+		<tr>
+			<td class="tag1"><span class="uma-strong">07</span></td>
+			<td class="tag2"><span class="uma-strong">Romanization scheme</span></td>
+		</tr>
+	</table>
+	<table class="values">
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">a</td>
+			<td class="value2">=</td>
+			<td class="value3">International standard</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">b</td>
+			<td class="value2">=</td>
+			<td class="value3">National standard</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">c</td>
+			<td class="value2">=</td>
+			<td class="value3">National library association standard</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">d</td>
+			<td class="value2">=</td>
+			<td class="value3">National library or bibliographic agency standard</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">e</td>
+			<td class="value2">=</td>
+			<td class="value3">Local standard</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">f</td>
+			<td class="value2">=</td>
+			<td class="value3">Standard of unknown origin</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">g</td>
+			<td class="value2">=</td>
+			<td class="value3">Conventional romanization or conventional form of name in language of cataloging agency
+			</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">n</td>
+			<td class="value2">=</td>
+			<td class="value3">Not applicable</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">|</td>
+			<td class="value2">=</td>
+			<td class="value3">No attempt to code</td>
+		</tr>
+	</table>
+
+	<table class="values">
+		<tr>
+			<td class="tag1"><span class="uma-strong">08</span></td>
+			<td class="tag2"><span class="uma-strong">Language of catalog</span></td>
+		</tr>
+	</table>
+	<table class="values">
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">#</td>
+			<td class="value2">=</td>
+			<td class="value3">No information provided</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">b</td>
+			<td class="value2">=</td>
+			<td class="value3">English and French</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">e</td>
+			<td class="value2">=</td>
+			<td class="value3">English only</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">f</td>
+			<td class="value2">=</td>
+			<td class="value3">French only</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">|</td>
+			<td class="value2">=</td>
+			<td class="value3">No attempt to code</td>
+		</tr>
+	</table>
+
+	<table class="values">
+		<tr>
+			<td class="tag1"><span class="uma-strong">09</span></td>
+			<td class="tag2"><span class="uma-strong">Kind of record</span>
+				(Like the Leader/06 code z (Type of record, Authority record), 
+				field 008/09 further defined seven types of authority records)</td>
+		</tr>
+	</table>
+	<table class="values">
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">a</td>
+			<td class="value2">=</td>
+			<td class="value3">Authoritative heading 
+				(Code a identifies the most common type of authority record)</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">b</td>
+			<td class="value2">=</td>
+			<td class="value3">Untraced reference</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">c</td>
+			<td class="value2">=</td>
+			<td class="value3">Traced reference</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">d</td>
+			<td class="value2">=</td>
+			<td class="value3">Subdivision</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">e</td>
+			<td class="value2">=</td>
+			<td class="value3">Node label</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">f</td>
+			<td class="value2">=</td>
+			<td class="value3">Authoritative heading and subdivision</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">g</td>
+			<td class="value2">=</td>
+			<td class="value3">Reference and subdivision</td>
+		</tr>
+	</table>
+
+	<table class="values">
+		<tr>
+			<td class="tag1"><span class="uma-strong">10</span></td>
+			<td class="tag2"><span class="uma-strong">Descriptive cataloging rules</span></td>
+		</tr>
+	</table>
+	<table class="values">
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">a</td>
+			<td class="value2">=</td>
+			<td class="value3">Earlier rules</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">b</td>
+			<td class="value2">=</td>
+			<td class="value3">AACR1</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">c</td>
+			<td class="value2">=</td>
+			<td class="value3">AACR2</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">d</td>
+			<td class="value2">=</td>
+			<td class="value3">AACR2 compatible heading</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">z</td>
+			<td class="value2">=</td>
+			<td class="value3">Other</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">n</td>
+			<td class="value2">=</td>
+			<td class="value3">Not applicable</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">|</td>
+			<td class="value2">=</td>
+			<td class="value3">No attempt to code</td>
+		</tr>
+	</table>
+
+	<table class="values">
+		<tr>
+			<td class="tag1"><span class="uma-strong">11</span></td>
+			<td class="tag2"><span class="uma-strong">Subject heading system/thesaurus</span></td>
+		</tr>
+	</table>
+	<table class="values">
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">a</td>
+			<td class="value2">=</td>
+			<td class="value3">Library of Congress Subject Headings</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">b</td>
+			<td class="value2">=</td>
+			<td class="value3">LC subject headings for children's literature</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">c</td>
+			<td class="value2">=</td>
+			<td class="value3">Medical Subject Headings</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">d</td>
+			<td class="value2">=</td>
+			<td class="value3">National Agricultural Library subject authority file</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">k</td>
+			<td class="value2">=</td>
+			<td class="value3">Canadian Subject Headings</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">n</td>
+			<td class="value2">=</td>
+			<td class="value3">Not applicable</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">r</td>
+			<td class="value2">=</td>
+			<td class="value3">Art and Architecture Thesaurus</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">s</td>
+			<td class="value2">=</td>
+			<td class="value3">Sears List of Subject Headings</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">v</td>
+			<td class="value2">=</td>
+			<td class="value3">R&eacute;pertoire de vedettes-mati&egrave;re</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">z</td>
+			<td class="value2">=</td>
+			<td class="value3">Other</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">|</td>
+			<td class="value2">=</td>
+			<td class="value3">No attempt to code</td>
+		</tr>
+	</table>
+
+	<table class="values">
+		<tr>
+			<td class="tag1"><span class="uma-strong">12</span></td>
+			<td class="tag2"><span class="uma-strong">Type of series</span></td>
+		</tr>
+	</table>
+	<table class="values">
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">a</td>
+			<td class="value2">=</td>
+			<td class="value3">Monographic series</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">b</td>
+			<td class="value2">=</td>
+			<td class="value3">Multipart item</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">c</td>
+			<td class="value2">=</td>
+			<td class="value3">Series-like phrase</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">n</td>
+			<td class="value2">=</td>
+			<td class="value3">Not applicable</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">z</td>
+			<td class="value2">=</td>
+			<td class="value3">Other</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">|</td>
+			<td class="value2">=</td>
+			<td class="value3">No attempt to code</td>
+		</tr>
+	</table>
+
+	<table class="values">
+		<tr>
+			<td class="tag1"><span class="uma-strong">13</span></td>
+			<td class="tag2"><span class="uma-strong">Numbered or unnumbered series</span></td>
+		</tr>
+	</table>
+	<table class="values">
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">a</td>
+			<td class="value2">=</td>
+			<td class="value3">Numbered</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">b</td>
+			<td class="value2">=</td>
+			<td class="value3">Unnumbered</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">c</td>
+			<td class="value2">=</td>
+			<td class="value3">Numbering varies</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">n</td>
+			<td class="value2">=</td>
+			<td class="value3">Not applicable</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">|</td>
+			<td class="value2">=</td>
+			<td class="value3">No attempt to code</td>
+		</tr>
+	</table>
+
+	<table class="values">
+		<tr>
+			<td class="tag1"><span class="uma-strong">14</span></td>
+			<td class="tag2"><span class="uma-strong">Heading use  --  main or added entry</span></td>
+		</tr>
+	</table>
+	<table class="values">
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">a</td>
+			<td class="value2">=</td>
+			<td class="value3">Appropriate</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">b</td>
+			<td class="value2">=</td>
+			<td class="value3">Not appropriate</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">|</td>
+			<td class="value2">=</td>
+			<td class="value3">No attempt to code</td>
+		</tr>
+	</table>
+
+	<table class="values">
+		<tr>
+			<td class="tag1"><span class="uma-strong">15</span></td>
+			<td class="tag2"><span class="uma-strong">Heading use  --  subject added entry</span></td>
+		</tr>
+	</table>
+	<table class="values">
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">a</td>
+			<td class="value2">=</td>
+			<td class="value3">Appropriate</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">b</td>
+			<td class="value2">=</td>
+			<td class="value3">Not appropriate</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">|</td>
+			<td class="value2">=</td>
+			<td class="value3">No attempt to code</td>
+		</tr>
+	</table>
+
+	<table class="values">
+		<tr>
+			<td class="tag1"><span class="uma-strong">16</span></td>
+			<td class="tag2"><span class="uma-strong">Heading use  --  series added entry</span></td>
+		</tr>
+	</table>
+	<table class="values">
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">a</td>
+			<td class="value2">=</td>
+			<td class="value3">Appropriate</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">b</td>
+			<td class="value2">=</td>
+			<td class="value3">Not appropriate</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">|</td>
+			<td class="value2">=</td>
+			<td class="value3">No attempt to code</td>
+		</tr>
+	</table>
+
+	<table class="values">
+		<tr>
+			<td class="tag1"><span class="uma-strong">17</span></td>
+			<td class="tag2"><span class="uma-strong">Type of subject subdivision</span></td>
+		</tr>
+	</table>
+	<table class="values">
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">a</td>
+			<td class="value2">=</td>
+			<td class="value3">Topical</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">b</td>
+			<td class="value2">=</td>
+			<td class="value3">Form</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">c</td>
+			<td class="value2">=</td>
+			<td class="value3">Chronological</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">d</td>
+			<td class="value2">=</td>
+			<td class="value3">Geographic</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">e</td>
+			<td class="value2">=</td>
+			<td class="value3">Language</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">n</td>
+			<td class="value2">=</td>
+			<td class="value3">Not applicable</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">|</td>
+			<td class="value2">=</td>
+			<td class="value3">No attempt to code</td>
+		</tr>
+	</table>
+
+	<table class="values">
+		<tr>
+			<td class="tag1"><span class="uma-strong">18-27</span></td>
+			<td class="tag2"><span class="uma-strong">Undefined character positions</span></td>
+		</tr>
+	</table>
+	<table class="values">
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">#</td>
+			<td class="value2">=</td>
+			<td class="value3">Undefined</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">|</td>
+			<td class="value2">=</td>
+			<td class="value3">No attempt to code</td>
+		</tr>
+	</table>
+
+	<table class="values">
+		<tr>
+			<td class="tag1"><span class="uma-strong">28</span></td>
+			<td class="tag2"><span class="uma-strong">Type of government agency</span></td>
+		</tr>
+	</table>
+	<table class="values">
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">#</td>
+			<td class="value2">=</td>
+			<td class="value3">Not a government agency</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">a</td>
+			<td class="value2">=</td>
+			<td class="value3">Autonomous or semi-autonomous component</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">c</td>
+			<td class="value2">=</td>
+			<td class="value3">Multilocal</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">f</td>
+			<td class="value2">=</td>
+			<td class="value3">Federal/national</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">i</td>
+			<td class="value2">=</td>
+			<td class="value3">International intergovernmental</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">l</td>
+			<td class="value2">=</td>
+			<td class="value3">Local</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">m</td>
+			<td class="value2">=</td>
+			<td class="value3">Multistate</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">o</td>
+			<td class="value2">=</td>
+			<td class="value3">Government agency  --  type undetermined</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">s</td>
+			<td class="value2">=</td>
+			<td class="value3">State, provincial, territorial, dependent, etc.</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">u</td>
+			<td class="value2">=</td>
+			<td class="value3">Unknown if heading is government agency</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">z</td>
+			<td class="value2">=</td>
+			<td class="value3">Other</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">|</td>
+			<td class="value2">=</td>
+			<td class="value3">No attempt to code</td>
+		</tr>
+	</table>
+
+	<table class="values">
+		<tr>
+			<td class="tag1"><span class="uma-strong">29</span></td>
+			<td class="tag2"><span class="uma-strong">Reference evaluation</span></td>
+		</tr>
+	</table>
+	<table class="values">
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">a</td>
+			<td class="value2">=</td>
+			<td class="value3">Tracings are consistent with the heading</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">b</td>
+			<td class="value2">=</td>
+			<td class="value3">Tracings are not necessarily consistent with the heading</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">n</td>
+			<td class="value2">=</td>
+			<td class="value3">Not applicable</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">|</td>
+			<td class="value2">=</td>
+			<td class="value3">No attempt to code</td>
+		</tr>
+	</table>
+
+	<table class="values">
+		<tr>
+			<td class="tag1"><span class="uma-strong">30</span></td>
+			<td class="tag2"><span class="uma-strong">Undefined character position</span></td>
+		</tr>
+	</table>
+	<table class="values">
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">#</td>
+			<td class="value2">=</td>
+			<td class="value3">Undefined</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">|</td>
+			<td class="value2">=</td>
+			<td class="value3">No attempt to code</td>
+		</tr>
+	</table>
+
+	<table class="values">
+		<tr>
+			<td class="tag1"><span class="uma-strong">31</span></td>
+			<td class="tag2"><span class="uma-strong">Record update in process</span></td>
+		</tr>
+	</table>
+	<table class="values">
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">a</td>
+			<td class="value2">=</td>
+			<td class="value3">Record can be used</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">b</td>
+			<td class="value2">=</td>
+			<td class="value3">Record is being updated</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">|</td>
+			<td class="value2">=</td>
+			<td class="value3">No attempt to code</td>
+		</tr>
+	</table>
+
+	<table class="values">
+		<tr>
+			<td class="tag1"><span class="uma-strong">32</span></td>
+			<td class="tag2"><span class="uma-strong">Undifferentiated personal name</span></td>
+		</tr>
+	</table>
+	<table class="values">
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">a</td>
+			<td class="value2">=</td>
+			<td class="value3">Differentiated personal name</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">b</td>
+			<td class="value2">=</td>
+			<td class="value3">Undifferentiated personal name</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">n</td>
+			<td class="value2">=</td>
+			<td class="value3">Not applicable</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">|</td>
+			<td class="value2">=</td>
+			<td class="value3">No attempt to code</td>
+		</tr>
+	</table>
+
+	<table class="values">
+		<tr>
+			<td class="tag1"><span class="uma-strong">33</span></td>
+			<td class="tag2"><span class="uma-strong">Level of establishment</span></td>
+		</tr>
+	</table>
+	<table class="values">
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">a</td>
+			<td class="value2">=</td>
+			<td class="value3">Fully authoritative</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">b</td>
+			<td class="value2">=</td>
+			<td class="value3">Memorandum</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">c</td>
+			<td class="value2">=</td>
+			<td class="value3">Provisional</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">d</td>
+			<td class="value2">=</td>
+			<td class="value3">Preliminary</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">n</td>
+			<td class="value2">=</td>
+			<td class="value3">Not applicable</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">|</td>
+			<td class="value2">=</td>
+			<td class="value3">No attempt to code</td>
+		</tr>
+	</table>
+
+	<table class="values">
+		<tr>
+			<td class="tag1"><span class="uma-strong">34-37</span></td>
+			<td class="tag2"><span class="uma-strong">Undefined character positions</span></td>
+		</tr>
+	</table>
+	<table class="values">
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">#</td>
+			<td class="value2">=</td>
+			<td class="value3">Undefined</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">|</td>
+			<td class="value2">=</td>
+			<td class="value3">No attempt to code</td>
+		</tr>
+	</table>
+
+	<table class="values">
+		<tr>
+			<td class="tag1"><span class="uma-strong">38</span></td>
+			<td class="tag2"><span class="uma-strong">Modified record</span></td>
+		</tr>
+	</table>
+	<table class="values">
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">#</td>
+			<td class="value2">=</td>
+			<td class="value3">Not modified</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">s</td>
+			<td class="value2">=</td>
+			<td class="value3">Shortened</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">x</td>
+			<td class="value2">=</td>
+			<td class="value3">Missing characters</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">|</td>
+			<td class="value2">=</td>
+			<td class="value3">No attempt to code</td>
+		</tr>
+	</table>
+
+	<table class="values">
+		<tr>
+			<td class="tag1"><span class="uma-strong">39</span></td>
+			<td class="tag2"><span class="uma-strong">Cataloging source</span></td>
+		</tr>
+	</table>
+	<table class="values">
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">#</td>
+			<td class="value2">=</td>
+			<td class="value3">National bibliographic agency</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">c</td>
+			<td class="value2">=</td>
+			<td class="value3">Cooperative cataloging program</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">d</td>
+			<td class="value2">=</td>
+			<td class="value3">Other</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">u</td>
+			<td class="value2">=</td>
+			<td class="value3">Unknown</td>
+		</tr>
+		<tr>
+			<td class="value0">&nbsp;</td>
+			<td class="value1">|</td>
+			<td class="value2">=</td>
+			<td class="value3">No attempt to code</td>
+		</tr>
+	</table>
+
+<br>
+
+<p class="main">An example of a 008 field is the following:</p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre>008  860107in#acannaaan##########sa#ana#####u</pre>
+			</td>
+		</tr>
+	</table>
+
+<br>
+
+<p class="nav">[<a href="pt8-11.html#top">Back to Top of Page</a>]</p>
+
+<hr align=center size=4 width=100>
+
+<br>
+
+<p class="nav1">[<a href="index.html">Back to Table of Contents</a>]  --  
+[<a href="pt12.html">Continue to Part 12</a>]</p>
+
+<br>
+<!-- LC Footer -->
+<hr>
+<img src="../../homepage/lc2.gif" height=46 width=91 alt=""> 
+<strong>Library of Congress</strong><br>
+<address> 
+<!-- help desk email start -->
+<a href="http://www.loc.gov/help/help-desk.html">Library of Congress Help Desk</a> 
+<!-- help desk email end -->
+( 
+<!-- #BeginDate format:Am3 -->07/06/2005<!-- #EndDate -->
+) </address>
+
+</tr>
+</table>
+
+<script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+</html>

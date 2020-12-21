@@ -1,0 +1,47 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Library of Congress/loc.gov//NONSGML v1.0//EN
+SOURCE;VALUE=URI:https://www.loc.gov/item/event-399780/stradivari-anniver
+ sary-concert/2020-12-18/?fo=ical
+REFRESH-INTERVAL:VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+METHOD:PUBLISH
+BEGIN:VTIMEZONE
+TZID:America/New_York
+BEGIN:STANDARD
+DTSTART:20071104T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:20070311T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:www-loc-gov-item-event-399780@loc.gov
+DTSTAMP:20201219T010000Z
+DTSTART;TZID=America/New_York:20201218T200000
+DTEND;TZID=America/New_York:20201218T220000
+SUMMARY:Stradivari Anniversary Concert
+STATUS:CONFIRMED
+CLASS:PUBLIC
+GEO:None
+LOCATION:
+CONTACT:
+DESCRIPTION:For more than 80 years\, the Library of Congress has celebrat
+ ed the extraordinary craftsmanship of Antonio Stradivari with an annual c
+ oncert.
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2/
+ /EN">\n
+<HTML>\n<HEAD>\n<TITLE></TITLE>\n</HEAD>\n<BODY>\nFor more than 80 years\
+ , the Library of Congress has celebrated the extraordinary craftsmanship 
+ of Antonio Stradivari with an annual concert.</BODY></HTML>
+URL;VALUE=URI:http://www.loc.gov/item/event-399780/
+END:VEVENT
+END:VCALENDAR

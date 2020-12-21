@@ -1,0 +1,1066 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                        "http://www.w3.org/TR/html40/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/marc_generic.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Record Structure: MARC 21 Specifications for Record Structure, Character Sets, and Exchange Media (Library of Congress)</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<meta name="description" content="MARC 21 is an implementation of the American national
+standard, Information Interchange Format(ANSI Z39.2) and its international counterpart, Format
+for Information Exchange (ISO 2709).  These standards specify the requirements for a
+generalized interchange format that will accommodate data describing all forms of materials
+susceptible to bibliographic description, as well as related information such as authority,
+classification, community information, and holdings data.  The standards present a generalized
+structure for records, but do not specify the content of the record and do not, in general, assign
+meaning to tags, indicators, or data element identifiers.  Specification of these elements are
+provided by particular implementations of the standards.  The following description of the
+MARC 21 record structure indicates the specific choices made for the MARC 21 implementation
+of the standards.">
+<meta name="keywords" content="MARC 21, Specifications, Record Structure">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+<style type="text/css">
+p {text-align:justify;}
+li {text-align:justify;}
+table {margin-bottom:2em;}
+.tablecontents {list-style:circle;}
+.tablesubcontents {list-style:circle; margin-left:2em;}
+</style>
+<!-- InstanceEndEditable -->
+<link href="http://www.loc.gov/marc/marc-generic.css" rel="stylesheet" type="text/css">
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+
+<body bgcolor="#ffffff">
+
+<a name="skip_menu"></a>
+<!-- InstanceBeginEditable name="content" -->
+
+<h3><em>MARC 21 Specifications for Record Structure, Character Sets, and Exchange Media</em></h3>
+<h2>RECORD STRUCTURE</h2>
+<div class="title">January 2000</div>
+<h4>CONTENTS</h4>
+ <ul>
+<li><a href="specrecstruc.html#intro">Introduction</a></li>
+<li><a href="specrecstruc.html#define">Definitions</a></li>
+<li><a href="specrecstruc.html#standard">Standards </a></li>
+<li><a href="specrecstruc.html#char">Character Sets</a></li>
+<li><a href="specrecstruc.html#genrec"> General Record Structure</a></li>
+<li><a href="specrecstruc.html#leader">Leader</a></li>
+<li><a href="specrecstruc.html#direct">Directory</a> </li>
+<li><a href="specrecstruc.html#varifields">Variable Fields</a></li>
+<li>Design Principles: 
+<div class="tablesubcontents"><a href="specrecstruc.html#content">Content designation</a></div>
+<div class="tablesubcontents"><a href="specrecstruc.html#varitags">Variable fields and
+tags</a></div>
+<div class="tablesubcontents"><a href="specrecstruc.html#note">Note fields</a></div>
+<div class="tablesubcontents"><a href="specrecstruc.html#local">Local fields</a></div>
+<div class="tablesubcontents"><a href="specrecstruc.html#repeat">Repeatability</a></div>
+<div class="tablesubcontents"><a href="specrecstruc.html#code">Coded data</a></div></li>
+</ul>
+<h4><a name="intro">INTRODUCTION</a></h4>
+<p>MARC 21 is an implementation of the American national standard, <em>Information
+Interchange Format</em> (ANSI Z39.2) and its international counterpart, <em>Format for
+Information Exchange</em> (ISO 2709).  These standards specify the requirements for a
+generalized interchange format that will accommodate data describing all forms of materials
+susceptible to bibliographic description, as well as related information such as authority,
+classification, community information, and holdings data.  The standards present a generalized
+structure for records, but do not specify the content of the record and do not, in general, assign
+meaning to tags, indicators, or data element identifiers.  Specification of these elements are
+provided by particular implementations of the standards.  The following description of the
+MARC 21 record structure indicates the specific choices made for the MARC 21 implementation
+of the standards.</p>
+
+<h4><a name="define">DEFINITIONS</a></h4>
+<p><em>Italicized terms within definitions are terms for which definitions are also
+provided.</em></p>
+<dl compact>
+<dt>
+<strong> base address of data. </strong></dt>
+<dd>
+A <em>data element</em> in the <em>leader</em>
+which
+specifies the first octet of the first
+<em>variable field</em> in the <em>record</em> and is
+equal to the sum of the <em>lengths</em> of the leader and the <em>directory,</em>
+including the <em>field terminator</em> at the end of the
+directory.</dd>
+<dt>
+<strong> bibliographic level. </strong></dt>
+<dd>
+A <em>data element</em> in the <em>leader</em> of
+bibliographic records which provides additional
+information about the characteristics and components of the <em>record,</em>
+and is used in conjunction
+with the <em>type of record</em> data element of the leader.</dd>
+<dt>
+<strong> blank (SP). </strong></dt>
+  <dd> ASCII character 20(hex) (represented graphically in MARC 21 documentation 
+    as <img src="images/blank.gif" alt="ASCII character 20 (hex)" width="10" height="14"> 
+    or #), which is used in <em>indicators</em> and data elements containing coded 
+    values (and occurs in data content). Generally, blank stands for "undefined," 
+    but in some instances it has been assigned a meaning. ASCII name is space.</dd>
+<dt>
+<strong> character. </strong></dt>
+<dd>
+A member of a set of elements used for organization, control, or
+representation of data.  In MARC 21 a character may be encoded using one or more than
+one <em>octet,</em> depending on the character set.  All ASCII
+characters are encoded using one
+octet in the ASCII encoding and the Unicode UTF-8 encoding, thus a character is
+equivalent in length to an octet when an element's values are restricted to
+ASCII.</dd>
+<dt>
+<strong> content designation. </strong></dt>
+<dd>
+The codes and conventions established explicitly by MARC 21 to identify and
+further
+characterize the data elements within a record and to support the manipulation of
+that
+data.</dd>
+<dt>
+<strong> control field. </strong></dt>
+<dd>
+A <em>variable field</em> containing information useful or
+required for
+the processing of the
+<em>record</em>.  Control fields are assigned <em>tags</em>
+beginning with two zeroes.  Control fields with fixed length data elements are
+restricted to ASCII graphics.</dd>
+<dt>
+<strong> control number. </strong></dt>
+<dd>
+An ASCII graphic <em>character</em> string uniquely associated
+with a <em>record</em> by the
+organization transmitting the record and located in a specific <em>variable
+field</em>.</dd>
+<dt>
+<strong> data element. </strong></dt>
+<dd>
+A defined unit of information.</dd>
+<dt>
+<strong> data element identifier. </strong></dt>
+<dd>
+A one-character code used to identify individual data
+elements within a
+<em>variable field</em>.  The data element may be any ASCII lowercase
+alphabetic, numeric, or graphic symbol except blank.</dd>
+<dt>
+<strong> data field. </strong></dt>
+<dd>
+A <em>variable field</em> containing bibliographic or other
+data.  Data
+fields are assigned <em>tags</em>
+beginning with characters other than two zeroes.  Data fields contain data in any
+MARC 21 <em>character</em> set unless a field-specific restriction
+applies.</dd>
+<dt>
+<strong> delimiter. </strong></dt>
+  <dd> ASCII control character 1F(hex) (represented graphically in MARC 21 documentation 
+    as <img src="images/delimitr.gif" alt="ASCII control character 1F (hex)" width="10" height="18"> 
+    or $), which is combined with a <em>data element identifier</em> to make up 
+    the <em>subfield code</em> which precedes each individual <em>data element</em> 
+    within a <em>variable field</em>. The ASCII name for the delimiter is unit 
+    separator (US).</dd>
+<dt>
+<strong> directory. </strong></dt>
+<dd>
+An index to the location of the <em>variable fields</em>
+(control and
+data) within a <em>record</em>.  The
+directory consists of <em>entries</em>.</dd>
+<dt>
+<strong> encoding level. </strong></dt>
+<dd>
+A <em>data element</em> in the <em>leader</em> of
+authority, bibliographic, classification, and holdings
+records which provides information about the fullness of the information and/or
+content
+designation in the <em>record</em>.</dd>
+<dt>
+<strong> entry.   </strong></dt>
+<dd>
+A <em>field</em> within the <em>directory</em>
+which
+gives the <em>tag,</em> <em>length</em> and <em>starting character
+position</em> of
+a <em>variable field</em>.</dd>
+<dt>
+<strong> entry map. </strong></dt>
+<dd>
+A data element in the <em>leader</em> which specifies the
+structure of
+the <em>entries</em> in the <em>directory</em>. 
+Always set to 4500 in MARC 21 records.</dd>
+<dt>
+<strong> field. </strong></dt>
+<dd>
+A defined character string that may contain one or more <em>data
+elements</em>.</dd>
+<dt>
+<strong> field terminator (FT). </strong></dt>
+<dd>
+ASCII control character 1E(hex) (represented graphically in MARC 21
+documentation as
+FT
+or ^), which is used to terminate the <em>directory</em> and each <em>variable
+field</em>
+within a <em>record</em>.  ASCII name for the field terminator is
+record
+separator (RS).</dd>
+<dt>
+<strong> fill character. </strong></dt>
+<dd>
+ASCII graphical vertical bar ( | )(7C(hex)), which fills a required
+character position and has the meaning "no attempt has been made to code".</dd>
+<dt>
+<strong> fixed field. </strong></dt>
+<dd>
+A <em>field</em> whose length does not vary.  The term is
+occasionally
+used to refer to variable
+<em>control fields,</em> especially those that contain coded data such
+as fields
+007 or 008.</dd>
+<dt>
+identifier length</dt>
+<dd>
+<em>see</em>  <strong> subfield
+code length </strong></dd>
+<dt>
+<strong> indicator. </strong></dt>
+<dd>
+A <em>data element</em> associated with a data field that
+supplies
+additional information about
+the field.  An indicator may be any ASCII lowercase alphabetic, numeric, or blank. 
+Indicators are not used in <em>control
+fields</em>.</dd>
+<dt>
+<strong> indicator count. </strong></dt>
+<dd>
+A <em>data element</em> in the <em>leader</em>
+which
+contains the number positions reserved for <em>indicators</em>
+in each variable <em>data field</em>.  The indicator count is always
+set to 2 in
+MARC 21 records.</dd>
+<dt>
+<strong> leader.   </strong></dt>
+<dd>
+A <em>fixed field</em> that occurs at the beginning of each
+<em>record</em> and provides information for
+the processing of the record.</dd>
+<dt>
+<strong> length. </strong></dt>
+<dd>
+A measure of the size of a data element, field, or record and is expressed in
+number of
+<em>octets</em>.</dd>
+<dt>
+<strong> logical record length. </strong></dt>
+<dd>
+A <em>data element</em> in the <em>leader</em>
+which
+contains the length of the entire <em>record,</em> including
+itself and the <em>record terminator</em>.</dd>
+<dt>
+<strong> octet. </strong></dt>
+<dd>
+A string of 8 bits.  In some cases (e.g., ASCII) each octet represents a
+<em>character</em>; in other cases (e.g., Unicode) multiple octets may
+represent a
+character.</dd>
+<dt>
+<strong> record. </strong></dt>
+<dd>
+A collection of data elements describing or identifying one or more units
+treated as one
+logical  entity.</dd>
+<dt>
+record length</dt>
+<dd>
+ <em>see</em> <strong> logical
+record length </strong></dd>
+<dt>
+<strong> record status. </strong></dt>
+<dd>
+A <em>data element</em> in the <em>leader</em>
+which
+indicates the relation of the <em>record</em> to a file (e.g.,
+new, updated, etc.).</dd>
+<dt>
+<strong> record terminator (RT). </strong></dt>
+<dd>
+ASCII control character 1D(hex) (represented graphically in MARC 21
+documentation as
+RT
+or \), which is used as the final character of a <em>record,</em> following the
+<em>field terminator</em> of the last <em>data field</em>. 
+ASCII
+name for the record terminator is "group separator"
+(GS).</dd>
+<dt>
+space</dt>
+<dd>
+<em>see</em> <strong> blank </strong></dd>
+<dt>
+<strong> starting character position. </strong></dt>
+<dd>
+The position, relative to the <em>base address of
+data,</em> of
+the first <em>octet</em> of the first <em>character</em>
+in the
+<em>variable field</em> referenced by the entry.  The first character
+of the first
+<em>field</em> following the <em>directory</em>
+is numbered 0.</dd>
+<dt>
+status</dt>
+<dd>
+<em>see</em>  <strong> record status </strong></dd>
+<dt>
+<strong> subfield code. </strong></dt>
+<dd>
+The two-character combination of a <em>delimiter</em> followed
+by a
+<em>data element identifier</em>. 
+Subfield codes are not used in <em>control fields</em>.</dd>
+<dt>
+<strong> subfield code length. </strong></dt>
+<dd>
+A <em>data element</em> in the <em>leader</em>
+which
+contains the sum of the lengths of the <em>delimiter</em> and
+the <em>data element identifier</em> used in the <em>record</em>.  Always set to
+2 in MARC 21 records.</dd>
+<dt>
+<strong> tag. </strong></dt>
+<dd>
+A three character string used to identify or label an associated <em>variable
+field</em>.  The tag
+may consist of ASCII numeric characters (decimal integers 0-9) and/or ASCII
+alphabetic
+characters (uppercase or lowercase, but not both).</dd>
+<dt>
+<strong> type of record. </strong></dt>
+<dd>
+A <em>data element</em> in the <em>leader</em>
+that with <em>bibliographic level,</em> specifies the
+characteristics and defines the components of the <em>record</em>.</dd>
+<dt>
+variable control field</dt>
+<dd>
+<em>see</em>  <strong> control field </strong></dd>
+<dt>
+variable data field</dt>
+<dd>
+<em>see</em>  <strong> data
+field </strong></dd>
+<dt>
+<strong> variable field. </strong></dt>
+<dd>
+A <em>field</em> whose <em>length</em> is
+determined
+for each occurrence by the length of data comprising
+that occurrence.  There are two types of variable fields <em>control
+fields</em>
+and <em>data fields</em>.</dd>
+</dl>
+
+<h4><a name="standard">STANDARDS</a></h4>
+<ul><li><em>Information Interchange Format</em> (ANSI Z39.2)</li>
+
+<li>      <em>Code for Information Interchange</em> (ASCII) (ANSI X3.4)</li>
+
+<li>      <em>Format for Information Exchange</em> (ISO 2709)</li>
+
+<li><a href="../96principl.html"><em>The MARC 21 Formats:
+Background and Principles</em></a></li>
+</ul>
+
+
+
+<h4><a name="char">CHARACTER SETS</a></h4>
+<p>MARC 21 records are character encoded, including all lengths.  In this section on
+Record
+Structure, elements may be specified as ASCII numeric characters, ASCII
+lowercase alphabetic
+characters,
+ASCII uppercase alphabetic characters, ASCII graphic symbol characters, ASCII
+control characters, ASCII blank character, ASCII graphic characters, or MARC 21
+characters.  The
+section on
+<a href="speccharintro.html">Character Sets</a>
+ defines the
+repertoire and encoding of each of these subsets of
+characters.</p>
+
+<h4><a name="genrec">GENERAL RECORD STRUCTURE</a></h4>
+<p>The general structure of a record is represented schematically below.</p>
+<p><strong>Structure of a MARC 21
+Record</strong></p>
+<pre>  LEADER  DIRECTORY  FT  CONTROL_NUMBER_FIELD  FT
+
+      CONTROL_FIELD_1  FT   ...   CONTROL_FIELD_n  FT
+
+          DATA_FIELD_1  FT   ...   DATA_FIELD_n  FT  RT 
+</pre>
+<p>Each record begins with a <strong> leader, </strong> which is a fixed field
+containing
+information for the
+processing of the
+record.  Following the leader is the <strong> directory, </strong> which is an
+index to the
+location of the <strong> variable fields </strong>
+(control
+and data) within the record.  The fields following the directory are all variable
+fields.  The first
+variable field
+is the <strong> control number field, </strong> which contains an ASCII graphic
+character
+string uniquely associated
+with
+the
+record by the organization transmitting the record.  Following the control number
+field are the
+rest
+of the
+<strong> control fields, </strong> which contain information useful or required
+for the
+processing of the record. 
+Following the
+control fields are <strong> data fields, </strong> which contain general data.  A
+<strong> field terminator </strong> (FT), ASCII control character
+1E(hex), is
+used to terminate the directory and each variable field within the record.  A <strong> record
+terminator </strong>
+(RT),
+ASCII control character 1D(hex), is used as the final character of the record,
+following
+the field
+terminator of
+the
+last
+data field. 
+These elements of the record are described in more detail in the following
+sections.</p>
+
+<h4><a name="leader">LEADER</a></h4>
+<p>The leader is the first field in the record and has a fixed length of 24
+octets (character
+positions 0-23).  Only ASCII graphic characters are allowed in the Leader.  The
+structure of the leader as defined in MARC 21 is represented schematically below. 
+The
+numbers
+indicate
+the character positions occupied by each part of the leader.</p>
+<p><strong>Structure of the Leader in MARC 21 Records</strong></p>
+<pre>RECORD_LENGTH RECORD_STATUS TYPE_OF_RECORD IMPLEMENTATION-        
+                                            DEFINED
+  00-04          05             06              07-08 
+
+      CHARACTER_CODING_SCHEME  INDICATOR_COUNT SUBFIELD_CODE_LENGTH
+      09                       10               11
+
+          BASE_ADDRESS_OF_DATA  IMPLEMENTATION-DEFINED  ENTRY_MAP
+          12-16                 17-19                   20-23
+
+</pre>
+<p><strong>Record length </strong> (character positions 00-04), contains
+a
+five-character ASCII numeric
+string equal
+to the length of the entire record, including itself and the record terminator.  The
+five-character
+numeric string
+is right justified and unused positions contain zeroes (zero fill).  The maximum
+length of a record
+is
+99999
+octets.  </p>
+<p><strong> Record status </strong> (character position 05), contains an ASCII
+graphic
+character which indicates
+the
+relation
+of the record to a file (e.g., new, updated, etc.).</p>
+<p><strong> Type of record </strong> (character position 06), contains an ASCII
+graphic
+character which specifies
+the
+characteristics and defines the components of the record.</p>
+<p><strong> Implementation-defined </strong> (character positions 07-08).  ANSI
+Z39.2 and ISO 2709 reserve character positions 07-08 for definition by a particular
+implementation. 
+The
+individual MARC 21 formats define
+these
+character
+positions if needed.  Positions may contain only ASCII graphic
+characters. Any position not defined contains a blank.</p>
+
+<ul>
+<li><strong>Bibliographic level </strong> (bibliographic record,
+character
+position 07): contains
+an ASCII graphic character which
+also provides information about the components and characteristics of the
+record.</li>
+<li><strong>Kind of data </strong>(community information record,
+character
+position 07): contains
+an ASCII graphic character which
+also provides information about the components and characteristics of the
+record.</li>
+<li><strong>Type of control </strong>(bibliographic record, character
+position 08): contains
+an ASCII graphic character which
+also provides information about the components and characteristics of the
+record.</li>
+</ul>
+
+<p><strong>Character coding scheme</strong> (character position 09), contains
+a code that identifies the character coding scheme used in a record.</p>
+<p><strong> Indicator count </strong> (character position 10), contains 
+one ASCII numeric character specifying the
+number of indicators occurring in each variable data field.  In MARC 21 records, the
+indicator
+count
+is always
+2.</p>
+<p><strong> Subfield code length </strong> (character position 11), contains one
+ASCII
+numeric character specifying the sum of the lengths of the delimiter and the data
+element identifier used in the
+record.  In
+MARC 21 records,
+the subfield code length is always 2.  The ANSI Z39.2 and ISO 2709 name for this data
+element is <strong> identifier length </strong>.</p>
+<p><strong> Base address of data </strong> (character positions 12-16), contains
+five
+ASCII numeric characters that specify the first character position of the first
+variable
+field in the record.  It is equal to the sum
+of
+the lengths
+of the leader and the directory, including the field terminator at the end of the
+directory.  The
+number
+is right
+justified and unused positions contain zeroes (zero fill).</p>
+<p><strong> Implementation-defined </strong> (character positions 17-19).  ANSI
+Z39.2 and ISO 2709 reserve character positions 17-19 for definition by a particular
+implementation. 
+The
+individual MARC 21 formats define
+these
+character
+positions is needed. Positions may contain only ASCII graphic
+characters. Any position not defined contains a blank.</p>
+<p><strong> Entry map </strong> (character positions 20-23), contains four single
+digit
+ASCII numeric characters
+that
+specify the structure of the entries in the directory.</p>
+<ul>
+<li><strong> Length of length-of-field </strong> (character position 20):
+specifies
+the length of that part
+of each
+ directory entry; in MARC 21 records, it is always set to 4.</li>
+<li><strong> Length of starting-character-position </strong> (character  
+position 21): specifies the length
+of that part of each directory entry; in MARC 21 records, it is always set to
+5.</li>
+<li> <strong> Length of implementation-defined </strong> (character
+position 22):
+specifies that part of
+each directory entry; in MARC 21 records, a directory entry does not contain an
+implementation-defined portion, therefore this position is always set to 0.</li>
+<li><strong> Undefined </strong> (character position 23): this character
+position is undefined; it is always set to 0.</li>
+</ul>
+<p><strong> Structure of an Entry Map in MARC 21
+Record</strong></p>
+<pre>  LENGTH OF        LENGTH OF            LENGTH OF  
+  LENGTH-OF-FIELD  STARTING-CHARACTER-  IMPLEMENTATION-
+  PART             POSITION PART        DEFINED PART     UNDEFINED
+  20               21                   22               23
+</pre>
+
+<h4><a name="direct">DIRECTORY</a></h4>
+<p>A directory entry in MARC 21 is made up of a tag, length-of-field, and field
+starting position. 
+The
+directory begins in character position 24 of the record and ends with a field
+terminator.  It is of
+variable length
+and consists of a series of fixed fields, referred to as "entries."  One entry is
+associated with each
+variable field
+(control or data) present in the record.  Each directory entry is 12 characters in
+length; the
+structure
+of each
+entry as defined in MARC 21 is represented schematically below.  The numbers indicate
+the
+character
+positions
+occupied by the parts of the entry.</p>
+<p><strong> Structure of a Directory Entry in MARC 21
+Records</strong></p>
+<pre>    TAG     LENGTH_OF_FIELD     STARTING_CHARACTER_POSITION
+    00-02   03-06               07-11
+</pre>
+<p><strong> Tag </strong> (character positions 00-02), consists of three ASCII
+numeric
+characters or ASCII
+alphabetic
+characters (uppercase or lowercase, but not both) used to identify or label an
+associated variable
+field. 
+The
+MARC 21 formats have used only numeric tags.  The tag is stored only in the directory
+entry for
+the
+field; it
+does not appear in the variable field itself.</p>
+<p><strong> Length of field </strong> (character positions 03-06), contains four
+ASCII
+numeric characters which give
+the length,
+expressed as a decimal number, of the variable field to which the entry corresponds. 
+This length
+includes the
+indicators, subfield codes, data and field terminator associated with the field.  A
+field length
+number
+of fewer
+than four digits is right justified and unused positions contain zeroes (zero fill). 
+MARC 21 sets
+the
+length of
+the length of field portion of the entry at four characters, thus a field may contain a
+maximum of
+9999 octets.</p>
+<p><strong> Starting character position </strong> (character positions 07-11),
+contains
+five ASCII numeric
+characters
+which
+give the starting character position, expressed as a decimal number, of the variable
+field to which
+the
+entry
+corresponds relative to the base address of data of the record.  A starting
+character position of
+fewer
+than five
+digits is right justified and unused positions contain zeroes (zero fill).</p>
+<p><strong> Order of entries </strong>  Directory entries for control fields
+precede
+entries for data fields.  Entries
+for control fields
+are
+sequenced
+by tag in increasing numerical order.  Entries for data fields are arranged in
+ascending order
+according
+to the
+first character of the tag, with numeric characters preceding alphabetic
+characters.  See Variable Fields below for order requirements for the fields to
+which
+the directory entries point.</p>
+
+<h4><a name="varifields">VARIABLE FIELDS</a></h4>
+<p>The variable fields follow the leader and the directory in the record and consist
+of control
+fields
+and data
+fields.  Control fields precede data fields in the record and are arranged in the
+same sequence as
+the
+corresponding entries in the directory.  The sequence in which data fields are
+stored in the record
+is
+not
+necessarily the same as the order of the corresponding directory entries.</p>
+<p><strong> Control fields </strong> in MARC 21 formats are assigned tags
+beginning
+with two zeroes. 
+They are
+comprised
+of data and a field terminator; they do not contain indicators or subfield codes. 
+The control
+number
+field is
+assigned tag 001 and contains the control number of the record.  Each record
+contains only one
+control number
+field (with tag 001), which is to be located at the base address of data.</p>
+<p><strong> Data fields </strong> in MARC 21 formats are assigned tags beginning
+with
+ASCII numeric
+characters
+other than
+two zeroes.  Such fields contain indicators and subfield codes, as well as data and
+a field
+terminator. 
+There
+are no restrictions on the number, length, or content of data fields other than
+those already stated
+or
+implied,
+e.g., those resulting from the limitation of total record length.  The structure of
+a data field is
+shown
+schematically below.</p>
+<p><strong>Structure of a Variable Data Field in MARC 21
+Records</strong></p>
+<pre>  INDICATOR_1  INDICATOR_2  DELIMITER  DATA_ELEMENT_IDENTIFIER_1
+
+      DATA_ELEMENT_1  ...  DELIMITER  DATA_ELEMENT_IDENTIFIER_n  
+
+          DATA_ELEMENT_n  FT
+</pre>
+<p><strong> Indicators </strong> are the first two characters in every variable
+data
+field, preceding any subfield
+code (delimiter plus data element identifier) which may be present.  Each indicator
+is
+one character and every data field
+in the record
+includes two
+indicators, even if values have not been defined for the indicators in a particular
+field.  Indicators
+supply
+additional information about the field, and are defined individually for each field. 
+Indicator values
+are
+interpreted independently; meaning is not ascribed to the two indicators taken
+together. 
+Indicators
+may be any
+ASCII lowercase alphabetic, numeric, or blank. A blank is used in an undefined indicator
+position, and may also have a defined meaning in a defined indicator position.  The
+numeric
+character 9 is reserved for local
+definition
+as an
+indicator.</p>
+<p><strong> Subfield codes </strong> identify the individual data elements within
+the
+field, and precede the data
+elements they
+identify.  Each data field contains at least one subfield code.  The subfield code
+consists of a
+delimiter (ASCII 1F (hex)) followed by a data element identifier.  Data element identifiers
+defined in
+MARC 21 may be
+any
+ASCII
+lowercase alphabetic or numeric character.  In general, numeric identifiers are
+defined for data
+used
+to process
+the field, or coded data needed to interpret the field.  Alphabetic identifiers are
+defined for the
+separate elements
+which constitute the data content of the field.  The character 9 and the following
+ASCII graphic
+symbols are
+reserved for local definition as data element identifiers:</p>
+<pre> ! " # $ % & ' ( ) * + , - . / : ; &lt; = &gt; ? { } _ ^ ` ~ [ ] \  
+</pre>
+
+<p>A data field may contain more than one data element, depending upon the
+definition of the
+field. 
+The last
+character in a data field is the <strong> field terminator, </strong> which
+follows the last
+data element in the
+field.</p>
+
+<h4>DESIGN PRINCIPLES FOR MARC 21</h4>
+<p>A MARC 21 format is a set of codes and content designators defined for encoding a
+particular
+type of
+machine-readable record.  The MARC 21 formats as a group serve as a vehicle for
+authority,
+bibliographic,
+classification, community information, and holdings data of all types.  These
+formats are intended
+to
+be
+communication formats and are primarily designed to provide specifications for the
+exchange of
+information
+between systems.  The following description of design principles repeats, in some
+cases,
+information
+given
+above but is given again for completeness.</p>
+<h4><a name="content">Content Designation</a></h4>
+<p>The purpose of content designation is to identify and characterize the data
+elements which
+comprise a
+MARC record with sufficient precision to support manipulation of the data for a
+variety of
+functions. The
+MARC 21 formats have attempted to preserve consistency of content designation across
+formats
+where this
+is appropriate.</p>
+<p>The MARC 21 content designation supports the sorting of data only to a limited
+extent. 
+In
+general,
+sorting
+must be
+accomplished through the application of external algorithms to the data.</p>
+<p>The MARC 21 formats provide for using content designation, e.g., tag values or
+indicators,
+to
+specify recommended display constants.  A display constant is a term, phrase, and/or
+spacing or
+punctuation convention
+that
+may
+be system generated under prescribed circumstances to make a visual presentation of
+data in a
+record
+more
+meaningful to a user.  The display constant text is not carried in the data, but may
+be supplied for
+display by
+the processing system.</p>
+<h4><a name="varitags">Variable Fields and Tags</a></h4>
+<p>The data in a MARC 21 record is organized into fields, each identified by a
+three-character
+tag. 
+Although ANSI Z39.2 and ISO 2709 allow both alphabetic and numeric characters,
+MARC 21
+formats
+use only
+numeric
+tags.  The tag is stored in the directory entry for the field, not in the field
+itself.  Variable field tags are
+defined in blocks according to the first character of the tag, which, with some
+exceptions, identifies the general function of
+the field's data within a record.  The type of information in the field is
+identified
+by the
+remainder of the
+tag. 
+The
+meaning of these blocks depends upon the type of record.</p>
+<p>The bibliographic format blocks are:</p>
+<ul>
+<li>0XX - Control information, numbers, and codes</li>
+<li>1XX - Main entry</li>
+<li>2XX - Titles and title paragraph (title, edition, imprint)</li>
+<li>3XX - Physical description, etc.</li>
+<li>4XX - Series statements</li>
+<li>5XX - Notes</li>
+<li>6XX - Subject access fields</li>
+<li>7XX - Added entries other than subject or series; linking fields</li>
+<li>8XX - Series added entries; location, and alternate graphics</li>
+<li>9XX - Reserved for local implementation</li>
+</ul>
+<p>The authority format blocks are:</p>
+<ul>
+<li>0XX - Control information, numbers, and codes</li>
+<li>1XX - Heading</li>
+<li>2XX - Complex see references</li>
+<li>3XX - Complex see also references</li>
+<li>4XX - See from tracings</li>
+<li>5XX - See also from tracings</li>
+<li>6XX - Reference notes, treatment decisions, notes, etc.</li>
+<li>7XX - Heading linking entries</li>
+<li>8XX - Location and alternate graphics</li>
+<li>9XX - Reserved for local implementation</li>
+</ul>
+<p>The classification format blocks are:</p>
+<ul>
+<li>0XX - Control information, numbers, and codes</li>
+<li>1XX - Classification numbers and terms</li>
+<li>2XX - Complex see references</li>
+<li>3XX - Complex see also references</li>
+<li>4XX - Invalid number tracings</li>
+<li>5XX - Valid number tracings</li>
+<li>6XX - Note fields</li>
+<li>70X-75X - Index term fields</li>
+<li>76X - Number building fields</li>
+<li>8XX - Location and alternate graphics</li>
+<li>9XX - Reserved for local implementation</li>
+</ul>
+<p>The community information format blocks are:</p>
+<ul>
+<li>0XX - Control information, numbers, and codes</li>
+<li>1XX - Primary names</li>
+<li>2XX - Titles, addresses</li>
+<li>3XX - Physical information, etc.</li>
+<li>4XX - Series information</li>
+<li>5XX - Notes</li>
+<li>6XX - Subject access fields</li>
+<li>7XX - Added entries other than subject</li>
+<li>8XX - Location and alternate graphics</li>
+<li>9XX - Reserved for local implementation</li>
+</ul>
+<p>The holdings format blocks are:</p>
+<ul>
+<li>0XX - Control information, numbers, and codes <br>
+<li>1XX - Not defined</li>
+<li>2XX - Not defined</li>
+<li>3XX - Not defined</li>
+<li>4XX - Not defined</li>
+<li>5XX - Notes</li>
+<li>6XX - Not defined</li>
+<li>7XX - Not defined</li>
+<li>8XX - Holdings and location data, notes</li>
+<li>9XX - Reserved for local implementation</li>
+</ul>
+<p>Within some blocks of variable fields, parallels of content designation are
+preserved, e.g., bibliographic records (1XX, 4XX, 6XX, 7XX, 8XX), authority records
+(1XX, 4XX, 5XX, 7XX), classification records (70X-75X), and community information
+records (1XX, 4XX, 6XX, 7XX).  The
+following meanings are generally given to the final two characters of the tag of
+fields
+in these blocks:</p>
+<ul>
+<li>X00 - Personal names</li>
+<li>X10 - Corporate names</li>
+<li>X11 - Meeting names</li>
+<li>X30 - Uniform titles</li>
+<li>X40 - Bibliographic titles</li>
+<li>X50 - Topical terms</li>
+<li>X51 - Geographic names</li>
+<li>X55 - Genre/form terms</li>
+</ul>
+<h4><a name="note">Note Fields</a></h4>
+<p>Rules have been developed for the MARC 21 formats that guide when a separate field
+should be defined for note
+data and
+when
+the data
+should be included in a general note field.  For the MARC 21 bibliographic format, a
+specific 5XX
+note field
+is defined when at least one of the following is true:</p>
+<ol>
+<li>Categorical indexing or retrieval is required on the data defined for the
+note.  The note is
+used for
+  structured access purposes but does not have the nature of a controlled access
+point.</li>
+<li>Special manipulation of that specific category of data is a routine
+requirement.  Such
+manipulation
+  includes special print or display formatting or selection or suppression from
+display or printed
+  product.</li>
+<li>Specialized structuring of information for reasons other than those given
+above, e.g., to
+support
+  particular standards of data content when they cannot be supported in existing
+fields.</li>
+</ol>
+
+<p>For the MARC 21 authority format, the specifications for notes are covered in the
+following
+two
+conditions:</p>
+
+<ol>
+<li>A specific note field is needed when special manipulation of that specific
+category of data
+is a
+  routine requirement.  Such manipulation includes special print or display
+formatting or
+selection
+  or suppression from display or printed product.</li>
+<li>Multiple notes are generally not established to accommodate the same type of
+information
+for
+  different types of authorities.  Notes are thus not differentiated by or limited
+to subject, name,
+or
+  series if the same information applies to more than one type.</li>
+  </ol>
+  
+<h4><a name="local">Local Fields</a></h4>
+<p>Certain tags have been reserved for local implementation.  The MARC 21 formats specify
+no structure or meaning for local fields.  Communication
+of such fields between systems is governed by mutual agreements on the content and content
+designation of the fields
+communicated.</p>
+<p>In general, any tag containing the character 9 is reserved for local implementation within
+the block structure.  Specifically the 9XX block is reserved for local implementation as indicated
+above.  The historical development of the MARC 21 formats has left one exception to this
+general principle: field 490 (Series Statement) in the bibliographic format.  There are several
+obsolete fields with tags containing the
+character 9 (e.g., 009 (Physical Description Fixed-Field for Archival Collection) and 039 (Level
+of Bibliographic Control and Coding Detail)).  The indicator value 9 and subfield 9 are also
+reserved for local implementation.</p>
+<h4><a name="repeat">Repeatability</a></h4>
+<p>Theoretically, all fields, except 001 (Control Number) and 005 (Date and Time of
+Latest Transaction), and subfields may be repeated.  The nature of the data, however, often
+precludes repetition (e.g., a bibliographic or community information record may contain only
+one field 245 (Title Statement); an authority or classification record may contain only one 1XX
+heading field).  The repeatability or nonrepeatability of each
+field and subfield is specified in the MARC 21 formats.</p>
+<h4><a name="code">Coded Data</a></h4>
+<p>In addition to content designation, the MARC 21 formats include specifications for
+the content of certain data elements, particularly those that provide for the representation of data
+by coded values.  Coded values consist of fixed-length ASCII character strings.  Individual
+elements within a coded-data field or subfield are identified by relative character position. 
+Although coded data occur most frequently in the leader, directory, and variable control fields,
+any field or subfield may be defined for coded data.</p>
+<p>Certain common values for codes used in coded data have been defined:</p>
+<dl compact>
+<dt>
+<strong> blank (ASCII 20 (hex)) </strong></dt>
+<dd>
+Undefined (element not
+defined)</dd>
+<dt>
+<strong>  n </strong></dt>
+<dd>
+Not applicable (element not applicable
+to
+the item)</dd>
+<dt>
+<strong> u </strong></dt>
+<dd>
+Unknown (record creator was unable to determine value)</dd>
+<dt>
+<strong> z </strong></dt>
+<dd>
+Other (value other than those defined for the element)</dd>
+<dt>
+<strong> | </strong></dt>
+<dd>
+Fill character (record creator has chosen not to provide information)</dd>
+</dl>
+<p>Historical exceptions to these definitions may occur in the formats.  In particular,
+the blank has been defined as <em>not applicable,</em> or has been assigned a
+meaning.</p>
+<!-- InstanceEndEditable -->
+<hr size="1" noshade>
+<p><a href="../../marc.html">MARC 21 HOME</a> &gt;&gt; <!-- InstanceBeginEditable name="bottombreadcrumb" --><a href="spechome.html">Specifications</a> &gt;&gt; <strong>Record Structure</strong> <!-- InstanceEndEditable --></p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr valign="bottom">
+    <td><a href="../../index.html">The Library of Congress</a> &gt;&gt; <a href="../../library/index.html">Especially
+    for Librarians and Archivists</a> &gt;&gt; <a href="../../standards/index.html">Standards</a><br>
+    (<!-- MM:BeginLock type="mmdate" format="Am3" orig=" -->
+    <!-- #BeginDate format:Am3 -->12/05/2007<!-- #EndDate -->
+    ) </td>
+    <td align="right"><a href="http://www.loc.gov/cdn-cgi/l/email-protection#d9b7bdb4aab699b5b6baf7beb6af">Contact Us</a></td>
+  </tr>
+</table>
+<script data-cfasync="false" src="http://www.loc.gov/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+<!-- InstanceEnd --></html>

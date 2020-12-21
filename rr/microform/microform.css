@@ -1,0 +1,373 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #333333;
+}
+td {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #333333;
+}
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #333333;
+}
+dd {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #666666;
+	margin-left: 10pt;
+}
+dt {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #000066;
+}
+.larger {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	font-weight: bold;
+}
+.caption {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+}
+a.white {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #EEEEEE;
+	text-decoration: none;
+}
+a.white:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+.white-text {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #EEEEEE;
+}.drop-box {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+}
+h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16pt;
+	font-weight: bold;
+	color: #339966;
+}
+h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14pt;
+	font-weight: bold;
+	color: #666633;
+}
+.largecap {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14pt;
+	font-weight: bold;
+	color: #339966;
+}
+.blue-header {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	font-weight: bold;
+	color: #663333;
+}
+address {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+}
+.selected {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #666600;
+}
+.burg-bold {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #000066;
+}
+h3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13pt;
+	font-weight: bold;
+	color: #666600;
+}
+h4 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	font-weight: bold;
+	color: #000000;
+}
+.background-green {
+	background-image:  url(images/spacer-green.gif);
+	background-color: #003399;
+}
+.background-gray {
+	background-image:  url(images/spacer-gray.gif);
+	background-color: #DDDDDD;
+}
+.background-ltgreen {
+	background-image:  url(images/spacer-ltgreen.gif);
+	background-color: #e3eed9;
+}
+ul, ol {
+	margin: 0 0 1.25em 0;
+	padding-left: 2.5em;
+	color: #333333;
+}
+ul li, ol li {margin-bottom: 4px;}
+li ul, li ol {margin: .5em 0 .5em 0;}
+ul.plain {
+list-style: none;
+padding-left: 0px;
+}
+ul.plain li {
+padding: 0;
+}
+ul.std {
+list-style: none;
+padding-left: 0px;
+}
+ul.std li {
+padding: 0 0 0 14px;
+background: transparent url(http://www.loc.gov/img-std/i_arrow.gif) 3px 5px no-repeat;
+}
+ul.bullet {
+list-style: none;
+padding-left: 0px;
+}
+ul.bullet li {
+padding: 0 0 0 14px;
+background: transparent url(http://www.loc.gov/img-std/bullet.gif) 3px 6px no-repeat;
+}
+ul.anchor {
+list-style: none;
+padding-left: 0px;
+}
+ul.anchor li {
+padding: 0 0 0 14px;
+background: transparent url(http://www.loc.gov/img-std/i_arrow_down.gif) 0px 4px no-repeat;
+}
+.medieval blockquote {
+	margin: 5px 10px 0px 10px;
+	padding-left: 0px;
+}
+a.ar-more,
+a.ar-more-gray,
+a.ar-back,
+a.ar-back-gray {
+background-color:transparent;
+background-image:url(http://www.loc.gov/img-std/loc_sprite_ss.png);
+background-repeat:no-repeat;
+background-position: 0 0;
+}
+a.ar-more,
+a.ar-more-gray {
+padding: 0 8px 0 0 ;
+}
+a.ar-back,
+a.ar-back-gray {
+padding: 0 0 0 8px ;
+}
+a.ar-more {background-position: 100% -27px;}
+a.ar-more:hover, 
+a.ar-more:focus {background-position: 100% -43px;}
+
+a.ar-more-gray {background-position: 100% -59px;}
+a.ar-more-gray:hover, 
+a.ar-more-gray:focus {background-position: 100% -59px;}
+
+a.ar-back {background-position: 0 -75px;}
+a.ar-back:hover, 
+a.ar-back:focus {background-position: 0 -91px;}
+
+a.ar-back-gray {background-position: 0 -107px;}
+a.ar-back-gray:hover, 
+a.ar-back-gray:focus {background-position: 0 -107px;}
+
+a.enlarge,
+a.newwindow,
+a.perma,
+a.print,
+a.podcast,
+a.podcast2,
+a.rss,
+a.video,
+a.video2,
+a.audio,
+a.audio2,
+a.pag-list,
+a.pag-gallery,
+a.pag-grid,
+a.pag-slide {
+padding: 0 0 0 16px;
+background-repeat: no-repeat;
+background-position: 0 0;
+background-color:transparent;
+background-image:url(http://www.loc.gov/img-std/loc_sprite_ss.png);
+}
+a.ico_right {
+padding: 0 16px 0 0;
+}
+a.enlarge {background-position: -1px -127px;}
+a.enlarge:hover,
+a.enlarge:focus {background-position: -1px -143px;}
+a.enlarge.ico_right {background-position: 100% -127px;}
+a.enlarge.ico_right:hover, 
+a.enlarge.ico_right:focus {background-position: 100% -143px;}
+
+a.newwindow {background-position: -1px -158px;}
+a.newwindow:hover, 
+a.newwindow:focus {background-position: -1px -174px;}
+a.newwindow.ico_right {background-position: 100% -158px;}
+a.newwindow.ico_right:hover, 
+a.newwindow.ico_right:focus {background-position: 100% -174px;}
+
+a.perma {background-position: -1px -223px;}
+a.perma:hover, 
+a.perma:focus {background-position: -1px -239px;}
+a.perma.ico_right {background-position: 100% -223px;}
+a.perma.ico_right:hover, 
+a.perma.ico_right:focus {background-position: 100% -239px;}
+
+a.print {background-position: -1px -190px;}
+a.print:hover, 
+a.print:focus {background-position: -1px -206px;}
+a.print.ico_right {background-position: 100% -190px;}
+a.print.ico_right:hover, 
+a.print.ico_right:focus {background-position: 100% -206px;}
+
+a.podcast {background-position: -1px -318px;}
+a.podcast:hover,
+a.podcast:focus {background-position: -1px -350px;}
+a.podcast.ico_right {background-position: 100% -318px;}
+a.podcast.ico_right:hover,
+a.podcast.ico_right:focus {background-position: 100% -350px;}
+
+a.podcast2 {background-position: -1px -334px;}
+a.podcast2:hover,
+a.podcast2:focus {background-position: -1px -350px;}
+a.podcast2.ico_right {background-position: 100% -334px;}
+a.podcast2.ico_right:hover,
+a.podcast2.ico_right:focus {background-position: 100% -350px;}
+
+a.rss {background-position: -2px -366px;}
+a.rss:hover,
+a.rss:focus {background-position: -2px -382px;}
+a.rss.ico_right {background-position: 100% -366px;}
+a.rss.ico_right:hover,
+a.rss.ico_right:focus {background-position: 100% -382px;}
+
+a.video {background-position: -2px -397px;}
+a.video:hover,
+a.video:focus {background-position: -2px -429px;}
+a.video.ico_right {background-position: 100% -397px;}
+a.video.ico_right:hover,
+a.video.ico_right:focus {background-position: 100% -429px;}
+
+a.video2 {background-position: -2px -413px;}
+a.video2:hover,
+a.video2:focus {background-position: -2px -429px;}
+a.video2.ico_right {background-position: 100% -413px;}
+a.video2.ico_right:hover,
+a.video2.ico_right:focus {background-position: 100% -429px;}
+
+a.audio {background-position: -2px -446px;}
+a.audio:hover,
+a.audio:focus {background-position: -2px -478px;}
+a.audio.ico_right {background-position: 100% -446px;}
+a.audio.ico_right:hover,
+a.audio.ico_right:focus {background-position: 100% -478px;}
+
+a.audio2 {background-position: -2px -462px;}
+a.audio2:hover,
+a.audio2:focus {background-position: -2px -478px;}
+a.audio2.ico_right {background-position: 100% -462px;}
+a.audio2.ico_right:hover,
+a.audio2.ico_right:focus {background-position: 100% -478px;}
+
+a.pag-gallery {background-position: -2px -495px;}
+a.pag-gallery:hover,
+a.pag-gallery:focus {background-position: -2px -511px;}
+a.pag-gallery.pag-selected,
+a.pag-gallery.pag-selected:hover,
+a.pag-gallery.pag-selected:focus {background-position: -2px -527px;color:#666;text-decoration:none;cursor:text;}
+
+a.pag-grid {background-position: -2px -543px;}
+a.pag-grid:hover,
+a.pag-grid:focus {background-position: -2px -559px;}
+a.pag-grid.pag-selected,
+a.pag-grid.pag-selected:hover,
+a.pag-grid.pag-selected:focus {background-position: -2px -575px;color:#666;text-decoration:none;cursor:text;}
+
+a.pag-list {background-position: -2px -591px;}
+a.pag-list:hover,
+a.pag-list:focus {background-position: -2px -607px;}
+a.pag-list.pag-selected,
+a.pag-list.pag-selected:hover,
+a.pag-list.pag-selected:focus {background-position: -2px -623px;color:#666;text-decoration:none;cursor:text;}
+
+a.pag-slide {background-position: -2px -639px;}
+a.pag-slide:hover,
+a.pag-slide:focus {background-position: -2px -655px;}
+a.pag-slide.pag-selected,
+a.pag-slide.pag-selected:hover,
+a.pag-slide.pag-selected:focus {background-position: -2px -671px;color:#666;text-decoration:none;cursor:text;}
+
+.backtotop {
+clear: both;
+text-align: right;
+}
+.backtotop a {
+padding: 0 0 0 12px ;
+background: transparent url(http://www.loc.gov/img-std/loc_sprite_ss.png) -3px -285px no-repeat;
+}
+.backtotop a:hover,
+.backtotop a:focus {
+background-position: -3px -301px;
+}
+
+a.gray:link,
+a.gray:visited {
+color: #666;
+text-decoration: underline;
+}
+a.gray:focus,
+a.gray:hover,
+a.gray:active {
+color: #333;
+text-decoration: underline;
+}
+a.white:link,
+a.white:visited {
+color: #fff;
+text-decoration: underline;
+}
+a.white:focus,
+a.white:hover,
+a.white:active {
+color: #ccc;
+text-decoration: underline;
+}
+/* external links */
+a.external {
+background: transparent url(http://www.loc.gov/img-std/loc_sprite_ss.png) 100% 4px no-repeat;
+padding: 0 10px 0 0;
+}
+a.external:hover, 
+a.external:focus {background-position: 100% -12px;}
+a.external span {
+display:none;
+} 
+

@@ -1,0 +1,817 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                        "http://www.w3.org/TR/html40/loose.dtd">
+<html>
+
+<head>
+<title>Guidelines for the Non-Sorting Control Character Technique (Library of Congress) </title>
+<base href="">
+<meta name="description" content="This document contains the guidelines for the 
+non-sorting control character technique in the MARC 21 formats">
+<meta name="keywords" content="non-sorting control character MARC 21">
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h4 align=center><em>MARC 21 Formats</em></h4>
+<h2 align=center>Guidelines for the Non-Sorting <br>
+  Control Character Technique</h2>
+
+<h3 align=center> 
+  <!-- #BeginDate format:Am1 -->June 20, 2013<!-- #EndDate -->
+</h3>
+<h3 align=center>Network Development and MARC Standards Office <br>
+  Library of Congress </h3>
+<hr>
+<h3> Introduction</h3>
+<p>With <a href="http://www.loc.gov/marc/marbi/1998/98-16r.html">Proposal No 98-16R</a> 
+  (Nonfiling characters in all MARC formats), the MARC 21 community approved the 
+  use of beginning and ending control characters to block off nonfiling or non-sorting 
+  characters in MARC 21 records. These new MARC 21 characters are based on the 
+  NSB and NSE characters of ISO 6630 (Bibliographic Control Numbers). For the 
+  MARC-8, UCS/Unicode representations of these characters, see the appropriate 
+  <i><a href="http://lcweb2.loc.gov/cocoon/codetables/45.html">MARC 21 Specifications</a></i> 
+  pages.</p>
+<p><a href="http://www.loc.gov/marc/marbi/dp/dp118.html">Discussion Paper 118</a> 
+  and <a href="http://www.loc.gov/marc/marbi/2002/2002-dp05.html">Discussion Paper 
+  2002-DP05</a> explored specific guidelines on how to apply these characters. 
+  After much discussion, it was decided that prescriptive guidelines should be 
+  drafted that present using the control character technique to indicate non-sorting 
+  characters, particularly for initial articles, in a limited number of fields. 
+  These guidelines with the allowed fields and subfields are presented below. 
+  <br>
+  <br>
+  The application of this new technique will be limited to identification of nonfiling 
+  initial characters in access point fields and subfields. It could, however, 
+  be potentially used in a future phase of implementation for the identification 
+  of interpolated non-sorting characters (i.e., to omit [i.e.], [sic]) or GMDs 
+  from the sort form of headings. It is expected that systems will accommodate 
+  both the present technique of nonfiling indicators and the new technique using 
+  non-sorting control characters, although they must not be used at the same time 
+  for a specific non-sorting zone. This technique is not to be used to identify 
+  character strings to be excluded from keyword indexing.</p>
+<p>In the following examples, the non-sorting control characters are represented 
+  as curly braces { } and the blank (Hex 20) indicator value is represented as 
+  the pound character #. </p>
+<p> 
+<hr>
+<h3> Guidelines for the Non-Sorting Control Character Technique in the MARC 21 
+  Formats</h3>
+<h3>1. Non-Sorting Zone</h3>
+<p>The use of the phrase &quot;non-sorting zone&quot; encompasses one or more 
+  non-sorting characters. The following rules are assumed in identifying the extent 
+  of a non-sorting zone:</p>
+<ul>
+  <li>Any nonfiling or non-sorting character and any diacritic associated with 
+    a non-sorting character is considered part of the non-sorting zone. This includes 
+    initial articles and diacritics associated with them.<br>
+    <br>
+  </li>
+  <li>Any space or mark of punctuation preceding the first sorting character is 
+    considered part of the non-sorting zone. A romanized alif (ANSEL AE=U+02BE) 
+    or romanized ayn (ANSEL B0=U+02BB) preceding the first sorting character is 
+    also considered part of the non-sorting zone.<br>
+  </li>
+</ul>
+<hr>
+<h3>2. Using Non-Sorting Control Characters in the MARC 21 Formats</h3>
+<p>Non-sorting control characters may be used in the MARC 21 fields and subfields 
+  identified in the following lists. In some cases, non-sorting control characters 
+  are used in place of nonfiling indicator values. All tags followed by an asterisk 
+  (*) in the following lists currently have nonfiling indicator values defined 
+  (see column 4 &quot;Indicator Position&quot;). </p>
+<p>When the non-sorting control characters are used for a non-sorting zone for 
+  which the nonfiling indicator is defined, the nonfiling indicator value <i>must 
+  be</i> set to zero. When applied to initial articles, the two techniques are 
+  mutually exclusive and use of both for a specific non-sorting zone will result 
+  in errors or unpredictable processing of the field.</p>
+<h3><a name="biblio">Bibliographic Format</a></h3>
+The non-sorting zones that may be marked with non-sorting control characters are 
+currently restricted to the initial characters in the noted fields and subfields 
+below.<br>
+<br>
+<table width="100%" border="1">
+  <tr valign="top" bgcolor="#CCCCCC"> 
+    <th width="6%"><font color="#000000">Tag</font></th>
+    <th width="52%"><font color="#000000">Tag Name</font></th>
+    <th width="33%"><font color="#000000">Subfield</font></th>
+    <th width="9%"><font color="#000000">Indicator<br>
+      Position</font></th>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>100<br>
+      110 <br>
+      111 </b></td>
+    <td width="52%">Main Entry--Personal Name<br>
+      Main Entry--Corporate Name <br>
+      Main Entry--Meeting Name </td>
+    <td width="33%">$a (Name)</td>
+    <td width="9%">&nbsp;</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>130 </b><a href="bibliographic/bd130.html">*</a></td>
+    <td width="52%">Main Entry--Uniform Title</td>
+    <td width="33%">$a (Title)<br>
+      $p (Name of part) </td>
+    <td width="9%">Ind. 1</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>222 </b><a href="bibliographic/bd222.html">*</a></td>
+    <td width="52%">Key Title</td>
+    <td width="33%">$a (Title)</td>
+    <td width="9%">Ind. 2</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>240 </b><a href="bibliographic/bd240.html">*</a></td>
+    <td width="52%">Uniform Title</td>
+    <td width="33%">$a (Title)<br>
+      $p (Name of part) </td>
+    <td width="9%">Ind. 2</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>242 </b><a href="bibliographic/bd242.html">*</a></td>
+    <td width="52%">Translation of Title by Cataloging Agency</td>
+    <td width="33%">$a (Title)<br>
+      $p (Name of part) </td>
+    <td width="9%">Ind. 2</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>243 </b><a href="bibliographic/bd243.html">*</a></td>
+    <td width="52%">Collective Uniform Title</td>
+    <td width="33%">$a (Title)<br>
+      $p (Name of part) </td>
+    <td width="9%">Ind. 2</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>245 </b><a href="bibliographic/bd245.html">*</a></td>
+    <td width="52%">Title Statement</td>
+    <td width="33%">$a (Title)<br>
+      $p (Name of part) </td>
+    <td width="9%">Ind. 2</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>246</b></td>
+    <td width="52%">Varying Form of Title</td>
+    <td width="33%">$a (Title)<br>
+      $p (Name of part) </td>
+    <td width="9%">&nbsp;</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>247</b></td>
+    <td width="52%">Former Title</td>
+    <td width="33%">$a (Title)<br>
+      $p (Name of part) </td>
+    <td width="9%">&nbsp;</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>440 </b><a href="bibliographic/bd440.html">*</a></td>
+    <td width="52%">Series Statement/Added Entry--Title</td>
+    <td width="33%">$a (Title)<br>
+      $p (Name of part) </td>
+    <td width="9%">Ind. 2</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>490</b></td>
+    <td width="52%">Series Statement</td>
+    <td width="33%">$a (Series<br>
+      Statement) </td>
+    <td width="9%">&nbsp;</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>505</b></td>
+    <td width="52%">Formatted Contents Note</td>
+    <td width="33%">$t (Title)</td>
+    <td width="9%">&nbsp;</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>600<br>
+      610<br>
+      611 </b></td>
+    <td width="52%">Subject Added Entry--Personal Name<br>
+      Subject Added Entry--Corporate Name <br>
+      Subject Added Entry--Meeting Name </td>
+    <td width="33%">$a (Name)<br>
+      $p (Name of part) <br>
+      $t (Title)<br>
+      $z (Geographic subdivision)</td>
+    <td width="9%">&nbsp;</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>630 </b><a href="bibliographic/bd630.html">*</a></td>
+    <td width="52%">Subject Added Entry--Uniform Title</td>
+    <td width="33%">$a (Title)<br>
+      $p (Name of part)<br>
+      $z (Geographic subdivision) </td>
+    <td width="9%">Ind. 1</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>648</b></td>
+    <td width="52%">Subject Added Entry--Chronological Term</td>
+    <td width="33%">$z (Geographic subdivision)</td>
+    <td width="9%">&nbsp;</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>650</b></td>
+    <td width="52%">Subject Added Entry--Topical Term</td>
+    <td width="33%">$a (Term)<br>
+      $z (Geographic subdivision) </td>
+    <td width="9%">&nbsp;</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>651</b></td>
+    <td width="52%">Subject Added Entry--Geographic Name</td>
+    <td width="33%">$a (Name)<br>
+      $z (Geographic subdivision) </td>
+    <td width="9%">&nbsp;</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>654</b></td>
+    <td width="52%">Subject Added Entry--Faceted Topical Terms</td>
+    <td width="33%">$z (Geographic subdivision)</td>
+    <td width="9%">&nbsp;</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>655</b></td>
+    <td width="52%">Index Term--Genre/Form</td>
+    <td width="33%">$z (Geographic subdivision)</td>
+    <td width="9%">&nbsp;</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>656</b></td>
+    <td width="52%">Index Term--Occupation</td>
+    <td width="33%">$z (Geographic subdivision)</td>
+    <td width="9%">&nbsp;</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>657</b></td>
+    <td width="52%">Index Term--Function</td>
+    <td width="33%">$z (Geographic subdivision)</td>
+    <td width="9%">&nbsp;</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>700<br>
+      710 <br>
+      711 </b></td>
+    <td width="52%">Added Entry--Personal Name<br>
+      Added Entry--Corporate Name <br>
+      Added Entry--Meeting Name </td>
+    <td width="33%">$a (Name)<br>
+      $p (Name of part) <br>
+      $t (Title)</td>
+    <td width="9%">&nbsp;</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>730 </b><a href="bibliographic/bd730.html">*</a></td>
+    <td width="52%">Added Entry--Uniform Title</td>
+    <td width="33%">$a (Title)<br>
+      $p (Name of part) </td>
+    <td width="9%">Ind. 1</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>740 </b><a href="bibliographic/bd740.html">*</a></td>
+    <td width="52%">Added Entry--Uncontrolled Related/Analytical Title</td>
+    <td width="33%">$a (Title)<br>
+      $p (Name of part) </td>
+    <td width="9%">Ind. 1</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>760<br>
+      762 <br>
+      765 <br>
+      767</b> <br>
+      <b>770<br>
+      772 <br>
+      773 <br>
+      774 <br>
+      775 </b> <b> <br>
+      776 <br>
+      777 <br>
+      780 <br>
+      785<br>
+      786 <br>
+      787 </b></td>
+    <td width="52%">Main Series Entry<br>
+      Subseries Entry <br>
+      Original Language Entry <br>
+      Translation Entry <br>
+      Supplement/Special Issue Entry <br>
+      Supplement Parent Entry <br>
+      Host Item Entry <br>
+      Constituent Unit Entry <br>
+      Other Edition Entry <br>
+      Additional Physical Form Entry <br>
+      Issued With Entry <br>
+      Preceding Entry <br>
+      Succeeding Entry<br>
+      Data Source Entry <br>
+      Nonspecific Relationship Entry <br>
+    </td>
+    <td width="33%">$a (Main entry)<br>
+      $s (Uniform title)<br>
+      $t (Title)</td>
+    <td width="9%">&nbsp;</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>800<br>
+      810 <br>
+      811 </b></td>
+    <td width="52%">Series Added Entry--Personal Name<br>
+      Series Added Entry--Corporate Name <br>
+      Series Added Entry--Meeting Name </td>
+    <td width="33%">$a (Name)<br>
+      $p (Name of part) <br>
+      $t (Title)</td>
+    <td width="9%">&nbsp;</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>830 </b><a href="bibliographic/bd830.html">*</a></td>
+    <td width="52%">Series Added Entry--Uniform Title</td>
+    <td width="33%">$a (Title)<br>
+      $p (Name of part) </td>
+    <td width="9%">Ind. 2</td>
+  </tr>
+</table>
+<h3>Community Information Format</h3>
+<p>Non-sorting control characters may also be used in the same fields and subfields 
+  as those of the bibliographic format when those fields and subfields occur in 
+  the MARC 21 community information format</p>
+<p> 
+<h3><a name="authority">Authority Format</a></h3>
+<p>The non-sorting zones that may be marked with non-sorting control characters 
+  are currently restricted to the initial characters in the noted fields and subfields 
+  below. 
+<p> 
+<table width="100%" border="1">
+  <tr valign="top" bgcolor="#CCCCCC"> 
+    <th width="6%">Tag</th>
+    <th width="55%">Tag Name</th>
+    <th width="30%">Subfield</th>
+    <th width="9%">Indicator<br>
+      Position</th>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>100<br>
+      110 <br>
+      111 </b></td>
+    <td width="55%">Heading--Personal Name<br>
+      Heading--Corporate Name<br>
+      Heading--Meeting Name </td>
+    <td width="30%">$a (Name)<br>
+      $p (Name of part) <br>
+      $t (Title)<br>
+      $z (Geographic subdivision) </td>
+    <td width="9%">&nbsp;</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>130 </b><a href="http://www.loc.gov/marc/authority/ad130.html">*</a></td>
+    <td width="55%">Heading--Uniform Title</td>
+    <td width="30%">$a (Title)<br>
+      $p (Name of part) <br>
+      $z (Geographic subdivision) </td>
+    <td width="9%">Ind. 2</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>148</b></td>
+    <td width="55%">Heading--Chronological Term</td>
+    <td width="30%">$z (Geographic subdivision) </td>
+    <td width="9%">&nbsp;</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>150</b></td>
+    <td width="55%">Heading--Topical Term</td>
+    <td width="30%">$a (Term)<br>
+      $z (Geographic subdivision) </td>
+    <td width="9%">&nbsp;</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>151</b></td>
+    <td width="55%">Heading--Geographic Name</td>
+    <td width="30%">$a (Name)<br>
+      $z (Geographic subdivision) </td>
+    <td width="9%">&nbsp;</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>155<br>
+      </b><b>180<br>
+      </b><b>181<br>
+      </b><b>182<br>
+      </b><b>185</b></td>
+    <td width="55%">Heading--Genre/Form Term <br>
+      Heading--General Subdivision <br>
+      Heading--Geographic Subdivision<br>
+      Heading--Chronological Subdivision<br>
+      Heading--Form Subdivision</td>
+    <td width="30%">$z (Geographic subdivision) </td>
+    <td width="9%">&nbsp;</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>400<br>
+      410 <br>
+      411 </b></td>
+    <td width="55%">See From Tracing--Personal Name<br>
+      See From Tracing--Corporate Name <br>
+      See From Tracing--Meeting Name </td>
+    <td width="30%">$a (Name)<br>
+      $p (Name of part) <br>
+      $t (Title)<br>
+      $z (Geographic subdivision) </td>
+    <td width="9%">&nbsp;</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>430 </b><a href="http://www.loc.gov/marc/authority/ad430.html">*</a></td>
+    <td width="55%">See From Tracing--Uniform Title</td>
+    <td width="30%">$a (Title)<br>
+      $p (Name of part) <br>
+      $z (Geographic subdivision) </td>
+    <td width="9%">Ind. 2</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>448</b></td>
+    <td width="55%">See From Tracing--Chronological Term</td>
+    <td width="30%">$z (Geographic subdivision) </td>
+    <td width="9%">&nbsp;</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>450</b></td>
+    <td width="55%">See From Tracing--Topical Term</td>
+    <td width="30%">$a (Term)<br>
+      $z (Geographic subdivision) </td>
+    <td width="9%">&nbsp;</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>451</b></td>
+    <td width="55%">See From Tracing--Geographic Name<br>
+      See From Tracing--General Subdivision </td>
+    <td width="30%">$a (Name)<br>
+      $z (Geographic subdivision) </td>
+    <td width="9%">&nbsp;</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>455<br>
+      480 <br>
+      481<br>
+      482 <br>
+      485 <br>
+      </b></td>
+    <td width="55%">See From Tracing--Genre/Form Term<br>
+      See From Tracing--General Subdivision <br>
+      See From Tracing--Geographic Subdivision<br>
+      See From Tracing--Chronological Subdivision <br>
+      See From Tracing--Form Subdivision </td>
+    <td width="30%">$z (Geographic subdivision) </td>
+    <td width="9%">&nbsp;</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>500<br>
+      510 <br>
+      511 </b></td>
+    <td width="55%">See Also From Tracing--Personal Name<br>
+      See Also From Tracing--Corporate Name <br>
+      See Also From Tracing--Meeting Name </td>
+    <td width="30%">$a (Name)<br>
+      $p (Name of part) <br>
+      $t (Title)<br>
+      $z (Geographic subdivision) </td>
+    <td width="9%">&nbsp;</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>530 </b><a href="http://www.loc.gov/marc/authority/ad530.html">*</a></td>
+    <td width="55%">See Also From Tracing--Uniform Title</td>
+    <td width="30%">$a (Title)<br>
+      $p (Name of part) <br>
+      $z (Geographic subdivision) </td>
+    <td width="9%">Ind. 2</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>548</b></td>
+    <td width="55%">See Also From Tracing--Chronological Term</td>
+    <td width="30%">$z (Geographic subdivision) </td>
+    <td width="9%">&nbsp;</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>550</b></td>
+    <td width="55%">See Also From Tracing--Topical Term</td>
+    <td width="30%">$a (Term)<br>
+      $z (Geographic subdivision) </td>
+    <td width="9%">&nbsp;</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>551</b></td>
+    <td width="55%">See Also From Tracing--Geographic Name</td>
+    <td width="30%">$a (Name)<br>
+      $z (Geographic subdivision) </td>
+    <td width="9%">&nbsp;</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>555<br>
+      580 <br>
+      581 <br>
+      582 <br>
+      585 </b></td>
+    <td width="55%">See Also From Tracing--Genre/Form Term<br>
+      See Also From Tracing--General Subdivision <br>
+      See Also From Tracing--Geographic Subdivision <br>
+      See Also From Tracing--Chronological Subdivision <br>
+      See Also From Tracing--Form Subdivision </td>
+    <td width="30%">$z (Geographic subdivision) </td>
+    <td width="9%">&nbsp;</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>700<br>
+      710 <br>
+      711 </b></td>
+    <td width="55%">Established Heading Linking Entry--Personal Name<br>
+      Established Heading Linking Entry--Corporate Name<br>
+      Established Heading Linking Entry--Meeting Name </td>
+    <td width="30%">$a (Name)<br>
+      $p (Name of part) <br>
+      $t (Title)<br>
+      $z (Geographic subdivision) </td>
+    <td width="9%">&nbsp;</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>730</b></td>
+    <td width="55%">Established Heading Linking Entry--Uniform Title</td>
+    <td width="30%">$a (Title)<br>
+      $p (Name of part) <br>
+      $z (Geographic subdivision) </td>
+    <td width="9%">&nbsp;</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>748</b></td>
+    <td width="55%">Established Heading Linking Entry--Chronological Term</td>
+    <td width="30%">$z (Geographic subdivision) </td>
+    <td width="9%">&nbsp;</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>750</b></td>
+    <td width="55%">Established Heading Linking Entry--Topical Term</td>
+    <td width="30%">$a (Term)<br>
+      $z (Geographic subdivision) </td>
+    <td width="9%">&nbsp;</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>751</b></td>
+    <td width="55%">Established Heading Linking Entry--Geographic Name</td>
+    <td width="30%">$a (Name)<br>
+      $z (Geographic subdivision) </td>
+    <td width="9%">&nbsp;</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%" height="97"><b>755<br>
+      780 <br>
+      781 <br>
+      782 <br>
+      785 </b></td>
+    <td width="55%" height="97">Established Heading Linking Entry--Genre/Form 
+      Term<br>
+      Subdivision Linking Entry--General Subdivision <br>
+      Subdivision Linking Entry--Geographic Subdivision <br>
+      Subdivision Linking Entry--Chronological Subdivision<br>
+      Subdivision Linking Entry--Form Subdivision </td>
+    <td width="30%" height="97">$z (Geographic subdivision) </td>
+    <td width="9%" height="97">&nbsp;</td>
+  </tr>
+</table>
+<h2></h2>
+<h3>Classification Format</h3>
+<p>Non-sorting control characters may also be used in the same fields and subfields 
+  as those of the authority format when those fields and subfields occur in the 
+  MARC 21 classification format.</p>
+<hr>
+<h3> 3. Examples</h3>
+These examples illustrate the application of the non-sorting control characters. 
+They do not necessarily reflect any current filing practice or application of 
+cataloging rules. 
+<p> 
+<table width="100%" border="0">
+  <tr valign="top"> 
+    <td width="6%"><b>100</b></td>
+    <td width="4%"><b>1#</b></td>
+    <td width="90%"><b>$a</b>{al-}Sadat, Anwar.</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>100</b></td>
+    <td width="4%"><b>1#</b></td>
+    <td width="90%"><b>$a</b>Luther, Martin,<b>$d</b>1483-1546.<b>$t</b>{Der }Grosse 
+      Katechismus</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>130</b></td>
+    <td width="4%"><b>0#</b></td>
+    <td width="90%"> 
+      <p><b>$a</b>American men and women of science.<b>$p</b>{The }medical sciences.</p>
+    </td>
+  </tr>
+  <tr valign="top"> 
+    <td width="5%"><b>222</b></td>
+    <td width="4%"><b>#0</b></td>
+    <td width="91%"><b>$a</b>{The }Worldwide art catalogue bulletin. American 
+      library edition</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="5%"><b> 240</b></td>
+    <td width="4%"><b>10</b></td>
+    <td width="91%"><b>$a</b>{The }Pickwick papers.</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="5%"><b>242</b></td>
+    <td width="4%"><b>10</b></td>
+    <td width="91%"><b>$a</b>{The }Mirror.<b>$y</b>eng</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="5%"><b>245</b></td>
+    <td width="4%"><b>10</b></td>
+    <td width="91%"> <b>$a</b>{Los }amigos.</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="5%"><b>245</b></td>
+    <td width="4%"><b>10</b></td>
+    <td width="91%"><b>$a</b>{The ... }annual report of the Governor.</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="5%"><b>245</b></td>
+    <td width="4%"><b>10</b></td>
+    <td width="91%"><b>$a</b>{L'}enfant criminel.</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="5%"><b>245</b></td>
+    <td width="4%"><b>10</b></td>
+    <td width="91%"><b>$a</b>{al-}Sharq al-'Arabi.</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="5%"><b>245</b></td>
+    <td width="4%"><b>10</b></td>
+    <td width="91%"><b>$a</b>{The &quot;}winter mind&quot;</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="5%"><b>245</b></td>
+    <td width="4%"><b>10</b></td>
+    <td width="91%"><b>$a</b>{Die }Frauen der chinesischen Revolution.</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="5%"><b>245</b></td>
+    <td width="4%"><b>00</b></td>
+    <td width="91%"><b>$a</b>{A }Town like Alice / <b>$c</b> [Alice Productions, 
+      Pty. Ltd.].</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="5%"><b>245</b></td>
+    <td width="4%"><b>10</b></td>
+    <td width="91%"><b>$a</b>{L'}&eacute;t&eacute;.</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="5%"><b>245</b></td>
+    <td width="4%"><b>10</b></td>
+    <td width="91%"> <b>$a</b>{Los }&uacute;ltimos ... </td>
+  </tr>
+  <tr valign="top"> 
+    <td width="5%"><b>245</b></td>
+    <td width="4%"><b>00</b></td>
+    <td width="91%"><b>$a</b>{[The }Part of Pennsylvania that ... townships]</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="5%"><b>245</b></td>
+    <td width="4%"><b>10</b></td>
+    <td width="91%"><b>$a</b>{--the }serpent--snapping eye.</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="5%"><b>245</b></td>
+    <td width="4%"><b>00</b></td>
+    <td width="91%"><b>$a</b>{La }mer.</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="5%"><b>245</b></td>
+    <td width="4%"><b>10</b></td>
+    <td width="91%"><b>$a</b>{El }primer poema de tema venezolano.</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>246</b></td>
+    <td width="4%"><b>0#</b></td>
+    <td width="90%"><b>$a</b>{The }country Jake</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>246</b></td>
+    <td width="4%"><b>0#</b></td>
+    <td width="90%"><b>$a</b>{The }100 largest plans, 1959-1961</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>246</b></td>
+    <td width="4%"><b>30</b></td>
+    <td width="90%"><b>$a</b>{Die }Zeitschrift f&uuml;r analytische Chemie</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>246</b></td>
+    <td width="4%"><b>0#</b></td>
+    <td width="90%"><b>$i</b>Subtitle on back of title page<b>:$a</b>{The }role 
+      of geology, climate, and culture in the making of French wines</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>247</b></td>
+    <td width="4%"><b>10</b></td>
+    <td width="90%"><b>$a</b>{The }Colorado editor and the intermountain press</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="5%"><b>440</b></td>
+    <td width="4%"><b>#0</b></td>
+    <td width="91%"><b>$a</b>{The }Rare book tapes</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="5%"><b>490</b></td>
+    <td width="4%"><b>1#</b></td>
+    <td width="91%"><b>$a</b>{The }West Virginia University bulletin</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="5%"><b>490</b></td>
+    <td width="4%"><b>1#</b></td>
+    <td width="91%"> <b>$a</b>{1972/73-1975-76: }Research report / National Education 
+      Association Research</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="5%"><b>505</b></td>
+    <td width="4%"><b>80</b></td>
+    <td width="91%" valign="top"> 
+      <p> <b>$g</b>vol. 24.<b>$t</b>{The }history of Washington County beginning 
+        in 1884 --<b>$g</b>vol. 25.<b>$t</b>State manifest and birth record (1764-1977).</p>
+    </td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>610</b></td>
+    <td width="4%"><b>10</b></td>
+    <td width="90%"><b>$a</b>{The }Henry (Ship)</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>611</b></td>
+    <td width="4%"><b>20</b></td>
+    <td width="90%"><b>$a</b>{The }Olympic Games.</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>650</b></td>
+    <td width="4%"><b>#0</b></td>
+    <td width="90%"><b>$a</b>Palaces<b>$z</b>Netherlands<b>$z</b>{The }Hague. 
+    </td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>650</b></td>
+    <td width="4%"><b>#2</b></td>
+    <td width="90%"><b>$a</b>{2,4-}Dichlorophenoxyacetic Acid</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>651</b></td>
+    <td width="4%"><b>#0</b></td>
+    <td width="90%"><b>$a</b>{The }Dells of the Wisconsin (Wis.)</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>700</b></td>
+    <td width="4%"><b>1#</b></td>
+    <td width="90%"> <b>$a</b>Stower, Caleb.<b>$t</b>{The }printer's manual.</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>700</b></td>
+    <td width="4%"><b>12</b></td>
+    <td width="90%"><b>$a</b>Hills, John,<b>$c</b>surveyor.<b>$t</b>{A }sketch 
+      of Allens Town, June 1778.</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>710</b></td>
+    <td width="4%"><b>22</b></td>
+    <td width="90%"><b>$a</b>General Drafting Company, inc.<b>$t</b>{The }Colonization 
+      of America.</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>711</b></td>
+    <td width="4%"><b>2#</b></td>
+    <td width="90%"><b>$a</b>International Conference on Gnosticism.<b>$t</b>{The 
+      }Rediscovery of Gnosticism.</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>800</b></td>
+    <td width="4%"><b>1#</b></td>
+    <td width="90%"><b>$a</b>Fernando, A. Denis N.<b>$t</b>{The }Resource maps 
+      of Sri Lanka; <b>$v</b>pt. 2.</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="6%"><b>830</b></td>
+    <td width="4%"><b>#0</b></td>
+    <td width="90%"><b>$a</b>{The }Wonders of man series.</td>
+  </tr>
+</table>
+<p> 
+<hr>
+<h3> 4. Future Developments</h3>
+Consideration may be given to broadening the use of the technique in the formats 
+in the future. Please send any questions, comments or suggestions to: <a href="http://www.loc.gov/cdn-cgi/l/email-protection#bad4ded7c9d5fad6d5d994ddd5cc"><span class="__cf_email__" data-cfemail="5d3339302e321d31323e733a322b">[email&#160;protected]</span></a>. 
+<p> 
+<hr>
+<p> <b> Go to: </b><a href="../marc.html">MARC Home Page</a> | <a href="../index.html">Library 
+  of Congress Home Page</a> <br>
+  <br>
+<hr>
+<img src="../homepage/lc2.gif" height=46 width=91 alt="Library of
+Congress"> <strong>Library of Congress</strong><br>
+<a href="http://www.loc.gov/help/help-desk.html">Library of Congress Help Desk</a> 
+<i>( 
+<!-- #BeginDate format:Am3 -->06/20/2013<!-- #EndDate -->
+)</i> 
+<script data-cfasync="false" src="http://www.loc.gov/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+
+</html>

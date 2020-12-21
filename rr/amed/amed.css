@@ -1,0 +1,186 @@
+body {
+	margin: 0px;
+	padding: 0px;
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #333333;
+}
+td {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #333333;
+}
+dd {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #666666;
+	margin-left: 10pt;
+}
+dt {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #000066;
+
+}
+.larger {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	font-weight: bold;
+}
+.caption {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+}
+a.white {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #EEEEEE;
+	text-decoration: none;
+}
+a.white:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+.white-text {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #EEEEEE;
+}.drop-box {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+}
+h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16pt;
+	font-weight: bold;
+	color: #666600;
+}
+h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	color: #666633;
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
+h3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	font-weight: bold;
+	color: #666633;
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
+.largecap {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14pt;
+	font-weight: bold;
+	color: #996600;
+}
+.blue-header {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	font-weight: bold;
+	color: #663333;
+}
+address {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+}
+.selected {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #000;
+	text-align: center;
+}
+.burg-bold {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #000066;
+}
+h3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18pt;
+	font-weight: bold;
+	color: #666600;
+}
+.more-space {
+	line-height: 16pt;
+}
+.center {
+	text-align: center;
+}
+.alpha {
+	font-size: 14pt;
+	background-color: #E7E3C6;
+}
+.text {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 14px;
+	font-style: italic;
+	line-height: normal;
+	font-weight: bold;
+}
+img.right {
+	float: right;
+	clear: left;
+}
+img.left {
+	float: left;
+	clear: right;
+}
+.background-brown {
+	background-image:  url(http://www.loc.gov/rr/amed/images/spacer-blue.gif);
+	background-color: #a9661e;
+}
+.background-green {
+	background-image:  url(images/spacer-green.gif);
+	background-color: #e7e3c6;
+}
+.background-gray {
+	background-image:  url(images/spacer-gray.gif);
+	background-color: #DDDDDD;
+}
+.redtext {
+	color: #990000;
+	font-weight:bold;
+}
+#PDF {
+	color: #F00;
+}
+
+
+
+/********************
+Lists and icon styles
+********************/
+/* external links */
+a.external {
+background: transparent url(http://www.loc.gov/img-std/loc_sprite_ss.png) 100% 4px no-repeat;
+padding: 0 10px 0 0;
+}
+a.external:hover, 
+a.external:focus {background-position: 100% -12px;}
+a.external span {
+display:none;
+}
+
+/********************
+Lists and icon styles
+********************/
+/* external links */
+a.external2 {
+background: transparent url(images/loc_sprite_white.png) 100% 2px no-repeat;
+padding: 0 10px 0 0;
+}
+a.external2:hover, 
+a.external2:focus {background-position: 100% -14px;}
+a.external2 span {
+display:none;

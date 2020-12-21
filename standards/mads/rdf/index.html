@@ -1,0 +1,2402 @@
+<html xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:vars="vars#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>MADS/RDF Documentation</title>
+      <link href="madsrdf-style.css" rel="stylesheet"><style type="text/css">
+                        .S1 {
+                        
+                            font-family:'Times New Roman',serif;
+                                font-weight:bold;
+                                font-size:29.333334px;
+                                color:#b84747;
+                                
+                        
+                        }
+                    
+                        .S2 {
+                        
+                            font-family:'Times New Roman',serif;
+                                font-weight:bold;
+                                font-size:16.0px;
+                                
+                        
+                        }
+                    
+                        .S3 {
+                        
+                            font-family:'Times New Roman',serif;
+                                font-size:16.0px;
+                                
+                        
+                        }
+                    
+                        .S4 {
+                        
+                            font-weight:bold;
+                                
+                        
+                        }
+                    
+                        .S5 {
+                        
+                            font-weight:normal;
+                                
+                        
+                        }
+                    
+                        .S6 {
+                        
+                            font-family:'Times New Roman',serif;
+                                font-weight:bold;
+                                font-size:18.666668px;
+                                
+                        
+                        }
+                    
+                        .S7 {
+                        
+                            font-family:'Times New Roman',serif;
+                                font-size:16.0px;
+                                
+                        
+                        }
+                    
+                        .S8 {
+                        
+                            font-weight:bold;
+                                font-size:18.666668px;
+                                
+                        
+                        }
+                    
+                        .S9 {
+                        
+                            margin-bottom:18.864px;
+                                font-family:'Times New Roman',serif;
+                                font-size:16.0px;
+                                
+                        
+                        }
+                    
+                        .S10 {
+                        
+                            margin-right:auto;
+                                width:624.336px;
+                                border-collapse:separate;
+                                border-spacing:0;
+                                table-layout:fixed;
+                                
+                        
+                        }
+                    
+                        .S11 {
+                        
+                            border-top:1.0px solid #000000;
+                                border-bottom:1.0px solid #000000;
+                                border-left:1.0px solid #000000;
+                                border-right:none;
+                                padding:3.6671999px;
+                                vertical-align:top;
+                                width:171.86719px;
+                                
+                        
+                        }
+                    
+                        .S12 {
+                        
+                            border:1.0px solid #000000;
+                                padding:3.6671999px;
+                                vertical-align:top;
+                                width:434.8px;
+                                
+                        
+                        }
+                    
+                        .S13 {
+                        
+                            border-top:none;
+                                border-bottom:1.0px solid #000000;
+                                border-left:1.0px solid #000000;
+                                border-right:none;
+                                padding:3.6671999px;
+                                vertical-align:top;
+                                width:171.86719px;
+                                
+                        
+                        }
+                    
+                        .S14 {
+                        
+                            border-top:none;
+                                border-bottom:1.0px solid #000000;
+                                border-left:1.0px solid #000000;
+                                border-right:1.0px solid #000000;
+                                padding:3.6671999px;
+                                vertical-align:top;
+                                width:434.8px;
+                                
+                        
+                        }
+                    
+                        .S15 {
+                        
+                            
+                        
+                        }
+                    
+                        .S16 {
+                        
+                            font-style:italic;
+                                
+                        
+                        }
+                    
+                        .S17 {
+                        
+                            border-top:1.0px solid #000000;
+                                border-bottom:1.0px solid #000000;
+                                border-left:1.0px solid #000000;
+                                border-right:none;
+                                padding:3.6671999px;
+                                vertical-align:top;
+                                width:193.4672px;
+                                
+                        
+                        }
+                    
+                        .S18 {
+                        
+                            border:1.0px solid #000000;
+                                padding:3.6671999px;
+                                vertical-align:top;
+                                width:211.39839px;
+                                
+                        
+                        }
+                    
+                        .S19 {
+                        
+                            border-top:none;
+                                border-bottom:1.0px solid #000000;
+                                border-left:1.0px solid #000000;
+                                border-right:none;
+                                padding:3.6671999px;
+                                vertical-align:top;
+                                width:193.4672px;
+                                
+                        
+                        }
+                    
+                        .S20 {
+                        
+                            border-top:none;
+                                border-bottom:1.0px solid #000000;
+                                border-left:1.0px solid #000000;
+                                border-right:1.0px solid #000000;
+                                padding:3.6671999px;
+                                vertical-align:top;
+                                width:211.39839px;
+                                
+                        
+                        }
+                    
+                        .S21 {
+                        
+                            margin-right:auto;
+                                width:624.1344px;
+                                border-collapse:separate;
+                                border-spacing:0;
+                                table-layout:fixed;
+                                
+                        
+                        }
+                    
+                        .S22 {
+                        
+                            border:1.0px solid #000000;
+                                padding:3.6671999px;
+                                vertical-align:top;
+                                width:614.8px;
+                                
+                        
+                        }
+                    
+                        .S23 {
+                        
+                            font-family:'Times New Roman',serif;
+                                font-size:16.0px;
+                                color:#000096;
+                                
+                        
+                        }
+                    
+                        .S24 {
+                        
+                            color:#000096;
+                                
+                        
+                        }
+                    
+                        .S25 {
+                        
+                            color:#000000;
+                                
+                        
+                        }
+                    
+                        .S26 {
+                        
+                            font-family:'Times New Roman',serif;
+                                font-size:16.0px;
+                                color:#000000;
+                                
+                        
+                        }
+                    
+                        .S27 {
+                        
+                            margin-left:48.0px;
+                                margin-right:0;
+                                text-indent:0;
+                                font-family:'Times New Roman',serif;
+                                font-size:16.0px;
+                                
+                        
+                        }
+                    
+                        .S28 {
+                        
+                            margin-left:48.0px;
+                                margin-right:0;
+                                text-indent:0;
+                                font-family:'Times New Roman',serif;
+                                font-weight:bold;
+                                font-size:16.0px;
+                                
+                        
+                        }
+                    
+                        .S29 {
+                        
+                            margin-left:0;
+                                margin-right:0;
+                                text-indent:0;
+                                font-family:'Times New Roman',serif;
+                                font-size:16.0px;
+                                
+                        
+                        }
+                    </style><script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script><script type="text/javascript">
+                    $(document).ready(function() {
+                        //Default Action
+                        $(".tab_content1").hide(); //Hide all tab content
+                        $(".tab_content2").hide(); //Hide all tab content
+                        $(".tab_content3").hide(); //Hide all tab content
+                        $(".tab_content4").hide(); //Hide all tab content
+                        $(".tab_content5").hide(); //Hide all tab content
+                        $(".tab_content6").hide(); //Hide all tab content
+                        
+                        $("ul.tabnav li:first").addClass("active").show(); //Activate first tab
+                        
+                        $(".tab_content1:first").show(); //Show first tab content
+                        $(".tab_content2:first").show(); //Show first tab content
+                        $(".tab_content3:first").show(); //Show first tab content
+                        $(".tab_content4:first").show(); //Show first tab content
+                        $(".tab_content5:first").show(); //Show first tab content
+                        $(".tab_content6:first").show(); //Show first tab content
+                        
+                        //On Click Event
+                        $("ul.tabnav li").click(function() {
+                            
+                            //alert($(this));
+                            $(".tab_content1").hide(); //Hide all tab content
+                            $(".tab_content2").hide(); //Hide all tab content
+                            $(".tab_content3").hide(); //Hide all tab content
+                            $(".tab_content4").hide(); //Hide all tab content
+                            $(".tab_content5").hide(); //Hide all tab content
+                            $(".tab_content6").hide(); //Hide all tab content
+                            
+                            $("ul.tabnav li").removeClass("active"); //Remove any "active" class
+                            $(this).addClass("active"); //Add "active" class to selected tab
+                            
+                            var activeTab = $(this).find("a").attr("href"); //Find the rel attribute value to identify the active tab + content
+                            if (
+                                activeTab == "#tab1" ||
+                                activeTab == "#tab2" ||
+                                activeTab == "#tab3"
+                                ) {
+                                    $(activeTab).fadeIn(); //Fade in the active content
+                            } else {
+                                $(".tab_content1:first").show(); //Show first tab content
+                            }
+                            
+                            if (
+                                activeTab == "#tab4" ||
+                                activeTab == "#tab5" ||
+                                activeTab == "#tab6"
+                                ) {
+                                    $(activeTab).fadeIn(); //Fade in the active content
+                            } else {
+                                $(".tab_content2:first").show(); //Show first tab content
+                            }
+
+                            if (
+                                activeTab == "#tab7" ||
+                                activeTab == "#tab8" ||
+                                activeTab == "#tab9"
+                                ) {
+                                    $(activeTab).fadeIn(); //Fade in the active content
+                            } else {
+                                $(".tab_content3:first").show(); //Show first tab content
+                            }
+                            
+                            if (
+                                activeTab == "#tab10" ||
+                                activeTab == "#tab11" ||
+                                activeTab == "#tab12"
+                                ) {
+                                    $(activeTab).fadeIn(); //Fade in the active content
+                            } else {
+                                $(".tab_content4:first").show(); //Show first tab content
+                            }
+                            
+                            if (
+                                activeTab == "#tab13" ||
+                                activeTab == "#tab14" ||
+                                activeTab == "#tab15"
+                                ) {
+                                    $(activeTab).fadeIn(); //Fade in the active content
+                            } else {
+                                $(".tab_content5:first").show(); //Show first tab content
+                            }
+                            
+                            if (
+                                activeTab == "#tab16" ||
+                                activeTab == "#tab17" ||
+                                activeTab == "#tab18"
+                                ) {
+                                    $(activeTab).fadeIn(); //Fade in the active content
+                            } else {
+                                $(".tab_content6:first").show(); //Show first tab content
+                            }
+
+
+                            return false;
+                        });
+                   });
+                </script><script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+   <body>
+      <center>
+         <div class="container">
+            
+            <p class="S1">MADS/RDF Primer </p>
+            
+            
+            
+            <p class="S3"><span class="emphasis">Status: </span>Published
+            </p>
+            
+            <p class="S3"><span class="emphasis">Updated</span>: 28 October 2015
+            </p>
+            
+            <p class="S3"><span class="emphasis">Previous Version</span>: <a xmlns="http://www.w3.org/1999/xhtml" href="http://www.loc.gov/mads/rdf/20120510/" shape="rect">10 May 2012</a></p>
+            
+            
+            
+            <p class="S6">Abstract </p>
+            
+            
+            <p class="S3">This document describes the MADS/RDF (Metadata Authority Description Schema in RDF) vocabulary, a data model for authority and vocabulary data used within the library and information science (LIS) community, which is inclusive of museums, archives, and other cultural institutions. &nbsp;It is presented as an OWL ontology. </p>
+            
+            
+            <p class="S3"><a xmlns="http://www.w3.org/1999/xhtml" id="DdeLink143152240436" shape="rect"></a><a xmlns="http://www.w3.org/1999/xhtml" id="bkmDdeLink143152240436" shape="rect"></a>MADS/RDF is a knowledge organization system (KOS) designed for use with controlled values for names (personal, corporate,
+               geographic, etc.), thesauri, taxonomies, subject heading systems, and other controlled value lists. &nbsp;It is closely related
+               to SKOS, the Simple Knowledge Organization System and a widely supported and adopted RDF vocabulary. &nbsp;Given the close relationship
+               between the aim of MADS/RDF and the aim of SKOS, the MADS ontology has been fully mapped to SKOS. &nbsp;
+            </p>
+            
+            
+            <p class="S3">Unlike SKOS, however, which is very broad in its application, MADS/RDF is designed specifically to support authority data as used by and needed in the LIS community and its technology systems. &nbsp;For example, MADS/RDF provides a means to record data from the Machine Readable Cataloging (MARC) Authorities format in RDF for use in semantic applications and Linked Data projects. </p>
+            
+            <p class="S3">MADS/RDF is designed to support the description of cultural and bibliographic resources. &nbsp;Data described using MADS/RDF, therefore, assists with identifying and annotating bibliographic and cultural resources. &nbsp;&nbsp;MADS/RDF is not focused on the description of Real World Objects. &nbsp;Although a MADS/RDF description may contain information specific to the Real World Object associated with the MADS/RDF authoritative label, the MADS/RDF ontology distinguishes between these two entities – the RWO and the Authority. </p>
+            
+            
+            <p class="S6">Status of This Document </p>
+            
+            
+            <p class="S3">This document is intended for those designing and implementing LIS technology systems. &nbsp;It is assumed the reader is familiar with MADS/XML, Resource Description Framework (RDF) for information modeling, and the SKOS/RDF vocabulary.  </p>
+            
+            
+            <p class="">
+               Comments are encouraged and welcome. &nbsp;The MODS listserv (
+               <a xmlns="http://www.w3.org/1999/xhtml" href="http://listserv.loc.gov/listarch/mods.html" shape="rect">
+                  <span class="Internetlink" lang="zxx-none" xml:lang="zxx-none">
+                     <span style="font-family:'Times New Roman',serif;font-size:16.0px">http://listserv.loc.gov/listarch/mods.html</span>
+                     </span>
+                  </a>
+               ), which is a public listserv with publicly available archives managed by LC, is the preferred forum for feedback. &nbsp;MADS/XML
+               is maintained as part of the community work on MODS (Metadata Object Description Schema) 
+               (
+               <a xmlns="http://www.w3.org/1999/xhtml" href="../../../mods/index.html" shape="rect">
+                  <span class="Internetlink" lang="zxx-none" xml:lang="zxx-none">
+                     <span style="font-family:'Times New Roman',serif;font-size:16.0px">http://www.loc.gov/standards/mods/</span>
+                     </span>
+                  </a>
+               ) and coordinated by the MODS Editorial Committee. 
+               
+            </p>
+            
+            
+            <p class="S3">This document is preceded by one dated <a xmlns="http://www.w3.org/1999/xhtml" href="http://www.loc.gov/mads/rdf/20120510/" shape="rect">10 May 2012</a>. &nbsp;Changes include, but are not limited to:
+            </p>
+            
+            
+            <ol>
+               
+               <li>
+                  
+                  <p class="S3">Addition of new properties, <a href="http://www.loc.gov/mads/rdf/v1#activityEndDate"
+                     >madsrdf:activityEndDate</a>, <a
+                        href="http://www.loc.gov/mads/rdf/v1#activityStartDate"
+                        >madsrdf:activityStartDate</a>, <a
+                           href="http://www.loc.gov/mads/rdf/v1#associatedLanguage"
+                           >madsrdf:associatedLanguage</a>, <a
+                              href="http://www.loc.gov/mads/rdf/v1#associatedLocale"
+                              >madsrdf:associatedLocale</a>, <a
+                                 href="http://www.loc.gov/mads/rdf/v1#birthDate"
+                                 >madsrdf:birthDate</a>, <a
+                                    href="http://www.loc.gov/mads/rdf/v1#birthPlace"
+                                    >madsrdf:birthPlace</a>, <a
+                                       href="http://www.loc.gov/mads/rdf/v1#deathDate"
+                                       >madsrdf:deathDate</a>, <a
+                                          href="http://www.loc.gov/mads/rdf/v1#deathPlace"
+                                          >madsrdf:deathPlace</a>, <a
+                                             href="http://www.loc.gov/mads/rdf/v1#entityDescriptor"
+                                             >madsrdf:entityDescriptor</a>, <a
+                                                href="http://www.loc.gov/mads/rdf/v1#establishDate"
+                                                >madsrdf:establishDate</a>, <a
+                                                   href="http://www.loc.gov/mads/rdf/v1#fieldOfActivity"
+                                                   >madsrdf:fieldOfActivity</a>, <a
+                                                      href="http://www.loc.gov/mads/rdf/v1#gender"
+                                                      >madsrdf:gender</a>, <a
+                                                         href="http://www.loc.gov/mads/rdf/v1#hasAffiliation"
+                                                         >madsrdf:hasAffiliation</a>, <a
+                                                            href="http://www.loc.gov/mads/rdf/v1#honoraryTitle"
+                                                            >madsrdf:honoraryTitle</a>, <a
+                                                               href="http://www.loc.gov/mads/rdf/v1#isIdentifiedByAuthority"
+                                                               >madsrdf:isIdentifiedByAuthority</a>, <a
+                                                                  href="http://www.loc.gov/mads/rdf/v1#occupation"
+                                                                  >madsrdf:occupation</a>, <a
+                                                                     href="http://www.loc.gov/mads/rdf/v1#prominentFamilyMember"
+                                                                     >madsrdf:prominentFamilyMember</a>, <a
+                                                                        href="http://www.loc.gov/mads/rdf/v1#terminateDate"
+                                                                        >madsrdf:terminateDate</a>, 
+                     <a  href="http://www.loc.gov/mads/rdf/v1#fullerName">madsrdf:fullerName</a>,
+                     <a  href="http://www.loc.gov/mads/rdf/v1#creationDateStart">madsrdf:creationDateStart</a>,
+                     <a  href="http://www.loc.gov/mads/rdf/v1#creationDateEnd">madsrdf:creationDateEnd</a>,
+                     <a  href="http://www.loc.gov/mads/rdf/v1#workOrigin">madsrdf:workOrigin</a>,
+                     <a  href="http://www.loc.gov/mads/rdf/v1#hasChararacteristic">madsrdf:hasChararacteristic</a>. &nbsp; </p><br></br>
+                  
+               </li>
+            </ol>
+            
+            
+            
+            <p class="S6">Table of Contents </p>
+            
+            <ul>
+               
+               <li>
+                  
+                  <p class="S3">1
+                     <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t1" shape="rect">Introduction</a>
+                     
+                  </p>
+                  
+                  <ul>
+                     
+                     <li>
+                        
+                        <p class="S3">1.1
+                           <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t11" shape="rect">Ontology and Namespaces</a>
+                           
+                        </p>
+                        
+                     </li>
+                     
+                     <li>
+                        
+                        <p class="S3">1.2
+                           <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t12" shape="rect">Background</a>
+                           
+                        </p>
+                        
+                     </li>
+                     
+                     <li>
+                        
+                        <p class="S3">1.3
+                           <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t13" shape="rect">Terminology</a>
+                           
+                        </p>
+                        
+                     </li>
+                     
+                     <li>
+                        
+                        <p class="S3">1.4
+                           <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t14" shape="rect">Primary Design Goals</a>
+                           
+                        </p>
+                        
+                        <ul>
+                           
+                           <li>
+                              
+                              <p class="S7">1.4.1
+                                 <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t141" shape="rect">Support the individual components of pre-coordinated subject labels, hierarchical geographic labels, and name/title labels</a>
+                                 
+                              </p>
+                              
+                           </li>
+                           
+                           <li>
+                              
+                              <p class="S7">1.4.2<a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t142" shape="rect">Interoperate with SKOS</a> &nbsp;&nbsp;
+                              </p>
+                              
+                           </li>
+                           
+                           <li>
+                              
+                              <p class="S7">1.4.3
+                                 <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t143" shape="rect">Support LIS authority types</a>
+                                 
+                              </p>
+                              
+                           </li>
+                           
+                           <li>
+                              
+                              <p class="S7">1.4.4
+                                 <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t144" shape="rect">Use MADS/XML as the basis for MADS/RDF</a>
+                                 
+                              </p>
+                              
+                           </li>
+                           
+                           <li>
+                              
+                              <p class="S7">1.4.5
+                                 <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t145" shape="rect">Support authority descriptions and labels</a>
+                                 
+                              </p>
+                              
+                           </li>
+                           
+                           <li>
+                              
+                              <p class="S7">1.4.6
+                                 <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t146" shape="rect">Support variant descriptions and labels</a>
+                                 
+                              </p>
+                              
+                           </li>
+                           
+                           <li>
+                              
+                              <p class="S7">1.4.7
+                                 <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t147" shape="rect">Support deprecated-authority descriptions and labels</a>
+                                 
+                              </p>
+                              
+                           </li>
+                           
+                           <li>
+                              
+                              <p class="S7">1.4.8
+                                 <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t148" shape="rect">Support the parts of labels</a>
+                                 
+                              </p>
+                              
+                           </li>
+                           
+                        </ul>
+                        
+                     </li>
+                     
+                     <li>
+                        
+                        <p class="S3">1.5
+                           <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t15" shape="rect">Examples</a>
+                           
+                        </p>
+                        
+                     </li>
+                     
+                  </ul>
+                  
+               </li>
+               
+               <li>
+                  
+                  <p class="S3">2
+                     <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t2" shape="rect">MADS/RDF Classes</a>
+                     
+                  </p>
+                  
+                  <ul>
+                     
+                     <li>
+                        
+                        <p class="S3">2.1
+                           <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t21" shape="rect">madsrdf:Authority, madsrdf:DeprecatedAuthority and madsrdf:Variant</a>
+                           
+                        </p>
+                        
+                     </li>
+                     
+                     <li>
+                        
+                        <p class="S3">2.2
+                           <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t22" shape="rect">madsrdf:MADSType</a>
+                           
+                        </p>
+                        
+                     </li>
+                     
+                     <li>
+                        
+                        <p class="S3">2.3
+                           <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t23" shape="rect">madsrdf:RWO</a>
+                           
+                        </p>
+                        
+                     </li>
+                     
+                     <li>
+                        
+                        <p class="S3">2.4
+                           <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t24" shape="rect">madsrdf:MADSScheme and madsrdf:MADSCollection</a>
+                           
+                        </p>
+                        
+                     </li>
+                     
+                     <li>
+                        
+                        <p class="S3">2.5
+                           <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t25" shape="rect">madsrdf:Element</a>
+                           
+                        </p>
+                        
+                     </li>
+                     
+                  </ul>
+                  
+               </li>
+               
+               <li>
+                  
+                  <p class="S3">3
+                     <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t3" shape="rect">MADS/RDF Object Properties</a>
+                     
+                  </p>
+                  
+                  <ul>
+                     
+                     <li>
+                        
+                        <p class="S3">3.1
+                           <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t31" shape="rect">madsrdf:hasVariant</a>
+                           
+                        </p>
+                        
+                     </li>
+                     
+                     <li>
+                        
+                        <p class="S3">3.2
+                           <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t32" shape="rect">madsrdf:identifiesRWO and madsrdf:isIdentifiedByAuthority</a>
+                           
+                        </p>
+                        
+                     </li>
+                     
+                     <li>
+                        
+                        <p class="S3">3.3
+                           <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t33" shape="rect">Relationships - madsrdf:hasRelatedAuthority</a>
+                           
+                        </p>
+                        
+                        <ul>
+                           
+                           <li>
+                              
+                              <p class="S3">3.3.1
+                                 <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t331" shape="rect">madsrdf:hasBroaderAuthority and madsrdf:hasNarrowerAuthority</a>
+                                 
+                              </p>
+                              
+                           </li>
+                           
+                           <li>
+                              
+                              <p class="S3">3.3.2
+                                 <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t332" shape="rect">madsrdf:hasBroaderExternalAuthority and madsrdf:hasNarrowerExternalAuthority</a>
+                                 
+                              </p>
+                              
+                           </li>
+                           
+                           <li>
+                              
+                              <p class="S3">3.3.3
+                                 <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t333" shape="rect">madsrdf:hasReciprocalAuthority and madsrdf:hasReciprocalExternalAuthority</a>
+                                 
+                              </p>
+                              
+                           </li>
+                           
+                           <li>
+                              
+                              <p class="S3">3.3.4
+                                 <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t334" shape="rect">madsrdf:hasCloseExternalAuthority and </a>
+                                 <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t334" shape="rect">madsrdf:hasExactExternalAuthority</a>
+                                 
+                              </p>
+                              
+                           </li>
+                           
+                           <li>
+                              
+                              <p class="S3">3.3.5
+                                 <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t335" shape="rect">madsrdf:hasCorporateParentAuthority and madsrdf:hasCorporateSubsidiaryAuthority</a>
+                                 
+                              </p>
+                              
+                           </li>
+                           
+                        </ul>
+                        
+                     </li>
+                     
+                     <li>
+                        
+                        <p class="S3">3.4
+                           <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t34" shape="rect">Relationships between Current, Deprecated, and Superseded Descriptions</a>
+                           
+                        </p>
+                        
+                        <ul>
+                           
+                           <li>
+                              
+                              <p class="S3">3.4.1
+                                 <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t341" shape="rect">madsrdf:hasLaterEstablishedForm and madsrdf:hasEarlierEstablishedForm</a>
+                                 
+                              </p>
+                              
+                           </li>
+                           
+                           <li>
+                              
+                              <p class="S3">3.4.2
+                                 <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t342" shape="rect">madsrdf:useFor and madsrdf:useInstead</a>
+                                 
+                              </p>
+                              
+                           </li>
+                           
+                        </ul>
+                        
+                     </li>
+                     
+                  </ul>
+                  
+               </li>
+               
+               <li>
+                  
+                  <p class="S3">4
+                     <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t4" shape="rect">Acknowledgements</a>
+                     
+                  </p>
+                  
+               </li>
+               
+            </ul>
+            
+            
+            
+            <p class="S8"><a xmlns="http://www.w3.org/1999/xhtml" id="t1" shape="rect"></a><a xmlns="http://www.w3.org/1999/xhtml" id="bkmt1" shape="rect"></a>1 Introduction
+            </p>
+            
+            
+            <p class="S2"><a xmlns="http://www.w3.org/1999/xhtml" id="t11" shape="rect"></a><a xmlns="http://www.w3.org/1999/xhtml" id="bkmt11" shape="rect"></a>1.1 Ontology and Namespaces
+            </p>
+            
+            
+            <p class="S3">A MADS/RDF namespace document, which provides a human-accessible list of MADS/RDF classes and properties, is accessible at: </p>
+            
+            
+            <p class="S3">
+               <a xmlns="http://www.w3.org/1999/xhtml" href="../../../mads/rdf/v1.html" shape="rect">
+                  <span class="Internetlink" lang="zxx-none" xml:lang="zxx-none">http://www.loc.gov/mads/rdf/v1.html</span>
+                  </a>
+               
+            </p>
+            
+            
+            
+            <p class="S3">MADS/RDF is modeled as an OWL Full ontology. &nbsp;It is available at: </p>
+            
+            
+            <p class="">
+               <a xmlns="http://www.w3.org/1999/xhtml" href="http://www.loc.gov/mads/rdf/v1.rdf" shape="rect">
+                  <span class="Internetlink" lang="zxx-none" xml:lang="zxx-none">
+                     <span style="font-family:'Times New Roman',serif;font-size:16.0px">http://www.loc.gov/mads/rdf/v1.rdf</span>
+                     </span>
+                  </a>
+               
+            </p>
+            
+            
+            
+            <p class="S3">The MADS/RDF namespace is: </p>
+            
+            
+            <p class="S9">
+               <a xmlns="http://www.w3.org/1999/xhtml" id="DdeLink12021776519721" shape="rect"></a>
+               <a xmlns="http://www.w3.org/1999/xhtml" id="bkmDdeLink12021776519721" shape="rect"></a>
+               <span class="emphasis">http://</span>
+               <span class="emphasis">www.loc.gov/mads/rdf/v1#</span>
+               
+            </p>
+            
+            
+            <p class="S3">Other namespaces and prefixes used in this document or defined in the ontology are: </p>
+            
+            
+            
+            <table class="S10">
+               
+               <tr class="">
+                  
+                  <td class="S11">
+                     
+                     <p class="S2">Namespace Prefix </p>
+                     
+                  </td>
+                  
+                  <td class="S12">
+                     
+                     <p class="S2">Namespace URI </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr class="">
+                  
+                  <td class="S13">
+                     
+                     <p class="S7">mads </p>
+                     
+                  </td>
+                  
+                  <td class="S14">
+                     
+                     <p class="S7"><a xmlns="http://www.w3.org/1999/xhtml" id="DdeLink1202177651972" shape="rect"></a><a xmlns="http://www.w3.org/1999/xhtml" id="bkmDdeLink1202177651972" shape="rect"></a><a xmlns="http://www.w3.org/1999/xhtml" id="line1" shape="rect"></a><a xmlns="http://www.w3.org/1999/xhtml" id="bkmline1" shape="rect"></a>http://www.loc.gov/mads/rdf/v1#
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr class="">
+                  
+                  <td class="S13">
+                     
+                     <p class="S7">owl </p>
+                     
+                  </td>
+                  
+                  <td class="S14">
+                     
+                     <p class="S7"><a xmlns="http://www.w3.org/1999/xhtml" id="line11" shape="rect"></a><a xmlns="http://www.w3.org/1999/xhtml" id="bkmline11" shape="rect"></a>http://www.w3.org/2002/07/owl#
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr class="">
+                  
+                  <td class="S13">
+                     
+                     <p class="S7">rdf </p>
+                     
+                  </td>
+                  
+                  <td class="S14">
+                     
+                     <p class="S7"><a xmlns="http://www.w3.org/1999/xhtml" id="line12" shape="rect"></a><a xmlns="http://www.w3.org/1999/xhtml" id="bkmline12" shape="rect"></a>http://www.w3.org/1999/02/22-rdf-syntax-ns#
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr class="">
+                  
+                  <td class="S13">
+                     
+                     <p class="S7">rdfs </p>
+                     
+                  </td>
+                  
+                  <td class="S14">
+                     
+                     <p class="S7">h<a xmlns="http://www.w3.org/1999/xhtml" id="line13" shape="rect"></a><a xmlns="http://www.w3.org/1999/xhtml" id="bkmline13" shape="rect"></a>ttp://www.w3.org/2000/01/rdf-schema#
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr class="">
+                  
+                  <td class="S13">
+                     
+                     <p class="S7">skos </p>
+                     
+                  </td>
+                  
+                  <td class="S14">
+                     
+                     <p class="S7"><a xmlns="http://www.w3.org/1999/xhtml" id="line14" shape="rect"></a><a xmlns="http://www.w3.org/1999/xhtml" id="bkmline14" shape="rect"></a>http://www.w3.org/2004/02/skos/core#
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+               <tr class="">
+                  
+                  <td class="S13">
+                     
+                     <p class="S7">foaf </p>
+                     
+                  </td>
+                  
+                  <td class="S14">
+                     
+                     <p class="S15">
+                        
+                        http://xmlns.com/foaf/0.1/
+                        
+                        
+                     </p>
+                     
+                  </td>
+                  
+               </tr>
+               
+            </table>
+            
+            
+            
+            <p class="S6"><a xmlns="http://www.w3.org/1999/xhtml" id="t12" shape="rect"></a><a xmlns="http://www.w3.org/1999/xhtml" id="bkmt12" shape="rect"></a>1.2 Background
+            </p>
+            
+            
+            <p class="S3">MADS/RDF provides a means to represent the detailed information embedded in common LIS authority records. &nbsp;Although SKOS has proven a robust and very flexible data model, it does not capture the level of detail in LIS authority and vocabulary data. &nbsp; </p>
+            
+            
+            <p class="S3">The Library of Congress has experience representing authority data in SKOS/RDF since early 2009, before the SKOS specification was a formal W3C recommendation. &nbsp;LC was an early adopter of SKOS. &nbsp;SKOS was employed in its Linked Data service, ID.LOC.GOV, which made the entire LC Subject Headings (LCSH) file available in SKOS/RDF format. &nbsp;This enriching experience has, immediately after launch and over time, revealed some of the challenges involved in representing more complex authority data purely in SKOS. &nbsp;One of the larger issues quickly brought to LC's attention by users of the data was: LC is not passing on useful data in its (MARC) authority records because SKOS does not provide a way to capture the information, such as the multiple components, and their types, of pre-coordinated subject headings. &nbsp;This is in no way a fault of SKOS. &nbsp;SKOS was designed to be “a common data model for sharing and linking knowledge organization systems via the Web.” &nbsp;It achieves its aim admirably. &nbsp;Part of SKOS's success, however, comes from abstracting or generalizing organization systems, thereby creating a common set of data elements (Classes and Properties) that can be supported by a wide range of users and for an equally wide range of thesauri, controlled lists, subject heading systems and taxonomies. &nbsp;Indeed, SKOS accommodates LIS authority data very nicely after the data has been somewhat generalized. </p>
+            
+            
+            <p class="S3">MADS/RDF is designed to complement SKOS and, as such, is formally mapped to the SKOS/RDF vocabulary. &nbsp;This mapping, which can be used for inferencing purposes, facilitates data exchange between a MADS/RDF user and a SKOS user. &nbsp;Nevertheless, MADS/RDF is a more specifically defined data model to represent the complexities of authority, vocabulary, and thesauri data. &nbsp;In part because MADS/RDF derives, ultimately, from the MARC Authority format, it is expected that MADS/RDF will be of greatest interest to the LIS community, though it may also be of interest to non-library applications. &nbsp;It provides a means to not only capture information regularly found in LIS authority records but also represent authority data as it has come to be expected by those working in the LIS community. &nbsp; </p>
+            
+            
+            <p class="S3">MADS/RDF does not capture the nuances and rules for the use and creation of labels – the actual headings themselves - nor is it designed for this purpose. &nbsp;For example, the rules guiding the creation of a pre-coordinated LC Subject Heading label are beyond the scope of MADS/RDF, though MADS/RDF might be used to capture the information needed to create a pre-coordinated label. &nbsp;MADS/RDF avoids, wherever possible, instituting a condition or restriction not shared by most LIS knowledge organization systems. </p>
+            
+            
+            
+            <p class="S2"><a xmlns="http://www.w3.org/1999/xhtml" id="t13" shape="rect"></a><a xmlns="http://www.w3.org/1999/xhtml" id="bkmt13" shape="rect"></a>1.3 Some Terminology
+            </p>
+            
+            
+            <p class="S3">Authority (also Authoritative form): &nbsp;a concept (resource) with a controlled label. </p>
+            
+            
+            <p class="S3">Deprecated-authority (also Deprecated form): &nbsp;a former Authoritative form. &nbsp; </p>
+            
+            
+            <p class="S3">Label - the lexical string that is the primary focus of an Authority, Variant, or Deprecated-authority description. &nbsp;The Labels of these resources are or were once controlled, meaning they were carefully curated to ensure they met some standard within the knowledge organization system. &nbsp;This is the closest functional equivalent to what is commonly understood to in LIS to be a “heading.” </p>
+            
+            
+            <p class="S3">MARC 21 Authority format: currently the primary carrier for authority data used within the LIS community. &nbsp; </p>
+            
+            
+            <p class="S3">Description: &nbsp;Used throughout the current document to describe the compilation of facts about something or, especially in the case of the present document and topic, the collection of triple statements about an authority, variant, or deprecated-authority. &nbsp;From a purely RDF view point, a “description” should be viewed as a type of (sub-)graph. &nbsp;This is the closest functional equivalent to what is commonly understood to be a LIS “record.” </p>
+            
+            
+            <p class="S3">Variant (also Variant form): &nbsp;a resource that represents the alternate form of an authoritative label. </p>
+            
+            
+            <p class="S2"><a xmlns="http://www.w3.org/1999/xhtml" id="t14" shape="rect"></a><a xmlns="http://www.w3.org/1999/xhtml" id="bkmt14" shape="rect"></a>1.4 Primary Design Goals
+            </p>
+            
+            
+            <ul>
+               
+               <li>
+                  
+                  <p class="S7">1.4.1
+                     <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t141" shape="rect">Support the individual components of pre-coordinated subject labels, hierarchical geographic labels, and name/title labels</a>
+                     
+                  </p>
+                  
+               </li>
+               
+               <li>
+                  
+                  <p class="S7">1.4.2<a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t142" shape="rect">Interoperate with SKOS </a>&nbsp;&nbsp;
+                  </p>
+                  
+               </li>
+               
+               <li>
+                  
+                  <p class="S7">1.4.3
+                     <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t143" shape="rect">Support LIS authority types</a>
+                     
+                  </p>
+                  
+               </li>
+               
+               <li>
+                  
+                  <p class="S7">1.4.4
+                     <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t144" shape="rect">Use MADS/XML as the basis for MADS/RDF</a>
+                     
+                  </p>
+                  
+               </li>
+               
+               <li>
+                  
+                  <p class="S7">1.4.5
+                     <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t145" shape="rect">Support authority descriptions and labels</a>
+                     
+                  </p>
+                  
+               </li>
+               
+               <li>
+                  
+                  <p class="S7">1.4.6
+                     <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t146" shape="rect">Support variant descriptions and labels</a>
+                     
+                  </p>
+                  
+               </li>
+               
+               <li>
+                  
+                  <p class="S7">1.4.7
+                     <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t147" shape="rect">Support deprecated-authority descriptions and labels</a>
+                     
+                  </p>
+                  
+               </li>
+               
+               <li>
+                  
+                  <p class="S7">1.4.8
+                     <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t148" shape="rect">Support the parts of labels</a>
+                     
+                  </p>
+                  
+               </li>
+               
+            </ul>
+            
+            
+            
+            <p class="S3"><a xmlns="http://www.w3.org/1999/xhtml" id="t141" shape="rect"></a><a xmlns="http://www.w3.org/1999/xhtml" id="bkmt141" shape="rect"></a>1.4.1 &nbsp;<span class="italicized">Support the individual components of pre-coordinated subject labels, hierarchical geographic labels, and name/title labels
+                  </span></p>
+            
+            
+            <p class="S15">Authoritative labels may be the concatenation of two or more labels, each of which may exist as an independent authority description
+               with its own authoritative label. &nbsp;These labels are common in LIS authority data. &nbsp;Labels that are the concatenation of a
+               Name and a Title - such as “Morrison, Toni. &nbsp;Beloved.” - are of a madsrdf:NameTitle type in MADS/RDF. &nbsp;“Morrison, Toni” is
+               a controlled Name label and therefore has a distinct description, the URI of which may be used in other Authority descriptions.
+               &nbsp;A Hierarchical Geographic label, known in MADS/RDF as a madsrdf:HierarchicalGeographic, is the concatenation of two or more
+               geographic names, such as “United States--New Jersey--Essex--Montclair,” which comprises a country, state, county, and city. &nbsp;A pre-coordinated subject label, known in MADS/RDF as a madsrdf:ComplexSubject,
+               is the concatenation of two or more simple subject labels, each of which represent individual concepts, such as “United States--History--Civil War, 1861-1865,” which comprises geographic, topic, and temporal concepts. &nbsp;&nbsp;This is covered in more detail below, in <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t22" shape="rect"><span style="font-family:'Times New Roman',serif;font-size:16.0px">section 2.2</span></a>.
+            </p>
+            
+            
+            <p class="S7"><a xmlns="http://www.w3.org/1999/xhtml" id="t142" shape="rect"></a><a xmlns="http://www.w3.org/1999/xhtml" id="bkmt142" shape="rect"></a>1.4.2 &nbsp;<span class="italicized">Interoperate with SKOS</span></p>
+            
+            
+            <p class="S7">MADS/RDF is mapped to SKOS, providing a path to full interoperability of resources described in MADS/RDF to a broad standard. &nbsp;Although the details are in the OWL ontology definition, the mapping essentially makes SKOS Classes and Properties parent Classes and Properties of MADS/RDF Classes and Properties. &nbsp;For example, a <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority</a> is a sub-class of <a href="http://www.w3.org/2004/02/skos/core#Concept" class="cORp">skos:Concept.</a> A <a href="http://www.loc.gov/mads/rdf/v1#authoritativeLabel" class="cORp">madsrdf:authoritativeLabel,</a> for example, is a sub-property of <a href="http://www.w3.org/2004/02/skos/core#prefLabel" class="cORp">skos:prefLabel.</a> 
+            </p>
+            
+            
+            <p class="S7"><a xmlns="http://www.w3.org/1999/xhtml" id="t143" shape="rect"></a><a xmlns="http://www.w3.org/1999/xhtml" id="bkmt143" shape="rect"></a>1.4.3 &nbsp;<span class="italicized">Support LIS authority types</span></p>
+            
+            
+            <p class="S7">Although LIS authority labels identify concepts, it is also common practice in LIS to identify authority types more granularly.
+               &nbsp;For example, a label might represent a personal name, corporate name, title, name/title, geographic area, temporal concept,
+               etc. These are expressed as sub-classes of madsrdf:SimpleType and madsrdf:ComplexType which indicate single and concatenated
+               labels, respectively. &nbsp;Most of the aforementioned types, especially the madsrdf:SimpleType types, were already defined in
+               MADS/XML. &nbsp;This is covered in more detail below, in <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t22" shape="rect">section 2.2</a>.
+            </p>
+            
+            
+            <p class="S3"><a xmlns="http://www.w3.org/1999/xhtml" id="t144" shape="rect"></a><a xmlns="http://www.w3.org/1999/xhtml" id="bkmt144" shape="rect"></a>1.4.4 &nbsp;&nbsp;<span class="italicized">Use MADS/XML as the basis for MADS/RDF</span></p>
+            
+            
+            <p class="S15">
+               MADS/XML (
+               <a xmlns="http://www.w3.org/1999/xhtml" href="../../../mads/index.html" target="_blank" shape="rect">
+                  <span class="Internetlink" lang="zxx-none" xml:lang="zxx-none">
+                     <span style="font-family:'Times New Roman',serif;font-size:16.0px">http://www.loc.gov/standards/mads/</span>
+                     </span>
+                  </a>
+               ) provided a solid foundation for MADS/RDF. &nbsp;MADS/XML, which “is a MARC 21-compatible XML format” for MARC authority data,
+               already provided support for complex subject labels and other specific authority types. &nbsp;&nbsp;For those familiar with MADS/XML,
+               MADS/RDF can accommodate everything in the MADS/XML schema. &nbsp;MADS/RDF required a few additions: &nbsp;these range from new authority
+               types to usage clarification and codification rules. &nbsp;The names of some MADS/XML elements, attributes, and attribute values
+               were altered to clarify the semantics in MADS/RDF. &nbsp;All MADS/XML relationships in MADS/RDF have been modeled as object properties.
+               
+            </p>
+            
+            
+            <p class="S3"><a xmlns="http://www.w3.org/1999/xhtml" id="t145" shape="rect"></a><a xmlns="http://www.w3.org/1999/xhtml" id="bkmt145" shape="rect"></a>1.4.5 &nbsp;<span class="italicized">Support authority descriptions and labels</span></p>
+            
+            
+            <p class="S7">With 1.4.6 and 1.4.7 following, MADS/RDF descriptions might be madsrdf:Authority, or madsrdf:Variant and/or madsrdf:DeprecatedAuthority
+               types. &nbsp;madsrdf:Authority types represent authoritative resources and concepts, the labels of which are actively controlled.
+               &nbsp;In most cases, these will be identified as first-class resources (for Linked Data, for instance, by using HTTP URIs). &nbsp;This
+               is covered in more detail below, in <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t21" shape="rect">section 2.1</a>.
+            </p>
+            
+            
+            <p class="S3"><a xmlns="http://www.w3.org/1999/xhtml" id="t146" shape="rect"></a><a xmlns="http://www.w3.org/1999/xhtml" id="bkmt146" shape="rect"></a>1.4.6 &nbsp;<span class="italicized">Support variant descriptions and labels</span></p>
+            
+            
+            <p class="S7"><a href="http://www.loc.gov/mads/rdf/v1#Variant" class="cORp">madsrdf:Variant</a> types are variant forms of authoritative resources. &nbsp;They are disjoint with <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority</a> types. &nbsp;It is expected that most <a href="http://www.loc.gov/mads/rdf/v1#Variant" class="cORp">madsrdf:Variant</a> resources will be identified as blank nodes (i.e., no http URIs). &nbsp;They can be associated with a <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority</a> description via the <a href="http://www.loc.gov/mads/rdf/v1#hasVariant" class="cORp">madsrdf:hasVariant</a> property. &nbsp;The labels of a <a href="http://www.loc.gov/mads/rdf/v1#Variant" class="cORp">madsrdf:Variant</a> type is identified with the <a href="http://www.loc.gov/mads/rdf/v1#variantLabel" class="cORp">madsrdf:variantLabel</a> property. 
+            </p>
+            
+            
+            <p class="S3"><a xmlns="http://www.w3.org/1999/xhtml" id="t147" shape="rect"></a><a xmlns="http://www.w3.org/1999/xhtml" id="bkmt147" shape="rect"></a>1.4.7 &nbsp;<span class="italicized">Support deprecated-authority descriptions and labels</span></p>
+            
+            
+            <p class="S7"><a href="http://www.loc.gov/mads/rdf/v1#DeprecatedAuthority" class="cORp">madsrdf:DeprecatedAuthority</a> types indicate that a resource once considered authoritative, and very likely once a <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority,</a> is no longer authoritative. &nbsp;madsrdf:DeprecatedAuthority types are disjoint with <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority</a> types, but not <a href="http://www.loc.gov/mads/rdf/v1#Variant" class="cORp">madsrdf:Variant</a> types. &nbsp;A <a href="http://www.loc.gov/mads/rdf/v1#DeprecatedAuthority" class="cORp">madsrdf:DeprecatedAuthority</a> resource indicates a deprecated label. &nbsp;The labels of a <a href="http://www.loc.gov/mads/rdf/v1#DeprecatedAuthority" class="cORp">madsrdf:DeprecatedAuthority</a> type can be identified with the <a href="http://www.loc.gov/mads/rdf/v1#deprecatedLabel" class="cORp">madsrdf:deprecatedLabel</a> property. &nbsp;Although this might suggest a labeling conflict, it is expected that a <a href="http://www.loc.gov/mads/rdf/v1#Variant" class="cORp">madsrdf:Variant</a> will have a <a href="http://www.loc.gov/mads/rdf/v1#variantLabel" class="cORp">madsrdf:variantLabel.</a> &nbsp;&nbsp;madsrdf:DeprecatedAuthority has no mapping to SKOS/RDF. 
+            </p>
+            
+            
+            <p class="S7"><a xmlns="http://www.w3.org/1999/xhtml" id="t148" shape="rect"></a><a xmlns="http://www.w3.org/1999/xhtml" id="bkmt148" shape="rect"></a>1.4.8 &nbsp;<span class="italicized">Support the parts of labels</span></p>
+            
+            
+            <p class="S7">MADS/XML supports the parts of labels, such as the nonSort aspect of a Title authority or the givenName of the Name authority.
+               &nbsp;These are fully represented in MADS/RDF with a few semantic alterations and a few additions. &nbsp;&nbsp;This is covered in more detail
+               below, in <a xmlns="http://www.w3.org/1999/xhtml" href="index.html#t25" shape="rect">section 2.5</a>.
+            </p>
+            
+            
+            <p class="S2"><a xmlns="http://www.w3.org/1999/xhtml" id="t15" shape="rect"></a><a xmlns="http://www.w3.org/1999/xhtml" id="bkmt15" shape="rect"></a>1.5 Examples
+            </p>
+            
+            
+            <p class="S3">Theses examples illustrate the application of the ontology to describe concepts, and their labels, form the Library of Congress maintained files for names (NAF) and subjects (LCSH). </p>
+            
+            
+            <table style="border: 1px;cell-spacing: 2px;">
+               
+               <tr></tr>
+               
+               <tr>
+                  <td style="width: 150px;">
+                     Authority
+                     
+                  </td>
+                  <td style="width: 150px;">
+                     ComplexSubject
+                     
+                  </td>
+                  <td style="width: 100px;">
+                     sh2007010620
+                     
+                  </td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh2007010620.rdf">RDF/XML</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh2007010620.nt">Ntriples</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh2007010620.ttl">Turtle</a></td>
+               </tr>
+               
+               <tr>
+                  <td style="width: 150px;">
+                     Authority
+                     
+                  </td>
+                  <td style="width: 150px;">
+                     ComplexSubject
+                     
+                  </td>
+                  <td style="width: 100px;">
+                     sh85068030
+                     
+                  </td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh85068030.rdf">RDF/XML</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh85068030.nt">Ntriples</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh85068030.ttl">Turtle</a></td>
+               </tr>
+               
+               <tr>
+                  <td style="width: 150px;">
+                     Authority
+                     
+                  </td>
+                  <td style="width: 150px;">
+                     NameTitle
+                     
+                  </td>
+                  <td style="width: 100px;">
+                     n00000707
+                     
+                  </td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/n00000707.rdf">RDF/XML</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/n00000707.nt">Ntriples</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/n00000707.ttl">Turtle</a></td>
+               </tr>
+               
+               <tr>
+                  <td style="width: 150px;">
+                     Authority
+                     
+                  </td>
+                  <td style="width: 150px;">
+                     ComplexSubject
+                     
+                  </td>
+                  <td style="width: 100px;">
+                     sh85099085
+                     
+                  </td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh85099085.rdf">RDF/XML</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh85099085.nt">Ntriples</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh85099085.ttl">Turtle</a></td>
+               </tr>
+               
+               <tr>
+                  <td style="width: 150px;">
+                     Authority
+                     
+                  </td>
+                  <td style="width: 150px;">
+                     NameTitle
+                     
+                  </td>
+                  <td style="width: 100px;">
+                     sh93004675
+                     
+                  </td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh93004675.rdf">RDF/XML</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh93004675.nt">Ntriples</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh93004675.ttl">Turtle</a></td>
+               </tr>
+               
+               <tr>
+                  <td style="width: 150px;">
+                     Authority
+                     
+                  </td>
+                  <td style="width: 150px;">
+                     NameTitle
+                     
+                  </td>
+                  <td style="width: 100px;">
+                     n00039722
+                     
+                  </td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/n00039722.rdf">RDF/XML</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/n00039722.nt">Ntriples</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/n00039722.ttl">Turtle</a></td>
+               </tr>
+               
+               <tr>
+                  <td style="width: 150px;">
+                     Authority
+                     
+                  </td>
+                  <td style="width: 150px;">
+                     Title
+                     
+                  </td>
+                  <td style="width: 100px;">
+                     sh96011928
+                     
+                  </td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh96011928.rdf">RDF/XML</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh96011928.nt">Ntriples</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh96011928.ttl">Turtle</a></td>
+               </tr>
+               
+               <tr>
+                  <td style="width: 150px;">
+                     Authority
+                     
+                  </td>
+                  <td style="width: 150px;">
+                     Temporal
+                     
+                  </td>
+                  <td style="width: 100px;">
+                     sh2002012470
+                     
+                  </td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh2002012470.rdf">RDF/XML</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh2002012470.nt">Ntriples</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh2002012470.ttl">Turtle</a></td>
+               </tr>
+               
+               <tr>
+                  <td style="width: 150px;">
+                     Authority
+                     
+                  </td>
+                  <td style="width: 150px;">
+                     ConferenceName
+                     
+                  </td>
+                  <td style="width: 100px;">
+                     n00037993
+                     
+                  </td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/n00037993.rdf">RDF/XML</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/n00037993.nt">Ntriples</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/n00037993.ttl">Turtle</a></td>
+               </tr>
+               
+               <tr>
+                  <td style="width: 150px;">
+                     Authority
+                     
+                  </td>
+                  <td style="width: 150px;">
+                     Topic
+                     
+                  </td>
+                  <td style="width: 100px;">
+                     sh85017405
+                     
+                  </td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh85017405.rdf">RDF/XML</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh85017405.nt">Ntriples</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh85017405.ttl">Turtle</a></td>
+               </tr>
+               
+               <tr>
+                  <td style="width: 150px;">
+                     Authority
+                     
+                  </td>
+                  <td style="width: 150px;">
+                     PersonalName
+                     
+                  </td>
+                  <td style="width: 100px;">
+                     n50048460
+                     
+                  </td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/n50048460.rdf">RDF/XML</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/n50048460.nt">Ntriples</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/n50048460.ttl">Turtle</a></td>
+               </tr>
+               
+               <tr>
+                  <td style="width: 150px;">
+                     Authority
+                     
+                  </td>
+                  <td style="width: 150px;">
+                     PersonalName
+                     
+                  </td>
+                  <td style="width: 100px;">
+                     n00009201
+                     
+                  </td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/n00009201.rdf">RDF/XML</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/n00009201.nt">Ntriples</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/n00009201.ttl">Turtle</a></td>
+               </tr>
+               
+               <tr>
+                  <td style="width: 150px;">
+                     Authority
+                     
+                  </td>
+                  <td style="width: 150px;">
+                     NameTitle
+                     
+                  </td>
+                  <td style="width: 100px;">
+                     n00009202
+                     
+                  </td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/n00009202.rdf">RDF/XML</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/n00009202.nt">Ntriples</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/n00009202.ttl">Turtle</a></td>
+               </tr>
+               
+               <tr>
+                  <td style="width: 150px;">
+                     Authority
+                     
+                  </td>
+                  <td style="width: 150px;">
+                     Geographic
+                     
+                  </td>
+                  <td style="width: 100px;">
+                     sh85090955
+                     
+                  </td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh85090955.rdf">RDF/XML</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh85090955.nt">Ntriples</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh85090955.ttl">Turtle</a></td>
+               </tr>
+               
+               <tr>
+                  <td style="width: 150px;">
+                     Authority
+                     
+                  </td>
+                  <td style="width: 150px;">
+                     Geographic
+                     
+                  </td>
+                  <td style="width: 100px;">
+                     sh85072887
+                     
+                  </td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh85072887.rdf">RDF/XML</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh85072887.nt">Ntriples</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh85072887.ttl">Turtle</a></td>
+               </tr>
+               
+               <tr>
+                  <td style="width: 150px;">
+                     Authority
+                     
+                  </td>
+                  <td style="width: 150px;">
+                     ComplexSubject
+                     
+                  </td>
+                  <td style="width: 100px;">
+                     sh2010003666
+                     
+                  </td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh2010003666.rdf">RDF/XML</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh2010003666.nt">Ntriples</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh2010003666.ttl">Turtle</a></td>
+               </tr>
+               
+               <tr>
+                  <td style="width: 150px;">
+                     Authority
+                     
+                  </td>
+                  <td style="width: 150px;">
+                     GenreForm
+                     
+                  </td>
+                  <td style="width: 100px;">
+                     sh99001636
+                     
+                  </td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh99001636.rdf">RDF/XML</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh99001636.nt">Ntriples</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh99001636.ttl">Turtle</a></td>
+               </tr>
+               
+               <tr>
+                  <td style="width: 150px;">
+                     Authority
+                     
+                  </td>
+                  <td style="width: 150px;">
+                     ComplexSubject
+                     
+                  </td>
+                  <td style="width: 100px;">
+                     sh2008116061
+                     
+                  </td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh2008116061.rdf">RDF/XML</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh2008116061.nt">Ntriples</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh2008116061.ttl">Turtle</a></td>
+               </tr>
+               
+               <tr>
+                  <td style="width: 150px;">
+                     Variant
+                     
+                  </td>
+                  <td style="width: 150px;">
+                     ComplexSubject
+                     
+                  </td>
+                  <td style="width: 100px;">
+                     sh2010100099
+                     
+                  </td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh2010100099.rdf">RDF/XML</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh2010100099.nt">Ntriples</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh2010100099.ttl">Turtle</a></td>
+               </tr>
+               
+               <tr>
+                  <td style="width: 150px;">
+                     Variant
+                     
+                  </td>
+                  <td style="width: 150px;">
+                     ComplexSubject
+                     
+                  </td>
+                  <td style="width: 100px;">
+                     sh85120945
+                     
+                  </td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh85120945.rdf">RDF/XML</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh85120945.nt">Ntriples</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh85120945.ttl">Turtle</a></td>
+               </tr>
+               
+               <tr>
+                  <td style="width: 150px;">
+                     Authority
+                     
+                  </td>
+                  <td style="width: 150px;">
+                     ComplexSubject
+                     
+                  </td>
+                  <td style="width: 100px;">
+                     sh2010002339
+                     
+                  </td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh2010002339.rdf">RDF/XML</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh2010002339.nt">Ntriples</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh2010002339.ttl">Turtle</a></td>
+               </tr>
+               
+               <tr>
+                  <td style="width: 150px;">
+                     Authority
+                     
+                  </td>
+                  <td style="width: 150px;">
+                     ComplexSubject
+                     
+                  </td>
+                  <td style="width: 100px;">
+                     sh2010002340
+                     
+                  </td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh2010002340.rdf">RDF/XML</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh2010002340.nt">Ntriples</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh2010002340.ttl">Turtle</a></td>
+               </tr>
+               
+               <tr>
+                  <td style="width: 150px;">
+                     Variant
+                     
+                  </td>
+                  <td style="width: 150px;">
+                     GenreForm
+                     
+                  </td>
+                  <td style="width: 100px;">
+                     sh2002012502
+                     
+                  </td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh2002012502.rdf">RDF/XML</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh2002012502.nt">Ntriples</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh2002012502.ttl">Turtle</a></td>
+               </tr>
+               
+               <tr>
+                  <td style="width: 150px;">
+                     Authority
+                     
+                  </td>
+                  <td style="width: 150px;">
+                     GenreForm
+                     
+                  </td>
+                  <td style="width: 100px;">
+                     sh2010004769
+                     
+                  </td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh2010004769.rdf">RDF/XML</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh2010004769.nt">Ntriples</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh2010004769.ttl">Turtle</a></td>
+               </tr>
+               
+               <tr>
+                  <td style="width: 150px;">
+                     Authority
+                     
+                  </td>
+                  <td style="width: 150px;">
+                     GenreForm
+                     
+                  </td>
+                  <td style="width: 100px;">
+                     sh2010004770
+                     
+                  </td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh2010004770.rdf">RDF/XML</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh2010004770.nt">Ntriples</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/sh2010004770.ttl">Turtle</a></td>
+               </tr>
+               
+               <tr>
+                  <td style="width: 150px;">
+                     Authority
+                     
+                  </td>
+                  <td style="width: 150px;">
+                     PersonalName
+                     
+                  </td>
+                  <td style="width: 100px;">
+                     oca08651008
+                     
+                  </td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/oca08651008.rdf">RDF/XML</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/oca08651008.nt">Ntriples</a></td>
+                  <td style="width: 100px;"><a href="http://www.loc.gov/standards/mads/rdf/v1/examples/oca08651008.ttl">Turtle</a></td>
+               </tr>
+               
+            </table>
+            
+            
+            
+            
+            <p class="S6"><a xmlns="http://www.w3.org/1999/xhtml" id="t2" shape="rect"></a><a xmlns="http://www.w3.org/1999/xhtml" id="bkmt2" shape="rect"></a>2 MADS/RDF Classes
+            </p>
+            
+            
+            <p class="S3">What follows is a description of the major Classes of the MADS/RDF ontology. &nbsp;Brief discussion of the minor classes – such as <a href="http://www.loc.gov/mads/rdf/v1#Identifier" class="cORp">madsrdf:Identifier,</a> <a href="http://www.loc.gov/mads/rdf/v1#Affiliation" class="cORp">madsrdf:Affiliation,</a> <a href="http://www.loc.gov/mads/rdf/v1#AffiliationAddress" class="cORp">madsrdf:AffiliationAddress,</a> and <a href="http://www.loc.gov/mads/rdf/v1#Source" class="cORp">madsrdf:Source</a> – will be incorporated at a later date. 
+            </p>
+            
+            
+            
+            <p class="S3">
+               <a xmlns="http://www.w3.org/1999/xhtml" id="t21" shape="rect"></a>
+               <a xmlns="http://www.w3.org/1999/xhtml" id="bkmt21" shape="rect"></a>
+               <span class="emphasis">2.1</span>
+               <span class="emphasis"> madsrdf:Authority, madsrdf:Variant, and madsrdf:DeprecatedAuthority</span>
+               
+            </p>
+            
+            
+            <p class="S3"><a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority</a> is a sub-class of <a href="http://www.w3.org/2004/02/skos/core#Concept" class="cORp">skos:Concept.</a> &nbsp;A <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority,</a> like a <a href="http://www.w3.org/2004/02/skos/core#Concept" class="cORp">skos:Concept,</a> “can be viewed as an idea or notion; a unit of thought.” &nbsp;It is no more specific about what type of idea, notion, or unit of thought is being described. &nbsp;A <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority</a> represents a resource to be used in the dsecription of bibliographic or cultural objects; it is not a Real World Object. &nbsp;A <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority</a> description may be part of a <a href="http://www.loc.gov/mads/rdf/v1#MADSScheme" class="cORp">madsrdf:MADSScheme</a> or <a href="http://www.loc.gov/mads/rdf/v1#MADSCollection" class="cORp">madsrdf:MADSCollection,</a> both of which serve to aggregate <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority</a> descriptions. &nbsp; 
+            </p>
+            
+            
+            <p class="S3">Although an instance of a <a href="http://www.loc.gov/mads/rdf/v1#Variant" class="cORp">madsrdf:Variant</a> is a resource and may be further identified as a specific MADSType (see below), it does not represent an authoritative label within the knowledge organization system. &nbsp;madsrdf:Variant is disjoint with <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority.</a> &nbsp;In most cases, <a href="http://www.loc.gov/mads/rdf/v1#Variant" class="cORp">madsrdf:Variant</a> descriptions are, and will be, represented as a blank node (i.e. not with HTTP URIs). &nbsp;madsrdf:Variant, which is associated with a <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority</a> through the <a href="http://www.loc.gov/mads/rdf/v1#hasVariant" class="cORp">madsrdf:hasVariant</a> object property, is a sub-class of <a href="http://www.w3.org/2008/05/skos-xl#Label" class="cORp">skosxl:Label.</a> 
+            </p>
+            
+            
+            <p class="S3">Given the organic nature of a KOS, <a href="http://www.loc.gov/mads/rdf/v1#DeprecatedAuthority" class="cORp">madsrdf:DeprecatedAuthority</a> provides a means to identify a once-authoritative, but no longer authoritative, resource. &nbsp;madsrdf:DeprecatedAuthority is disjoint with <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority,</a> but not with <a href="http://www.loc.gov/mads/rdf/v1#Variant" class="cORp">madsrdf:Variant.</a> &nbsp;There is no mapping for <a href="http://www.loc.gov/mads/rdf/v1#DeprecatedAuthority" class="cORp">madsrdf:DeprecatedAuthority</a> to SKOS/RDF. &nbsp; 
+            </p>
+            
+            
+            
+            <p class="S3">
+               <a xmlns="http://www.w3.org/1999/xhtml" id="t22" shape="rect"></a>
+               <a xmlns="http://www.w3.org/1999/xhtml" id="bkmt22" shape="rect"></a>
+               <span class="emphasis">2.2</span>
+               <span class="emphasis"> madsrdf:MADSType</span>
+               
+            </p>
+            
+            
+            <p class="S3"><a href="http://www.loc.gov/mads/rdf/v1#MADSType" class="cORp">madsrdf:MADSType</a> is an umbrella class. &nbsp;It has two sub-classes: &nbsp;madsrdf:ComplexType and <a href="http://www.loc.gov/mads/rdf/v1#SimpleType" class="cORp">madsrdf:SimpleType.</a> &nbsp;This organization exists primarily for inferencing purposes. &nbsp;It is expected a user will identify a <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority,</a> <a href="http://www.loc.gov/mads/rdf/v1#Variant" class="cORp">madsrdf:Variant,</a> or <a href="http://www.loc.gov/mads/rdf/v1#DeprecatedAuthority" class="cORp">madsrdf:DeprecatedAuthority</a> description with one of the many sub-classes of <a href="http://www.loc.gov/mads/rdf/v1#ComplexType" class="cORp">madsrdf:ComplexType</a> or <a href="http://www.loc.gov/mads/rdf/v1#SimpleType" class="cORp">madsrdf:SimpleType.</a> 
+            </p>
+            
+            
+            <p class="S3"><a href="http://www.loc.gov/mads/rdf/v1#SimpleType" class="cORp">madsrdf:SimpleType</a> is a resource with a label constituting a single word or phrase. &nbsp;There are 23 sub-classes in total, ranging from <a href="http://www.loc.gov/mads/rdf/v1#Topic" class="cORp">madsrdf:Topic</a> or <a href="http://www.loc.gov/mads/rdf/v1#GenreForm" class="cORp">madsrdf:GenreForm</a> to <a href="http://www.loc.gov/mads/rdf/v1#City" class="cORp">madsrdf:City</a> or <a href="http://www.loc.gov/mads/rdf/v1#ExtraterrestialArea" class="cORp">madsrdf:ExtraterrestialArea.</a> &nbsp;One subclass, <a href="http://www.loc.gov/mads/rdf/v1#Name" class="cORp">madsrdf:Name,</a> also has 4 sub-classes: <a href="http://www.loc.gov/mads/rdf/v1#PersonalName" class="cORp">madsrdf:PersonalName,</a> <a href="http://www.loc.gov/mads/rdf/v1#CorporateName" class="cORp">madsrdf:CorporateName,</a> <a href="http://www.loc.gov/mads/rdf/v1#ConferenceName" class="cORp">madsrdf:ConferenceName,</a> <a href="http://www.loc.gov/mads/rdf/v1#FamilyName" class="cORp">madsrdf:FamilyName.</a> &nbsp;Most of these 23 subclasses are defined in MADS/XML. &nbsp; 
+            </p>
+            
+            
+            <p class="S3"><a href="http://www.loc.gov/mads/rdf/v1#ComplexType" class="cORp">madsrdf:ComplexType</a> is used to describe a resource with a label that is the concatenation of labels from two or more Authority descriptions or two or more Variant descriptions or some combination of Authority and Variant descriptions, each of a <a href="http://www.loc.gov/mads/rdf/v1#SimpleType" class="cORp">madsrdf:SimpleType.</a> &nbsp;madsrdf:ComplexType has three sub-classes: &nbsp;madsrdf:NameTitle, <a href="http://www.loc.gov/mads/rdf/v1#HierarchicalGeographic" class="cORp">madsrdf:HierarchicalGeographic,</a> and <a href="http://www.loc.gov/mads/rdf/v1#ComplexSubject" class="cORp">madsrdf:ComplexSubject.</a> 
+            </p>
+            
+            
+            <p class="S3">The label of a <a href="http://www.loc.gov/mads/rdf/v1#NameTitle" class="cORp">madsrdf:NameTitle</a> resource is the concatenation of a label of a <a href="http://www.loc.gov/mads/rdf/v1#Name" class="cORp">madsrdf:Name</a> description and the label of a <a href="http://www.loc.gov/mads/rdf/v1#Title" class="cORp">madsrdf:Title</a> description. &nbsp;Both description types (madsrdf:Name and <a href="http://www.loc.gov/mads/rdf/v1#Title" class="cORp">madsrdf:Title)</a> are of <a href="http://www.loc.gov/mads/rdf/v1#SimpleType" class="cORp">madsrdf:SimpleType</a> types. &nbsp; 
+            </p>
+            
+            
+            <div>
+               <p class="emphasis">Example: NameTitle Authority</p>
+               <ul class="tabnav">
+                  <li class="first"><a href="index.html#tab1">RDF/XML</a></li>
+                  <li><a href="index.html#tab2">N3/Turtle</a></li>
+                  <li><a href="index.html#tab3">n-triples</a></li>
+               </ul>
+               <div class="tab_container">
+                  <div id="tab1" class="tab_content1"><pre> 
+&lt;rdf:RDF 
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:madsrdf="//www.loc.gov/mads/rdf/v1#"&gt;
+  &lt;madsrdf:NameTitle rdf:about="ex:Herman,_Jerry,_1933-_Hello,_Dolly!"&gt;
+    &lt;rdf:type rdf:resource="//www.loc.gov/mads/rdf/v1#Authority"/&gt;
+    &lt;madsrdf:authoritativeLabel&gt;Herman, Jerry, 1933- Hello, Dolly!&lt;/madsrdf:authoritativeLabel&gt;
+    &lt;madsrdf:componentList rdf:parseType="Collection"&gt;
+      &lt;madsrdf:PersonalName rdf:nodeID="aHerman-Jerry-1933-"&gt;
+        &lt;rdf:type rdf:resource="//www.loc.gov/mads/rdf/v1#Authority"/&gt;
+        &lt;madsrdf:authoritativeLabel&gt;Herman, Jerry, 1933-&lt;/madsrdf:authoritativeLabel&gt;
+        &lt;madsrdf:elementList rdf:parseType="Collection"&gt;
+          &lt;madsrdf:FullNameElement&gt;
+            &lt;madsrdf:elementValue&gt;Herman, Jerry,&lt;/madsrdf:elementValue&gt;
+          &lt;/madsrdf:FullNameElement&gt;
+          &lt;madsrdf:DateNameElement&gt;
+            &lt;madsrdf:elementValue&gt;1933-&lt;/madsrdf:elementValue&gt;
+          &lt;/madsrdf:DateNameElement&gt;
+        &lt;/madsrdf:elementList&gt;
+      &lt;/madsrdf:PersonalName&gt;
+      &lt;madsrdf:Title rdf:nodeID="aHello-Dolly"&gt;
+        &lt;rdf:type rdf:resource="//www.loc.gov/mads/rdf/v1#Authority"/&gt;
+        &lt;madsrdf:authoritativeLabel&gt;Hello, Dolly!&lt;/madsrdf:authoritativeLabel&gt;
+        &lt;madsrdf:elementList rdf:parseType="Collection"&gt;
+          &lt;madsrdf:TitleElement&gt;
+            &lt;madsrdf:elementValue&gt;Hello, Dolly!&lt;/madsrdf:elementValue&gt;
+          &lt;/madsrdf:TitleElement&gt;
+        &lt;/madsrdf:elementList&gt;
+      &lt;/madsrdf:Title&gt;
+    &lt;/madsrdf:componentList&gt;
+  &lt;/madsrdf:NameTitle&gt;
+&lt;/rdf:RDF&gt;
+                </pre></div>
+                  <div id="tab2" class="tab_content1"><pre>@prefix madsrdf: &lt;http://www.loc.gov/mads/rdf/v1#&gt;.
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;.
+&lt;ex:Herman,_Jerry,_1933-_Hello,_Dolly!&gt; madsrdf:authoritativeLabel "Herman, Jerry, 1933- Hello, Dolly!";
+  madsrdf:componentList (_:aHerman-Jerry-1933- _:aHello-Dolly);
+  a madsrdf:Authority,
+    madsrdf:NameTitle.
+_:aHello-Dolly madsrdf:authoritativeLabel "Hello, Dolly!";
+  madsrdf:elementList (_:bnode447719488);
+  a madsrdf:Authority,
+    madsrdf:Title.
+_:aHerman-Jerry-1933- madsrdf:authoritativeLabel "Herman, Jerry, 1933-";
+  madsrdf:elementList (_:bnode104199680 _:bnode1680267008);
+  a madsrdf:Authority,
+    madsrdf:PersonalName.
+_:bnode104199680 madsrdf:elementValue "Herman, Jerry,";
+  a madsrdf:FullNameElement.
+_:bnode1680267008 madsrdf:elementValue "1933-";
+  a madsrdf:DateNameElement.
+_:bnode447719488 madsrdf:elementValue "Hello, Dolly!";
+  a madsrdf:TitleElement.
+                     </pre></div>
+                  <div id="tab3" class="tab_content1"><pre>&lt;ex:Herman,_Jerry,_1933-_Hello,_Dolly!&gt; &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://www.loc.gov/mads/rdf/v1#NameTitle&gt;.
+&lt;ex:Herman,_Jerry,_1933-_Hello,_Dolly!&gt; &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://www.loc.gov/mads/rdf/v1#Authority&gt;.
+&lt;ex:Herman,_Jerry,_1933-_Hello,_Dolly!&gt; &lt;http://www.loc.gov/mads/rdf/v1#authoritativeLabel&gt; "Herman, Jerry, 1933- Hello, Dolly!".
+_:aHerman-Jerry-1933- &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://www.loc.gov/mads/rdf/v1#PersonalName&gt;.
+_:aHerman-Jerry-1933- &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://www.loc.gov/mads/rdf/v1#Authority&gt;.
+_:aHerman-Jerry-1933- &lt;http://www.loc.gov/mads/rdf/v1#authoritativeLabel&gt; "Herman, Jerry, 1933-".
+_:bnode104199680 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://www.loc.gov/mads/rdf/v1#FullNameElement&gt;.
+_:bnode104199680 &lt;http://www.loc.gov/mads/rdf/v1#elementValue&gt; "Herman, Jerry,".
+_:bnode622919744 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first&gt; _:bnode104199680.
+_:bnode622919744 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest&gt; _:bnode1161546944.
+_:bnode1680267008 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://www.loc.gov/mads/rdf/v1#DateNameElement&gt;.
+_:bnode1680267008 &lt;http://www.loc.gov/mads/rdf/v1#elementValue&gt; "1933-".
+_:bnode1161546944 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first&gt; _:bnode1680267008.
+_:bnode1161546944 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest&gt; &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#nil&gt;.
+_:aHerman-Jerry-1933- &lt;http://www.loc.gov/mads/rdf/v1#elementList&gt; _:bnode622919744.
+_:bnode2115887360 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first&gt; _:aHerman-Jerry-1933-.
+_:bnode2115887360 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest&gt; _:bnode539820032.
+_:aHello-Dolly &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://www.loc.gov/mads/rdf/v1#Title&gt;.
+_:aHello-Dolly &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://www.loc.gov/mads/rdf/v1#Authority&gt;.
+_:aHello-Dolly &lt;http://www.loc.gov/mads/rdf/v1#authoritativeLabel&gt; "Hello, Dolly!".
+_:bnode447719488 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://www.loc.gov/mads/rdf/v1#TitleElement&gt;.
+_:bnode447719488 &lt;http://www.loc.gov/mads/rdf/v1#elementValue&gt; "Hello, Dolly!".
+_:bnode71000576 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first&gt; _:bnode447719488.
+_:bnode71000576 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest&gt; &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#nil&gt;.
+_:aHello-Dolly &lt;http://www.loc.gov/mads/rdf/v1#elementList&gt; _:bnode71000576.
+_:bnode539820032 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first&gt; _:aHello-Dolly.
+_:bnode539820032 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest&gt; &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#nil&gt;.
+&lt;ex:Herman,_Jerry,_1933-_Hello,_Dolly!&gt; &lt;http://www.loc.gov/mads/rdf/v1#componentList&gt; _:bnode2115887360.
+                </pre></div>
+               </div>
+            </div>
+            
+            
+            <p class="S3">A <a href="http://www.loc.gov/mads/rdf/v1#HierarchicalGeographic" class="cORp">madsrdf:HierarchicalGeographic</a> indicates that its label is the concatenation of labels from a sequence of <a href="http://www.loc.gov/mads/rdf/v1#Geographic" class="cORp">madsrdf:Geographic</a> types taken from one of the <a href="http://www.loc.gov/mads/rdf/v1#Geographic" class="cORp">madsrdf:Geographic</a> sub-classes such as <a href="http://www.loc.gov/mads/rdf/v1#City" class="cORp">madsrdf:City,</a> <a href="http://www.loc.gov/mads/rdf/v1#Country" class="cORp">madsrdf:Country,</a> <a href="http://www.loc.gov/mads/rdf/v1#State" class="cORp">madsrdf:State,</a> <a href="http://www.loc.gov/mads/rdf/v1#Region" class="cORp">madsrdf:Region,</a> <a href="http://www.loc.gov/mads/rdf/v1#Area" class="cORp">madsrdf:Area,</a> etc. &nbsp;The <a href="http://www.loc.gov/mads/rdf/v1#Geographic" class="cORp">madsrdf:Geographic</a> resources that constitute the <a href="http://www.loc.gov/mads/rdf/v1#HierarchicalGeographic" class="cORp">madsrdf:HierarchicalGeographic</a> should have a broader to narrower hierarchical relationship between them. 
+            </p>
+            
+            
+            <div>
+               <p class="emphasis">Example: HierarchicalGeographic Authority</p>
+               <ul class="tabnav">
+                  <li class="second"><a href="index.html#tab4">RDF/XML</a></li>
+                  <li><a href="index.html#tab5">N3/Turtle</a></li>
+                  <li><a href="index.html#tab6">n-triples</a></li>
+               </ul>
+               <div class="tab_container">
+                  <div id="tab4" class="tab_content2"><pre> 
+&lt;rdf:RDF 
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:madsrdf="//www.loc.gov/mads/rdf/v1#"&gt;
+  &lt;madsrdf:Authority rdf:about="ex:United_States--New_Jersey--Essex--Montclair"&gt;
+    &lt;rdf:type rdf:resource="//www.loc.gov/mads/rdf/v1#HierarchicalGeographic"/&gt;
+    &lt;madsrdf:authoritativeLabel&gt;United States--New Jersey--Essex--Montclair&lt;/madsrdf:authoritativeLabel&gt;
+    &lt;madsrdf:componentList rdf:parseType="Collection"&gt;
+      &lt;madsrdf:Country rdf:resource="ex:United_States"/&gt;
+      &lt;madsrdf:State rdf:resource="ex:New_Jersey"/&gt;
+      &lt;madsrdf:County rdf:resource="ex:Essex"/&gt;
+      &lt;madsrdf:City rdf:resource="ex:Montclair"/&gt;
+    &lt;/madsrdf:componentList&gt;
+  &lt;/madsrdf:Authority&gt;
+&lt;/rdf:RDF&gt;
+                </pre></div>
+                  <div id="tab5" class="tab_content2"><pre>@prefix madsrdf: &lt;http://www.loc.gov/mads/rdf/v1#&gt;.
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;.
+&lt;ex:United_States--New_Jersey--Essex--Montclair&gt; madsrdf:authoritativeLabel "United States--New Jersey--Essex--Montclair";
+  madsrdf:componentList (_:bnode2070340096 _:bnode1032899968 _:bnode1041980288 _:bnode2079420416);
+  a madsrdf:Authority,
+    madsrdf:HierarchicalGeographic.
+_:bnode1032899968 a madsrdf:State.
+_:bnode1041980288 a madsrdf:County.
+_:bnode2070340096 a madsrdf:Country.
+_:bnode2079420416 a madsrdf:City.
+                     </pre></div>
+                  <div id="tab6" class="tab_content2"><pre>&lt;ex:United_States--New_Jersey--Essex--Montclair&gt; &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://www.loc.gov/mads/rdf/v1#Authority&gt;.
+&lt;ex:United_States--New_Jersey--Essex--Montclair&gt; &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://www.loc.gov/mads/rdf/v1#HierarchicalGeographic&gt;.
+&lt;ex:United_States--New_Jersey--Essex--Montclair&gt; &lt;http://www.loc.gov/mads/rdf/v1#authoritativeLabel&gt; "United States--New Jersey--Essex--Montclair".
+_:bnode2070340096 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://www.loc.gov/mads/rdf/v1#Country&gt;.
+_:bnode362151936 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first&gt; _:bnode2070340096.
+_:bnode362151936 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest&gt; _:bnode1551620032.
+_:bnode1032899968 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://www.loc.gov/mads/rdf/v1#State&gt;.
+_:bnode1551620032 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first&gt; _:bnode1032899968.
+_:bnode1551620032 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest&gt; _:bnode4540160.
+_:bnode1041980288 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://www.loc.gov/mads/rdf/v1#County&gt;.
+_:bnode4540160 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first&gt; _:bnode1041980288.
+_:bnode4540160 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest&gt; _:bnode1560700352.
+_:bnode2079420416 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://www.loc.gov/mads/rdf/v1#City&gt;.
+_:bnode1560700352 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first&gt; _:bnode2079420416.
+_:bnode1560700352 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest&gt; &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#nil&gt;.
+&lt;ex:United_States--New_Jersey--Essex--Montclair&gt; &lt;http://www.loc.gov/mads/rdf/v1#componentList&gt; _:bnode362151936.
+
+                </pre></div>
+               </div>
+            </div>
+            
+            
+            <p class="S3">The label of a <a href="http://www.loc.gov/mads/rdf/v1#ComplexSubject" class="cORp">madsrdf:ComplexSubject</a> is the concatenation of labels from two or more <a href="http://www.loc.gov/mads/rdf/v1#SimpleType" class="cORp">madsrdf:SimpleType</a> descriptions, except that the combination of <a href="http://www.loc.gov/mads/rdf/v1#SimpleType" class="cORp">madsrdf:SimpleType</a> labels for the <a href="http://www.loc.gov/mads/rdf/v1#ComplexSubject" class="cORp">madsrdf:ComplexSubject</a> does not meet the conditions to be the label of a <a href="http://www.loc.gov/mads/rdf/v1#NameTitle" class="cORp">madsrdf:NameTitle</a> resource or <a href="http://www.loc.gov/mads/rdf/v1#HierarchicalGeographic" class="cORp">madsrdf:HierarchicalGeographic</a> resource. 
+            </p>
+            
+            
+            <div>
+               <p class="emphasis">Example: ComplexSubject Authority</p>
+               <ul class="tabnav">
+                  <li class="first"><a href="index.html#tab7">RDF/XML</a></li>
+                  <li><a href="index.html#tab8">N3/Turtle</a></li>
+                  <li><a href="index.html#tab9">n-triples</a></li>
+               </ul>
+               <div class="tab_container">
+                  <div id="tab7" class="tab_content3"><pre> 
+&lt;rdf:RDF 
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:madsrdf="//www.loc.gov/mads/rdf/v1#"&gt;
+  &lt;madsrdf:Authority rdf:about="ex:United_States--History--Civil_War,_1861-1865"&gt;
+    &lt;rdf:type rdf:resource="//www.loc.gov/mads/rdf/v1#ComplexSubject"/&gt;
+    &lt;madsrdf:authoritativeLabel&gt;United States--History--Civil War, 1861-1865&lt;/madsrdf:authoritativeLabel&gt;
+    &lt;madsrdf:componentList rdf:parseType="Collection"&gt;
+      &lt;madsrdf:Geographic rdf:about="ex:United_States"/&gt;
+      &lt;madsrdf:Topic rdf:about="ex:History"/&gt;
+      &lt;madsrdf:Temporal rdf:about="ex:Civil_War,_1861-1865"/&gt;
+    &lt;/madsrdf:componentList&gt;
+  &lt;/madsrdf:Authority&gt;
+&lt;/rdf:RDF&gt;  
+                </pre></div>
+                  <div id="tab8" class="tab_content3"><pre>@prefix madsrdf: &lt;http://www.loc.gov/mads/rdf/v1#&gt;.
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;.
+&lt;ex:Civil_War,_1861-1865&gt; a madsrdf:Temporal.
+&lt;ex:History&gt; a madsrdf:Topic.
+&lt;ex:United_States&gt; a madsrdf:Geographic.
+&lt;ex:United_States--History--Civil_War,_1861-1865&gt; madsrdf:authoritativeLabel "United States--History--Civil War, 1861-1865";
+  madsrdf:componentList (&lt;ex:United_States&gt; &lt;ex:History&gt; &lt;ex:Civil_War,_1861-1865&gt;);
+  a madsrdf:Authority,
+    madsrdf:ComplexSubject.
+                     </pre></div>
+                  <div id="tab9" class="tab_content3"><pre>&lt;ex:United_States--History--Civil_War,_1861-1865&gt; &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://www.loc.gov/mads/rdf/v1#Authority&gt;.
+&lt;ex:United_States--History--Civil_War,_1861-1865&gt; &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://www.loc.gov/mads/rdf/v1#ComplexSubject&gt;.
+&lt;ex:United_States--History--Civil_War,_1861-1865&gt; &lt;http://www.loc.gov/mads/rdf/v1#authoritativeLabel&gt; "United States--History--Civil War, 1861-1865".
+&lt;ex:United_States&gt; &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://www.loc.gov/mads/rdf/v1#Geographic&gt;.
+_:bnode567502528 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first&gt; &lt;ex:United_States&gt;.
+_:bnode567502528 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest&gt; _:bnode1590477440.
+&lt;ex:History&gt; &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://www.loc.gov/mads/rdf/v1#Topic&gt;.
+_:bnode1590477440 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first&gt; &lt;ex:History&gt;.
+_:bnode1590477440 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest&gt; _:bnode1690296832.
+&lt;ex:Civil_War,_1861-1865&gt; &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://www.loc.gov/mads/rdf/v1#Temporal&gt;.
+_:bnode1690296832 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first&gt; &lt;ex:Civil_War,_1861-1865&gt;.
+_:bnode1690296832 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest&gt; &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#nil&gt;.
+&lt;ex:United_States--History--Civil_War,_1861-1865&gt; &lt;http://www.loc.gov/mads/rdf/v1#componentList&gt; _:bnode567502528.
+            </pre></div>
+               </div>
+            </div>
+            
+            
+            
+            <p class="S3">A <a href="http://www.loc.gov/mads/rdf/v1#ComplexType" class="cORp">madsrdf:ComplexType</a> will have a <a href="http://www.loc.gov/mads/rdf/v1#componentList" class="cORp">madsrdf:componentList,</a> which organizes <a href="http://www.loc.gov/mads/rdf/v1#SimpleType" class="cORp">madsrdf:SimpleType</a> resources whose labels are represented in the <a href="http://www.loc.gov/mads/rdf/v1#ComplexType's" class="cORp">madsrdf:ComplexType's</a> label. &nbsp;madsrdf:componentList has a range of <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#List" class="cORp">rdf:List</a> or <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq" class="cORp">rdf:Seq</a>.  &nbsp;Although somewhat cumbersome, <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#List" class="cORp">rdf:List</a> not only serves to order the list components (the <a href="http://www.loc.gov/mads/rdf/v1#SimpleType" class="cORp">madsrdf:SimpleType</a> descriptions) but also provides a way to establish the end of the list, which helps to preserve the label's integrity.  Less cumbersome, <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq" class="cORp">rdf:Seq</a> preserves the order of items, but without clear identification of the end of the list.
+            </p>
+            
+            
+            
+            <p class="S2"><a xmlns="http://www.w3.org/1999/xhtml" id="t23" shape="rect"></a><a xmlns="http://www.w3.org/1999/xhtml" id="bkmt23" shape="rect"></a>2.3 madsrdf:RWO
+            </p>
+            
+            
+            <p class="S3">A <a href="http://www.loc.gov/mads/rdf/v1#RWO" class="cORp">madsrdf:RWO</a> is an abstract entity and identifies a Real World Object (RWO). &nbsp;A <a href="http://www.loc.gov/mads/rdf/v1#RWO" class="cORp">madsrdf:RWO</a> resource records information that more appropriately describes aspects of the RWO rather than the conceptual resource, the <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority.</a> &nbsp;A <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority</a> relates to <a href="http://www.loc.gov/mads/rdf/v1#RWO" class="cORp">madsrdf:RWO</a> with the <a href="http://www.loc.gov/mads/rdf/v1#identifiesRWO" class="cORp">madsrdf:identifiesRWO</a> object property. &nbsp;The properties - <a href="http://www.loc.gov/mads/rdf/v1#fieldOfActivity" class="cORp">madsrdf:fieldOfActivity,</a> <a href="http://www.loc.gov/mads/rdf/v1#hasAffiliation" class="cORp">madsrdf:hasAffiliation,</a> and <a href="http://www.loc.gov/mads/rdf/v1#Affiliation" class="cORp">madsrdf:Affiliation</a> - relate directly or indirectly to a <a href="http://www.loc.gov/mads/rdf/v1#RWO" class="cORp">madsrdf:RWO,</a> not a <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority.</a> &nbsp; 
+            </p>
+            
+            
+            
+            <div>
+               <p class="emphasis">Example: RWO</p>
+               <ul class="tabnav">
+                  <li class="first"><a href="index.html#tab16">RDF/XML</a></li>
+                  <li><a href="index.html#tab17">N3/Turtle</a></li>
+                  <li><a href="index.html#tab18">n-triples</a></li>
+               </ul>
+               <div class="tab_container">
+                  <div id="tab16" class="tab_content6"><pre> 
+&lt;rdf:RDF xmlns:madsrdf="//www.loc.gov/mads/rdf/v1#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"&gt;
+    &lt;madsrdf:PersonalName rdf:about="ex:Laborman_Jay"&gt;
+        &lt;rdf:type rdf:resource="//www.loc.gov/mads/rdf/v1#Authority"/&gt;
+        &lt;madsrdf:authoritativeLabel xml:lang="en"&gt;Laborman, Jay&lt;/madsrdf:authoritativeLabel&gt;
+        &lt;madsrdf:identifiesRWO&gt;
+            &lt;madsrdf:RWO&gt;
+                &lt;rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/&gt;
+                &lt;madsrdf:hasAffiliation&gt;
+                    &lt;madsrdf:Affiliation&gt;
+                        &lt;madsrdf:organization&gt;
+                            &lt;madsrdf:Organization&gt;
+                                &lt;rdfs:label&gt;World Resources Institute, Washington, D.C.&lt;/rdfs:label&gt;
+                            &lt;/madsrdf:Organization&gt;                           
+                        &lt;/madsrdf:organization&gt;
+                        &lt;madsrdf:affiliationStart&gt;2007&lt;/madsrdf:affiliationStart&gt;
+                    &lt;/madsrdf:Affiliation&gt;
+                &lt;/madsrdf:hasAffiliation&gt;
+                &lt;madsrdf:hasAffiliation&gt;
+                    &lt;madsrdf:Affiliation&gt;
+                        &lt;madsrdf:organization&gt;
+                            &lt;madsrdf:Organization&gt;
+                                &lt;rdfs:label&gt;Georgetown University, Law Center, Washington, D.C.&lt;/rdfs:label&gt;
+                            &lt;/madsrdf:Organization&gt;                           
+                        &lt;/madsrdf:organization&gt;
+                        &lt;madsrdf:affiliationStart&gt;2007&lt;/madsrdf:affiliationStart&gt;
+                    &lt;/madsrdf:Affiliation&gt;
+                &lt;/madsrdf:hasAffiliation&gt;
+                &lt;madsrdf:hasAffiliation&gt;
+                    &lt;madsrdf:Affiliation&gt;
+                        &lt;madsrdf:organization&gt;
+                            &lt;madsrdf:Organization&gt;
+                                &lt;rdfs:label&gt;New York University, New York, N.Y.&lt;/rdfs:label&gt;
+                            &lt;/madsrdf:Organization&gt;                           
+                        &lt;/madsrdf:organization&gt;
+                        &lt;madsrdf:affiliationStart&gt;2002&lt;/madsrdf:affiliationStart&gt;
+                    &lt;/madsrdf:Affiliation&gt;
+                &lt;/madsrdf:hasAffiliation&gt;
+                &lt;madsrdf:fieldOfActivity&gt;Director of environmental organization&lt;/madsrdf:fieldOfActivity&gt;
+                &lt;madsrdf:fieldOfActivity&gt;college teacher&lt;/madsrdf:fieldOfActivity&gt;
+            &lt;/madsrdf:RWO&gt;
+        &lt;/madsrdf:identifiesRWO&gt;
+    &lt;/madsrdf:PersonalName&gt;
+&lt;/rdf:RDF&gt;
+
+                </pre></div>
+                  <div id="tab17" class="tab_content6"><pre>@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@prefix madsrdf: &lt;//www.loc.gov/mads/rdf/v1#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+
+&lt;ex:Laborman_Jay&gt;
+    madsrdf:authoritativeLabel "Laborman, Jay"@en ;
+    madsrdf:identifiesRWO [
+        madsrdf:fieldOfActivity "Director of environmental organization", "college teacher" ;
+        madsrdf:hasAffiliation [
+            madsrdf:affiliationStart "2007" ;
+            madsrdf:organization [
+                a madsrdf:Organization ;
+                rdfs:label "World Resources Institute, Washington, D.C."
+            ] ;
+            a madsrdf:Affiliation
+        ], [
+            madsrdf:affiliationStart "2007" ;
+            madsrdf:organization [
+                a madsrdf:Organization ;
+                rdfs:label "Georgetown University, Law Center, Washington, D.C."
+            ] ;
+            a madsrdf:Affiliation
+        ], [
+            madsrdf:affiliationStart "2002" ;
+            madsrdf:organization [
+                a madsrdf:Organization ;
+                rdfs:label "New York University, New York, N.Y."
+            ] ;
+            a madsrdf:Affiliation
+        ] ;
+        a madsrdf:RWO, &lt;http://xmlns.com/foaf/0.1/Person&gt;
+    ] ;
+    a madsrdf:PersonalName, &lt;file://www.loc.gov/mads/rdf/v1#Authority&gt; .
+
+
+                     </pre></div>
+                  <div id="tab18" class="tab_content6"><pre>&lt;ex:Laborman_Jay&gt; &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;//www.loc.gov/mads/rdf/v1#PersonalName&gt; .
+&lt;ex:Laborman_Jay&gt; &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;file://www.loc.gov/mads/rdf/v1#Authority&gt; .
+&lt;ex:Laborman_Jay&gt; &lt;//www.loc.gov/mads/rdf/v1#authoritativeLabel&gt; "Laborman, Jay"@en .
+_:genid1 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;//www.loc.gov/mads/rdf/v1#RWO&gt; .
+_:genid1 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://xmlns.com/foaf/0.1/Person&gt; .
+_:genid2 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;//www.loc.gov/mads/rdf/v1#Affiliation&gt; .
+_:genid3 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;//www.loc.gov/mads/rdf/v1#Organization&gt; .
+_:genid3 &lt;http://www.w3.org/2000/01/rdf-schema#label&gt; "World Resources Institute, Washington, D.C." .
+_:genid2 &lt;//www.loc.gov/mads/rdf/v1#organization&gt; _:genid3 .
+_:genid2 &lt;//www.loc.gov/mads/rdf/v1#affiliationStart&gt; "2007" .
+_:genid1 &lt;//www.loc.gov/mads/rdf/v1#hasAffiliation&gt; _:genid2 .
+_:genid4 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;//www.loc.gov/mads/rdf/v1#Affiliation&gt; .
+_:genid5 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;//www.loc.gov/mads/rdf/v1#Organization&gt; .
+_:genid5 &lt;http://www.w3.org/2000/01/rdf-schema#label&gt; "Georgetown University, Law Center, Washington, D.C." .
+_:genid4 &lt;//www.loc.gov/mads/rdf/v1#organization&gt; _:genid5 .
+_:genid4 &lt;//www.loc.gov/mads/rdf/v1#affiliationStart&gt; "2007" .
+_:genid1 &lt;//www.loc.gov/mads/rdf/v1#hasAffiliation&gt; _:genid4 .
+_:genid6 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;//www.loc.gov/mads/rdf/v1#Affiliation&gt; .
+_:genid7 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;//www.loc.gov/mads/rdf/v1#Organization&gt; .
+_:genid7 &lt;http://www.w3.org/2000/01/rdf-schema#label&gt; "New York University, New York, N.Y." .
+_:genid6 &lt;//www.loc.gov/mads/rdf/v1#organization&gt; _:genid7 .
+_:genid6 &lt;//www.loc.gov/mads/rdf/v1#affiliationStart&gt; "2002" .
+_:genid1 &lt;//www.loc.gov/mads/rdf/v1#hasAffiliation&gt; _:genid6 .
+_:genid1 &lt;//www.loc.gov/mads/rdf/v1#fieldOfActivity&gt; "Director of environmental organization" .
+_:genid1 &lt;//www.loc.gov/mads/rdf/v1#fieldOfActivity&gt; "college teacher" .
+&lt;ex:Laborman_Jay&gt; &lt;//www.loc.gov/mads/rdf/v1#identifiesRWO&gt; _:genid1 .
+                </pre></div>
+               </div>
+            </div>
+            
+            
+            <p class="S3">It is expected that well-known Classes from other vocabularies, such as <a href="http://xmlns.com/foaf/0.1/Agent" class="cORp">foaf:Agent,</a> might sub-class <a href="http://www.loc.gov/mads/rdf/v1#RWO" class="cORp">madsrdf:RWO</a> (or vice-versa). &nbsp;&nbsp;The <a href="http://www.loc.gov/mads/rdf/v1#RWO" class="cORp">madsrdf:RWO</a> class is disjoint with <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority,</a> <a href="http://www.loc.gov/mads/rdf/v1#DeprecatedAuthority" class="cORp">madsrdf:DeprecatedAuthority,</a> and <a href="http://www.loc.gov/mads/rdf/v1#Variant" class="cORp">madsrdf:Variant.</a> 
+            </p>
+            
+            
+            
+            <p class="S3">
+               <a xmlns="http://www.w3.org/1999/xhtml" id="t24" shape="rect"></a>
+               <a xmlns="http://www.w3.org/1999/xhtml" id="bkmt24" shape="rect"></a>
+               <span class="emphasis">2.4</span>
+               <span class="emphasis"> madsrdf:MADSScheme and madsrdf:MADSCollection</span>
+               
+            </p>
+            
+            
+            <p class="S3">A <a href="http://www.loc.gov/mads/rdf/v1#MADSScheme" class="cORp">madsrdf:MADSScheme</a> is an organizational unit. &nbsp;It describes a knowledge organization system and aggregates the <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority</a> descriptions and/or <a href="http://www.loc.gov/mads/rdf/v1#MADSCollection" class="cORp">madsrdf:MADSCollection</a> resources included in the knowledge organization system. &nbsp;A <a href="http://www.loc.gov/mads/rdf/v1#MADSScheme" class="cORp">madsrdf:MADSScheme</a> can include <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority</a> descriptions and <a href="http://www.loc.gov/mads/rdf/v1#MADSCollection" class="cORp">madsrdf:MADSCollection</a> resources with the <a href="http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember" class="cORp">madsrdf:hasMADSSchemeMember</a> property (there is an inverse property: <a href="http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme)" class="cORp">madsrdf:isMemberOfMADSScheme).</a> 
+            </p>
+            
+            
+            <p class="S3">A <a href="http://www.loc.gov/mads/rdf/v1#MADSCollection" class="cORp">madsrdf:MADSCollection</a> is also an organizational unit. &nbsp;Members of a <a href="http://www.loc.gov/mads/rdf/v1#MADSCollection" class="cORp">madsrdf:MADSCollection</a> will have some form of intellectually unifying theme – such as grouping LCSH <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority</a> descriptions that may be used as temporal subdivisions - but not to the extent that it defines an independent knowledge organization system. &nbsp;madsrdf:MADSCollection resources aggregate <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority</a> descriptions or other <a href="http://www.loc.gov/mads/rdf/v1#MADSCollection" class="cORp">madsrdf:MADSCollection</a> resources. &nbsp;madsrdf:MADSCollection resources maybe used to group <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority</a> descriptions in order to further distinguish the <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority</a> descriptions within the <a href="http://www.loc.gov/mads/rdf/v1#MADSScheme" class="cORp">madsrdf:MADSScheme.</a> &nbsp;For instance, to use LCSH as an example, if a <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority</a> description can be used as a temporal subdivision, then that <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority</a> might also belong to a <a href="http://www.loc.gov/mads/rdf/v1#MADSCollection" class="cORp">madsrdf:MADSCollection</a> that aggregates resources to be employed as temporal subdivisions. &nbsp; 
+            </p>
+            
+            
+            <p class="S3"><a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority</a> descriptions are associated with a <a href="http://www.loc.gov/mads/rdf/v1#MADSCollection" class="cORp">madsrdf:MADSCollection</a> via the <a href="http://www.loc.gov/mads/rdf/v1#hasMADSCollectionMember" class="cORp">madsrdf:hasMADSCollectionMember</a> object property. &nbsp;Establishing a relationship is optional and should be considered with care – when a <a href="http://www.loc.gov/mads/rdf/v1#MADSCollection" class="cORp">madsrdf:MADSCollection</a> is part of a <a href="http://www.loc.gov/mads/rdf/v1#MADSScheme" class="cORp">madsrdf:MADSScheme,</a> then any <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority</a> within that <a href="http://www.loc.gov/mads/rdf/v1#MADSCollection" class="cORp">madsrdf:MADSCollection</a> is effectively also in the <a href="http://www.loc.gov/mads/rdf/v1#MADSScheme" class="cORp">madsrdf:MADSScheme.</a> &nbsp;Returning briefly to the example above, the collection of temporal subdivisions could be part of the <a href="http://www.loc.gov/mads/rdf/v1#MADSScheme" class="cORp">madsrdf:MADSScheme.</a> &nbsp;However, a <a href="http://www.loc.gov/mads/rdf/v1#MADSCollection" class="cORp">madsrdf:MADSCollection</a> does not need to be associated with a <a href="http://www.loc.gov/mads/rdf/v1#MADSScheme" class="cORp">madsrdf:MADSScheme.</a> &nbsp; 
+            </p>
+            
+            
+            
+            <div>
+               <p class="emphasis">Example: MADSScheme and MADSCollection</p>
+               <ul class="tabnav">
+                  <li class="first"><a href="index.html#tab10">RDF/XML</a></li>
+                  <li><a href="index.html#tab11">N3/Turtle</a></li>
+                  <li><a href="index.html#tab12">n-triples</a></li>
+               </ul>
+               <div class="tab_container">
+                  <div id="tab10" class="tab_content4"><pre> 
+&lt;rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:madsrdf="//www.loc.gov/mads/rdf/v1#"&gt;
+
+  &lt;rdf:Description rdf:about="ex:LCSH"&gt;
+    &lt;rdf:type rdf:resource="//www.loc.gov/mads/rdf/v1#MADSScheme"/&gt;
+    &lt;madsrdf:hasMADSSchemeMember rdf:resource="ex:18thCentury"/&gt;
+    &lt;madsrdf:hasMADSSchemeMember rdf:resource="ex:Collection_TemporalSubdivisions"/&gt;
+  &lt;/rdf:Description&gt;
+  &lt;rdf:Description rdf:about="ex:18thCentury"&gt;
+    &lt;rdf:type rdf:resource="//www.loc.gov/mads/rdf/v1#Authority"/&gt;
+    &lt;madsrdf:isMemberOfMADSScheme rdf:resource="ex:LCSH"/&gt;
+    &lt;madsrdf:isMemberOfMADSCollection rdf:resource="ex:Collection_TemporalSubdivisions"/&gt;
+  &lt;/rdf:Description&gt;
+  &lt;rdf:Description rdf:about="ex:Collection_TemporalSubdivisions"&gt;
+    &lt;rdf:type rdf:resource="//www.loc.gov/mads/rdf/v1#MADSCollection"/&gt;
+    &lt;madsrdf:isMemberOfMADSScheme rdf:resource="ex:LCSH"/&gt;
+    &lt;madsrdf:hasMADSCollectionMember rdf:resource="ex:18thCentury"/&gt;
+  &lt;/rdf:Description&gt;
+
+&lt;/rdf:RDF&gt;
+                </pre></div>
+                  <div id="tab11" class="tab_content4"><pre>@prefix madsrdf: &lt;http://www.loc.gov/mads/rdf/v1#&gt;.
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;.
+&lt;ex:18thCentury&gt; madsrdf:isMemberOfMADSCollection &lt;ex:Collection_TemporalSubdivisions&gt;;
+  madsrdf:isMemberOfMADSScheme &lt;ex:LCSH&gt;;
+  a madsrdf:Authority.
+&lt;ex:Collection_TemporalSubdivisions&gt; madsrdf:hasMADSCollectionMember &lt;ex:18thCentury&gt;;
+  madsrdf:isMemberOfMADSScheme &lt;ex:LCSH&gt;;
+  a madsrdf:MADSCollection.
+&lt;ex:LCSH&gt; madsrdf:hasMADSSchemeMember &lt;ex:18thCentury&gt;,
+    &lt;ex:Collection_TemporalSubdivisions&gt;;
+  a madsrdf:MADSScheme.
+
+                     </pre></div>
+                  <div id="tab12" class="tab_content4"><pre>&lt;ex:LCSH&gt; &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://www.loc.gov/mads/rdf/v1#MADSScheme&gt;.
+&lt;ex:LCSH&gt; &lt;http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember&gt; &lt;ex:18thCentury&gt;.
+&lt;ex:LCSH&gt; &lt;http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember&gt; &lt;ex:Collection_TemporalSubdivisions&gt;.
+&lt;ex:18thCentury&gt; &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://www.loc.gov/mads/rdf/v1#Authority&gt;.
+&lt;ex:18thCentury&gt; &lt;http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme&gt; &lt;ex:LCSH&gt;.
+&lt;ex:18thCentury&gt; &lt;http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection&gt; &lt;ex:Collection_TemporalSubdivisions&gt;.
+&lt;ex:Collection_TemporalSubdivisions&gt; &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://www.loc.gov/mads/rdf/v1#MADSCollection&gt;.
+&lt;ex:Collection_TemporalSubdivisions&gt; &lt;http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme&gt; &lt;ex:LCSH&gt;.
+&lt;ex:Collection_TemporalSubdivisions&gt; &lt;http://www.loc.gov/mads/rdf/v1#hasMADSCollectionMember&gt; &lt;ex:18thCentury&gt;.
+                </pre></div>
+               </div>
+            </div>
+            
+            
+            <p class="S3">Such a model does not embed scheme-specific rules within MADS/RDF but still allows for the organization of the scheme and its aspects in a structured manner. </p>
+            
+            
+            
+            <p class="S3">
+               <a xmlns="http://www.w3.org/1999/xhtml" id="t25" shape="rect"></a>
+               <a xmlns="http://www.w3.org/1999/xhtml" id="bkmt25" shape="rect"></a>
+               <span class="emphasis">2.5</span>
+               <span class="emphasis"> madsrdf:Element</span>
+               
+            </p>
+            
+            
+            <p class="S3">The madsrdf:Element class, and its associated sub-classes, provide a way to describe the parts of labels. &nbsp;For example, the
+               name “<a xmlns="http://www.w3.org/1999/xhtml" id="DdeLink201912738401" shape="rect"></a><a xmlns="http://www.w3.org/1999/xhtml" id="bkmDdeLink201912738401" shape="rect"></a>Black Foot, Chief, d. 1877” can be broken into 3 parts, or elements. &nbsp;“Black Foot” is the madsrdf:NameElement; “Chief” is
+               the madsrdf:TermsOfAddressNameElement; and “d. 1877” is the madsrdf:DateNameElement. &nbsp;The madsrdf:elementList property, which,
+               like madsrdf:componentList, is used to organize the various parts of labels. &nbsp;It has a range of rdf:List. 
+            </p>
+            
+            
+            <div>
+               <p class="emphasis">Example: Label Elements</p>
+               <ul class="tabnav">
+                  <li class="first"><a href="index.html#tab13">RDF/XML</a></li>
+                  <li><a href="index.html#tab14">N3/Turtle</a></li>
+                  <li><a href="index.html#tab15">n-triples</a></li>
+               </ul>
+               <div class="tab_container">
+                  <div id="tab13" class="tab_content5"><pre> 
+&lt;rdf:RDF 
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:madsrdf="//www.loc.gov/mads/rdf/v1#"&gt;
+  &lt;madsrdf:PersonalName rdf:about="ex:Black_Foot,_Chief,_d._1877"&gt;
+    &lt;rdf:type rdf:resource="//www.loc.gov/mads/rdf/v1#Authority"/&gt;
+    &lt;madsrdf:authoritativeLabel&gt;Black Foot, Chief, d. 1877&lt;/madsrdf:authoritativeLabel&gt;
+    &lt;madsrdf:elementList rdf:parseType="Collection"&gt;
+      &lt;madsrdf:NameElement&gt;
+        &lt;madsrdf:elementValue&gt;Black Foot,&lt;/madsrdf:elementValue&gt;
+      &lt;/madsrdf:NameElement&gt;
+      &lt;madsrdf:TermsOfAddressElement&gt;
+        &lt;madsrdf:elementValue&gt;Chief,&lt;/madsrdf:elementValue&gt;
+      &lt;/madsrdf:TermsOfAddressElement&gt;
+      &lt;madsrdf:DateNameElement&gt;
+        &lt;madsrdf:elementValue&gt;d. 1877&lt;/madsrdf:elementValue&gt;
+      &lt;/madsrdf:DateNameElement&gt;
+    &lt;/madsrdf:elementList&gt;
+  &lt;/madsrdf:PersonalName&gt;
+&lt;/rdf:RDF&gt;
+                </pre></div>
+                  <div id="tab14" class="tab_content5"><pre>@prefix madsrdf: &lt;http://www.loc.gov/mads/rdf/v1#&gt;.
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;.
+&lt;ex:Black_Foot,_Chief,_d._1877&gt; madsrdf:authoritativeLabel "Black Foot, Chief, d. 1877";
+  madsrdf:elementList (_:bnode177631232 _:bnode1668942528 _:bnode1962097920);
+  a madsrdf:Authority,
+    madsrdf:PersonalName.
+_:bnode1668942528 madsrdf:elementValue "Chief,";
+  a madsrdf:TermsOfAddressElement.
+_:bnode177631232 madsrdf:elementValue "Black Foot,";
+  a madsrdf:NameElement.
+_:bnode1962097920 madsrdf:elementValue "d. 1877";
+  a madsrdf:DateNameElement.
+                     </pre></div>
+                  <div id="tab15" class="tab_content5"><pre>&lt;ex:Black_Foot,_Chief,_d._1877&gt; &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://www.loc.gov/mads/rdf/v1#PersonalName&gt;.
+&lt;ex:Black_Foot,_Chief,_d._1877&gt; &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://www.loc.gov/mads/rdf/v1#Authority&gt;.
+&lt;ex:Black_Foot,_Chief,_d._1877&gt; &lt;http://www.loc.gov/mads/rdf/v1#authoritativeLabel&gt; "Black Foot, Chief, d. 1877".
+_:bnode177631232 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://www.loc.gov/mads/rdf/v1#NameElement&gt;.
+_:bnode177631232 &lt;http://www.loc.gov/mads/rdf/v1#elementValue&gt; "Black Foot,".
+_:bnode859808896 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first&gt; _:bnode177631232.
+_:bnode859808896 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest&gt; _:bnode1588584640.
+_:bnode1668942528 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://www.loc.gov/mads/rdf/v1#TermsOfAddressElement&gt;.
+_:bnode1668942528 &lt;http://www.loc.gov/mads/rdf/v1#elementValue&gt; "Chief,".
+_:bnode1588584640 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first&gt; _:bnode1668942528.
+_:bnode1588584640 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest&gt; _:bnode405937728.
+_:bnode1962097920 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://www.loc.gov/mads/rdf/v1#DateNameElement&gt;.
+_:bnode1962097920 &lt;http://www.loc.gov/mads/rdf/v1#elementValue&gt; "d. 1877".
+_:bnode405937728 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#first&gt; _:bnode1962097920.
+_:bnode405937728 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#rest&gt; &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#nil&gt;.
+&lt;ex:Black_Foot,_Chief,_d._1877&gt; &lt;http://www.loc.gov/mads/rdf/v1#elementList&gt; _:bnode859808896.
+                </pre></div>
+               </div>
+            </div>
+            
+            
+            <p class="S3"><a href="http://www.loc.gov/mads/rdf/v1#elementList" class="cORp">madsrdf:elementList</a> does not, currently, have a domain, thereby permitting it to be used with <a href="http://www.loc.gov/mads/rdf/v1#ComplexType" class="cORp">madsrdf:ComplexType</a> descriptions. &nbsp;It is, however, generally associated with a <a href="http://www.loc.gov/mads/rdf/v1#SimpleType" class="cORp">madsrdf:SimpleType.</a> 
+            </p>
+            
+            
+            
+            
+            <p class="S6"><a xmlns="http://www.w3.org/1999/xhtml" id="t3" shape="rect"></a><a xmlns="http://www.w3.org/1999/xhtml" id="bkmt3" shape="rect"></a>3 MADS/RDF Object Properties
+            </p>
+            
+            
+            <p class="S3">Not all Object Properties are discussed in this section. &nbsp;Some have been treated earlier in this document, especially those pertaining to <a href="http://www.loc.gov/mads/rdf/v1#MADSScheme" class="cORp">madsrdf:MADSScheme</a> types and <a href="http://www.loc.gov/mads/rdf/v1#MADSCollection" class="cORp">madsrdf:MADSCollection</a> types. 
+            </p>
+            
+            
+            <p class="S3">All the Object Properties meant to indicate a (potential) high-value relationship are prefixed with the English verb “has.” &nbsp;Employing camel-case, the second part identifies the type of relationship and the third, if used, identifies the target of the relationship. &nbsp; </p>
+            
+            
+            <p class="S3">
+               <a xmlns="http://www.w3.org/1999/xhtml" id="t31" shape="rect"></a>
+               <a xmlns="http://www.w3.org/1999/xhtml" id="bkmt31" shape="rect"></a>
+               <span class="emphasis">3.1</span>
+               <span class="emphasis"> madsrdf:hasVariant</span>
+               
+            </p>
+            
+            
+            <p class="S3"><a href="http://www.loc.gov/mads/rdf/v1#hasVariant" class="cORp">madsrdf:hasVariant,</a> with a domain of <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority</a> and a range of <a href="http://www.loc.gov/mads/rdf/v1#Variant" class="cORp">madsrdf:Variant,</a> relates a <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority</a> to a <a href="http://www.loc.gov/mads/rdf/v1#Variant" class="cORp">madsrdf:Variant.</a> &nbsp;madsrdf:hasVariant has no inverse property relationship. &nbsp;In most circumstances, a blank node will be used though it may instead be identified with a URI. &nbsp;madsrdf:hasVariant is a sub-property of <a href="index.html#link_" class="cORp">skosxl:altLabel;</a> it represents a lexical entity versus an independent concept. 
+            </p>
+            
+            
+            <p class="S2"><a xmlns="http://www.w3.org/1999/xhtml" id="t32" shape="rect"></a><a xmlns="http://www.w3.org/1999/xhtml" id="bkmt32" shape="rect"></a>3.2 madsrdf:identifiesRWO and madsrdf:isIdentifiedByAuthority
+            </p>
+            
+            
+            <p class="S3"><a href="http://www.loc.gov/mads/rdf/v1#identifiesRWO" class="cORp">madsrdf:identifiesRWO</a> is a sub-property of <a href="http://xmlns.com/foaf/0.1/focus" class="cORp">foaf:focus.</a> &nbsp;It relates a resource representing a concept of something to the thing itself, a RWO. &nbsp;&nbsp;It has a domain of <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority</a> and a range of <a href="http://www.loc.gov/mads/rdf/v1#RWO" class="cORp">madsrdf:RWO.</a> &nbsp;madsrdf:isIdentifiedByAuthority is its inverse, and provides a way to relate a thing to its conceptualization. &nbsp;It has no mapping to an external property. 
+            </p>
+            
+            
+            <p class="S3">
+               <a xmlns="http://www.w3.org/1999/xhtml" id="t33" shape="rect"></a>
+               <a xmlns="http://www.w3.org/1999/xhtml" id="bkmt33" shape="rect"></a>
+               <span class="emphasis">3.3</span>
+               <span class="emphasis"> Relationships - &nbsp;madsrdf:hasRelatedAuthority</span>
+               
+            </p>
+            
+            
+            <p class="S3"><a href="http://www.loc.gov/mads/rdf/v1#hasRelatedAuthority" class="cORp">madsrdf:hasRelatedAuthority</a> can be equated with <a href="http://www.w3.org/2004/02/skos/core#semanticRelation" class="cORp">skos:semanticRelation</a> and, as such, is designed as an umbrella property for all of its sub-properties. &nbsp;The property, however, states, at best, a vague ill-defined relationship, simply that one Authority has some form of relationship with another Authority. &nbsp;madsrdf:hasRelatedAuthority has a domain of <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority</a> and a range of <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority.</a> &nbsp;The sub-properties – most of which were defined in MADS/XML – more precisely illustrate the relationship between two <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority</a> descriptions. &nbsp;&nbsp;&nbsp;Relationships in MADS/RDF map, for the most part, with their SKOS equivalents. &nbsp;And, although different semantics were adopted, the related SKOS property should be readily obvious.  
+            </p>
+            
+            
+            <p class="S27"><a xmlns="http://www.w3.org/1999/xhtml" id="t331" shape="rect"></a><a xmlns="http://www.w3.org/1999/xhtml" id="bkmt331" shape="rect"></a><span class="emphasis">3.3.1</span><span class="emphasis"> madsrdf:hasBroaderAuthority </span>and<span class="emphasis"> madsrdf:hasNarrowerAuthority</span></p>
+            
+            <p class="S27">These are designed to associate a <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority</a> with a more broader (general) or narrower (specific) concept. &nbsp;These have an inverse relationship with each other. &nbsp;MADS/XML supports these relationships. 
+            </p>
+            
+            
+            <p class="S27"><a xmlns="http://www.w3.org/1999/xhtml" id="t332" shape="rect"></a><a xmlns="http://www.w3.org/1999/xhtml" id="bkmt332" shape="rect"></a><span class="emphasis">3.3.2</span><span class="emphasis"> madsrdf:hasBroaderExternalAuthority </span>and<span class="emphasis"> madsrdf:hasNarrowerExternalAuthority</span>These relationships have been added to accommodate the SKOS equivalents (skos:broadMatch and skos:narrowMatch). &nbsp;They assist
+               with linking madsrdf:Authority descriptions in one madsrdf:MADSScheme to a term found in a different madsrdf:MADSScheme. &nbsp;&nbsp;&nbsp;These
+               are sub-properties of their respective non-external relationship type. &nbsp;They are not represented in MADS/XML.
+            </p>
+            
+            
+            <p class="S27"><a xmlns="http://www.w3.org/1999/xhtml" id="t333" shape="rect"></a><a xmlns="http://www.w3.org/1999/xhtml" id="bkmt333" shape="rect"></a><span class="emphasis">3.3.3</span><span class="emphasis"> madsrdf:hasReciprocalAuthority </span>and<span class="emphasis"> madsrdf:hasReciprocalExternalAuthority</span></p>
+            
+            <p class="S27"><a href="http://www.loc.gov/mads/rdf/v1#hasReciprocalAuthority" class="cORp">madsrdf:hasReciprocalAuthority</a> relates to <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority</a> descriptions with each other so long as the relationship is shared, reciprocally. &nbsp;MADS/XML supports this relationship with the “equivalent” relationship type value. &nbsp;madsrdf:hasReciprocalExternalAuthority – a sub-property of <a href="http://www.loc.gov/mads/rdf/v1#hasReciprocalAuthority" class="cORp">madsrdf:hasReciprocalAuthority</a> - does the same for <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority</a> records in other <a href="http://www.loc.gov/mads/rdf/v1#MADSSchemes" class="cORp">madsrdf:MADSSchemes.</a> 
+            </p>
+            
+            
+            <p class="S27"><a xmlns="http://www.w3.org/1999/xhtml" id="t334" shape="rect"></a><a xmlns="http://www.w3.org/1999/xhtml" id="bkmt334" shape="rect"></a><span class="emphasis">3.3.4</span><span class="emphasis"> madsrdf:hasCloseExternalAuthority </span>and<span class="emphasis"> madsrdf:hasExactExternalAuthority</span></p>
+            
+            <p class="S27">These have been added to accommodate the SKOS equivalents (skos:closeMatch, <a href="http://www.w3.org/2004/02/skos/core#exactMatch)" class="cORp">skos:exactMatch).</a> &nbsp;They relate <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority</a> descriptions in two different <a href="http://www.loc.gov/mads/rdf/v1#MADSSchemes" class="cORp">madsrdf:MADSSchemes.</a> 
+            </p>
+            
+            
+            <p class="S27"><a xmlns="http://www.w3.org/1999/xhtml" id="t335" shape="rect"></a><a xmlns="http://www.w3.org/1999/xhtml" id="bkmt335" shape="rect"></a><span class="emphasis">3.3.5</span><span class="emphasis"> madsrdf:hasCorporateParentAuthority </span>and<span class="emphasis"> madsrdf:hasCorporateSubsidiaryAuthority</span></p>
+            
+            <p class="S27">These properties are in MADS/XML – known as parentOrg - and serve to relate the descriptions for corporate entities. &nbsp;They are inversely related to each other. </p>
+            
+            
+            
+            <p class="S2"><a xmlns="http://www.w3.org/1999/xhtml" id="t34" shape="rect"></a><a xmlns="http://www.w3.org/1999/xhtml" id="bkmt34" shape="rect"></a>3.4 Relationships between Current, Deprecated, and Superseded Descriptions
+            </p>
+            
+            
+            <p class="S3">The following object properties are sub-properties of <a href="http://www.loc.gov/mads/rdf/v1#see" class="cORp">madsrdf:see.</a> &nbsp;madsrdf:see simply denotes a relationship between a <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority</a> and/or a <a href="http://www.loc.gov/mads/rdf/v1#DeprecatedAuthority" class="cORp">madsrdf:DeprecatedAuthority.</a> &nbsp;There is no certainty that the related resource will illuminate the original resource. 
+            </p>
+            
+            
+            <p class="S27">
+               <a xmlns="http://www.w3.org/1999/xhtml" id="t341" shape="rect"></a>
+               <a xmlns="http://www.w3.org/1999/xhtml" id="bkmt341" shape="rect"></a>
+               <span class="emphasis">3.4.1</span>
+               <span class="emphasis"> madsrdf:hasLaterEstablishedForm and madsrdf:hasEarlierEstablishedForm</span>
+               
+            </p>
+            
+            <p class="S27"><a href="http://www.loc.gov/mads/rdf/v1#hasLaterEstablishedForm" class="cORp">madsrdf:hasLaterEstablishedForm</a> relates a resource to a <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority</a> description developed afterwards. &nbsp;madsrdf:hasLaterEstablishedForm may relate two authoritative descriptions, one of which followed the other but both of which are still valid, or it may relate a <a href="http://www.loc.gov/mads/rdf/v1#DeprecatedAuthority" class="cORp">madsrdf:DeprecatedAuthority</a> to its now authoritative representation. 
+            </p>
+            
+            
+            <p class="S27">For example, in the case of the former – <a href="http://www.loc.gov/mads/rdf/v1#hasLaterEstablishedForm" class="cORp">madsrdf:hasLaterEstablishedForm</a> relates two still-valid <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority</a> resources - the “Minnesota Mining and Manufacturing Company,” from the LC Name Authority File, has a later established form, “3M Company,” but “Minnesota Mining and Manufacturing Company” remains authoritative when used to describe something that pertains specifically to the time when the “3M Company” was known as the “Minnesota Mining and Manufacturing Company.” 
+            </p>
+            
+            
+            <p class="S27">MADS/XML supports the relationship <a href="http://www.loc.gov/mads/rdf/v1#hasLaterEstablishedForm" class="cORp">madsrdf:hasLaterEstablishedForm.</a> &nbsp;SKOS has no equivalent. 
+            </p>
+            
+            
+            <p class="S27"><a href="http://www.loc.gov/mads/rdf/v1#hasEarlierEstablishedForm" class="cORp">madsrdf:hasEarlierEstablishedForm</a> is the inverse of <a href="http://www.loc.gov/mads/rdf/v1#hasLaterEstablishedForm" class="cORp">madsrdf:hasLaterEstablishedForm.</a> &nbsp;MADS/XML provides support for this relationship. 
+            </p>
+            
+            
+            <p class="S28"><a xmlns="http://www.w3.org/1999/xhtml" id="t342" shape="rect"></a><a xmlns="http://www.w3.org/1999/xhtml" id="bkmt342" shape="rect"></a>3.4.2 madsrdf:useInstead and madsrdf:useFor
+            </p>
+            
+            <p class="S27">These object properties relate <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority</a> and/or <a href="http://www.loc.gov/mads/rdf/v1#DeprecatedAuthority" class="cORp">madsrdf:DeprecatedAuthority</a> descriptions to each other. &nbsp;There is no certainty that the related description will further illuminate the original description. &nbsp;For example, <a href="http://www.loc.gov/mads/rdf/v1#useInstead" class="cORp">madsrdf:useInstead,</a> meaning “Use [This Other Resource] Instead,” can relate a <a href="http://www.loc.gov/mads/rdf/v1#DeprecatedAuthority" class="cORp">madsrdf:DeprecatedAuthority</a> to a <a href="http://www.loc.gov/mads/rdf/v1#Authority" class="cORp">madsrdf:Authority,</a> especially to direct agents from a <a href="http://www.loc.gov/mads/rdf/v1#DeprecatedAuthority" class="cORp">madsrdf:DeprecatedAuthority</a> to its replacement. &nbsp;madsrdf:useFor is the inverse of <a href="http://www.loc.gov/mads/rdf/v1#useInstead" class="cORp">madsrdf:useInstead.</a> 
+            </p>
+            
+            
+            
+            <p class="S6"><a xmlns="http://www.w3.org/1999/xhtml" id="t4" shape="rect"></a><a xmlns="http://www.w3.org/1999/xhtml" id="bkmt4" shape="rect"></a>4 Acknowledgements
+            </p>
+            
+            
+            <p class="S3">The MADS/RDF to SKOS/RDF mapping was done by Antoine Isaac. &nbsp;The MADS/RDF model and ontology benefited significantly as a result of the fruitful discussions surrounding his effort to map the MADS/RDF ontology to SKOS. </p>
+            
+         </div>
+      </center>
+   <script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+</html>

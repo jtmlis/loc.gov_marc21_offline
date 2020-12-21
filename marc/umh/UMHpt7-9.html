@@ -1,0 +1,1397 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Understanding MARC Holding Records: Parts 7 to 10</title>
+<!-- <base> tags no longer used by LC web developers -->
+<meta name="keywords" content="MARC 21, Holding Format, MFHD, UMH">
+<meta name="description" content="This document contains parts 7 to 10 of Understanding MARC Holding Records">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel=stylesheet href="umh-redesign.css" type="text/css">
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+<body>
+<!--Begin outer border; centers document; fixes line length-->
+<table align="center" class="main">
+  <tr>
+    <td><p><a href="UMHpt7-9.html#skip_menu" name="top"><img src="http://www.loc.gov/marc/images/clear.gif" alt="Skip Navigation Links" width="1" height="1" border="0"></a><a href="../../index.html">Library of Congress</a> &gt;&gt; <a href="../../standards/index.html">Standards</a> &gt;&gt; <a href="../../marc.html">MARC</a> &gt;&gt; <a href="index.html">Understanding MARC Holdings Records</a></p>
+      <hr size="1" noshade></td>
+  </tr>
+  <tr>
+    <td><a name="skip_menu"></a>
+      <h1>MARC 21 REFERENCE<br>
+        MATERIALS</h1>
+      <hr align=center size=4 width=100>
+      <p class="contents"> <a href="UMHpt7-9.html#pt7">Part VII: A Summary of Commonly Used MARC 21 Holdings Fields</a><br>
+        <a href="UMHpt7-9.html#pt8">Part VIII: The Leader, Directory, Field 007, and Field 008</a><br>
+        <a href="UMHpt7-9.html#pt9">Part IX: Sample Records</a><br>
+      </p>
+      <a name="pt7"></a>
+      <hr align=center size=4 width=100>
+      <!-- Part VII: A Summary of Commonly Used MARC 21 Holdings Fields -->
+      <h2 class="no">Part VII</h2>
+      <h2 class="title">A Summary of Commonly Used <br>
+        MARC 21 Holdings Fields</h2>
+      <h3 class="title">Summary Explanation</h3>
+      <p class="main">This is a summary of the MARC 21 tags used most frequently by libraries when creating their own holdings records. For full listings of the MARC 21 tags, indicators and subfield codes, see the <cite>MARC 21 Format for Holdings Data</cite>.
+        The following explanation applies to all of the summary descriptions in this part.</p>
+      <p class="main"><span class="strong">Tags</span> &ndash; The tags (3-digit numbers) are followed by the names of the fields they represent. In this summary, and in the <cite>MARC 21 Format for Holdings Data</cite>, if a tag can appear more than once in a holdings record, it is labeled repeatable (R). If it can only be used once, it is labeled non-repeatable (NR).</p>
+      <p class="main"><span class="strong">Indicators</span> &ndash; The use of indicators is explained in fields where they are used. Indicators are one-digit numbers. Beginning with the 010 field (Library of Congress Control Number), in every field are two character positions, one for Indicator 1 and one for Indicator 2. The indicators are not actually defined in all fields, however. And, it is possible that a second indicator will be used, while the first indicator remains undefined (or vice versa). When an indicator is undefined, the character position will be represented by the character # (for blank space).</p>
+      <p class="main"><span class="strong">Subfield codes</span> &ndash; All the data in each field (beginning with the 010 field) is divided into subfields, each of which is preceded by a delimiter-subfield code combination. The most common subfield codes used with each tag are shown. Each subfield code is preceded by the character $, signifying a delimiter. The name of the subfield follows the code. </p>
+      <p class="cont">In general, every field should contain a subfield "a" ($a). Some subfields are repeatable, while others may not be repeated. In this summary, both repeatability (R) and nonrepeatability (NR) are noted for all subfields.</p>
+      <p class="main"><span class="strong">Examples:</span> Examples follow the explanation for each field. For clarity, one space has been placed between the tag and the first indicator, one space has been placed between the second indicator and the first delimiter-subfield code, and one space has been inserted between the delimiter-subfield code and the subfield data. The library in the examples is fictitious, the ABC Public Library, which has organization code "Abc".</p>
+      <h3 class="title">Links to bibliographic records</h3>
+      <p class="field1"><span class="uma-strong">004 Control Number for Related Bibliographic Record</span></p>
+      <p class="main">Field 004 links a separate holdings record to its related bibliographic record using a control number assigned by the specific library's system. When holdings information is embedded in a related MARC bibliographic record, field 004 is not used.</p>
+      <p class="cont">Other fields may also contain identifiers that will relate the holdings to a bibliographic item, such as field 020 (ISBN) or field 022 (ISSN).</p>
+      <p class="cont">A secondary linking field, 014 (Linkage Number), is a repeatable field that can be used for control numbers assigned by a cooperative network or consortium. When a shared record is received by a library, the network-assigned control number will be in field 004. The receiving library, if it chooses, may move this number to field 014 and substitute their own local control number in 004.</p>
+      <p class="field2"><em>(NR -non-repeatable)</em></p>
+      <p class="field2"><em>No indicators or subfield codes.</em></p>
+      <table class="yes">
+        <tr>
+          <td class="example"><pre><span class="ex-comment">Example:</span>   004   14877877</pre></td>
+        </tr>
+      </table>
+      <h3 class="title">Coded general holdings data</h3>
+      <p class="main"><span class="uma-strong">Leader</span> &ndash; See <a href="UMHpt7-9.html#pt8">Part VIII</a>.
+      <p class="main"><span class="uma-strong">007   Physical Description Fixed Field</span> &ndash; See <a href="UMHpt7-9.html#pt8">Part VIII</a>.
+      <p class="main"><span class="uma-strong">008   Fixed Length Data Elements</span> &ndash; See <a href="UMHpt7-9.html#pt8">Part VIII</a>.
+      <h3 class="title">Location fields</h3>
+      <p class="field1"><span class="strong">852 - Location</span></p>
+      <p class="main">The most-frequently used method to record holdings data is to provide the standard code or name of the library holding the bibliographic item and the location where the bibliographic item is stored in the library. Holdings field 852 (Location) identifies the library holding the item. Likewise, it may also contain detailed information about how to locate the item (i.e., the call number to a book). Most holdings records contain field 852.</p>
+      <p class="field2"><em>(R - repeatable)</em></p>
+      <p class="field2"><em>Indicator 1: Shelving scheme</em></p>
+      <p class="field3">#	No information provided</p>
+      <p class="field3">0	Library of Congress classification</p>
+      <p class="field3">1	Dewey Decimal classification</p>
+      <p class="field3">4	Shelving control number</p>
+      <p class="field3">8	Other scheme</p>
+      <p class="field2"><em>Indicator 2: Shelving order</em></p>
+      <p class="field3">#	No information provided</p>
+      <p class="field3">0	Not enumeration</p>
+      <p class="field3">1	Primary enumeration</p>
+      <p class="field2"><em>Subfields used most often:</em></p>
+      <p class="field3">$a	Location</p>
+      <p class="field3">$b	Sublocation or collection</p>
+      <p class="field3">$c	Shelving location</p>
+      <p class="field3">$h	Classification part</p>
+      <p class="field3">$i	Item part</p>
+      <p class="field3">$j	Shelving control number</p>
+      <p class="field3">$t	Copy number</p>
+      <p class="field3">$x	Nonpublic note</p>
+      <p class="field3">$z	Public note</p>
+      <table class="yes">
+        <tr>
+          <td class="example"><pre><span class="ex-comment">Example:</span>   852   0#   $aAbc $bSci $t1</pre></td>
+        </tr>
+        <tr>
+          <td style="padding-left: 25px"><pre>[Item uses LC classification, is located at ABC 
+Public Library in the Science collection, and is copy #1.]</pre></td>
+        </tr>
+      </table>
+      <p class="field1"><span class="strong">856 - Electronic Location and Access</span></p>
+      <p class="main">The information in 856 identifies the electronic location containing the resource or from which it is available.</p>
+      <p class="field2"><em>(R - repeatable)</em></p>
+      <p class="field2"><em>Indicator 1: Access method</em></p>
+      <p class="field3">#	No information provided</p>
+      <p class="field3">4	HTTP</p>
+      <p class="field2"><em>Indicator 2: Relationship</em></p>
+      <p class="field3">#	No information provided </p>
+      <p class="field3">0	Resource </p>
+      <p class="field3">1	Version of resource</p>
+      <p class="field3">2	Related resource</p>
+      <p class="field3">8	No display constant generated</p>
+      <p class="field2"><em>Subfields used most often:</em></p>
+      <p class="field3">$u 	Uniform Resource Identifier</p>
+      <p class="field3">$z	Public note</p>
+      <p class="field3">$3	Materials specified</p>
+      <table class="yes">
+        <tr>
+          <td class="example"><pre><span class="ex-comment">Example:</span>   856	41   $uhttp://www.jstor.org/journals/0277903x.html</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>[Item is available at the URL indicated.]</pre></td>
+        </tr>
+      </table>
+      <h3 class="title">Holdings data fields</h3>
+      <p class="main">The fields listed are those for the basic bibliographic units. There are equivalent fields of each for Supplementary Material and for Indexes, although not all indicators have the same meanings.</p>
+      <p class="field1"><span class="strong">853 - Captions and Pattern-Basic Bibliographic Unit </span></p>
+      <p class="main">Equivalent field for Supplementary Material = 854</p>
+      <p class="main">Equivalent field for Indexes =855</p>
+      <p class="field2"><em>(R - repeatable)</em></p>
+      <p class="field2"><em>Indicator 1: Compressibility and expandability</em></p>
+      <p class="field3">0	Cannot compress or expand</p>
+      <p class="field3">1	Can compress but not expand</p>
+      <p class="field3">2	Can compress or expand</p>
+      <p class="field3">3	Unknown</p>
+      <p class="field2"><em>Indicator 2: Caption evaluation </em></p>
+      <p class="field3">0	Captions verified; all levels present</p>
+      <p class="field3">1	Captions verified; all levels may not be present</p>
+      <p class="field3">2	Captions unverified; all levels present</p>
+      <p class="field3">3	Captions unverified; all levels may not be present</p>
+      <p class="field2"><em>Subfields used most often:</em></p>
+      <p class="field3">$a 	First level of enumeration</p>
+      <p class="field3">$b	Second level of enumeration</p>
+      <p class="field3">$i	First level of chronology</p>
+      <p class="field3">$j	Second level of chronology</p>
+      <p class="field3">$w	Frequency</p>
+      <p class="field3">$y 	Regularity pattern</p>
+      <p class="field3">$8	Field link and sequence number</p>
+      <p class="field3">For $w (Frequency), $y (Regularity), and other pattern coding, see <em>MARC 21 Format for Holdings Data</em>.</p>
+      <p class="main">See 863 for combined example for the 853 and 863 fields.</p>
+      <p class="field1"><span class="strong">863 - Enumeration and Chronology - Basic Bibliographic Unit</span></p>
+      <p class="main">Equivalent field for Supplementary Material = 864</p>
+      <p class="main">Equivalent field for Indexes =865</p>
+      <p class="field2"><em>(R - repeatable)</em></p>
+      <p class="field2"><em>Indicator 1: Field encoding level</em></p>
+      <p class="field3">#	No information provided</p>
+      <p class="field3">3	Holdings level 3</p>
+      <p class="field3">4	Holdings level 4</p>
+      <p class="field2"><em>Indicator 2: Form of holdings</em></p>
+      <p class="field3">#	No information provided</p>
+      <p class="field3">0	Compressed</p>
+      <p class="field3">1	Uncompressed</p>
+      <p class="field3">2	Compressed, use textual display</p>
+      <p class="field3">3	Uncompressed, use textual display</p>
+      <p class="field2"><em>Subfields used most often:</em></p>
+      <p class="field3">$a 	First level of enumeration</p>
+      <p class="field3">$b	Second level of enumeration</p>
+      <p class="field3">$i	First level of chronology</p>
+      <p class="field3">$j	Second level of chronology</p>
+      <p class="field3">$z	Public note</p>
+      <p class="field3">$8	Field link and sequence number</p>
+      <table class="yes">
+        <tr>
+          <td class="example"><pre><span class="ex-comment">Example:</span>  853   03 $81 $av. $bno.
+         863   40 $81.1$a1-7 $b1-12</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>[Display example: v.1:no.1-v.7:no.12]</pre></td>
+        </tr>
+      </table>
+      <p class="field1"><span class="strong">866 - Textual Holdings - Basic Bibliographic Unit</span></p>
+      <p class="main">Field 866 provides textual (not coded) holdings information that describes the items (usually magazines and collections of items) that the library owns. The textual holdings fields are very useful when coded holdings data cannot adequately describe the holdings information.
+      <p class="main">Equivalent field for Supplementary Material = 867</p>
+      <p class="main">Equivalent field for Indexes =868</p>
+      <p class="field2"><em>(R - repeatable)</em></p>
+      <p class="field2"><em>Indicator 1: Field encoding level</em></p>
+      <p class="field3">#	No information provided</p>
+      <p class="field3">3	Holdings level 3</p>
+      <p class="field3">4	Holdings level 4</p>
+      <p class="field2"><em>Indicator 2: Form of holdings</em></p>
+      <p class="field3">0	Non-standard</p>
+      <p class="field3">1	ANSI/NISO Z39.71 or ISO 10324</p>
+      <p class="field2"><em>Subfields used most often:</em></p>
+      <p class="field3">$a 	Textual holdings</p>
+      <p class="field3">$x	Nonpublic note</p>
+      <p class="field3">$z 	Public note</p>
+      <table class="yes">
+        <tr>
+          <td class="example"><pre><span class="ex-comment">Example:</span>  866	31  $82  $av. 37-52  $zBound; some issues missing</pre></td>
+        </tr>
+      </table>
+      <h3 class="title">Notes</h3>
+      <p class="field1"><span class="strong">506 - Restrictions on Access Note</span></p>
+      <p class="field2"><em>(R - repeatable)</em></p>
+      <p class="field2"><em>Indicator 1: Restriction</em></p>
+      <p class="field3">#	No information provided</p>
+      <p class="field3">0 	No Restrictions</p>
+      <p class="field3">1	Restrictions apply</p>
+      <p class="field2"><em>Indicator 2: [undefined]</em></p>
+      <p class="field2"><em>Subfields used most often:</em></p>
+      <p class="field3">$a	Terms governing access (NR)</p>
+      <table class="yes">
+        <tr>
+          <td class="example"><pre><span class="ex-comment">Example:</span>   506   1#  $aClassified</pre></td>
+        </tr>
+      </table>
+      <p class="field1"><span class="strong">563 - Binding Information</span></p>
+      <p class="field2"><em>(R - repeatable)</em></p>
+      <p class="field2"><em>Both indicators 1 and 2 are undefined.</em></p>
+      <p class="field2"><em>Subfields used most often:</em></p>
+      <p class="field3">$a 	Binding note</p>
+      <p class="field3">$u 	Uniform Resource Identifier</p>
+      <p class="field3">$3	Materials specified</p>
+      <p class="field3">$5	Institution to which field applies</p>
+      <table class="yes">
+        <tr>
+          <td class="example"><pre><span class="ex-comment">Example:</span>   563 ##  $aLate 16th century blind-tooled 
+                  centrepiece binding, dark brown calf.</pre></td>
+        </tr>
+      </table>
+      <p class="field1"><span class="strong">583 - Action Note</span></p>
+      <p class="field2"><em>(R - repeatable)</em></p>
+      <p class="field2"><em>Indicator 1: Privacy</em></p>
+      <p class="field3">#	No information provided</p>
+      <p class="field3">0 	Private</p>
+      <p class="field3">1	Not private</p>
+      <p class="field2"><em>Indicator 2: [undefined]</em></p>
+      <p class="field2"><em>Subfields used most often:</em></p>
+      <p class="field3">$a	Action (NR)</p>
+      <p class="field3">$b	Action identification (R)</p>
+      <p class="field3">$c	Time/date of action (R)</p>
+      <p class="field3">$f	Authorization (R)</p>
+      <p class="field3">$i 	Method of action (R)</p>
+      <p class="field3">$z	Public note (R)</p>
+      <p class="field3">$3 	Materials specified (NR)</p>
+      <table class="yes">
+        <tr>
+          <td class="example"><pre><span class="ex-comment">Example:</span>   
+583 ##  $3text $atransformed digitally $c2003 $itext markup
+583 ## $acondition reviewed $c19980207 $zPages missing </pre></td>
+        </tr>
+      </table>
+      <!-- Part VIII: The Leader, Directory, Field 007, and Field 008 -->
+      <a name="pt8" id="pt8"></a>
+      <hr align=center size=4 width=100>
+      <h2 class="no">Part VIII</h2>
+      <h2 class="title">The Leader, Directory, <br>
+        Field 007, and Field 008</h2>
+      <h3 class="title">Leader</h3>
+      <table class="values">
+        <tr>
+          <td class="tag1"><span class="uma-strong">00-04</span></td>
+          <td class="tag2"><span class="uma-strong">Record length (calculated by the computer for each record)</span></td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="tag1"><span class="uma-strong">05</span></td>
+          <td class="tag2"><span class="uma-strong">Record status</span></td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">c</td>
+          <td class="value2">=</td>
+          <td class="value3">Corrected or revised</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">d</td>
+          <td class="value2">=</td>
+          <td class="value3">Deleted</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">n</td>
+          <td class="value2">=</td>
+          <td class="value3">New</td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="tag1"><span class="uma-strong">06</span></td>
+          <td class="tag2"><span class="uma-strong">Type of record</span></td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">u</td>
+          <td class="value2">=</td>
+          <td class="value3">Unknown</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">v</td>
+          <td class="value2">=</td>
+          <td class="value3">Multipart item holdings</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">x</td>
+          <td class="value2">=</td>
+          <td class="value3">Single-part item holdings</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">y</td>
+          <td class="value2">=</td>
+          <td class="value3">Serial item holdings</td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="tag1"><span class="uma-strong">07-08</span></td>
+          <td class="tag2"><span class="uma-strong">Undefined character positions (always "##")</span></td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="tag1"><span class="uma-strong">09</span></td>
+          <td class="tag2"><span class="uma-strong">Character coding scheme</span></td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">#</td>
+          <td class="value2">=</td>
+          <td class="value3">MARC-8</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">a</td>
+          <td class="value2">=</td>
+          <td class="value3">UCS/Unicode</td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="tag1"><span class="uma-strong">10</span></td>
+          <td class="tag2"><span class="uma-strong">Indicator count (always "2")</span></td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="tag1"><span class="uma-strong">11</span></td>
+          <td class="tag2"><span class="uma-strong">Subfield code length (always "2")</span></td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="tag1"><span class="uma-strong">12-16</span></td>
+          <td class="tag2"><span class="uma-strong">Base address of data (calculated by the computer for each record)</span></td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="tag1"><span class="uma-strong">17</span></td>
+          <td class="tag2"><span class="uma-strong">Encoding level</span></td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">1</td>
+          <td class="value2">=</td>
+          <td class="value3">Holdings level 1</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">2</td>
+          <td class="value2">=</td>
+          <td class="value3">Holdings level 2</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">3</td>
+          <td class="value2">=</td>
+          <td class="value3">Holdings level 3</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">4</td>
+          <td class="value2">=</td>
+          <td class="value3">Holdings level 4</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">5</td>
+          <td class="value2">=</td>
+          <td class="value3">Holdings level 4 with piece designation</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">m</td>
+          <td class="value2">=</td>
+          <td class="value3">Mixed level</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">u</td>
+          <td class="value2">=</td>
+          <td class="value3">Unknown</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">z</td>
+          <td class="value2">=</td>
+          <td class="value3">Other level</td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="tag1"><span class="uma-strong">18</span></td>
+          <td class="tag2"><span class="uma-strong">Item information in record</span></td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">i</td>
+          <td class="value2">=</td>
+          <td class="value3">Item informatio</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">n</td>
+          <td class="value2">=</td>
+          <td class="value3">No item information</td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="tag1"><span class="uma-strong">19</span></td>
+          <td class="tag2"><span class="uma-strong">Undefined character position (always "#")</span></td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="tag1"><span class="uma-strong">20</span></td>
+          <td class="tag2"><span class="uma-strong">Length of the length-of-field portion (always "4")</span></td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="tag1"><span class="uma-strong">21</span></td>
+          <td class="tag2"><span class="uma-strong">Length of the starting-character-position portion (always "5")</span></td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="tag1"><span class="uma-strong">22</span></td>
+          <td class="tag2"><span class="uma-strong">Length of the implementation-defined portion (always "0")</span></td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="tag1"><span class="uma-strong">23</span></td>
+          <td class="tag2"><span class="uma-strong">Undefined (always "0")</span></td>
+        </tr>
+      </table>
+      <table class="yes">
+        <tr>
+          <td class="example"><pre><span class="ex-comment">Example:</span>  LDR 00217nu##a2200097un#4500</pre></td>
+        </tr>
+      </table>
+      <h3 class="title">Directory</h3>
+      <p class="main"><em>No indicators or subfield codes; the data elements are positionally defined.</em></p>
+      <table class="values">
+        <tr>
+          <td class="tag1"><span class="uma-strong">00-02</span></td>
+          <td class="tag2"><span class="uma-strong">Tag</span></td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="tag1"><span class="uma-strong">03-06</span></td>
+          <td class="tag2"><span class="uma-strong">Field length</span></td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="tag1"><span class="uma-strong">07-11</span></td>
+          <td class="tag2"><span class="uma-strong">Starting character position</span></td>
+        </tr>
+      </table>
+      <h3 class="title">Field 007 - Physical Description Fixed Field</h3>
+      <p class="main">Field 007 contains codes that describe the physical characteristics of the copy of the bibliographic item for which holdings are recorded. The most important of these are the first two character positions that tell media and the carrier for the specific copy for which holdings are recorded in the holdings record. The remaining positions in the field 007 further identify physical characteristics of the copy.</p>
+      <p class="main"><em>(NR -non-repeatable)</em></p>
+      <p class="main"><em>No indicators or subfield codes; the data elements are positionally defined by category of material.</em></p>
+      <table class="values">
+        <tr>
+          <td class="tag1"><span class="uma-strong">00</span></td>
+          <td class="tag2"><span class="uma-strong">Category of material (media type)  [General Holdings Area data]</span></td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">a</td>
+          <td class="value2">=</td>
+          <td class="value3">Map</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">c</td>
+          <td class="value2">=</td>
+          <td class="value3">Electronic resource</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">d</td>
+          <td class="value2">=</td>
+          <td class="value3">Globe</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">f</td>
+          <td class="value2">=</td>
+          <td class="value3">Tactile material</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">g</td>
+          <td class="value2">=</td>
+          <td class="value3">Projected graphic</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">h</td>
+          <td class="value2">=</td>
+          <td class="value3">Microform</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">k</td>
+          <td class="value2">=</td>
+          <td class="value3">Nonprojected graphic</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">m</td>
+          <td class="value2">=</td>
+          <td class="value3">Motion picture</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">o</td>
+          <td class="value2">=</td>
+          <td class="value3">Kit</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">q</td>
+          <td class="value2">=</td>
+          <td class="value3">Notated music</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">r</td>
+          <td class="value2">=</td>
+          <td class="value3">Remote-sensing image</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">s</td>
+          <td class="value2">=</td>
+          <td class="value3">Sound recording</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">t</td>
+          <td class="value2">=</td>
+          <td class="value3">Text</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">v</td>
+          <td class="value2">=</td>
+          <td class="value3">Videorecording</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">z</td>
+          <td class="value2">=</td>
+          <td class="value3">Unspecified</td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="tag1"><span class="uma-strong">01</span></td>
+          <td class="tag2"><span class="uma-strong">Specific material designation (carrier type)  [General Holdings Area data]</span></td>
+        </tr>
+      </table>
+      <p class="main">For carrier types associated with each media type see the <em>MARC 21 Format for Holdings Data</em>.</p>
+      <table class="values">
+        <tr>
+          <td class="tag1"><span class="uma-strong">02+</span></td>
+          <td class="tag2"><span class="uma-strong">Other physical characteristics of the copy</span></td>
+        </tr>
+      </table>
+      <p class="main">The definitions of the character positions and the length of the 007 field depend on the category of material designated in the first position (00). For a fuller explanation see the <em>MARC 21 Format for Holdings Data</em>.</p>
+      <table class="yes">
+        <tr>
+          <td class="example"><pre><span class="ex-comment">Example:</span>  007	hj|bf|||||||</pre></td>
+        </tr>
+        <tr>
+          <td colspan="2" class="example"><pre>[Item is a microfilm roll (007/00 and007/01); 
+with negative polarity (03); and on 35 mm film (04)]</pre>
+        </tr>
+      </table>
+      <h3 class="title">Field 008 - Fixed-Length Data Elements</h3>
+      <p class="main">Field 008 is used for Fixed-Length Data elements. There are 32 character positions in field 008, numbered from 00-31. Undefined positions must contain either a blank (#) or a fill character ( | ). Please note that like all of the other variable control fields, field 008 has no indicators or subfield codes. For a fuller explanation, see the <em>MARC 21 Format for Holdings Data</em>.</p>
+      <table class="values">
+        <tr>
+          <td class="tag1"><span class="uma-strong">00-05</span></td>
+          <td class="tag2"><span class="uma-strong">Date entered on file (YYMMDD, where Y=year, M=month, and D=day)</span></td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="tag1"><span class="uma-strong">06</span></td>
+          <td class="tag2"><span class="uma-strong">Receipt or acquisition status [General Holdings Area data]</span></td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">0</td>
+          <td class="value2">=</td>
+          <td class="value3">Unknown</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">1</td>
+          <td class="value2">=</td>
+          <td class="value3">Other receipt or acquisition status</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">2</td>
+          <td class="value2">=</td>
+          <td class="value3">Received and complete or ceased</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">3</td>
+          <td class="value2">=</td>
+          <td class="value3">On order</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">4</td>
+          <td class="value2">=</td>
+          <td class="value3">Currently received</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">5</td>
+          <td class="value2">=</td>
+          <td class="value3">Not currently received</td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="tag1"><span class="uma-strong">07</span></td>
+          <td class="tag2"><span class="uma-strong">Method of acquisition</span></td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">c</td>
+          <td class="value2">=</td>
+          <td class="value3">Cooperative or consortial purchase</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">d</td>
+          <td class="value2">=</td>
+          <td class="value3">Deposit</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">e</td>
+          <td class="value2">=</td>
+          <td class="value3">Exchange</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">f</td>
+          <td class="value2">=</td>
+          <td class="value3">Free</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">g</td>
+          <td class="value2">=</td>
+          <td class="value3">Gift</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">m</td>
+          <td class="value2">=</td>
+          <td class="value3">Membership</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">n</td>
+          <td class="value2">=</td>
+          <td class="value3">Non-library purchase</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">p</td>
+          <td class="value2">=</td>
+          <td class="value3">Purchase</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">u</td>
+          <td class="value2">=</td>
+          <td class="value3">Unknown</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">z</td>
+          <td class="value2">=</td>
+          <td class="value3">Other method of acquisition</td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="tag1"><span class="uma-strong">08-11</span></td>
+          <td class="tag2"><span class="uma-strong">Expected acquisition end date</span></td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">[yymm]</td>
+          <td class="value2">=</td>
+          <td class="value3">Date of cancellation or last expected part</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">uuuu</td>
+          <td class="value2">=</td>
+          <td class="value3">Intent to cancel; effective date not known</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">####</td>
+          <td class="value2">=</td>
+          <td class="value3">No intent to cancel or not applicable</td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="tag1"><span class="uma-strong">12</span></td>
+          <td class="tag2"><span class="uma-strong">General retention policy  [General Holdings Area data]</span></td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">0</td>
+          <td class="value2">=</td>
+          <td class="value3">Unknown</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">1</td>
+          <td class="value2">=</td>
+          <td class="value3">Other general retention policy</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">2</td>
+          <td class="value2">=</td>
+          <td class="value3">Retained except as replaced by updates</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">3</td>
+          <td class="value2">=</td>
+          <td class="value3">Sample issue retained</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">4</td>
+          <td class="value2">=</td>
+          <td class="value3">Retained until replaced by microform</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">5</td>
+          <td class="value2">=</td>
+          <td class="value3">Retained until replaced by cumulation, replacement volume, or revision</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">6</td>
+          <td class="value2">=</td>
+          <td class="value3">Retained for a limited period</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">7</td>
+          <td class="value2">=</td>
+          <td class="value3">Not retained</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">8</td>
+          <td class="value2">=</td>
+          <td class="value3">Permanently retained</td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="tag1"><span class="uma-strong">13-15</span></td>
+          <td class="tag2"><span class="uma-strong">Specific retention policy</span></td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">###</td>
+          <td class="value2">=</td>
+          <td class="value3">No specific retention policy (default value)</td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="tag1"><span class="uma-strong">16</span></td>
+          <td class="tag2"><span class="uma-strong">Completeness  [General Holdings Area data]</span></td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">0</td>
+          <td class="value2">=</td>
+          <td class="value3">Other</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">1</td>
+          <td class="value2">=</td>
+          <td class="value3">Complete</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">2</td>
+          <td class="value2">=</td>
+          <td class="value3">Incomplete</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">3</td>
+          <td class="value2">=</td>
+          <td class="value3">Scattered</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">4</td>
+          <td class="value2">=</td>
+          <td class="value3">Not applicable</td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="tag1"><span class="uma-strong">17-19</span></td>
+          <td class="tag2"><span class="uma-strong">Number of copies reported in record</span></td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">###</td>
+          <td class="value2">=</td>
+          <td class="value3">default</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">001, 002, etc.</td>
+          <td class="value2">=</td>
+          <td class="value3">number of copies reported</td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="tag1"><span class="uma-strong">20</span></td>
+          <td class="tag2"><span class="uma-strong">Lending policy</span></td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">a</td>
+          <td class="value2">=</td>
+          <td class="value3">Will lend</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">b</td>
+          <td class="value2">=</td>
+          <td class="value3">Will not lend</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">c</td>
+          <td class="value2">=</td>
+          <td class="value3">Will lend hard copy only</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">l</td>
+          <td class="value2">=</td>
+          <td class="value3">Limited lending policy</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">u</td>
+          <td class="value2">=</td>
+          <td class="value3">Unknown</td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="tag1"><span class="uma-strong">21</span></td>
+          <td class="tag2"><span class="uma-strong">Reproduction policy</span></td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">a</td>
+          <td class="value2">=</td>
+          <td class="value3">Will reproduce</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">b</td>
+          <td class="value2">=</td>
+          <td class="value3">Will not reproduce</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">u</td>
+          <td class="value2">=</td>
+          <td class="value3">Unknown</td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="tag1"><span class="uma-strong">22-24</span></td>
+          <td class="tag2"><span class="uma-strong">Language of captions, etc.</span></td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">###</td>
+          <td class="value2">=</td>
+          <td class="value3">Blanks</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">und</td>
+          <td class="value2">=</td>
+          <td class="value3">Undetermined</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">eng, etc.</td>
+          <td class="value2">=</td>
+          <td class="value3">MARC language code</td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="tag1"><span class="uma-strong">25</span></td>
+          <td class="tag2"><span class="uma-strong">Separate or composite copy report</span></td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">0</td>
+          <td class="value2">=</td>
+          <td class="value3">Separate copy report</td>
+        </tr>
+        <tr>
+          <td class="value0">&nbsp;</td>
+          <td class="value1">1</td>
+          <td class="value2">=</td>
+          <td class="value3">Composite copy report (in one holdings record)</td>
+        </tr>
+      </table>
+      <table class="values">
+        <tr>
+          <td class="tag1"><span class="uma-strong">26-31</span></td>
+          <td class="tag2"><span class="uma-strong">Date of report  (YYMMDD, where Y=year, M=month, and D=day)</span></td>
+        </tr>
+      </table>
+      <table class="yes">
+        <tr>
+          <td class="example"><pre><span class="ex-comment">Example:</span>  008	8312254p####6###3###baeng0831017</pre></td>
+        </tr>
+      </table>
+      <p class="nav">[<a href="UMHpt7-9.html#top">Back to Top of Page</a>]</p>
+      <a name="pt9"></a>
+      <hr align=center size=4 width=100>
+      <!-- Part IX: Sample Records -->
+      <h2 class="no">Part IX</h2>
+      <h2 class="title">Sample Records</h2>
+      <p class="main">The examples of holdings records in this guide are based on records from the Library of Congress and other files. Some of the information has been, however, changed to illustrate the fields described in this guide, thus the library is always shown as ABC Public Library. The examples are first shown in a tagged display, which may be used by data editing screens found in library systems. They are also shown in a formatted display as the data from the holdings record may be viewed by library patrons and librarians.
+      <p class="cont">More examples of MARC holdings records are found in the <em>MARC 21 Format for Holdings Data</em> or online at: <a href="../holdings/examples.html">www.loc.gov/marc/holdings/examples.html</a>
+      <h3 class="title">1. MARC 21 Communications Formatted Record</h3>
+      <p class="main">A MARC record appears as block of data to a programmer, illustrations of which are in the Sample Record Parts of the Understanding MARC Bibliographic and Understanding MARC Authorities guides, and how the Directory works is explained. The tags do not appear before the fields, but the Directory to the data tells which tags should be used and where each field starts (in other words, where each tag belongs). Usually, only the computer programmer and the computer come into contact with the record in the MARC 21 communications format.</p>
+      <h3 class="title">2. Holdings Records in Display Forms</h3>
+      <p class="main">If a librarian viewed a MARC 21 record in a library automation system, the data entry screen may look like the tagged displays below. The descriptors in the left-hand column are not stored in a MARC record. They are part of the software program's screen display. Most systems are designed so that records may be edited to add other fields containing local information.</p>
+      <p class="main">Tagged Display: Most data editing screens are called "tagged displays" because they show the MARC 21 tags, inserted where they belong, as directed by the Directory. A computer program has been written to do this tagging.</p>
+      <p class="main">Formatted Displays: The type of screens that OPAC patrons use is formatted, since MARC tags would be meaningless to the general public. Within each particular OPAC program is a routine that formats each record in the way the designers thought would best serve the public using the online catalog. Examples of such displays are included for each holdings record below.</p>
+      <h3 class="title">Holdings Record -- Serial</h3>
+      <p> This example shows  four levels of holdings records for a serial, each a little more detailed than the previous one.  Libraries may choose to record holdings at any of the levels, depending on their user needs and system capabilities.  In the formatted displays, only the holdings information is given here.</p>
+      <p class="intro">Tagged Display - Level 1:</p>
+      <table class="yes">
+        <tr>
+          <td width="33%" class="example"><pre>Leader</pre></td>
+          <td width="67%" class="example"><pre>*****ny###22*****1n#4500</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>Control No.</pre></td>
+          <td class="example"><pre>001  &lt;control number of holdings record&gt;</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>Bibliographic record</pre></td>
+          <td class="example"><pre>004  &lt;control number of bibliographic record&gt;</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>Fixed data</pre></td>
+          <td class="example"><pre>008   911230|g####|###|001aa###1100921</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>Holding location</pre></td>
+          <td class="example"><pre>852   ##  $aAbc $bSci</pre></td>
+        </tr>
+      </table>
+      <p class="intro">Formatted Display of holdings - Level 1:</p>
+      <table class="yes">
+        <tr>
+          <td class="example"><pre>ABC Public Library, Science Reading Room</pre></td>
+        </tr>
+      </table>
+      <p class="intro">Tagged Display - Level 2:</p>
+      <table class="yes">
+        <tr>
+          <td width="33%" class="example"><pre>Leader </pre></td>
+          <td width="67%" class="example"><pre>*****ny###22*****2n#4500</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>Control No.</pre></td>
+          <td class="example"><pre>001   &lt;control number of holdings record&gt;</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>Bibliographic record</pre></td>
+          <td class="example"><pre>004   &lt;control number of bibliographic record&gt;</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>Type of unit</pre></td>
+          <td class="example"><pre>007   ta</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>Fixed data</pre></td>
+          <td class="example"><pre>008   9112304g####8###1001aa###1100921</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>Holding location</pre></td>
+          <td class="example"><pre>852   ##  $aAbc $bSci</pre></td>
+        </tr>
+      </table>
+      <p class="intro">Formatted Display of holdings - Level 2:</p>
+      <table class="yes">
+        <tr>
+          <td class="example"><pre>ABC Public Library, Science Reading Room</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>  (Text, Complete, Currently Received, Permanently retained)</pre></td>
+        </tr>
+      </table>
+      <p class="intro">Tagged Display - Level 3:</p>
+      <table class="yes">
+        <tr>
+          <td width="33%" class="example"><pre>Leader</pre></td>
+          <td width="67%" class="example"><pre>*****ny###22*****3n#4500</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>Control No.</pre></td>
+          <td class="example"><pre>001   &lt;control number of holdings record&gt;</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>Bibliographic record</pre></td>
+          <td class="example"><pre>004   &lt;control number of bibliographic record&gt;</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>Type of unit</pre></td>
+          <td class="example"><pre>007   ta</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>Fixed data</pre></td>
+          <td class="example"><pre>008   9112304g####8###1001aa###1100921</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>Holding location</pre></td>
+          <td class="example"><pre>852   ##  $aAbc $bSci</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>Captions</pre></td>
+          <td class="example"><pre>853   00  $81$av.$bno.$i(year)$j(month)</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>Enumeration and chronology</pre></td>
+          <td class="example"><pre>863   30  $81.1$a1-23$i1991-2010</pre></td>
+        </tr>
+      </table>
+      <p class="intro">Formatted Display of holdings - Level 3:</p>
+      <table class="yes">
+        <tr>
+          <td class="example"><pre>ABC Public Library, Science Reading Room</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>  (Text, Complete, Currently Received, Permanently retained)</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>  v.1-v.23 (1991-2010)</pre></td>
+        </tr>
+      </table>
+      <p class="intro">Tagged Display - Level 4:</p>
+      <table class="yes">
+        <tr>
+          <td width="33%" class="example"><pre>Leader</pre></td>
+          <td width="67%" class="example"><pre>*****ny###22*****4n#4500</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>Control No.</pre></td>
+          <td class="example"><pre>001   &lt;control number of holdings record&gt;</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>Bibliographic record</pre></td>
+          <td class="example"><pre>004   &lt;control number of bibliographic record&gt;</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>Type of unit</pre></td>
+          <td class="example"><pre>007   ta</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>Fixed data</pre></td>
+          <td class="example"><pre>008   9112304g####8###1001aa###1100921</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>Holding location</pre></td>
+          <td class="example"><pre>852   ##  $aAbc $bSci</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>Captions</pre></td>
+          <td class="example"><pre>853   10  $81$av.$bno.$i(year)$j(month)$wm</pre></td>
+        </tr>
+        <tr>
+          <td valign="top" class="example"><pre>Enumeration and chronology</pre></td>
+          <td valign="top" class="example"><pre>863   40  $81.1$a1-22$i1991-2009
+863   40  $81.2$a23$b1-9$i2010$j01-09</pre></td>
+        </tr>
+      </table>
+      <p class="intro">Formatted Display of holdings - Level 4:</p>
+      <table class="yes">
+        <tr>
+          <td class="example"><pre>ABC Public Library, Science Reading Room</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>  (Text, Complete, Currently Received, Permanently retained)</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>  v.1-v.22 (1991-2009), v.23:no.1-9 (2010:Jan.-Sept.)</pre></td>
+        </tr>
+      </table>
+      <h3 class="title">Holdings Records -- Book with multiple copies in different formats</h3>
+      <p>This example shows two levels of holdings for a book held in print and audio formats.  Since the item is a  monograph, only holdings levels 1 and 2 are relevant options for recording holdings.  A library may record holdings to either level of detail.  In the formatted displays only the holdings information is given here.</p>
+      <p class="intro">Tagged Display - Level 1 for printed version </p>
+      <table class="yes">
+        <tr>
+          <td width="17%" class="example"><pre>Leader</pre></td>
+          <td width="83%" class="example"><pre>*****nx###22*****1n#4500</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>001</pre></td>
+          <td class="example"><pre>&lt;control number of holdings record&gt;</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>004</pre></td>
+          <td class="example"><pre>&lt;control number of bibliographic record&gt;</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>008</pre></td>
+          <td class="example"><pre>020905|p####|###|003aueng1031015</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>852</pre></td>
+          <td class="example"><pre>##  $aAbc $bMain Library $jF FRANZ $t1</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>852</pre></td>
+          <td class="example"><pre>##  $aAbc $bWestover Branch $jF FRANZ $t2</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>852</pre></td>
+          <td class="example"><pre>##  $aAbc $bColumbia Branch $jF FRANZ $t3</pre></td>
+        </tr>
+      </table>
+      <p class="intro">Formatted display of holdings - Level 1 for printed version</p>
+      <table class="yes">
+        <tr>
+          <td width="17%" class="example"><pre>Call number:</pre></td>
+          <td width="83%" class="example"><pre>F FRANZ </pre></td>
+        </tr>
+        <tr>
+          <td valign="top" class="example"><pre>Holdings:</pre></td>
+          <td valign="top" class="example"><pre>ABC Public Library, Main Library, Copy 1
+ABC Public Library, Westover Branch, Copy 2
+ABC Public Library, Columbia Branch, Copy 3</pre></td>
+        </tr>
+      </table>
+      <p class="intro">Tagged Display - Level 1 for audio version</p>
+      <table class="yes">
+        <tr>
+          <td width="17%" class="example"><pre>Leader</pre></td>
+          <td width="83%" class="example"><pre>*****nx###22*****1n#4500</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>001</pre></td>
+          <td class="example"><pre>&lt;control number of holdings record&gt;</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>004</pre></td>
+          <td class="example"><pre>&lt;control number of bibliographic record&gt;</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>008</pre></td>
+          <td class="example"><pre>020905|p####|###|003aueng1091030</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>852</pre></td>
+          <td class="example"><pre>##  $aAbc $bMain Library $jPLAWY F FRANZ $t1</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>852</pre></td>
+          <td class="example"><pre>##  $aAbc $bColumbia Branch $jPLAWY F FRANZ $t2</pre></td>
+        </tr>
+      </table>
+      <p class="intro">Formatted display of holdings - Level 1 for audio version</p>
+      <table class="yes">
+        <tr>
+          <td width="17%" class="example"><pre>Call number:</pre></td>
+          <td width="83%" class="example"><pre>PLAWY F FRANZ </pre></td>
+        </tr>
+        <tr>
+          <td valign="top" class="example"><pre>Holdings:</pre></td>
+          <td valign="top" class="example"><pre>ABC Public Library, Main Library, Copy 1
+ABC Public Library, Columbia Branch, Copy 2</pre></td>
+        </tr>
+      </table>
+      <p class="intro">Tagged Display - Level 2 for printed version</p>
+      <table class="yes">
+        <tr>
+          <td width="17%" class="example"><pre>Leader</pre></td>
+          <td width="83%" class="example"><pre>*****nx###22*****2n#4500</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>001</pre></td>
+          <td class="example"><pre>&lt;control number of holdings record&gt;</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>004</pre></td>
+          <td class="example"><pre>&lt;control number of bibliographic record&gt;</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>007</pre></td>
+          <td class="example"><pre>ta</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>008</pre></td>
+          <td class="example"><pre>0209052p####8###4003aueng1031015</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>852</pre></td>
+          <td class="example"><pre>4#  $aABC $bMain Library $jF FRANZ $t1</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>852</pre></td>
+          <td class="example"><pre>4#  $aABC $bWestover Branch $jF FRANZ $t2</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>852</pre></td>
+          <td class="example"><pre>4#  $aABC $bColumbia Branch $jF FRANZ $t3</pre></td>
+        </tr>
+      </table>
+      <p class="intro">Formatted display of holdings - Level 2 for printed version</p>
+      <table class="yes">
+        <tr>
+          <td width="17%" class="example"><pre>Call number:</pre></td>
+          <td width="83%" class="example"><pre>F FRANZ </pre></td>
+        </tr>
+        <tr>
+          <td valign="top" class="example"><pre>Holdings:</pre></td>
+          <td valign="top" class="example"><pre>ABC Public Library, Main Library, Copy 1 
+  (Text, Received, Permanently retained)
+ABC Public Library, Westover Branch, Copy 2
+  (Text, Received, Permanently retained)
+ABC Public Library, Columbia Branch, Copy 3 
+  (Text, Received, Permanently retained)</pre></td>
+        </tr>
+      </table>
+      <p class="intro">Tagged Display - Level 2 for audio version</p>
+      <table class="yes">
+        <tr>
+          <td width="17%" class="example"><pre>Leader</pre></td>
+          <td width="83%" class="example"><pre>*****nx###22*****2n#4500</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>001</pre></td>
+          <td class="example"><pre>&lt;control number of holdings record&gt; </pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>004</pre></td>
+          <td class="example"><pre>&lt;control number of bibliographic record&gt;</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>007</pre></td>
+          <td class="example"><pre>sd||||||||||||</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>008</pre></td>
+          <td class="example"><pre>0209052p####8###4002aueng1091030</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>852</pre></td>
+          <td class="example"><pre>4#  $aABC $bMain Library $jPLAWY F FRANZ $t1</pre></td>
+        </tr>
+        <tr>
+          <td class="example"><pre>852</pre></td>
+          <td class="example"><pre>4#  $aABC $bColumbia Branch $jPLAWY F FRANZ $t2</pre></td>
+        </tr>
+      </table>
+      <p class="intro">Formatted Display of holdings - Level 2 for audio version</p>
+      <table class="yes">
+        <tr>
+          <td width="17%" class="example"><pre>Call number:</pre></td>
+          <td width="83%" class="example"><pre>PLAWY F FRANZ</pre></td>
+        </tr>
+        <tr>
+          <td valign="top" class="example"><pre>Holdings:</pre></td>
+          <td valign="top" class="example"><pre>ABC Public Library, Main Library, Copy 1
+  (Sound recording, Received, Permanently retained)
+ABC Public Library, Columbia Branch, Copy 2
+  (Sound recording, Received, Permanently retained)</pre></td>
+        </tr>
+      </table>
+      <p class="nav">[<a href="UMHpt7-9.html#top">Back to Top of Page</a>]</p>
+      <hr align=center size=4 width=100>
+      <br>
+      <p class="nav1">[<a href="index.html">Table of Contents</a>]  --  
+        [<a href="UMHpt1-6.html">Parts I-VI</a>]  --  
+        [Part VII-IX] --  
+        [<a href="UMHpt10-12.html">Parts X-XII</a>] <br>
+        <!-- LC Footer -->
+      </p>
+      <hr>
+      <IMG src="../../homepage/lc2.gif" alt="" width=91 height=46 hspace="6" align="left"> <STRONG>Library of Congress</STRONG><br>
+      <a href="../../homepage/legal.html">Legal</a> | <a href="../../global/disclaim.html">External Link Disclaimer</a><BR>
+      <em>
+      <!-- help desk email start -->
+      <a 
+      href="http://www.loc.gov/help/help-desk.html">Library of Congress Help 
+        Desk</a>
+      <!-- help desk email end -->
+(
+<!-- #BeginDate format:Am3 -->11/08/2011<!-- #EndDate -->
+) </em></tr>
+</table>
+<script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+</html>

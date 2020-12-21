@@ -1,0 +1,347 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                        "http://www.w3.org/TR/html40/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/marc_generic.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Character Sets: Conversion Between Environments: MARC 21 Specifications for Record Structure, Character Sets, and Exchange Media (Library of Congress)</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<meta name="description" content="This section identifies a number of factors a successful conversion must take into account and specifies techniques for converting Unicode records that contain characters absent from the MARC-8 repertoire.">
+<meta name="keywords" content="MARC 21, Specifications, Character Sets, UCS,
+Unicode, 16-bit environment, MARC-8">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+<style type="text/css">
+th {text-align:left;}
+p {text-align:justify;}
+li {text-align:justify;}
+</style>
+<!-- InstanceEndEditable -->
+<link href="http://www.loc.gov/marc/marc-generic.css" rel="stylesheet" type="text/css">
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+
+<body bgcolor="#ffffff">
+<div class="head-nav"><a id="skip" href="speccharconversion.html#skip_menu"><img src="http://www.loc.gov/marc/images/clear.gif" border="0" alt="Skip Navigation Links"></a><a href="../../index.html">The Library of Congress</a> &gt;&gt; <a href="../../library/index.html">Especially
+  for Librarians and Archivists</a> &gt;&gt; <a href="../../standards/index.html">Standards</a></div>
+<a href="../../marc.html"><img src="http://www.loc.gov/marc/images/marc-bar.gif" alt="MARC Standards" width="620" height="36" border="0"></a>
+<div class="head-nav"><a href="../../marc.html">MARC 21 HOME</a> &gt;&gt; <!-- InstanceBeginEditable name="topbreadcrumb" --><a href="spechome.html">Specifications</a> &gt;&gt; <a href="speccharintro.html">Character
+Sets</a> &gt;&gt; <strong>Part 4</strong><!-- InstanceEndEditable --></div>
+<hr size="1" noshade><a name="skip_menu"></a>
+<!-- InstanceBeginEditable name="content" -->
+<h3><em>MARC 21 Specifications for Record Structure, Character Sets, and Exchange Media</em></h3>
+<h2>CHARACTER SETS AND ENCODING OPTIONS: Part 4</h2>
+<h2>Conversion Between Environments</h2>
+<div class="title">December 2007</div>
+<h4><a href="../../global/disclaim.html"><img src="http://www.loc.gov/images/disclaimer.gif" alt="Link disclaimer" width="91" height="16" border="0" align="right"></a>CONTENTS</h4>
+<ul>
+  <li><a href="speccharconversion.html#intro">Introduction</a></li>
+  <li><a href="speccharconversion.html#genissues">General Conversion Issues</a>
+      <div class="subheading"><a href="speccharconversion.html#encoding">MARC 21 encoding marker</a></div>
+      <div class="subheading"><a href="speccharconversion.html#escape">Escape sequences and MARC field
+          066</a></div>
+      <div class="subheading"><a href="speccharconversion.html#subfield6">MARC subfield $6 (Linkage)</a></div>
+      <div class="subheading"><a href="speccharconversion.html#combining">Combining characters</a> (diacritics)</div>
+      <div class="subheading"><a href="speccharconversion.html#directionality">Directionality of text</a></div>
+      <div class="subheading"><a href="speccharconversion.html#folding">Folding of certain MARC-8 Codes</a></div>
+  </li>
+  <li><a href="speccharconversion.html#specissues">Issues Specific to Converting Unicode to MARC-8</a>
+      <div class="subheading"><a href="speccharconversion.html#lossy">Lossy conversion to MARC-8 encoding</a></div>
+      <div class="subheading"><a href="speccharconversion.html#lossless">Lossless conversion to MARC-8
+          encoding</a></div>
+      <div class="subheading"><a href="speccharconversion.html#enhancingunicode">Enhancing the Unicode
+          to MARC-8 conversion</a></div>
+      <div class="subheading"><a href="speccharconversion.html#considerations">Additional considerations
+          for converting characters with combining marks</a></div>
+  </li>
+</ul>
+<hr>
+<h4><a name="intro">INTRODUCTION</a></h4>
+<p>The foregoing parts have described the two encoding options, MARC-8 and Unicode,
+  specified for use in MARC 21 records. There are many situations in which it
+  may be necessary or desirable to convert records from one of these schemes
+  to the other. This section identifies a number of factors a successful conversion
+  must take into account and specifies techniques for converting Unicode records
+  that contain characters absent from the MARC-8 repertoire.</p>
+<p>On this site, <a href="specchartables.html">Part 5: MARC-8 Code Tables</a> contains
+  tables showing the MARC-8 repertoire along with the code values of each character
+  in MARC-8 and Unicode schemes. It also contains links to an XML version of
+  the table for all MARC-8 characters, and a comma-delimited file of MARC-8/Unicode
+  correspondences for the EACC (CJK) character set only. </p>
+<hr>
+<h4><a name="genissues">GENERAL CONVERSION ISSUES</a></h4>
+<p>The following points need to be considered when converting from either specified
+  encoding to the other.</p>
+<h5><a name="encoding">MARC 21 encoding marker</a></h5>
+<p>When converting from MARC-8 to Unicode, <a href="http://www.loc.gov/marc/bibliographic/ecbdldrd.html#mrcblea">Leader</a> position
+  9 (Character encoding scheme) must be set to "a" to indicate that the converted
+  record uses Unicode encoding. When converting from Unicode to MARC-8 Unicode,
+  Leader position 9 must be set to "blank" (20(hex)).</p>
+<h5><a name="escape">Escape sequences and MARC field 066</a></h5>
+<p>Neither field <a href="../bibliographic/ecbdclas.html#mrcb066">066</a> (Character
+  Sets Present) nor any escape sequence is allowed in a Unicode MARC 21 environment.
+  Escape sequences and the <a href="../bibliographic/ecbdclas.html#mrcb066">066</a> field
+  in a MARC-8-encoded record must be removed during conversion to Unicode.</p>
+<p>When converting to MARC-8, escape sequences and a <a href="../bibliographic/ecbdclas.html#mrcb066">066</a> field
+  must be constructed where appropriate. Field <a href="../bibliographic/ecbdclas.html#mrcb066">066</a> is
+  required in a MARC-8-encoded record whenever it contains a type 2 escape sequence,
+  as described above in <a href="speccharmarc8.html">Part 2</a>. If there are
+  no such escapes, field <a href="../bibliographic/ecbdclas.html#mrcb066">066</a> is
+  not used.</p>
+<h5><a name="subfield6">MARC subfield $6 (Linkage)</a></h5>
+<p><a href="../bibliographic/ecbdcntf.html#mrcs6">Subfield
+    $6</a> (Linkage) is used in MARC 21 records to link alternate graphic representations
+    of the same data, to identify the presence of specific scripts in a field,
+    and to flag fields in which the display/print directionality of data is right-to-left
+    (e.g., for Arabic script). The <a href="../bibliographic/ecbdcntf.html#mrcs6">subfield
+    $6</a> script identification code in MARC-8-encoded MARC 21 records identifies
+    MARC-8 character sets, rather than scripts <em>per se</em>; hence the code
+    is irrelevant in the Unicode environment because the character set is always
+    UCS. The script identification code should be dropped from <a href="../bibliographic/ecbdcntf.html#mrcs6">subfield
+    $6</a> when converting from MARC-8 to Unicode encoding. The field orientation
+    code, which flags a field as having right-to-left display directionality,
+    should be used in Unicode-encoded MARC 21 records. When present, the script
+    identification code is separated from the <a href="../bibliographic/ecbdcntf.html#mrcs6">subfield
+    $6</a> linking tag and occurrence number by two solidus (slash) characters
+    (002F(hex)). In conversion from Unicode to MARC-8, the script identification
+    code should be restored, typically to a code recorded in subfield $c of the <a href="../bibliographic/ecbdclas.html#mrcb066">066</a> field.</p>
+<h5><a name="combining">Combining characters (diacritics)</a></h5>
+<p>In moving from MARC-8 to Unicode it is necessary to re-order combining characters
+  and base characters so that the base character precedes the combining character(s).
+  When converting from Unicode to MARC-8, combining marks must be moved to precede
+  the base characters. The differing rules for proper sequencing of combining
+  marks when a base letter has more than one are specified in <a href="speccharucs.html">Part
+  3</a> (i.e.top down vs. inside out.) Best practice during conversion is to
+  reorder the multiple marks according to the rule for the output encoding, but
+  this is not considered mandatory.</p>
+<h5><a name="directionality">Directionality of text</a></h5>
+<p>When converting from MARC-8 to Unicode, the conversion should determine whether
+  multi-digit numbers used in bidirectional scripts have been entered in logical
+  or visual order. If visual order has been used, best practice requires that
+  the digits be re-ordered from visual order to logical order. If logical order
+  has been used, no re-ordering is necessary.</p>
+<h5><a name="folding">Folding of certain MARC-8 Codes</a></h5>
+<p>The numbers, punctuation marks, and symbols found in ASCII 21-3F, 5B, 5D (hex)
+  are also, in full or in part, allocated code points in the MARC-8 sets for
+  Hebrew, Cyrillic, and Arabic. These are mapped (folded) into a single, identical
+  set of Unicode code points, as specified in the mappings in the code tables
+  in <a href="specchartables.html">Part 5</a>; hence mappings are not perfectly
+  reversible because these characters will always be mapped to the ASCII set
+  during reconversion to MARC-8. The resultant record may contain more escape
+  sequences than the same record originally encoded in MARC-8 required. This
+  is an acceptable result that should not interfere with processing or display
+  of the record.</p>
+<p>The characters (alpha, beta, gamma) of the custom MARC-8 Greek Symbols set
+  are mapped to the regular Greek letters in Unicode and consequently are not
+  reversible when reconverting to MARC-8. Use of the Greek Symbols set is strongly
+  discouraged for that reason. In MARC-8 contexts where escapes to the standard
+  Basic Greek set is not feasible, textual equivalents of the symbols should
+  be preferred i.e., [alpha], [beta], [gamma] over use of the Greek Symbol set.</p>
+<p>The space character (20 (hex)) is defined only in the Unicode and ASCII sets
+  but is recognized by all the standard graphic character sets in MARC-8 even
+  though not included in those sets. When converting from Unicode to MARC-8,
+  the space character can be converted (unchanged) without being preceded by
+  an escape sequence no matter which of the standard sets is the current working
+  set. Optionally, the escape sequence to ASCII may be included before the space
+  character. However, when the output working set is a custom set accessed by
+  escape technique 1, the technique 1 escape sequence to ASCII is required before
+  the space character.</p>
+<hr>
+<h4><a name="specissues">ISSUES SPECIFIC TO CONVERTING UNICODE TO MARC-8</a></h4>
+<p>The <a href="speccharmarc8.html">MARC-8 repertoire</a> contains over 16,000
+  characters; the <a href="http://www.unicode.org">Unicode repertoire</a> contains
+  over 100,000 characters. Direct mappings using the tables in <a href="specchartables.html">Part
+  5</a> are sufficient for Unicode to MARC-8 conversion only for a record that
+  contains no characters that are outside the MARC-8 repertoire. Additional techniques
+  are needed for the more general case in which non-MARC-8 characters may be
+  present in a Unicode record that is to be converted.</p>
+<p>Two generally applicable methods for conversion from Unicode to MARC-8 encoding
+  have been approved to aid conversion of MARC 21 records containing characters
+  outside the MARC-8 repertoire. The two methods must not be used in the same
+  record.</p>
+<h5><a name="lossy">Lossy conversion to MARC-8 encoding</a></h5>
+<p>The lossy conversion method is intended for use in situations in which the
+  loss of data beyond the large MARC-8 repertoire is not a concern. Each character
+  that is not in the MARC-8 repertoire is replaced with an ASCII vertical bar
+  (7C(hex)) during conversion. This method is called lossy because the substitution
+  of a generic placeholder for every unconvertible Unicode code point loses data
+  that cannot be recovered in a reconversion to Unicode.</p>
+<h5><a name="lossless">Lossless conversion to MARC-8 encoding</a></h5>
+<p>In the lossless conversion method, a Unicode character that is not in the
+  MARC-8 repertoire is replaced by a hexadecimal Numeric Character Reference
+  (NCR) identifying the specific unconvertable Unicode code point. This method
+  preserved precisely the information content of the Unicode record although
+  the result may result in a cryptic display, and additional conversion techniques
+  will be required to reconstruct the record exactly in Unicode. The Numeric
+  Character Reference consists only of ASCII characters, thus can be carried
+  into the MARC-8 target record.</p>
+<p>The structure of the NCR is <strong>&amp;#xXXXX;</strong> where:</p>
+<ul>
+  <li>&amp; and ; (the ampersand and semicolon) surround the Reference data </li>
+  <li>#x designates that the value expressed is in hexadecimal notation</li>
+  <li>XXXX is the hexadecimal representation of the <em>code point</em> for the
+    Unicode character expressed in hex digits 0123456789ABCDEF. Some characters,
+    primarily infrequently encountered CJK ideographs, may require more than
+    four hexadecimal digits. The NCR can contain more than four digits if they
+    are needed.</li>
+</ul>
+<p>It is not correct to represent a non-ASCII character in an NCR by its UTF-8
+  octets; only the <em>scalar value</em> of the code point is allowed.</p>
+<h5><a name="enhancingunicode">Enhancing the Unicode to MARC-8 conversion</a></h5>
+<p>Either the lossy or the lossless conversion method can be applied directly
+  to a Unicode record, but better results will be obtained if characters outside
+  the MARC-8 repertoire are first converted, as far as possible, into approximately
+  equivalent MARC-8 characters or character sequences. This will minimize the
+  number of vertical bars or NCRs in the output and a more readily usable output
+  record will result. Techniques of this sort are frequently referred to as normalization.
+  Unicode defines four normalization forms for use within the Unicode environment.
+  The optimal normalization for conversion to MARC-8 is a variant of the one
+  called Compatibility Decomposition, or KD.</p>
+<p>The code charts on the Unicode web site list valid decomposition sequences
+  for all decomposable characters. These sequences are of two kinds: <em>canonical</em> and <em>compatibility</em>.
+  A common example of the <em>canonical</em> type is the decomposition of a letter
+  with a diacritical mark: E with acute accent (00E9(hex)) decomposes to E (0045(hex))
+  + acute (0301(hex)). <em>Compatibility</em> decompositions differ from the
+  canonical in that they &quot;do not attempt to retain or emulate the formatting
+  of the original character.&quot; (Unicode Standard 5.0, Section 17.1). Some examples
+  of characters with <em>compatibility</em> equivalents are the ellipsis character
+  (2026(hex)) that decomposes to a sequence of three periods (002E(hex)); the
+  circled digit four (2463(hex)) that becomes simply 4 (0043(hex)); the Roman
+  numeral IV (2163(hex)) that decomposes to I (0049(hex)) + V (0056(hex)); and
+  any of the spaces of different width (2000-2008(hex)) that can decompose in
+  one or two steps to the ASCII space (0020(hex)).</p>
+<p>Unicode normalization form D specifies only <em>canonical</em> decompositions.
+  MARC-8 repertoire includes several precomposed characters that can be decomposed
+  in Unicode, but should not be decomposed during conversion to MARC-8. These
+  characters are specified in Table 4.1 below.</p>
+<div class="table_title">Table 4.1</div>
+<div class="table_title">Characters not requiring <em>canonical</em> decomposition
+  for</div>
+<div class="table_title">conversion from Unicode to MARC-8 encoding.</div>
+<p>All code points are shown in hexadecimal notation.</p>
+<p>MARC-8 code points are shown in the G0 range for all sets except Extended
+  Latin.</p>
+<table>
+  <tr valign="top">
+    <th width="175" height="43" scope="col">Character name</th>
+    <th width="161" scope="col">Unicode code points<br>
+    (u.c., l.c)</th>
+    <th width="175" scope="col">MARC-8 G0 code points<br>
+    (u.c., l.c.)</th>
+    <th width="176" scope="col">MARC-8 character set</th>
+  </tr>
+  <tr>
+    <td>Cyrillic Short I</td>
+    <td>(0419, 0439)</td>
+    <td>(4A, 6A)</td>
+    <td>Basic Cyrillic</td>
+  </tr>
+  <tr>
+    <td>Cyrillic Io</td>
+    <td>(0401, 0451)</td>
+    <td>(44, 64)</td>
+    <td>Extended Cyrillic</td>
+  </tr>
+  <tr>
+    <td>Cyrillic Gje</td>
+    <td>(0403, 0453)</td>
+    <td>(42, 62)</td>
+    <td>Extended Cyrillic</td>
+  </tr>
+  <tr>
+    <td>Cyrillic Yi</td>
+    <td>(0407, 0457)</td>
+    <td>(47, 67)</td>
+    <td>Extended Cyrillic</td>
+  </tr>
+  <tr>
+    <td>Cyrillic Kje</td>
+    <td>(040C, 045C)</td>
+    <td>(4C, 6C)</td>
+    <td>Extended Cyrillic</td>
+  </tr>
+  <tr>
+    <td>Cyrillic Short U</td>
+    <td>(040E, 045E)</td>
+    <td>(4D, 6D)</td>
+    <td>Extended Cyrillic</td>
+  </tr>
+  <tr>
+    <td>Arabic Alef, Madda above </td>
+    <td>0622</td>
+    <td>42</td>
+    <td>Basic Arabic</td>
+  </tr>
+  <tr>
+    <td>Arabic Alef, Hamza above</td>
+    <td>0623</td>
+    <td>43</td>
+    <td>Basic Arabic</td>
+  </tr>
+  <tr>
+    <td>Arabic Waw, Hamza above</td>
+    <td>0624</td>
+    <td>44</td>
+    <td>Basic Arabic</td>
+  </tr>
+  <tr>
+    <td>Arabic Alef, Hamza below</td>
+    <td>0625</td>
+    <td>45</td>
+    <td>Basic Arabic</td>
+  </tr>
+  <tr>
+    <td>Arabic Yeh, Hamza above</td>
+    <td>0626</td>
+    <td>46</td>
+    <td>Basic Arabic</td>
+  </tr>
+  <tr>
+    <td>Latin O with horn</td>
+    <td>(01A0, 01A1)</td>
+    <td>(AC, BC)</td>
+    <td>Extended Latin (ANSEL)</td>
+  </tr>
+  <tr>
+    <td>Latin U with horn</td>
+    <td>(01AF, 01B0)</td>
+    <td>(AD, BD)</td>
+    <td>Extended Latin (ANSEL)</td>
+  </tr>
+</table>
+<p>Unicode normalization form KD, the optimal for conversion from Unicode to
+  MARC-8 repertoires, specifies that decompositions of both types, <em>canonical</em> and <em>compatibility</em>,
+  should be done until no further decomposition is possible. The full KD normalization,
+  however, may not be desired because of the <em>canonical</em> decompositions
+  in the above table and other issues with the <em>compatibility</em> decompositions,
+  such as loss of formatting with superscripts and subscripts. </p>
+<h5><a name="considerations">Additional considerations for converting characters
+    with combining marks</a></h5>
+<p>A further complication arises when a character with a combining mark cannot
+  be normalized into components belonging to the MARC-8 repertoire. Proper treatment
+  depends on whether it is the base character or the combining mark that is absent
+  from the repertoire. If the base character can be converted, then the combining
+  mark should be replaced by an NCR or placeholder properly repositioned before
+  the base character in the output record. If the base character cannot be converted,
+  either the lossless or the lossy technique can be applied directly, preferably
+  to the character in its precomposed form, so that it will generate a single
+  NCR or placeholder rather than two. This treatment is preferred whether or
+  not the combining character is also missing from the MARC-8 repertoire.</p>
+<!-- InstanceEndEditable -->
+<hr size="1" noshade>
+<p><a href="../../marc.html">MARC 21 HOME</a> &gt;&gt; <!-- InstanceBeginEditable name="bottombreadcrumb" --><a href="spechome.html">Specifications</a> &gt;&gt; <a href="speccharintro.html">Character
+      Sets</a> &gt;&gt; <strong>Part
+4</strong><!-- InstanceEndEditable --></p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr valign="bottom">
+    <td><a href="../../index.html">The Library of Congress</a> &gt;&gt; <a href="../../library/index.html">Especially
+    for Librarians and Archivists</a> &gt;&gt; <a href="../../standards/index.html">Standards</a><br>
+    (<!-- MM:BeginLock type="mmdate" format="Am3" orig=" -->
+    <!-- #BeginDate format:Am3 -->12/04/2007<!-- #EndDate -->
+    ) </td>
+    <td align="right"><a href="http://www.loc.gov/cdn-cgi/l/email-protection#8ee0eae3fde1cee2e1eda0e9e1f8">Contact Us</a></td>
+  </tr>
+</table>
+<script data-cfasync="false" src="http://www.loc.gov/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+<!-- InstanceEnd --></html>

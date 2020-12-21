@@ -1,0 +1,2417 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<base href="">
+<TITLE>MARC-SGML and SGML-MARC Conversion Programs Maintenance
+Guide</TITLE>
+<META NAME="author" CONTENT="Randall K. Barry">
+<META NAME="keywords" CONTENT="MARC Tag-valid SGML MARC Conversion
+Programs Maintenance Guide">
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+<BODY bgcolor="#FFFFFF">
+<!___________________________________________________________________________
+__>
+<HR><p></P>
+
+<H1 ALIGN=CENTER><A NAME="top"></A><B><FONT
+COLOR="#000080">MARC-SGML and SGML-MARC Conversion Programs Maintenance
+Guide</FONT> </B></H1>
+
+<P>
+<HR><p><A HREF="http://lcweb.loc.gov/marc/marcdtd/mainmanual.html#1">1. Introduction</A></P>
+
+<UL>
+<P><A HREF="http://lcweb.loc.gov/marc/marcdtd/mainmanual.html#1.1">1.1 Organization of this Manual</A></P>
+
+<P><A HREF="http://lcweb.loc.gov/marc/marcdtd/mainmanual.html#1.2">1.2 &nbsp;User Manual</A></P>
+
+<P><A HREF="http://lcweb.loc.gov/marc/marcdtd/mainmanual.html#1.3">1.3&nbsp;Typographic Conventions</A></P>
+</UL>
+
+<P><A HREF="http://lcweb.loc.gov/marc/marcdtd/mainmanual.html#2">2. MARC Description File</A></P>
+
+<UL>
+<P><A HREF="http://lcweb.loc.gov/marc/marcdtd/mainmanual.html#2.1">2.1&nbsp;Mapping Leader 06 and 07 Values to Document
+Types, Format Types, and Record Types</A></P>
+
+<P><A HREF="http://lcweb.loc.gov/marc/marcdtd/mainmanual.html#2.2">2.2&nbsp;Field Group Specifications</A></P>
+
+<P><A HREF="http://lcweb.loc.gov/marc/marcdtd/mainmanual.html#2.3">2.3 Control Field Specifications</A></P>
+</UL>
+
+<P><A HREF="http://lcweb.loc.gov/marc/marcdtd/mainmanual.html#3">3.&nbsp;Character - Entity Map File</A></P>
+
+<P><A HREF="http://lcweb.loc.gov/marc/marcdtd/mainmanual.html#4">4. Files in the Distribution </A></P>
+
+<P><A HREF="http://lcweb.loc.gov/marc/marcdtd/mainmanual.html#A">Appendix A: MARC-to-SGML Conversion
+Specification10</A></P>
+
+<P><A HREF="http://lcweb.loc.gov/marc/marcdtd/mainmanual.html#B">Appendix B: SGML-to-MARC Record Conversion
+Specification22</A></P>
+
+<P>
+<HR><p></P>
+
+<H2><A NAME="1"></A><FONT COLOR="#000080">1. Introduction</FONT>
+</H2>
+
+<P>
+<HR><p></P>
+
+<P>The term - MARC DTD - (MAchine Readable Cataloging Document Type Definition),
+refers to implementations of Standard Generalized Markup Language (SGML).
+SGML is a technique for representing documents in machine-readable form
+which was approved as an international standard, ISO 8879 (Information
+processing - Text and office systems - Standard Generalized Markup Language).
+It was developed to fill the need for a non-proprietary standard for text
+encoding so that machine-readable data could be exchanged between dissimilar
+text encoding environments. SGML is widely used in the publishing industry
+where documents are created using various computer systems. SGML supports
+the definition of sets of elements, some of them abstract, that constitute
+specific document types (for example, journal articles). The MARC DTDs
+treat machine-readable cataloging records as a distinct type of document.
+They define all the elements that might constitute a MARC record in parallel
+with the lists of data elements defined in the five USMARC formats. </P>
+
+<P>The MARC-SGML structure was designed to be an alternate format for the
+information in MARC structures, with full mappability between the two formats.
+MARC-SGML was developed because there are some situations in which users
+find SGML a more appropriate format that MARC. Because some users will
+find that for one task or process they prefer to use MARC structures and
+for another they prefer MARC-SGML, it is very helpful to have tools to
+convert from one to the other as needed.</P>
+
+<P>The Network Development and MARC Standards Office of the Library of
+Congress has funded development of two conversion programs for converting
+between MARC records and MARC-SGML. The programs are:</P>
+
+<P>mrc2sgm.pl - MARC-to-SGML converter</P>
+
+<P>sgm2mrc.pl - SGML-to-MARC record converter </P>
+
+<P><BR>
+<A HREF="http://lcweb.loc.gov/marc/marcdtd/mainmanual.html#top">Go to top of document</A></P>
+
+<P>
+<HR><p></P>
+
+<H2><A NAME="1.1"></A><FONT COLOR="#000080">1.1 Organization of this
+Manual</FONT></H2>
+
+<P>
+<HR><p></P>
+
+<P>Chapter 1, <A HREF="http://lcweb.loc.gov/marc/marcdtd/mainmanual.html#1">Introduction</A> - This introduction. </P>
+
+<P>Chapter 2, <A HREF="http://lcweb.loc.gov/marc/marcdtd/mainmanual.html#2">MARC Description File</A> - Describes the format
+of the MARC Description File that controls the conversions. </P>
+
+<P>Chapter 3, <A HREF="http://lcweb.loc.gov/marc/marcdtd/mainmanual.html#3">Character - Entity Map File</A> - Describes
+the format of the Character - Entity Map File that specifies the conversions
+from character numbers to SGML entities and from SGML entities to character
+numbers. </P>
+
+<P>Chapter 4, <A HREF="http://lcweb.loc.gov/marc/marcdtd/mainmanual.html#4">Files in the Distribution </A>- Describes each
+of the files in the distribution. </P>
+
+<P>Appendix A, <A HREF="http://lcweb.loc.gov/marc/marcdtd/mainmanual.html#A">MARC-to-SGML Conversion
+Specification</A>
+- A complete copy of the specification for the mrc2sgm.pl program.</P>
+
+<P>Appendix B, <A HREF="http://lcweb.loc.gov/marc/marcdtd/mainmanual.html#B">SGML-to-MARC Conversion
+Specification</A>
+- A complete copy of the specification for the sgm2mrc.pl program.</P>
+
+<P><BR>
+<A HREF="http://lcweb.loc.gov/marc/marcdtd/mainmanual.html#top">Go to top of document</A></P>
+
+<P>
+<HR><p></P>
+
+<H2><A NAME="1.2"></A><FONT COLOR="#000080">1.2 User
+Manual</FONT></H2>
+
+<P>
+<HR><p></P>
+
+<P>Additional information about the operation of the two programs plus
+the complete error message list is contained in the companion User Manual.
+</P>
+
+<P><BR>
+<A HREF="http://lcweb.loc.gov/marc/marcdtd/mainmanual.html#top">Go to top of document</A></P>
+
+<P>
+<HR><p></P>
+
+<H2><A NAME="1.3"></A><FONT COLOR="#000080">1.3 Typographic
+Conventions</FONT></H2>
+
+<P>
+<HR><p></P>
+
+<TABLE>
+<TR>
+<TD valign=top><BR>
+<B>-help</B> </TD>
+
+<TD valign=top><BR>
+Text that is input to a computer or output by a computer, command line
+option, SGML attribute name, or program name </TD>
+</TR>
+
+<TR>
+<TD valign=top><BR>
+<B>file</B> </TD>
+
+<TD valign=top><BR>
+Example text that, in user input, should be replaced by a correct value
+or that, in computer output, will be replaced by an actual value</TD>
+
+<TD></TD>
+</TR>
+
+<TR>
+<TD valign=top><BR>
+<B>&lt;marcdesc&gt;</B> </TD>
+
+<TD valign=top><BR>
+SGML element </TD>
+</TR>
+
+<TR>
+<TD valign=top><BR>
+<B>[dtd_type]</B> </TD>
+
+<TD valign=top><BR>
+Description of a portion of an SGML element - s tag name. In the SGML produced
+or read by the conversion programs, this portion of the tag name will be
+replaced by an actual value, e.g. - mrcb </TD>
+</TR>
+</TABLE>
+
+<P><BR>
+<A HREF="http://lcweb.loc.gov/marc/marcdtd/mainmanual.html#top">Go to top of document</A></P>
+
+<P>
+<HR><p></P>
+
+<H2><A NAME="2"></A><FONT COLOR="#000080">2. MARC Description
+File</FONT></H2>
+
+<P>
+<HR><p></P>
+
+<P>The MARC Description File is an SGML file containing information about
+the makeup of MARC records and of the SGML representation of those MARC
+records.</P>
+
+<P>The MARC Description File logically divides into three sections:</P>
+
+<UL>
+<LI>Mapping of Leader 06 and 07 values to specific document types, format
+types, and record types; </LI>
+
+<LI>Field group specifications, one for each document type; and </LI>
+
+<LI>Control Field specifications.</LI>
+</UL>
+
+<P>These sections are described in detail later in this chapter.<BR>
+The structure of the MARC Description File is shown in the following figure.
+</P>
+
+<P><IMG SRC="http://lcweb.loc.gov/marc/marcdtd/images/tabl2.jpg" HEIGHT=134 WIDTH=480></P>
+
+<P>The following table lists the elements in the MARC Description File
+in alphabetical order.</P>
+
+<TABLE BORDER=7 >
+<TR>
+<TH align=left>Element Tag Name </TH>
+
+<TH align=left>Descriptive Name </TH>
+
+<TH align=left>Description </TH>
+</TR>
+
+<TR>
+<TD>&lt; control.fields &gt; </TD>
+
+<TD>Control Fields </TD>
+
+<TD>Description of the control fields of MARC records </TD>
+</TR>
+
+<TR>
+<TD>&lt;doctype.selector&gt; </TD>
+
+<TD>Document Type Selector </TD>
+
+<TD>Each contains the mapping between a particular Leader 06 and 07 value
+and its related document type, format type, and record type </TD>
+</TR>
+
+<TR>
+<TD>&lt;dtd.groups&gt; </TD>
+
+<TD>DTD Groups </TD>
+
+<TD>Set of field spans and group names for a grouping of MARC fields. For
+example, 100 to 199 is mrcb-main-entry </TD>
+</TR>
+
+<TR>
+<TD>&lt;field.span&gt; </TD>
+
+<TD>Field Span </TD>
+
+<TD>Tag name for a grouping of MARC fields (field span) and the start and
+end field numbers for its range </TD>
+</TR>
+
+<TR>
+<TD>&lt;key.cluster.group&gt; </TD>
+
+<TD>Key-Cluster Group </TD>
+
+<TD>A key value and the subtype and cluster information associated with
+that value </TD>
+</TR>
+
+<TR>
+<TD>&lt;ldr.cluster.group&gt; </TD>
+
+<TD>Leader Cluster Group </TD>
+
+<TD>A Leader 06 and 07 value and the subtype and Leader cluster information
+associated with that value </TD>
+</TR>
+
+<TR>
+<TD>&lt;ldr.to.doctype&gt; </TD>
+
+<TD>Leader-to-Document Type Map </TD>
+
+<TD>Container element to hold the &lt;doctype.selector&gt; elements </TD>
+</TR>
+
+<TR>
+<TD>&lt;ldr&gt; </TD>
+
+<TD>Leader </TD>
+
+<TD>Container element to hold the &lt;ldr.cluster.group&gt; elements </TD>
+</TR>
+
+<TR>
+<TD>&lt;marc.desc&gt; </TD>
+
+<TD>MARC Description </TD>
+
+<TD>Root element of theMARC description. Just a container for the other
+elements. </TD>
+</TR>
+
+<TR>
+<TD>&lt;marc.tag&gt; </TD>
+
+<TD>MARC Tag </TD>
+
+<TD>MARC field tag </TD>
+</TR>
+
+<TR>
+<TD>&lt;noindsf&gt; </TD>
+
+<TD>Field Without Indicators or Subfields </TD>
+
+<TD>Names a field that has no indicators or subfields<SUP>i</SUP> </TD>
+</TR>
+
+<TR>
+<TD>&lt;posdef&gt; </TD>
+
+<TD>Positionally-defined Field </TD>
+
+<TD>Names a positionally-defined field. Each element contains a &lt;marc.tag&gt;
+element and a set of &lt;key.cluster.group&gt; elements<SUP>ii</SUP> </TD>
+</TR>
+</TABLE>
+
+<P>________________________________<BR>
+</P>
+
+<H4><I><SUP>i</SUP> Note that the fields without indicators or subfields
+specified in the MARC Description File are not limited to values specified
+in valid USMARC.</I></H4>
+
+<P><I><SUP>ii</SUP> Note that the positionally-defined fields specified
+in the MARC Description File are not limited to values specified in valid
+USMARC.</I></P>
+
+<P><BR>
+<A HREF="http://lcweb.loc.gov/marc/marcdtd/mainmanual.html#top">Go to top of document</A></P>
+
+<P>
+<HR><p></P>
+
+<H2><A NAME="2.1"></A><FONT COLOR="#000080">2.1 Mapping Leader 06
+and 07
+Values to Document Types, Format Types, and Record Types</FONT></H2>
+
+<P>
+<HR><p></P>
+
+<H3>The &lt;marc.desc&gt; element contains one &lt;ldr.to.doctype&gt; element,
+which contains one or more &lt;doctype.selector&gt; elements.</H3>
+
+<P>&lt;doctype.selector&gt; is an empty element with four attributes:</P>
+
+<UL>
+<LI>leader.06.07 - Data in Leader 06 and 07 character positions of the
+MARC record </LI>
+
+<LI>doctype - Document type. This must have the same value as the doctype
+attribute of one of the &lt;dtd.groups&gt; elements (although case is not
+important). </LI>
+
+<LI>format.type - Format type </LI>
+
+<LI>record.type - Record type </LI>
+</UL>
+
+<P>The &lt;doctype.selector&gt; elements are used during conversion from
+MARC-to-SGML to determine the prefixes to be used when
+creating SGML element names. When the data in Leader 06 and 07 character
+positions matches the value of the leader.06.07 attribute, the remaining
+attributes specify the document type (mrca or mrcb), the format type (e.g.
+bd, ci, or hd), and the record type (e.g. bk, mu, mx, or vm) of the generated
+element names.</P>
+
+<P>An example portion of a complete &lt;leader.to.doctype&gt; is shown
+below:</P>
+
+<P>&lt;ldr.to.doctype&gt;<BR>
+&lt;doctype.selector leader.06.07=&quot;aa&quot; doctype=&quot;mrcb&quot;
+format.type=&quot;bd&quot;; record.type=&quot;bk&quot;&gt;;<BR>
+&lt;doctype.selector leader.06.07=&quot;ac&quot; doctype=&quot;mrcb&quot;
+format.type=&quot;bd&quot;; record.type=&quot;bk&quot;&gt;;<BR>
+&lt;doctype.selector leader.06.07=&quot;ad&quot; doctype=&quot;mrcb&quot;
+format.type=&quot;bd&quot;; record.type=&quot;bk&quot;&gt;;<BR>
+&lt;doctype.selector leader.06.07=&quot;am&quot; doctype=&quot;mrcb&quot;
+format.type=&quot;bd&quot;; record.type=&quot;bk&quot;&gt;;<BR>
+&lt;/ldr.to.doctype&gt;</P>
+
+<P>When converting from MARC to SGML, the data in Leader character
+positions 06 and 07 is extracted from each MARC record and used as the
+key for selecting which &lt;doctype.selector&gt; element applies to that
+record. If the Leader data matches the value of a leader.06.07 attribute,
+then the values of that element - s doctype, format.type, and record.type
+attributes are used when generating tags for the SGML version
+of the MARC record. Using the example above, when the data in Leader character
+positions 06 and 07 is aa, it matches the first &lt;doctype.selector&gt;
+element, so the generated top-level tag is &lt;mrcb&gt;, and the element
+generated for the Leader is &lt;mrcbldr-bd&gt;, etc. If there is no matching
+leader.06.07 attribute value, an error is signaled.</P>
+
+<P>This information is not used when converting from SGML to
+MARC records. </P>
+
+<P><BR>
+<A HREF="http://lcweb.loc.gov/marc/marcdtd/mainmanual.html#top">Go to top of document</A></P>
+
+<P>
+<HR><p></P>
+
+<H2><A NAME="2.2"></A><FONT COLOR="#000080">2.2 Field Group
+Specifications</FONT></H2>
+
+<P>
+<HR><p></P>
+
+<P>To avoid a completely flat hierarchy, the MARC DTDs divide the MARC
+tags into named ranges, and each &lt;dtd.groups&gt; element specifies these
+ranges for one of the MARC DTDs. Each named range provides a grouping element
+(for example, &lt;mrcb-control-fields&gt;) that acts as a container for
+a series of MARC fields. Each &lt;field.span&gt; element in the MARC Description
+File names one of these grouping elements generated in the output SGML and provides a start
+number and end number for the group - s MARC
+field range.</P>
+
+<P>The &lt;marc.desc&gt; element contains one or more &lt;dtd.groups&gt;
+elements, which in turn contain one or more &lt;field.span&gt; elements.
+The &lt;dtd.groups&gt; element has a single doctype attribute, and the
+value of the doctype attribute of the &lt;doctype.selector&gt; element
+selected using the Leader 06 and 07 data of a MARC record must have the
+same value as the doctype attribute of one of the &lt;dtd.groups&gt; elements
+in the MARC Description File.</P>
+
+<P>The &lt;field.span&gt; element is empty, and it has three attributes:</P>
+
+<UL>
+<LI>start - The start field number for the range of MARC fields; </LI>
+
+<LI>end - The end field number for the range. This attribute should be
+omitted when the range is a single field, in which case the field number
+is specified in the start attribute; and </LI>
+
+<LI>label - The complete element name used to label the field group. </LI>
+</UL>
+
+<P>An example usage is shown below.</P>
+
+<P>&lt;dtd.groups doctype=&quot;mrcb&quot;&gt;<BR>
+&lt;field.span start=&quot;001&quot; end=&quot;009&quot;
+label=&quot;mrcb-control-fields&quot;&gt;<BR>
+&lt;field.span start=&quot;010&quot; end=&quot;099&quot;
+label=&quot;mrcb-numbers-and-codes&quot;&gt;<BR>
+&lt;field.span start=&quot;100&quot; end=&quot;199&quot;
+label=&quot;mrcb-main-entry&quot;&gt;<BR>
+&lt;field.span start=&quot;200&quot; end=&quot;259&quot;
+label=&quot;mrcb-title-and-title-related&quot;&gt;<BR>
+&lt;field.span start=&quot;260&quot; end=&quot;299&quot;
+label=&quot;mrcb-edition-imprint-etc&quot;&gt;<BR>
+&lt;field.span start=&quot;300&quot; end=&quot;399&quot;
+label=&quot;mrcb-physical-description&quot;&gt;<BR>
+&lt;field.span start=&quot;400&quot; end=&quot;499&quot;
+label=&quot;mrcb-series-statement&quot;&gt;<BR>
+&lt;field.span start=&quot;500&quot; end=&quot;599&quot;
+label=&quot;mrcb-notes&quot;&gt;<BR>
+&lt;field.span start=&quot;600&quot; end=&quot;699&quot;
+label=&quot;mrcb-subject-access&quot;&gt;<BR>
+&lt;field.span start=&quot;700&quot; end=&quot;759&quot;
+label=&quot;mrcb-added-entry&quot;&gt;<BR>
+&lt;field.span start=&quot;760&quot; end=&quot;799&quot;
+label=&quot;mrcb-linking-entry&quot;&gt;<BR>
+&lt;field.span start=&quot;800&quot; end=&quot;849&quot;
+label=&quot;mrcb-series-added-entry&quot;&gt;<BR>
+&lt;field.span start=&quot;850&quot; end=&quot;851&quot;
+label=&quot;mrcb-holdings-notes&quot;&gt;<BR>
+&lt;field.span start=&quot;852&quot; label=&quot;mrcb-location&quot;&gt;<BR>
+&lt;field.span start=&quot;853&quot; end=&quot;855&quot;
+label=&quot;mrcb-captions-and-patterns&quot;&gt;<BR>
+&lt;field.span start=&quot;856&quot; end=&quot;859&quot;
+label=&quot;mrcb-access&quot;&gt;<BR>
+&lt;field.span start=&quot;860&quot; end=&quot;865&quot;
+label=&quot;mrcb-enumeration-and-chron&quot;&gt;<BR>
+&lt;field.span start=&quot;866&quot; end=&quot;868&quot;
+label=&quot;mrcb-textual-holdings&quot;&gt;<BR>
+&lt;field.span start=&quot;870&quot; end=&quot;875&quot;
+label=&quot;mrcb-variant-names&quot;&gt;<BR>
+&lt;field.span start=&quot;876&quot; end=&quot;879&quot;
+label=&quot;mrcb-item-information&quot;&gt;<BR>
+&lt;field.span start=&quot;880&quot; end=&quot;889&quot;
+label=&quot;mrcb-linkages&quot;&gt;<BR>
+&lt;field.span start=&quot;900&quot; end=&quot;999&quot;
+label=&quot;mrcb-local&quot;&gt;<BR>
+&lt;/dtd.groups&gt;</P>
+
+<P>When converting from MARC to SGML, the Leader 06 and 07 values
+selects which document type, and which set of grouping tags, to use, and
+the appropriate grouping tags are output around the elements output for
+the fields in the input MARC record. If the MARC record does not contain
+any fields within the range for one of these groups, then the grouping
+tag is not output. When converting from SGML to MARC records,
+the top-most tag for each MARC record indicates the document type, which
+is used to select which &lt;dtd.groups&gt; element applies, and the conversion
+program checks that each of the grouping tags in the SGML is defined for
+the document type. If a grouping tag is not defined in the MARC Description
+File, an error is signaled. </P>
+
+<P><BR>
+<A HREF="http://lcweb.loc.gov/marc/marcdtd/mainmanual.html#top">Go to top of document</A></P>
+
+<P>
+<HR><p></P>
+
+<H2><A NAME="2.3"></A><FONT COLOR="#000080">2.3 Control Field
+Specifications</FONT></H2>
+
+<P>
+<HR><p></P>
+
+<P>The &lt;marc.desc&gt; element contains one &lt;control.fields&gt; element
+which contains one &lt;ldr&gt; element followed by one or more &lt;noindsf&gt;
+and &lt;posdef&gt; elements, in any combination. The &lt;ldr&gt; element
+is used to obtain a description of the logical clustering of the bytes
+in the Leader field. The &lt;noindsf&gt; element is used to name the MARC
+fields that are not expected to have indicators or subfields. The &lt;posdef&gt;
+element both names the MARC fields that are expected to be positionally-defined
+and provides a description of the logical clustering of the bytes in each
+field.</P>
+
+<P>_________________________<BR>
+</P>
+
+<H4><I><SUP>iii</SUP> Note that the clustering of Leader character positions
+specified in the MARC Description File are not limited to values specified
+in valid USMARC.</I></H4>
+
+<P><I><SUP>iv</SUP> Note that the fields without indicators or subfields
+specified in the MARC Description File are not limited to values specified
+in valid USMARC.</I></P>
+
+<P><I><SUP>v</SUP> Note that the positionally-defined fields and the clustering
+of character positions specified in the MARC Description File are not limited
+to values specified in valid USMARC. </I></P>
+
+<P>2.3.1 Leader</P>
+
+<P>The &lt;ldr&gt; element contain one or more &lt;ldr.cluster.group&gt;
+elements, which are empty elements with two attributes:</P>
+
+<UL>
+<LI>key - Key value used when selecting which cluster arrangement to use.
+If the value of Leader 06 matches this value, then the data in the clusters
+attribute determines the division of clusters of characters into separate
+elements in the output SGML; and </LI>
+
+<LI>clusters - Definition of clusters of character positions. This is a
+sequence of space- separated numbers or number ranges. They determine the
+division of the character positions within the Leader into elements in
+the output SGML. </LI>
+</UL>
+
+<P>An example portion of a &lt;ldr&gt; element is shown below:</P>
+
+<P>&lt;ldr&gt; &lt;ldr.cluster.group key=&quot;a&quot; clusters=&quot;05
+06 07 08 09 17 18 19&quot;&gt; &lt;ldr.cluster.group key=&quot;b&quot;
+clusters=&quot;05 06 07 08 09 17 18 19&quot;&gt; &lt;ldr.cluster.group
+key=&quot;c&quot; clusters=&quot;05 06 07 08 09 17 18 19&quot;&gt; &lt;ldr.cluster.group
+key=&quot;e&quot; clusters=&quot;05 06 07 08 09 17 18 19&quot;&gt; &lt;/ldr&gt;
+When converting from MARC records to SGML, the Leader 06 value
+selects which Leader cluster group to use, and the appropriate tags are
+output around the data from the clusters indicated by the value of the
+clusters attribute. This information is not used when converting from
+SGML to MARC records. </P>
+
+<P>2.3.2 Control Fields</P>
+
+<P>The &lt;noindsf&gt; element contains a &lt;marc.tag&gt; element that
+contains the tag number of a MARC record field.</P>
+
+<P>The &lt;posdef&gt; element contains a &lt;marc.tag&gt; element followed
+by one or more &lt;key.cluster.group&gt; elements. The &lt;posdef&gt; element
+has a key attribute with possible values leader0607 and field00 that indicates
+what data from the MARC record to use when selecting a cluster group arrangement
+for the positionally- defined field.</P>
+
+<P>The &lt;key.cluster.group&gt; element is an empty element with three
+attributes:</P>
+
+<UL>
+<LI>key - Key value used when selecting which cluster arrangement to use.
+If the value of either Leader 06 and 07 or the 00 character position of
+the current field (as selected by the key attribute of the containing &lt;posdef&gt;
+element) matches this value, then the data in the clusters attribute determines
+the division of clusters of characters into separate elements in the output
+SGML; </LI>
+
+<LI>subtype - String to be output in the subtype portion of the tag names
+in the output tag- valid SGML </LI>
+
+<LI>clusters - Definition of clusters of character positions. This is a
+sequence of space- separated numbers or number ranges. They determine the
+division of the character positions within the positionally-defined field
+into elements in the output SGML. </LI>
+</UL>
+
+<P>An example portion of a &lt;control.fields&gt; element containing &lt;noindsf&gt;
+and &lt;posdef&gt; elements is shown below:</P>
+
+<P>&lt;control.fields&gt;<BR>
+&lt;ldr&gt;<BR>
+...<BR>
+&lt;/ldr&gt;&lt;noindsf&gt;&lt;marc.tag&gt;001&lt;/marc.tag&gt;&lt;/noindsf&gt;<BR>
+&lt;noindsf&gt;&lt;marc.tag&gt;002&lt;/marc.tag&gt;&lt;/noindsf&gt;<BR>
+&lt;noindsf&gt;&lt;marc.tag&gt;003&lt;/marc.tag&gt;&lt;/noindsf&gt;<BR>
+&lt;noindsf&gt;&lt;marc.tag&gt;004&lt;/marc.tag&gt;&lt;/noindsf&gt;<BR>
+&lt;noindsf&gt;&lt;marc.tag&gt;005&lt;/marc.tag&gt;&lt;/noindsf&gt;<BR>
+&lt;posdef key=&quot;field00&quot;&gt;&lt;marc.tag&gt;006&lt;/marc.tag&gt;<BR>
+&lt;key.cluster.group key=&quot;a&quot; subtype=&quot;bk&quot; clusters=&quot;00
+01-04 05 06 07-10 11 12 13 14 15 16 17&quot;&gt;<BR>
+&lt;key.cluster.group key=&quot;t&quot; subtype=&quot;bk&quot; clusters=&quot;00
+01-04 05 06 07-10 11 12 13 14 15 16 17&quot;&gt;<BR>
+&lt;/posdef&gt;<BR>
+&lt;posdef key=&quot;field00&quot;&gt;&lt;marc.tag&gt;007&lt;/marc.tag&gt;<BR>
+&lt;key.cluster.group key=&quot;a&quot; subtype=&quot;a&quot; clusters=&quot;00
+01 02 03 04 05 06 07&quot;&gt;<BR>
+&lt;key.cluster.group key=&quot;c&quot; subtype=&quot;c&quot; clusters=&quot;00
+01 02 03 04 05&quot;&gt;<BR>
+&lt;key.cluster.group key=&quot;d&quot; subtype=&quot;d&quot; clusters=&quot;00
+01 02 03 04 05&quot;&gt;<BR>
+&lt;/posdef&gt;<BR>
+&lt;/control.fields&gt;<BR>
+</P>
+
+<P>When converting from MARC records to SGML, if a field is specified
+in a &lt;marc.tag&gt; element, it is treated as a control field rather
+than as a data field. If it is specified within a &lt;noindsf&gt; element,
+it is treated as a control field without indicators and subfields, and
+the field data is output between a start-tag and end-tag for the field.
+If it is specified within a &lt;posdef&gt; element, it is treated as a
+positionally-defined field. For positionally-defined fields, either the
+Leader 06 and 07 value or the 00 value from the current field selects which
+cluster group to use, and the appropriate tags are output around the data
+from the clusters indicated by the value of the clusters attribute.</P>
+
+<P>When converting from SGML to MARC records, if an element matches
+the pattern for a field without indicators or subfields, then it is processed
+without reference to the information from the MARC Description File, but
+if it matches the pattern for a positionally-defined field, then the length
+of the output field data is fixed at the length of the last number in the
+last cluster specified in the clusters attribute, and any unused character
+positions in the field are set to the - fill - character.</P>
+
+<P><BR>
+<A HREF="http://lcweb.loc.gov/marc/marcdtd/mainmanual.html#top">Go to top of document</A></P>
+
+<P>
+<HR><p></P>
+
+<H2><A NAME="3"></A><FONT COLOR="#000080">3. Character - Entity Map
+File</FONT></H2>
+
+<P>
+<HR><p></P>
+
+<P>The Character - Entity File is an SGML file containing information about
+the mapping between character numbers in the MARC Extended Latin character
+set and SGML entities which are, or should be, defined in the MARC DTDs.
+The structure of the Character - Entity File is shown in the following
+figure.</P>
+
+<TABLE BORDER=1 >
+<TR>
+<TD>entitymap </TD>
+
+<TD>+ character~ </TD>
+
+<TD>+ </TD>
+
+<TD>entity </TD>
+</TR>
+
+<TR>
+<TD></TD>
+
+<TD></TD>
+
+<TD></TD>
+
+<TD>desc </TD>
+</TR>
+</TABLE>
+
+<p><p>
+
+<TABLE BORDER=7 >
+<TR>
+<TH align=left>Element Tag Name </TH>
+
+<TH align=left>Descriptive Name </TH>
+
+<TH align=left>Description </TH>
+</TR>
+
+<TR>
+<TD>&lt;character&gt;</TD>
+
+<TD>Character Information</TD>
+
+<TD>Information about a single (possibly compound) character, including
+any entities that are equivalen </TD>
+</TR>
+
+<TR>
+<TD>t&lt;desc&gt;</TD>
+
+<TD>Entity Description</TD>
+
+<TD>Description of the entity </TD>
+</TR>
+
+<TR>
+<TD>&lt;entity&gt;</TD>
+
+<TD>Entity Name</TD>
+
+<TD>Entity name </TD>
+</TR>
+
+<TR>
+<TD>&lt;entitymap&gt;</TD>
+
+<TD>Character - Entity Map</TD>
+
+<TD>Map of characters to entities </TD>
+</TR>
+</TABLE>
+
+<P>The &lt;entitymap&gt; element contains one or more &lt;character&gt;
+elements, which in turn contain one or more pairs of &lt;entity&gt; and
+&lt;desc&gt; elements.</P>
+
+<P>The &lt;character&gt; element has two attributes:</P>
+
+<UL>
+<LI>hex - Hexadecimal representations of one or more character codes, separated
+by spaces. Although there are two attributes for two representations of
+the character number, this attribute is the only one used when setting
+up the character - entity or entity - character conversion. </LI>
+
+<LI>dec - Decimal representations of one or more character codes, separated
+by spaces. This should be the decimal representation of the hexadecimal
+number in the hex attribute. </LI>
+</UL>
+
+<P>The &lt;entity&gt; element contains the text of the entity name for
+one of the entities corresponding to the character code, and the &lt;desc&gt;
+contains a description of the entity. Since it is possible that more than
+one entity may represent a character, the &lt;character&gt; element may
+contain more than one pair of &lt;entity&gt; and &lt;desc&gt; elements.</P>
+
+<P>An example portion of an &lt;entitymap&gt; element is shown below:</P>
+
+<P>&lt;entitymap&gt;<BR>
+&lt;character hex=&quot;E2 61&quot; dec=&quot;226 097&quot;&gt;<BR>
+&lt;entity&gt;aacute&lt;/entity&gt;&lt;desc&gt;latin small letter a with
+acute&lt;/desc&gt;<BR>
+&lt;/character&gt;<BR>
+&lt;character hex=&quot;E2 41&quot; dec=&quot;226 065&quot;&gt;<BR>
+&lt;entity&gt;Aacute&lt;/entity&gt;&lt;desc&gt;latin capital letter a with
+acute&lt;/desc&gt;<BR>
+&lt;/character&gt;<BR>
+&lt;character hex=&quot;8D&quot; dec=&quot;141&quot;&gt;<BR>
+&lt;entity&gt;joiner&lt;/entity&gt;&lt;desc&gt;joiner control character&lt;/desc&gt;<BR>
+&lt;entity&gt;x8D&lt;/entity&gt;&lt;desc&gt;hex value 8D&lt;/desc&gt;<BR>
+&lt;/character&gt;<BR>
+&lt;/entitymap&gt;<BR>
+</P>
+
+<P>When converting from MARC records to SGML, the character number
+or sequence of character numbers in the hex attribute of each &lt;character&gt;
+element is converted to the entity named in the first &lt;entity&gt; element.
+Compound characters are converted ahead of single characters so, for example,
+the sequence - E2 41 - is converted to &quot;&Aacute;&quot; rather than
+&quot;&acute;A&quot;.</P>
+
+<P>When converting from SGML to MARC records, every entity declared
+in the Character-Entity Map File is converted to its corresponding character
+number or sequence of character number. If an entity is declared multiple
+times in the file, only the first definition has any effect.</P>
+
+<P><BR>
+<A HREF="http://lcweb.loc.gov/marc/marcdtd/mainmanual.html#top">Go to top of document</A></P>
+
+<P>
+<HR><p></P>
+
+<H2><A NAME="4"></A><FONT COLOR="#000080">4. Files in the
+Distribution</FONT></H2>
+
+<P>
+<HR><p></P>
+
+<UL>
+<LI><B>mrc2sgm.pl </B>- MARC-to-SGML conversion program
+in Perl </LI>
+
+<LI><B>sgm2mrc.pl </B>- SGML to MARC record conversion program
+in Perl </LI>
+
+<LI><B>MANIFEST </B>- List of files in the distribution. Used by the install.me
+installation program </LI>
+
+<LI><B>install.me </B>- Installation program in Perl. See the installation
+instructions in the user - s guide. </LI>
+
+<LI><B>sgmlspl.pl </B>- SGML conversion Perl function library </LI>
+
+<LI><B>sgmlspl.pm </B>- Object-oriented version of sgmlspl.pl </LI>
+
+<LI><B>SGMLS.pm </B>- SGML conversion Perl function library </LI>
+
+<LI><B>charconv.sgm </B>- Character conversion Character-Entity Map File
+selected by the -charconv command line option </LI>
+
+<LI><B>register.sgm </B>- Upper-register character to entity conversion
+Character-Entity Map File selected by the -registerconv command line option
+</LI>
+
+<LI><B>entmap.dtd </B>- Character - Entity Map File DTD </LI>
+
+<LI><B>marcdesc.dtd </B>- MARC Description File DTD </LI>
+
+<LI><B>marcdesc.sgm </B>- Default MARC Description File </LI>
+
+<LI><B>marcdesc.pl </B>- MARC Description File Perl function library </LI>
+
+<LI><B>Output.pm </B>- SGML conversion Perl function library </LI>
+
+<LI><B>Refs.pm </B>- SGML conversion Perl function library </LI>
+</UL>
+
+<P><BR>
+<A HREF="http://lcweb.loc.gov/marc/marcdtd/mainmanual.html#top">Go to top of document</A></P>
+
+<P>
+<HR><p></P>
+
+<H2><A NAME="A"></A><FONT COLOR="#FF0000">Appendix A. MARC
+Record to Tag-valid
+SGML Conversion Specification</FONT></H2>
+
+<P>
+<HR><p></P>
+
+<P><U>CONVERSION FROM MARC RECORDS TO UNPARSED SGML DATA</U>
+</P>
+
+<PRE>1.  FUNCTIONALITY
+---------------------------
+
+The program(s) will serve as a generalized facility for converting
+from MARC (ISO 2709) records to unvalidated SGML data.  The output
+data cannot be considered SGML until it has been parsed by a
+validating SGML parser.
+
+
+2.  INPUT/OUTPUT
+--------------
+
+2.1  Input
+----------
+
+Input to the conversion utility is a string of one or more
+MARC-structured records.  Ideally these will be valid USMARC records,
+but other varieties of MARC and locally-extended MARC can also be
+converted.
+
+The input must be and the output will be &quot;well-formed&quot;, but neither is
+guaranteed to be valid.  &quot;Well-formed&quot; means that the MARC input files
+must contain MARC records with correctly structured Leader, Directory,
+and variable control and data fields, followed by an End-of-Record
+mark.  Leader fields 06 and 07 must be present and contain values that
+are legal according to the MARC Description File.* With this small
+exception, no particular fields in the Leader, control, or data fields
+are required nor are particular subfields required within a given
+field.  Field and subfield order need not follow the USMARC standard.
+In short, the record must be well-structured MARC but need not meet
+the full requirements of valid USMARC records.  [*Footnote: Note that
+06 and 07 in the Description File can be modified by the person
+running the conversion and are thus not limited to values specified in
+valid USMARC.]
+
+2.2  Output
+-----------
+
+
+The output will be a datastream of tagged but unvalidated SGML data,
+with one tagged element (containing many
+sub-elements) for each properly-structured MARC record in the input
+file.  Each record element will contain unique subelements for its
+Leader, each of its variable control fields, variable data fields, and
+subfields, in addition to any grouping elements specified.  Ideally,
+the resulting tagged element will be a MARC SGML stream that is valid
+according to one of the MARC SGML DTDs, but validation is not required
+for conversion.
+
+The input must be and the output will be &quot;well-formed&quot;, but neither is
+guaranteed to be valid.  &quot;Well-formed&quot; means that in the tagged output
+all start-tags and end-tags will match up and that all attributes will
+be quoted.  (Note: This is not &quot;well-formed&quot; in the XML sense since
+XML uses a different syntax for empty tags and requires that allentities
+are declared).  Element and attribute names will be
+constructed according to the mechanism established in the MARC
+Bibliographic and Authority DTDs, and grouping elements will be
+constructed according to the MARC Description file.  The specific
+elements, any grouping elements, and the relationships between the
+elements will not necessarily be those in the current MARC DTDs.
+Therefore the output instances are not guaranteed to parse cleanly.
+[Note that the rules of SGML 8879 will be followed and therefore a DTD
+could be written that was valid for any particular tagged instance.]
+In addition, as far as is known, no DTD exists for a collection of
+MARC instances, only DTDs for individual instances, so there is no
+parser validation for the collected output.
+
+Unless an output filename is specified as a command option, the
+programs output will be written to the file &quot;stdout.sgm&quot;.
+
+2.3  Control of the Conversion Process
+--------------------------------------
+
+The conversion process will be table-driven, with top-level
+controlling data coming directly from the conversion operator and
+detailed controlling data provided in the (user modifiable) MARC
+Description File.  MARC input is verified (but not validated) and
+SGML output is constructed according to the MARC Description
+File. There is no direct connection to the MARC DTDs except as is
+built into this file.
+
+
+3.  USER INTERFACE
+------------------
+
+The conversion utility will be a Perl script executed from the command
+line.  Command options may be entered on the command line.  One of the
+command-line options will be the name of a command file containing
+information equivalent to some or all of the command options.  Options
+specified on the command line will override the options specified in
+the command file.  Options controlling processing each have a default
+value that will be used if not specified either on the command line or
+in the command file.
+
+The format of the command line syntax is:
+
+mrc2sgm.pl [-command file]
+   [-sgmlconv | -registerconv | -charconv | -userconv file]
+   [-log file] [-o file] [-marcdesc file] input-file
+
+where:
+-command file
+        Read program command options from &quot;file&quot;
+
+-sgmlconv
+        Perform minimal, &quot;SGML sanity&quot; character conversion using the
+        built-in conversion table
+
+        This is the default character conversion.
+
+-registerconv
+        Convert upper-register characters to lower-register characters
+        using the built-in conversion table.
+
+        The minimal SGML conversion will also be performed.
+
+-charconv        Convert characters to entities using the built-in
+conversion
+        table
+
+        The minimal SGML conversion will also be performed.
+
+-userconv file
+        Perform character conversion using the user-supplied
+        conversion specification in &quot;file&quot;
+
+        An error will be signaled if &quot;file&quot; is not specified or if
+        &quot;file&quot; cannot be opened, or if &quot;file&quot; is not a file of the
+        correct format.
+
+        The minimal SGML conversion will also be performed.
+
+-log file
+        Write the output log to &quot;file&quot;.  If this option is not
+        specified, the log will be written to &quot;mrc2sgm.log&quot; in the
+        current directory.
+
+-o file
+        Write the unvalidated SGML output to &quot;file&quot; instead of to
+        the default file &quot;stdout.sgm&quot;.
+
+-marcdesc file
+        Read the MARC Description File named &quot;file&quot; instead of the
+        default MARC Description File that the program automatically
+        reads on initialization.
+
+input-file
+        The name of the input MARC record file
+
+
+4.  ASSUMPTIONS
+---------------
+
+4.1  Hardware/Operating Systems
+-------------------------------
+
+Any IBM PC or clone that runs DOS, either natively, or under Windows
+(3.1x, 95, 97, NT, etc) or OS/2, or any UNIX system for which Perl
+and nsgmls are available.
+
+4.2  Software
+-------------
+
+The conversion program will be written in Perl 5 (Practical Extraction
+and Report Language).  The advantages of Perl are:
+
+ - Perl is free;
+
+ - Perl is available for a wide variety of
+   platforms, including DOS, Windows 3.1x, Windows
+   95, Windows NT, OS/2, Macintosh, and UNIX;
+
+ - Perl scripts are interpreted, so it is not
+   necessary to recompile the conversion script to
+   use it on a different platform;
+
+ - There is a free SGML function library that
+   simplifies the manipulation of SGML text.
+
+ - Perl is optimized for scanning text; and
+ - Perl is good with binary data.
+
+ - Perl can read in external data files, such as a
+   user-defined character conversion table, and
+   evaluate it as part of the program rather than
+   just store it as data;
+
+Being interpreted, Perl does not execute as fast as a compiled
+language such as C, but the script should still execute sufficiently
+quickly for the satisfaction of most operators.  A large part of the
+speed difference between Perl and a compiled program is the startup
+time while the script is being interpreted into byte codes, so the
+program will be more efficient, per-record, for large data sets.
+
+
+4.3  File Size
+--------------
+
+MARC record files could be 1 MByte and could even be 1 GByte.  The
+traditional Perl approach of slurping everything into memory and
+spitting it out again is going to break for somebody sometime.
+Instead, the program will read in a chunk of data, find the first
+record and process it, find the next record and process it, and so on
+until you're left with a partial record (or reach the end of the file
+in the first chunk).  If you have a partial record, append the next
+chunk of the file and carry on.
+
+
+4.4  Hard-wired Knowledge About MARC Records
+--------------------------------------------
+
+4.4.1    MARC Record Start and End
+
+4.4.1.1  MARC records begin with a Leader field
+ 
+4.4.1.2  MARC records end with an End Of Record character (hexadecimal
+         1D, or &quot;0x1D&quot; in Perl syntax).
+
+4.4.1.3  There may be blank characters at the beginning a file but not
+         between records or at the end of the file. The blank
+         character is &quot; &quot; (0x20).
+
+4.4.2 Leader
+
+4.4.2.1  The Leader is the first 24 characters in the record.
+
+4.4.2.2  The format of the Leader is fixed.
+
+4.4.2.3  The Leader lacks indicators and subfields.
+
+4.4.2.4  The Leader is a positionally-defined field, and Leader
+         character positions 06 and 07 are used as the key for much of
+         the processing of the MARC record.  The Leader is processed
+         similarly to other positionally-defined fields.
+
+4.4.2.5  Descriptions of both Leader character positions 06 and 07 are
+         required in the MARC Description File.
+
+4.4.2.6  Content is required for both Leader character positions 06
+         and 07 in the MARC input record.
+
+4.4.2.7  The value of Leader positions 06 and 07, concatenated        
+together, will be checked against data read from the MARC
+         Description File, and an error will be signaled if the Leader
+         data does not match a value from the MARC Description File.
+
+4.4.2.8  Leader character positions 06 and 07 will be used to
+         determine (from the MARC Description File) the DTD type, the
+         record type and the format type to be used in the generated
+         SGML.
+
+4.4.2.9  The Leader is followed immediately by the Directory.
+ 
+4.4.3 Directory
+
+4.4.3.1  The Directory begins in the first character position after
+         the Leader.
+
+4.4.3.2  The Directory ends with an End Of Field character (0x1E).
+
+4.4.3.3  The length of the Directory (excluding the EOF character) is
+         a multiple of 12 characters.  An error will be signaled if
+         the length of the Directory (excluding the EOF character) is
+         less than 12 characters.  An error will be signaled if the
+         length of the Directory is not a multiple of 12 characters.
+
+4.4.3.4  The Directory consists of multiple 12-character entries, each
+         of which identifies the tag of a variable field, the length
+         of that field (including EOF character), and the starting
+         position of the field.
+
+4.4.3.5  The field numbers of entries in the Directory are not
+         necessarily in increasing numerical order.  The entries will
+         be sorted in increasing numerical order before the fields are
+         processed.
+
+4.4.3.6  The Directory entries are used to locate fields within the
+         body of the MARC record.
+
+4.4.3.7  The tagged text for the fields in the MARC record will be
+         output in the order in which they appear in the Directory.
+
+4.4.4 Variable Fields
+
+4.4.4.1  Variable fields may be either control or data fields. 
+
+4.4.4.2  The control and variable data fields follow the Directory EOF
+         character.  The starting position of each variable fields is
+         calculated based on the position immediately following the
+         Directory EOF character.
+
+4.4.4.3  An undetermined number of variable control fields may be
+         present between the end of the Directory and the start of the
+         first data variable field.
+
+4.4.4.4  Each control or variable data field ends in a EOF character.
+
+4.4.4.5  MARC variable fields may be numbered 001 to 999.
+
+4.4.4.6  None of the variable fields are specifically required to be
+         present, but there must be at least one variable field
+         present in the MARC input record.
+
+4.4.4.7  All variable fields are repeatable, and all subfields in
+         variable data fields are repeatable.
+4.4.5 Grouping Tags
+
+4.4.5.1  Tagged output for fields will be grouped by field number.
+         The grouping tag and the range of field numbers for the group
+         are specified in the MARC Description File.
+
+4.4.5.2  The MARC Description File may contain multiple specifications
+         for grouping fields.  The specification to use will be chosen
+         based upon the values of Leader character positions 06 and
+         07.
+
+4.5.5.3  An error will be signalled if a MARC record contains a field
+         for which the MARC Description File does not designate a
+         grouping tag.
+
+4.4.6 Fields Lacking Both Indicators and Subfields
+
+4.4.6.1  Any field that lacks indicators and subfields (excluding the
+         Leader, since it is always present in the MARC record) must
+         be explicitly named in the MARC Description File.
+
+4.4.6.2  The tag name generated for fields that lack indicators and
+         subfields that are not also positionally-defined fields, will
+         be the concatenation of the document type (for example,
+         &quot;mrcb&quot;), the minus character (&quot;-&quot;), and the field number (for
+         example, &quot;003&quot;).
+
+4.4.6.3  A start tag and an end tag are generated for each field that
+         lacks indicators and subfields that is not also a
+         positionally-defined field.  The contents of the MARC field
+         are output as the content of the element.
+
+4.4.7 Positionally-defined Fields
+
+4.4.7.1  Any field that lacks indicators and subfields may be also be
+         specified as a positionally-defined field in the MARC
+         Description File.
+
+4.4.7.2  It is an error if a field is specified as a
+         positionally-defined field and not also defined as a field
+         lacking indicators and subfields.
+
+4.4.7.3  Positionally-defined fields are divided into clusters of
+         character positions.
+
+4.4.7.4  The arrangement of the clusters within a positionally-defined
+         field may vary.
+
+4.4.7.5  For all positionally-defined fields, including the Leader,
+         any clustering of data from multiple character positions into
+         a single tag in the output tagged text is specified in the
+         MARC Description File.
+
+4.4.7.6  For the Leader, the key for determining the arrangement of
+         clusters to use is the data in Leader character position 06.
+
+4.4.7.7  For each positionally-defined field except the Leader: 
+         
+         1) The key for determining which arrangement of clusters to
+         use is either the value of the 00 character position of that
+         field or the value of Leader character positions 06 and 07.
+         2) The choice between using the 00 position or using the
+         Leader 06 and 07 is specified in the MARC Description File.
+
+         3) The same key also determines the selection of a string to
+         be used when constructing tag names for the tagged text
+         output.  The string selected by the key is used to construct
+         tags which group the tags of the clusters.  For example, if
+         the document type is &quot;mrcb&quot;, the string selected by the key
+         is &quot;AA&quot;, and the field number is &quot;006&quot;, then the name of the
+         grouping tag for each of the clusters is &quot;mrcb006-AA&quot;
+
+         4) The tag name for each cluster is generated by appending
+         the cluster's character position (or character position
+         range) to the name of this grouping tag.  For example, if the
+         cluster is the single character position 06, then (continuing
+         from the previous example) its tag name is &quot;mrcb006-AA-06&quot;.
+         If the cluster is a range of character positions 06 to 09,
+         then its tag name is &quot;mrcb-006-AA-06-09&quot;.
+
+4.4.7.8  For the Leader:
+
+         1) The name for a tag that groups tags for the
+         positionally-defined fields is generated by concatenating the
+         document type, the string &quot;ldr-&quot;, and the format type
+         (specified previously).  For example, if the document type is
+         &quot;mrcb&quot; and the format type is &quot;ci&quot;, then the tag name for the
+         grouping tag for the positionally-defined fields in the
+         Leader is &quot;mrcbldr-ci&quot;.
+
+         2) The tag name for each cluster is generated by appending
+         the minus character (&quot;-&quot;) and the cluster's character
+         position (or character position range) to the name of the
+         enclosing tag.  For example, if the cluster is the single
+         character position 06, then (continuing from the previous
+         example) the tag name is &quot;mrcbldr-ci-06&quot;.  If the cluster is
+         the range of character positions 06 to 09, then its tag name
+         is &quot;mrcbldr-ci-06-09&quot;.
+
+4.4.7.9  The elements for all clusters within positionally-defined
+         fields are all EMPTY (an SGML keyword meaning that there is
+         no content and they have a start tag but no end tag).  The
+         data in the character positions for the cluster is inserted
+         into the start tag as the value of a &quot;value&quot; attribute.  For
+         example, if the data in Leader character position 06 is &quot;a&quot;
+         and Leader character position 06 is a single-character
+         cluster, then (continuing from the previous example) its tag
+         is '<mrcbldr-ci-06 value="a">'.  If the data in Leader
+         character position 06 is &quot;a&quot;, in 07 is &quot;b&quot;, in 08 is &quot;c&quot;,
+and
+         in 09 is &quot;d&quot; and the cluster is the range of character
+         positions 06 to 09, then its tag is '<mrcbldr-ci-06-09
+         value="abcd">'.
+
+4.4.8 Variable Data Fields
+
+4.4.8.1  The variable data fields contain indicators and subfields.
+
+4.4.8.2  All fields that are not listed as lacking indicators and
+         subfields are treated as variable data fields containing
+         indicators and subfields.
+
+4.4.8.3  Variable data fields comprise two single-character indicators
+         then one or more subfields and an End of Field mark.  A
+         subfield comprises a delimiter character (0x1F), a        
+single-character subfield code, and a sequence of data
+         characters.  The End of Field mark terminates both the last
+         subfield and the variable data field.
+
+4.4.8.4  Start and end tags are output for each variable data field.
+         The tag name is the concatenation of the document type
+         (e.g. &quot;mrcb&quot;) and the field number (e.g. &quot;010&quot;).
+
+4.4.8.5  The values of the indicators are output as attributes in the
+         start tag for the data variable field.
+
+4.4.8.6  The attribute names are &quot;I1&quot; for Indicator 1 and &quot;I2&quot; for
+         Indicator 2.  Indicator 1 attribute values are prefixed with
+         &quot;i1-&quot;, and Indicator 2 values are prefixed with &quot;i2-&quot;.  Blank
+         indicator values (&quot; &quot;, or 0x20) are output as &quot;blank&quot;, and
+         fill indicator values (&quot;|&quot;) are output as &quot;fill&quot; (plus the
+         appropriate prefix).
+
+         Note that blank indicator values are represented by &quot;#&quot; in
+         the initial specification from the Network Development and
+         MARC Standards Office (and in many MARC-related documents),
+         but the blank character appearing in MARC records is always
+         &quot; &quot; (0x20).
+
+4.4.8.7  Start and end tags are output for each subfield of a variable
+         data field.  The tag name is the concatenation of the tag
+         name of the enclosing tag (e.g. &quot;mrcb010&quot;), &quot;-&quot;, and the
+         subfield identifier (e.g. &quot;a&quot;).
+
+4.4.8.8  Subfields of variable data fields do not have any
+         attributes.
+
+
+
+5.  CHARACTER CONVERSION
+------------------------
+
+5.1      The program will &quot;come with&quot; three possible levels of
+         character conversion -- minimal, upper register to lower
+         register, and all special characters.  The user will have the
+         option of specifying one of those three levels or of
+         supplying the filename for a user-supplied conversion
+         specification.
+
+5.2      User-supplied character conversion specifications will be
+         formatted as &quot;well-formed&quot; SGML data.
+
+
+
+6. ERROR HANDLING
+-----------------
+
+6.1      All error messages will be written to the log file.
+
+6.2      MARC records with errors will be skipped and not written to
+         the output.
+
+
+7.  INCOMPATIBILITIES BETWEEN PROGRAM ASSUMPTIONS AND USMARC
+------------------------------------------------------------
+
+7.1      Every field (except the Leader and the Directory) and every
+         subfield is assumed to be repeatable, although USMARC        
+explicitly specifies the repeatability or nonrepeatability of
+         each field and subfield.
+
+7.2      The number of, and field numbers of, the variable control
+         fields (which are the only fields that lack indicators and
+         subfields)can vary from USMARC and must therefore be
+         specified in the MARC Description File. (USMARC explicitly
+         specifies that fields 001 to 009 are the only variable
+         control fields.).
+
+7.3      The number of, and field numbers of, the fields that are
+         positionally-defined can vary from USMARC and must be
+         specified in the MARC Description File, although USMARC
+         explicitly specifies that the Leader and fields 006, 007, and
+         008 are the only positionally-defined fields.
+
+
+8.  REQUIRED AUXILIARY DATA FILES
+---------------------------------
+
+8.1 MARC Description File
+-------------------------
+
+This conversion utility is controlled by a single SGML file containing
+a description of the MARC record format.  The program itself is not
+hard-wired for any implementation of MARC records, and it reads the
+description file to find out what to expect in the MARC records.  An
+error is signaled if an input MARC record does not conform to the
+description.
+
+8.2 Character to Entity Conversion Files
+----------------------------------------
+
+These files control the conversion of characters in the MARC data to
+entities in the SGML output.  Two conversion files are
+required by the program -- an upper-register to entity conversion file
+and a character to entity conversion file.  An additional file may be
+specified by the user.  The mapping in the selected conversion file is
+converted into program code executed by the program to perform the
+character to entity conversion.
+
+The same conversion specification file format is used to specify
+entity to character conversion for the SGML to MARC record
+conversion program.
+
+
+9.  PROCESS FLOW
+----------------
+
+9.1 Main Process Flow
+---------------------
+
+ - Initialize and read command-line arguments
+
+ - Open log file
+
+ - Read control data
+
+ - Open input file
+
+ - Open output file
+
+ - Get additional user input (if required)
+ - Process file, one record at a time.
+
+ - If anything left at the end, warn about junk at
+   end of file 
+
+ - Close input file
+
+ - Close output file
+
+ - Write log file end message
+
+ - Close log file
+
+
+9.2 Per-record processing
+-------------------------
+
+For each MARC record:
+
+ - Split record into fields
+
+ - Validate leader
+
+ - Determine document type from data in Leader
+   character positions 06 and 07 
+
+ - Check fields against MARC Description File data
+
+ - Generate top-level start-tag and required &quot;format-type&quot; attribute as
+   determined from data in Leader character positions 06 and 07
+
+ - Process fields
+
+ - Generate top-level end-tag
+
+ - Output unvalidated SGML data
+
+
+9.3 Per-field processing
+------------------------
+
+For each field:
+
+ - If field starts new group
+
+    - Generate end tag for previous group, if
+      necessary
+
+    - Generate start tag for new group
+
+ - Process individual field according to field
+   type
+
+ - If field is the last field, generate end tag for
+   last group
+
+
+9.4 Non-positionally-defined fields without subfields and indicators
+--------------------------------------------------------------------
+
+For each field without indicators and subfields
+that is not positionally-defined:
+ - Generate start tag
+
+ - Generate field contents
+
+ - Generate end tag
+
+
+9.5 Positionally-defined fields
+-------------------------------
+
+For each positionally-defined field:
+
+ - Generate start tag
+
+ - For each positionally-defined subfield:
+
+    - Generate start tag with subfield contents as
+      &quot;value&quot; attribute
+
+ - Generate end tag
+
+
+9.6 Variable data fields
+------------------------
+
+For each variable data field
+
+ - Generate start tag with indicator values as &quot;i1&quot;
+   and &quot;i2&quot; attributes
+
+ - For each subfield
+
+    - Generate start tag
+
+    - Generate field contents
+
+    - Generate end tag
+
+ - Generate end tag
+
+ 
+11. TEST FILES
+--------------
+
+ - One clean MARC record
+
+ - Three or more clean MARC records
+
+ - Junk at end of file
+
+ - Junk at beginning of file
+
+ - Junk at both ends of file
+
+ - Corrupt leader
+
+ - Corrupt directory
+
+ - Record with multiple EOR marks 
+
+ - Invalid funny character
+ - Whitespace at beginning of file
+
+ - Whitespace at end of file
+
+</PRE>
+
+<P><BR>
+<A HREF="http://lcweb.loc.gov/marc/marcdtd/mainmanual.html#top">Go to top of document</A></P>
+
+<P>
+<HR><p></P>
+
+<H2><A NAME="B"></A><FONT COLOR="#FF0000">Appendix B. Tag-valid
+SGML to
+MARC Record Conversion Specification</FONT></H2>
+
+<P>
+<HR><p></P>
+
+<PRE>CONVERSION FROM TAGGED TEXT TO MARC RECORDS
+===========================================
+
+1.  FUNCTIONALITY
+-----------------
+
+The program(s) will serve as a generalized facility for converting
+from tagged text to MARC (ISO 2709) records.
+
+
+2.  INPUT/OUTPUT
+----------------
+
+2.1  Input
+----------
+
+Input to the conversion utility is a string of one or more tag-valid
+SGML instances of MARC data, marked up in the style of the MARC SGML
+DTDs.  The input data should be, and is assumed to be, valid parsed
+SGML, marked up according to a DTD.  However, since this conversion
+utility is table-driven and does not reference a DTD, the utility
+cannot verify the validity of the input data.
+
+
+2.2  Output
+-----------
+
+The output will be a datastream of MARC record data.
+
+The input must be and the output will be &quot;well-formed&quot;, but neither is
+guaranteed to be valid.  &quot;Well-formed&quot; means that the MARC output
+files will contain MARC records with correctly structured Leader,
+Directory, and variable control and data fields, followed by an
+end of record mark.  Leader fields 06 and 07 will be present and will
+contain values that are legal according to the MARC Description File.*
+With this small exception, no particular fields in the Leader,
+control, or data fields are required nor are particular subfields
+required within a given field.  Fields will be listed in the Directory
+in ascending numerical order.  In short, the record will bewell-structured MARC but
+need not meet the full requirements of valid
+USMARC records.  [*Footnote: Note that 06 and 07 in the Description
+File can be modified by the person running the conversion and are thus
+not limited to values specified in valid USMARC.]
+
+Unless an output filename is specified as a command option, the
+programs output will be written to the file &quot;stdout.mrc&quot;.
+
+
+2.3  Control of the Conversion Process
+--------------------------------------
+
+The conversion process will be table-driven, with top-level
+controlling data coming directly from the conversion operator and
+detailed controlling data provided in the (user modifiable) MARC
+Description File.  MARC SGML input is verified and a full
+MARC record is constructed according to the MARC Description
+File. There is no direct connection to the MARC DTDs except as is
+built into this file.
+
+
+3.  USER INTERFACE
+------------------
+
+The conversion utility will be a Perl script executed from the command
+line.  Command options may be entered on the command line.  One of the
+command-line options will be the name of a command file containing
+information equivalent to some or all of the command options.  Options
+specified on the command line will override the options specified in
+the command file.  Options controlling processing each have a default
+value that will be used if not specified either on the command line or
+in the command file.
+
+The format of the command line syntax is:
+
+sgm2mrc.pl [-command file]
+   [-sgmlconv | -registerconv | -charconv | -userconv file]
+   [-log file] [-o file] [-marcdesc file] input-file
+
+where:
+-command file
+        Read program command options from &quot;file&quot;
+
+-sgmlconv
+        Perform minimal, &quot;SGML sanity&quot; character        conversion using the built-in
+conversion table
+
+-registerconv
+        Convert upper-register characters to
+        lower-register characters using the
+        built-in conversion table
+
+        The minimal SGML conversion will also be performed.
+
+-charconv
+        Convert characters to entities using the
+        built-in conversion table
+
+        The minimal SGML conversion will also be performed.
+
+-userconv file
+        Perform character conversion using the
+        user-supplied conversion specification
+        in &quot;file&quot;
+
+        An error will be signaled if &quot;file&quot; is not
+        specified or if &quot;file&quot; cannot be opened,
+        or if &quot;file&quot; is not a file of the correct
+        format.
+
+        The minimal SGML conversion will also be performed.
+
+-log file
+        Write the output log to &quot;file&quot;.  If this
+        option is not specified, the log will be
+        written to &quot;mrc2sgm.log&quot; in the current
+        directory.
+
+-o file
+        Write the tagged-text output to &quot;file&quot;
+        instead of to the file &quot;stdout.mrc&quot;.
+
+-marcdesc file
+        Read the MARC Description File named
+        &quot;file&quot; instead of the default MARC
+        Description File that the program automatically
+        reads on initialization.
+
+input-file
+        The name of the input MARC record file
+
+4.  ASSUMPTIONS
+---------------
+
+4.1  Hardware/Operating Systems
+-------------------------------
+
+Any IBM PC or clone that runs DOS, either natively, or under Windows
+(3.1x, 95, 97, NT, etc) or OS/2, or any UNIX system for which Perl
+and nsgmls are available.
+
+4.2  Software
+-------------
+
+The conversion program will be written in Perl 5 (Practical Extraction
+and Report Language).  The advantages of Perl are:
+
+ - Perl is free;
+
+ - Perl is available for a wide variety of
+   platforms, including DOS, Windows 3.1x, Windows
+   95, Windows NT, OS/2, Macintosh, and UNIX;
+
+ - Perl scripts are interpreted, so it is not
+   necessary to recompile the conversion script to
+   use it on a different platform;
+
+ - There is a free SGML function library that
+   simplifies the manipulation of SGML text.
+
+ - Perl is optimized for scanning text; and
+
+ - Perl is good with binary data.
+
+ - Perl can read in external data files, such as a
+   user-defined character conversion table, and
+   evaluate it as part of the program rather than
+   just store it as data;
+
+Being interpreted, Perl does not execute as fast as a compiled
+language such as C, but the script should still execute sufficiently
+quickly for the satisfaction of most operators.  A large part of the
+speed difference between Perl and a compiled program is the startup
+time while the script is being interpreted into byte codes, so theprogram will be more
+efficient, per-record, for large data sets.
+
+
+4.3  File Size
+--------------
+
+It is not known how large the SGML input files will be.
+MARC record files could be 1 MByte and could even be 1 GByte, and with
+the addition of SGML-style tags which include attribute values, the
+tagged-text versions of MARC records will be significantly larger.
+The traditional Perl approach of slurping everything into memory and
+spitting it out again is going to break for somebody sometime.
+Instead, the program will read in a chunk of data, find the first
+record element and process it, find the next record element and
+process it, and so on until you're left with a partial record (or
+reach the end of the file in the first chunk).  If you have not found
+the end tag for the current record element, append the next chunk of
+the file and carry on.
+
+
+
+5. HARDWIRED KNOWLEDGE ABOUT MARC AND TAGGED TEXT DATA
+------------------------------------------------------
+
+5.1 Record, Field, and Subfield Delimiters in MARC Records
+
+5.1.1    A MARC record will be terminated by a end of record (eor)
+         character (0x1D).
+
+5.1.1    All numbered fields and the Directory (but not the Leader)
+         will be output followed by an end of field (eof) character
+         (0x1E).
+
+5.1.1    All subfields will be output preceded by a subfield delimiter
+         character (0x1F).
+
+
+5.2 Leader
+
+5.2.1    Some parts of the Leader are contained within the tag-valid
+         SGML text; other parts are constant for all MARC records and
+         will be automatically inserted in the output.  The length
+         portion of the Leader must be calculated once the rest of the
+         MARC record is constructed.
+5.2.2    The Leader contains the length of the MARC record, from the
+         first character of the Leader to the end of record character
+         at the end of the record.  The length is calculated after all
+         of the fields and subfields have been processed and the
+         Directory has been built and is then inserted into character
+         positions 0 to 5 of the Leader.
+
+5.2.3    The length portion of the Leader is right-justified, with
+         unused character positions padded with zeroes.
+
+5.2.4    It is an error if the length of the MARC record exceeds
+         99,999, which is the maximum length that may be recorded in
+         the Leader.
+
+5.2.5    Some of the Leader character positions are filled with
+         constant data as follows:
+
+                Character Position      Data
+                        10                2
+                        11                2
+                        20                4
+                        21                5
+                        22                0
+                        23                0
+
+5.2.6    The Leader contains the combined length of the Leader and the
+        Directory (including the eof character at the end of the
+        Directory).  Since the Leader has a fixed length, this is
+        effectively the length of the Directory plus 24 characters.
+        This length is inserted into character positions 12 to 16 of
+        the Leader.
+
+5.3 Top-level Tags (DTD Level)
+
+5.3.1    The start-tag format is:
+
+         &lt;[dtd_type]&gt;
+
+5.3.2    The top-level tags specifying the DTD type, e.g. <mrca> or
+         <mrcb> and their required &quot;format-type&quot; attribute are
+         discarded.  They do not produce any output, they do not
+         affect any processing, and they are not used in any
+         cross-checking with any other tags or with the MARC
+         Description File.
+5.3.3    The descriptions within this specification of other tags
+         includes a &quot;dtd_type&quot; portion.  This portion of tag names has
+         the same format as the top-level tag name, and it, too, does
+         not affect any processing or output.
+
+
+5.4 Leader Elements and Subelements
+
+5.4.1    The start-tag format of the Leader element is:
+
+         &lt;[dtd_type]ldr-[format_type]&gt;
+
+5.4.2    The start-tag format of the subelements of the Leader element
+         is:
+
+         &lt;[dtd_type]ldr-[format_type]-[cp] value=&quot;[cp value]&quot;&gt;
+
+         where &quot;cp&quot; indicates the character position of the data in
+         the &quot;value&quot; attribute.
+
+5.4.4    The contents of the &quot;value&quot; attributes of the elements for
+         Leader character positions 06 and 07 are used to determine,
+         from the MARC Description File, the document type and format
+         type, and are used when selecting which portions of the MARC
+         Description File to use.
+
+5.4.5    It is an error if the MARC Description File does not contain
+         a value corresponding to the values in the tagged-text for
+         Leader character positions 06 and 07.
+
+5.4.6    The data from each &quot;value&quot; attribute of each subelement of
+         the Leader element is inserted in the Leader of the output
+         MARC record in the character position indicated by the &quot;cp&quot;
+         portion of the subelement tag name.
+
+5.4.7    If the &quot;value&quot; attribute contains the word &quot;fill&quot; or
+&quot;blank&quot;,
+         then the character position is output containing the fill
+         character (&quot;|&quot;) or the blank character (&quot; &quot; or 0x20),
+         respectively.
+
+5.4.8    The contents of the &quot;value&quot; attribute will otherwise be
+         treated as a string.
+
+5.4.9    If the start-tag does not contain a &quot;value&quot; attribute, the
+         character position is output containing the fill character         (&quot;|&quot;).
+
+5.4.10   Character positions within the Leader (that are not constants
+         or the record length) for which no data is included in the
+         SGML instance will be output containing the fill
+         character (&quot;|&quot;).
+
+
+5.5 Grouping Tags
+
+5.5.1    The SGML instance contains &quot;grouping tags&quot; that are
+         not present in the output MARC records.  The start-tag format
+         is:
+
+         &lt;[dtd_type]-[group_name]&gt;
+
+5.5.2    The valid grouping tags are listed in the MARC Description
+         File.
+
+5.5.3    The MARC Description File may contain multiple lists of valid
+         grouping tags.  The grouping tag list is selected based upon
+         the values of the contents of the &quot;value&quot; attributes of the
+         elements for Leader character positions 06 and 07.  The value
+         of these character positions determines a document type, and
+         the document type determines which list is used.
+
+5.5.4    It is an error if any grouping tags are present in the tagged
+         text input but are not in the selected list in the MARC
+         Description File.
+
+5.5.5    No output is generated for the grouping tags.
+
+
+5.6 Positionally-defined Fields
+
+5.6.1    The start-tag format is:
+
+         &lt;[dtd_type][marc_tag]-[subtype]&gt;
+
+5.6.2    The only information from the start-tag that is used is the
+         &quot;marc_tag&quot; portion, which is the field number.
+
+
+5.7 Clusters Within Positionally-defined Fields
+5.7.1    The start-tag format is:
+
+         &lt;[dtd_type][marc_tag]-[subtype]-[cluster]
+                value=&quot;[content of position]&quot;&gt;
+
+5.7.2    The contents of the &quot;value&quot; attribute are inserted into the
+         data for the field at the character offset specified by the
+         &quot;cluster&quot; portion of the tag name.
+
+5.7.3    The &quot;cluster&quot; portion of the tag name may be a number or a
+         number range.
+
+5.7.4    The range of numbers in the &quot;cluster&quot; portion determines how
+         many character positions in the field data are used for the
+         field data.  If the data in the &quot;value&quot; attribute does not
+         use all of the available character positions, it will be
+         padded with fill (&quot;|&quot;) characters, and if it exceeds the
+         number of available character positions, it will be
+         truncated.
+
+5.7.5    If the &quot;value&quot; attribute contains the words &quot;fill&quot; or
+         &quot;blank&quot;, then all of the character positions are output
+         containing the fill character (&quot;|&quot;) or the blank character
+         (&quot; &quot; or 0x20), respectively.
+
+5.7.6    The contents of the &quot;value&quot; attribute will otherwise be
+         treated as a string, so, for example, the values &quot;010&quot; and
+         &quot;10&quot; are different strings: one is three characters long,
+         and the other, two.  If three character positions are used
+         for the field data, the two values would appear as &quot;010&quot; and
+         &quot;10|&quot;, respectively.  If two character positions are
+         available, the two values would appear as &quot;01&quot; and &quot;10,
+         respectively.
+
+5.7.7    If the start-tag does not contain a &quot;value&quot; attribute, the
+         character positions are output containing the fill character
+         (&quot;|&quot;).
+
+5.7.8    Character positions within the positionally-defined field for
+         which no data is included in the SGML instance will
+         be output containing the fill character (&quot;|&quot;).
+
+5.7.9    Information in the MARC Description File determines the
+         maximum length of the positionally-defined field, but no
+         match is made between the cluster numbers and ranges         specified in the
+MARC Description File and the cluster
+         numbers and ranges in the tag names in the SGML
+         instance.
+
+
+5.8 Other Fields Without Indicators or Subfields
+
+5.8.1    The start-tag format is:
+
+         &lt;[dtd_type][marc_tag]&gt;
+
+5.8.2    Fields without indicators or subfields are listed as such in
+         the MARC Description File.  They also do not have &quot;i1&quot; and
+         &quot;i2&quot; attributes.
+
+5.9 Fields with Subfields
+
+5.9.1    The start-tag format is:
+
+         &lt;[dtd_type][marc_tag] i1=&quot;i1-[1st ind. value]&quot;
+                i2=&quot;i2-[2nd ind. value]&quot;&gt;
+
+         where &quot;marc_tag&quot; is the MARC field number.
+
+5.9.2    Start tags for fields with subfields have two indicator
+         attributes, &quot;i1&quot; and &quot;i2&quot;, and are not listed in the MARC
+         Description File as fields that lack indicators and
+         subfields.
+
+5.9.3    The attributes may appear in the start-tag in any order.
+
+5.9.4    The indicators are output as the first two characters of the
+         field.
+
+5.9.5    The &quot;i1&quot; and &quot;i2&quot; attribute values start with &quot;i1-&quot;
+and &quot;i2-&quot;
+         prefixes, respectively.  These prefixes are ignored when
+         processing and do not appear in the output.
+
+5.9.6    &quot;i1&quot; or &quot;i2&quot; attribute values (wthout prefix) of &quot;fill&quot;
+are
+         output as the fill character (&quot;|&quot;), and values of &quot;blank&quot; are
+         output as the blank character (&quot; &quot; or 0x20).
+
+5.9.7    Alphabetic values of &quot;i1&quot; and &quot;i2&quot; attributes (without
+         prefix) are output as lowercase letters.
+5.9.8    &quot;i1&quot; and &quot;i2&quot; attribute values (without prefix and other than
+         &quot;blank&quot; or &quot;fill&quot;) that are longer than one character will be
+         truncated to a single character.
+
+5.9.9    An End Of Field character (0x1D) is output after the field
+         contents.
+
+5.10 Subfields in Fields with Subfields
+
+5.10.1   The start-tag format is:
+
+         &lt;[dtd_type][marc_tag]-[subfield_code]&gt;
+
+5.10.2   The subfield code is extracted from the tag name.
+
+5.10.3   Subfield codes that are longer than one character will be
+         truncated to a single character.
+
+5.10.4   The data between the start and end tags is the subfield data.
+
+5.10.5   The subfield code is output preceded by a subfield delimiter
+         (0x1F) and followed by the subfield data.
+
+5.10.6   Subfields will be output in order of subfield code.
+
+5.11 Directory
+
+5.11.1   The Directory is not present in the SGML instance
+         of the MARC record and must be generated on output.
+
+5.11.2   The Directory contains one 12-character entry for each
+         numbered field element in the record.
+
+5.11.3   The 12 characters of the Directory entry comprise three
+         characters for the field number, four characters for the
+         field length, and five characters for the relative starting
+         position of the field.
+
+5.11.4   The field number is extracted from the start-tag for the
+         field.
+
+5.11.5   The field length, for fields with indicators and subfields,
+         is the total of the indicators (2 character positions) and
+         the subfield delimiter, subfield code, and subfield data of
+         each subfield plus the EOF delimiter; and, for fields without         indicators
+and subfields, is the length of the field data
+         plus the EOF delimiter.
+
+5.11.6   The relative starting position is calculated based on the
+         starting position of the previous field (if any).  In the
+         output MARC record, the first character of the first field is
+         at offset 00000, so the field's starting position is 00000.
+         The second and subsequent fields begin immediately following
+         their previous record, so their starting postions are the
+         starting position of the previous record plus the length of
+         the previous record.
+
+5.11.7   All numbers in the Directory entry are right-justified with
+         unused positions containing zeroes.
+
+
+6. ERROR HANDLING
+-----------------
+
+6.1      All error messages will be written to the log file.
+
+6.2      SGML records with errors will be skipped and not
+         written to the output.
+
+
+7.  CHARACTER CONVERSION
+------------------------
+
+7.1      The program will &quot;come with&quot; three possible levels of
+         character conversion -- minimal, upper register to lower
+         register, and all special characters.  The user will have the
+         option of specifying one of those three levels or of
+         supplying the filename for a user-supplied conversion
+         specification.
+
+7.2      User-supplied character conversion specifications must be
+         formatted as &quot;well-formed&quot; SGML data with specific tag names.
+
+
+
+8.  Incompatibilities Between Program Assumptions and USMARC
+------------------------------------------------------------
+
+8.1      Every field (except the Leader and the Directory) and every
+         subfield is assumed to be repeatable, although USMARC         explicitly
+specifies the repeatability or nonrepeatability of
+         each field and subfield.
+
+8.2      The number of, and field numbers of, the variable control
+         fields (which are the only fields that lack indicators and
+         subfields)can vary from USMARC and must therefore be
+         specified in the MARC Description File. (USMARC explicitly
+         specifies that fields 001 to 009 are the only variable
+         control fields.).
+
+8.3      The number of, and field numbers of, the fields that are
+         positionally-defined can vary from USMARC and must be
+         specified in the MARC Description File, although USMARC
+         explicitly specifies that the Leader and fields 006, 007, and
+         008 are the only positionally-defined fields.
+
+
+9.  REQUIRED AUXILIARY DATA FILES
+---------------------------------
+
+9.1 MARC Description File
+-------------------------
+
+This conversion utility is controlled by a single SGML file containing
+a description of the MARC record format.  The program itself is not
+hard-wired for any implementation of MARC records or existing MARC
+DTDs, and it reads the description file to find out what to expect in
+the SGML text and what to output for the MARC records.  An
+error is signaled if an input tagged record does not conform to the
+description, and SGML records with errors are not converted
+to MARC records.
+
+9.2 Character to Entity Conversion Files
+----------------------------------------
+
+These files control the conversion of entities in the SGML
+to characters or sequences of characters in the MARC data.  Two
+conversion files are required by the program -- an entity to
+upper-register character conversion file and an entity to character
+conversion file.  An additional file may be specified by the user.
+The mapping in the selected conversion file is converted into program
+code executed by the program to perform the entity to character
+conversion.
+
+The same conversion specification file format is used to specifycharacter to entity
+conversion for the MARC record to SGML
+conversion program.
+
+
+10.   Process Flow
+-----------------
+
+The program will operate based on the hard-wired knowledge of MARC and
+SGML data listed previously.
+
+10.1  Main Process Flow
+----------------------
+
+ - Initialize and read command-line arguments
+
+ - Open log file
+
+ - Read control data
+
+ - Open input file
+
+ - Open output file
+
+ - Get additional user input (if required)
+
+ - Process file, one SGML record element at a time
+
+ - If anything left at the end, warn about junk at
+   end of file 
+
+ - Close input file
+
+ - Close output file
+
+ - Write log file end message
+
+ - Close log file
+
+
+10.2  Per-record-element processing
+-----------------------------------
+
+For each record element:
+
+ - Process each start and end tag as an &quot;event&quot; and build up MARC   record data
+structure
+
+   If the tag is not a top-level or Leader tag, then the &quot;type&quot; of the
+   tag and the action taken is determined by the information in the
+   MARC Description File for the field number in the &quot;marc_tag&quot;
+   portion of the tag name.
+
+ - Discontinue processing if the SGML record element has an
+   error
+
+ - Output MARC record
+
+
+10.3 Top-level (<mrca>, <mrcb>) tag
+----------------------------------
+
+10.3.1 Start tag
+
+ - Reset per-record variables
+
+10.3.1 End tag
+
+If an error has not occurred:
+
+ - Calculate Directory
+
+ - Insert fixed portions of Leader data into correct character
+   positions in Leader data structure
+
+ - Calculate total record length and output Leader
+
+ - Output Directory
+
+ - Output variable control and data fields in ascending numerical
+   order
+
+ - Output end of record character
+
+
+10.4 Grouping tag: &lt;[dtd_type]-[group_name]&gt;
+-------------------------------------------
+
+10.4.1 Start tag
+
+ - Extract group name from tag name
+ - Check group name in list from MARC Description File
+
+10.4.2 End tag
+
+ - No action
+
+
+10.5 Leader tag: &lt;[dtd_type]ldr&gt;
+-------------------------------
+
+10.5.1 Start tag
+
+ - No action
+
+10.5.2 End tag
+
+ - Check that Leader 06 and 07 character positions have valid data
+
+
+10.6 Other positionally-defined field: &lt;[dtd_type][marc_tag]-[subtype]&gt;
+-----------------------------------------------------------------------
+
+10.6.1 Start tag
+
+ - Extract field number from tag name
+
+ - Check that field number is listed in MARC Description File
+
+ - Create data structure for field data with length from MARC
+   Description File and pre-fill with fill characters
+
+10.6.2 End tag
+
+ - Save field number and field data in MARC record data structure
+
+
+10.7 Positionally-defined field data cluster:
+--------------------------------------------
+
+     &lt;[dtd_type][marc_tag]-[subtype]-[cluster] value=&quot;&quot;&gt;
+
+10.7.1 Start tag
+
+ - Extract cluster number and cluster contents from start tag
+ - Convert &quot;blank&quot; or &quot;fill&quot; strings to blank or fill characters,
+   respectively
+
+ - Insert cluster contents into field data structure for the
+   positionally-defined field.  Cluster data will be truncated or
+   padded as defined previously.
+
+10.7.2 End tag
+
+There are no end tags
+
+
+10.8 Other field without indicators or subfields: &lt;[dtd_type][marc_tag]&gt;
+-----------------------------------------------------------------------
+
+10.8.1 Start tag
+
+ - Extract field number from tag name
+
+ - Check that field number is listed in MARC Description File
+
+   If not listed as field without indicators and subfields, process as
+   field with indicators and subfields
+
+10.8.2 End tag
+
+ - Save field number and element contents in MARC record data structure
+
+
+10.9 Fields with indicators and subfields: &lt;[dtd_type][marc_tag] i1=&quot;&quot;
+i2=&quot;&quot;&gt;
+----------------------------------------------------------------------------
+
+10.9.1 Start tag
+
+ - Extract field number from tag name
+
+ - Extract indicator attributes
+
+ - Convert indicator attribute values into correct MARC values
+
+10.9.2 End tag
+
+ - Save field number, indicator values, and subfield data in MARC
+   record data structure
+
+10.10 Subfield of field with indicators and subfields:
+----------------------------------------------------
+
+      &lt;[dtd_type][marc_tag]-[subfield_code]&gt;
+
+10.10.1 Start tag
+
+ - Extract subfield code from tag name
+
+10.10.2 End tag
+
+ - Save subfield code and element content for later inclusion in MARC
+   record data structure
+
+ 
+11. Test Files
+--------------
+
+ - SGML text such that generated MARC record exceeds 99,999
+   characters
+
+ - One clean SGML record that would parse by one of the MARC
+   DTDs
+
+ - Three or more clean SGML record that would parse by one
+   of the MARC DTDs
+
+ - Junk at end of file
+
+ - Junk at beginning of file
+
+ - Junk between record elements
+
+ - Junk at both ends of file
+
+ - Corrupt Leader markup
+
+ - Corrupt Directory markup
+
+ - Corrupt markup for field without indicators or subfields
+
+ - Corrupt positionally-defined field markup
+ - Corrupt field with indicators and subfields
+
+ - Missing &quot;value&quot; attribute on cluster tag
+
+ - Too long &quot;value&quot; attribute on cluster tag
+
+ - Too short &quot;value&quot; attribute on cluster tag
+
+ - &quot;blank&quot; as &quot;value&quot; attribute data on cluster tag
+
+ - &quot;fill&quot; as &quot;value&quot; attribute data on cluster tag
+
+ - &quot;blank&quot; as &quot;i1&quot; and &quot;i2&quot; attribute data
+
+ - &quot;fill&quot; as &quot;i1&quot; and &quot;i2&quot; attribute data
+
+ - Invalid entity reference
+
+ - Whitespace at beginning of file
+
+ - Whitespace at end of file
+
+</PRE>
+
+<P><BR>
+<A HREF="http://lcweb.loc.gov/marc/marcdtd/mainmanual.html#top">Go to top of document</A></P>
+
+<P><BR>
+
+<HR><BR>
+Go to the <A HREF="http://lcweb.loc.gov/marc/marc.html">MARC Home Page</A>
+<BR>
+Go to the <A HREF="http://lcweb.loc.gov/">Library of Congress Home Page</A>
+<BR>
+
+<HR><IMG SRC="http://lcweb.loc.gov/homepage/lc2.gif" ALT="" HEIGHT=46 WIDTH=91> <B>Library of
+Congress</B><BR>
+<p></P>
+
+<ADDRESS><!--help desk email start -->
+<a href="http://www.loc.gov/help/help-desk.html">Library of Congress Help Desk</a>
+<!--help desk email end -->
+
+(08/14/1998)</ADDRESS>
+
+
+<script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+</HTML>

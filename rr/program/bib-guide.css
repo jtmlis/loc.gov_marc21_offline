@@ -1,0 +1,160 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #333333;
+}
+td {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #333333;
+}
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #333333;
+	
+}
+dd {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #666666;
+	margin-left: 10pt;
+}
+dt {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #000066;
+
+}
+.larger {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	font-weight: bold;
+}
+.caption {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+}
+a.white {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #EEEEEE;
+	text-decoration: none;
+}
+a.white:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+.white-text {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #EEEEEE;
+}.drop-box {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+}
+h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16pt;
+	color: #660000;
+}
+h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14pt;
+	font-weight: bold;
+	color: #000066;
+}
+.largecap {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14pt;
+	color: #996666;
+	font-weight: bold;
+
+}
+.blue-header {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 600;
+	font-size: 11pt;
+	color: #663333;
+}
+address {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+}
+.selected {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #660000;
+}
+.burg-bold {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	color: #660000;
+}
+h3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13pt;
+	font-weight: bold;
+	color: #996666;
+}
+ul li {
+	line-height: 18px;
+	list-style-type: square;
+	margin-left: -20px;
+}
+pre {
+	font-family: "Courier New", Courier, mono;
+	font-size: 10pt;
+
+}
+.italic {
+	font-style: italic;
+}
+.bold {
+	font-weight: bold;
+}
+BOLD {
+	font-weight: bold;
+}
+strong {
+	color: #000066;
+}
+
+.background-red {
+	background-color: #660000;
+	background-image: url(https://www.loc.gov/rr/program/images/spacer-red.gif);
+}
+.background-gray {
+	background-color: #dddddd;
+	background-image: url(https://www.loc.gov/rr/program/images/spacer-gray.gif);
+}
+
+.menuLetter {	
+font-size: 12pt;
+font-weight: bold;
+}
+.redtext {	
+color: #990000;
+font-weight: bold;
+}
+/********************
+Lists and icon styles
+********************/
+/* external links */
+a.external {
+background: transparent url(../../img-std/loc_sprite_ss.png) 100% 4px no-repeat;
+padding: 0 10px 0 0;
+}
+a.external:hover, 
+a.external:focus {background-position: 100% -12px;}
+a.external span {
+display:none;
+} 

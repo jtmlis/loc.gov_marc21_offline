@@ -1,0 +1,158 @@
+/* CSS Document */
+#main_menu {
+	width: auto;
+	height: auto;
+	margin: 0px 0px 0px 208px;
+	font:90% verdana, helvetica, sans-serif;
+	text-align:left;
+	padding: 0;
+	/* border: 1px solid #d7e9f1; */
+}
+#main_left {
+	width: 257px;
+	height: auto;
+	float: left;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	border: 0;
+	background: transparent;
+}
+#main_left h2 {
+	font: bold 95%/100% Georgia, "Times New Roman", Times, serif;
+	color: #36c;
+	margin: 0;
+	padding: 10px 0px 10px 10px;
+	background: transparent;
+}
+#main_left h2 span,#right_top h2 span, #right_mid h2 span, #right_bottom h2 span {
+	color: #9c0;
+}
+#main_left a, #main_right a {
+	font-size: 75%;
+	margin: 0px;
+	padding: 0px;
+	font-weight: 100;
+}
+a#spot_link1, a#spot_link2, a#spot_link3, a#spot_link4, a#spot_link5 {
+	font:bold 110% Verdana, Arial, Helvetica, sans-serif;
+	margin: 0px 0px 5px 0px;
+}
+#left_mid {
+	margin: 0;
+	padding: 0px 0px 10px 0px;
+	background: transparent;
+	color: #999;
+	font-size: 90%;
+}
+#main_left #left_mid h2 {
+	clear: left;
+	font: bold 105%/100% Georgia, "Times New Roman", Times, serif;
+	color: #36c;
+	margin: 0px 0px 0px 0px;
+	border-top:  0;
+	padding: 10px 0px 10px 10px;
+	background: transparent url(https://www.loc.gov/aba/images/h2_bl_dots.gif) top left no-repeat;
+}
+#left_mid p {
+	font-size: 90%;
+	color: #666;
+	padding: 0px 10px 5px 10px;
+	margin: 0px;
+}
+#left_mid p a {
+	font-size: 105%;
+}
+#left_mid img {
+	float: left;
+	border: 0;
+	margin: 0px 5px 10px 10px;
+}
+#left_mid ul {
+	/*border-top: 0px dotted #ccc;*/
+	padding: 0px 0px 0px 10px;
+	margin: 0px 2px 10px 0px;
+	font-size: 90%;
+}
+#left_mid ul li {
+	list-style-type: none;
+	font: normal 105%/110% Verdana, Arial, Helvetica, sans-serif;
+	background: transparent url(https://www.loc.gov/aba/images/arrow.gif) no-repeat 0px 5px;
+	padding: 2px 5px 2px 15px; 
+	margin: 0px;
+}
+#left_mid ul li a:link, #left_mid ul li a:hover, #left_mid ul li a:visited {
+	font: normal 100%/100% Verdana, Arial, Helvetica, sans-serif;
+}
+#main_right {
+	width: 253px;
+	height: auto;
+	font-size: 90%;
+	margin: 0px 0px 0px 270px;
+	border: 0;
+	border-left: 1px solid #d7e9f1;
+	padding: 0px 0px 10px 0px;
+}
+#right_top, #right_mid, #right_bottom {
+	margin: 0;
+	padding: 0px 0px 5px 0px;
+	color: #999;
+	font-size: 90%;
+}
+#right_mid, #right_bottom {
+	border-top: 0px solid #9cf;
+}
+#right_top h2, #right_mid h2, #right_bottom h2 {
+	font: bold 120%/100% Georgia, "Times New Roman", Times, serif;
+	color: #06c;
+	margin: 0;
+	border-top:  0;
+	padding: 10px 0px 12px 10px;
+	background: transparent url(https://www.loc.gov/aba/images/h2_bl_dots.gif) top left no-repeat;
+}
+#right_top h2 {
+	border-top: 0;
+	background: transparent;
+}
+#right_top ul, #right_mid ul, #right_bottom ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px 0px 10px 10px;
+	font-size: 100%;
+}
+#right_top ul li, #right_mid ul li, #right_bottom ul li {
+	list-style-type: none;
+	display: block; 
+	padding: 2px 2px 2px 10px; 
+	background: transparent url(https://www.loc.gov/aba/images/gt.gif) no-repeat 0px 5px;
+	margin: 0px;
+	font: normal 105%/100% Verdana, Arial, Helvetica, sans-serif;
+	color: #666;
+}
+#right_top ul li a:link, #right_top ul li a:hover, #right_top ul li a:visited, #right_mid ul li a:link, #right_mid ul li a:hover, #right_mid ul li a:visited, #right_bottom ul li a:link,#right_bottom ul li a:hover, #right_bottom ul li a:visited {
+	font: normal 100%/105% Verdana, Arial, Helvetica, sans-serif;
+}
+p.space {
+	display: block;
+	height: 80px;
+}
+a.ar-more {
+padding: 0 8px 0 0 ;
+background: transparent url(https://www.loc.gov/img-std/arrow-dbl-right.gif) right 5px no-repeat;
+font-weight: 100;
+margin: 0px;
+}
+a.ar-back {
+padding: 0 0 0 8px ;
+background: transparent url(https://www.loc.gov/img-std/arrow-dbl-left.gif) left 5px no-repeat;
+font-weight: normal;
+}
+a.ar-more-gray {
+padding: 0 8px 0 0 ;
+background: transparent url(https://www.loc.gov/img-std/arrow-dbl-gray-right.gif) right 5px no-repeat;
+font-weight: normal;
+}
+a.ar-back-gray {
+padding: 0 0 0 8px ;
+background: transparent url(https://www.loc.gov/img-std/arrow-dbl-gray-left.gif) left 5px no-repeat;
+font-weight: normal;
+}

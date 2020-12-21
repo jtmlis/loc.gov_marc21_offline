@@ -1,0 +1,619 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html40/loose.dtd">
+<html>
+<head>
+<title>Dublin Core to MARC Crosswalk</title>
+<base href="">
+<meta name="description" content="Crosswalk from Dublin Core elements to MARC 21 and GILS data fields.">
+<meta name="keywords" content="MARC Dublin Core Crosswalk">
+<meta name="author" content="Library of Congress Network Development and MARC Standards Office">
+<meta http-equiv="Content-Type" content=
+"text/html; charset=utf-8">
+<style type="text/css">
+/* <![CDATA[ */
+body {margin-left: 2.5em; margin-right: 2.5em;  background-color: #FFFFFF;}
+h1 {font-size: 150%; text-align: center; margin-bottom: 0;}
+h2 {font-size: 125%; margin-bottom: -0.5em;}
+h3, h4 {font-size: 115%;}
+li {list-style: none; margin-bottom: 0.5em;}
+table {height: 1px; border-collapse: collapse; border: 1px solid black;}
+td, th {height: 1px; border: 1px solid black; padding: 5px;}
+thead {background-color: #CCCCCC;}
+tr {vertical-align: top;}
+.term {font-weight: bold; margin-bottom: -0.75em;}
+.byline {font-weight: bold; text-align: center;}
+.label, .listheader {font-weight: bold;}
+/* ]]> */       
+</style>
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+<body>
+<h1>Dublin Core to MARC Crosswalk</h1>
+
+<p class="byline">Network Development and MARC Standards Office
+<br> Library of Congress</p>
+<p><span class="label">Date issued:</span> 2008-04-23</p>
+<p><span class="label">Previous version:</span> <a href="dccross_20010312.html">http://www.loc.gov/marc/dccross_20010312.html</a></p>
+
+<h2><strong>I. Introduction</strong></h2>
+
+<p>  
+The following is a crosswalk between the metadata terms in the <a href="http://dublincore.org/documents/dces/">Dublin
+Core Element Set</a> and <a href="bibliographic/ecbdhome.html">MARC 21 </a>bibliographic data elements. The crosswalk may be used for conversion of Dublin Core metadata  into MARC, for instance as
+a tool for developing XSLT transformations. For conversion of MARC 21 into Dublin Core, the <a href="marc2dc.html">MARC to Dublin Core Crosswalk</a>
+ should be used, since in this conversion many fields are mapped into a single  Dublin Core element.</p>
+   
+<p>
+In the Dublin Core to MARC mapping, two mappings are provided, one for unqualified Dublin
+Core elements (i.e. the main fifteen elements as in <a href="http://dublincore.org/documents/dces/">Dublin Core Metadata Element Set, version 1.1</a>) and the other for qualified (those in addition that appear only in <a href="http://dublincore.org/documents/dcmi-terms/">DCMI Metadata Terms</a>). The latter includes both refinements of the original fifteen as well as syntax and vocabulary encoding schemes.</p>
+
+
+<p>MARC 21 fields are listed with field number, then two indicator values with field name/subfield name in parentheses. If both the field and subfield have the same name, the subfield name is not included.  A blank
+(H'20') is indicated in this document by &quot;#&quot;.  The label is a shortened form of the element name.</p>
+  
+<p>
+Definitions are taken from <a href="http://dublincore.org/documents/dces/">Dublin Core Metadata Element Set, Version 1.1: Reference Description</a>.  For further information about Dublin Core elements,
+including application notes (given in Comment), refer to that document.  All Dublin Core elements are optional and repeatable.  In this document elements are listed in alphabetical order
+by Dublin Core  label.</p>
+
+
+<h2>II. Dublin Core to MARC  Crosswalk (15 elements in version 1.1 and refinements)</h2>
+
+<p class="term">Contributor -- An entity responsible for making contributions to the resource.</p>
+<ul>
+<li><span class="listheader">Unqualified:</span>
+<ul>
+<li>720 ##$a (Added Entry--Uncontrolled Name/Name)</li> 
+</ul>
+</li>
+<li><span class="listheader">Qualified:</span>
+<ul>
+<li>Element refinements may be used from the MARC relator list for those specified roles that refine dc:contributor. If DC metadata includes a role refinement (only used for Contributor), use the term in 720$e or the code in 720$t. See: <a href="http://dublincore.org/usage/documents/relators/index.shtml#A1">
+MARC Relator Terms and Dublin Core</a></li>
+</ul>
+</li>
+</ul>
+
+<p>Note: there is no way to specify whether the Contributor is a person or organization because it is not in the Dublin Core data. If it can reasonably be determined that the contributor is a person or organization, fields 700 1#$a (Added Entry--Personal Name) or 710 2#$a (Added Entry--Corporate Name) may be used. </p>
+
+<p class="term">Coverage -- The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which he resource is relevant.</p>
+
+<ul>
+<li><span class="listheader">Unqualified:</span>
+<ul>
+<li>500$a (General note)</li>
+</ul>
+</li>
+<li><span class="listheader">Qualified:</span>
+<ul>
+<li>Spatial: 522  ##$a (Geographic Coverage Note)</li> 
+<li>Temporal: 513 ##$b (Type of Report and Period Covered Note/Period
+covered)</li>
+</ul>
+</li>
+</ul>
+
+
+<ul>
+<li><span class="listheader">Syntax encoding schemes:</span> 
+<ul>
+<li>Box: 507$a (Scale Note for Graphic Material)</li>
+<li>ISO3166: 043$c with $2 iso3166 
+(Geographic Area Code/ISO code)</li>
+<li>Point: 507$a (Scale Note for Graphic Material)</li>
+</ul>
+</li>
+</ul>
+
+<ul>
+<li><span class="listheader">Vocabulary encoding scheme under spatial:</span> 
+<ul>
+<li>TGN: 651 #7 $a (Subject Added Entry--Geographic Name) 
+with $2=tgn</li>
+<li> Period: 045 0# $b (Time Period of Content/Formatted 9999 B.C. through C.E. time period)</li>
+</ul> 
+</li>
+</ul>
+
+<p class="term">Creator -- An entity primarily responsible for making 
+the resource.</p>
+
+<ul>
+<li><span class="listheader">Unqualified:</span>
+<ul>
+<li>720 ##$a (Added Entry--Uncontrolled Name/Name) 
+with $e=author</li>
+</ul>
+</li>
+</ul>
+
+<p>Note: there is no way to specify whether the Creator is a person or organization
+  because it is not in the Dublin Core data. If it can reasonably be determined that the Creator is  a person or organization, fields 100 1#$a (Main Entry--Personal Name) or 110 2#$a (Main Entry--Corporate Name) may be used for the first Creator, and 700 1#$a (Added Entry--Personal Name) or 7102#$a (Added Entry--Corporate Name) for others may be used.</p>
+
+<p class="term">Date -- A point or period of time associated 
+with an event in the lifecycle of the resource.</p>
+<ul>
+<li><span class="listheader">Unqualified:</span>
+<ul>
+<li>260 ##$c (Date of publication, distribution, etc.)</li>
+</ul>
+</li>
+<li><span class="listheader">Qualified:</span>
+<ul>
+<li>Available: 307 ##$a (Hours, Etc.)</li>
+      <li>Created: 046$k (Special Coded Dates/Date created)</li> 
+      <li>Date Accepted: 502##$a (Dissertation Note) with initial label &quot;Date accepted&quot;</li>
+      <li>Date Copyrighted:
+              260##$c (Date of publication, distribution, etc.) or 542 $g (Information Related to Copyright Status/Copyright date) <em>Note: this field was defined in MARC in January 2008. Prefer 542 if field is available.</em></li>
+      <li>Date Submitted: 502##$a (Dissertation Note) with initial label &quot;Date submitted&quot;</li>
+      <li>Issued: 260 ##$c (Date of publication, distribution, etc.)</li>
+      <li>Modified: 046##$j (Special Coded Dates/Date modified) </li>
+      <li>Valid: 046##$m (Special Coded Dates/Date valid)</li>   
+    </ul>
+</li>
+</ul>
+	
+<ul>
+<li><span class="listheader">Syntax encoding schemes:</span>
+  <ul>
+  <li>Period: 045##c  (Special Coded Dates/Date 1, C.E. date) </li>
+      <li>W3CDTF: 260 ##$c (Date of publication, distribution, etc.); date may also be generated in 008/07-10; see below under Notes. Remove hyphens in 008. </li>
+    </ul>
+</li>
+</ul>
+
+<p class="term">Description -- An account of the resource.</p>
+
+
+<ul>
+<li><span class="listheader">Unqualified:</span>
+<ul>
+<li>520 ##$a (Summary, etc. note)</li>
+</ul>
+</li>
+<li><span class="listheader">Qualified:</span>
+<ul>
+<li>Abstract: 520 ##$a (Summary, etc. note)</li>
+<li>TableofContents: 505 0#$a (Formatted Contents Note)</li>
+</ul>
+</li>
+</ul>
+
+<p class="term">Format -- The file format, physical medium, or dimensions
+  of the resource.</p>
+
+<ul>
+<li><span class="listheader">Unqualified:</span>
+<ul>
+<li>856 ##$q (Electronic Location and Access/Electronic format type)</li>
+</ul>
+</li>
+<li><span class="listheader">Qualified:</span>
+<ul>
+  <li>Extent: 300 ##$a (Physical Description)</li>
+<li>Medium: 340 ##$a (Physical Medium)</li>
+</ul>
+</li>
+</ul>
+
+<ul>
+<li><span class="listheader">Syntax encoding scheme:</span>
+<ul>
+  <li>IMT: 856 ##$q (Electronic Location and Access/Electronic Format
+    Type) </li>
+	</ul>
+</li>
+</ul>
+	
+<p class="term">Identifier -- An unambiguous reference to the resource within
+  a given context.</p>
+
+<ul>
+<li><span class="listheader">Unqualified:</span>
+<ul>
+<li>If string begins http://: 856 40 $u (Electronic Location and Access/URI) </li>
+<li>Otherwise: 024 8#$a (Other Standard Identifier/Standard number or code)</li>
+</ul>
+</li>
+<li><span class="listheader">Qualified:</span>
+<ul>
+<li>Bibliographic Citation: 500 ##a (General note) with initial label &quot;Bibliographic citation&quot;</li>
+</ul>
+</li>
+</ul>
+
+
+<ul>
+<li><span class="listheader">Syntax encoding scheme:</span>
+<ul>
+  <li>URI: 856 40$u (Electronic Location and Access/Uniform Resource Locator)</li>
+</ul>
+</li>
+</ul>
+
+<p>Note: other types of identifiers (e.g. ISSN, ISBN) may be expressed in the form of URIs in dc:identifier.</p>
+
+<p class="term">Language -- A language of the resource.</p>
+
+<ul>
+<li><span class="listheader">Unqualified:</span>
+<ul>
+<li>546 ##$a (Language note)</li>
+</ul>
+</li>
+<li><span class="listheader">Qualified:</span></li>
+</ul>
+
+
+<ul>
+<li><span class="listheader">Syntax encoding schemes:</span>
+<ul>
+  <li>ISO 639-2: 0410#$a (Language code)</li>
+    <li>RFC 1766: 041 07$a (Language code) with $2=rfc1766</li>
+  <li>RFC 3066: 041 07$a (Language code) with $2=rfc3066</li>
+  <li>RFC 4646: 041 07$a (Language code) with $2=rfc4646  </li>
+</ul>
+</li>
+</ul>  
+
+<p class="term">Publisher -- An entity responsible for making the resource
+  available.</p>
+  
+<ul>
+<li><span class="listheader">Unqualified:</span>
+<ul>
+<li>260 ##$b (Publication, Distribution, etc. (Imprint)/Name of publisher, distributor, etc.) </li>
+</ul>
+</li>
+</ul>
+
+<p class="term">Relation -- A related resource.</p>
+
+<ul>
+<li><span class="listheader">Unqualified:</span>
+<ul>
+<li>787 0#$n (Nonspecific Relationship Entry/Note)</li>
+</ul>
+</li>
+<li><span class="listheader">Qualified:</span>
+<ul>
+  <li>URI (Encoding scheme): 787 0#$o (Nonspecific Relationship Entry/Other identifier)</li>
+  <li>Conforms To:   
+  787 0#$n (Nonspecific Relationship Entry/Other identifier)
+  with $i=Conforms to</li>
+  <li>HasFormat: 776 0#$n (Additional Physical Form Entry/Note)</li> 
+  <li>HasFormat: (Scheme=URI): 776 0#$o (Additional Physical Form Entry/Other identifier) </li>
+<li>IsFormatOf: 776 0#$n (Additional Physical Form Entry/Note) </li>
+<li>IsFormatOf: (Scheme=URI): 776 0#$o (Additional Physical Form Entry/Other identifier) </li>
+<li>IsPartOf: 773 0#$n (Host Item Entry/Note) </li>
+<li>IsPartOf (Scheme=URI): 773 0#$o (Host Item Entry/Other identifier)</li>
+<li>HasPart: 774 0#$n (Constituent Unit Entry/Note)</li>
+<li>HasPart (Scheme=URI): 774 0#$o (Constituent Unit Entry/Other identifier) </li>
+<li>IsVersionOf: 775 0#$n (Other Edition Entry/Note) </li>
+<li>IsVersionOf (Scheme=URI): 775 0#$o (Other Edition Entry/Other identifier)</li>
+<li>HasVersion: 775 0#$n (Other Edition Entry/Note)</li>
+<li>HasVersion (Scheme=URI): 775 0#$o (Other Edition Entry/Other identifier)</li>
+<li>Is Based On: 786 0#$n (Data Source Entry/Note) </li>
+<li>Is Based On (Scheme=URI): 786 0#$o (Data Source Entry/Other identifier)</li> 
+<li>Is Referenced By: 510 0#$a (Citation/References Note/Name of source)</li>
+<li>Requires: 538 ##$a (System Details Note)</li>
+<li>Is Required By: 
+787 0#$n (Nonspecific Relationship Entry/Other identifier)
+  with $i=Is required by </li>
+<li>Replaces: 780 00$n (Preceding entry)</li>
+<li>Replaces (Scheme=URI): 780 00$o (Preceding entry)</li>
+<li>Is Replaced By: 785 00$n (Succeeding entry)</li>
+<li>Is Replaced By (Scheme=URI): 785 00$o (Succeeding entry)</li>
+<li>References:  
+787 0#$n (Nonspecific Relationship Entry/Other identifier)
+  with $i=References </li>
+<li>References (Scheme=URI):  
+787 0#$o (Nonspecific Relationship Entry/Other identifier)
+  with $i=References</li>
+</ul>
+</li>
+</ul>
+
+<p class="term">Rights -- Information about rights held in and over the resource.</p>
+
+<ul>
+<li><span class="listheader">Unqualified:</span>
+<ul>
+<li>540 ##$a (Terms Governing Use and Reproduction Note)</li>
+</ul>
+</li>
+<li><span class="listheader">Qualified:</span>
+<ul>
+  <li>Access Rights: 506##$a (Restrictions on Access Note)</li>
+  <li>License: 540##$a (Terms Governing Use and Reprofuction Note</li>
+  <li>License (if value is a URI): 540##$u </li>
+  </ul>
+  </li>
+  </ul>
+  
+<p class="term">Source --   A related resource from which the described resource is derived.</p>
+
+<ul>
+<li><span class="listheader">Unqualified:</span>
+<ul>
+<li>786 0#$n (Data Source Entry/Note)</li>
+</ul>
+</li>
+<li><span class="listheader">Qualified:</span>
+</li>
+</ul>
+
+<ul>
+<li><span class="listheader">Syntax encoding scheme</span>
+<ul>
+<li>URI : 786 0#$o (Data Source Entry/Other identifier)</li>
+</ul>
+</li>
+</ul>
+
+<p class="term">Subject -- The topic of the resource.</p>
+<ul>
+<li><span class="listheader">Unqualified:</span>
+<ul>
+<li>653 ##$a (Index Term--Uncontrolled)</li>
+</ul>
+</li>
+<li><span class="listheader">Qualified:</span></li>
+</ul>
+
+<ul>
+<li><span class="listheader">Vocabulary encoding schemes:</span>
+<ul>
+<li>DDC: 082 ##$a (Dewey Decimal Call Number/Classification number)</li>
+<li>LCC: 050 ##$a (Library of Congress Call Number/Classification
+  number)</li>
+<li>LCSH: 650 #0$a (Subject added entry--Topical term)</li>
+<li>MeSH: 650 #2$a (Subject added entry--Topical term)</li>
+<li>UDC: 080 ##$a (Universal Decimal Classification Number)</li>
+</ul>
+</li>
+</ul>
+
+<p class="term">Title -- A name given to the resource.</p>
+
+<ul>
+<li><span class="listheader">Unqualified:</span>
+<ul>
+<li>245 00$a (Title Statement/Title proper)</li>
+<li>If repeated, all titles after the first: 246 33$a (Varying Form of Title/Title proper)</li>
+</ul>
+</li>
+<li><span class="listheader">Qualified:</span>
+<ul>
+  <li>Alternative: 246 33$a (Varying Form of Title/Title proper)</li>
+</ul>
+</li>
+</ul>
+
+<p class="term">Type --  The nature or genre of the resource.</p>
+
+<ul>
+<li><span class="listheader">Unqualified:</span>
+<ul>
+<li>655 #7$a (Index Term--Genre/Form) with $2=local</li>
+</ul>
+</li>
+<li><span class="listheader">Qualified:</span>
+<ul>
+<li>DCMI Type vocabulary (Encoding scheme): 655 #7$a (Index Term--Genre/Form) with $2=dct</li>
+</ul>
+</li>
+</ul>
+
+<p>See Section III for use to determine
+  Leader/06 (Type of Record) values.</p>
+  
+<h2>III. Additional Dublin Core Elements </h2>
+
+<ul>
+<li><strong>Accrual Method: </strong>541##$c (Source of Acquisition Note)</li>
+<li><strong>Accrual Periodicity: </strong>310##$a (Current Publication Frequency)</li>
+<li><strong>  Audience: </strong>521##$a (Target Audience Note)</li><li><strong>Education Level: </strong>521##$a (Target Audience 
+Note)</li>
+<li><strong>Provenance: </strong>561##$a  (Ownership and Custodial History)</li>
+</ul>
+
+
+<h2><strong>IV. Notes</strong></h2>
+<p>In addition to the variable length fields listed in the mapping, a MARC 21 record will also include a Leader and field 008 (Fixed-Length Data
+Elements).  Certain character positions in each of these fixed length fields of a USMARC record will need to be
+coded, although most will generate default values.</p>
+ 
+<p>
+<strong>Leader:</strong> a fixed field comprising the first 24 character positions (00-23) of
+each
+record
+that provides information for the processing of the record.  The following positions should be
+generated:
+<ul>
+  <li> 
+   <strong>Character Position 06: Type of record</strong><br>
+     Leader/06 value should be set according to value in Type as follows (these 
+      values are from Dublin Core List of Resource Types (DC Type Vocabulary): </li>
+	  </ul>
+ 
+
+ 
+    <table border align="center">
+        <tr bgcolor="#999999"> 
+          <th><font color="#000000">Type value</font></th>
+          <th><font color="#000000">Leader/06 value</font></th>
+        </tr>
+        <tr> 
+          <td width="180"> 
+            <div align="center">collection</div>
+
+          </td>
+          <td width="224"> 
+            <div align="center">p</div>
+          </td>
+        <tr> 
+          <td width="180"> 
+            <div align="center">dataset</div>
+          </td>
+          <td width="224"> 
+            <div align="center">m</div>
+
+          </td>
+        </tr>
+        <tr> 
+          <td width="180"> 
+            <div align="center">event</div>
+          </td>
+          <td width="224"> 
+            <div align="center">r</div>
+          </td>
+
+        </tr>
+        <tr> 
+          <td width="180"> 
+            <div align="center">image</div>
+          </td>
+          <td width="224"> 
+            <div align="center">k</div>
+          </td>
+        </tr><tr><td>
+
+          <div align="center">interactive resource</div>
+        </td><td>
+          <div align="center">m</div>
+        </td></tr>
+        <tr> 
+          <td width="180"> 
+            <div align="center">service</div>
+          </td>
+
+          <td width="224"> 
+            <div align="center">m</div>
+          </td>
+        </tr>
+        <tr> 
+          <td width="180"> 
+            <div align="center">software</div>
+          </td>
+          <td width="224"> 
+            <div align="center">m</div>
+
+          </td>
+        </tr>
+        <tr> 
+          <td width="180"> 
+            <div align="center">sound</div>
+          </td>
+          <td width="224"> 
+            <div align="center">i</div>
+          </td>
+
+        </tr>
+        <tr> 
+          <td width="180"> 
+            <div align="center">text</div>
+          </td>
+          <td width="224"> 
+            <div align="center">a</div>
+          </td>
+        </tr>
+
+    </table>
+      
+    <p> If no type is indicated, use value &quot;a&quot;. If two type values are indicated, 
+      and one of these is &quot;collection&quot; use the other value for setting Leader/06. 
+      If more than two, use &quot;m&quot;.</p> 
+ 
+  <ul>
+  <li><strong>Character Position 07: Bibliographic level</strong>
+  <ul>
+  <li>If Type value is collection, use value &quot;c&quot; (Collection)</li>
+  <li>All others, use value &quot;m&quot; (Monograph).</li>
+ </ul>
+ </li> 
+  <li><strong>Character Position 08: Type of control</strong>
+    <ul>
+	<li>Use value &quot;#" (blank: no specific type of
+  control).</li>
+  </ul>
+  </li>
+  <li><strong>Character Position 09: Character coding scheme</strong>
+  <ul>
+  <li>Use value &quot;#&quot; (blank: MARC-8).</li>
+  </ul>
+  </li>
+  <li><strong>Character Position 17: Encoding level</strong>
+  <ul>
+  <li>Use value &quot;3&quot; (Abbreviated level) or other
+  value as appropriate to application</li>
+  </ul>
+  </li>
+  <li><strong>Character Position 18: Descriptive cataloging form</strong>
+  <ul>
+  <li>Use value &quot;u&quot; (Unknown) to indicate that the descriptive cataloging form is unknown.</li>
+  </ul>
+  </li>
+  </ul>
+
+<p><strong>008 Fixed Length Data Elements:</strong> Forty character positions (00-39) containing
+positionally-defined data elements that provide coded information about the record as a whole or
+about special
+bibliographic aspects of the item being cataloged.  For records originating as Dublin Core, the
+following
+character positions are used:</p>
+
+<ul>
+<li><i>Character positions 00-05:</i> Date the MARC 21 record was created or converted (generate by
+date record entered system; formatted as YYMMDD)</li>
+<li><i>Character positions 07-10:</i> Date of Publication (YYYY portion from Date if present).
+Qualified DC: Date.Issued in ISO 8601 (only YYYY portion).</li>
+<li><i>Character positions 35-37:</i> Language. May be generated from data in Language if 
+scheme=ISO 639-2.</li>
+<li>Other character positions can default to fill characters (ASCII 7C)</li>
+</ul>
+
+<p>
+<strong>042$a  Authentication Code</strong>: Use &quot;dc&quot;  (identifies that MARC 21 record is
+derived from Dublin Core style record).</p>
+
+<h2>IV.  Uses for mapping Dublin Core to MARC</h2>
+<p>A mapping between the elements in the Dublin Core and MARC 21 fields is necessary so that conversions between
+various syntaxes can occur accurately.  Once Dublin Core style metadata is widely provided, it might
+interact with MARC records in various ways such as the following:</p>
+  
+<p><strong>Enhancement of simple resource description 
+record.</strong> A cataloging 
+  agency may wish to extract the metadata provided in Dublin Core style and convert the data elements to MARC 21 fields, resulting in a 
+  skeletal record. That record might then be enhanced as needed to add additional 
+  information generally provided in the particular catalog. Some projects convert 
+  data and use as basic record for reporting to national bibliography. </p>
+<p><strong>Searching across syntaxes and databases.</strong> Libraries have large   systems with valuable information in metadata records in MARC format.  It will be   important for systems to be able to search metadata in different syntaxes and 
+  databases and have commonality in the definition and use of elements. A primary use for this mapping is for harvesting metadata records from different sources, where there may be a need to translate Dublin Core records to MARC or vice versa.</p>
+
+<hr>
+<p><b>Go to</b>: </p>
+<ul>
+  <li><a href="marc.html">MARC Home Page</a> </li>
+  <li><a href="../index.html">Library of Congress Home Page</a> </li>
+
+</ul>
+<p>
+<hr>
+<img src="../homepage/lc2.gif" alt=""> <strong>Library 
+of Congress</strong><br>
+<address> 
+<!--help desk email start -->
+<a href="http://www.loc.gov/help/help-desk.html">Library of Congress Help Desk</a> 
+<!--help desk email end -->
+( 
+<!-- #BeginDate format:Am3 -->04/25/2008<!-- #EndDate -->
+)</address>
+
+<script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+</html>
+
+
+
+

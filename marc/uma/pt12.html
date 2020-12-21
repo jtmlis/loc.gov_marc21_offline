@@ -1,0 +1,652 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+"http://www.w3.org/TR/HTML40/loose.dtd">
+<html>
+<head>
+<title>Understanding MARC Authority Records: Part 12, Bibliography, and Review</title>
+<base href="">
+<meta name="keywords" content="MARC 21, Authority Format"> 
+<meta name="description" content="This document contains parts 12 of Understanding MARC Authority Records"> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel=stylesheet href="uma-redesign.css" type="text/css">
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+
+<body>
+
+<!--Begin outer border; centers document; fixes line length-->
+
+<table align="center" class="main">
+<tr>
+  <td><p><a href="../../index.html">Library of Congress</a>&gt;&gt; <a href="../../standards/index.html">Standards</a> &gt;&gt; <a href="../../marc.html">MARC</a> &gt;&gt; <a href="index.html">Understanding
+    MARC Authority Records</a></p>
+    <hr size="1" noshade>
+  </tr>
+<tr>
+<td> 
+
+
+<h1>MARC 21 REFERENCE MATERIALS (continued)</h1>
+
+
+<a name="top"></a>
+<hr align=center size=4 width=100>
+
+<p class="contents">
+<a href="pt12.html#pt12">Part XII: Sample Records</a><br>
+<a href="pt12.html#bibl">Selected Bibliography</a><br>
+<a href="pt12.html#cds">Selected Library of Congress Cataloging Distribution Service Publications</a><br>
+<a href="pt12.html#review">MARC 21 Content Designators: A Review</a><br>
+</p>
+
+<a name="pt8"></a><hr align=center size=4 width=100>
+
+
+<!-- Part XII: Sample Records Part XII: Sample Records Part XII: Sample Records -->
+
+<h2 class="no">Part XII</h2>
+<h2 class="title">Sample Records</h2>
+
+<p class="main">The examples of authority records in this booklet are based on records 
+from the Library of Congress Name Authority File (LCNAF). 
+Some of the information has been, however, slightly changed 
+to illustrate the fields described in this booklet. 
+The examples are first shown in a tagged display used 
+by most data editing screens found in library systems. 
+They are also shown in a formatted display that may be viewed 
+by library patrons and librarians.</p>
+
+<p class="cont">More examples of MARC 21 authority records are found 
+in the <cite>MARC 21 Format for Authority Data</cite> or online at: 
+<a href="../authority/examples.html">www.loc.gov/marc/authority/examples.html</a></p>
+
+<h3 class="title">1. MARC 21 Communications Formatted Record</h3>
+
+<p class="main">The block of data below is what the programmer sees 
+when he looks at the contents of a MARC file. 
+The tags do not appear before the fields, but a directory to the data 
+tells which tags should be used and where each field starts (in other words, where each tag belongs).</p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre>00559cz###2200169n##4500<u>001</u>000800000<u>005</u>001700008<u>00
+8</u>004100025<u>010</u>003100066<u>035</u>002300097<u>040</u>001300120<u>053</u>0
+01500133<u>100</u>003200148<u>400</u>004000180<u>400</u>003400220<u>670</u>003
+300254<u>670</u>009200287^3284961^20011122072419.0^790430
+n|#acannaabn##########|a#aaa######^##$an##79041870
+##$zn##86057158#^##$a(OCoLC)oca00275319^##$aDLC$cD
+LC^#0$aPR6045.O72^1#$aWoolf, Virginia,$d1882-1941^
+1#$aWoolf, Virginia Stephen,$d1882-1941^1#$aStephe
+n, Virginia,$d1882-1941^##$aHer The voyage out ...
+ 1915.^##$aNUCMC files$b(Woolf, Virginia, 1882-194
+1; Woolf, Virginia Stephen; b. Virginia Stephen)^\</pre>
+			</td>
+		</tr>
+	</table>
+
+<p class="main"><span class="strong">Cracking the code, or, Interpreting the Directory:</span> 
+Usually, only the computer programmer and the computer come into contact 
+with the record in the MARC 21 communications format. 
+It is, however, interesting to understand how the Directory works.</p>
+
+<p class="cont">The first 24 positions make up the Leader. 
+In this example, the Leader fills approximately 1/3 of the first line and ends with &quot;4500.&quot; 
+Immediately following the Leader, begins the Directory. 
+Tags have been underlined in this example. 
+Each individual tag directory is 12 characters long. The first tag is 001. 
+Following each tag, the next four positions show the length of the field. 
+The data in the 001 field (control number) in this record is 8 characters long. 
+The next 5 positions tell the starting point for this field 
+within the data string that follows the Directory. 
+The 001 field begins at the 00000 position (the first position is position 0). 
+The next tag is 005, which is 17 characters long and 
+begins at the 8th position (the length of the previous position  --  8  --  
+added to its starting spot  --  00000  --  equal 8). The next tag is 008. 
+It is 41 characters long and begins at the 25th spot (8 + 17=25).</p>
+
+<p class="main">This directory tells us:</p>
+
+<table class="no">
+        <tr> 
+          <td class="dir1"><span class="strong">Tag</span></td>
+          <td class="dir2"><span class="strong">Length</span></td>
+          <td class="dir3"><span class="strong">Starts at</span></td>
+          <td class="dir4"></td>
+          <td class="dir1"><span class="strong">Tag</span></td>
+          <td class="dir2"><span class="strong">Length</span></td>
+          <td class="dir3"><span class="strong">Starts at</span></td>
+        </tr>
+        <tr> 
+          <td class="dir1">001</td>
+          <td class="dir2">0008</td>
+          <td class="dir3">00000</td>
+          <td class="dir4"></td>
+          <td class="dir1">053</td>
+          <td class="dir2">0015</td>
+          <td class="dir3">00133</td>
+        </tr>
+        <tr> 
+          <td class="dir1">005</td>
+          <td class="dir2">0017</td>
+          <td class="dir3">00008</td>
+          <td class="dir4"></td>
+          <td class="dir1">100</td>
+          <td class="dir2">0032</td>
+          <td class="dir3">00148</td>
+        </tr>
+        <tr> 
+          <td class="dir1">008</td>
+          <td class="dir2">0041</td>
+          <td class="dir3">00025</td>
+          <td class="dir4"></td>
+          <td class="dir1">400</td>
+          <td class="dir2">0040</td>
+          <td class="dir3">00180</td>
+        </tr>
+        <tr> 
+          <td class="dir1">010</td>
+          <td class="dir2">0031</td>
+          <td class="dir3">00066</td>
+          <td class="dir4"></td>
+          <td class="dir1">400</td>
+          <td class="dir2">0034</td>
+          <td class="dir3">00220</td>
+        </tr>
+        <tr> 
+          <td class="dir1">035</td>
+          <td class="dir2">0023</td>
+          <td class="dir3">00097</td>
+          <td class="dir4"></td>
+          <td class="dir1">670</td>
+          <td class="dir2">0033</td>
+          <td class="dir3">00254</td>
+        </tr>
+        <tr> 
+          <td class="dir1">040</td>
+          <td class="dir2">0013</td>
+          <td class="dir3">00120</td>
+          <td class="dir4"></td>
+          <td class="dir1">670</td>
+          <td class="dir2">0092</td>
+          <td class="dir3">00287</td>
+        </tr>
+      </table>
+
+<p class="main">Field terminators (displayed as a ^ in this example) 
+mark the end of the Directory and the end of each field that follows. 
+Notice that the sums of the 2nd and 3rd columns in any row equal 
+the number in the 3rd column in the next row. 
+The starting point of one field plus its length equals 
+the starting position of the next field.</p>
+
+<p class="cont">This can be verified by counting the character positions 
+within the data, remembering that spaces count, as do the field terminators (^). 
+(Two character positions are always reserved for indicators at the beginning of a field.) 
+A record terminator (displayed as a \ in this example) ends each authority record.</p>
+
+<h3 class="title">2. Authority Records in Display Forms</h3>
+
+<p class="main">If a librarian uploaded a MARC 21 record into a library automation system, 
+the data entry screen may look like the <!--below example--> tagged displays below. 
+The descriptors in the left-hand column are not stored in a MARC record. 
+They are part of the software program's screen display. 
+Most systems are designed so that records may be edited 
+to add other fields containing local information.</p>
+
+<p class="main"><span class="strong">Tagged Display:</span> 
+Most data editing screens are called &quot;tagged displays&quot; 
+because they show the MARC 21 tags, 
+inserted where they belong, as directed by the Directory. 
+A computer program has been written to do this tagging.</p>
+
+<p class="main"><span class="strong">Formatted Displays:</span> 
+The type of screens that OPAC patrons use are formatted, 
+since MARC tags would be meaningless to the general public.  
+Within each particular OPAC program is a routine that formats 
+each record in the way the designers thought would best serve the public using the online catalog. 
+One example of such a display is included for each authority record below.
+<!--One example is the following:--></p>
+
+<p class="title"><span class="strong">Authoritative Heading Record  --  Personal Name</span></p>
+
+<p class="main"><span class="strong">Tagged Display:</span></p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre>Leader                 00758cz###2200217n##4500
+Control No.            001   3284961
+Last Transaction       005   20011122072419.0
+Fixed Data             008   790430n|#acannaabn##########|a#aaa######
+LCCN                   010 ##  $a n##79041870#
+                               $z $##86057158#
+System Control No.     035 ##  $a (OCoLC)oca00275319
+Cat. Source            040 ##  $a DLC
+                               $c DLC
+Classification No.     053 #0  $a PR6045.O72
+Authorized Heading     100 1#  $a Woolf, Virginia,
+                               $d 1882-1941
+See From Tracing       400 1#  $a Woolf, Virginia Stephen,
+                               $d 1882-1941
+See From Tracing       400 1#  $a Stephen, Virginia,
+                               $d 1882-1941
+Source Data Found      670 ##  $a Her The voyage out ... 1915.
+Source Data Found      670 ##  $a NUCMC files
+                               $b (Woolf, Virginia, 1882-1941; 
+                                  Woolf, Virginia Stephen; b. 
+                                  Virginia Stephen)
+</pre>
+			</td>
+		</tr>
+	</table>
+
+<p class="main"><span class="strong">Formatted Displays:</span></p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+<div class="bold">Woolf, Virginia, 1882-1941</div>
+<div class="nobold">Stephen, Virginia, 1882-1941</div>
+<div class="indented"><em>See</em> Woolf, Virginia, 1882-1941</div>
+<div class="nobold">Woolf, Virginia Stephen, 1882-1941</div>
+<div class="indented"><em>See</em> Woolf, Virginia, 1882-1941</div>
+			</td>
+		</tr>
+	</table>
+
+
+<p class="title"><span class="strong">Authoritative Heading Record  --  Corporate Name</span></p>
+
+<p class="main"><span class="strong">Tagged Display:</span></p>
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre>Leader                 01487cz###2200241n##4500
+Control No.            001   663438
+<!--Control No. Identifier 	003		DLC-->
+Last Transaction       005   20010924094922.0
+Fixed Data             008   880506n|#acannaab|##########|a#ana####|#
+LCCN                   010 ##  $a n##87907845#
+Cat. Source            040 ##  $a DLC
+                               $c DLC
+Authorized Heading     110 2#  $a Louisville and Nashville Railroad 
+                                  Company.
+See From Tracing       410 2#  $a Louisville & Nashville
+See From Tracing       410 2#  $a L. & N.R.R.
+See Also From Tracing  510 2#  $a Nashville, Chattanooga, and St. 
+                                  Louis Railway
+See Also From Tracing  510 2#  $a St. Louis and Southeastern Railway 
+                                  Company
+Source Data Found      670 ##  $a Dolzall, G.W. Monon, c1987:
+                               $b p. 171 (Louisville & Nashville)
+</pre>
+			</td>
+		</tr>
+	</table>
+
+<p class="main"><span class="strong">Formatted Displays:</span></p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+<div class="bold">Louisville and Nashville Railroad Company</div>
+<div class="nobold">L. & N.R.R.</div>
+<div class="indented"><em>See</em> Louisville and Nashville Railroad Company</div>
+<div class="nobold">Louisville & Nashville</div>
+<div class="indented"><em>See</em> Louisville and Nashville Railroad Company</div>
+<div class="nobold">Nashville, Chattanooga, and St. Louis Railway</div>
+<div class="indented"><em>See also</em> Louisville and Nashville Railroad Company</div>
+<div class="nobold">St. Louis and Southeastern Railway Company</div>
+<div class="indented"><em>See also</em> Louisville and Nashville Railroad Company</div>
+			</td>
+		</tr>
+	</table>
+
+
+<p class="title"><span class="strong">Authoritative Heading Record  --  Uniform Title</span></p>
+
+<p class="main"><span class="strong">Tagged Display:</span></p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre>Leader                 00330cz###2200145n##4500
+Control No.            001   955113
+Last Transaction       005   20010216174752.0
+Fixed Data             008   790328n|#acannaab###########|a#ana######
+LCCN                   010 ##  $a n##79018834#
+Cat. Source            040 ##  $a DLC
+Authorized Heading     130 #0  $a Beowulf
+See From Tracing       430 #0  $a Bjowulf
+</pre>
+			</td>
+		</tr>
+	</table>
+
+
+<p class="main"><span class="strong">Formatted Displays:</span></p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+<div class="bold">Beowulf</div>
+<div class="nobold">Bjowulf</div>
+<div class="indented"><em>See</em> Beowulf</div>
+			</td>
+		</tr>
+	</table>
+
+
+<p class="title"><span class="strong">Subject Authority Record</span></p>
+
+<p class="main"><span class="strong">Tagged Display:</span></p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre>Leader                 01984cz###2200505n##4500
+Control No.            001   4673463
+Last Transaction       005   20000324235934.0
+Fixed Data             008   860211i|#anannbabn##########|a#ana######
+LCCN                   010 ##  $a sh#85020914b#
+Cat. Source            040 ##  $a DLC
+                               $c DLC
+                               $d DLC
+Authorized Heading     150 ##  $a Online library catalogs
+See From Tracing       450 ##  $a Catalogs, On-line
+See From Tracing       450 ##  $a Library online catalogs
+See From Tracing       450 ##  $a On-line catalogs (Libraries)
+See From Tracing       450 ##  $a Online catalogs
+See From Tracing       450 ##  $a Online public access catalogs 
+                                  (Libraries)
+See From Tracing       450 ##  $a OPACs (Libraries)
+See Also From Tracing  550 ##  $a Library catalogs
+See Also From Tracing  550 ##  $a Online information services
+Source Data Found      670 ##  $a Library lit., 1990
+                               $b (online catalogs)
+Source Data Found      670 ##  $a ALA gloss.
+                               $b (online catalogs; online public 
+                                  access catalogs (OPACs))
+</pre>
+			</td>
+		</tr>
+	</table>
+
+
+<p class="main"><span class="strong">Formatted Displays:</span></p>
+
+	<table class="yes">
+		<tr> 
+			<td class="double"> 
+<div class="bold">Online library catalogs</div>
+<!--<div class="indented"><em>See also</em> Library catalogs</div>
+<div class="indented2">Online information services</div>-->
+<div class="nobold">Catalogs, On-line</div>
+<div class="indented"><em>See</em> Online library catalogs</div>
+<div class="nobold">Library catalogs</div>
+<div class="indented"><em>See</em> Online library catalogs</div>
+<div class="nobold">Library online catalogs</div>
+<div class="indented"><em>See</em> Online library catalogs</div>
+<div class="nobold">Online catalogs</div>
+<div class="indented"><em>See</em> Online library catalogs</div>
+			</td>
+			<td class="double"><br>
+<div class="nobold">On-line catalogs (Libraries)</div>
+<div class="indented"><em>See</em> Online library catalogs</div>
+<div class="nobold">Online information services</div>
+<div class="indented"><em>See</em> Online library catalogs</div>
+<div class="nobold">Online public access catalogs (Libraries)</div>
+<div class="indented"><em>See</em> Online library catalogs</div>
+<div class="nobold">OPACs</div>
+<div class="indented"><em>See</em> Online library catalogs</div>
+			</td>
+		</tr>
+	</table>
+
+<br>
+
+
+<p class="nav">[<a href="pt12.html#top">Back to Top of Page</a>]</p>
+
+<a name="bibl"></a><hr align=center size=4 width=100>
+
+
+<!-- Selected Bibliography. Selected Bibliography. Selected Bibliography. -->
+
+
+<h2 class="title">Selected Bibliography</h2>
+
+<p class="bibl"><cite>Anglo-American Cataloguing Rules</cite>. 2nd ed., 2002 revision. 
+Chicago: American Library Association, 2002.</p>
+
+<p class="bibl">Crawford, Walt. <cite>MARC for Library Use</cite>. 
+2nd ed. Boston: G.K. Hall & Co., 1989. <em>[Chapter 13 provides a good overview of authority records.]</em></p>
+
+<p class="bibl">Ferguson, Bobby. <cite>MARC/AACR2/Authority Control Tagging: 
+A Blitz Cataloging Workbook</cite>. Westport, Conn.: Libraries Unlimited, 2005.</p>
+
+<p class="bibl">Maxwell, Robert L. <cite>Maxwell's Guide to Authority Work</cite>. 
+Chicago: American Library Association, 2002.</p>
+
+<p class="bibl">Piepenburg, Scott. <cite>MARC Authority Records Made Easy: 
+A Simplified Guide to Creating Authority Records for Library Automation Systems</cite>. 
+San Jose, CA: F&amp;W Associates, 2000.</p>
+
+<br>
+
+<p class="nav">[<a href="pt12.html#top">Back to Top of Page</a>]</p>
+
+<a name="cds"></a><hr align=center size=4 width=100>
+
+
+<!-- Selected CDS Publications. Selected CDS Publications. Selected CDS Publications. -->
+
+
+<h2 class="title">Selected Library of Congress Cataloging Distribution Service Publications</h2>
+
+<p class="bibl"><cite>Cataloger's Desktop</cite>. 
+LC's most popular cataloging publications on one CD-ROM disc 
+and on the World Wide Web by subscription.</p>
+
+<p class="bibl"><cite>Classification Web. LC Classification Schedules 
+and Subject Headings</cite> on the World Wide Web by subsciption.</p>
+
+<p class="bibl"><cite>Free-floating Subdivisions: An Alphabetical Index</cite>. Annual. 1 vol.</p>
+
+<p class="bibl"><cite>Library of Congress Classification Schedules.</cite> Multiple vols. Irregular.</p>
+
+<p class="bibl"><cite>Library of Congress Subject Headings</cite>. Annual. 5 vols.</p>
+
+<p class="bibl"><cite>MARC Content Designation</cite> training manuals.</p>
+
+<p class="bibl"><cite>Name and Subject Authorities</cite>. 
+On the World Wide Web at:  <a href="http://authorities.loc.gov">http://authorities.loc.gov</a></p>
+
+<p class="bibl"><a href="../umb.html"><cite>Understanding MARC Bibliographic</cite></a>.</p>
+
+<p class="bibl">MARC 21 documentation</p>
+<p class="bibl2"><cite>MARC Code List for Countries</cite>.</p>
+<p class="bibl2"><cite>MARC Code List for Geographic Areas</cite>.</p>
+<p class="bibl2"><cite>MARC Code List for Languages</cite>.</p>
+<p class="bibl2"><cite>MARC Code Lists for Relators, Sources, Description Conventions</cite>.</p>
+<p class="bibl2"><cite>MARC 21 LITE Bibliographic Format</cite>. 
+	[On the World Wide Web at: <a href="../../marc.html">www.loc.gov/marc/</a>]</p>
+<p class="bibl2"><cite>MARC 21 Concise Formats</cite>.</p>
+<p class="bibl2"><cite>MARC 21 Format for Authority Data</cite>.</p>
+<p class="bibl2"><cite>MARC 21 Format for Bibliographic Data</cite>.</p>
+<p class="bibl2"><cite>MARC 21 Format for Classification Data</cite>.</p>
+<p class="bibl2"><cite>MARC 21 Format for Community Information</cite>.</p>
+<p class="bibl2"><cite>MARC 21 Format for Holdings Data</cite>.</p>
+<p class="bibl2"><cite>MARC 21 Specifications for Record Structure, Character Sets, and Exchange Media</cite>.</p>
+
+<br>
+
+<p class="nav">[<a href="pt12.html#top">Back to Top of Page</a>]</p>
+
+<a name="review"></a><hr align=center size=4 width=100>
+
+
+<!-- MARC 21 Content Designators: A Review. MARC 21 Content Designators: A Review. -->
+
+
+<h2 class="title">MARC 21 Content Designators: A Review</h2>
+
+<p class="main"><span class="strong">Part I:</span> 
+Authority record parts and &quot;Signposts.&quot; 
+Look at this sample line from a MARC 21 authority record (# indicates a blank space). 
+Then fill in the blanks with letters representing correct answers. 
+The number of times each answer will be used is given beside that answer.</p>
+
+	<table class="yes">
+		<tr> 
+			<td class="example"> 
+				<pre>100 1#  $a Woolf, Virginia, $d 1882-1941</pre>
+			</td>
+		</tr>
+	</table>
+
+<p class="main"><span class="strong">Answers:</span></p>
+<ol type="A">
+<li>field/s (3)</li>
+<li>indicator/s (4)</li>
+<li>subfield/s (2)</li>
+<li>subfield code/s (3)</li>
+<li>tag/s (3)</li>
+</ol>
+
+<p class="main">1. The sample line represents one ___________________.</p>
+
+<p class="main">2. The number 100 is its __________________________.</p>
+
+<p class="main">3. There is one blank in the second __________________ position.</p>
+
+<p class="main">4., 5. What we see on the sample line is a ____________ that is made up of two _____________.</p>
+
+<p class="main">6. The characters of $a and $d are two examples of _____________________.</p>
+
+<p class="main">7., 8. In this field, the second ________________ has not been assigned meaning. 
+In other words, the second _________________ in this field is undefined.</p>
+
+<p class="main">9., 10., 11. In MARC 21 records, there are 3 types of content designators: 
+____________________, _____________________, and _____________________.</p>
+
+<p class="main">12., 13. The 100 ______________________________ identifies this as the 
+Heading  --  Personal Name _________________________.</p>
+
+<p class="main">14. This field is divided into two ____________________: Personal Name, and Date.</p>
+
+<p class="main">15. In this field, $a is the __________________________ that identifies the personal name.</p>
+
+<p class="main">16., 17. Authority control assures (circle 2):</p>
+<ol type="A">
+<li>An author's name is always entered the same way for each book she/he has written.</li>
+
+<li>Librarians oversee all reading rooms.</li>
+
+<li>Cross references will help users find all items by or about an author or topic.</li>
+
+<li>The title paragraph is written correctly.</li>
+</ol>
+
+<p class="main"><span class="strong">Part II:</span> 
+Authority record content. 
+Includes authoritative headings (name, title, or subject) reference tracings and notes.</p>
+
+<p class="main">For the book, <cite>To the Lighthouse</cite>, 
+written by Virginia Woolf, draw lines to the correct answers:</p>
+
+	<table class="no">
+		<tr> 
+			<td class="double">
+18. Woolf, Virginia, 1882-1941<br>
+19. Stephen, Virginia, 1882-1941<br>
+20.	Married people -- Fiction</td>
+			<td class="double">
+A. Authoritative subject heading<br>
+B. Authoritative name heading<br>
+C. Reference tracing
+			</td>
+		</tr>
+	</table>
+
+<p class="main"><span class="strong">Pattern tags:</span> 
+The tags for headings and references follow a pattern.</p>
+
+<p class="main">21. If a book is written about Hayes, Helen, 
+the authority record used contains a 1_ _ heading.</p>
+
+<p class="main">22. If a book is written about the Chrysler Corporation, 
+the authority record used contains a 1_ _ heading.</p>
+
+<p class="main">23.  If a book is written about Brazil, 
+the authority record used contains a 1_ _ heading.</p>
+
+<p class="main">24.  If a book is written about football, 
+the authority record used contains a 1_ _ heading.</p>
+
+<p class="main"><span class="strong">One final question:</span></p>
+
+<p class="main">25. For the name, &quot;Gustaf V, King of Sweden, 1858-1950,&quot; 
+the first indicator of the 100 tag should be set to ______.</p>
+
+<br>
+
+<table class="no">
+<tr>
+<td class="answers">
+<span class="strong">Answers to MARC 21 Content Designators: A Review</span><br>
+1-A; 2-E; 3-B; 4-A; 5-C; 6-D; 7-B; 8-B; 9, 10, and 11-B, D, and E; 12-E, 13-A; 14-C; 15-D; 
+16 and 17-A and C; 18-B; 19-C; 20-A; 21-100; 22-110; 23-151; 24-150; 25-0
+</td>
+</tr>
+</table>
+
+<!--
+To order additional copies of this publication, contact the Cataloging Distribution Service of the Library of Congress (CDS).
+
+CDS makes available to the library community the expert cataloging products and bibliographic resources of the Library of Congress.
+
+For a copy of our complete Catalog of Bibliographic Products & Services, contact:
+
+Library of Congress
+Cataloging Distribution Service
+
+Customer Service Section
+Washington, D.C. 20541-4912
+U.S.A.
+
+1-800-255-3666 (in U.S.)  ¥  (202) 707-6100 (outside U.S.)
+Fax: (202) 707-1334
+E-mail: cdsinfo@loc.gov
+Web: www.loc.gov/cds
+-->
+
+<br>
+
+<p class="nav">[<a href="pt12.html#top">Back to Top of Page</a>]</p>
+
+<hr align=center size=4 width=100>
+
+<br>
+
+<p class="nav1">[<a href="index.html">Back to Table of Contents</a>]</p>
+
+<br>
+<!-- LC Footer -->
+<hr>
+<img src="../../homepage/lc2.gif" height=46 width=91 alt=""> 
+<strong>Library of Congress</strong><br>
+<address> 
+<!-- help desk email start -->
+<a href="http://www.loc.gov/help/help-desk.html">Library of Congress Help Desk</a> 
+<!-- help desk email end -->
+( 
+<!-- #BeginDate format:Am3 -->01/08/2007<!-- #EndDate -->
+) </address>
+
+</tr>
+</table>
+
+<script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+</html>

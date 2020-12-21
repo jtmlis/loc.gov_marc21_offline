@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                        "http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/marc_generic.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Analysis of Data Overlap Between the MARC21 Bibliographic Format and the MIX Data Dictionary (ANSI/NISO Z39.87-2006) : MARC Standards (Network Development and MARC Standards Office, Library of Congress)</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="description" content="Analysis of Data Overlap Between the MARC21 Bibliographic Format and the MIX Data Dictionary (ANSI/NISO Z39.87-2006) : MARC Standards (Network Development and MARC Standards Office, Library of Congress)">
+<meta name="keywords" content="marc, marc21, marc standards">
+<meta name="author" content="Library of Congress Network Development and MARC Standards Office">
+<!-- InstanceEndEditable -->
+<link href="http://www.loc.gov/marc/marc-generic.css" rel="stylesheet" type="text/css">
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+
+<body bgcolor="#ffffff">
+<div class="head-nav"><a id="skip" href="MARC21-MIX.html#skip_menu"><img src="http://www.loc.gov/marc/images/clear.gif" border="0" alt="Skip Navigation Links"></a><a href="../../../index.html">The Library of Congress</a> &gt;&gt; <a href="../../../library/index.html">Especially
+  for Librarians and Archivists</a> &gt;&gt; <a href="../../../standards/index.html">Standards</a></div>
+<a href="../../../marc.html"><img src="http://www.loc.gov/marc/images/marc-bar.gif" alt="MARC Standards" width="620" height="36" border="0"></a>
+<div class="head-nav"><a href="../../../marc.html">MARC 21 HOME</a> &gt;&gt; <!-- InstanceBeginEditable name="topbreadcrumb" --><a href="../ecbdhome.html">Bibliographic Format</a> &gt;&gt; <a href="index.html">Overlaps Between MARC21</a> &gt;&gt;  MARC21 to MIX Mapping<!-- InstanceEndEditable --></div>
+<hr size="1" noshade><a name="skip_menu"></a>
+<!-- InstanceBeginEditable name="content" -->
+<h1>Analysis of Data Overlap Between the MARC21 Bibliographic Format</h1>
+<h1> and the MIX Data Dictionary (ANSI/NISO Z39.87-2006)</h1>
+<p><strong>INTRODUCTION</strong></p>
+<p>The present paper examines The <a href="../ecbdhome.html">MARC21 Bibliographic format</a>  and the <a href="http://loc.gov/standards/mix/">MIX Data Dictionary</a> for correspondences in the data which they
+  accommodate.&nbsp; Though the data dictionary
+  is actually defined by ANSI/NISO Z39.87-2006, it will, for convenience, be
+  called MIX throughout this report, employing the name of an important XML
+  schema, maintained by the Library of Congress, for implementing the standard.</p>
+<p>This analysis, conducted following
+  a similar one relating elements of MARC21 to those of the PREMIS Data
+  Dictionary, invites some comparisons of PREMIS and MIX and their relationships
+  to MARC21.&nbsp; </p>
+<p>The PREMIS and MIX metadata
+  schemes are similar in focusing on the management of collections of digital
+  resources.&nbsp; In MIX this orientation is made
+  explicit by including in the documentation of each element a section categorizing
+  anticipated use.&nbsp; &ldquo;User&rdquo; use is attributed
+  to only about one third of the elements; more than half of those are elements
+  of GPSData.&nbsp; The other two MIX
+  categories, &ldquo;system&rdquo; and &ldquo;manager&rdquo; are each attributed to more than twice as
+  many elements as for the &ldquo;user.&rdquo;&nbsp; In
+  contrast, MARC has throughout its history been centered on &ldquo;user&rdquo; metadata.</p>
+<p>PREMIS concentrates on data relevant
+  to managing preservation operations, organizing the data into various related
+  entities (Object, Event, Agent, Rights.)&nbsp; The scope of MIX is more limited in the materials it covers, still
+  raster images, but provides for description of these objects in significantly greater
+  technical detail.</p>
+<p>PREMIS relies heavily on the use
+  of string datatype values from controlled vocabularies defined externally from
+  the scheme itself.&nbsp; MIX, on the other hand, employs a variety of datatypes.&nbsp;
+  In addition to using string datatype values from &quot;enumerated&quot; lists,
+  which represent roughly one third of all datatype options in MIX and which are
+  akin to PREMIS's use of string values from controlled vocabularies, MIX also
+  relies on the simple string datatype, which is the second most common datatype
+  in MIX, and several numeric datatypes, such as the &quot;positive integer&quot;
+  datatype, the &quot;non-negative real&quot; datatype, and the
+  &quot;rational&quot; datatype.</p>
+<p>The string data type and the
+  various numeric types represent potentially better correspondence between the
+  ways MIX and MARC21 record data than is the case between PREMIS and MARC21,
+  specifically with reference to the latter&rsquo;s use of free text notes.&nbsp; (Whether the apparent preference in MIX for
+  text values over codes in elements of the enumerated type is helpful in this
+  regard is harder to evaluate.)&nbsp; However, most
+  of the data collected by MIX are of a nature so technical and specialized that
+  only rarely have provisions been made for them in MARC21. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p>Findings of this investigation are
+  expressed in a pair of tables that have the same contents arranged
+  differently.&nbsp; Table <i><a href="http://www.loc.gov/marc/bibliographic/mapping/MARC21vsMIXtable.html">MARC21 vs. MIX</a></i> is ordered by MARC tag and subfield code; table <i><a href="http://www.loc.gov/marc/bibliographic/mapping/MIXvsMARC21table.html">MIX vs. MARC21</a></i> follows the order of MIX
+  data elements of the Data Dictionary as presented in Z39.87-2006.&nbsp; Though the current version (2.0) of the MIX
+  schema includes the conversion of a few of the Z39.87-2006 elements to Containers with
+  new, more specific elements defined within them, these elaborations occur only
+  in areas that are not accommodated in the MARC21 format; hence the findings are
+  equally applicable to MIX versions 1.0 and 2.0.</p>
+<p><strong>NOTES ON THE ANALYSIS</strong></p>
+<p>Certain elements are noted in MIX
+  documentation as having been &ldquo;drawn from the PREMIS data element set.&rdquo;&nbsp; In the tables, these elements are flagged by
+  an asterisk following their numeric identifiers.</p>
+<p>Where feasible, the tables work at
+  MARC21 subfield and MIX element levels.&nbsp; Departures from this principle occur for two main reasons.</p>
+<ol>
+  <li>There are situations in which a single
+    MARC21 field or subfield represents, implicitly or explicitly, a Type/Value
+    pair of MIX elements.&nbsp; For succinctness,
+    a single reference to the appropriate container is used in these cases.</li>
+  <li>Sometimes the specification of a MARC21 subfield
+    relates in an uncertain or complex way to the elements of a MIX Container.&nbsp; Creating a table entry at the Container level
+    expresses the relationship as clearly as seems possible; <i>viz</i>, fields 300$c and 534$e.</li>
+</ol>
+<p>The tables have
+  been built assuming that it is preferable to identify possible correspondences
+  that may be tenuous, or even erroneous, than to omit a connection of importance
+  inadvertently. &nbsp;Users of these tables who
+  are more knowledgeable of their or other&rsquo;s MIX implementations may be able to
+  eliminate some table entries as universally inappropriate or too rare to be
+  worthy of consideration.&nbsp; For instance, the
+  data in field 007 positions for computer files may be deemed useless in contrast
+  to the detail afforded by MIX.</p>
+<p>One situation is the relationship
+  between MIX GPSData and MARC21 fields 034, 255 and 007 of the remote sensing
+  image type (i.e., 007/01=r).&nbsp; On the
+  surface, it might seem like the MARC fields for recording Geospatial data are
+  good fits with MIX GPSData,&nbsp; but MIX's
+  GPSData and MARC's 034 and 255 fields are not trying to record quite the same
+  information.&nbsp;Typically, GPS data records the point in place where a
+  digital photograph was recorded.&nbsp; MARC 034 and 255 attempt to describe the
+  geographic bounding of a (cartographic) image.&nbsp;</p>
+<p>It should be noted that particular
+  MARC21/MIX correspondences depend on whether one contemplates a MARC record
+  describing the same electronic object as a MIX object or one in single record
+  style that essentially describes the Source of the MIX image.&nbsp; The tables attempt to cover both cases. </p>
+<p>The process of deciding what kinds
+  of data are expected in any subfield of interest, particularly in free text
+  note fields, was guided by the examples provided in the full online MARC21
+  Bibliographic Format document.&nbsp; No
+  attempt was made to search for additional examples in library databases.&nbsp; The many MIX elements for which no MARC21
+  homes have been identified could, of course, be included in general notes tagged
+  500.&nbsp; This seems unlikely, however,
+  because the 500 note is typically displayed in library catalogs while the
+  technical character of most MIX elements would rarely be need to be exposed in
+  this way.&nbsp;&nbsp; </p>
+<p>The investigator is aware of his
+  tendency to think of metadata comparisons of this sort in terms of conversions
+  from one scheme to another.&nbsp; That is a
+  matter more limited than the general question of data overlap.&nbsp; Nevertheless, that mindset may have crept
+  occasionally into the language used to talk about the relationships of certain
+  data elements between MARC21 and MIX.&nbsp; This should not seriously affect interpretation of the findings.</p>
+<p><i>Prepared for the Library of Congress </i><br>
+<i>by Charles W. Husbands<br>
+</i><i>4 January 2010</i></p>
+<!-- InstanceEndEditable -->
+<hr size="1" noshade>
+<p><a href="../../../marc.html">MARC 21 HOME</a> &gt;&gt; <!-- InstanceBeginEditable name="bottombreadcrumb" --><a href="../ecbdhome.html">Bibliographic Format</a> &gt;&gt; <a href="index.html">Overlaps Between MARC21</a> &gt;&gt; MARC21 to MIX Mapping<!-- InstanceEndEditable --></p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr valign="bottom">
+    <td><a href="../../../index.html">The Library of Congress</a> &gt;&gt; <a href="../../../library/index.html">Especially
+    for Librarians and Archivists</a> &gt;&gt; <a href="../../../standards/index.html">Standards</a><br>
+    (<!-- MM:BeginLock type="mmdate" format="Am3" orig=" -->
+    <!-- #BeginDate format:Am3 -->12/20/2010<!-- #EndDate -->
+    ) </td>
+    <td align="right"><a href="http://www.loc.gov/cdn-cgi/l/email-protection#0c6268617f634c60636f226b637a">Contact Us</a></td>
+  </tr>
+</table>
+<script data-cfasync="false" src="http://www.loc.gov/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+<!-- InstanceEnd --></html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class="no-js">
+<head>
+<title>Overview of the BIBFRAME 2.0 Model (BIBFRAME - Bibliographic Framework Initiative, Library of Congress)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="bibframe, model, bibliographic framework, transition, initiative, marc, cataloging, library of congress" />
+<meta name="description" content="BIBFRAME (Bibliographic Framework) is an initiative to evolve bibliographic description standards to a linked data model, in order to make bibliographic information more useful both within and outside the library community. When a resource is cataloged -- a book, for example -- the resulting description includes information elements such as the author, what the book is about, various published forms, and information about copies of the book." />
+
+<link rel="dc.relation.isPartOf" href="../../marc/transition/index.html" title="BIBFRAME - Bibliographic Framework Initiative (Library of Congress)" />
+<meta name="dc.subject" content="bibliographic framework" />
+<meta name="dc.subject" content="vocabulary" />
+<meta name="dc.subject" content="mmodel" />
+<meta name="dc.subject" content="bibframe" />
+<meta name="dc.type" content="webpage" />
+<meta name="dc.identifier" content="//www.loc.gov/bibframe/docs/bibframe2-model.html" />
+<meta name="dc.language" content="en" />
+
+<link type="text/css" media="screen" rel="stylesheet" href="http://www.loc.gov/bibframe/css/styles.css" />
+<link type="text/css" media="print" rel="stylesheet" href="http://www.loc.gov/css/loc_print_v2.css" />
+<!--[if lte IE 7]><link type="text/css" media="screen" rel="stylesheet" href="/css/loc_lte_ie6.css" /><![endif]-->
+<!-- Toolbar -->
+<script type='text/javascript' src='http://cdn.loc.gov/sites/library-of-congress.js'></script>
+
+<script type="text/javascript" src="http://cdn.loc.gov/js/lib/modernizr-1.5.min.js"></script><script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+<body>
+<a id="skip" href="bibframe2-model.html#skip_menu">skip navigation</a>
+<div id="container">
+  <div id="branding">
+  <h2>BIBFRAME</h2>
+  <h3>Bibliographic Framework Initiative (Library of Congress)</h3>
+</div>
+<!-- end id:branding -->
+
+  <div id="h-wrapper" class="fix-float">
+  <div id="header" class="fix-float">
+    <div class="logo">
+      <a href="../../index.html" accesskey="1"><img src="http://cdn.loc.gov/images/img-head/logo-loc.png" width="141" height="32" alt="Library of Congress" /></a>
+    </div>
+    <div class="nav">
+        <ul>
+          <li><a class="btn-loc" href="../../rr/askalib/index.html" accesskey="2">Ask a Librarian</a></li>
+          <li><a class="btn-loc" href="../../library/libarch-digital.html" accesskey="3">Digital Collections</a></li>
+          <li><a class="btn-loc" href="http://catalog.loc.gov/" accesskey="4">Library Catalogs</a></li>
+        </ul>
+    </div>
+    <div class="search">
+      <form action="http://www.loc.gov/search" method="get">
+        <label class="search_label" for="search">Search</label>
+        <div class="search_wrap">
+        <input type='hidden' name='new' value='true'/>
+        <input id="search" type="search" name="q" maxlength="200" accesskey="/" title="Search the Library of Congress website" placeholder="Search Loc.gov" class="locsuggest" /><button class="button" id="search_button" type="submit">GO</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="http://cdn.loc.gov/suggest/library-of-congress.js" type="text/javascript"></script>
+</div>
+
+  <div id="crumb_nav"><a href="../../index.html">The Library of Congress</a> &gt; <a href="../../marc/transition/index.html">BIBFRAME</a> &gt; <a href="index.html">Model &amp; Vocabulary</a> &gt; Overview of the BIBFRAME Model</div>
+  <div id="content">
+    <div id="left_nav">
+  <div class="box leftnavtitle"><a href="../../marc/transition/index.html"><img src="http://www.loc.gov/bibframe/images/left-img-head.gif" alt="BIBRAME" width="219" height="50" /></a></div>
+  <div class="box leftnavimg">Site specific Image</div> 
+  <div class="box">
+    <ul class="arrow_o bold">
+      <li><a href="../../marc/transition/index.html">Home</a></li>
+      <li><a href="../faqs/index.html">Frequently asked questions</a></li>
+      <li><a href="../media/index.html">Webcasts &amp; presentations</a></li>
+      <li><a href="../contact/index.html">Contact us</a></li>
+    </ul>
+  </div>
+  <div class="box">
+    <h2>Model &amp; Vocabulary</h2>   
+    <ul class="std">
+      <li><a href="bibframe2-model.html">BIBFRAME model</a></li>
+      <li>BIBFRAME vocabulary
+        <ul>
+          <li><a href="http://id.loc.gov/ontologies/bibframe-category.html">Category view</a></li>
+          <li><a href="http://id.loc.gov/ontologies/bibframe.html">List view</a></li>
+          <li><a href="http://id.loc.gov/ontologies/bibframe.rdf">RDF View</a></li>
+        </ul>
+      </li>
+      <li><a href="http://id.loc.gov/ontologies/bflc.html">Extension list view</a></li>
+    </ul>
+  </div>
+ <!-- <div class="box">
+    <h2>Implementation &amp; Testing</h2>   
+    <ul class="std">
+      <li><a href="/bibframe/implementation/testbed.html">BIBFRAME testbed</a></li>
+      <li><a href="/bibframe/implementation/register.html">Implementation register</a></li>
+      <li><a href="/bibframe/tools/">Tools and downloads</a></li>
+    </ul>
+  </div> -->
+  <!-- closing left_nav div tag -->
+</div>
+
+    <div id="main_body">
+    		<!-- Toolbar: please modify id -->
+      <div class="locshare-this" id='instance_temp1001'></div>
+      <div class="clear-share"><!-- --></div>
+      <div id="page_head"><span style="width: 100%;"><a name="skip_menu"></a></span>
+        <h1>Overview of the BIBFRAME 2.0 Model</h1>
+      </div>
+
+          <h2>April 21, 2016</h2>
+          <p>BIBFRAME (Bibliographic Framework) is an initiative to  evolve bibliographic description standards to a linked data model, in order to  make bibliographic information more useful both within and outside the library  community.  </p>
+          <p>When a resource is cataloged  -- a book, for example -- the resulting  description includes information elements such as the author, what the book is  about, various published forms, and   information about copies of the book.<br />
+            <img src="images/bf2-model.jpg" width="425" height="530" alt="BIBFRAME 2.0 Model" align="right" /><br />
+      BIBFRAME 2.0 organizes this information into three core levels of  abstraction:<strong><em> Work</em></strong>, <strong><em>Instance</em></strong>, and<strong> <em>Item</em></strong>.</p>
+          <ul class="bullet">
+            <li><span dir="ltr"> </span><strong>Work</strong>.  The highest level of  abstraction, a Work, in the BIBFRAME context, reflects the conceptual essence  of the cataloged resource:  authors,  languages, and what it is about (subjects). <br />
+            </li>
+            <li><span dir="ltr"> </span><strong>Instance</strong>.  A Work may have  one or more individual, material embodiments, for example, a particular  published form. These are Instances of the Work.  An Instance reflects information such as its  publisher, place and date of publication, and format.</li>
+            <li><span dir="ltr"> </span><strong>Item.</strong>   An item is an actual  copy (physical or electronic) of an Instance. It reflects information such as  its location (physical or virtual), shelf mark, and barcode.</li>
+      </ul>
+          <p>BIBFRAME 2.0 further defines additional key concepts that have relationships to the core classes: </p>
+          <ul class="bullet">
+            <li><span dir="ltr"> </span><strong>Agents</strong>:  Agents are people,  organizations, jurisdictions, etc., associated with a Work or Instance through  roles such as author, editor, artist, photographer, composer, illustrator, etc.</li>
+            <li><span dir="ltr"> </span><strong>Subjects</strong>:  A Work might be  &ldquo;about&rdquo; one or more concepts. Such a concept is said to be a &ldquo;subject&rdquo; of the  Work. Concepts that may be subjects include topics, places, temporal  expressions, events, works, instances, items, agents, etc.</li>
+            <li><span dir="ltr"> </span><strong>Events</strong>:  Occurrences, the  recording of which may be the content of a Work.</li>
+          </ul>
+          <p>The BIBFRAME vocabulary consists of RDF classes and  properties.  Classes include the three  core classes listed above as well as various additional classes, many of which  are subclasses of the core classes.   Properties describe characteristics of the resource being described as  well as relationships among resources. For example: one Work might be a  &ldquo;translation of&rdquo; another Work; an Instance may be an &ldquo;instance of&rdquo; a particular  BIBFRAME Work.  Other properties describe  attributes of Works and Instances.  For  example: the BIBFRAME property &ldquo;subject&rdquo; expresses an important attribute of a  Work (what the Work is about), and the property &ldquo;extent&rdquo; (e.g. number) expresses an attribute of an Instance.</p>
+      <div class="clear"><!-- --></div>
+    </div><!-- end id:main_body -->
+  </div><!-- end id:content -->
+  	<!-- begin: global footer -->
+  <div id="f-wrapper" class="fix-float">
+  <div id="footer" class="fix-float">
+      <div class="cols heading">
+        <h2>Connect with the Library</h2>
+        <p><a class="ar-more foot" href="../../homepage/connect.html">All ways to connect</a></p>
+      </div>
+      <div class="cols">
+        <h3>Find Us On</h3>
+        <a href="http://www.pinterest.com/LibraryCongress/"><img src="http://cdn.loc.gov/images/img-foot/pinterest.gif" alt="Pinterest" width="16" height="16" /></a> &nbsp; <a href="http://www.facebook.com/libraryofcongress"><img src="http://cdn.loc.gov/images/img-foot/facebook.gif" alt="Facebook" width="16" height="16" /></a> &nbsp; <a href="http://twitter.com/#!/librarycongress"><img src="http://cdn.loc.gov/images/img-foot/twitter.gif" alt="Twitter" width="16" height="16" /></a> &nbsp; <a href="http://www.youtube.com/libraryofcongress"><img src="http://cdn.loc.gov/images/img-foot/youtube.gif" alt="YouTube" width="16" height="16" /></a> &nbsp; <a href="http://www.flickr.com/photos/library_of_congress/"><img src="http://cdn.loc.gov/images/img-foot/flickr.gif" alt="Flickr" width="16" height="16" /></a>
+      </div>
+      <div class="cols">
+        <h3>Subscribe &amp; Comment</h3>
+        <ul class="plain">
+          <li><a href="../../rss/index.html">RSS &amp; E-Mail</a></li>
+          <li><a href="http://blogs.loc.gov/">Blogs</a></li>
+        </ul>
+      </div>
+      <div class="cols">
+        <h3>Download &amp; Play</h3>
+        <ul class="plain">
+          <li><a href="http://www.loc.gov/apps/">Apps</a></li>
+          <li><a href="http://www.loc.gov/podcasts/">Podcasts</a></li>
+          <li><a href="../../today/cyberlc/index.php.html">Webcasts</a></li>
+          <li><a href="http://itunes.apple.com/us/institution/library-of-congress/id386017159" class="external foot mod">iTunesU<span> (external link)</span></a></li>
+        </ul>
+      </div>
+      <div class="cols">
+        <h3>Questions</h3>
+        <ul class="plain">
+          <li><a href="../../rr/askalib/index.html">Ask a Librarian</a></li>
+          <li><a href="../../help/contact-general.html" accesskey="8">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="clear"><!-- --></div>
+      <p class="links">
+      <a href="../../about/index.html">About</a> |
+      <a href="http://www.loc.gov/pressroom/login">Press</a> |
+      <a href="../../hr/employment/index.php.html">Jobs</a> |
+      <a href="http://www.loc.gov/philanthropy/index.php">Donate</a>
+      <br />
+      <a href="../../about/oig/index.html">Inspector General</a> |
+      <a href="../../homepage/legal.html" accesskey="9">Legal</a> |
+      <a href="../../access/index.html" accesskey="0">Accessibility</a> |
+      <a href="../../global/disclaim.html">External Link Disclaimer</a> |
+      <a href="http://www.usa.gov/">USA.gov</a>
+      </p>
+      <span class="speech"><a href="../../access/web.html">Speech Enabled</a></span>
+  </div><!-- end id:footer -->
+  </div><!-- end id:f-wrapper -->
+	<!-- end: global footer -->
+
+</div><!-- end id:container -->
+<script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mads xmlns="http://www.loc.gov/mads/" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/mads/mads.xsd">
+<authority>
+<titleInfo authority="naf">
+<mods:title>Beowulf</mods:title>
+</titleInfo>
+</authority>
+<variant type="other">
+<titleInfo>
+<mods:title>Bjowulf</mods:title>
+</titleInfo>
+</variant>
+</mads>

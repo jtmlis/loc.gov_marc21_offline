@@ -1,0 +1,775 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+                        "http://www.w3.org/TR/html40/loose.dtd">
+
+<html>
+<head>
+<title>Guidelines for the Use of Field 856</title>
+<base href="">
+<meta name="description"  content="Detailed guidelines to the use of field 856 in MARC records for location and access information to electronic resources described in the record.">
+<meta name="keywords" content="MARC Field 856 Electronic Location and Access">
+<meta name="author" content="Library of Congress Network Development and MARC Standards Office">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script src="http://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+<h4 align=center><em>MARC 21 Formats</em></h4>
+<h2 align=center>Guidelines for the Use of Field 856</h2>
+<h3 align=center>Revised March 2003 (under revision 2020)</h3>
+<h3 align=center>Network Development and MARC Standards Office <br>
+  Library of Congress</h3>
+<hr>
+<p> <strong>March 2003 Revision.</strong> This document gives guidelines on the 
+  use of field 856 and is current as of March 2003. It includes all changes made 
+  to the field through the midwinter ALA conference held in January 2003. It supersedes 
+  the <a href="http://www.loc.gov/marc/856guide_august1999.html">August 1999</a> 
+  edition of the guidelines. 
+<p> A description of the full field is available in the <i>MARC 21 Concise Format 
+  for Bibliographic Data</i>, <a href="http://www.loc.gov/marc/bibliographic/ecbdhold.html#mrcb856">field 
+  856</a> or in the full format, <i>MARC 21 Format for Bibliographic Data</i>, 
+  available from LC's <a href="http://www.loc.gov/cds">Cataloging 
+  Distribution Service</a> (CDS). It is also available in the MARC 21 authority, 
+  holdings, classification and community information format documentation. 
+<h3>Contents</h3>
+<ul>
+  <li><a href="856guide.html#intro">Introduction</a></li>
+  <li><a href="856guide.html#gen_info">General Information</a></li>
+  <li><a href="856guide.html#data_elements">Specific Data Elements</a></li>
+  <li><a href="856guide.html#other_fields">URIs in Other Fields and Formats</a></li>
+  <li><a href="856guide.html#lc_usage">LC Usage</a></li>
+  <li><a href="856guide.html#changes">Major Changes Included</a></li>
+  <li><a href="856guide.html#atta">Examples</a></li>
+</ul>
+<p> 
+<hr>
+<h3><a name="intro">Introduction</a></h3>
+<p>Field 856 in the MARC 21 bibliographic, holdings, authority, classification, 
+  and community information formats is used for electronic location and access 
+  information to an electronic resource. <br>
+  <br>
+  The field may be used in a bibliographic or holdings record for a resource when 
+  it or a subset of it is available electronically. In addition, it may be used 
+  to locate and access an electronic version of a non-electronic resource described 
+  in either the bibliographic record, a portion of the resource described, or 
+  a related electronic resource. See the <a href="856guide.html#other_formats">Field 856 in 
+  Other Formats</a> section for information about how field 856 is used in the 
+  authority, classification, and community information formats. <br>
+  <br>
+  Field 856 contains the following elements: </p>
+<h3>Field 856 - Electronic Location and Access (R)</h3>
+<p> 
+<table width="517">
+  <tr valign="top"> 
+    <td colspan="2"><b>Indicators</b></td>
+  </tr>
+  <tr valign="top"> 
+    <td width="127"><b>First Indicator</b><br>
+    </td>
+    <td width="378"> <b>Access method</b><br>
+    </td>
+  </tr>
+  <tr valign="top"> 
+    <td width="127">#<br>
+    </td>
+    <td width="378">No information provided</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="127">0<br>
+    </td>
+    <td width="378">Email</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="127">1<br>
+    </td>
+    <td width="378">FTP</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="127">2<br>
+    </td>
+    <td width="378">Remote login (Telnet)</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="127">3<br>
+    </td>
+    <td width="378">Dial-up</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="127">4<br>
+    </td>
+    <td width="378">HTTP</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="127">7<br>
+    </td>
+    <td width="378">Method specified in subfield $2</td>
+  </tr>
+</table>
+<p> 
+<table>
+  <tr valign="top"> 
+    <td width="128"><b>Second Indicator</b><br>
+    </td>
+    <td width="379"><b>Relationship</b><br>
+    </td>
+  </tr>
+  <tr valign="top"> 
+    <td width="128">#<br>
+    </td>
+    <td width="379">No information provided</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="128">0<br>
+    </td>
+    <td width="379">Resource</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="128">1<br>
+    </td>
+    <td width="379">Version of resource</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="128">2<br>
+    </td>
+    <td width="379">Related resource</td>
+  </tr>
+  <tr valign="top"> 
+    <td width="128">8<br>
+    </td>
+    <td width="379">No display constant generated</td>
+  </tr>
+</table>
+<p> 
+<table width="518">
+  <tr valign="top"> 
+    <td colspan="2"><b>Subfield Codes </b></td>
+  </tr>
+  <tr valign="top"> 
+    <td>$a<br>
+    </td>
+    <td>Host name (R)</td>
+  </tr>
+  <tr valign="top"> 
+    <td height="20">$b<br>
+    </td>
+    <td height="20">Access number (R)</td>
+  </tr>
+  <tr valign="top"> 
+    <td>$c<br>
+    </td>
+    <td>Compression information (R)</td>
+  </tr>
+  <tr valign="top"> 
+    <td>$d<br>
+    </td>
+    <td>Path (R)</td>
+  </tr>
+  <tr valign="top"> 
+    <td>$f<br>
+    </td>
+    <td>Electronic name (R)</td>
+  </tr>
+  <tr valign="top"> 
+    <td>$h<br>
+    </td>
+    <td>Processor of request (NR)</td>
+  </tr>
+  <tr valign="top"> 
+    <td>$i<br>
+    </td>
+    <td>Instruction (R)</td>
+  </tr>
+  <tr valign="top"> 
+    <td>$j<br>
+    </td>
+    <td>Bits per second (NR)</td>
+  </tr>
+  <tr valign="top"> 
+    <td>$k<br>
+    </td>
+    <td>Password (NR)</td>
+  </tr>
+  <tr valign="top"> 
+    <td>$l<br>
+    </td>
+    <td>Logon (NR)</td>
+  </tr>
+  <tr valign="top"> 
+    <td>$m<br>
+    </td>
+    <td>Contact for access assistance (R)</td>
+  </tr>
+  <tr valign="top"> 
+    <td>$n<br>
+    </td>
+    <td>Name of location of host (NR)</td>
+  </tr>
+  <tr valign="top"> 
+    <td>$o<br>
+    </td>
+    <td>Operating system (NR)</td>
+  </tr>
+  <tr valign="top"> 
+    <td>$p<br>
+    </td>
+    <td>Port (NR)</td>
+  </tr>
+  <tr valign="top"> 
+    <td>$q<br>
+    </td>
+    <td>Electronic format type (NR)</td>
+  </tr>
+  <tr valign="top"> 
+    <td>$r<br>
+    </td>
+    <td>Settings (NR)</td>
+  </tr>
+  <tr valign="top"> 
+    <td>$s<br>
+    </td>
+    <td>File size (R)</td>
+  </tr>
+  <tr valign="top"> 
+    <td>$t<br>
+    </td>
+    <td>Terminal emulation (R)</td>
+  </tr>
+  <tr valign="top"> 
+    <td>$u<br>
+    </td>
+    <td>Uniform Resource Identifier (R)</td>
+  </tr>
+  <tr valign="top"> 
+    <td>$v<br>
+    </td>
+    <td>Hours access method available (R)</td>
+  </tr>
+  <tr valign="top"> 
+    <td>$w<br>
+    </td>
+    <td>Record control number (R)</td>
+  </tr>
+  <tr valign="top"> 
+    <td>$x<br>
+    </td>
+    <td>Nonpublic note (R)</td>
+  </tr>
+  <tr valign="top"> 
+    <td>$y</td>
+    <td>Link text (R)</td>
+  </tr>
+  <tr valign="top"> 
+    <td>$z<br>
+    </td>
+    <td>Public note (R)</td>
+  </tr>
+  <tr valign="top"> 
+    <td>$2</td>
+    <td>Access method (NR)</td>
+  </tr>
+  <tr valign="top"> 
+    <td>$3</td>
+    <td>Materials specified (NR)</td>
+  </tr>
+  <tr valign="top"> 
+    <td>$6</td>
+    <td>Linkage (NR)</td>
+  </tr>
+  <tr valign="top"> 
+    <td>$8</td>
+    <td>Field link and sequence number (R)</td>
+  </tr>
+</table>
+<p> 
+<hr>
+<h3><strong><a name="gen_info">General Information</a></strong></h3>
+<p>The data in field 856 may be a Uniform Resource Identifier (URI), which is 
+  recorded in subfield $u. The necessary locator information may also be parsed 
+  into separate defined subfields. Note that separate subfields for locator data 
+  was provided when this field was first established in 1993, but generally, these 
+  are seldom used. An access method, or protocol used, is given as a value in 
+  the first indicator position (if the access method is email, FTP, remote login 
+  (telnet), dial-up, or HTTP) or in subfield $2 (if the access method is anything 
+  else). The access method is the first element of a URL. The field may also include 
+  a Uniform Resource Name or URN (e.g., a DOI (Digital Object Identifier) or handle). 
+</p>
+<p>See below for guidelines on repeatability.</p>
+<p> <strong>Uniform Resource Identifier.</strong> For any access method, a Uniform 
+  Resource Identifier (URI) is generally recorded in subfield $u. Separate subfields 
+  may be used if it is desirable to display data in a particular way.<br>
+  <br>
+<dl> 
+  <dt>The most commonly used data elements in field 856 are as follows: <br>
+</dl>
+<ul>
+  <li>1st indicator = 4 for HTTP (earlier records may use blank)<br>
+  </li>
+  <li>Subfield $u = [HTTP URL]<br>
+  </li>
+  <li>Subfield $3: data specifying to what the URI refers, if applicable<br>
+  </li>
+  <li>Subfield $z (Public note): data relating to the electronic location of the 
+    source that is adequate for public display </li>
+</ul>
+<p> <strong>Required subfields.</strong> A URI in subfield $u is required unless 
+  electronic location and access information is parsed into separate subfields, 
+  in which case no single subfield is required. When using this technique, the 
+  subfields used largely depends on the access method indicated in the first indicator 
+  or in subfield $2 (if first indicator = 7). 
+<p> <strong>Encoding non-MARC characters.</strong> In February 1994, Proposal 
+  93-10 defined additional characters in the MARC character set to both accommodate 
+  existing bibliographic needs and to align it with the ASCII and ANSEL character 
+  sets. Both the spacing underscore and the spacing tilde were added at the time 
+  because of the need in directory and file names for electronic resources. Many 
+  systems have implemented these characters. For systems that have not implemented 
+  the spacing underscore and tilde, the following alternative characters may be 
+  used: <br>
+
+<dl> 
+  <dd>spacing underscore %5F<br>
+    spacing tilde %7E<br>
+</dl>
+Since these characters are valid ASCII strings, the above method allows for the 
+functionality supported by Z39.50 clients and Web browsers which permit users 
+to click on links to access resources represented by URLs. When the additions 
+to the MARC 21 character set are implemented to support the encoding of the spacing 
+characters, it will be possible to replace all instances of the %xx strings. 
+<p> <strong>Multiple 856 fields</strong>. There are many reasons to include multiple 
+  856 fields in records. The following are the most common: 
+<ul>
+  <li>Location data elements vary (the URI in subfield $u or subfields $a, $b, 
+    $d, when used) 
+  <li>Different access methods (e.g., a document available through HTTP and from 
+    an FTP server)<br>
+  <li>Different parts of the item are electronic, using subfield $3 to indicate 
+    the part (e.g., table of contents accessible in one file and an abstract in 
+    another)<br>
+  <li>Mirror sites (the same resource is made available at two different locations, 
+    often to facilitate access, perhaps internationally)<br>
+  <li>Different formats/resolutions (e.g., the ASCII version of an electronic 
+    journal vs. the Web home page for that journal; a thumbnail vs. archival copy 
+    of a digitized photograph) 
+  <li>Related items, using subfield $3 and second indicator value to specify 
+</ul>
+<p>See also under <a href="856guide.html#subfield_$u">subfield $u</a> for repeatability guidelines. 
+<p><b>Field 856 in bibliographic or holdings records.</b> Since field 856 is valid 
+  in both bibliographic and holdings records, institutions may favor recording 
+  it in the holdings record. It is intended to be an electronic equivalent to 
+  field 852 (Location), which contains information used to identify the holding 
+  organization and other detailed information required to locate a physical item 
+  in a collection. In early 1999, the Network Development and MARC Standards Office 
+  elicited opinions on whether it is desirable to use the field in bibliographic 
+  or holdings records. Responses received generally favored recording the field 
+  in the holdings record where practical. However, for a variety of reasons, such 
+  as the wider exchange of bibliographic records, many institutions use the bibliographic 
+  record despite the benefits of using holdings records. <br>
+  <br>
+  The following advantages of using holdings records have been expressed:<br>
+<ul>
+  <li>Ownership to an electronic resource may vary by institution. Such access 
+    information belongs in local holdings.<br>
+  <li>The holdings record is a means to bring together various versions.<br>
+  <li>Use of a single record approach for the bibliographic item has been implemented 
+    widely. This practice makes it clearer to use holdings for the specific versions.<br>
+  <li>Having a hot-linked 856 field in holdings forces users to think of it as 
+    holdings information, and to separate information about the universal bibliographic 
+    item.<br>
+  <li>The "universal URL" that is for general access and any general information 
+    on access in note fields should be in the bibliographic record. Specific local 
+    access URLs should be in holdings (although this may result in unpredictability).<br>
+  <li>Bibliographic field 856 might usefully be limited to links that do not apply 
+    to the entire bibliographic item (e.g., finding aid, table of content, abstract). 
+</ul>
+<p> In order to move towards this approach in the future, it will be necessary 
+  to persuade vendors to make the following changes to their ILS systems:<br>
+<ul>
+  <li> Allow for hot links from holdings records<br>
+  <li>Allow for the ability to do link checking from holdings records<br>
+  <li>Provide indexing of holdings records<br>
+  <li> Allow for the ability to export the fields from holdings, to be exchanged 
+    either as separate holdings records or embedded in an exported bibliographic 
+    record<br>
+  <li> Provide for more logical displays of bibliographic/holdings information 
+    where necessary<br>
+  <li> Allow for sequencing multiple holdings records 
+</ul>
+At this point, it is a local decision whether to use the field in bibliographic 
+or holdings records. 
+<p> 
+<hr>
+<h3><a name="data_elements">Specific Data Elements</a></h3>
+<dl> 
+  <dt><strong>First Indicator (Access Method).</strong> The first indicator contains 
+    information about the access method to the resource and has values defined 
+    for Email, FTP, Remote login (Telnet), Dial-up, and HTTP. Access methods without 
+    defined values may contain a first indicator value 7 with the method indicated 
+    in subfield $2. Older records may contain value 7 and subfield $2 (with content 
+    http) if created before value 4 (HTTP) was defined. 
+    <p> The list of indicator values and the values used in subfield $2 is specified
+       in the URL standard (<a href="http://www.ietf.org/rfc/rfc1738.txt">RFC1738</a>)
+        and maintained by the Internet Assigned Numbers Authority (<a href="http://www.iana.org/">IANA</a>).
+ A list of URI schemes is online at: <a href="http://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml">http://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml</a>.
+    <p> For those access methods that have an indicator value defined (ftp, telnet, 
+      electronic mail), the URI is included in subfield $u with the appropriate 
+      indicator value recorded, even though it is redundant with the first element 
+      of the URI. 
+    <p> Value # (blank) (No information provided) may be used if only a URN is 
+      recorded in subfield $u. If using a URI in subfield $u with one of the access 
+      methods that has a value defined in the first indicator, the access method 
+      may be repeated in subfield $2, if desired (e.g., 856 0# $umailto:<a href="http://www.loc.gov/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="44282d373037213632043622292c6a2b3623">[email&#160;protected]</a> 
+      $2mailto).<br>
+      <br>
+    <p> Value 7 and subfield $2 is used for electronic access to host-specific 
+      file names (i.e., files stored locally) with the access method, &quot;file.&quot; 
+      This designation is also a defined URL scheme. 
+    <p> <strong>Second indicator (Relationship).</strong> A second indicator is 
+      provided to show the relationship between the information in field 856 and 
+      the resource described in the record. This may be used for the generation 
+      of a display constant or for ordering multiple 856 fields. For further information, 
+      see <a href="http://www.loc.gov/marc/marbi/1997/97-01.html">Proposal No. 
+      97-1</a> (Definition of Second Indicator (Relationship to Source) in Field 
+      856 of the MARC Formats). Suggested display constants for the indicator 
+      values are: 
+    <p> 
+    <table>
+      <tr valign="top"> 
+        <td width="106"># (blank)</td>
+        <td width="245">Electronic resource:</td>
+      </tr>
+      <tr valign="top"> 
+        <td width="106">0</td>
+        <td width="245">Electronic resource:</td>
+      </tr>
+      <tr valign="top"> 
+        <td width="106">1</td>
+        <td width="245">Electronic version:</td>
+      </tr>
+      <tr valign="top"> 
+        <td width="106">2</td>
+        <td width="245">Related electronic resource:</td>
+      </tr>
+      <tr valign="top"> 
+        <td width="106">8</td>
+        <td width="245"><i>[no display constant generated]</i></td>
+      </tr>
+    </table>
+    <p> <strong>Subfield $3 (Materials specified).</strong> Subfield $3 is used 
+      to specify to what portion or aspect of the resource the electronic location 
+      and access information applies. Specific situations may be:<br>
+      <br>
+    <ul>
+      <li>A portion or subset of the item is electronic<b><br>
+        <br>
+        Example</b>: $3table of contents; $3v. 2-5; $3abstract; $3b&w copy negative<br>
+        <br>
+      <li>A related electronic resource is being linked to the record<br>
+        <br>
+        <b> Example</b>: $3author's self- portrait 
+    </ul>
+    <p> <strong><br>
+      Subfield $q (Electronic format type).</strong> Subfield $q was originally 
+      defined as File transfer mode to include "binary" or "ascii". It was redefined 
+      in June 1997 as Electronic format type to accommodate an Internet Media 
+      Type (MIME type), such as text/html. Alternatively, textual information 
+      about the electronic format type may also be recorded. See under &quot;<a href="856guide.html#lc_usage">LC 
+      Usage</a>&quot; for a description on how LC has used subfield $q in the 
+      <a href="http://memory.loc.gov/">American Memory</a> project. 
+    <p> <b><a name="subfield_$u">Subfield $u (URI) repeatability.</a></b> Subfield 
+      $u may be repeated only if both a URN and a URL or more than one URN are 
+      recorded. Field 856 is repeated if more than one URL needs to be recorded. 
+      Some institutions may wish to record a persistent name (URN) as well as 
+      a resolvable HTTP URL in field 856. 
+    <p> <b>Example:</b> 856 7#$dsawmp$f1694$u<a href="http://hdl.loc.gov/loc.mbrsmi/sawmp.1694">http://hdl.loc.gov/loc.mbrsmi/sawmp.1694</a>$uurn:hdl:loc.mbrsmi/sawmp.1694$2http<br>
+    <p> <br>
+      Persistent Uniform Resource Locators (<a href="http://purl.oclc.org/">PURLs</a>) 
+      at OCLC are intended to deal with the problem of changeable URLs. Functionally, 
+      a PURL is a URL, but it is intended to point to an intermediate resolution 
+      service. Its persistence depends upon the updating of a PURL database when 
+      the location of the resource changes. When recorded in field 856, it is 
+      intended to allow for persistence so that each record containing the URL 
+      need not be updated when the location changes. Since the PURL is supposed 
+      to provide persistent access to the resource, it can be argued that there 
+      is no reason to retain a URL that might become invalid. However, this is 
+      an internal decision, and institutions that use PURLs should use subfield 
+      $x (Nonpublic note) for the original URL if they wish to retain it. This 
+      is an appropriate subfield, since it may not be desirable to display the 
+      URL to the public because it could cause confusion. The <a href="http://www.loc.gov/acq/conser/purl/faq.htm#2us">CONSER 
+      program</a> has, however, repeated subfield $u to include both the PURL 
+      and cooresponding URL in the past.
+    <p> <b>Subfield $y (Link Text).</b> Subfield $y contains link text which is 
+      used for display in place of the URL in subfield $u. Often URLs are difficult 
+      to read and most systems do not display them to the user. Since subfield 
+      $y was not approved until June 2000 (see<a href="http://www.loc.gov/marc/marbi/2000/2000-07.html"> 
+      Proposal 2000-07</a>), there have been various practices in terms of systems 
+      using data in the field as link text. Some systems have used subfields $3 
+      or $z in the past for this purpose. It is not clear how widespread the use 
+      of subfield $y is since its approval. 
+    <p><strong>Subfield $z (Public Note).</strong> Subfield $z may be used for 
+      any additional notes about the electronic resource at the specified location. 
+      Examples include subscription information or access restrictions. 
+    <p> <b>Example</b>: $zInclude desired file format following the hyphen in 
+      the filename: EID0ASCII, EID-PDF or EID-PS. 
+    <p> Institutions have used subfield $z in various ways. Some have created 
+      a note for display repeating the URL in subfield $u. It would be preferable 
+      for systems to display subfield $u rather than have those preparing records 
+      to include information redundantly. 
+    <p> 
+    <hr>
+    <h3><a name="other_fields">URIs in Other Fields and Formats</a></h3>
+    <p> <b>URLs in fields other than field 856.</b> Several proposals resulted 
+      in the definition of a subfield $u (URI) in other fields. These fields include: 
+    <ul>
+      <li>505 (Formatted Contents Note) 
+      <li>508 (Creation/Production Credits Note) 
+      <li>511 (Participant or Performer Note) 
+      <li>514 (Data Quality Note) 
+      <li>520 (Summary, Etc.) 
+      <li>530 (Additional Physical Form Available Note) 
+      <li>538 (System Details Note) 
+      <li>555 (Cumulative Index/Finding Aids Note)<br>
+      <li>583 (Action Note) 
+      <li>670 (Source Data Found) <i>in the MARC 21 Format for Authority Data</i> 
+      <li>678 (Biographical or historical data) <i>in the MARC 21 Format for Authority 
+        Data</i> 
+    </ul>
+    <p> As with field 856, subfield $u should be repeated only when both a URL 
+      and URN is recorded. 
+    <p> 
+    <p><b><a name="other_formats">Field 856 in other formats.</a></b> Field 856 
+      is also defined in the authority, classification, and community information 
+      formats. It may be used as follows:<br>
+      <br>
+    <ul>
+      <li><b>Authority format:</b> Field 856 was defined in June 1998. Guidelines 
+        will be needed from policy making bodies to further describe its use, 
+        especially in cooperative projects. The intent of <a href="http://www.loc.gov/marc/marbi/1998/98-13.html">Proposal 
+        No. 98-13 </a> ( Define Field 856 in the MARC 21 Authorities Format) was 
+        to provide electronic access to Web sites for organizations and other 
+        supplementary information within an authority record.<br>
+        <br>
+        <b>Example: </b>856<b> </b>4#$3image$u<a href="http://sunsite.unc.edu/wm/paint/auth/vinci/joconde/joconde.jpg">http://sunsite.unc.edu/wm/paint/auth/vinci/joconde/joconde.jpg</a><br>
+        <br>
+      <li><b>Classification format:</b> Field 856 provides a link from a MARC 
+        classification record to a related electronic resource. This allows for 
+        accessing visual aids from an online database of MARC classification records.<br>
+        <br>
+        <b>Example:</b> 856<b> </b>7#$uhttp://minaret.loc.gov/images/gschedule/G1350a.gif$yMap 
+        of West south central states<br>
+        <br>
+      <li><b>Community Information format:</b> Field 856 provides a link from 
+        a MARC community information record to community information available 
+        on the Web, e.g., Web pages for organizations, events, services, etc. 
+        <br>
+        <b><br>
+        Example:</b> 856 40$u<a href="../loc/events/index.php.html#15">http://www.loc.gov/loc/events/#15</a>$ySouthwest 
+        Chamber Music in Concert<br>
+        <br>
+    </ul>
+    <p> 
+    <hr>
+    <h3><a name="lc_usage">LC Usage</a></h3>
+    Field 856 has been used at the Library of Congress as follows. <br>
+    <br>
+    Records for resources that have been digitized (or otherwise made available 
+    electronically) as part of the National Digital Library Program (<a href="http://memory.loc.gov/">American 
+    Memory</a>) may contain field 856. Generally, the field is added to the record 
+    for the original item, rather than a new record created (unless it consists 
+    of components that have been gathered together and only exist as an entity 
+    in electronic form). In some cases, LC has also recorded a handle, which is 
+    a URN. Older records may contain a URN in subfield $g (which is now obsolete). 
+    <p> LC uses local codes in subfield $q to indicate the different categories 
+      of a complex object. This is because digital reproductions created by the 
+      Library of Congress are not single files and thus, Internet media types 
+      recorded in subfield $q are not applicable. For example, the reproduction 
+      of a book usually combines page images and text marked up in SGML. See <a href="http://www.loc.gov/catdir/cpso/856q.html">www.loc.gov/catdir/cpso/856q.html</a> 
+      for a complete list of local codes used in subfield $q. 
+    <p> <b>Example</b>: 856 41$dllst$f072$u<a href="http://hdl.loc.gov/loc.law/llst.072">http://hdl.loc.gov/loc.law/llst.072</a><b>$q</b>s<br>
+      <br>
+    <p> 
+    <hr>
+    <h3><a name="changes">Major Changes Included</a></h3>
+    The following are major changes made to the <a href="http://www.loc.gov/marc/856guide_august1999.html">August
+     1999</a> revision to create these (March 2003 revision) guidelines. <br>
+    <br>
+    <ul>
+      <li>Added a table of contents, along with making other structural changes 
+        to enhance the document's readability.<br>
+        <br>
+      <li>Updated the element list to include the changes made to the repeatability 
+        of subfield $u. Subfield $g was also deleted because it was made obsolete 
+        in 2000 (see <a href="http://www.loc.gov/marc/marbi/2000/2000-02.html">Proposal 
+        2000-02</a> for more information).<br>
+        <br>
+      <li>Added and revised the repeatability guidelines for field 856 and subfield 
+        $u.<br>
+        <br>
+      <li>Updated the &quot;Encoding non-MARC characters&quot; section to include 
+        implementation information for the spacing underscore and the spacing 
+        tilde.<br>
+        <br>
+      <li>Added descriptions of subfields $q and $y to the &quot;Specific Data 
+        Elements&quot; section. <br>
+        <br>
+      <li>Expanded the &quot;URLs in fields other than field 856&quot; section 
+        to include a complete list of bibliographic and authority fields that 
+        include subfield $u.<br>
+        <br>
+      <li>Expanded and added examples to the &quot;Field 856 in other formats&quot; 
+        section. <br>
+        <br>
+      <li>Expanded the &quot;LC Usage&quot; section to include updated information 
+        about how the Library of Congress uses field 856 in various projects.<br>
+        <br>
+      <li>Deleted the "Attachment B: Subfield Use When Not Using $u (URL)" section.<br>
+        <br>
+      <li>Updated the examples in the &quot;Examples&quot; section to match current 
+        usage of field 856. 
+    </ul>
+    <br>
+    <hr>
+    <h3 align=left><a name="atta"><strong>Examples</strong></a></h3>
+    <p> * System supplied element<br>
+      # Blank<br>
+      subfield $ Subfield code delimiter<br>
+    <p> <strong><br>
+      Record #1: 856 link to a subset of the bibliographic item; HTTP URL</strong> 
+    <p> Leader *****nam##*******#a<br>
+      001 2521854<br>
+      005 19950215082838.3<br>
+      008 950215s1994####enk######b#####||||#eng##<br>
+      040 ##$aDLC $cDLC $dDLC<br>
+      050 00$aHA29$b.A5828 1993<br>
+      082 00$a300/.1/5195 $220<br>
+      245 00 $aAnalyzing qualitative data /$cedited by Alan Bryman and Robert 
+      G. Burgess.<br>
+      260 ##$aLondon ;$aNew York :$bRoutledge,$c1994.<br>
+      300 ##$axii, 232 p. :$bill. ;$c24 cm.<br>
+      504 ##$aIncludes bibliographical references and index.<br>
+      020 ##$a0415060621<br>
+      020 ##$a041506063X (pbk.)<br>
+      650 #0$aSocial sciences $xStatistical methods.<br>
+      650 #0$aSocial sciences $xResearch $xMethodology.<br>
+      700 10$aBryman, Alan.<br>
+      700 10$aBurgess, Robert G.<br>
+      856 4#$3Table of contents $u<a href="http://www.loc.gov/catdir/toc/93-3471.html">http://www.loc.gov/catdir/toc/93-3471.html</a><br>
+    <p> <br>
+    <hr>
+    <p> <strong>Record #2: 856 link to item itself; HTTP URL</strong> 
+    <p> Leader *****cem##*******#a<br>
+      001 12934340<br>
+      005 20021112155042.0<br>
+      007 cr |||||||||||<br>
+      008 020918m19999999dcu#a#####|#####|###eng## <br>
+      010 ##$a 2002627178<br>
+      034 0#$aa<br>
+      040 ##$aDLC$cDLC$dDLC<br>
+      072 #7$aA25$2lcg<br>
+      110 2#$aLibrary of Congress.$bGeography and Map Division.<br>
+      245 10$aAmerican Memory map collections: 1500-2002$h[electronic resource].<br>
+      246 30$aMap collections: 1500-2002<br>
+      246 1#$iTitle from HTML header:$aMap collections home page<br>
+      255 ##$aScale not given.<br>
+      256 ##$aElectronic data and program.<br>
+      260 ##$a[Washington, D.C.] :$bLibrary of Congress,$c[1999-<br>
+      538 ##$aMode of access: World Wide Web.<br>
+      500 ##$aTitle from home page (viewed 9-18-02).<br>
+      500 ##$aPage last updated June 21, 2002.<br>
+      520 ##$aThe Geography and Map Division of the Library of Congress offers 
+      access to its online map collection for the years 1500-2002. The collection 
+      is organized according to seven major categories. Information about the 
+      date of<br>
+      publication, subject, medium, call number, and location of each map is provided.<br>
+      505 0#$aCities and towns -- Conservation and environment -- Discovery and 
+      exploration -- Cultural landscapes -- Military battles and campaigns -- 
+      Transportation and communication -- General maps.<br>
+      651 #0$aUnited States$vMaps.<br>
+      650 #0$aWorld maps.<br>
+      650 #0$aMap collections.<br>
+      610 20$aLibrary of Congress.$bGeography and Map Division$vMaps.<br>
+      653 ##$aInternet resource--Maps<br>
+      710 2#$aLibrary of Congress.$bNational Digital Library Program.<br>
+      856 40$u<a href="http://lcweb2.loc.gov/ammem/gmdhtml/gmdhome.html">http://lcweb2.loc.gov/ammem/gmdhtml/gmdhome.html 
+      </a> 
+    <p> 
+    <hr>
+    <p> <strong>Record #3: 856 with Second Indicator Value 2 for Related electronic 
+      resource.</strong> This record describes the original manuscript collection; 
+      856 field describes the finding aid for the electronic version of that original.<br>
+      <br>
+    <p> Leader *****npc##*******#e<br>
+      001 mm78052522 <br>
+      008 780918||||||||||||#################eng##<br>
+      010 ##$amm 78052522 $bms 69002041<br>
+      040 ##$aDLC$cDLC<br>
+      072 #7$aL$2lcmd<br>
+      100 #1$aJackson, Shirley,$d1919-1965.<br>
+      245 00$kPapers,$f1932-1970$g(bulk 1932-1965)<br>
+      300 ##$a7,400$fitems.<br>
+      300 ##$a51$fcontainers.<br>
+      300 ##$a20.4$flinear feet.<br>
+      520 #8$aCorrespondence; diaries; journals; mss., typescripts, and galleys 
+      of articles, books, and short stories; college notebooks; watercolors; pencil 
+      and ink drawings; and other papers pertaining primarily to Jackson's writings. 
+      Includes mss., notes, and outlines relating chiefly to the development of 
+      Jackson's short stories through which she conveyed her perception of psychological 
+      horror lying just beneath the surface of modern life, as well as to her 
+      supernatural tales and to her humorous stories of contemporary domestic 
+      life. Correspondents include Jackson's husband, Stanley Edgar Hyman, her 
+      parents, Leslie H. and Geraldine B. Jackson, Walter Bernstein, Jean Brockway, 
+      Elizabeth Batterham (&quot;Libby&quot;) Burke, John Ciardi, Pascal Covici, 
+      Carol Black Livaudais, June Mirken Mintz, Frank Orenstein, Louis L. Scher, 
+      Mary Shaw, Robert M. Strauss, Louis Untermeyer, Jay Williams, the publishing 
+      firm of Farrar, Straus and Young, and Jackson's literary agents Brandt &amp; 
+      Brandt and the Music Corporation of America.<br>
+      541 ##$cGift,$aStanley Edgar Hyman,$d1967.<br>
+      541 ##$cTransfer,$aStanley Edgar Hyman papers,$bLibrary of Congress Manuscript 
+      Division,$d1979.<br>
+      541 ##$cGift,$aVirginia M. Olsen,$d1991.<br>
+      544 ##$3Audiotape$etransferred to$aLibrary of Congress Motion Picture, Broadcasting, 
+      and Recorded Sound Division.<br>
+      544 ##$3Selected artifacts$etransferred to$aSmithsonian Institution.<br>
+      545 ##$aAuthor.<br>
+      555 8#$aFinding aid available in the Library and on Internet.<br>
+      600 10$aBernstein, Walter.<br>
+      600 10$aBrockway, Jean.<br>
+      600 10$aBurke, Elizabeth Batterham.<br>
+      600 10$aCiardi, John,$d1916-<br>
+      600 10$aCovici, Pascal,$d1930-<br>
+      600 10$aHyman, Stanley Edgar,$d1919-1970.<br>
+      600 10$aJackson, Geraldine B.<br>
+      600 10$aJackson, Leslie H.<br>
+      600 10$aLivaudais, Carol Black.<br>
+      600 10$aMintz, June Mirken.<br>
+      600 10$aOrenstein, Frank.<br>
+      600 10$aScher, Louis L.<br>
+      600 10$aShaw, Mary.<br>
+      600 10$aStrauss, Robert M.<br>
+      600 10$aUntermeyer, Louis,$d1885-1977.<br>
+      600 10$aWilliams, Jay,$d1914-<br>
+      610 20$aBrandt &amp; Brandt.<br>
+      610 20$aFarrar, Straus and Young.<br>
+      610 20$aMusic Corporation of America.<br>
+      650 #0$aAmerican fiction.<br>
+      650 #0$aHorror tales, American.<br>
+      650 #0$aHumorous stories, American.<br>
+      650 #0$aShort stories, American.<br>
+      650 #0$aSupernatural in literature.<br>
+      656 #7$aAuthors.$2itoamc<br>
+      852 ##$aLibrary of Congress$bManuscript Division$eWashington, D.C.<br>
+      856 42$3Finding aid$u<a href="http://lcweb2.loc.gov/ammem/ead/jackson.sgm">http://lcweb2.loc.gov/ammem/ead/jackson.sgm 
+    </a>    
+</dl>
+<hr>
+<p> <b>Go to</b>: <a href="marc.html">MARC Home Page</a> | <a href="../index.html">Library 
+  of Congress Home Page</a> 
+<p> 
+<HR>
+<IMG SRC="../homepage/lc2.gif" ALT=""> <strong>Library of Congress</strong><br>
+<address> 
+<!--help desk email start -->
+<a href="http://www.loc.gov/help/help-desk.html">Library of Congress Help Desk</a> 
+<!--help desk email end -->
+( 
+<!-- #BeginDate format:Am3 -->12/01/2020<!-- #EndDate -->
+)</address>
+<script data-cfasync="false" src="http://www.loc.gov/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>if(window['_satellite']){_satellite.pageBottom();}</script>
+</body>
+</HTML>

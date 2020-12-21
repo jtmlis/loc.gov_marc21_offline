@@ -1,0 +1,3929 @@
+<!DOCTYPE html>
+
+
+<html lang="en" class="no-js" prefix="lc: http://loc.gov/#">
+<head>
+
+    
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="version" content="$Revision$"/>
+<meta name="msvalidate.01" content="5C89FB9D99590AB2F55BD95C3A59BD81"/>
+<link title="schema(DC)" rel="schema.dc" href="http://purl.org/dc/elements/1.1/"/>
+<meta name="dc.language" content="eng" />
+<meta name="dc.source" content="Library of Congress, Washington, D.C. 20540 USA" />
+
+
+    <link rel="alternate" type="application/json" href="https://www.loc.gov/collections/aaron-copland/about-this-collection/?fo=json" />
+
+
+<meta property="fb:admins" content="libraryofcongress"/>
+<meta property="og:site_name" content="The Library of Congress"/>
+<meta property="og:type" content="article" />
+
+
+<meta property="twitter:site" content="librarycongress"/>
+
+
+
+ 
+
+
+    <title>
+    
+        About this Collection &nbsp;|&nbsp;
+    
+        Aaron Copland Collection &nbsp;|&nbsp;
+    
+        Digital Collections &nbsp;|&nbsp;
+    
+        Library of Congress 
+    
+    </title>
+    <meta name="dc.title"
+          content='About this Collection &nbsp;|&nbsp;Aaron Copland Collection &nbsp;|&nbsp;Digital Collections &nbsp;|&nbsp;Library of Congress ' />
+    <meta property="og:title"
+          content='About this Collection &nbsp;|&nbsp;Aaron Copland Collection &nbsp;|&nbsp;Digital Collections &nbsp;|&nbsp;Library of Congress ' />
+
+    
+        <meta name='description' content='The first release of the online collection contains approximately 1,000 items that yield a total of about 5,000 images. These items date from 1899 to 1981, with most from the 1920s through the 1950s, and were selected from Copland&#39;s music sketches, correspondence, writings, and photographs.'/>
+        <meta property="og:description" content="The first release of the online collection contains approximately 1,000 items that yield a total of about 5,000 images. These items date from 1899 to 1981, with most from the 1920s through the 1950s, and were selected from Copland&#39;s music sketches, correspondence, writings, and photographs." />
+    
+
+    <meta name="dc.rights" content="Text is U.S. Government Work" />
+    <link rel="dc.rights" title="Rights Restriction" href="../../../text-us-government-work.html" />
+
+    
+        <meta name='dc.type' content='Digital Collection'/>
+
+        
+
+        
+            <meta name="dc.relation.isPartOf" content="Music Division" />
+        
+
+        
+            <meta name="dc.type" content="manuscript/mixed material" />
+        
+            <meta name="dc.type" content="photo, print, drawing" />
+        
+            <meta name="dc.type" content="notated music" />
+        
+
+        
+            <meta name="dc.subject" content="Arts and Culture" />
+        
+            <meta name="dc.subject" content="Music" />
+        
+            <meta name="dc.subject" content="Individual Composers" />
+        
+
+        
+            <meta name="dc.subject" content="Performing Arts" />
+        
+    
+
+    
+        <meta name='dc.subject' content='Copland, Aaron'/>
+        <meta name='article:tag' content='Copland, Aaron'/>
+    
+        <meta name='dc.subject' content='music'/>
+        <meta name='article:tag' content='music'/>
+    
+        <meta name='dc.subject' content='composer'/>
+        <meta name='article:tag' content='composer'/>
+    
+        <meta name='dc.subject' content='history'/>
+        <meta name='article:tag' content='history'/>
+    
+
+    
+        <meta name='dc.coverage.spatial' content='United States'/>
+        <meta name='article:tag' content='United States'/>
+    
+
+    
+
+    
+        <meta name='dc.relation.isPartOf' content='partof:digital collections'/>
+        <meta name='article:tag' content='partof:digital collections'/>
+    
+
+    
+        <meta property="og:image" content="http://www.loc.gov/static/collections/aaron-copland/155_155.jpg"/>
+        <meta property="og:image:secure_url" content="https://www.loc.gov/static/collections/aaron-copland/155_155.jpg"/>
+
+        <link rel="alternate" type='image/jpg' href='../../../static/collections/aaron-copland/155_155.jpg'/>
+    
+
+    
+
+    
+
+
+
+
+
+
+
+    <link rel="dc.relation.isPartOf" title='Aaron Copland Collection'
+        href='https://www.loc.gov/collections/aaron-copland/'/>
+
+
+
+
+
+
+<!-- final fallback for pages with no media -->
+<meta property="og:image" content='http://www.loc.gov/static/images/favicons/open-graph-logo.png' />
+<meta property="og:image:secure_url" content='https://www.loc.gov/static/images/favicons/open-graph-logo.png' />
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+
+
+
+
+    
+
+
+
+
+<link href='https://www.loc.gov/static/stylesheets/base.css'
+    type='text/css'
+    rel="stylesheet"/>
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://assets.adobedtm.com/dac62e20b491e735c6b56e64c39134d8ee93f9cf/satelliteLib-6b47f831c184878d7338d4683ecf773a17973bb9.js"></script>
+
+
+
+<script type="text/javascript"
+    src='https://www.loc.gov/static/js/lib/jquery-1.8.2.js'></script>
+
+
+    
+
+<script type="text/javascript">
+/**
+ * Timing.js 1.0.4
+ * Copyright 2015 Addy Osmani
+ */
+(function(window) {
+    'use strict';
+
+    /**
+     * Navigation Timing API helpers
+     * timing.getTimes();
+     **/
+    window.timing = window.timing || {
+        /**
+         * Outputs extended measurements using Navigation Timing API
+         * @param  Object opts Options (simple (bool) - opts out of full data view)
+         * @return Object      measurements
+         */
+        getTimes: function(opts) {
+            var performance = window.performance || window.webkitPerformance || window.msPerformance || window.mozPerformance;
+
+            if (performance === undefined) {
+                return false;
+            }
+
+            var timing = performance.timing;
+            var api = {};
+            opts = opts || {};
+
+            if (timing) {
+                if(opts && !opts.simple) {
+                    for (var k in timing) {
+                        // hasOwnProperty does not work because properties are
+                        // added by modifying the object prototype
+                        if(isNumeric(timing[k])) {
+                            api[k] = parseFloat(timing[k]);
+                        }
+                    }
+                }
+
+
+                // Time to first paint
+                if (api.firstPaint === undefined) {
+                    // All times are relative times to the start time within the
+                    // same objects
+                    var firstPaint = 0;
+
+                    // Chrome
+                    if (window.chrome && window.chrome.loadTimes) {
+                        // Convert to ms
+                        firstPaint = window.chrome.loadTimes().firstPaintTime * 1000;
+                        api.firstPaintTime = firstPaint - (window.chrome.loadTimes().startLoadTime*1000);
+                    }
+                    // IE
+                    else if (typeof window.performance.timing.msFirstPaint === 'number') {
+                        firstPaint = window.performance.timing.msFirstPaint;
+                        api.firstPaintTime = firstPaint - window.performance.timing.navigationStart;
+                    }
+                    // Firefox
+                    // This will use the first times after MozAfterPaint fires
+                    //else if (window.performance.timing.navigationStart && typeof InstallTrigger !== 'undefined') {
+                    //    api.firstPaint = window.performance.timing.navigationStart;
+                    //    api.firstPaintTime = mozFirstPaintTime - window.performance.timing.navigationStart;
+                    //}
+                    if (opts && !opts.simple) {
+                        api.firstPaint = firstPaint;
+                    }
+                }
+
+                // Total time from start to load
+                api.loadTime = timing.loadEventEnd - timing.fetchStart;
+                // Time spent constructing the DOM tree
+                api.domReadyTime = timing.domComplete - timing.domInteractive;
+                // Time consumed preparing the new page
+                api.readyStart = timing.fetchStart - timing.navigationStart;
+                // Time spent during redirection
+                api.redirectTime = timing.redirectEnd - timing.redirectStart;
+                // AppCache
+                api.appcacheTime = timing.domainLookupStart - timing.fetchStart;
+                // Time spent unloading documents
+                api.unloadEventTime = timing.unloadEventEnd - timing.unloadEventStart;
+                // DNS query time
+                api.lookupDomainTime = timing.domainLookupEnd - timing.domainLookupStart;
+                // TCP connection time
+                api.connectTime = timing.connectEnd - timing.connectStart;
+                // Time spent during the request
+                api.requestTime = timing.responseEnd - timing.requestStart;
+                // Request to completion of the DOM loading
+                api.initDomTreeTime = timing.domInteractive - timing.responseEnd;
+                // Load event time
+                api.loadEventTime = timing.loadEventEnd - timing.loadEventStart;
+            }
+
+            return api;
+        },
+        /**
+         * Uses console.table() to print a complete table of timing information
+         * @param  Object opts Options (simple (bool) - opts out of full data view)
+         */
+        printTable: function(opts) {
+            var table = {};
+            var data  = this.getTimes(opts) || {};
+            Object.keys(data).sort().forEach(function(k) {
+                table[k] = {
+                    ms: data[k],
+                    s: +((data[k] / 1000).toFixed(2))
+                };
+            });
+            console.table(table);
+        },
+        /**
+         * Uses console.table() to print a summary table of timing information
+         */
+        printSimpleTable: function() {
+            this.printTable({simple: true});
+        }
+    };
+
+    function isNumeric(n) {
+        return !isNaN(parseFloat(n)) && isFinite(n);
+    }
+
+    // Expose as a commonjs module
+    if (typeof module !== 'undefined' && module.exports) {
+        module.exports = window.timing;
+    }
+
+})(typeof window !== 'undefined' ? window : {});
+;;
+</script>
+<script type="text/javascript">
+// Stub window.loc_ux_tracking so we dont have to riddle the pages
+// with if(window.loc_ux_tracking) everywhere.  Also create an alias
+// `UX`
+jQuery(function($){
+    if(!window.loc_ux_tracking){
+        window.loc_ux_tracking = {
+            trackFileDownloadEvent: function(){},
+            trackUserInteractionEvent: function(){},
+            trackUserInterfaceAction: function(){},
+        }
+    }
+    window.UX = window.loc_ux_tracking;
+    UX.download = UX.trackFileDownloadEvent;
+    UX.interaction = UX.trackUserInteractionEvent;
+    UX.interface = UX.trackUserInterfaceAction;
+
+    function getMediaPosition(player) {
+        /*
+         * To support the two media players (JW Player and mediaElement) a facade function
+         * wwas created in order to get the current position in a video.
+         *
+         * getMediaPosition() returns the current position in the video.
+         * @param {playerObject} player
+         * @return {currentPosition} number
+         */
+        switch(player.type) {
+            case 'jwPlayer': {
+                return player.getPosition();
+            }
+            case 'mediaElement': {
+                return player.getCurrentTime();
+            }
+        }
+        return null;
+    }
+
+
+    function getMediaDuration(player) {
+        /*
+         * To support the two media players (JW Player and mediaElement) a facade function
+         * wwas created in order to get the length of a video.
+         *
+         * getMediaPosition() returns the length of the video.
+         * @param {playerObject} player
+         * @return {currentPosition} number
+         */
+        switch(player.type) {
+            case 'jwPlayer': {
+                return player.getDuration();
+            }
+            case 'mediaElement': {
+                return player.duration;
+            }
+        }
+        return null;
+    }
+
+    /*
+    function mediaPlayerInterface(player, playerType) {
+        // given the media player type, this function will modify the objects such that the methods
+        // called in track_player are the same for both jwPlayer and mediaElement
+        switch(playerType) {
+            case 'jwPlayer': {
+                // Want to mimic the jwPlayers functions so if jwPlayer do nothing
+                break;
+            }
+            case 'mediaElement': {
+                player.getPosition = function() {
+                    return player.getCurrentTime();
+                }
+
+                player.getDuration = function() {
+                    return player.duration;
+                }
+                break;
+            }
+        }
+        return player;
+    }
+    */
+
+    // Register calls to Adobe for metrics tracking
+    $.omniture = UX.track_player = function(player, playerType, shortName, isVideo) {
+
+        player.type = playerType;
+        var eventData = {
+            player: player,
+            shortName: shortName
+        };
+        eventData.mediaType = isVideo ? 'video' : 'audio';
+
+
+        switch(playerType) {
+            case 'jwPlayer': {
+                player.on('pause', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.on('buffer', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.on('idle', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.on('complete', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.on('play', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.on('seeked', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.on('seeking', function(event) {handleMediaEvent(event, eventData)}, this);
+                break;
+            }
+            case 'mediaElement': {
+                player.addEventListener('pause', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.addEventListener('buffer', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.addEventListener('idle', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.addEventListener('complete', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.addEventListener('play', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.addEventListener('seeked', function(event) {handleMediaEvent(event, eventData)}, this);
+                player.addEventListener('seeking', function(event) {handleMediaEvent(event, eventData)}, this);
+                break;
+            }
+            default:
+                break;
+        }
+
+    };
+
+    //Handle various media events and send data to Adobe. This also sends data to the legacy locjukebox reporting suite
+    function handleMediaEvent(event, eventData) {
+        if (typeof s != "undefined") {
+            var player = eventData.player;
+            var mediaName = eventData.shortName;
+            var mediaType = eventData.mediaType;
+            var mediaPlayerName = "LOC JW Player";
+            var mediaOffset = 0;
+            var legacyTracking = s_gi('locjukebox');
+
+            legacyTracking.trackingServer = s.trackingServerSecure;
+            legacyTracking.prop4 = mediaName;
+
+            if (getMediaPosition(player) > 0) {
+                mediaOffset = Math.floor(getMediaPosition(player));
+            }
+            switch (event.type) {
+                case 'play':
+                    if (mediaOffset == 0) {
+                        setTimeout(function() {
+                            s.Media.open(mediaName, getMediaDuration(player), mediaPlayerName);
+                            s.Media.play(mediaName, mediaOffset);
+                            legacyTracking.prop8 = "[Button Click] - Start " + mediaType;
+                            legacyTracking.tl();
+                            console.log('play event fired off');
+                        }, 500);
+                    }
+                    else {
+                        s.Media.play(mediaName, mediaOffset);
+                        legacyTracking.prop8 = "[Button Click] - Resume " + mediaType;
+                        legacyTracking.tl();
+                    }
+                    break;
+
+                case 'seeked':
+                    s.Media.stop(mediaName, mediaOffset);
+                    s.Media.play(mediaName, mediaOffset);
+                    legacyTracking.prop8 = "[Scrub] - Specific Point in " + mediaType + " Clip";
+                    legacyTracking.tl();
+                    console.log('seek event fired off');
+                    break;
+
+                case 'pause':
+                    s.Media.stop(mediaName, mediaOffset);
+                    legacyTracking.prop8 = "[Button Click] - Pause " + mediaType;
+                    legacyTracking.tl();
+                    console.log('pause event fired off');
+                    break;
+                case 'seeking':
+                    s.Media.stop(mediaName, mediaOffset);
+                    console.log('seeking event fired off');
+                    break;
+                case 'buffer':
+                case 'idle':
+                    break;
+
+                case 'complete':
+                    s.Media.stop(mediaName, mediaOffset);
+                    s.Media.close(mediaName);
+                    mediaOffset = 0;
+                    legacyTracking.prop8 = "[End Clip] - " + mediaType;
+                    legacyTracking.tl();
+                    break;
+            }
+        }
+    }
+});
+
+// General analytics properties.  Adobe will inspect the global scope
+// and execute this function if it finds it.
+var doPageMetricsPlugin = function(s){
+
+    // window.UX = window.loc_ux_tracking;  // This resets the UX object removing track_player causing a bug for the video player
+    UX.download = UX.trackFileDownloadEvent;
+    UX.interaction = UX.trackUserInteractionEvent;
+    UX.interface = UX.trackUserInterfaceAction;
+
+    /* application title: prop10 */
+    s.prop10 = "Project One";
+
+    /* error page report */
+    
+
+    s.prop15 = "";
+    s.prop16 = "";
+    s.prop18 = ""; // Start Date
+    s.prop19 = ""; // End Date
+    s.prop20 = false; // Front page only
+    /* page title: prop21 */
+    
+    //Managed content page/article title
+        s.prop21 = 'About this Collection';
+    
+    // Basic or Advanced
+    
+        s.prop15 = 'basic';
+    
+    //Start date
+    
+    //End Date
+    
+    //Front page only
+    
+        s.prop20 = false;
+    
+    /* system identifier: prop20 */
+    /*
+    
+        s.prop20 = '/collections/aaron-copland/about-this-collection/';
+    
+    */
+    /* page identifier: prop11 */
+    // metrics item page identifier is unique id plus readable title.  This
+    // needs help getting cleaned up using site_type/site_id/resource/title?
+    // - from item/metrics.html
+    // - from managed_content/metrics.html
+    
+        s.prop11 = '/collections/aaron-copland/about-this-collection/ - Aaron Copland Collection';
+    
+
+    //Set title, same across supporting material like about-this-thing, search
+    //results within the set as the content, articles and essays etc.
+    
+    s.prop12 = 'Aaron Copland Collection';
+    
+
+    s.prop22 = 0.22435593605;//backend duration
+
+
+    // Assigning specific search options for selected search facets
+    s.prop23 = "";// suggested
+    s.prop24 = "";// digitized
+    s.prop25 = "";// original format
+    s.prop26 = "";// online format
+    s.prop27 = "";// date
+    s.prop28 = "";// part of
+    s.prop29 = "";// contributor
+    s.prop30 = "";// subject
+    s.prop31 = "aaron-copland";// site_id -> picked up by prop62
+    s.prop32 = "";// location
+    s.prop33 = "collections";// site_type -> picked up by prop61
+    s.prop34 = "about-this-collection/";// site_path (options.resource) can be longer than 2 segments
+    s.prop35 = "";// language
+    s.prop36 = "";// results view type
+    
+    s.prop37 = '';// searchIn
+    s.prop38 = "/collections/aaron-copland/about-this-collection/";// path_info
+    s.prop39 = "";//truncated query string
+    s.prop40 = '';// count
+    s.prop41 = "";// sort
+    s.prop44 = "";// searchTerms
+    s.prop45 = "";
+    s.prop46 = "";// qs-adv-search-kw
+    s.prop47 = '';// startPage
+    s.prop67 = "";// access condition
+
+    /* original format: prop49 */
+    
+    s.prop49 = 'Web Pages';
+    
+    s.prop50 = "";
+    s.prop53 = "";// facetPrefix
+    s.prop54 = "";// fullText
+    s.prop55 = "";// download
+    s.prop56 = ""; // partof_collection
+    s.prop57 = ""; // number_page
+    s.prop60 = 123456789;//release_id
+    s.prop69 = ""; // location_state
+    s.prop70 = ""; //location_county
+    s.prop71 = ""; //language
+    // Combined Facets - yuck, should be deprecated soon
+    // TODO: This means we need a s.prop for "digitized"
+    //       aka "available online".
+    s.prop48 = "Facet[Digitized]-(false) ";
+    /*
+    /* Advanced Search display level */
+    
+        s.prop16 = "None";
+    
+
+    /* Advanced Search Parameter */
+    
+    /* Query String */
+    
+
+    /* Partof Title */
+    
+
+    /* Partof_Division */
+    
+    /* Partof_Collection */
+    
+    /* number_page */
+    
+
+    /* Location country */
+    
+
+    /* Location state */
+    
+
+    /* Language */
+    
+
+    
+        
+
+        s.prop28 += 'aaron copland collection|'
+    
+
+    return s;
+};
+</script>
+
+
+
+
+    
+<meta name="msapplication-TileColor"
+      content="#ffffff" />
+<meta name="msapplication-TileImage"
+      content='ms-icon-144x144.png' />
+
+
+<link rel='alternate'
+      type='text/html'
+      href='index.html'/>
+
+
+
+<link rel='alternate'
+      type='application/json'
+      href='https://www.loc.gov/collections/aaron-copland/about-this-collection/?fo=json'/>
+
+
+<link title="Library of Congress Search"
+      href='../../../search/opensearch.xml'
+	  rel="search"
+	  type="application/opensearchdescription+xml" />
+
+
+</head>
+<body>
+<div id='body' class='
+    
+        collections-body
+        
+        aaron-copland-body
+        
+        
+    
+    '>
+<a class="skip-nav"
+   href="index.html#skip-to-content">Skip to main content</a>
+
+
+
+
+
+
+
+
+<style>.header-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 998;
+  background-color: #000000;
+  /* fallback */
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.header {
+  background-color: #fff;
+  border-top: 4px solid #FC4C02;
+  border-bottom: 1px solid #bfbfbf;
+  position: relative;
+  z-index: 999;
+}
+.header-container {
+  max-width: 85.71428571rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .header-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+.header-row {
+  display: flex;
+  align-items: center;
+  min-height: 70px;
+}
+@media (min-width: 993px) {
+  .header-row {
+    align-items: flex-end;
+  }
+}
+</style>
+
+
+<header class="header" role="banner">
+    <div class="header-container">
+        <div class="header-row">
+            
+            
+
+
+<style>.header-logo {
+  width: 161px;
+}
+@media (min-width: 993px) {
+  .header-logo {
+    width: 363px;
+    padding: 25px 0;
+  }
+}
+.header-logo > a {
+  display: block;
+  width: 363px;
+  height: 90px;
+}
+.header-logo > a > img {
+  width: 100%;
+  height: auto;
+}
+.header-logo > a > span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+@media (max-width: 992px) {
+  .header-logo > a {
+    width: 161px;
+    height: 40px;
+  }
+}
+@media print {
+  .header-logo > a {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  .header-logo {
+    padding: 0;
+  }
+}
+@media print {
+  .header-logo {
+    padding: 1rem 0;
+    height: 68px;
+    display: block;
+  }
+  .header-logo:after {
+    content: url("https://www.loc.gov/static/images/logo-loc-new-branding.svg?$Revision$");
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+</style>
+<script>jQuery(function($) {
+    // UX Interaction Tracking - Logo, Menu, Search, Breadcrumbs
+    $('.header-logo a').live('click', function() {
+        UX.interaction($(this), 'LC Logo', 'Click', '');
+    });
+
+});
+</script>
+
+
+<div class="header-logo">
+    <a href="../../../index.html">
+        <img src="https://www.loc.gov/static/images/logo-loc-new-branding.svg" alt="" />
+        <span>Library of Congress</span>
+    </a>
+</div>
+
+            
+            
+            
+
+
+<style>.header-search {
+  flex: 1 1 0%;
+  padding-left: 30px;
+}
+@media (min-width: 993px) {
+  .header-search {
+    padding: 25px 0 25px 210px;
+  }
+}
+.header-search > form {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #000;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+@media (max-width: 768px) {
+  .header-search > form {
+    flex: 1 0 100%;
+  }
+}
+.header-search > form .header-search-formats {
+  position: relative;
+  color: #000;
+  border-bottom: 1px solid #000;
+  flex: 0 0 100%;
+}
+@media (min-width: 481px) {
+  .header-search > form .header-search-formats {
+    flex: none;
+    border: none;
+  }
+}
+.header-search > form .header-search-formats:after {
+  content: "\f107";
+  font-family: FontAwesome;
+  position: absolute;
+  right: 0;
+  top: 0;
+  pointer-events: none;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 6px;
+  font-size: 12px;
+}
+.header-search > form .header-search-formats .header-search-format-select {
+  border: none;
+  height: 30px;
+  width: 100%;
+  padding-right: 20px;
+  box-sizing: border-box;
+  font-size: 12px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+@media (max-width: 480px) {
+  .header-search > form .header-search-formats .header-search-format-select {
+    font-size: 16px;
+  }
+}
+.header-search > form .header-search-formats .header-search-format-select::-ms-expand {
+  display: none;
+}
+.header-search > form .header-search-formats .header-search-format-select:hover,
+.header-search > form .header-search-formats .header-search-format-select:focus {
+  box-shadow: inset 0 0 3px #000 !important;
+}
+.header-search > form .header-search-input-wrapper {
+  flex: 1 1 1%;
+  position: relative;
+}
+.header-search > form .header-search-input-wrapper .header-search-input {
+  box-sizing: border-box;
+  width: 100%;
+  border: none;
+  border-left: 1px solid #000;
+  height: 30px;
+  line-height: 30px;
+}
+@media (max-width: 480px) {
+  .header-search > form .header-search-input-wrapper .header-search-input {
+    font-size: 16px;
+    border: none;
+  }
+}
+.header-search > form .header-search-input-wrapper .header-search-input:focus {
+  box-shadow: inset 0 0 3px #999 !important;
+}
+.header-search > form .header-search-button {
+  height: 30px;
+  font-size: 18px;
+  padding: 0 10px;
+  background-color: #000;
+  border-color: #000;
+}
+.header-search > form .header-search-button > span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.header-search > form .header-search-button .icon {
+  line-height: inherit;
+}
+@media (max-width: 768px) {
+  .header-search > form {
+    display: none;
+  }
+  .header-search > form.header-search-form-active {
+    display: flex;
+  }
+}
+.header-search .header-search-toggle {
+  display: none;
+  height: 32px;
+  font-size: 1.25rem;
+  padding: 0 10px;
+  background-color: #000;
+  border-color: #000;
+}
+.header-search .header-search-toggle span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+@media (max-width: 768px) {
+  .header-search .header-search-toggle {
+    display: inline-block;
+    float: right;
+  }
+  .header-search .header-search-toggle.header-search-toggle-close {
+    background-color: transparent;
+    border-color: transparent;
+    color: #00618e;
+    font-size: 36px;
+    color: #FC4C02;
+    height: auto;
+    flex: none;
+  }
+  .header-search .header-search-toggle.header-search-toggle-close:hover,
+  .header-search .header-search-toggle.header-search-toggle-close:focus {
+    background-color: transparent;
+    border-color: transparent;
+    color: #002347;
+  }
+}
+@media (max-width: 768px) {
+  .header-search {
+    min-height: 32px;
+    box-sizing: border-box;
+    margin: 0 !important;
+  }
+  .header-search.header-search-close {
+    padding: 0 55px 0 1rem !important;
+    z-index: 2;
+    background: #fff;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+@media print {
+  .header-search {
+    display: none;
+  }
+}
+/* autocomplete */
+.autocomplete-w1 {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  margin: 0;
+  width: 100% !important;
+  box-sizing: border-box;
+}
+.autocomplete {
+  box-sizing: border-box;
+  border: 1px solid #999;
+  border-top-color: transparent;
+  background-color: #fff;
+  cursor: default;
+  text-align: left;
+  max-height: 350px;
+  overflow: auto;
+  margin: 0;
+}
+.autocomplete .selected {
+  background: #efefef;
+}
+.autocomplete div {
+  padding: 2px 5px;
+  white-space: nowrap;
+}
+.autocomplete strong {
+  font-weight: normal;
+  color: #00618e;
+}
+.autocomplete-status {
+  font-weight: normal;
+  font-size: 10px;
+  float: right;
+  text-align: right;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+</style>
+<script>jQuery(function($) {
+    // UX Interaction Tracking - Logo, Menu, Search, Breadcrumbs
+    $('.header-search-format-select').change(function() {
+        var label;
+        $('.header-search-format-select option:selected').each(function() {
+            label = $(this).text().trim();
+        });
+        UX.interaction($(this), 'Search', 'Select Format', label);
+    });
+    // search toggle
+    function searchActive() {
+        $('.header-search > form').addClass('header-search-form-active');
+        $('.header-search .header-search-input').focus();
+        $('.header-search-toggle i').switchClass('icon-search', 'icon-times', 50);
+        $('.header-search-toggle').addClass('header-search-toggle-close');
+        $('.header-search').addClass('header-search-close');
+    };
+    function searchInactive() {
+        $('.header-search > form').removeClass('header-search-form-active');
+        $('.header-search-toggle i').switchClass('icon-times', 'icon-search', 50);
+        $('.header-search-toggle').removeClass('header-search-toggle-close');
+        $('.header-search').removeClass('header-search-close');
+    };
+
+    $('.header-search-toggle').live('click', function() {
+        if ($('.header-search > form').hasClass('header-search-form-active')) {
+            searchInactive();
+            //UX Interaction Tracking
+            UX.interaction($(this), 'Search', 'Hide', '');
+        } else {
+            searchActive();
+            //UX Interaction Tracking
+            UX.interaction($(this), 'Search', 'Show', '');
+        }
+    });
+
+    $(window).on("load resize",function(e){
+        $('.autocomplete-w1').parent().css('width', '100%');
+    });
+
+});
+</script>
+
+
+<div class="header-search">
+    <label for="search"
+        class="test screen-readers-only">Search</label>
+    
+    
+<form role="search" method="get" action="https://www.loc.gov/search/">
+    <div class="header-search-formats">
+        <select name="in"
+                id="searchFormat"
+                aria-label="search"
+                class="header-search-format-select">
+            <option value="">Everything</option>
+
+            
+            <option value="original-format:sound recording"
+                
+                    >Audio Recordings</option>
+            
+            <option value="original-format:book"
+                
+                    >Books/Printed Material</option>
+            
+            <option value="original-format:film, video"
+                
+                    >Films, Videos</option>
+            
+            <option value="original-format:legislation"
+                
+                    >Legislation</option>
+            
+            <option value="original-format:manuscript/mixed material"
+                
+                    >Manuscripts/Mixed Material</option>
+            
+            <option value="original-format:map"
+                
+                    >Maps</option>
+            
+            <option value="original-format:notated music"
+                
+                    >Notated Music</option>
+            
+            <option value="original-format:newspaper"
+                
+                    >Newspapers</option>
+            
+            <option value="original-format:periodical"
+                
+                    >Periodicals</option>
+            
+            <option value="original-format:personal narrative"
+                
+                    >Personal Narratives</option>
+            
+            <option value="original-format:photo, print, drawing"
+                
+                    >Photos, Prints, Drawings</option>
+            
+            <option value="original-format:software, e-resource"
+                
+                    >Software, E-Resources</option>
+            
+            <option value="original-format:web archive"
+                
+                    >Web Archives</option>
+            
+            <option value="original-format:web page"
+                
+                    >Web Pages</option>
+            
+            <option value="original-format:3d object"
+                
+                    >3D Objects</option>
+            
+            
+            <option value="partof:aaron copland collection"
+                selected="selected"
+                >This Collection</option>
+            
+        </select>
+    </div>
+    <div class='header-search-input-wrapper'>
+        <input  type="search"
+                title="Search the Library of Congress"
+                placeholder="Search Loc.gov"
+                name="q"
+                id="search"
+                class='locsuggest header-search-input'
+                maxlength="250"
+                value=''
+                onFocus="this.select();"
+                accesskey="/"/>
+        <div class='searchtarget'>
+            <input id='search_within_default'
+                type="hidden"
+                name="new"
+                value="true" />
+        </div>
+    </div>
+    <button class="header-search-button"
+            type="submit"
+            value="submit"><span>Search</span><i
+            class="icon icon-search"></i></button>
+
+    
+    <input type='hidden'
+        name='st'
+        value=''/>
+    
+    
+</form>
+
+    
+    <button class="header-search-toggle"><span>Search toggle</span><i
+        class="icon icon-search"></i></button>
+</div>
+
+            
+            
+            
+
+
+<style>.header-menu {
+  position: relative;
+}
+@media (min-width: 769px) {
+  .header-menu {
+    padding-left: 15px;
+  }
+}
+.header-menu .header-menu-button {
+  color: #000;
+  border: 0;
+  background: none;
+  font-size: 36px;
+  width: 31px;
+  height: 70px;
+  line-height: 1;
+  padding: 0 15px;
+  margin-right: -14px;
+  box-sizing: content-box;
+}
+.header-menu .header-menu-button .icon-times {
+  color: #FC4C02;
+}
+.header-menu .header-menu-button > span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+@media (min-width: 993px) {
+  .header-menu .header-menu-button {
+    height: auto;
+    line-height: normal;
+    padding: 9px 15px 18px;
+  }
+}
+.header-menu.header-menu-active .header-menu-button {
+  background: #efefef;
+}
+.header-menu .header-menu-container {
+  display: none;
+  background: #efefef;
+  position: absolute;
+  top: auto;
+  right: -14px;
+  z-index: 999;
+}
+@media (min-width: 993px) {
+  .header-menu .header-menu-container {
+    top: auto;
+  }
+}
+.header-menu .header-menu-container.header-menu-container-active {
+  display: block;
+  height: auto;
+  overflow: auto;
+  opacity: 1;
+}
+.header-menu .header-menu-container > ul {
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0 53px 0 2rem;
+}
+ul .header-menu .header-menu-container > ul {
+  padding-left: 40px;
+}
+@media (min-width: 481px) {
+  .header-menu .header-menu-container > ul {
+    padding: 0 153px 0 2rem;
+  }
+}
+.header-menu .header-menu-container > ul a {
+  color: #333;
+}
+.header-menu .header-menu-container > ul > li {
+  padding: 0.5rem 50px 0.5rem 0;
+  white-space: nowrap;
+}
+.header-menu .header-menu-container > ul > li:first-child {
+  padding-top: 1rem;
+}
+.header-menu .header-menu-container > ul > li:last-child {
+  padding-bottom: 1rem;
+}
+.header-menu .header-menu-container > ul.header-menu-tertiary > li:first-child,
+.header-menu .header-menu-container > ul.header-menu-external > li:first-child {
+  border-top: 1px solid #999;
+}
+@media print {
+  .header-menu {
+    display: none;
+  }
+}
+</style>
+<script>jQuery(function($) {
+    $('.header-menu-link a.menu-link').live('click', function () {
+        $('.header-submenu, .header-menu, .header-menu-link').toggleClass('on-off');
+    });
+    var delay = 800,
+        global_nav_header_timeout;
+    $('.header-menu li').live('hover', function(event) {
+        $('.header-dropdown img').each(function(index, image){
+            var data_source = $(image).attr('data-src');
+            if(data_source){
+                $(image).attr({src: data_source, 'data-src': null});
+            }
+        });
+
+        if( $(event.target).parents('.hover').length ){
+            return;
+        }
+
+        $('.header-menu li.hover').removeClass('hover');
+        $(event.target).closest('li').addClass('hover');
+        global_nav_header_timeout = setTimeout(function(){
+            $('.header-dropdown').hide();
+            $('.header-dropdown', $(event.target).closest('li')).show();
+        }, delay);
+    }, function(event){
+        clearTimeout( global_nav_header_timeout );
+        $(event.target).closest('li').removeClass('hover');
+        $('.header-dropdown', $(event.target).closest('li')).hide();
+    });
+
+    $('.header-menu').live('hover',  function(event) {/*
+        do nothing on hover over, only on hover out
+    */}, function(event){
+        $('.header-menu li.hover').removeClass('hover');
+        $(event.target).parents('.header-dropdown').hide();
+    });
+
+    //Metrics tracking how users are using the new header
+    $('.header-menu a, .intersite-navigation a, .locfoot a').live('click', function(event){
+        s.linkTrackVars = s.linkTrackVar + ",prop57";
+        var label = $(this).attr('name');
+        if ( !label ){
+            label = $(this).text().trim();
+        }
+        s.prop57 = label;
+        s.tl(this,'o',label);
+    });
+
+    function headerMenuActive() {
+        $('.header-menu-container').removeClass('header-menu-container-active').attr('aria-hidden', 'true');
+        $('.header-menu').removeClass('header-menu-active');
+        $('.header-menu-button').attr('aria-expanded', 'false');
+        $('.header-menu-button i').switchClass('icon-times', 'icon-bars', 50);
+        //$('.header-overlay').hide();
+    };
+    function headerMenuInactive() {
+        $('.header-menu-container').addClass('header-menu-container-active').attr('aria-hidden', 'false');
+        $('.header-menu').addClass('header-menu-active');
+        $('.header-menu-button').attr('aria-expanded', 'true');
+        $('.header-menu-button i').switchClass('icon-bars', 'icon-times', 50);
+        //$('.header-overlay').show();
+    };
+    $('.header-menu-button').live('click', function() {
+        if ($('.header-menu-container').hasClass('header-menu-container-active')) {
+            headerMenuActive();
+            //UX Interaction Tracking
+            UX.interaction($(this), 'Hamburger Menu', 'Close', '');
+        } else {
+            headerMenuInactive();
+            //UX Interaction Tracking
+            UX.interaction($(this), 'Hamburger Menu', 'Open', '');
+        }
+    });
+    $("html").live("click touchstart keydown",function(event) {
+        headerMenuActive();
+    });
+    $(".header-menu").live("click touchstart keydown",function(event) {
+        event.stopPropagation();
+        // allow escape key to close for accessibility
+        if (event.which == 27) {
+            headerMenuActive();
+        }
+    });
+    // menu position and height
+    $(window).live("load resize scroll",function(e){
+        var headerHeight = $('.header-menu').outerHeight();
+        $('.header-menu-container').css({"top": headerHeight});
+    });
+
+    // UX Interaction Tracking - Logo, Menu, Search, Breadcrumbs
+    $('.header-menu-container ul li').live('click', function() {
+        var label = $(this).text().trim();
+        UX.interaction($(this), 'Hamburger Menu', 'Click', label);
+    });
+});
+</script>
+
+
+<div class="header-menu">
+    <button class="header-menu-button"
+            id="header-menu-button"
+            aria-controls="header-menu-container"
+        ><span>menu </span><i class="icon icon-bars"></i></button>
+    <nav class="header-menu-container"
+         id="header-menu-container"
+         aria-labelledby="header-menu-button">
+        <ul class="">
+            <li class=""><a href="../../../discover/index.html">Discover</a></li>
+            <li class=""><a href="../../../services-and-programs/index.html">Services</a></li>
+            <li class=""><a href="https://www.loc.gov/visit/">Visit</a></li>
+            <li class=""><a href="../../../education/index.html">Education</a></li>
+            <li class=""><a href="../../../homepage/connect.html">Connect</a></li>
+            <li class=""><a href="https://www.loc.gov/about/">About</a></li>
+        </ul>
+        <ul class="header-menu-tertiary">
+            <li class=""><a href="../../../rr/askalib/index.html">Ask a Librarian</a></li>
+            <li class=""><a href="../../../help/index.html">Help</a></li>
+            <li class=""><a href="../../../help/contact-general.html">Contact</a></li>
+        </ul>
+        <ul class="header-menu-external">
+            <li class=""><a href="https://catalog.loc.gov/">Search Online Catalog</a></li>
+            <li class=""><a href="http://copyright.gov/">Copyright.gov</a></li>
+            <li class=""><a href="https://www.congress.gov/">Congress.gov</a></li>
+        </ul>
+    </nav>
+</div>
+
+            
+        </div>
+    </div>
+</header>
+
+
+
+
+    
+
+
+
+
+
+
+<style>.breadcrumbs-wrapper {
+  background-color: #fff;
+  position: relative;
+  z-index: 2;
+}
+.breadcrumbs-container {
+  max-width: 85.71428571rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  background-color: transparent;
+  box-sizing: border-box;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 12px;
+}
+@media (max-width: 768px) {
+  .breadcrumbs-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+.breadcrumbs-row {
+  display: flex;
+  justify-content: flex-end;
+}
+.header-breadcrumbs {
+  flex: 1 1 0%;
+  margin-right: 2rem;
+}
+@media (max-width: 768px) {
+  .header-breadcrumbs > a::before {
+    content: "\000AB \0000a0";
+  }
+  .header-breadcrumbs > a:not(:last-of-type) {
+    display: none;
+  }
+}
+@media (min-width: 769px) {
+  .header-breadcrumbs > a::after {
+    content: "\0000a0 \000BB";
+    color: #333;
+  }
+}
+@media (max-width: 768px) {
+  .header-breadcrumbs > .active {
+    display: none;
+  }
+}
+</style>
+<script>
+
+jQuery(function($) {
+    $(".header-breadcrumbs a:contains('at the Library of Congress'), .header-breadcrumbs span:contains('at the Library of Congress')").html(function(_, html) {
+        return html.split('at the Library of Congress').join("<span class='screen-readers-only'>at the Library of Congress</span>");
+    });
+    // UX Interaction Tracking - Logo, Menu, Search, Breadcrumbs
+    $('.header-breadcrumbs a').live('click', function(event){
+        var label = $(this).attr('name');
+        if ( !label ){
+            label = $(this).text().trim();
+        }
+        UX.interaction($(this), 'Breadcrumbs', 'click', label);
+    });
+});
+</script>
+
+
+
+<div class="breadcrumbs-wrapper">
+    <div class="breadcrumbs-container">
+        <div class="breadcrumbs-row">
+            
+            
+            <nav id="header-breadcrumbs"
+                class="header-breadcrumbs"
+                aria-label="breadcrumbs">
+                
+                
+                    
+                    <a href='../../../index.html'>Library of Congress</a>
+                    
+                
+                
+                
+                    
+                    <a href='../../../library/libarch-digital.html'>Digital Collections</a>
+                    
+                
+                
+                
+                    
+                    <a href='https://www.loc.gov/collections/aaron-copland/'>Aaron Copland Collection</a>
+                    
+                
+                
+                
+                    
+                    <span class="active">About this Collection</span>
+                    
+                
+                
+            </nav>
+            
+            
+            
+                
+
+<style>.dropdown-right-aligned {
+  text-align: right;
+}
+.dropdown-wrapper {
+  display: inline-block;
+  position: relative;
+}
+.dropdown-button {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0 8px;
+  margin-bottom: 0;
+  border-radius: 0;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #00618e;
+  color: #fff;
+  border: 1px solid #00618e;
+  font-size: 12px;
+  font-weight: bold;
+  color: #00618e;
+  background-color: #fff;
+  font-weight: normal;
+  font-size: 14px;
+  height: 32px;
+  line-height: 30px;
+  margin-bottom: -1px;
+}
+.dropdown-button:link,
+.dropdown-button:visited,
+.dropdown-button:active {
+  color: #fff;
+}
+.dropdown-button:hover,
+.dropdown-button:focus {
+  background-color: #002347;
+  border-color: #002347;
+  color: #fff;
+  text-decoration: none;
+}
+.dropdown-button.button-tertiary {
+  color: #00618e;
+  background-color: #fff;
+}
+.dropdown-button.button-tertiary:link,
+.dropdown-button.button-tertiary:visited,
+.dropdown-button.button-tertiary:active {
+  color: #00618e;
+}
+.dropdown-button.button-tertiary:hover,
+.dropdown-button.button-tertiary:focus {
+  background-color: #fff;
+  border-color: #002347;
+  color: #002347;
+  text-decoration: none;
+}
+.dropdown-button.button-gray {
+  background-color: #666;
+  border-color: #666;
+}
+.dropdown-button.button-gray:hover,
+.dropdown-button.button-gray:focus {
+  background-color: #000;
+  border-color: #000;
+  color: #fff;
+  text-decoration: none;
+}
+.dropdown-button:link,
+.dropdown-button:visited,
+.dropdown-button:active {
+  color: #00618e;
+}
+.dropdown-button:hover,
+.dropdown-button:focus {
+  background-color: #fff;
+  border-color: #002347;
+  color: #002347;
+  text-decoration: none;
+}
+.dropdown-button::after {
+  content: "\f107";
+  font-family: FontAwesome;
+  margin-left: 2rem;
+}
+.dropdown-style-small .dropdown-button {
+  font-size: 12px;
+  height: 18px;
+  line-height: 16px;
+}
+.dropdown-button.dropdown-button-unstyled {
+  border: none;
+  padding: 0;
+  height: auto;
+  line-height: normal;
+  background-color: transparent;
+}
+.dropdown-button.dropdown-button-unstyled::after {
+  content: "";
+  margin: 0;
+}
+.dropdown-list {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 31px;
+  z-index: 9999;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 10px 20px;
+  border: 1px solid #00618e;
+  background-color: #fff;
+}
+.dropdown-list.dropdown-x-repositioned,
+.dropdown-list.dropdown-forced-right {
+  left: auto;
+  right: 0;
+}
+.dropdown-list.dropdown-y-repositioned {
+  top: auto;
+  bottom: 31px;
+}
+.dropdown-style-small .dropdown-list {
+  top: 18px;
+}
+.dropdown-style-inline .dropdown-list {
+  white-space: nowrap;
+  border-radius: 3px;
+  padding: 10px 5px;
+}
+.dropdown-list > li {
+  padding: 5px 0;
+  text-align: left;
+  white-space: nowrap;
+}
+.dropdown-list > li.active {
+  font-weight: bold;
+}
+.dropdown-style-inline .dropdown-list > li {
+  padding: 0 5px;
+  margin: 0;
+}
+.dropdown-list.active {
+  display: inline-block;
+}
+.dropdown-style-inline .dropdown-list.active {
+  display: flex;
+}
+.dropdown-arrow {
+  top: 40px !important;
+}
+.dropdown-style-small .dropdown-arrow {
+  top: 26px !important;
+}
+.dropdown-arrow:after,
+.dropdown-arrow:before {
+  bottom: 100%;
+  left: 20px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.dropdown-arrow:after {
+  border-bottom-color: #fff;
+  border-width: 5px;
+  margin-left: -5px;
+}
+.dropdown-arrow:before {
+  border-bottom-color: #00618e;
+  border-width: 6px;
+  margin-left: -6px;
+}
+.dropdown-arrow.dropdown-x-repositioned:after,
+.dropdown-arrow.dropdown-forced-right:after,
+.dropdown-arrow.dropdown-x-repositioned:before,
+.dropdown-arrow.dropdown-forced-right:before {
+  left: calc(100% - 20px);
+}
+.dropdown-arrow.dropdown-x-repositioned.offset-right:after,
+.dropdown-arrow.dropdown-forced-right.offset-right:after,
+.dropdown-arrow.dropdown-x-repositioned.offset-right:before,
+.dropdown-arrow.dropdown-forced-right.offset-right:before {
+  left: calc(100% - 15px);
+}
+</style>
+<script>jQuery(function($) {
+    function dropdownReset() {
+        $('.dropdown-list').removeClass('active').attr('aria-hidden', 'true');
+        $('.dropdown-button').attr('aria-expanded', 'false');
+    };
+    function dropdownActive(thisObject) {
+        $(thisObject).siblings('.dropdown-list').removeClass('active').attr('aria-hidden', 'true');
+        $(thisObject).attr('aria-expanded', 'false');
+    };
+    function dropdownInactive(thisObject) {
+        $(thisObject).siblings('.dropdown-list').addClass('active').attr('aria-hidden', 'false');
+        $(thisObject).attr('aria-expanded', 'true');
+    };
+    $('.dropdown-button').on('click', function() {
+        if ($(this).siblings('.dropdown-list').hasClass('active')) {
+            dropdownActive(this);
+        } else {
+            dropdownInactive(this);
+        }
+        // other dropdowns on the page
+        var notClicked =  $('.dropdown-button').not(this)
+        if (notClicked) {
+            notClicked.siblings('.dropdown-list').removeClass('active').attr('aria-hidden', 'true');
+            notClicked.attr('aria-expanded', 'false');
+        }
+
+        var buttonWidth = $(this).outerWidth();
+        var buttonHeight = $(this).outerHeight();
+        var offset = $(this).offset();
+        var outerWidth = $(this).siblings('.dropdown-list').outerWidth();
+        var windowWidth = $(window).width();
+
+        var documentHeight = $(document).height();
+        var outerHeight = $(this).siblings('.dropdown-list').outerHeight();
+
+        // horizontal repositioned
+        if(windowWidth < (offset.left + outerWidth) && (offset.left + buttonWidth) > outerWidth) {
+            $(this).siblings('.dropdown-list').addClass('dropdown-x-repositioned');
+        } else {
+            $(this).siblings('.dropdown-list').removeClass('dropdown-x-repositioned');
+        }
+        // vertical repositioned
+        if(documentHeight < (buttonHeight + offset.top + outerHeight) && offset.top > outerHeight) {
+            $(this).siblings('.dropdown-list').addClass('dropdown-y-repositioned');
+        } else {
+            $(this).siblings('.dropdown-list').removeClass('dropdown-y-repositioned');
+        }
+    });
+    $('html').on("click touchstart keydown keyup",function(e) {
+        if ($(e.target).parents('.dropdown-wrapper').length == 0 && !$(e.target).hasClass('dropdown-wrapper') || e.which == 27) {
+            dropdownReset();
+        }
+    });
+});
+</script>
+
+
+<style>.share .share-link {
+  width: 24px;
+  height: 24px;
+  display: block;
+  float: left;
+  overflow: hidden;
+  background-repeat: none;
+}
+.share .share-link > span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+</style>
+<script>jQuery(function($){
+    $('.share ul li.facebook-link a').attr(
+        'href',
+        'http://www.facebook.com/sharer/sharer.php?u=' +
+        encodeURIComponent(location.href)
+    );
+    $('.share ul li.twitter-link a').attr(
+        'href',
+        'https://twitter.com/intent/tweet?text=' +
+        encodeURIComponent(
+            document.title + ' ' + location.href
+        )
+    );
+    function track_share(element){
+        var label = $(element).text().trim();
+        UX.interaction(
+            $(element),
+            "Share Tool",
+            "click",
+            "Link" == label ? label + " copy" : label + " Share"
+        );
+    }
+    $(".share ul li.facebook-link").on("click", function() {
+        track_share(this);
+    });
+
+    $(".share ul li.twitter-link").on("click", function() {
+        track_share(this);
+    });
+    $(".share ul li.copy-link").on("click", function() {
+        /* Get the text field */
+        var input = document.createElement("input"),
+            label = $(this).text().trim();
+        document.body.appendChild(input);
+        input.value = window.location.href;
+        /* Copyies the text inside the text field */
+        input.select();
+        document.execCommand("copy", false);
+        input.remove();
+        track_share(this);
+    });
+});
+</script>
+
+<nav class="dropdown-wrapper dropdown-style-small dropdown-style-inline share"
+  aria-labelledby="button-share">
+    <button class="dropdown-button dropdown-button-unstyled"
+            id="button-share"
+            aria-controls="dropdown-share"
+            aria-expanded="false"><i
+            class="icon icon-share-alt-square"></i> Share</button>
+    <ul class="dropdown-list dropdown-forced-right dropdown-arrow"
+        role="menu"
+        id="dropdown-share"
+        aria-labelledby="button-share"
+        aria-hidden="true">
+            <li class="facebook-link">
+                <a href="index.html#"
+                    class="share-link share-link-facebook"
+                    title="Facebook"
+                    target="_blank">
+                    <span>Facebook</span>
+                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="a" d="M11.996 24H0V.007H23.993V24z"/></defs><g fill="none" fill-rule="evenodd"><g><mask id="b" fill="#fff"><use xlink:href="#a"/></mask><path d="M22.668 24c.732 0 1.325-.593 1.325-1.324V1.332C23.993.6 23.4.007 22.668.007H1.324C.593.007 0 .6 0 1.332v21.344C0 23.407.593 24 1.324 24h21.344z" fill="#3D5A98" mask="url(#b)"/></g><path d="M16.565 24v-9.303h3.123l.467-3.625h-3.59V8.757c0-1.05.291-1.765 1.797-1.765h1.92V3.747c-.332-.044-1.472-.142-2.798-.142-2.768 0-4.663 1.69-4.663 4.792v2.674H9.69v3.625h3.13V24h3.744z" fill="#FFF"/></g></svg>
+
+                </a>
+            </li>
+            <li class="twitter-link">
+                <a href="index.html#"
+                    class="share-link share-link-twitter"
+                    title="Twitter"
+                    target="_blank">
+                    <span>Twitter</span>
+                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill-rule="nonzero" fill="none"><path d="M21 24H3c-1.656 0-3-1.344-3-3V3c0-1.656 1.344-3 3-3h18c1.656 0 3 1.344 3 3v18c0 1.656-1.344 3-3 3z" fill="#1DA1F2"/><path d="M9.216 18.047c5.658 0 8.754-4.682 8.754-8.735 0-.132 0-.264-.006-.395A6.26 6.26 0 0019.5 7.324a6.246 6.246 0 01-1.77.485 3.09 3.09 0 001.356-1.7 6.128 6.128 0 01-1.956.742 3.077 3.077 0 00-5.244 2.802 8.743 8.743 0 01-6.342-3.21 3.077 3.077 0 00.954 4.101 3.117 3.117 0 01-1.392-.382v.042a3.078 3.078 0 002.466 3.012 3.006 3.006 0 01-.81.107c-.198 0-.39-.018-.576-.053A3.076 3.076 0 009.06 15.4a6.18 6.18 0 01-3.822 1.317c-.246 0-.492-.012-.732-.042a8.765 8.765 0 004.71 1.371" fill="#FFF"/></g></svg>
+
+                </a>
+            </li>
+            <li class="copy-link">
+                <a href="index.html#"
+                   class="share-link share-link-copy-link"
+                   title="Link Copy">
+                    <span>Link</span>
+                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><rect fill="#00618E" width="24" height="24" rx="3"/><path d="M12.035 13.997l.617-.617c.245-.245.355-.564.343-.873a.529.529 0 00-.204-.37 2.109 2.109 0 01-.303-3.234l1.97-1.968a2.112 2.112 0 012.997.014c.813.83.787 2.167-.034 2.988l-.383.383a.471.471 0 00-.111.487c.172.503.265 1.025.284 1.544a.468.468 0 00.8.31l1.087-1.086a4.458 4.458 0 000-6.298 4.458 4.458 0 00-6.298 0l-1.969 1.969a4.45 4.45 0 000 6.298c.154.153.423.379.601.503a.47.47 0 00.603-.05zM13 17.673l1.969-1.969.01-.01a4.45 4.45 0 00-.01-6.288 5.382 5.382 0 00-.602-.503.47.47 0 00-.603.05l-.616.617a1.167 1.167 0 00-.343.873c.005.13.096.296.203.37a2.109 2.109 0 01.303 3.234l-1.968 1.968a2.112 2.112 0 01-2.998-.014c-.813-.83-.787-2.167.034-2.988l.383-.383a.471.471 0 00.11-.487A5.398 5.398 0 018.59 10.6a.468.468 0 00-.8-.31l-1.087 1.086a4.458 4.458 0 000 6.298 4.458 4.458 0 006.298 0z" fill="#FFF" fill-rule="nonzero"/></g></svg>
+
+                </a>
+            </li>
+    </ul>
+</nav>
+
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="content
+    collections-content
+    aaron-copland-content">
+    <a name="skip-to-content"
+       id="skip-to-content"></a>
+    
+    
+    
+
+
+    
+    <div id='page-title'
+        class='header-wrapper
+        
+        
+        
+        with-tabs
+        '>
+        
+        <h1 
+            class="smaller-h1"
+            >
+            
+            <small class='block'>Collection</small>
+            
+            <span>Aaron Copland Collection</span>
+        </h1>
+        
+        
+
+
+
+
+
+<style>/* example: /collections/tenth-to-sixteenth-century-liturgical-chants/ */
+.tab-links {
+  margin: 0;
+  background: transparent;
+  /* mobile */
+}
+.tab-links ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.125rem;
+}
+.tab-links ul li {
+  margin: 0 0 -1px;
+  display: inline-block;
+}
+.tab-links ul li strong {
+  font-weight: normal;
+}
+.tab-links ul li a {
+  box-sizing: border-box;
+  display: inline-block;
+  color: #00618e;
+  height: 38px;
+  line-height: 38px;
+  margin: 0 2rem 0 0;
+}
+.tab-links ul li:last-child a {
+  margin-right: 0;
+}
+.tab-links ul li.selected a {
+  color: #333;
+  cursor: text;
+  border-bottom: 4px solid #333;
+  text-decoration: none;
+}
+.tab-links.tab-links-standalone {
+  margin-bottom: 2rem;
+}
+.tab-links.select-wrapper {
+  display: block;
+  border-color: #ccc;
+  border-width: 1px 0 0 0;
+  height: auto;
+}
+.tab-links.select-wrapper ul {
+  display: none;
+}
+.tab-links.select-wrapper select {
+  width: 100%;
+  background-color: transparent;
+  padding-left: 0;
+  font-size: 1rem;
+  height: 3rem;
+}
+.tab-links.select-wrapper:after {
+  content: "\f078";
+  height: 3rem;
+  line-height: 3rem;
+}
+@media print {
+  .tab-links.select-wrapper {
+    display: none;
+  }
+}
+.tab-links select {
+  display: none;
+}
+@media (max-width: 768px) {
+  .tab-links select {
+    display: block;
+  }
+}
+@media print {
+  .tab-links select {
+    display: none;
+  }
+}
+</style>
+<script>jQuery(function($){
+    $('.tab-links ul').clone().addClass('clone').appendTo('.tab-links');
+    $('.tab-links .clone').each(function(){
+        var list = $(this),
+            select = $(document.createElement('select')).insertBefore($(this).hide()).change(function(){
+                window.location.href = $(this).val();
+            });
+        $('.tab-links').addClass('select-wrapper');
+        $('>li a', this).each(function(){
+            var option = $(document.createElement('option'))
+                .appendTo(select)
+                .val(this.href)
+                .html($(this).html());
+            if($(this).attr('class') === 'selected-link'){
+                option.attr('selected', 'selected');
+            }
+        });
+        list.remove();
+    });
+    $(window).on("load resize",function(e){
+        if (window.matchMedia('(max-width: 768px)').matches) {
+            $('.tab-links').addClass('select-wrapper');
+        } else {
+            $('.tab-links').removeClass('select-wrapper');
+        }
+    });
+});
+</script>
+
+<nav class='tab-links'
+        aria-label="Page Navigation">
+    <ul>
+    
+    
+    <li class='selected'>
+        <a href='index.html'
+            title='About this Collection'
+            
+            class='selected-link'
+            aria-current='page'
+            
+            >About this Collection</a>
+    </li>
+    
+    
+    
+    <li class=''>
+        <a href='https://www.loc.gov/collections/aaron-copland/'
+            title='Collection Items'
+            
+            >Collection Items</a>
+    </li>
+    
+    
+    
+    <li class=''>
+        <a href='https://www.loc.gov/collections/aaron-copland/articles-and-essays/'
+            title='Articles and Essays'
+            
+            >Articles and Essays</a>
+    </li>
+    
+    
+</ul>
+</nav>
+
+
+    </div>
+    
+
+
+
+
+
+<div class='featured-item-carousel'>
+    
+        
+
+
+
+
+<style>.featured-items {
+  max-width: 85.71428571rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  background-color: transparent;
+  box-sizing: border-box;
+  margin-bottom: 2rem;
+}
+@media (max-width: 768px) {
+  .featured-items {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+.featured-items .toggle-featured {
+  font-family: inherit;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #333;
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+  margin: 0 0 0.75rem;
+  margin: 0;
+  background-color: #efefef;
+  position: relative;
+  padding: 1rem 1rem 1rem 37px;
+  /* hide ::before created by fontawesome classname icon- */
+}
+.featured-items .toggle-featured small,
+.featured-items .toggle-featured .small {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1;
+  color: #333;
+}
+.featured-items .toggle-featured small.block,
+.featured-items .toggle-featured .small.block {
+  display: block;
+  margin-bottom: 2px;
+}
+a .featured-items .toggle-featured {
+  color: inherit !important;
+}
+.featured-items .toggle-featured > a {
+  color: #333;
+  text-decoration: none;
+  padding: 0;
+  display: inline-block;
+}
+.featured-items .toggle-featured > a:not(:first-child) {
+  color: #00618e;
+}
+.featured-items .toggle-featured > a:not(:first-child):hover {
+  text-decoration: underline;
+}
+.featured-items .toggle-featured .icon {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: #00618e;
+  font-size: 1.125rem;
+  line-height: 1.36;
+}
+.featured-items .toggle-featured[class*='icon']::before {
+  content: "";
+}
+.featured-items.show-carousel .toggle-featured {
+  border-bottom: none;
+}
+.featured-items.show-carousel .toggle-featured.icon-minus-square {
+  border-bottom: 1px solid #ccc;
+}
+.featured-items .button {
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  text-decoration: none;
+  width: 30px;
+  height: 40px;
+  top: 50%;
+  margin-top: -30px;
+  border: none;
+  font-size: 36px;
+  color: #00618e;
+  text-align: left;
+}
+.featured-items .button:hover,
+.featured-items .button:focus {
+  background-color: transparent;
+  border-color: transparent;
+  color: #002347;
+}
+.featured-items .button i {
+  height: 40px;
+  line-height: 40px;
+  position: absolute;
+}
+.featured-items .button.prev {
+  left: 0;
+}
+.featured-items .button.prev i {
+  right: 0;
+}
+.featured-items .button.next {
+  right: 0;
+}
+.featured-items .button.next i {
+  left: 0;
+}
+.featured-items.hide-carousel .featured-items-content {
+  display: none;
+}
+.featured-items .featured-items-content-list {
+  height: 280px;
+}
+.featured-items .featured-items-content-list * {
+  visibility: hidden;
+}
+.featured-items .featured-items-content-list.slick-initialized {
+  display: block;
+  height: auto;
+}
+.featured-items .featured-items-content-list.slick-initialized * {
+  visibility: visible;
+}
+.featured-items .featured-items-content-list-item-link {
+  display: block;
+}
+.featured-items .featured-items-content {
+  box-sizing: border-box;
+  background-color: #efefef;
+  padding: 3px 10px 18px;
+}
+.featured-items .featured-items-content .slick-list {
+  padding-bottom: 5px;
+}
+.featured-items .featured-items-content > ul > li,
+.featured-items .featured-items-content .slick-slider > li,
+.featured-items .featured-items-content > ul .slick-slide,
+.featured-items .featured-items-content .slick-slider .slick-slide {
+  text-align: center;
+  padding: 0 15px;
+}
+.featured-items .featured-items-content > ul > li a img,
+.featured-items .featured-items-content .slick-slider > li a img,
+.featured-items .featured-items-content > ul .slick-slide a img,
+.featured-items .featured-items-content .slick-slider .slick-slide a img {
+  margin: 0 auto 6px;
+  width: 100%;
+}
+.featured-items .featured-items-content > ul .slick-prev,
+.featured-items .featured-items-content .slick-slider .slick-prev,
+.featured-items .featured-items-content > ul .slick-next,
+.featured-items .featured-items-content .slick-slider .slick-next {
+  color: #00618e;
+}
+.featured-items .featured-items-content > ul .slick-dots li button,
+.featured-items .featured-items-content .slick-slider .slick-dots li button {
+  border-color: #00618e;
+}
+.featured-items .featured-items-content > ul .slick-dots li.slick-active button,
+.featured-items .featured-items-content .slick-slider .slick-dots li.slick-active button {
+  background-color: #00618e;
+}
+.featured-items .featured-items-content.content-is-search-results .featured-item-img-wrapper {
+  background-color: #000;
+  width: 100%;
+  height: 172px;
+  margin-bottom: 6px;
+}
+.featured-items .featured-items-content.content-is-search-results .featured-item-img-wrapper img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  margin: 0;
+}
+@media (min-width: 993px) {
+  .featured-items .featured-items-content.content-is-search-results .featured-item-img-wrapper {
+    height: 270px;
+  }
+}
+</style>
+<script>jQuery(function( $ ) {
+    $(".all-issues-url").bind("click", function(event){
+        event.preventDefault();
+        window.open(this.href);
+    });
+    $(".toggle-featured").click(function(event){
+        // Clicking the link to the all issues doesn't close the carousel
+        if (document.activeElement.className == "all-issues-url"){
+            return false;
+        }
+        var hidden_carousel = $(event.delegateTarget)
+            .parents('.featured-items-new.hide-carousel');
+        if( hidden_carousel.length ){
+            lateLoadImages();
+        }
+        $('.icon', event.delegateTarget)
+            .andSelf()
+            .toggleClass('icon-plus-square icon-minus-square');
+        $('.featured-items-content').toggle();
+        if( hidden_carousel.length ){
+            hidden_carousel.removeClass('hide-carousel');
+            $(window).resize();
+        }
+        return false;
+    });
+    $('.featured-items-content-list').slick({
+        infinite: true,
+        
+        slidesToShow: 5,
+        slidesToScroll: 5,
+        
+        rows: 0, // a fix for extra divs issue
+        lazyLoad: 'ondemand',
+        dots: true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4
+                }
+            },
+            {
+                breakpoint: 800,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    dots: false
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    dots: false
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: false
+                }
+            }
+        ]
+    });
+    // Rerun the object-fit polyfill
+    
+    //metrics
+    $('.slick-prev').bind('click', function(event) {
+        UX.interaction($(this), 'Featured Content', 'rotate', 'prev');
+    });
+    $('.slick-next').bind('click', function(event) {
+        UX.interaction($(this), 'Featured Content', 'rotate', 'next');
+    });
+    $('.featured-item-img').bind('click', function(event) {
+        var label = 'Image: ' + $(event.target).parent().text(),
+            index = $(event.target).data('featured-item-index');
+
+        UX.interaction($(this), 'Featured Content', 'click', 'Image[' + index + ']');
+    });
+    $('.featured-item-title').bind('click', function(event) {
+        var label = $(event.target).text(),
+            index = $(event.target).data('featured-item-index');
+
+
+        UX.interaction($(this), 'Featured Content', 'click', 'Item[' + index + '] Title:' +label);
+    });
+    $('.toggle-featured').bind('click', function(event){
+
+        var label = 'hide';
+        if ($(event.target).hasClass('accordion-up') ||
+            $(event.target).html().indexOf('accordion-up') > -1) {
+            label = 'show';
+        }
+        UX.interaction($(this), 'Featured Content', 'expand', label);
+
+        var text = $(this).text(),
+            interaction = '[show button] - click';
+        if (text == 'Show Featured Items'){
+            interaction = '[hide button] - click';
+        }
+        UX.interaction($(this), 'Image Carousel', interaction);
+    });
+    if( $('.featured-items-new.show-carousel').length ){
+        $('.featured-items-content').css("display", "block");
+        $(window).resize();
+    }
+});
+</script>
+
+<div class='featured-items show-carousel'>
+
+    <h2 class="toggle-featured " id='featured-items-label'>
+        
+            <a href="index.html#">Featured Content<i class="icon icon-minus-square"></i></a>
+        
+    </h2>
+
+    <div class="featured-items-content ">
+        <div class="featured-items-content-list" aria-labelledby='featured-items-label'>
+            
+            <div class="featured-items-content-list-item">
+                <a href="https://www.loc.gov/item/copland.phot0089"
+                   title='Aaron Copland in Paris, early 1920s'
+                   class='featured-items-content-list-item-link'
+                   rel='featured-item'>
+                   
+                    <img data-lazy='/static/collections/aaron-copland/images/copland-paris.jpg'
+                         alt=''
+                         class='featured-item-img'
+                         data-featured-item-index='1'
+                         width="183"
+                         height="183" />
+                    
+                    <span class="featured-item-title"
+                         data-featured-item-index="1"
+                         >
+                        Aaron Copland in Paris, early 1920s
+                    </span>
+                </a>
+                
+            </div>
+            
+            <div class="featured-items-content-list-item">
+                <a href="https://www.loc.gov/item/copland.phot0042"
+                   title='Aaron Copland with Marian Anderson, rehearsing &quot;Lincoln Portrait&quot;'
+                   class='featured-items-content-list-item-link'
+                   rel='featured-item'>
+                   
+                    <img data-lazy='/static/collections/aaron-copland/images/marian-anderson.jpg'
+                         alt=''
+                         class='featured-item-img'
+                         data-featured-item-index='2'
+                         width="183"
+                         height="183" />
+                    
+                    <span class="featured-item-title"
+                         data-featured-item-index="2"
+                         >
+                        Aaron Copland with Marian Anderson, rehearsing &quot;Lincoln ...
+                    </span>
+                </a>
+                
+            </div>
+            
+            <div class="featured-items-content-list-item">
+                <a href="https://www.loc.gov/item/copland.phot0013/"
+                   title='Aaron Copland with Leonard Bernstein, ca. 1940'
+                   class='featured-items-content-list-item-link'
+                   rel='featured-item'>
+                   
+                    <img data-lazy='/static/collections/aaron-copland/images/copland-bernstein-feature.jpg'
+                         alt=''
+                         class='featured-item-img'
+                         data-featured-item-index='3'
+                         width="183"
+                         height="183" />
+                    
+                    <span class="featured-item-title"
+                         data-featured-item-index="3"
+                         >
+                        Aaron Copland with Leonard Bernstein, ca. 1940
+                    </span>
+                </a>
+                
+            </div>
+            
+            <div class="featured-items-content-list-item">
+                <a href="https://www.loc.gov/item/copland.phot0080/"
+                   title='Aaron Copland under umbrella, University of Kansas, 1973'
+                   class='featured-items-content-list-item-link'
+                   rel='featured-item'>
+                   
+                    <img data-lazy='/static/collections/aaron-copland/images/copland-kansas.jpg'
+                         alt=''
+                         class='featured-item-img'
+                         data-featured-item-index='4'
+                         width="183"
+                         height="183" />
+                    
+                    <span class="featured-item-title"
+                         data-featured-item-index="4"
+                         >
+                        Aaron Copland under umbrella, University of Kansas, 1973
+                    </span>
+                </a>
+                
+            </div>
+            
+            <div class="featured-items-content-list-item">
+                <a href="https://www.loc.gov/item/copland.phot0059/"
+                   title='Aaron Copland and Clarence Adler at Lake Placid, 1925'
+                   class='featured-items-content-list-item-link'
+                   rel='featured-item'>
+                   
+                    <img data-lazy='/static/collections/aaron-copland/images/lake-placid.jpg'
+                         alt=''
+                         class='featured-item-img'
+                         data-featured-item-index='5'
+                         width="183"
+                         height="183" />
+                    
+                    <span class="featured-item-title"
+                         data-featured-item-index="5"
+                         >
+                        Aaron Copland and Clarence Adler at Lake Placid, 1925
+                    </span>
+                </a>
+                
+            </div>
+            
+            <div class="featured-items-content-list-item">
+                <a href="https://www.loc.gov/item/copland.phot0017"
+                   title='Aaron Copland by candlelight, studio in the Berkshires, September, 1946'
+                   class='featured-items-content-list-item-link'
+                   rel='featured-item'>
+                   
+                    <img data-lazy='/static/collections/aaron-copland/images/copland-candlelight.jpg'
+                         alt=''
+                         class='featured-item-img'
+                         data-featured-item-index='6'
+                         width="183"
+                         height="183" />
+                    
+                    <span class="featured-item-title"
+                         data-featured-item-index="6"
+                         >
+                        Aaron Copland by candlelight, studio in the Berkshires, ...
+                    </span>
+                </a>
+                
+            </div>
+            
+            <div class="featured-items-content-list-item">
+                <a href="https://www.loc.gov/item/copland.phot0028/"
+                   title='Aaron Copland with car; probably at Yaddo, ca. 1932'
+                   class='featured-items-content-list-item-link'
+                   rel='featured-item'>
+                   
+                    <img data-lazy='/static/collections/aaron-copland/images/copland-yaddo-feature.jpg'
+                         alt=''
+                         class='featured-item-img'
+                         data-featured-item-index='7'
+                         width="183"
+                         height="183" />
+                    
+                    <span class="featured-item-title"
+                         data-featured-item-index="7"
+                         >
+                        Aaron Copland with car; probably at Yaddo, ca. 1932
+                    </span>
+                </a>
+                
+            </div>
+            
+            <div class="featured-items-content-list-item">
+                <a href="https://www.loc.gov/item/copland.phot0098/"
+                   title='Aaron Copland at his piano, Rock Hill, 1978'
+                   class='featured-items-content-list-item-link'
+                   rel='featured-item'>
+                   
+                    <img data-lazy='/static/collections/aaron-copland/images/copland-piano.jpg'
+                         alt=''
+                         class='featured-item-img'
+                         data-featured-item-index='8'
+                         width="183"
+                         height="183" />
+                    
+                    <span class="featured-item-title"
+                         data-featured-item-index="8"
+                         >
+                        Aaron Copland at his piano, Rock Hill, 1978
+                    </span>
+                </a>
+                
+            </div>
+            
+            <div class="featured-items-content-list-item">
+                <a href="https://www.loc.gov/item/copland.phot0034/"
+                   title='Aaron Copland conducting in rehearsal at the Shed, Tanglewood'
+                   class='featured-items-content-list-item-link'
+                   rel='featured-item'>
+                   
+                    <img data-lazy='/static/collections/aaron-copland/images/copland-tanglewood-feature.jpg'
+                         alt=''
+                         class='featured-item-img'
+                         data-featured-item-index='9'
+                         width="183"
+                         height="183" />
+                    
+                    <span class="featured-item-title"
+                         data-featured-item-index="9"
+                         >
+                        Aaron Copland conducting in rehearsal at the Shed, Tanglewood
+                    </span>
+                </a>
+                
+            </div>
+            
+            <div class="featured-items-content-list-item">
+                <a href="https://www.loc.gov/item/copland.phot0063/"
+                   title='Aaron Copland 70th birthday celebration: Claire Reis, Copland, Leonard Bernstein, Olga Koussevitzky, 1970'
+                   class='featured-items-content-list-item-link'
+                   rel='featured-item'>
+                   
+                    <img data-lazy='/static/collections/aaron-copland/images/birthday.jpg'
+                         alt=''
+                         class='featured-item-img'
+                         data-featured-item-index='10'
+                         width="183"
+                         height="183" />
+                    
+                    <span class="featured-item-title"
+                         data-featured-item-index="10"
+                         >
+                        Aaron Copland 70th birthday celebration: Claire Reis, Copland, ...
+                    </span>
+                </a>
+                
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+    
+</div>
+
+
+    
+    
+    
+
+<div class="managed-content-container">
+<div class='managed-content-row'>
+
+
+
+    
+
+
+
+
+
+
+
+    
+<div class='managed-content-content'>
+    
+
+    
+
+    
+    
+
+    
+        
+        
+        
+        <style>@media print {
+  .rsbtn {
+    display: none;
+  }
+}
+#rslightbox_logo.rsimg {
+  background: url("https://misc.readspeaker.com/user/mattias/rs_logo.png") !important;
+  height: 17px !important;
+}
+</style>
+        
+        <script src="https://f1-na.readspeaker.com/script/6927/ReadSpeaker.js?pids=embhl"
+                type="text/javascript"></script>
+        <script src="https://www.loc.gov/static/js/lib/ReadSpeaker.Custom.js"
+                type="text/javascript"></script>
+        <div id="readspeaker_button1"
+             class="rs_skip rsbtn rs_preserve">
+            <a class="rsbtn_play"
+               accesskey="L"
+               title="Listen to this page using ReadSpeaker"
+               target="_blank"
+               href="https://app-na.readspeaker.com/cgi-bin/rsent?customerid=6927&amp;lang=en_us&amp;readid=article&amp;url=https://www.loc.gov/collections/aaron-copland/about-this-collection/">
+             <span class="rsbtn_left rsimg rspart"><span
+                   class="rsbtn_text"><span>Listen to this page</span></span></span>
+             <span class="rsbtn_right rsimg rsplay rspart"></span>
+            </a>
+        </div>
+        
+    
+
+
+    
+    
+
+    <article id="article" class="aaron-copland-about-this-container">
+
+        
+            <h1>About this Collection</h1>
+        
+        
+
+        
+
+        
+
+        
+        
+
+
+        <div class="managed-content-row">
+            <div class="managed-content-cell">
+            <p>The first release of the online collection contains approximately 1,000 items that yield a total of about 5,000 images. These items date from 1899 to 1981, with most from the 1920s through the 1950s, and were selected from Copland's music sketches, correspondence, writings, and photographs.</p>
+<p>Celebrating the centennial of the birth of the American composer Aaron Copland (1900-1990), the multi-format Aaron Copland Collection, from which the online collection derives, spans the years 1910 to 1990 and includes approximately 400,000 items documenting the multifaceted life of an extraordinary person who was composer, performer, teacher, writer, conductor, commentator, and administrator. It comprises both manuscript and printed music, personal and business correspondence, diaries, writings, scrapbooks, programs, newspaper and magazine clippings, photographs, awards, books, sound recordings, and motion pictures.</p>
+
+<h2>Introduction</h2>
+<p>Aaron Copland devoted his life as a twentieth-century composer to fostering, developing, creating, and establishing distinctive "American" music. He became known as the "Dean of American Music," a sobriquet with which he was uncomfortable. His name is synonymous with <a href="https://www.loc.gov/collections/aaron-copland/articles-and-essays/works-listing-by-title/a/#work0030"><em>Appalachian Spring</em></a> —the winner of the 1945 Pulitzer Prize in Music—and <a href="https://www.loc.gov/collections/aaron-copland/articles-and-essays/works-listing-by-title/f/#work0021"><em>Fanfare for the Common Man</em></a>.</p>
+<p>Copland extensively documented the many facets of his life in music, and the<em>Aaron Copland Collection</em> at the Library of Congress reflects the entire breadth of his endeavors. Beginning in the late 1950s and early &lsquo;60s, Copland periodically deposited his original music manuscripts at the Library of Congress and subsequently converted them to gifts. In the fall of 1989, he donated all his papers to the Library. The collection numbers approximately four hundred thousand items, dating from 1910 to 1990 with a few nineteenth-century photographs, and includes his music manuscripts, printed music, personal and business correspondence, diaries and writings, photographic materials, awards, honorary degrees, programs, and other biographical materials. It is the primary resource for research on Aaron Copland and a major resource for the study of musical life in twentieth-century America generally, particularly from the 1920s to the 1960s.</p>
+<p>The online Aaron Copland Collection comprises approximately one thousand items selected from Copland's music sketches, correspondence, writings, and photographs. The items are represented in about five thousand digitized images, the earliest an 1899 photograph and the latest a 1986 letter. While the original collection contains almost all Copland's music manuscripts and printed scores, the online collection presents the original music sketches that Copland used in composing thirty-one works spanning the years 1924 to 1967 and covering every medium in which he composed: orchestral, ballet, opera, film, chamber, solo piano, and vocal music.</p>
+<p>The correspondence in the online collection comprises images of approximately eight hundred letters, postcards, and telegrams from Copland that have been selected from the Aaron Copland Collection and other collections in the <a href="https://www.loc.gov/rr/perform/">Music Division</a> at the Library of Congress. Besides letters to his parents and other family members in the 1920s and 30s, the correspondence includes Copland's letters to his Parisian teacher Nadia Boulanger, the conductor Serge Koussevitzky, and others such as Nicolas Slonimsky, Roger Sessions, Carlos Chávez, Walter Piston, Leonard Bernstein, and Benjamin Britten.</p>
+<p>As an advocate and supporter of American music and American composers, Copland frequently wrote articles, presented lectures, and delivered speeches. The online <em>Aaron Copland Collection</em> presents eighty-six of Copland's previously unpublished drafts. These show the creative process through which he wrote about his own music, other composers and their music, and other people who played important roles in his musical life.</p>
+<p>Of the twelve thousand photographic materials in the Library's Aaron Copland Collection, 111 items have been chosen for online presentation. Many were created by Copland's friend Victor Kraft, a professional photographer. They include portraits of Aaron Copland at various ages and places, with family members, with other composers, and with other people associated with his career as a composer and conductor, as well as images from his worldwide travels.</p>
+
+<h2>The Copland Letters</h2>
+
+<p>"The man is in the letters," said Vivian Perlis of Aaron Copland, whose autobiography she helped to write. The online <em>Aaron Copland Collection</em> contains digitized images of over eight hundred letters, postcards, and telegrams from Aaron Copland covering the years from 1921 to 1986. Searchable texts of all published letters, postcards, and telegrams in the collection are also available.</p>
+<p>The letters reproduced in the collection represent, though they do not exhaust, the holdings of Copland's correspondence in the <a href="https://www.loc.gov/rr/perform/">Music Division</a> of the Library of Congress. In general they constitute significant runs of letters to people important in Copland's life. (Problems of copyright and volume preclude making letters to Copland available online.) Every attempt has been made to include all the letters in the Music Division that Copland wrote to each correspondent represented, the one exception being the letters to Harold Spivacke, which constitute only a part of Copland's voluminous and largely business-related correspondence with the Music Division's former chief.</p>
+<p>These letters come from many collections in the Music Division. Besides material from the Aaron Copland Collection, they contain material from the Leonard Bernstein Collection, the Elizabeth Sprague Coolidge Collection, the Jacobo Ficher Collection, the Irving Fine Collection, the Louis Kaufman Collection, the Serge Koussevitzky Collection, the <em>Modern Music</em> Archives, the Walter Piston Collection, the Nicolas Slonimsky Collection, the William Strickland Collection, and the papers of the Joint Army and Navy Committee on Welfare and Recreation, Sub-Committee on Music.</p>
+<p>The letters Copland wrote that are in the Copland Collection proper came back to him in various ways. He inherited his letters to his parents after their deaths. In the 1970s, when he began to think of writing his autobiography, he asked several of his friends and colleagues to send him photocopies of his letters. Some replied with photocopies, some by returning the letters themselves. Some responded with many letters, some with just a few.</p>
+<p>Copland seldom made carbons copies of his outgoing correspondence. The few periods in his life for which the Copland Collection is rich in carbon copies are the brief intervals when he had a secretary: in 1943 while working on the film <em>The North Star</em>; during his South American tour in 1947; in the fall of 1958 when he was staying in London and presumably was provided with a secretary by his publisher, Boosey &amp; Hawkes. Because they were obviously dictated to a secretary, these letters have the flavor of Copland's post-1940 correspondence but are not particularly trenchant, lacking the distinctive qualities that came forth when Copland himself sat down to write.</p>
+
+<p>The following individuals are the major correspondents represented in the letters portion of this online collection. They are listed with the source collection for Copland's letters to them or, in the case of material in the Copland Collection itself, with an indication of whether the letters are originals or photocopies.</p>
+<p><strong>Arthur Berger</strong> (Copland Collection; photocopy). The online collection contains a <a href="https://www.loc.gov/resource/copland.corr0796?sp=1">single letter</a> to this writer of the first book-length study of Copland; it is perhaps the most evocative of Copland's letters describing his Mexican visits.</p>
+<p><strong>Leonard Bernstein</strong> (Bernstein Collection). Copland's protégé in the late 1930s and early 1940s, Bernstein became one of the leading champions and interpreters of Copland's music.</p>
+<p><strong>Nadia Boulanger</strong> (Copland Collection; originals). Copland's principal teacher and mentor. His Nonet is dedicated to her.</p>
+<p><strong>Paul Bowles</strong> (Copland Collection; originals). Composer and novelist. The two letters in the Copland Collection seem to have been part of a voluminous and regular correspondence.</p>
+<p><strong>Benjamin Britten</strong> (Copland Collection; photocopies). English composer. The first set of <a href="https://www.loc.gov/collections/aaron-copland/articles-and-essays/works-listing-by-title/o/#work0041"><em>Old American Songs</em></a> was written for Britten and his collaborator Peter Pears. Britten's side of the correspondence is published in Donald Mitchell et al., eds., <em>Letters from a Life: The Selected Letters and Diaries of Benjamin Britten, 1913-1976 </em>(2 vols., Berkeley: University of California Press, 1991).</p>
+<p><strong>Carlos Chávez</strong> (Copland Collection; photocopies). Mexican composer; one of Copland's principal composer friends. As a conductor, Chávez performed Copland's <a href="https://www.loc.gov/collections/aaron-copland/articles-and-essays/works-listing-by-title/s/#work0012"><em>Short Symphony</em></a> when American conductors had declared it unperformable. Chávez's side of the correspondence and slightly abridged versions of Copland's letters are published in Spanish translation in Gloria Carmona, ed., <em>Epistolario selecto de Carlos Chávez</em> (México: Fondo de Cultura Económica, 1989).</p>
+<p><strong>Israel Citkowitz </strong>(Copland Collection; originals). Citkowitz was a slightly younger composer (1909-1974), gifted in song and chamber music, for whom Copland had high hopes. The online collection contains all Copland's letters to Citkowitz in the Copland Collection.</p>
+<p><strong>Elizabeth Sprague Coolidge</strong> (Coolidge Collection). American patron of chamber music. She commissioned from Copland (and thus had dedicated to her) <a href="https://www.loc.gov/collections/aaron-copland/articles-and-essays/works-listing-by-title/a/#work0030"><em>Appalachian Spring</em></a> and the <a href="https://www.loc.gov/collections/aaron-copland/articles-and-essays/works-listing-by-title/q/#work0067">Piano Quartet</a>.</p>
+<p><strong>Jacobo Ficher</strong> (Ficher Collection). Argentinian composer. Copland's letters to him document his interest in South American music.</p>
+<p><strong>Irving and Verna Fine</strong> (Irving Fine Collection). Irving Fine was a composer and younger colleague of Copland whose choral arrangements of several of Copland's <a href="https://www.loc.gov/collections/aaron-copland/articles-and-essays/works-listing-by-title/o/#work0041"><em>Old American Songs</em></a> have given them a life as choral works. Copland shared houses with Irving and Verna Fine for several summers at Tanglewood. After Irving Fine's death in 1962 Copland continued to be supportive of Verna Fine, and his letters to her retain warmth and sparkle to the end of his letter-writing years. Copland dedicated "Sleep Is Supposed to Be," one of the two central songs of his<em> </em><a href="https://www.loc.gov/collections/aaron-copland/articles-and-essays/works-listing-by-title/t/#work0074"><em>Twelve Poems of Emily Dickinson</em></a>, to Irving Fine. The Irving Fine Collection also contains letters from Copland to Verna Fine's mother, Florence Rudnick, in whose Boston apartment he sequestered himself to write <a href="https://www.loc.gov/collections/aaron-copland/articles-and-essays/works-listing-by-title/i/#work0065"><em>In the Beginning</em></a>.</p>
+<p><strong>Serge, Natalie, and Olga Koussevitzky</strong> (Koussevitzky Collection). Serge Koussevitzky, conductor of the Boston Symphony from 1924 to 1949, was the first performer to champion Copland's music in America and remained a supporter of Copland (and of many other American composers) until his death. Copland, in turn, was a major help to Koussevitzky from 1940 on in the running of the Berkshire Music Festival at Tanglewood. Copland's letters to Koussevitzky's first wife, Natalie, are, for the most part, social; his letters to Koussevitzky's second wife, Olga (Olga Naumoff, Koussevitzky's secretary, until 1947), concern the running of Tanglewood. Copland's <a href="https://www.loc.gov/collections/aaron-copland/articles-and-essays/works-listing-by-title/t/#work0025">Third Symphony</a> is dedicated "To the memory of Natalie Koussevitzky."</p>
+<p><strong>Minna Lederman</strong> (<em>Modern Music</em> Archives). Lederman was editor of the journal of the League of Composers, <em>Modern Music</em>, which was published from 1924 to 1946. Copland was a major contributor to the magazine and a trusted advisor to Lederman.</p>
+<p><strong>Marcelle de Manziarly</strong> (Copland Collection; originals). French composer, Boulanger student. Copland dedicated "Heart, We Will Forget Him," the fifth of his<em>Twelve Poems of Emily Dickinson</em>, to de Manziarly.</p>
+
+<p><strong>Olga Naumoff:</strong> see Serge, Natalie, and Olga Koussevitzky.</p>
+<p><strong>Walter Piston</strong> (Piston Collection). American composer. The body of Piston's correspondence is in the Boston Public Library; the one letter in this online collection represents the small but important collection of letters to Piston from the years 1931-55 that is in the Music Division of the Library of Congress.</p>
+<p><strong>Florence Rudnick:</strong> see Irving and Verna Fine.</p>
+<p><strong>Roger Sessions</strong> (Copland Collection; photocopies) American composer; co-producer with Copland of the Copland-Sessions Concerts during the years 1928-31.</p>
+<p><strong>Nicolas Slonimsky</strong> (Slonimsky Collection; some early letters in the Koussevitzky Collection). Musical polymath. During most of the period in which Copland corresponded with him he was musical secretary to Koussevitzky; the jokey letters to the incorrigibly humorous Slonimsky serve to balance Copland's oh-so-serious letters to Koussevitzky himself.</p>
+<p><strong>Harold Spivacke</strong> (Coolidge Collection; Joint Army and Navy Committee on Welfare and Recreation, Sub-Committee on Music). Chief of the Music Division of the Library of Congress, 1937-1972. Spivacke's tact and unflappable serenity kept the commissioning of <a href="https://www.loc.gov/collections/aaron-copland/articles-and-essays/works-listing-by-title/a/#work0030"><em>Appalachian Spring</em></a> on course.</p>
+<p><strong>William Strickland</strong> (Strickland Collection). American conductor. Some of the letters in this online collection are concerned with Strickland's editorship of the H. W. Gray organ series, for which Copland wrote his <a href="https://www.loc.gov/collections/aaron-copland/articles-and-essays/works-listing-by-title/e/#work0097"><em>Episode</em></a>.</p>
+<p>"The man is in the letters." It might then seem as though a collection of more than eight hundred letters, postcards, and telegrams from Aaron Copland would give a complete portrait of the man and the composer. However, users of this online collection should remember that these letters represent only the holdings of the Music Division of the Library of Congress. At least equally important are Copland's letters to Virgil Thomson (at Yale University); Claire Reis and William Schuman (at the New York Public Library); Howard Clurman, David Diamond, and Walter Piston (at the Boston Public Library); and several others. To each of his correspondents Copland shows a slightly different aspect of his personality, so the letters in this online collection provide a detailed self-portrait if not a complete one.</p>
+
+<h2>The Copland Sketches</h2>
+
+<p>This online collection contains approximately 2500 pages of Aaron Copland's sketches for his music, representing thirty-one of his works—thirty-three if one includes the <em>Sextet</em> and the <em>Orchestra Variations</em>, covered by the sketches for the <a href="https://www.loc.gov/resource/copland.sket0010?sp=1"><em>Short Symphony</em></a> and <a href="https://www.loc.gov/resource/copland.sket0011?sp=1"><em>Piano Variations</em></a> respectively. Representing many of Copland's best-known and most significant works, the sketches are often revelatory. Except for some miscellaneous accompanying material, the online collection includes all the sketches for the works in the online collection.</p>
+<p>There are works for which the Library of Congress's archival Copland Collection contains no sketches. These include some of the early works and the <em>Lincoln Portrait</em>. Those who are interested in finding out whether the Library has sketches for a particular work not represented in the online collection, or curious about whether one of the works included has any material not presented online, should consult the Copland Collection Finding Aid.</p>
+<p>Within the sections of the online collection, the sketches are presented as much as possible in the order in which they were received from Aaron Copland or his estate. They have been much used by scholars, and they represent Copland's not always systematic use of music-paper. Some sets of sketches have been numbered by stamp at their top left- or right-hand corner; this numeration was done by the Library of Congress when the sketches were filmed in the mid-1970s and do not represent Copland's numbering. When two separate sets of sketches exist for a single work, they are presented here as two separate items. (Note: The page numbers of some of these sketches may not appear in numerical order online. However, they are presented here in exactly the order that Copland produced them.)</p>
+<p>The sketches reveal to scholars the history of Copland's work on the compositions, but they can also mean something to the general reader. The sketches for the <a href="https://www.loc.gov/resource/copland.sket0011?sp=1"><em>Piano Variations</em></a>, the <a href="https://www.loc.gov/resource/copland.sket0010?sp=1"><em>Short Symphony</em></a>, and the <a href="https://www.loc.gov/resource/copland.sket0022?sp=1"><em>Fanfare for the Common Man</em></a> show Copland searching for titles to do justice to three of his most characteristic works; the sketches for <a href="https://www.loc.gov/resource/copland.sket0032?sp=1"><em>Twelve Poems of Emily Dickinson</em></a> show him deciding what poems to include in the cycle; the sketches for <a href="https://www.loc.gov/resource/copland.sket0015?sp=1"><em>Billy the Kid</em></a> show that the opening music was first intended to be the start of <a href="https://www.loc.gov/resource/copland.sket0014?sp=1"><em>Music for Radio</em></a>— which now begins with much more complex music.</p>
+
+<h2>The Copland Photographs</h2>
+
+<p>The photographic materials in the Library of Congress's <em>Aaron Copland Collection</em>number more than twelve thousand items spanning the years 1889 to 1985 and include both black and white and color prints, contact sheets, 35-mm negatives, color slides, and photograph albums. A substantial number of photographs were taken by Copland's lifelong friend, the professional photographer Victor Kraft. Widely known photographers whose work can be found in the collection include Carl Van Vechten, Irving Penn, Gordon Parks, and Margaret Bourke-White. The subject material comprises an inclusive chronology of Copland's life and includes Copland's family; Copland himself throughout his life; friends; acquaintances; fellow composers and other people with whom he worked; places where he studied, composed, or visited; and special events.</p>
+<p>From this vast collection, 111 photographs have been initially selected for the online collection. The digitized images fall into five broad categories: Family ; Copland Alone; Copland's Music; Copland with Other Composers and People; and Places and Events. Photographs that cannot be dated precisely or approximately have been given the designation of "middle" or "late."</p>
+<h2>Family</h2>
+<p>Of the seven family photographs, one is a formal sitting of Copland's paternal grandparents and three of their children, while another shows Copland's parents, Sarah and Harris Copland, in front of their department store in Brooklyn, New York, in 1922. The other five capture Copland with other family members.</p>
+<h2>Aaron Copland Alone</h2>
+<p>The twenty-four photographs of Copland alone show him both formally and informally and at a range of ages from six to his seventies. Several feature Copland at his home, Rock Hill, in Courtlandt near Peekskill, New York.</p>
+
+<h2>Copland's Music</h2>
+<p>Twenty-one photographs capture performances or rehearsals of thirteen musical works. The orchestral works represented are the <em>Piano Concerto</em>, in a photograph showing Copland at the piano and André Previn conducting; the <em>Clarinet Concerto</em>with Benny Goodman as the soloist and Copland conducting the Los Angeles Philharmonic; and the <em>Lincoln Portrait</em> in two rehearsal photographs, one in color with Marian Anderson as the speaker and the other with Adlai Stevenson, both with Copland conducting. The two ballets represented are scenes from the premiere performance of <em>Appalachian Spring</em> at the Library of Congress and <em>Billy the Kid</em>, which was premiered by Lincoln Kirstein and the Ballet Caravan.</p>
+<p>Three of the eight films for which Copland wrote music scores are illustrated in this online collection. Production stills represent <em>The North Star</em> and <em>The Red Pony</em>. There are also two informal photographs of the making of <em>The Red Pon</em>y depicting Copland with the pony and the young boy and one studio-recording shot of Copland conducting the music for <em>Something Wild</em> that shows the star, Carroll Baker, in a television monitor.</p>
+<p>One chamber work is represented in a rehearsal of the <em>Nonet</em> at the Library of Congress with Copland conducting. Two photographs depict William Warfield with Copland during rehearsals of <em>Old American Songs</em>. There is also a stage shot of the opera <em>The Tender Land</em>.</p>
+
+<h2>Copland with Other Composers and People</h2>
+<p>Numerous photographs capture Copland with fellow composers, including Leonard Bernstein, Carlos Chávez, Norman Dello Joio, Samuel Barber, Gian Carlo Menotti, Irving Fine, Arthur Berger, Douglas Moore, Benjamin Britten, Darius Milhaud, Philip Ramey, Walter Piston, Domingo Santa Cruz, Virgil Thomson, Roger Sessions, and Igor Stravinsky. He is also shown with such notable cultural figures and musicians as Artur Rubinstein, Claire Booth Luce, Clarence Adler, Nadia Boulanger, Victor Kraft, Vivian Perlis, Claire Reis, Jack Garfein, Thorton Wilder, Serge Koussevitzky, Agnes de Mille, and Oliver Smith.</p>
+<h2>Places and Events</h2>
+<p>The group of photographs entitled Places and Events shows Coplan Fontainebleau and Aldeburgh; in Paris, Germany, England, Peru, Israel, and Mexico; at Nadia Boulanger's studio with other students; at the MacDowell Colony, Yaddo, and Tanglewood; and at the University of Kansas, Brown University and Columbia University.</p>
+<h2>The Copland Writings</h2>
+
+<p>Aaron Copland was best known first as a composer and later, in the 1960s and '70s, as a conductor. His name is less frequently associated with literary endeavors. The Writings portion of the Aaron Copland Collection suggests that in this respect his reputation should perhaps be revised: it includes a vast array of articles, lectures, speeches, book drafts, and radio and television commentaries that span the years 1925 to 1988. The long stream of Copland's literary efforts began with an article written for publication in 1925, shortly after his return to the United States from three years in Paris, and continued into the late 1970s and early 1980s. He displayed the same technique in his writings that he did in his music: that is, a frequent self-borrowing in which he used the same material in different media.</p>
+<p>The writings selected for this online collection comprise eighty-six items. The selections represent unpublished drafts of material for articles, lectures, and speeches. Some selections display Copland's literary processes in thoughtful revisions, word changes, rearranging, and other editorial techniques. He usually began with handwritten notes or drafts and proceeded through several typewritten drafts before creating a final unmarked typewritten version. (Example: "A Visit to Snape," <a href="https://www.loc.gov/resource/copland.writ0026?sp=1">Version 2</a> and <a href="https://www.loc.gov/resource/copland.writ0027?sp=1">Version 3</a> ) Not every literary work in the Aaron Copland Collection illustrates this transformation, however. The lectures and speeches display another aspect of Copland's literary endeavors: the fact that he underscored almost every word in red or blue pencil. Because he probably made these markings to help him deliver his speeches, they recapture something of the sound as well as the thought of his vocal presentations. They also add a colorful element to the handwritten and typed drafts.</p>
+<p>Like many conductors, Copland used a similar device in his conducting scores, where red and blue pencil markings draw the eye to changes in time signature, dynamics, and the entrances of instruments. [Example: <a href="https://www.loc.gov/resource/copland.writ0092?sp=1">"Talk on Leonard Bernstein"</a>]</p>
+<p>Whatever their intended uses, the online examples of Copland's unpublished writings can be grouped into four categories: autobiographical, about Copland's music, about other composers, and about other people.</p>
+<p>The two autobiographical titles contrast the esoteric concerns of <a href="https://www.loc.gov/resource/copland.writ0005?sp=1">"Music and the Human Spirit"</a>, in which Copland addresses "the creation of an art music" as one of "humanity's truly unique achievements," with the practicality of <a href="https://www.loc.gov/resource/copland.writ0003?sp=1">"The Composer as Conductor"</a> in which he recalls that "Some twenty years ago, during the course of a memorable evening at the Stravinskys' home in Los Angeles, the venerable maestro turned to me and said in no uncertain terms: 'My dear, you should conduct your own music. All composers should conduct their own music!'"</p>
+<p>The writings about Copland's music highlight eleven of Copland's compositions in five different media. Writings on two ballets describe his collaboration with Martha Graham (<a href="https://www.loc.gov/resource/copland.writ0007?sp=1"><em>Appalachian Spring</em></a>) and his work with Lincoln Kirstein on the story for<em>Billy the Kid</em>, (<a href="https://www.loc.gov/resource/copland.writ0008?sp=1">"About <em>Billy the Kid</em></a>" and <a href="https://www.loc.gov/resource/copland.writ0018?sp=1">"Notes on a Cowboy Ballet"</a>). Copland discusses the creation of his three major solo piano works, <em>Piano Fantasy</em>", "<em>Piano Sonata</em>," and "<em>Piano Variations</em>," in two different lectures under the title <a href="https://www.loc.gov/resource/copland.writ0011?sp=1">Compositional Phases [on My Three Piano Works]</a>." An article about the 1925 orchestral work <a href="https://www.loc.gov/resource/copland.writ0017?sp=1"><em>Music for the Theatre</em></a> summarizes the reaction of audiences, musicians, and reviewers in the United States and Europe, including the performance by the New York Symphony Orchestra in which its conductor, Dr. Walter Damrosch, had "revenge in the end." Copland wrote <a href="https://www.loc.gov/resource/copland.writ0028?sp=1">A Visit to Snape</a> for a tribute to Benjamin Britten on his fiftieth birthday; in it, he extols the "kind of composer rapport" between them and the "exchange of musical impressions" between his own "The Second Hurricane" and Britten's Piano Concerto No. 1.</p>
+<p>As the composer of several film scores, Copland was frequently asked to lecture or write about composing for the movies. In his discussions on the subject, Copland speaks not only about his experiences and the scores he wrote, but about other film composers and working in Hollywood. In <a href="https://www.loc.gov/resource/copland.writ0012?sp=1">"Film Music"</a>, a lecture given at the Museum of Modern Art Film Library in 1940, Copland briefly describes Hollywood and the mysterious nature of film music. He talks about the music he wrote for the film <a href="https://www.loc.gov/collections/aaron-copland/articles-and-essays/works-listing-by-title/o/#work0049"><em>Of Mice and Men</em></a>; four film composers, Eric Korngold, Max Steiner, Alfred Newman, and Herbert Stoddard; and some of their film scores. By the time he gave the lecture <a href="https://www.loc.gov/resource/copland.writ0015?sp=1">"Film Talk"</a> at the Metropolitan Museum of Art in 1971, Copland's credentials as a film composer included six feature films and two documentaries. On that occasion, excerpts from three features (<em>Something Wild</em>, <em>The Red Pony</em>, and <em>The Heiress</em>) and one documentary (<em>The City</em>) were screened as he commented on how music may help a film and how one sets music to a film.</p>
+<p>The largest category of writings in this online collection centers on Copland's views about other composers. In these works, Copland speaks not only about his American contemporaries but about Mozart <a href="https://www.loc.gov/resource/copland.writ0037?sp=1">("At the Thought of Mozart")</a>, Berlioz <a href="https://www.loc.gov/resource/copland.writ0039?sp=1">("Berlioz - from the Composer's Standpoint")</a>, and <a href="https://www.loc.gov/resource/copland.writ0040?sp=1">Pierre Boulez</a>;<a href="https://www.loc.gov/resource/copland.writ0049?sp=1">Composers in Russia</a> and the <a href="https://www.loc.gov/resource/copland.writ0051?sp=1">Composers of South America</a>; Michael Tippett (<a href="https://www.loc.gov/resource/copland.writ0055?sp=1">"Cousin Michael"</a>), <a href="https://www.loc.gov/resource/copland.writ0057?sp=1">Darius Milhaud</a>, Dmitri Shostakovitch (<a href="https://www.loc.gov/resource/copland.writ0059?sp=1">"Dmitri Shostakovitch and the New Simplicity"</a>), <a href="https://www.loc.gov/resource/copland.writ0060?sp=1">Gabriel Fauré</a>, <a href="https://www.loc.gov/resource/copland.writ0062?sp=1">Franz Liszt</a>, Gustav Mahler <a href="https://www.loc.gov/resource/copland.writ0077?sp=1">("Mahler (XX Cent[ury]")</a>, <a href="https://www.loc.gov/resource/copland.writ0091?sp=1">Igor Stravinsky</a>, Serge Prokofieff [Sergey Prokofiev] <a href="https://www.loc.gov/resource/copland.writ0087?sp=1">("On the Occasion of the 70th Birthday of Serge Prokofieff") </a>, Benjamin Britten <a href="https://www.loc.gov/resource/copland.writ0090?sp=1">("Special Fondness for B.B. [Benjamin Britten]") </a>, and <a href="https://www.loc.gov/resource/copland.writ0097?sp=1">Zoltán Kodály</a>. Copland was concerned above all with educating others about composers and their music, and in these writings he sometimes presents his personal viewpoints and reflections. At the National Arts Club in 1968, for example, he spoke about Leonard Bernstein's gifts and how it was "impossible to imagine the American musical scene in the last quarter century without him." [Example: <a href="https://www.loc.gov/resource/copland.writ0075?sp=1">"LB"</a>]</p>
+<p>As Copland lived on through the century, he was asked to write celebratory epistles or obituaries about many of his contemporaries, whether they were composers or others who had influenced his life. These writings about other people offer Copland's portraits of his Parisian teacher, Nadia Boulanger <a href="https://www.loc.gov/resource/copland.writ0099?sp=1">("Intro[duction] of N[adia] Boulanger as Teacher")</a>; his early theory teacher, Rubin Goldmark<a href="https://www.loc.gov/resource/copland.writ0112?sp=1">("Rubin Goldmark: A Tribute")</a>; his publisher, Ralph Hawkes <a href="https://www.loc.gov/resource/copland.writ0111?sp=1">("Ralph Hawkes: In Memoriam") </a>; his friend and colleague at the League of Composers,<a href="https://www.loc.gov/resource/copland.writ0109?sp=1">Claire Reis</a>; and his long-time supporter, the conductor of the Boston Symphony Orchestra, Serge Koussevitzky <a href="https://www.loc.gov/resource/copland.writ0114?sp=1">("Serge Koussevitzky - The 100th Anniversary [unpublished writings]")</a>. "It is almost forty years since first I rang the bell at Nadia Boulanger's Paris apartment . . . " begins the 1960 tribute to his teacher, <a href="https://www.loc.gov/resource/copland.writ0102?sp=1">("The Teacher: Nadia Boulanger")</a>, the person who was most influential in molding and forming the composer Aaron Copland.</p>      
+
+
+            
+            </div>
+
+            
+        </div>
+
+        
+
+
+    </article>
+
+    
+
+    
+    <div class="clear"></div>
+</div>
+
+
+
+
+
+
+
+
+    
+    
+    <div class='managed-content-navigation'>
+
+        
+        
+
+        
+<div class='
+        articles-menu
+        page-menu
+    '>
+    <nav aria-label="
+        
+        Sections Menu
+        
+    ">
+        <ul>
+        
+        
+            
+            <li class='
+                selected 
+                
+                '>
+                
+                <a  href="index.html">
+                    About this Collection
+                </a>
+                
+            
+            <li class='
+                
+                
+                '>
+                
+                <a  href="https://www.loc.gov/collections/aaron-copland/about-this-collection/related-resources/">
+                    Related Resources
+                </a>
+                
+            
+            <li class='
+                
+                
+                '>
+                
+                <a  href="https://www.loc.gov/collections/aaron-copland/about-this-collection/rights-and-access/">
+                    Rights and Access
+                </a>
+                
+            
+        </li>
+        
+        
+        
+        
+        
+        
+        </ul>
+    </nav>
+</div>
+
+
+
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+            
+            
+
+
+<style>.article-aside {
+  border-top: 3px solid #00618e;
+  padding: 20px 0;
+}
+.article-aside:nth-of-type(1) {
+  border: none;
+  padding-top: 5px;
+}
+.article-aside h3 {
+  font-family: inherit;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #333;
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  margin: 0 0 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.article-aside h3 small,
+.article-aside h3 .small {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1;
+  color: #333;
+}
+.article-aside h3 small.block,
+.article-aside h3 .small.block {
+  display: block;
+  margin-bottom: 2px;
+}
+a .article-aside h3 {
+  color: inherit !important;
+}
+.article-aside ul {
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 0;
+}
+ul .article-aside ul {
+  padding-left: 40px;
+}
+.article-aside ul > li {
+  margin-bottom: 0.5rem;
+}
+.article-aside p {
+  margin-bottom: 0.5rem;
+}
+.sponsors-aside p {
+  margin: 0;
+}
+.support-aside h3 {
+  font-family: inherit;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #333;
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  margin: 0 0 0.5rem;
+  margin: 0;
+  text-transform: none;
+}
+.support-aside h3 small,
+.support-aside h3 .small {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1;
+  color: #333;
+}
+.support-aside h3 small.block,
+.support-aside h3 .small.block {
+  display: block;
+  margin-bottom: 2px;
+}
+a .support-aside h3 {
+  color: inherit !important;
+}
+.tertiary-navigation ul {
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 0;
+}
+ul .tertiary-navigation ul {
+  padding-left: 40px;
+}
+.tertiary-navigation ul > li {
+  margin: 0;
+  padding: 16px 0;
+  border-top: 1px solid #ccc;
+}
+.search-results-wrapper .tertiary-navigation ul > li:first-child {
+  border: none;
+}
+.tertiary-navigation ul > li > a {
+  display: block;
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.managed-content-content .contact-aside article,
+.managed-content-content .contact-aside section {
+  background-color: #efefef;
+  padding: 1.5rem 1.5rem 0.1rem;
+  margin-bottom: 1px;
+}
+.managed-content-content .contact-aside article h2,
+.managed-content-content .contact-aside section h2 {
+  font-family: inherit;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #333;
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  margin: 0 0 0.5rem;
+  font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+.managed-content-content .contact-aside article h2 small,
+.managed-content-content .contact-aside section h2 small,
+.managed-content-content .contact-aside article h2 .small,
+.managed-content-content .contact-aside section h2 .small {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1;
+  color: #333;
+}
+.managed-content-content .contact-aside article h2 small.block,
+.managed-content-content .contact-aside section h2 small.block,
+.managed-content-content .contact-aside article h2 .small.block,
+.managed-content-content .contact-aside section h2 .small.block {
+  display: block;
+  margin-bottom: 2px;
+}
+a .managed-content-content .contact-aside article h2,
+a .managed-content-content .contact-aside section h2 {
+  color: inherit !important;
+}
+.managed-content-content .contact-aside article h3,
+.managed-content-content .contact-aside section h3 {
+  font-family: inherit;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #333;
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  margin: 0 0 0.5rem;
+}
+.managed-content-content .contact-aside article h3 small,
+.managed-content-content .contact-aside section h3 small,
+.managed-content-content .contact-aside article h3 .small,
+.managed-content-content .contact-aside section h3 .small {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1;
+  color: #333;
+}
+.managed-content-content .contact-aside article h3 small.block,
+.managed-content-content .contact-aside section h3 small.block,
+.managed-content-content .contact-aside article h3 .small.block,
+.managed-content-content .contact-aside section h3 .small.block {
+  display: block;
+  margin-bottom: 2px;
+}
+a .managed-content-content .contact-aside article h3,
+a .managed-content-content .contact-aside section h3 {
+  color: inherit !important;
+}
+.managed-content-content .contact-aside article .plain,
+.managed-content-content .contact-aside section .plain {
+  padding-left: 0;
+  list-style: none;
+}
+ul .managed-content-content .contact-aside article .plain,
+ul .managed-content-content .contact-aside section .plain {
+  padding-left: 40px;
+}
+.managed-content-navigation .contact-aside * {
+  font-size: 1rem;
+}
+.managed-content-navigation .contact-aside h2 {
+  text-transform: uppercase;
+}
+</style>
+
+<aside class="article-aside related-resources-box">
+    
+    <h3>Expert Resources</h3>
+    
+    <ul>
+        
+        <li>
+            <a href="http://hdl.loc.gov/loc.music/eadmus.mu002006"
+                >
+                Copland Collection EAD Finding Aid
+                
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://www.loc.gov/rr/perform/"
+                >
+                Performing Arts Reading Room
+                
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://www.loc.gov/manuscripts/collections/"
+                >
+                Collections with Manuscripts
+                
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://www.loc.gov/photos/collections/"
+                >
+                Collections with Photos
+                
+            </a>
+        </li>
+        
+        <li>
+            <a href="https://www.loc.gov/notated-music/collections/"
+                >
+                Collections with Notated Music
+                
+            </a>
+        </li>
+        
+    </ul>
+</aside>
+
+
+            
+        
+
+        
+
+        
+        
+
+    </div>
+    
+    
+
+
+</div>
+</div><!-- end class="managed-content-container" -->
+
+
+
+
+</div>
+
+
+    
+
+
+<style>.footer {
+  background-color: #f5f5f5;
+  border-top: 1px solid #999;
+  padding-top: 35px;
+}
+.footer a {
+  color: #666;
+}
+@media print {
+  .footer {
+    display: none;
+  }
+}
+.footer-container {
+  max-width: 85.71428571rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .footer-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+.footer-social-links-wrapper {
+  border-bottom: 1px solid #999;
+  padding-bottom: 21px;
+  margin-bottom: 21px;
+  text-align: center;
+}
+.footer-social-title {
+  font-size: 18px;
+  font-weight: normal;
+  color: #666;
+  display: inline-block;
+  margin: 0 28px 0 0;
+}
+@media (max-width: 992px) {
+  .footer-social-title {
+    display: block;
+    margin: 0 0 7px;
+  }
+}
+.footer-social-links {
+  padding-left: 0;
+  list-style: none;
+  margin: 0 -7px;
+  display: inline-block;
+  margin-bottom: 0;
+}
+ul .footer-social-links {
+  padding-left: 40px;
+}
+.footer-social-links > li {
+  display: inline-block;
+  margin: 0 7px;
+}
+.footer-social-links > li i {
+  font-size: 17.5px;
+}
+.footer-social-links > li span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.footer-social-links > li a .icon-external-link {
+  font-size: 12.6px;
+  color: #666;
+}
+.footer-social-links > li.footer-social-link-rss a {
+  color: #f47f65;
+}
+.footer-social-links > li.footer-social-link-email a {
+  color: #00618e;
+}
+.footer-social-links > li.footer-social-link-survey {
+  border-left: 1px solid #999;
+  padding-left: 28px;
+  margin-left: 14px;
+  font-size: 13px;
+}
+.footer-social-links > li.footer-social-link-survey a {
+  color: #00618e;
+}
+@media (max-width: 992px) {
+  .footer-social-links > li.footer-social-link-survey {
+    border: none;
+    padding: 0;
+    display: block;
+    margin-top: 10.5px;
+  }
+}
+.footer-social-links > li.footer-social-link-itunesu {
+  font-size: 13px;
+}
+.footer-social-links > li.footer-social-link-itunesu a {
+  color: #00618e;
+}
+@media (max-width: 992px) {
+  .footer-social-links {
+    display: block;
+  }
+}
+@media (min-width: 993px) {
+  .footer-row {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: -moz-box;
+    display: flex;
+    /* NEW, Spec - Firefox, Chrome, Opera */
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-flex-align: flex-start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+    margin: 0 -1rem;
+  }
+}
+.footer-links-wrapper .footer-links {
+  padding-left: 0;
+  list-style: none;
+  margin: 0 -8.75px;
+  margin-bottom: 0;
+  font-size: 12px;
+}
+ul .footer-links-wrapper .footer-links {
+  padding-left: 40px;
+}
+.footer-links-wrapper .footer-links > li {
+  display: inline-block;
+  margin: 0 8.75px;
+}
+.footer-links-wrapper .footer-links > li {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+@media (max-width: 992px) {
+  .footer-links-wrapper {
+    text-align: center;
+    margin-bottom: 21px;
+  }
+}
+@media (min-width: 993px) {
+  .footer-links-wrapper {
+    -webkit-box-flex: 1;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    -webkit-flex: 1;
+    /* Safari 6.1+. iOS 7.1+, BB10 */
+    -ms-flex: 1;
+    /* IE 10 */
+    -moz-box-flex: 1;
+    flex: 1;
+    /* NEW, Spec - Firefox, Chrome, Opera */
+    min-width: 0;
+    /* firefox fix */
+    margin: 0 1rem;
+    box-sizing: border-box;
+  }
+}
+.intersites-links-wrapper {
+  margin: 0 14px;
+}
+@media (max-width: 992px) {
+  .intersites-links-wrapper {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 0 28px;
+  }
+}
+.intersites-links {
+  padding-left: 0;
+  list-style: none;
+  margin: 0 -1rem;
+}
+ul .intersites-links {
+  padding-left: 40px;
+}
+.intersites-links > li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+.intersites-links > li > a {
+  display: block;
+}
+.intersites-links > li > a span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+@media (max-width: 992px) {
+  .intersites-links > li > a {
+    margin: 5px 0;
+  }
+}
+.intersites-links > li.intersites-link-congress > a {
+  width: 125px;
+  height: 30px;
+  background-size: 125px 30px;
+  background: url("https://www.loc.gov/static/images/congress-gov.svg?$Revision$") no-repeat;
+}
+.intersites-links > li.intersites-link-copyright > a {
+  width: 175px;
+  height: 30px;
+  background-size: 175px 30px;
+  background: url("https://www.loc.gov/static/images/copyright-gov.svg?$Revision$") no-repeat;
+}
+@media (max-width: 992px) {
+  .intersites-links {
+    text-align: center;
+  }
+}
+</style>
+<script>//UX Interaction Tracking
+jQuery(function($){
+    $('.footer-social-links li a').click(function(e){
+        var label = $(this).text().trim();
+        UX.interaction($(this), 'Follow', 'Click', label);
+    });
+    $('.footer-links li a').click(function(e){
+        var label = $(this).text().trim();
+        UX.interaction($(this), 'Footer', 'Click', label);
+    });
+});
+</script>
+
+
+<footer class="footer" role="contentinfo">
+    <div class="footer-container">
+
+            <div class="footer-social-links-wrapper">
+                <span class="footer-social-title"><a href="../../../homepage/connect.html">Follow Us</a></span>
+                <ul class="footer-social-links">
+
+                    <li class="footer-social-link-email"><a href="https://loc.gov/subscribe/" title="Email"><i class="icon icon-envelope-square"></i><span> Email</span></a></li>
+                    <li class="footer-social-link-facebook"><a href="https://www.facebook.com/libraryofcongress/" title="Facebook"><i class="image-icon facebook"></i><span> Facebook</span></a></li>
+                    <li class="footer-social-link-twitter"><a href="https://www.twitter.com/librarycongress" title="Twitter"><i class="image-icon twitter"></i><span> Twitter</span></a></li>
+                    <li class="footer-social-link-youtube"><a href="https://www.youtube.com/libraryofcongress/" title="Youtube"><i class="image-icon youtube"></i><span> Youtube</span></a></li>
+                    <li class="footer-social-link-pinterest"><a href="https://www.pinterest.com/LibraryCongress/" title="Pinterest"><i class="image-icon pinterest"></i><span> Pinterest</span></a></li>
+                    <li class="footer-social-link-flickr"><a href="https://www.flickr.com/photos/library_of_congress/" title="Flickr"><i class="image-icon flickr"></i><span> Flickr</span></a></li>
+                    <li class="footer-social-link-instagram"><a href="https://instagram.com/librarycongress/" title="Instagram"><i class="image-icon instagram"></i><span> Instagram</span></a></li>
+                    <li class="footer-social-link-itunes"><a href="https://itunes.apple.com/us/artist/library-of-congress/id1280713133?mt=2" title="iTunes"> <i class="image-icon itunes"></i><span> iTunes</span></a></li>
+                    <li class="footer-social-link-survey"><a
+                        
+                        href="https://www.research.net/r/libraryofcongress"
+                        
+                        title="Take our survey">Take our survey <i class="icon icon-external-link"><span>External</span></i></a></li>
+                </ul>
+            </div>
+        <div class="footer-row">
+            <div class="footer-links-wrapper">
+                <ul class="footer-links">
+                    <li><a href="../../../access/index.html">Accessibility</a></li>
+                    <li><a href="../../../homepage/legal.html">Legal</a></li>
+                    <li><a href="../../../about/oig/index.html">Inspector General</a></li>
+                    <li><a href="../../../global/disclaim.html">External Link Disclaimer</a></li>
+                    <li><a href="https://www.usa.gov/">USA.gov</a></li>
+                    <li><a href="../../../careers/index.html">Careers</a></li>
+                    <li><a href="../../../help/contact-general.html">Contact</a></li>
+                    <li><a href="../../../news/index.html">Media</a></li>
+                    <li><a href="../../../philanthropy/online-donation/fund/index.html">Donate</a></li>
+                    <li><a href="http://library-of-congress-shop.myshopify.com/">Shop</a></li>
+                </ul>
+            </div>
+            <div class="intersites-links-wrapper">
+                <ul class="intersites-links">
+                    <li class="intersites-link-congress"><a href="https://www.congress.gov/"><span>Congress.gov</span></a></li>
+                    <li class="intersites-link-copyright"><a href="http://copyright.gov"><span>United States Copyright Office</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    
+
+<style>.back-to-top {
+  height: 50px;
+  font-size: 12px;
+  background-color: #f5f5f5;
+}
+.back-to-top a {
+  display: block;
+  position: fixed;
+  z-index: 99999;
+  bottom: 10px;
+  right: 10px;
+  text-align: center;
+  color: #fff !important;
+  text-decoration: none;
+  background-color: #0078ae;
+  background-color: rgba(0, 120, 174, 0.85);
+  padding: 0 12px 0 10px;
+}
+.back-to-top a span {
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+}
+.back-to-top a:hover,
+.back-to-top a:focus {
+  background-color: #0078ae;
+}
+</style>
+<script>jQuery(function ($) {
+    var scroll_timer,
+        displayed = false,
+        $message = $('.back-to-top a').hide(),
+        $window = $(window),
+        top = $(document.body).children(0).position().top;
+
+    $("#back-to-top").click(function(event){
+        $window.scrollTop(0);
+        event.preventDefault();
+        return false;
+    });
+
+    $window.scroll(function () {
+        window.clearTimeout(scroll_timer);
+        scroll_timer = window.setTimeout(function () {
+            if($window.scrollTop() <= top){
+                displayed = false;
+                $message.fadeOut(800);
+            }else if(!displayed){
+                displayed = true;
+                $message.stop(true, true).show().click(function(){
+                    $message.fadeOut(800);
+                });
+            }
+        }, 100);
+    });
+
+    $("#back-to-top").click(function(e){
+        UX.interaction($(this), 'Footer', 'click', 'Back to top');
+    });
+});
+
+</script>
+
+
+<div class="back-to-top">
+    <a id='back-to-top'
+        href='index.html#' ><i
+        class="icon icon-arrow-up"></i>&nbsp;<span>Back to top</span></a>
+</div>
+
+
+
+
+    
+
+
+<script>(function(){
+
+var data_listeners = {};
+
+
+window.addDataListener = function(channel, callback){
+    if(!data_listeners[channel]){
+        data_listeners[channel] = [];
+    }
+    data_listeners[channel].push(callback);
+    load_data(channel, callback);
+};
+
+
+/* 
+Uses local storage for messaging. Set message in local storage and
+clear it right away. This is a safe way how to communicate with other
+tabs while not leaving any traces. */
+window.broadcastData = function(channel, data, replay){
+    message_broadcast(channel, data, replay);
+};
+
+
+function message_broadcast(channel, data, replay){
+    var message = {
+        channel: channel,
+        data: data
+    }
+    localStorage.setItem('message', JSON.stringify(message));
+    localStorage.removeItem('message');
+
+    if(replay){
+        save_data(channel, data);
+    }
+};
+
+
+function message_receive(event){
+    var i,
+        channel,
+        data,
+        listeners,
+        listener,
+        message;
+
+    if(!event || event.key != 'message' || !event.newValue){ return; }
+
+    message = JSON.parse(event.newValue);
+    if(!message){ return; }
+
+    channel = message.channel
+    if(!channel){ return; }
+
+    listeners = data_listeners[channel];
+    if(!listeners){ return; }
+
+    data = message.data;
+    for(i = 0; i < listeners.length; i++){
+        listener = listeners[i];
+        listener(data);
+    }
+};
+
+
+function save_data(channel, data){
+    var saved_data = localStorage.getItem(channel),
+        keys,
+        i;
+
+    if(saved_data){
+        try {
+            saved_data = JSON.parse(saved_data);
+        } catch (error) {
+            // We loose the stored state, but dont end up in a vicous cycle
+            // never being able to save it again.
+            saved_data = {};
+        }
+    } else {
+        saved_data = {};
+    }
+    keys = Object.keys(data);
+    for(i = 0; i < keys.length; i++){
+        saved_data[keys[i]] = data[keys[i]];
+    }
+    localStorage.setItem(channel, JSON.stringify(saved_data));
+};
+
+
+function load_data(channel, callback){
+    var data = localStorage.getItem(channel);
+    if(data){
+        data = JSON.parse(data);
+        callback(data);
+    }
+};
+
+window.addEventListener('storage', message_receive);
+
+})();</script>
+
+
+
+
+<script defer='defer'>
+LOCSuggest = {
+	serviceUrl: 'https://www.loc.gov/search/suggest/'
+};
+MEDIA_URL = 'https://media.loc.gov';
+</script>
+
+<script defer='defer'
+    type="text/javascript"
+    src='https://www.loc.gov/static/javascript/base.js'></script>
+
+<!--[if lt IE 9]>
+    <script src='/static/js/lib/html5shiv.js'></script>
+    <script src='/static/js/lib/selectivizr.js'></script>
+<![endif]-->
+
+
+
+<script defer='defer'>
+PORTAL_FORM_KEY = 'c404ef4ca9dd702c79206b5733de97f6';
+</script>
+
+
+
+
+
+    <script defer='defer'>
+
+jQuery(function($) {
+    /*
+        Grid and gallery layouts
+     */
+
+    var isotope_options = {
+        itemSelector: '.item'
+    };
+    // If in the grid or gallery style then make sure the
+    // pages are in order and there are no blank spaces
+    
+    
+
+    
+    $('.search-results.grid-view').isotope(isotope_options);
+    imagesLoaded( $('#results'), function() {
+        $('.search-results.grid-view').isotope(isotope_options);
+    });
+    
+
+    var $iconic = $(".iconic");
+    if ($iconic.length > 0) {
+        var loaded_count = 0;
+        $iconic.on("load", function() {
+            loaded_count++;
+            // trigger isotope every once in a while as the images are loading:
+            if (loaded_count % 5 === 0) {
+                $('.search-results.grid-view').isotope(isotope_options);
+            }
+        });
+    }
+});
+
+jQuery(function($) {
+    
+
+    var slider;
+    function create_slideshow($selector) {
+        slider = $selector.royalSlider({
+            fullscreen: {
+                enabled: true,
+                nativeFS: true
+            },
+            controlNavigation: 'thumbnails',
+            imageAlignCenter: true,
+            autoScaleSlider: false,
+            //autoScaleSliderHeight: 800,
+            loop: false,
+            navigateByClick: false,
+            numImagesToPreload: 2,
+            arrowsNav: true,
+            arrowsNavAutoHide: true,
+            arrowsNavHideOnTouch: true,
+            keyboardNavEnabled: true,
+            fadeinLoadedSlide: true,
+            //globalCaption: false,
+            //globalCaptionInside: true,
+            thumbs: {
+                appendSpan: true,
+                firstMargin: true,
+                spacing: 10
+            },
+            deeplinking: {
+                // deep linking options go here
+                enabled: true,
+                change: true,
+                prefix: 'slide-'
+            }
+        }).data("royalSlider");
+
+        $('.royalSlider').royalSlider("updateSliderSize", true);
+
+        
+        
+        if(slider){
+            slider.ev.on('rsAfterContentSet', function (e, slideObject) {
+                var img = slideObject.holder.find('img').eq(0);
+                if (img && img.length && slideObject.caption) {
+                    img.attr('alt', slideObject.caption.text());
+                }
+            });
+        }
+        return slider;
+    }
+
+    function create_overlay(highlight_id, left, top, width, height) {
+        return $('<div id="' + highlight_id + '" class="hit-highlight image-highlight" />')
+        .css({
+            'left': left + '%',
+            'top': top + '%',
+            'width': width + '%',
+            'height': height + '%',
+            'position': 'absolute',
+            'z-index': 10
+        });
+    }
+
+    function position_overlays(page_id, page_width, page_height, coords_list,
+            $image, $container, fudge) {
+        if (!($container.length)) {
+            // no actual search result for this page -- exit this function
+            return true;
+        }
+        $container.find('div.image-highlight').remove();
+        if (!coords_list) {
+            // coords data doesn't exist -- exit this function
+            return true;
+        }
+        var container_width = $container.width();
+        var container_height = $container.height();
+        
+        var image_marginLeft = $image[0].offsetLeft;
+        var image_marginTop = $image[0].offsetTop;
+        var image_width = $image.width();
+        var image_height = $image.height();
+
+        // The overlays are positioned relative to their parent, the
+        // $container, but they need to show up in the right place relative
+        // to the image.
+        // The $container can be larger than the image,
+        // so we take the ratio of the sizes and use it to scale the
+        // positions, widths, and heights of the highlight overlays.
+        // We also make the overlays a little larger so they're more visible
+        // and we shift them a little using the "fudge" numbers.
+        var marginLeft = image_marginLeft / container_width;
+        var marginTop = image_marginTop / container_height;
+        var scaleWidth = image_width / container_width;
+        var scaleHeight = image_height / container_height;
+
+        $.each(coords_list, function (index, coords) {
+            // word coordinates: [left, top, width, height]
+            var highlight_id = "highlight-" + page_id + '-' + index;
+
+            var overlay_left = 100 * (marginLeft + scaleWidth * coords[0] / page_width) + fudge.left;
+            var overlay_top = 100 * (marginTop + scaleHeight * coords[1] / page_height) + fudge.top;
+            var overlay_width = 100 * coords[2] / page_width * scaleWidth + fudge.width;
+            var overlay_height = 100 * coords[3] / page_height * scaleHeight + fudge.height;
+
+            var $highlight_overlay = create_overlay(highlight_id,
+                overlay_left, overlay_top, overlay_width, overlay_height);
+
+            $container.append($highlight_overlay);
+        });
+    }
+
+    var word_coordinates_pages;
+    
+    word_coordinates_pages = {};
+    
+
+    var get_$container;
+    var get_$image;
+    var fudge_numbers;
+
+    
+    
+    get_$container = function(page_id) {
+        return $("#highlights-container-" + page_id);
+    };
+    get_$image = function(page_id) {
+        return $("#iconic-segment-image-" + page_id);
+    };
+    fudge_numbers = {
+        left: -1.3,
+        top: -0.5,
+        width: 2.5,
+        height: 1.3
+    };
+
+    
+        if (!$.isEmptyObject(word_coordinates_pages)) {
+            var $iconic = $(".iconic");
+            var loaded = 0;
+            var loaded_total = $iconic.length;
+            // make sure we wait til all the images are loaded before we try to position the highlights on them:
+            $iconic.one("load", function() {
+                loaded++;
+                if (loaded === loaded_total) {
+                    $.each(word_coordinates_pages, function(page_id, page) {
+                        var $image = get_$image(page_id);
+                        var $container = get_$container(page_id);
+                        position_overlays(page_id, page.width, page.height, page.coords_list,
+                            $image, $container, fudge_numbers);
+                    });
+                }
+            }).each(function() {
+                // to make sure the "on load" event occurs even if the
+                // images are already cached:
+                if (this.complete) {
+                    $(this).load();
+                }
+            });
+        }
+        
+     
+
+
+    
+    $(window).resize(function() {
+        setTimeout(function() {
+            $.each(word_coordinates_pages, function(page_id, page) {
+                var $container = get_$container(page_id);
+                var $image = get_$image(page_id, $container);
+                position_overlays(page_id, page.width, page.height, page.coords_list,
+                    $image, $container, fudge_numbers);
+            });
+        }, 300);
+    });
+});
+</script>
+
+</div>
+
+
+</script>
+
+
+
+
+
+<script type="text/javascript">
+if(window['_satellite']){
+    _satellite.pageBottom();
+}
+</script>
+</body>
+</html>
